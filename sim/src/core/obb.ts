@@ -33,6 +33,14 @@ export class OBB {
     return new OBB(position, size.mul(0.5), rotation);
   }
 
+  inverseTransform(p: Vector3): Vector3 {
+    return this.rotation.inverse().rotate(p.sub(this.position));
+  }
+
+  inverseVector(v: Vector3): Vector3 {
+    return this.rotation.inverse().rotate(v);
+  }
+
   getPoint(x: number, y: number, z: number): Vector3 {
     return this.position
       .add(this.right.mul(x * this.extents.x))
