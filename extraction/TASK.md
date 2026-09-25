@@ -102,6 +102,30 @@ itemid, shortname, displayName (англ.), category, все флаги, `steamD
 
 Все JSON — с отступами, числа без округления (`R` формат / `G9` для float).
 
+### 2.3. Дополнение после разбора декомпила (обязательно)
+
+По коду видно, что без этого механику 1:1 не собрать:
+
+- **Скины грейдов.** Коллайдеры стройблоков живут не в самом префабе блока, а в префабе скина:
+  `ConstructionGrade.skinObject` (→ `ConstructionSkin`). Выгрузи **каждый** такой префаб скина
+  (все грейды, все скины грейдов, включая платные: адоб, контейнерный металл, кирпич и т.д.) так же, как 2.2 —
+  полная иерархия, коллайдеры, меши, слои.
+- **Условные модели.** `ConditionalModel` (+ `ConditionalModelWallpaper`) и все `ModelConditionTest_*` на скинах —
+  выгрузи сериализатором все поля, и префабы, которые они спавнят (углы стен, ступеньки фундаментов,
+  кромки крыш и т.п. — у них свои коллайдеры).
+- **`BuildingProximity`** — все атрибуты этого типа (на нём держится запрет волл-стаков 1.49 м).
+- **`ColliderInfo`** на каждом узле с коллайдером — поле `flags` (числом и списком имён флагов).
+- **Теги.** Для каждого узла: `tag` (особенно `DeployVolumeIgnore`) и кастомные теги
+  (`GameObjectEx.HasCustomTag` / `GameObjectTag` — все значения, какие есть на узле).
+- **`EntityListScriptableObject`** из `DeployVolume.entityGroups` — развернуть в список prefabID/путей.
+- **`BaseEntity.bounds`** корневой entity (из него строится OBB для `BuildingProximity`, `TestPlacingThroughRock` и т.п.).
+- **`StabilityEntity.grounded`**, `BuildingBlock.blockDefinition` → путь Construction.
+- `worldPosition`/`worldRotation`/`localPosition`/`localRotation` у каждого PrefabAttribute (это то, что использует код,
+  а не transform GameObject'а).
+- Для `Socket_Base`: `selectSize`, `selectCenter`, `socketName`, `checkOccupiedSockets`, и список `socketMods` с их полями.
+- `layers.json`: плюс все числовые маски-литералы, которые встречаются в коде стройки — их я разберу сам,
+  но нужны имена всех 32 слоёв.
+
 ## Этап 3. Эталонные постройки (golden tests) → `data/<buildid>/golden/`
 
 Добавь в плагин команду `basedump <radius>` для админа: выгружает все entity в радиусе от игрока
