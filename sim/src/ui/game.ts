@@ -7,6 +7,7 @@ import { AIM_ASSIST, aimTarget } from '../core/targeting';
 import { Pose, Quaternion, Ray, Vector3 } from '../core/unity';
 import { GROUP_ORDER, buildCatalog, type CatalogEntry } from './catalog';
 import { Controls } from './controls';
+import { RadialMenu, isBuildingPiece } from './radial';
 import { Renderer, quatToThree, toThree } from './render';
 
 const GRADE_NAMES = ['Twig', 'Wood', 'Stone', 'Metal', 'HQM'];
@@ -49,6 +50,7 @@ export class Game {
   yaw = 0;
   pitch = 15;
   fly = true;
+  crouch = false;
   vy = 0;
 
   mode: 'build' | 'hammer' = 'build';
@@ -68,8 +70,14 @@ export class Game {
   constructor(readonly data: GameData, canvas: HTMLCanvasElement) {
     this.srv = new BuildServer(data);
     this.renderer = new Renderer(canvas, this.srv);
-    this.controls = new Controls(canvas);
+    this.controls = new Controls(canvas, $('#pad'));
     this.catalog = buildCatalog(data);
+    const radial = new RadialMenu(this.catalog, (e) => this.select(e));
+    this.controls.radial = {
+      open: (x, y) => radial.open(x, y),
+      move: (x, y) => radial.move(x, y),
+      end: (x, y) => radial.end(x, y),
+    };
     this.selected = this.catalog.find((c) => c.prefab.path.endsWith('/foundation.prefab'))!;
     this.controls.onPrimary = () => this.primary();
     this.controls.onKey = (code) => this.key(code);
@@ -161,8 +169,9 @@ export class Game {
 
   // ---- view / aim ----------------------------------------------------------
 
+  /** PlayerEyes.EyeOffset (1.5) + DuckOffset (-0.6) when crouched. */
   get eyes() {
-    return this.feet.add(new Vector3(0, 1.5, 0));
+    return this.feet.add(new Vector3(0, this.crouch ? 0.9 : 1.5, 0));
   }
 
   get viewRotation() {
@@ -180,7 +189,7 @@ export class Game {
     this.pitch = Math.max(-89, Math.min(89, this.pitch + dy * 0.12));
     const yawQ = Quaternion.euler(0, this.yaw, 0);
     const fwd = yawQ.forward, right = yawQ.right;
-    const speed = (this.fly ? 8 : 5.5) * (s.sprint ? 2 : 1);
+    const speed = (this.fly ? 8 : this.crouch ? 1.7 : 5.5) * (s.sprint ? 2 : 1);
     let delta = fwd.mul(s.moveZ * speed * dt).add(right.mul(s.moveX * speed * dt));
     if (this.fly) {
       delta = delta.add(new Vector3(0, s.moveY * speed * dt, 0));
@@ -190,7 +199,7 @@ export class Game {
     }
     // Walking: gravity + simple capsule collision, one axis at a time.
     const blocked = (feet: Vector3) =>
-      this.srv.physics.checkCapsule(feet.add(new Vector3(0, 0.55, 0)), feet.add(new Vector3(0, 1.3, 0)), 0.45, SOLID_MASK & ~(1 << Layer.Terrain), QueryTriggerInteraction.Ignore);
+      this.srv.physics.checkCapsule(feet.add(new Vector3(0, 0.55, 0)), feet.add(new Vector3(0, this.crouch ? 0.6 : 1.3, 0)), 0.45, SOLID_MASK & ~(1 << Layer.Terrain), QueryTriggerInteraction.Ignore);
     for (const d of [new Vector3(delta.x, 0, 0), new Vector3(0, 0, delta.z)]) {
       const next = this.feet.add(d);
       if (!blocked(next)) this.feet = next;
@@ -226,7 +235,7 @@ export class Game {
     const dt = Math.min(0.05, (now - this.lastTime) / 1000);
     this.lastTime = now;
     this.move(dt);
-    this.srv.setPlayer({ position: this.feet, eyes: this.eyes });
+    this.srv.setPlayer({ position: this.feet, eyes: this.eyes, ducked: this.crouch });
     const cam = this.renderer.camera;
     cam.position.copy(toThree(this.eyes));
     cam.quaternion.copy(quatToThree(this.viewRotation));
@@ -280,7 +289,7 @@ export class Game {
   }
 
   upgradeLooked() {
-    const e = this.lookedAt;
+    const e = (this.lookedAt = this.lookEntity());
     if (!e || !this.srv.prefab(e).isBuildingBlock) return this.toast('Look at a building block');
     this.checkpoint();
     const err = this.srv.upgrade(e, this.grade, this.skin);
@@ -299,7 +308,7 @@ export class Game {
       this.rotation = new Vector3((this.rotation.x + amt.x) % 360, (this.rotation.y + amt.y) % 360, (this.rotation.z + amt.z) % 360);
       return;
     }
-    const e = this.lookedAt;
+    const e = (this.lookedAt = this.lookEntity());
     if (!e) return this.toast('Look at something');
     this.checkpoint();
     const err = this.srv.rotate(e);
@@ -312,8 +321,22 @@ export class Game {
     this.save();
   }
 
+  use() {
+    const e = (this.lookedAt = this.lookEntity());
+    if (!e || !this.srv.isDoor(e)) return this.toast('Nothing to use');
+    this.checkpoint();
+    this.srv.toggleDoor(e);
+    this.dirty = true;
+    this.save();
+  }
+
+  toggleCrouch() {
+    this.crouch = !this.crouch;
+    this.updateHud();
+  }
+
   remove() {
-    const e = this.lookedAt;
+    const e = (this.lookedAt = this.lookEntity());
     if (!e) return this.toast('Look at something');
     this.checkpoint();
     this.srv.demolish(e);
@@ -325,7 +348,9 @@ export class Game {
   private key(code: string) {
     const map: Record<string, () => void> = {
       KeyR: () => this.rotate(),
-      KeyE: () => this.setMode(this.mode === 'build' ? 'hammer' : 'build'),
+      KeyE: () => this.use(),
+      KeyH: () => this.setMode(this.mode === 'build' ? 'hammer' : 'build'),
+      KeyC: () => this.toggleCrouch(),
       KeyX: () => this.remove(),
       KeyF: () => this.toggleFly(),
       KeyQ: () => this.openPicker(),
@@ -395,7 +420,7 @@ export class Game {
       if (!this.lastTargetValid) lines.push('<span class="bad">No target</span>');
       else if (r && !r.ok) lines.push(`<span class="bad">${escapeHtml(r.error)}</span>`);
     }
-    const e = this.lookedAt;
+    const e = (this.lookedAt = this.lookEntity());
     if (e) {
       const p = this.srv.prefab(e);
       const name = this.srv.displayName(e);
@@ -406,6 +431,10 @@ export class Game {
         lines.push(`${escapeHtml(name)} · <b>${Math.round(e.cachedStability * 100)}%</b>`);
       } else lines.push(escapeHtml(name));
     }
+    const useBtn = $('#btn-use');
+    const canUse = !!e && this.srv.isDoor(e);
+    if ((useBtn.style.display !== 'none') !== canUse) useBtn.style.display = canUse ? '' : 'none';
+    if (e && canUse) lines.push(`<span class="hint">${e.doorOpen ? 'USE: close' : 'USE: open'}</span>`);
     const html = lines.join('<br>');
     if (info.innerHTML !== html) info.innerHTML = html;
   }
@@ -417,10 +446,12 @@ export class Game {
     $('#btn-mode').classList.toggle('on', this.mode === 'hammer');
     $('#btn-remove').style.display = this.mode === 'hammer' ? '' : 'none';
     $('#btn-fly').classList.toggle('on', this.fly);
+    $('#btn-crouch').classList.toggle('on', this.crouch);
     $('#btn-vol').classList.toggle('on', this.showVolumes);
     $('#btn-layers').classList.toggle('on', this.renderer.mode === 'layers');
     $('#flybtns').style.display = this.fly ? '' : 'none';
     $('#btn-jump').style.display = this.fly ? 'none' : '';
+    document.body.classList.toggle('flying', this.fly);
     document.querySelectorAll<HTMLElement>('.grade').forEach((el) => {
       el.classList.toggle('on', Number(el.dataset.grade) === this.grade);
     });
@@ -462,6 +493,8 @@ export class Game {
     tap('#btn-rotate', () => this.rotate());
     tap('#btn-mode', () => this.setMode(this.mode === 'build' ? 'hammer' : 'build'));
     tap('#btn-remove', () => this.remove());
+    tap('#btn-use', () => this.use());
+    tap('#btn-crouch', () => this.toggleCrouch());
     tap('#btn-undo', () => this.undoLast());
     tap('#btn-fly', () => this.toggleFly());
     tap('#btn-vol', () => this.toggleVolumes());
@@ -539,7 +572,8 @@ export class Game {
     const q = query.trim().toLowerCase();
     const list = $('#picker-list');
     list.innerHTML = '';
-    const entries = this.catalog.filter((c) => !q || c.search.includes(q));
+    // Building pieces live in the radial menu (long-press); the list is for items.
+    const entries = this.catalog.filter((c) => !isBuildingPiece(c) && (!q || c.search.includes(q)));
     for (const g of GROUP_ORDER) {
       const items = entries.filter((e) => e.group === g);
       if (!items.length) continue;

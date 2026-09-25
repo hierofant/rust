@@ -89,6 +89,10 @@ export interface LoadedPrefab extends PrefabDef {
   volumes: J[];
   conditionals: J[];
   attractionPoints: J[];
+  /** Nodes named hinge* (door leaves, hatches, shutters) in prefab space. */
+  hinges: { node: string; pos: Vec3Json; rot: QuatJson }[];
+  /** Door component: collider roots active only while closed. */
+  door: { closedRoots: string[]; busyRoots: string[]; canHandOpen: boolean } | null;
   construction: ConstructionDef | null;
   isBuildingBlock: boolean;
 }
@@ -227,6 +231,8 @@ function loadPrefab(p: J): LoadedPrefab {
     volumes: p.volumes,
     conditionals: p.conditionals,
     attractionPoints: p.attractionPoints ?? [],
+    hinges: p.hinges ?? [],
+    door: p.door ?? null,
     construction,
     isBuildingBlock: classes.includes('BuildingBlock'),
   };

@@ -1,5 +1,5 @@
-// Input: touch (virtual stick on the left half, drag-to-look on the right half) and
-// keyboard + mouse for desktop. Produces a per-frame movement vector and look deltas.
+// Input: touch (arrow pad bottom-left, drag anywhere else to look, long-press to open the
+// building radial) and keyboard + mouse for desktop.
 
 export interface InputState {
   moveX: number; // strafe, -1..1
@@ -10,32 +10,39 @@ export interface InputState {
   sprint: boolean;
 }
 
+export interface RadialHandlers {
+  open(x: number, y: number): void;
+  move(x: number, y: number): void;
+  end(x: number, y: number): void;
+}
+
+const LONG_PRESS_MS = 380;
+const LONG_PRESS_SLOP = 12;
+
 export class Controls {
   readonly state: InputState = { moveX: 0, moveZ: 0, moveY: 0, lookDX: 0, lookDY: 0, sprint: false };
-  private stickId: number | null = null;
-  private stickOrigin = { x: 0, y: 0 };
+  private padId: number | null = null;
   private lookId: number | null = null;
   private lookLast = { x: 0, y: 0 };
+  private lookStart = { x: 0, y: 0 };
+  private pressTimer = 0;
+  private radialActive = false;
   private keys = new Set<string>();
-  private stickEl: HTMLElement;
-  private knobEl: HTMLElement;
   lookSensitivity = 0.25;
-  /** Buttons pressed with the mouse on desktop map to these callbacks. */
   onPrimary: () => void = () => {};
   onKey: (code: string) => void = () => {};
+  radial: RadialHandlers | null = null;
 
-  constructor(private surface: HTMLElement) {
-    this.stickEl = document.createElement('div');
-    this.stickEl.className = 'stick';
-    this.knobEl = document.createElement('div');
-    this.knobEl.className = 'stick-knob';
-    this.stickEl.appendChild(this.knobEl);
-    document.body.appendChild(this.stickEl);
+  constructor(private surface: HTMLElement, private pad: HTMLElement) {
+    pad.addEventListener('touchstart', (e) => this.padTouch(e), { passive: false });
+    pad.addEventListener('touchmove', (e) => this.padTouch(e), { passive: false });
+    pad.addEventListener('touchend', (e) => this.padEnd(e));
+    pad.addEventListener('touchcancel', (e) => this.padEnd(e));
 
-    surface.addEventListener('touchstart', (e) => this.touchStart(e), { passive: false });
-    surface.addEventListener('touchmove', (e) => this.touchMove(e), { passive: false });
-    surface.addEventListener('touchend', (e) => this.touchEnd(e));
-    surface.addEventListener('touchcancel', (e) => this.touchEnd(e));
+    surface.addEventListener('touchstart', (e) => this.lookStartEv(e), { passive: false });
+    surface.addEventListener('touchmove', (e) => this.lookMove(e), { passive: false });
+    surface.addEventListener('touchend', (e) => this.lookEnd(e));
+    surface.addEventListener('touchcancel', (e) => this.lookEnd(e));
 
     window.addEventListener('keydown', (e) => {
       if ((e.target as HTMLElement)?.tagName === 'INPUT') return;
@@ -65,62 +72,85 @@ export class Controls {
     const k = this.keys;
     this.state.moveZ = (k.has('KeyW') ? 1 : 0) - (k.has('KeyS') ? 1 : 0);
     this.state.moveX = (k.has('KeyD') ? 1 : 0) - (k.has('KeyA') ? 1 : 0);
-    this.state.moveY = (k.has('Space') ? 1 : 0) - (k.has('ControlLeft') || k.has('KeyC') ? 1 : 0);
+    this.state.moveY = (k.has('Space') ? 1 : 0) - (k.has('ControlLeft') ? 1 : 0);
     this.state.sprint = k.has('ShiftLeft');
   }
 
-  private touchStart(e: TouchEvent) {
+  // ---- arrow pad: direction from the pad centre, 8-way, slide between arrows ----
+
+  private padTouch(e: TouchEvent) {
     e.preventDefault();
-    for (const t of Array.from(e.changedTouches)) {
-      const leftHalf = t.clientX < window.innerWidth * 0.45;
-      if (leftHalf && this.stickId === null) {
-        this.stickId = t.identifier;
-        this.stickOrigin = { x: t.clientX, y: t.clientY };
-        this.stickEl.style.display = 'block';
-        this.stickEl.style.left = `${t.clientX}px`;
-        this.stickEl.style.top = `${t.clientY}px`;
-        this.knobEl.style.transform = 'translate(-50%, -50%)';
-      } else if (!leftHalf && this.lookId === null) {
-        this.lookId = t.identifier;
-        this.lookLast = { x: t.clientX, y: t.clientY };
-      }
+    e.stopPropagation();
+    const t = Array.from(e.changedTouches).find((x) => this.padId === null || x.identifier === this.padId);
+    if (!t) return;
+    this.padId = t.identifier;
+    const r = this.pad.getBoundingClientRect();
+    const dx = t.clientX - (r.left + r.width / 2);
+    const dy = t.clientY - (r.top + r.height / 2);
+    const dead = r.width * 0.12;
+    if (Math.hypot(dx, dy) < dead) {
+      this.setPad(0, 0);
+      return;
+    }
+    const a = Math.round(Math.atan2(-dy, dx) / (Math.PI / 4)) * (Math.PI / 4);
+    this.setPad(Math.round(Math.cos(a)), Math.round(Math.sin(a)));
+  }
+
+  private padEnd(e: TouchEvent) {
+    if (Array.from(e.changedTouches).some((t) => t.identifier === this.padId)) {
+      this.padId = null;
+      this.setPad(0, 0);
     }
   }
 
-  private touchMove(e: TouchEvent) {
+  private setPad(x: number, z: number) {
+    this.state.moveX = x;
+    this.state.moveZ = z;
+    this.pad.dataset.dir = `${x},${z}`;
+  }
+
+  // ---- look / long-press radial ----
+
+  private lookStartEv(e: TouchEvent) {
     e.preventDefault();
     for (const t of Array.from(e.changedTouches)) {
-      if (t.identifier === this.stickId) {
-        const R = 55;
-        let dx = t.clientX - this.stickOrigin.x;
-        let dy = t.clientY - this.stickOrigin.y;
-        const m = Math.hypot(dx, dy);
-        if (m > R) {
-          dx *= R / m;
-          dy *= R / m;
+      if (this.lookId !== null) continue;
+      this.lookId = t.identifier;
+      this.lookLast = { x: t.clientX, y: t.clientY };
+      this.lookStart = { x: t.clientX, y: t.clientY };
+      clearTimeout(this.pressTimer);
+      this.pressTimer = window.setTimeout(() => {
+        if (this.lookId === t.identifier && this.radial) {
+          this.radialActive = true;
+          this.radial.open(this.lookStart.x, this.lookStart.y);
         }
-        this.knobEl.style.transform = `translate(calc(-50% + ${dx}px), calc(-50% + ${dy}px))`;
-        this.state.moveX = dx / R;
-        this.state.moveZ = -dy / R;
-        this.state.sprint = m > R * 1.6;
-      } else if (t.identifier === this.lookId) {
-        this.state.lookDX += (t.clientX - this.lookLast.x) / this.lookSensitivity / 2.5;
-        this.state.lookDY += (t.clientY - this.lookLast.y) / this.lookSensitivity / 2.5;
-        this.lookLast = { x: t.clientX, y: t.clientY };
-      }
+      }, LONG_PRESS_MS);
     }
   }
 
-  private touchEnd(e: TouchEvent) {
+  private lookMove(e: TouchEvent) {
+    e.preventDefault();
     for (const t of Array.from(e.changedTouches)) {
-      if (t.identifier === this.stickId) {
-        this.stickId = null;
-        this.stickEl.style.display = 'none';
-        this.state.moveX = 0;
-        this.state.moveZ = 0;
-        this.state.sprint = false;
-      } else if (t.identifier === this.lookId) {
-        this.lookId = null;
+      if (t.identifier !== this.lookId) continue;
+      if (this.radialActive) {
+        this.radial?.move(t.clientX, t.clientY);
+        continue;
+      }
+      if (Math.hypot(t.clientX - this.lookStart.x, t.clientY - this.lookStart.y) > LONG_PRESS_SLOP) clearTimeout(this.pressTimer);
+      this.state.lookDX += (t.clientX - this.lookLast.x) / this.lookSensitivity / 2.5;
+      this.state.lookDY += (t.clientY - this.lookLast.y) / this.lookSensitivity / 2.5;
+      this.lookLast = { x: t.clientX, y: t.clientY };
+    }
+  }
+
+  private lookEnd(e: TouchEvent) {
+    for (const t of Array.from(e.changedTouches)) {
+      if (t.identifier !== this.lookId) continue;
+      clearTimeout(this.pressTimer);
+      this.lookId = null;
+      if (this.radialActive) {
+        this.radialActive = false;
+        this.radial?.end(t.clientX, t.clientY);
       }
     }
   }

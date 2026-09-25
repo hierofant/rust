@@ -85,7 +85,9 @@ function baseTarget(ray: Ray, entity: SimEntity | null, socket: SocketBase | nul
 export function aimTarget(server: BuildServer, prefab: LoadedPrefab, ray: Ray, opts: AimOptions = {}): Target {
   const con = prefab.construction!;
   const maxDistance = opts.maxDistance ?? con.maxplaceDistance + 1;
-  const surface = server.physics.raycast(ray, maxDistance, AIM_MASK, QueryTriggerInteraction.Ignore);
+  // Surfaces beyond max place distance don't count for constructions that can hang in the air.
+  const surfaceRange = con.raw.canPlaceAtMaxDistance ? con.maxplaceDistance : maxDistance;
+  const surface = server.physics.raycast(ray, surfaceRange, AIM_MASK, QueryTriggerInteraction.Ignore);
   const candidates = socketCandidates(server, prefab, ray, maxDistance, opts.assist ?? 0);
   // Sockets behind the surface under the crosshair are not selectable.
   const best = candidates.find((c) => !surface || c.distance <= surface.distance + 0.05);
@@ -94,6 +96,10 @@ export function aimTarget(server: BuildServer, prefab: LoadedPrefab, ray: Ray, o
     t = baseTarget(ray, best.entity, best.socket, surface ? surface.point : best.point, surface ? surface.normal : Vector3.up);
   } else if (surface) {
     t = baseTarget(ray, surface.collider.entity, null, surface.point, surface.normal);
+  } else if (con.raw.canPlaceAtMaxDistance) {
+    // Nothing under the crosshair: the target floats at max place distance (foundations,
+    // walls, stairs...). Server-side socket mods (terrain legs, stability) then decide.
+    t = baseTarget(ray, null, null, ray.at(con.maxplaceDistance), Vector3.up);
   } else {
     t = baseTarget(ray, null, null, ray.at(maxDistance), Vector3.up);
     t.valid = false;

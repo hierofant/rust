@@ -98,3 +98,46 @@ describe('BuildServer placement', () => {
     expect(w.destroyed).toBe(true);
   });
 });
+
+describe('air placement (canPlaceAtMaxDistance)', () => {
+  const aimUp = (s: BuildServer, pitch: number) => {
+    const feet = new Vector3(0, 0, 0);
+    const eyes = feet.add(new Vector3(0, 1.5, 0));
+    s.setPlayer({ position: feet, eyes });
+    return s.updatePlacement(P.foundation, aimTarget(s, P.foundation, new Ray(eyes, Quaternion.euler(pitch, 0, 0).forward)));
+  };
+  it('foundation floats at max distance while its legs reach the terrain', () => {
+    const s = new BuildServer(data);
+    const r = aimUp(s, -5);
+    expect(r.ok).toBe(true);
+    expect(r.position.y).toBeGreaterThan(1.5);
+  });
+  it('too high: the terrain legs (2.6 m) no longer reach the ground', () => {
+    const s = new BuildServer(data);
+    const r = aimUp(s, -35);
+    expect(r.ok).toBe(false);
+  });
+});
+
+describe('doors', () => {
+  it('hinged door: closed blocks the doorway, open lets a ray through', () => {
+    const s = new BuildServer(data);
+    const door = data.get('building/door.hinged/door.hinged.wood');
+    const e = s.spawnPlaced(door, new Pose(new Vector3(0, 0, 0), Quaternion.identity));
+    s.setPlayer({ position: new Vector3(-3, 0, 0), eyes: new Vector3(-3, 1.5, 0) });
+    const ray = () => s.physics.raycast(new Ray(new Vector3(-3, 1.2, 0.3), Vector3.right), 6, 1 << 21);
+    expect(ray()?.collider.entity).toBe(e);
+    expect(s.toggleDoor(e)).toBeNull();
+    expect(ray()).toBeNull();
+    s.toggleDoor(e);
+    expect(ray()?.collider.entity).toBe(e);
+  });
+  it('garage door: ClosedCollider goes away when open', () => {
+    const s = new BuildServer(data);
+    const g = data.get('building/wall.frame.garagedoor/wall.frame.garagedoor');
+    const e = s.spawnPlaced(g, new Pose());
+    const n = s.physics.entityColliders(e).length;
+    s.toggleDoor(e);
+    expect(s.physics.entityColliders(e).length).toBeLessThan(n);
+  });
+});

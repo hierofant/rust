@@ -32,6 +32,7 @@ export interface PlayerState {
   position: Vector3;
   /** eyes.position */
   eyes: Vector3;
+  ducked?: boolean;
 }
 
 export interface PlacementResult {
@@ -106,9 +107,9 @@ export class BuildServer extends World implements ModServer, VolumeServer, Condi
   setPlayer(p: PlayerState) {
     this.player = p;
     if (this.playerCollider) this.physics.remove(this.playerCollider);
-    // BasePlayer capsule: radius 0.5, height 1.8, centre 0.9 above the feet.
+    // BasePlayer capsule: radius 0.5, height 1.8 standing / 1.1 ducked.
     const a = p.position.add(new Vector3(0, 0.5, 0));
-    const b = p.position.add(new Vector3(0, 1.3, 0));
+    const b = p.position.add(new Vector3(0, p.ducked ? 0.6 : 1.3, 0));
     this.playerCollider = this.physics.add(new Collider({ kind: 'capsule', a, b, r: 0.5 }, Layer.PlayerServer, null, { name: 'player' }));
   }
 
@@ -117,11 +118,19 @@ export class BuildServer extends World implements ModServer, VolumeServer, Condi
   private addPrefabColliders(e: SimEntity, prefab: LoadedPrefab, pose: Pose, skipPlaceholder = false): Collider[] {
     const out: Collider[] = [];
     const rootName = prefab.colliders[0]?.node.split('/')[0];
+    const open = e.doorOpen && e.prefab === prefab ? e.doorOpen : null;
     for (const c of prefab.colliders as ColliderJson[]) {
       if (!c.active || !c.enabled) continue;
       // BuildingBlock.placeholderCollider: the root MeshCollider, disabled once a skin exists.
       if (skipPlaceholder && c.type === 'Mesh' && c.node === rootName) continue;
-      const shape = colliderShape(c, pose, (id) => this.data.mesh(id));
+      let at = pose;
+      if (open) {
+        // Door.UpdateClosedColliderState: closed-only roots go inactive while open.
+        if (prefab.door?.closedRoots.some((r) => c.node.split('/').includes(r))) continue;
+        const h = prefab.hinges.find((x) => c.node === x.node || c.node.startsWith(x.node + '/'));
+        if (h && open.has(h.node)) at = this.hingePose(pose, prefab, h, open.get(h.node)!);
+      }
+      const shape = colliderShape(c, at, (id) => this.data.mesh(id));
       if (!shape) continue;
       const col = new Collider(shape, c.layer, e, {
         isTrigger: c.isTrigger,
@@ -303,7 +312,7 @@ export class BuildServer extends World implements ModServer, VolumeServer, Condi
   /** Construction.TestPlacingThroughRock (World layer = 65536). */
   private testPlacingThroughRock(pl: Placement, target: Target, bounds: import('./unity').Bounds): boolean {
     const obb = OBB.fromBounds(pl.position, pl.rotation, bounds);
-    const center = this.player.position.add(new Vector3(0, 0.55, 0)); // GetCenter(ducked: true)
+    const center = this.player.position.add(new Vector3(0, 0.55, 0)); // GetCenter(ducked: true), as the game does
     const origin = target.ray.origin;
     if (this.physics.linecast(center, origin, 65536, QueryTriggerInteraction.Ignore)) return false;
     const hit = obb.trace(target.ray);
@@ -462,6 +471,70 @@ export class BuildServer extends World implements ModServer, VolumeServer, Condi
       set.conditional = [];
       set.base = this.addPrefabColliders(e, this.prefab(e), pose, this.prefab(e).isBuildingBlock);
     }
+  }
+
+  // ---- doors -----------------------------------------------------------------
+
+  isDoor(e: SimEntity) {
+    const p = this.prefab(e);
+    return !!p.door && (p.hinges.length > 0 || p.door.closedRoots.length > 0);
+  }
+
+  /** Rotation axis of a hinge, derived from the shape of the leaf it carries (thin side x hinge-to-centre). */
+  private hingeAxis(prefab: LoadedPrefab, h: LoadedPrefab['hinges'][number]): { pivot: Vector3; axis: Vector3; center: Vector3 } {
+    const pivot = Vector3.from(h.pos);
+    let min = new Vector3(Infinity, Infinity, Infinity), max = new Vector3(-Infinity, -Infinity, -Infinity);
+    for (const c of prefab.colliders) {
+      if (!(c.node === h.node || c.node.startsWith(h.node + '/')) || c.isTrigger || !c.active) continue;
+      const s = colliderShape(c, new Pose(), (id) => this.data.mesh(id));
+      if (!s) continue;
+      const pts = s.kind === 'box' ? s.obb.corners() : [];
+      for (const p of pts) { min = Vector3.min(min, p); max = Vector3.max(max, p); }
+    }
+    if (!Number.isFinite(min.x)) return { pivot, axis: Vector3.up, center: pivot };
+    const size = max.sub(min);
+    const center = min.add(max).mul(0.5);
+    const thin = size.x <= size.y && size.x <= size.z ? Vector3.right : size.y <= size.z ? Vector3.up : Vector3.forward;
+    let d = center.sub(pivot);
+    d = d.sub(thin.mul(Vector3.dot(d, thin)));
+    const axis = Vector3.cross(thin, d).normalized;
+    return { pivot, axis: axis.sqrMagnitude > 0 ? axis : Vector3.up, center };
+  }
+
+  private hingePose(pose: Pose, prefab: LoadedPrefab, h: LoadedPrefab['hinges'][number], angle: number): Pose {
+    const { pivot, axis } = this.hingeAxis(prefab, h);
+    const r = Quaternion.angleAxis(angle, axis);
+    // local transform: rotate about pivot
+    const localPos = pivot.sub(r.rotate(pivot));
+    return new Pose(pose.point(localPos), pose.rotation.mul(r));
+  }
+
+  /** Door.RPC_OpenDoor / RPC_CloseDoor: toggles and swings leaves away from the player. */
+  toggleDoor(e: SimEntity): string | null {
+    if (!this.isDoor(e)) return 'Not a door';
+    const p = this.prefab(e);
+    if (e.doorOpen) {
+      e.doorOpen = null;
+    } else {
+      const open = new Map<string, number>();
+      for (const h of p.hinges) {
+        const { pivot, axis, center } = this.hingeAxis(p, h);
+        const worldCenter = (a: number) => e.pose.point(pivot.add(Quaternion.angleAxis(a, axis).rotate(center.sub(pivot))));
+        const player = this.player.position;
+        const a = Vector3.distance(worldCenter(90), player) >= Vector3.distance(worldCenter(-90), player) ? 90 : -90;
+        open.set(h.node, a);
+      }
+      e.doorOpen = open;
+    }
+    this.rebuildColliders(e);
+    return null;
+  }
+
+  private rebuildColliders(e: SimEntity) {
+    const set = this.cols.get(e);
+    if (!set) return;
+    for (const c of set.base) this.physics.remove(c);
+    set.base = this.addPrefabColliders(e, this.prefab(e), e.pose, this.prefab(e).isBuildingBlock);
   }
 
   demolish(e: SimEntity) {

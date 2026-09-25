@@ -124,6 +124,8 @@ const meshesUsed = new Set<string>();
 
 function collectColliders(rootNode: J) {
   const colliders: J[] = [];
+  const hinges: J[] = [];
+  let door: J = null;
   const identity: Xf = { pos: [0, 0, 0], rot: [0, 0, 0, 1], scale: [1, 1, 1] };
   const walk = (node: J, xf: Xf, path: string, active: boolean) => {
     const comps: J[] = node.components ?? [];
@@ -157,11 +159,17 @@ function collectColliders(rootNode: J) {
       }
       colliders.push(col);
     }
+    if (/^hinge/i.test(node.name)) hinges.push({ node: path, pos: xf.pos, rot: xf.rot });
+    for (const c of comps) {
+      if (c.$type !== 'Door') continue;
+      const names = (arr: J[]) => (arr ?? []).map((r: J) => r?.name ?? r?.$name).filter(Boolean);
+      door = { closedRoots: names(c.ClosedColliderRoots), busyRoots: names(c.BusyColliderRoots), canHandOpen: !!c.canHandOpen };
+    }
     for (const ch of node.children ?? []) walk(ch, compose(xf, ch), `${path}/${ch.name}`, active && ch.activeSelf !== false);
   };
   // Prefab roots are stored inactive and activated on spawn.
   walk(rootNode, identity, rootNode.name, true);
-  return colliders;
+  return { colliders, hinges, door };
 }
 
 // ---------------------------------------------------------------------------
@@ -223,8 +231,14 @@ function compilePrefab(id: number): J {
     classes: (d.rootClassChain ?? []).filter((c: string) => !c.includes('.')),
     bounds: d.entityBounds ? clean(d.entityBounds) : null,
     layer: d.hierarchy?.layer?.index ?? 0,
-    colliders: d.hierarchy ? collectColliders(d.hierarchy) : [],
+    colliders: [],
   };
+  if (d.hierarchy) {
+    const h = collectColliders(d.hierarchy);
+    out.colliders = h.colliders;
+    if (h.hinges.length) out.hinges = h.hinges;
+    if (h.door) out.door = h.door;
+  }
   if (rootEntity && 'grounded' in rootEntity) out.grounded = rootEntity.grounded;
 
   const cons = pa.Construction?.[0];

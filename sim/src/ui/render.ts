@@ -68,9 +68,14 @@ function colliderColor(srv: BuildServer, c: Collider, e: SimEntity | null): numb
 }
 
 /** Which colliders are drawn in normal view: solid geometry only. */
+/** Layers that never render as solid geometry: volumes, triggers and helper colliders. */
+const HIDDEN_LAYERS = new Set([2, 10, 18, 22, 23, 28, 29, 17]); // Ignore Raycast, Invisible, Trigger, Construction Socket, Terrain, Prevent Movement, Prevent Building, Player
+
 function visibleInNormal(c: Collider) {
-  return !c.isTrigger && c.layer !== Layer.PreventBuilding && c.layer !== Layer.PlayerServer && c.layer !== Layer.Terrain && c.layer !== Layer.ConstructionSocket;
+  return !c.isTrigger && !HIDDEN_LAYERS.has(c.layer);
 }
+
+const isGlass = (c: Collider) => /glass/i.test(c.name);
 
 const LAYER_VIEW_COLORS: Record<number, number> = {
   [Layer.PreventBuilding]: 0xff3b30, // tier 2: what other objects' deploy volumes test against
@@ -161,7 +166,8 @@ export class Renderer {
         if (layerView) {
           const col = LAYER_VIEW_COLORS[c.layer] ?? OTHER_COLOR;
           m = this.mat(col, { opacity: c.layer === Layer.PreventBuilding ? 0.45 : 0.3 });
-        } else m = this.mat(colliderColor(this.srv, c, e));
+        } else if (isGlass(c)) m = this.mat(0xa8d8ff, { opacity: 0.25 });
+        else m = this.mat(colliderColor(this.srv, c, e));
         const mesh = new THREE.Mesh(g.geo, m);
         mesh.position.copy(g.pos);
         mesh.quaternion.copy(g.rot);
@@ -206,7 +212,7 @@ export class Renderer {
     const origin = new Pose();
     const addShapes = (p: LoadedPrefab, at: Pose) => {
       for (const c of p.colliders) {
-        if (!c.active || !c.enabled || c.isTrigger || c.layer === Layer.PreventBuilding) continue;
+        if (!c.active || !c.enabled || c.isTrigger || HIDDEN_LAYERS.has(c.layer)) continue;
         const s = colliderShape(c, at, (id) => this.srv.data.mesh(id));
         const g = s && shapeGeometry(s);
         if (!g) continue;

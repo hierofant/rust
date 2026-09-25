@@ -76,6 +76,8 @@ export class SimEntity {
   /** ConditionalModel state bits of the current skin. */
   modelState: boolean[] = [];
   health = 0;
+  /** Door open state: hinge node -> swing angle (degrees). Empty map = closed. */
+  doorOpen: Map<string, number> | null = null;
 
   // StabilityEntity
   grounded: boolean;
