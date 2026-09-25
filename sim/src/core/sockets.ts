@@ -367,3 +367,74 @@ export class SocketFree extends SocketBase {
     return result;
   }
 }
+
+/** CornerSocket.cs */
+export class CornerSocket extends SocketBase {
+  kind = 'CornerSocket';
+  override testTarget(): boolean {
+    return false;
+  }
+  override canConnect(position: Vector3, rotation: Quaternion, socket: SocketBase, socketPosition: Vector3, socketRotation: Quaternion): boolean {
+    if (!super.canConnect(position, rotation, socket, socketPosition, socketRotation)) return false;
+    const from = rotation.rotate(this.worldRotation.rotate(Vector3.forward));
+    const to = socketRotation.rotate(socket.worldRotation.rotate(Vector3.forward));
+    if (Vector3.angle(from, to) > 2) return false;
+    return this.getSelectBounds(position, rotation).intersects(socket.getSelectBounds(socketPosition, socketRotation));
+  }
+}
+
+/** Socket_Terrain.cs */
+export class SocketTerrain extends SocketBase {
+  kind = 'Socket_Terrain';
+  placementHeight = 0;
+  alignToNormal = false;
+
+  override testTarget(target: Target): boolean {
+    return target.onTerrain;
+  }
+
+  override doPlacement(target: Target, _ctx: PlacementContext): Placement | null {
+    const yaw = this.rotation.eulerAngles.y;
+    const dir = target.ray.direction.withY(0).normalized;
+    const upwards = this.alignToNormal ? target.normal : Vector3.up;
+    const q = Quaternion.lookRotation(dir, upwards).mul(Quaternion.euler(0, yaw, 0)).mul(Quaternion.euler(target.rotation));
+    const result = newPlacement(target);
+    result.rotation = q;
+    result.position = target.position.sub(q.rotate(this.position));
+    return result;
+  }
+}
+
+/**
+ * Socket_Free_Snappable.cs. Snapping (shift-hold, snappingMode != 0) is not ported yet;
+ * without it the class behaves exactly like Socket_Free, but stays a distinct type for IsCompatible.
+ */
+export class SocketFreeSnappable extends SocketFree {
+  override kind = 'Socket_Free_Snappable';
+}
+
+/** Physics hook for socket code that queries the world outside a placement attempt (CanConnect). */
+export const socketPhysics: { checkOBB: (obb: OBB, layerMask: number) => boolean } = {
+  checkOBB: () => false,
+};
+
+/** ConstructionSocket_Elevator.cs */
+export class ConstructionSocketElevator extends ConstructionSocket {
+  override kind = 'ConstructionSocket_Elevator';
+  MaxFloor = 5;
+
+  protected override canConnectToEntity(target: Target): boolean {
+    const floor = (target.entity as { elevatorFloor?: number } | null)?.elevatorFloor;
+    if (floor != null && floor >= this.MaxFloor) return false;
+    const v = targetWorldPosition(target);
+    const q = targetWorldRotation(target, true);
+    if (socketPhysics.checkOBB(OBB.fromSize(v, new Vector3(2, 0.5, 2), q), 2097152)) return false;
+    return super.canConnectToEntity(target);
+  }
+
+  override canConnect(position: Vector3, rotation: Quaternion, socket: SocketBase, socketPosition: Vector3, socketRotation: Quaternion): boolean {
+    if (!super.canConnect(position, rotation, socket, socketPosition, socketRotation)) return false;
+    const v = new Pose(position, rotation).point(this.worldPosition);
+    return !socketPhysics.checkOBB(OBB.fromSize(v, new Vector3(2, 0.5, 2), rotation), 2097152);
+  }
+}

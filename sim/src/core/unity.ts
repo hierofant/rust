@@ -226,6 +226,22 @@ export class Quaternion {
     ];
   }
 
+  /** Quaternion.eulerAngles (degrees, each in [0, 360), Unity's ZXY decomposition). */
+  get eulerAngles(): Vector3 {
+    const m = this.toMatrix3();
+    const wrap = (a: number) => {
+      a = a * Rad2Deg;
+      a %= 360;
+      return a < 0 ? a + 360 : a;
+    };
+    const sx = clamp(-m[1][2], -1, 1);
+    if (Math.abs(sx) < 0.9999999) {
+      return new Vector3(wrap(Math.asin(sx)), wrap(Math.atan2(m[0][2], m[2][2])), wrap(Math.atan2(m[1][0], m[1][1])));
+    }
+    // Gimbal lock: roll folded into yaw.
+    return new Vector3(wrap(Math.asin(sx)), wrap(Math.atan2(-m[2][0], m[0][0])), 0);
+  }
+
   get forward() { return this.rotate(Vector3.forward); }
   get up() { return this.rotate(Vector3.up); }
   get right() { return this.rotate(Vector3.right); }
