@@ -7,6 +7,8 @@ export interface CatalogEntry {
   group: string;
   dlc: boolean;
   search: string;
+  /** Item shortname (icon file), when an item deploys this prefab. */
+  shortname?: string;
 }
 
 const BUILDING_ORDER = [
@@ -30,16 +32,19 @@ function groupOf(p: LoadedPrefab): string {
 }
 
 export function buildCatalog(data: GameData): CatalogEntry[] {
-  const itemByPrefab = new Map<number, { name: string; dlc: boolean }>();
+  const itemByPrefab = new Map<number, { name: string; dlc: boolean; shortname: string }>();
   for (const it of data.items) {
-    if (it.deploys && !itemByPrefab.has(it.deploys)) itemByPrefab.set(it.deploys, { name: it.name, dlc: !!(it.dlc || it.steamItem) });
+    if (it.deploys && !it.deploysGuessed && !itemByPrefab.has(it.deploys)) itemByPrefab.set(it.deploys, { name: it.name, dlc: !!(it.dlc || it.steamItem), shortname: it.shortname });
+  }
+  for (const it of data.items) {
+    if (it.deploys && !itemByPrefab.has(it.deploys)) itemByPrefab.set(it.deploys, { name: it.name, dlc: !!(it.dlc || it.steamItem), shortname: it.shortname });
   }
   const out: CatalogEntry[] = [];
   for (const p of data.placeables) {
     const item = itemByPrefab.get(p.prefabID);
     const name = item?.name ?? p.construction?.name ?? baseName(p);
     const group = groupOf(p);
-    out.push({ prefab: p, name: `${name}`, group, dlc: !!item?.dlc, search: `${name} ${baseName(p)} ${p.path}`.toLowerCase() });
+    out.push({ prefab: p, name: `${name}`, group, dlc: !!item?.dlc, shortname: item?.shortname, search: `${name} ${baseName(p)} ${p.path} ${item?.shortname ?? ''}`.toLowerCase() });
   }
   const order = (e: CatalogEntry) => {
     const i = BUILDING_ORDER.indexOf(baseName(e.prefab));

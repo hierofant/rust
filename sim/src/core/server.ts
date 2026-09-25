@@ -501,6 +501,30 @@ export class BuildServer extends World implements ModServer, VolumeServer, Condi
     return { pivot, axis: axis.sqrMagnitude > 0 ? axis : Vector3.up, center };
   }
 
+  /** Prefab instances that make up an entity: root, grade skin, active server conditional models. */
+  renderInstances(e: SimEntity): { prefab: LoadedPrefab; pose: Pose }[] {
+    const p = this.prefab(e);
+    const out = [{ prefab: p, pose: e.pose }];
+    if (e.skinPrefab == null) return out;
+    const skin = this.data.prefabs.get(e.skinPrefab);
+    if (!skin) return out;
+    out.push({ prefab: skin, pose: e.pose });
+    skin.conditionals.forEach((cm: J, i: number) => {
+      if (!e.modelState[i] || !cm.onServer || !cm.prefab?.prefab) return;
+      const cp = this.data.prefabs.get(cm.prefab.prefab);
+      if (!cp) return;
+      out.push({ prefab: cp, pose: new Pose(e.pose.point(Vector3.from(cm.worldPosition)), e.pose.rotation.mul(Quaternion.from(cm.worldRotation))) });
+    });
+    return out;
+  }
+
+  /** Pose for a node of an entity's own prefab, following open door leaves. */
+  nodePose(e: SimEntity, prefab: LoadedPrefab, node: string, pose: Pose): Pose {
+    if (!e.doorOpen || prefab !== e.prefab) return pose;
+    const h = prefab.hinges.find((x) => node === x.node || node.startsWith(x.node + '/'));
+    return h && e.doorOpen.has(h.node) ? this.hingePose(pose, prefab, h, e.doorOpen.get(h.node)!) : pose;
+  }
+
   private hingePose(pose: Pose, prefab: LoadedPrefab, h: LoadedPrefab['hinges'][number], angle: number): Pose {
     const { pivot, axis } = this.hingeAxis(prefab, h);
     const r = Quaternion.angleAxis(angle, axis);

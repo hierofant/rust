@@ -10,6 +10,7 @@ import { colliderShape } from '../core/physics';
 import type { BuildServer } from '../core/server';
 import { Layer } from '../core/server';
 import { Pose, Quaternion, Vector3 } from '../core/unity';
+import type { Visuals } from './visual';
 
 export const toThree = (v: Vector3) => new THREE.Vector3(v.x, v.y, -v.z);
 export const fromThree = (v: THREE.Vector3) => new Vector3(v.x, v.y, -v.z);
@@ -93,6 +94,7 @@ export class Renderer {
   private volumeGhost = new THREE.Group();
   private highlight = new THREE.Group();
   mode: ViewMode = 'normal';
+  visuals: Visuals | null = null;
   private materials = new Map<string, THREE.Material>();
 
   constructor(canvas: HTMLCanvasElement, private srv: BuildServer) {
@@ -143,7 +145,7 @@ export class Renderer {
     for (const [e, g] of this.groups) {
       if (!alive.has(e)) {
         this.scene.remove(g.group);
-        g.group.traverse((o) => (o as THREE.Mesh).geometry?.dispose());
+        g.group.traverse((o) => !o.userData.shared && (o as THREE.Mesh).geometry?.dispose());
         this.groups.delete(e);
       }
     }
@@ -153,13 +155,37 @@ export class Renderer {
       if (cur && cur.key === key) continue;
       if (cur) {
         this.scene.remove(cur.group);
-        cur.group.traverse((o) => (o as THREE.Mesh).geometry?.dispose());
+        cur.group.traverse((o) => !o.userData.shared && (o as THREE.Mesh).geometry?.dispose());
       }
       const group = new THREE.Group();
       group.userData.entity = e;
+      const layerView = this.mode === 'layers';
+      // Client meshes where we have them; collision shapes for the rest.
+      const covered = new Set<string>();
+      if (!layerView && this.visuals) {
+        for (const inst of this.srv.renderInstances(e)) {
+          const parts = this.visuals.parts(inst.prefab.path);
+          if (!parts) continue;
+          covered.add(inst.prefab.path.split('/').pop()!.replace('.prefab', ''));
+          for (const part of parts) {
+            const geo = this.visuals.geometry(part.mesh);
+            if (!geo) continue;
+            const at = this.srv.nodePose(e, inst.prefab, part.node, inst.pose);
+            const pos = at.point(Vector3.from(part.pos));
+            const rot = at.rotation.mul(Quaternion.from(part.rot));
+            const mats = geo.groups.map((_, i) => this.visuals!.material(part.materials[i] ?? part.materials[0]));
+            const mesh = new THREE.Mesh(geo, mats.length > 1 ? mats : mats[0] ?? this.mat(OTHER_COLOR));
+            mesh.userData.shared = true;
+            mesh.position.copy(toThree(pos));
+            mesh.quaternion.copy(quatToThree(rot));
+            mesh.scale.set(part.scale[0], part.scale[1], part.scale[2]);
+            group.add(mesh);
+          }
+        }
+      }
       for (const c of this.srv.physics.entityColliders(e)) {
-        const layerView = this.mode === 'layers';
         if (!layerView && !visibleInNormal(c)) continue;
+        if (covered.has(c.name.split('/')[0])) continue;
         const g = shapeGeometry(c.shape);
         if (!g) continue;
         let m: THREE.Material;

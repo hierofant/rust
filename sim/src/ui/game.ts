@@ -9,6 +9,7 @@ import { GROUP_ORDER, buildCatalog, type CatalogEntry } from './catalog';
 import { Controls } from './controls';
 import { RadialMenu, isBuildingPiece } from './radial';
 import { Renderer, quatToThree, toThree } from './render';
+import type { Visuals } from './visual';
 
 const GRADE_NAMES = ['Twig', 'Wood', 'Stone', 'Metal', 'HQM'];
 const SAVE_KEY = 'rustsim.save.v1';
@@ -45,6 +46,7 @@ export class Game {
   renderer: Renderer;
   controls: Controls;
   catalog: CatalogEntry[];
+  visuals: Visuals | null;
 
   feet = new Vector3(0, 0, -6);
   yaw = 0;
@@ -67,9 +69,11 @@ export class Game {
   private lastTime = performance.now();
   private dirty = true;
 
-  constructor(readonly data: GameData, canvas: HTMLCanvasElement) {
+  constructor(readonly data: GameData, canvas: HTMLCanvasElement, visuals: Visuals | null = null) {
     this.srv = new BuildServer(data);
     this.renderer = new Renderer(canvas, this.srv);
+    this.renderer.visuals = visuals;
+    this.visuals = visuals;
     this.controls = new Controls(canvas, $('#pad'));
     this.catalog = buildCatalog(data);
     const radial = new RadialMenu(this.catalog, (e) => this.select(e));
@@ -585,6 +589,13 @@ export class Game {
         const b = document.createElement('button');
         b.className = 'picker-item' + (it === this.selected ? ' on' : '');
         b.innerHTML = `${escapeHtml(it.name)}${it.dlc ? ' <span class="dlc">DLC</span>' : ''}`;
+        if (this.visuals && it.shortname) {
+          const img = document.createElement('img');
+          img.src = this.visuals.iconUrl(it.shortname);
+          img.alt = '';
+          img.onerror = () => img.remove();
+          b.prepend(img);
+        }
         b.addEventListener('click', () => this.select(it));
         list.appendChild(b);
       }
