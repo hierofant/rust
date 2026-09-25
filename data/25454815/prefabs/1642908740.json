@@ -1,0 +1,568 @@
+{
+  "prefabID": 1642908740,
+  "path": "assets/prefabs/deployable/bed/bed_deployed.corpse.prefab",
+  "rootClassChain": [
+    "SleepingBag",
+    "DecayEntity",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -0.0031479597091674805,
+      "y": 0.14323347806930542,
+      "z": 0.17626416683197021
+    },
+    "size": {
+      "x": 1.0438754558563232,
+      "y": 0.35415017604827881,
+      "z": 1.8574087619781494
+    }
+  },
+  "hierarchy": {
+    "name": "bed_deployed.corpse",
+    "layer": {
+      "index": 19,
+      "name": "Harvestable"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "UnityEngine.BoxCollider",
+        "$name": "bed_deployed.corpse",
+        "colliderType": "Box",
+        "center": {
+          "x": -0.009937286376953125,
+          "y": 0.3234715461730957,
+          "z": -0.015155792236328125
+        },
+        "size": {
+          "x": 2.4476263523101807,
+          "y": 0.42551875114440918,
+          "z": 1.3410063982009888
+        },
+        "isTrigger": false,
+        "enabled": true,
+        "physicMaterial": {
+          "$ref": "PhysicsMaterial",
+          "name": "Wood",
+          "instanceID": 609850
+        }
+      },
+      {
+        "$type": "GroundWatch",
+        "$name": "bed_deployed.corpse",
+        "groundPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "layers": 2097152,
+        "radius": 0.10000000149011612,
+        "needBuildingBlock": false,
+        "needOnlyOneAreaCheckValid": false,
+        "whitelist": [],
+        "fails": 0,
+        "_baseEntity": null
+      },
+      {
+        "$type": "RepositionOnGroundMissing",
+        "$name": "bed_deployed.corpse",
+        "originalPrefab": {
+          "$ref": "GameObject",
+          "guid": "f5b206b6dd5f86d46a5b683e2de96c10",
+          "resourcePath": "assets/prefabs/deployable/bed/bed_deployed.prefab",
+          "resourceID": 3928883189
+        },
+        "killIfInvalid": false,
+        "castLayers": 10551552,
+        "_baseEntity": null
+      },
+      {
+        "$type": "SleepingBag",
+        "$name": "bed_deployed.corpse",
+        "deployerUserID": 0,
+        "CountsTowardsBagLimit": true,
+        "renameDialog": {
+          "$ref": "GameObject",
+          "name": "UI.Dialog.SleepingBag.Rename",
+          "instanceID": 1012646
+        },
+        "assignDialog": {
+          "$ref": "GameObject",
+          "name": "UI.Dialog.AssignToFriend",
+          "instanceID": 1012648
+        },
+        "secondsBetweenReuses": 300.0,
+        "perPlayerRespawnCooldown": false,
+        "niceName": "Unnamed Bag",
+        "spawnOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "RespawnType": {
+          "$enum": "ProtoBuf.RespawnInformation+SpawnOptions+RespawnType",
+          "name": "SleepingBag",
+          "value": 1
+        },
+        "isStatic": false,
+        "canBePublic": false,
+        "canReassignToFriends": false,
+        "clearHostile": false,
+        "assignOtherBagPhrase": {
+          "$type": "Translate+Phrase",
+          "token": "assigned_other_bag_limit",
+          "legacyEnglish": "You have assigned {0} a bag, they are now at {0}/{1} bags"
+        },
+        "assignedBagPhrase": {
+          "$type": "Translate+Phrase",
+          "token": "assigned_bag_limit",
+          "legacyEnglish": "You have been assigned a bag, you are now at {0}/{1} bags"
+        },
+        "cannotAssignBedNoPlayerPhrase": {
+          "$type": "Translate+Phrase",
+          "token": "cannot_assign_bag_limit_noplayer",
+          "legacyEnglish": "You cannot assign a bag to this player, they have reached their bag limit!"
+        },
+        "cannotAssignBedPhrase": {
+          "$type": "Translate+Phrase",
+          "token": "cannot_assign_bag_limit",
+          "legacyEnglish": "You cannot assign {0} a bag, they have reached their bag limit!"
+        },
+        "cannotMakeBedPhrase": {
+          "$type": "Translate+Phrase",
+          "token": "cannot_make_bed_limit",
+          "legacyEnglish": "You cannot take ownership of the bed, you are at your bag limit"
+        },
+        "bedAssigningBlocked": {
+          "$type": "Translate+Phrase",
+          "token": "bag_assign_blocked",
+          "legacyEnglish": "That player has blocked bag assignment"
+        },
+        "unlockTime": 0.0,
+        "canBeDemolished": false,
+        "debrisPrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "debrisRotationOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "DebrisPositions": [],
+        "buildingID": 0,
+        "timePlaced": 0.0,
+        "decayTimer": 0.0,
+        "upkeepTimer": 0.0,
+        "upkeep": null,
+        "decay": null,
+        "decayPoints": null,
+        "lastDecayTick": 0.0,
+        "decayVariance": 1.0,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "cadc1922699b2b042bddb71156912d4e",
+          "resourcePath": "assets/prefabs/deployable/sleeping bag/sleepingbag.corpse.prefab",
+          "resourceID": 403186932
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "DeployableCorpse",
+          "comments": "",
+          "density": 100.0,
+          "amounts": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 3203759669
+        },
+        "startHealth": 200.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "bed.item",
+            "itemid": -1273339005,
+            "shortname": "bed"
+          },
+          "itemCount": 1,
+          "setConditionFromHealth": true,
+          "subtractCondition": 100.0,
+          "requireBuildingPrivilege": true,
+          "requireHammer": true,
+          "requireEmptyInv": true,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": false,
+          "itemTarget": null,
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": false,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -0.0031479597091674805,
+            "y": 0.14323347806930542,
+            "z": 0.17626416683197021
+          },
+          "size": {
+            "x": 1.0438754558563232,
+            "y": 0.35415017604827881,
+            "z": 1.8574087619781494
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "bed_deployed.corpse",
+          "collision": null,
+          "rootBone": [
+            [],
+            []
+          ],
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "bed_deployed.corpse",
+              "instanceID": 1299934,
+              "goName": "bed_deployed.corpse",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "preventBuilding",
+              "instanceID": 1411982,
+              "goName": "preventBuilding",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "CombinedGibsMesh",
+              "instanceID": 1349314,
+              "goName": "CombinedGibsMesh",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "bed_deployed.corpse",
+            "preventBuilding",
+            "CombinedGibsMesh"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 1642908740,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$ref": "Model",
+        "name": "bed_deployed.corpse",
+        "instanceID": 1557238,
+        "goName": "bed_deployed.corpse",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "children": [
+      {
+        "name": "preventBuilding",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "IgnoreWireCheck",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "preventBuilding",
+            "colliderType": "Box",
+            "center": {
+              "x": -0.009937286376953125,
+              "y": 0.705778956413269,
+              "z": -0.015155792236328125
+            },
+            "size": {
+              "x": 2.4476263523101807,
+              "y": 1.4115579128265381,
+              "z": 1.3410063982009888
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "CombinedGibsMesh",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Decay": [
+      {
+        "$type": "DeployableDecay",
+        "$name": "<destroyed native object>",
+        "prefabID": 1642908740,
+        "hierachyName": "bed_deployed.corpse",
+        "decayDelay": 48.0,
+        "decayDuration": 8.0,
+        "overrideHealRate": false,
+        "decayTickOverride": 0.0,
+        "decayIndoors": false,
+        "healRate": 1.0,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/bed/bed_deployed.corpse.prefab",
+        "instanceID": 1527784,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ]
+  }
+}

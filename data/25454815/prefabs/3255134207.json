@@ -1,0 +1,115 @@
+{
+  "prefabID": 3255134207,
+  "path": "assets/prefabs/weapons/m92/effects/attack_silenced.prefab",
+  "rootClassChain": [
+    "UnityEngine.GameObject",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "hierarchy": {
+    "name": "attack_silenced",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "EffectParentToWeaponBone",
+        "$name": "attack_silenced",
+        "boneName": "muzzle_offset_silencer",
+        "singleFrame": false
+      },
+      {
+        "$type": "EffectAudioPerspectiveSwitcher",
+        "$name": "attack_silenced",
+        "parentToWeaponComponent": null
+      },
+      {
+        "$type": "EffectSilencerSelect",
+        "$name": "attack_silenced",
+        "MilitaryEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "OilFilterEffect": {
+          "$ref": "GameObject",
+          "guid": "408efb0838f055145833f50f3ab20831",
+          "resourcePath": "assets/prefabs/weapons/m92/effects/attack_silenced_oilfilter.prefab",
+          "resourceID": 2807003551
+        },
+        "SodaCanEffect": {
+          "$ref": "GameObject",
+          "guid": "fde8e4de3833b0b40925f68d6a3c7baa",
+          "resourcePath": "assets/prefabs/weapons/m92/effects/attack_silenced_sodacan.prefab",
+          "resourceID": 2640935829
+        }
+      },
+      {
+        "$type": "ParticleSystemPostIK",
+        "$name": "attack_silenced"
+      }
+    ],
+    "children": [
+      {
+        "name": "muzzle_flash_pistol_silenced",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "HideIfAiming",
+            "$name": "muzzle_flash_pistol_silenced",
+            "systems": [
+              null,
+              null,
+              null
+            ]
+          }
+        ],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {}
+}

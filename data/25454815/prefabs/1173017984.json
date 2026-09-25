@@ -1,0 +1,5290 @@
+{
+  "prefabID": 1173017984,
+  "path": "assets/content/vehicles/trains/workcart/workcart_aboveground.entity.prefab",
+  "rootClassChain": [
+    "TrainEngine",
+    "TrainCar",
+    "BaseVehicle",
+    "BaseMountable",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.0,
+      "y": 1.9494739770889282,
+      "z": 0.10000000149011612
+    },
+    "size": {
+      "x": 3.5,
+      "y": 4.0,
+      "z": 11.399999618530273
+    }
+  },
+  "hierarchy": {
+    "name": "workcart_aboveground.entity",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "TrainEngine",
+        "$name": "workcart_aboveground.entity",
+        "buttonHoldTime": 0.0,
+        "engineDamage": null,
+        "engineLocalOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "leftHandLever": null,
+        "rightHandLever": null,
+        "leftHandGrip": null,
+        "rightHandGrip": null,
+        "leverStyle": {
+          "$enum": "TrainEngine+LeverStyle",
+          "name": "WorkCart",
+          "value": 0
+        },
+        "monitorCanvas": null,
+        "monitorText": null,
+        "gauges": null,
+        "engineForce": 30000.0,
+        "maxSpeed": 18.0,
+        "engineStartupTime": 0.25,
+        "fuelStoragePrefab": {
+          "$ref": "GameObject",
+          "guid": "925a44db8837f5e4893c476d92690cfd",
+          "resourcePath": "assets/content/vehicles/trains/workcart/subents/workcart_fuel_storage.prefab",
+          "resourceID": 340386975
+        },
+        "idleFuelPerSec": 0.02500000037252903,
+        "maxFuelPerSec": 0.075000002980232239,
+        "driverProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "50Percent",
+          "comments": "Take 50% less damage from all sources.",
+          "density": 1.0,
+          "amounts": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "FilenameStringId": 4070951198
+        },
+        "lootablesAreOnPlatform": true,
+        "mustMountFromPlatform": true,
+        "onLights": [
+          null
+        ],
+        "headlights": [
+          null,
+          null
+        ],
+        "notMovingLights": [],
+        "movingForwardLights": [],
+        "movingBackwardLights": [],
+        "fxEngineOn": null,
+        "fxLightDamage": null,
+        "fxMediumDamage": null,
+        "fxHeavyDamage": null,
+        "fxEngineTrouble": null,
+        "engineWorldCol": {
+          "$type": "UnityEngine.BoxCollider",
+          "$name": "Box",
+          "colliderType": "Box",
+          "center": {
+            "x": -0.86503982543945313,
+            "y": 1.9953310489654541,
+            "z": -0.8469085693359375
+          },
+          "size": {
+            "x": 1.0651779174804688,
+            "y": 1.2134761810302734,
+            "z": 1.9338531494140625
+          },
+          "isTrigger": false,
+          "enabled": true,
+          "physicMaterial": {
+            "$ref": "PhysicsMaterial",
+            "name": "Metal",
+            "instanceID": 609842
+          }
+        },
+        "engineDamageToSlow": 200.0,
+        "engineDamageTimeframe": 10.0,
+        "engineSlowedTime": 8.0,
+        "engineSlowedMaxVel": 4.0,
+        "sparks": [
+          null,
+          null
+        ],
+        "sparkLights": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "trainAudio": null,
+        "engineController": null,
+        "completeTrain": null,
+        "savedTrackSpeed": 0.0,
+        "frontBogieYRot": 0.0,
+        "rearBogieYRot": 0.0,
+        "spawnOrigin": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "_frontTrackSection": null,
+        "distFrontToBackWheel": 0.0,
+        "initialSpawnTime": 0.0,
+        "decayingFor": 0.0,
+        "decayTickSpacing": 60.0,
+        "lastDecayTick": 0.0,
+        "corpseSeconds": 60.0,
+        "frontCollisionTrigger": {
+          "$type": "TriggerTrainCollisions",
+          "$name": "FrontCollisionTrigger",
+          "triggerCollider": {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "FrontCollisionTrigger",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 1.5698094367980957,
+              "z": -4.49748420715332
+            },
+            "size": {
+              "x": 2.5,
+              "y": 1.9498786926269531,
+              "z": 0.77665376663208008
+            },
+            "isTrigger": true,
+            "enabled": true
+          },
+          "location": {
+            "$enum": "TriggerTrainCollisions+Location",
+            "name": "Front",
+            "value": 0
+          },
+          "owner": {
+            "$cycle": true,
+            "type": "TrainEngine"
+          },
+          "staticContents": [],
+          "trainContents": [],
+          "otherRigidbodyContents": [],
+          "colliderContents": [],
+          "interestLayers": 2195457,
+          "contents": null,
+          "entityContents": null,
+          "OnEntityEnterTrigger": null,
+          "OnEntityLeaveTrigger": null
+        },
+        "rearCollisionTrigger": {
+          "$type": "TriggerTrainCollisions",
+          "$name": "RearCollisionTrigger",
+          "triggerCollider": {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "RearCollisionTrigger",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 1.6488883495330811,
+              "z": 4.1610507965087891
+            },
+            "size": {
+              "x": 2.5,
+              "y": 1.9724726676940918,
+              "z": 1.1882925033569336
+            },
+            "isTrigger": true,
+            "enabled": true
+          },
+          "location": {
+            "$enum": "TriggerTrainCollisions+Location",
+            "name": "Rear",
+            "value": 1
+          },
+          "owner": {
+            "$cycle": true,
+            "type": "TrainEngine"
+          },
+          "staticContents": [],
+          "trainContents": [],
+          "otherRigidbodyContents": [],
+          "colliderContents": [],
+          "interestLayers": 2195457,
+          "contents": null,
+          "entityContents": null,
+          "OnEntityEnterTrigger": null,
+          "OnEntityLeaveTrigger": null
+        },
+        "collisionDamageDivide": 50000.0,
+        "derailCollisionForce": 250000.0,
+        "hurtTriggerFront": {
+          "$type": "TriggerHurtNotChild",
+          "$name": "PlayerHurtFrontTrigger",
+          "DamagePerSecond": 8.0,
+          "DamageTickRate": 1.0,
+          "DamageDelay": 0.0,
+          "damageType": {
+            "$enum": "Rust.DamageType",
+            "name": "Generic",
+            "value": 0
+          },
+          "ignoreNPC": false,
+          "npcMultiplier": 50.0,
+          "resourceMultiplier": 5.0,
+          "lootContainerMultiplier": 1.0,
+          "triggerHitImpacts": true,
+          "RequireUpAxis": false,
+          "SourceEntity": {
+            "$cycle": true,
+            "type": "TrainEngine"
+          },
+          "UseSourceEntityDamageMultiplier": true,
+          "ignoreAllVehicleMounted": true,
+          "activationDelay": 1.5,
+          "ScaleWithDistToTriggerCenter": false,
+          "triggerCollider": null,
+          "DamageMultAtCenter": 1.0,
+          "interestLayers": 1073874944,
+          "contents": null,
+          "entityContents": null,
+          "OnEntityEnterTrigger": null,
+          "OnEntityLeaveTrigger": null
+        },
+        "hurtTriggerRear": {
+          "$type": "TriggerHurtNotChild",
+          "$name": "PlayerHurtRearTrigger",
+          "DamagePerSecond": 8.0,
+          "DamageTickRate": 1.0,
+          "DamageDelay": 0.0,
+          "damageType": {
+            "$enum": "Rust.DamageType",
+            "name": "Generic",
+            "value": 0
+          },
+          "ignoreNPC": false,
+          "npcMultiplier": 50.0,
+          "resourceMultiplier": 5.0,
+          "lootContainerMultiplier": 1.0,
+          "triggerHitImpacts": true,
+          "RequireUpAxis": false,
+          "SourceEntity": {
+            "$cycle": true,
+            "type": "TrainEngine"
+          },
+          "UseSourceEntityDamageMultiplier": true,
+          "ignoreAllVehicleMounted": true,
+          "activationDelay": 1.5,
+          "ScaleWithDistToTriggerCenter": false,
+          "triggerCollider": null,
+          "DamageMultAtCenter": 1.0,
+          "interestLayers": 1073874944,
+          "contents": null,
+          "entityContents": null,
+          "OnEntityEnterTrigger": null,
+          "OnEntityLeaveTrigger": null
+        },
+        "hurtOrRepelTriggersInternal": [
+          {
+            "$ref": "GameObject",
+            "name": "PlayerRepelTrigger",
+            "instanceID": 1132498
+          }
+        ],
+        "hurtTriggerMinSpeed": 1.0,
+        "centreOfMassTransform": [],
+        "frontBogiePivot": null,
+        "frontBogieCanRotate": true,
+        "rearBogiePivot": null,
+        "rearBogieCanRotate": true,
+        "wheelVisuals": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "wheelRadius": 0.61500000953674316,
+        "fxDestroyed": {
+          "$ref": "GameObject",
+          "guid": "4b822b6f071bd4aea9ee72538b889f55",
+          "resourcePath": "assets/prefabs/npc/m2bradley/effects/bradley_explosion.prefab",
+          "resourceID": 3384898527
+        },
+        "platformParentTrigger": {
+          "$type": "TriggerParentEnclosed",
+          "$name": "TrainTriggerParent",
+          "Padding": 0.0,
+          "intersectionMode": {
+            "$enum": "TriggerParentEnclosed+TriggerMode",
+            "name": "PivotPoint",
+            "value": 1
+          },
+          "CheckBoundsOnUnparent": true,
+          "boxCollider": null,
+          "StableIndex": -1,
+          "doClippingCheck": false,
+          "associatedMountable": {
+            "$cycle": true,
+            "type": "TrainEngine"
+          },
+          "parentMountedPlayers": true,
+          "parentSleepers": true,
+          "parentSwimmers": false,
+          "ParentNPCPlayers": false,
+          "SkipNPCChecks": false,
+          "overrideOtherTriggers": false,
+          "checkForObjUnderFeet": false,
+          "doExpensivePlayerClippingChecks": false,
+          "TriggerMovementMask": {
+            "$enum": "BaseEntity+Axis",
+            "name": "XYZ",
+            "value": 7,
+            "flagNames": [
+              "X",
+              "Y",
+              "XY",
+              "Z",
+              "XZ",
+              "YZ",
+              "XYZ"
+            ]
+          },
+          "EntityMovementMask": {
+            "$enum": "BaseEntity+Axis",
+            "name": "XYZ",
+            "value": 7,
+            "flagNames": [
+              "X",
+              "Y",
+              "XY",
+              "Z",
+              "XZ",
+              "YZ",
+              "XYZ"
+            ]
+          },
+          "interestLayers": -2147352064,
+          "contents": null,
+          "entityContents": null,
+          "OnEntityEnterTrigger": null,
+          "OnEntityLeaveTrigger": null
+        },
+        "collisionEffect": {
+          "$ref": "GameObject",
+          "guid": "f3532bcec81a3fc499f310d0124fe4f6",
+          "resourcePath": "assets/content/vehicles/trains/workcart/traincollisioneffect.prefab",
+          "resourceID": 1969124591
+        },
+        "frontCoupling": [
+          []
+        ],
+        "frontCouplingPivot": null,
+        "rearCoupling": [
+          []
+        ],
+        "rearCouplingPivot": null,
+        "coupleSound": {
+          "$ref": "SoundDefinition",
+          "name": "workcart-couple",
+          "instanceID": 204478
+        },
+        "uncoupleSound": {
+          "$ref": "SoundDefinition",
+          "name": "workcart-decouple",
+          "instanceID": 507384
+        },
+        "trainCarAudio": null,
+        "frontCouplingChangedFx": null,
+        "rearCouplingChangedFx": null,
+        "newCouplingFX": null,
+        "decayTimeMultiplier": 1.0,
+        "frontBogieLocalOffset": {
+          "x": -9.3863483925815672E-05,
+          "y": 1.577787443669338E-23,
+          "z": 2.25
+        },
+        "rearBogieLocalOffset": {
+          "x": -9.3863483925815672E-05,
+          "y": -1.577787443669338E-23,
+          "z": -2.25
+        },
+        "itemStoragePrefab": {
+          "$ref": "GameObject",
+          "guid": "eb90e50b5e9195044b1fb0fa5e6b29f5",
+          "resourcePath": "assets/content/vehicles/trains/workcart/workcartitemstorage.prefab",
+          "resourceID": 317322483
+        },
+        "DistFrontWheelToFrontCoupling": 3.2989997863769531,
+        "DistFrontWheelToBackCoupling": 7.5529999732971191,
+        "coupling": null,
+        "localTrackSelection": {
+          "$enum": "TrainTrackSpline+TrackSelection",
+          "name": "Default",
+          "value": 0
+        },
+        "timeSinceLastPush": {
+          "$type": "TimeSince"
+        },
+        "recentDrivers": [],
+        "clearRecentDriverAction": null,
+        "safeAreaRadius": 0.0,
+        "safeAreaOrigin": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "spawnTime": -1.0,
+        "checkVehicleClipping": false,
+        "excludeCollisionLayers": 0,
+        "dismountStyle": {
+          "$enum": "BaseVehicle+DismountStyle",
+          "name": "Closest",
+          "value": 0
+        },
+        "ignoreDamageFromOutside": false,
+        "npcVisibilityCategory": {
+          "$enum": "BaseVehicle+NpcVisibilityCategory",
+          "name": "LikeNormalPlayer",
+          "value": 0
+        },
+        "mountPoints": [
+          {
+            "$type": "BaseVehicle+MountPointInfo",
+            "isDriver": true,
+            "pos": {
+              "x": 0.68999999761581421,
+              "y": 1.5800000429153442,
+              "z": 3.4500000476837158
+            },
+            "rot": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bone": "",
+            "prefab": {
+              "$ref": "GameObject",
+              "guid": "62b50140ba0c44a499911126bbb991a9",
+              "resourcePath": "assets/prefabs/vehicle/seats/workcartdriver.prefab",
+              "resourceID": 311277167
+            },
+            "mountable": null
+          }
+        ],
+        "childMountableHandleDismountPoints": false,
+        "mountedPlayerRagdolls": {
+          "$enum": "BaseVehicle+RagdollMode",
+          "name": "FallThrough",
+          "value": 1
+        },
+        "clippingChecks": {
+          "$enum": "BaseVehicle+ClippingCheckMode",
+          "name": "OnMountOnly",
+          "value": 0
+        },
+        "clippingAiChecks": {
+          "$enum": "BaseVehicle+ClippingCheckAiMode",
+          "name": "All",
+          "value": 0
+        },
+        "damageRenderer": null,
+        "explosionForceMultiplier": 650.0,
+        "explosionForceMax": 150000.0,
+        "HasBuildingPrivilege": false,
+        "mountSyncType": {
+          "$enum": "BaseMountable+MountSyncType",
+          "name": "RepositionPerFrame",
+          "value": 0
+        },
+        "eyePositionOverride": null,
+        "eyeCenterOverride": null,
+        "overrideEyesRotation": false,
+        "pitchClamp": {
+          "x": -80.0,
+          "y": 50.0
+        },
+        "yawClamp": {
+          "x": -80.0,
+          "y": 80.0
+        },
+        "canWieldItems": true,
+        "relativeViewAngles": true,
+        "disableLegsWhenMounted": false,
+        "disableBreastCensorshipWhenMounted": false,
+        "AllowForceMountWhenRestrained": false,
+        "mountChaining": false,
+        "mountAnchor": [],
+        "mountLOSVertOffset": 0.5,
+        "mountedAnimationSpeed": 0.0,
+        "mountPose": {
+          "$enum": "PlayerModel+MountPoses",
+          "name": "Sit_Workcart",
+          "value": 21
+        },
+        "animateVehicleAim360": false,
+        "maxMountDistance": 2.25,
+        "dismountPositions": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        "checkPlayerLosOnMount": false,
+        "disableMeshCullingForPlayers": false,
+        "allowHeadLook": false,
+        "ignoreVehicleParent": false,
+        "legacyDismount": false,
+        "wearWhileMounted": null,
+        "modifiesPlayerCollider": false,
+        "customPlayerCollider": {
+          "$type": "BasePlayer+CapsuleColliderInfo",
+          "height": 0.0,
+          "radius": 0.0,
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "clippingCheckRadius": 0.40000000596046448,
+        "clippingAndVisChecks": true,
+        "clippingChecksLocation": {
+          "$enum": "BaseMountable+ClippingCheckLocation",
+          "name": "WholeBody",
+          "value": 1
+        },
+        "mountSoundDef": null,
+        "swapSoundDef": null,
+        "dismountSoundDef": null,
+        "allowFootstepEffects": false,
+        "dismountHoldType": {
+          "$enum": "BaseMountable+DismountConvarType",
+          "name": "Misc",
+          "value": 0
+        },
+        "mountTimeStatType": {
+          "$enum": "BaseMountable+MountStatType",
+          "name": "None",
+          "value": 0
+        },
+        "allowedGestures": {
+          "$enum": "BaseMountable+MountGestureType",
+          "name": "None",
+          "value": 0
+        },
+        "canDrinkWhileMounted": true,
+        "allowSleeperMounting": false,
+        "shouldShowHudHealth": true,
+        "blockLooting": false,
+        "animateClothInLocalSpace": true,
+        "protectsFromAnimals": true,
+        "MountedCameraMode": {
+          "$enum": "BasePlayer+CameraMode",
+          "name": "LastCyclableMode",
+          "value": 3
+        },
+        "rigidBody": {
+          "$type": "UnityEngine.Rigidbody",
+          "$name": "workcart_aboveground.entity"
+        },
+        "wantsBoundaryRepelCheck": false,
+        "isMobile": true,
+        "SideLeanAmount": 0.20000000298023224,
+        "_mounted": null,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "TrainProtection",
+          "comments": "Helk: \"Destroyable but only with explosives or a collision. Take no damage from bullets and shit.\"",
+          "density": 100.0,
+          "amounts": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            -2.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            -2.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 1501374331
+        },
+        "startHealth": 1000.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": false,
+          "itemTarget": null,
+          "itemCount": 0,
+          "setConditionFromHealth": false,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": false,
+          "requireHammer": false,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "workcart.item",
+            "itemid": -810326667,
+            "shortname": "workcart"
+          },
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "9fc936b073a5f43a491118520ee9cfe3",
+            "resourcePath": "assets/bundled/prefabs/fx/build/repair_metal.prefab",
+            "resourceID": 2187858850
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "7079978c126dc430bb5b586bc04f0330",
+            "resourcePath": "assets/bundled/prefabs/fx/build/repair_full_metal.prefab",
+            "resourceID": 2350903527
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": false,
+        "markAttackerHostile": false,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 1.9494739770889282,
+            "z": 0.10000000149011612
+          },
+          "size": {
+            "x": 3.5,
+            "y": 4.0,
+            "z": 11.399999618530273
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": true,
+        "model": {
+          "$type": "Model",
+          "$name": "workcart_aboveground.entity",
+          "collision": null,
+          "rootBone": [
+            {
+              "$ref": "Transform",
+              "name": "CenterOfMass",
+              "instanceID": 1343230,
+              "goName": "CenterOfMass",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [
+              [
+                [],
+                [],
+                [],
+                [],
+                []
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ],
+            [
+              [
+                {
+                  "$ref": "Transform",
+                  "name": "MountAnchor",
+                  "instanceID": 1361656,
+                  "goName": "MountAnchor",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                {
+                  "$ref": "Transform",
+                  "name": "DismountOnTrain1",
+                  "instanceID": 1316356,
+                  "goName": "DismountOnTrain1",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                {
+                  "$ref": "Transform",
+                  "name": "DismountOnTrain2",
+                  "instanceID": 1294188,
+                  "goName": "DismountOnTrain2",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                {
+                  "$ref": "Transform",
+                  "name": "DismountOnTrain3",
+                  "instanceID": 1335724,
+                  "goName": "DismountOnTrain3",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                {
+                  "$ref": "Transform",
+                  "name": "DismountOnTrain4",
+                  "instanceID": 1370088,
+                  "goName": "DismountOnTrain4",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                {
+                  "$ref": "Transform",
+                  "name": "DismountOnTrain5",
+                  "instanceID": 1345044,
+                  "goName": "DismountOnTrain5",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                {
+                  "$ref": "Transform",
+                  "name": "DismountOnTrain6",
+                  "instanceID": 1359482,
+                  "goName": "DismountOnTrain6",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                {
+                  "$ref": "Transform",
+                  "name": "DismountOnTrain7",
+                  "instanceID": 1428882,
+                  "goName": "DismountOnTrain7",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                {
+                  "$ref": "Transform",
+                  "name": "DismountLeft1",
+                  "instanceID": 1326984,
+                  "goName": "DismountLeft1",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                {
+                  "$ref": "Transform",
+                  "name": "DismountLeft2",
+                  "instanceID": 1400460,
+                  "goName": "DismountLeft2",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                {
+                  "$ref": "Transform",
+                  "name": "DismountRight1",
+                  "instanceID": 1363060,
+                  "goName": "DismountRight1",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                {
+                  "$ref": "Transform",
+                  "name": "DismountRight2",
+                  "instanceID": 1352278,
+                  "goName": "DismountRight2",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                []
+              ],
+              [
+                [
+                  [],
+                  []
+                ],
+                [],
+                [],
+                [],
+                [],
+                [],
+                [],
+                [],
+                []
+              ],
+              {
+                "$ref": "Transform",
+                "name": "TrainCouplingPointFront",
+                "instanceID": 1424038,
+                "goName": "TrainCouplingPointFront",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              {
+                "$ref": "Transform",
+                "name": "TrainCouplingPointRear",
+                "instanceID": 1342252,
+                "goName": "TrainCouplingPointRear",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              [
+                [],
+                []
+              ],
+              []
+            ]
+          ],
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "workcart_aboveground.entity",
+              "instanceID": 1409360,
+              "goName": "workcart_aboveground.entity",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "CenterOfMass",
+              "instanceID": 1343230,
+              "goName": "CenterOfMass",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "ServerOnly",
+              "instanceID": 1360846,
+              "goName": "ServerOnly",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "WorldColliders",
+              "instanceID": 1424116,
+              "goName": "WorldColliders",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Floor",
+              "instanceID": 1430620,
+              "goName": "Floor",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Cabin",
+              "instanceID": 1299352,
+              "goName": "Cabin",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Box",
+              "instanceID": 1411566,
+              "goName": "Box",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Fencing",
+              "instanceID": 1407828,
+              "goName": "Fencing",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Wheels",
+              "instanceID": 1364570,
+              "goName": "Wheels",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "FrontCollisionTrigger",
+              "instanceID": 1439930,
+              "goName": "FrontCollisionTrigger",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "RearCollisionTrigger",
+              "instanceID": 1320804,
+              "goName": "RearCollisionTrigger",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "PlayerHurtRearTrigger",
+              "instanceID": 1400956,
+              "goName": "PlayerHurtRearTrigger",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "PlayerRepelTrigger",
+              "instanceID": 1393388,
+              "goName": "PlayerRepelTrigger",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "PlayerHurtFrontTrigger",
+              "instanceID": 1403990,
+              "goName": "PlayerHurtFrontTrigger",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "NavMeshObstacle",
+              "instanceID": 1373778,
+              "goName": "NavMeshObstacle",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "workcart_fuel_storage",
+              "instanceID": 1323468,
+              "goName": "workcart_fuel_storage",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "TrainTriggerParent",
+              "instanceID": 1314620,
+              "goName": "TrainTriggerParent",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "WorkCartItemStorage",
+              "instanceID": 1434286,
+              "goName": "WorkCartItemStorage",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Shared",
+              "instanceID": 1384474,
+              "goName": "Shared",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Mounting",
+              "instanceID": 1400146,
+              "goName": "Mounting",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "MountAnchor",
+              "instanceID": 1361656,
+              "goName": "MountAnchor",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "DismountOnTrain1",
+              "instanceID": 1316356,
+              "goName": "DismountOnTrain1",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "DismountOnTrain2",
+              "instanceID": 1294188,
+              "goName": "DismountOnTrain2",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "DismountOnTrain3",
+              "instanceID": 1335724,
+              "goName": "DismountOnTrain3",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "DismountOnTrain4",
+              "instanceID": 1370088,
+              "goName": "DismountOnTrain4",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "DismountOnTrain5",
+              "instanceID": 1345044,
+              "goName": "DismountOnTrain5",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "DismountOnTrain6",
+              "instanceID": 1359482,
+              "goName": "DismountOnTrain6",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "DismountOnTrain7",
+              "instanceID": 1428882,
+              "goName": "DismountOnTrain7",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "DismountLeft1",
+              "instanceID": 1326984,
+              "goName": "DismountLeft1",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "DismountLeft2",
+              "instanceID": 1400460,
+              "goName": "DismountLeft2",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "DismountRight1",
+              "instanceID": 1363060,
+              "goName": "DismountRight1",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "DismountRight2",
+              "instanceID": 1352278,
+              "goName": "DismountRight2",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "ItemStoragePoint",
+              "instanceID": 1399180,
+              "goName": "ItemStoragePoint",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "DetailedColliders",
+              "instanceID": 1294132,
+              "goName": "DetailedColliders",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Cabin",
+              "instanceID": 1330986,
+              "goName": "Cabin",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "CabinRotated",
+              "instanceID": 1420580,
+              "goName": "CabinRotated",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "DoorInteractable",
+              "instanceID": 1399596,
+              "goName": "DoorInteractable",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Floor",
+              "instanceID": 1402270,
+              "goName": "Floor",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Wheels",
+              "instanceID": 1373862,
+              "goName": "Wheels",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Railings",
+              "instanceID": 1375086,
+              "goName": "Railings",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "SideWalls",
+              "instanceID": 1306444,
+              "goName": "SideWalls",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Posts",
+              "instanceID": 1431238,
+              "goName": "Posts",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Ladders",
+              "instanceID": 1365874,
+              "goName": "Ladders",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "FuelPoint",
+              "instanceID": 1374444,
+              "goName": "FuelPoint",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Cover",
+              "instanceID": 1374916,
+              "goName": "Cover",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "TrainCouplingPointFront",
+              "instanceID": 1424038,
+              "goName": "TrainCouplingPointFront",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "InteractionCollider",
+              "instanceID": 1359524,
+              "goName": "InteractionCollider",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "TrainCouplingPointRear",
+              "instanceID": 1342252,
+              "goName": "TrainCouplingPointRear",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "InteractionCollider",
+              "instanceID": 1407018,
+              "goName": "InteractionCollider",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Ladder Volumes",
+              "instanceID": 1435956,
+              "goName": "Ladder Volumes",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "ladder_volume_01",
+              "instanceID": 1435882,
+              "goName": "ladder_volume_01",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "ladder_volume_02",
+              "instanceID": 1425832,
+              "goName": "ladder_volume_02",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "PreventBuilding",
+              "instanceID": 1398172,
+              "goName": "PreventBuilding",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "workcart_aboveground.entity",
+            "CenterOfMass",
+            "ServerOnly",
+            "WorldColliders",
+            "Floor",
+            "Cabin",
+            "Box",
+            "Fencing",
+            "Wheels",
+            "FrontCollisionTrigger",
+            "RearCollisionTrigger",
+            "PlayerHurtRearTrigger",
+            "PlayerRepelTrigger",
+            "PlayerHurtFrontTrigger",
+            "NavMeshObstacle",
+            "workcart_fuel_storage",
+            "TrainTriggerParent",
+            "WorkCartItemStorage",
+            "Shared",
+            "Mounting",
+            "MountAnchor",
+            "DismountOnTrain1",
+            "DismountOnTrain2",
+            "DismountOnTrain3",
+            "DismountOnTrain4",
+            "DismountOnTrain5",
+            "DismountOnTrain6",
+            "DismountOnTrain7",
+            "DismountLeft1",
+            "DismountLeft2",
+            "DismountRight1",
+            "DismountRight2",
+            "ItemStoragePoint",
+            "DetailedColliders",
+            "Cabin",
+            "CabinRotated",
+            "DoorInteractable",
+            "Floor",
+            "Wheels",
+            "Railings",
+            "SideWalls",
+            "Posts",
+            "Ladders",
+            "FuelPoint",
+            "Cover",
+            "TrainCouplingPointFront",
+            "InteractionCollider",
+            "TrainCouplingPointRear",
+            "InteractionCollider",
+            "Ladder Volumes",
+            "ladder_volume_01",
+            "ladder_volume_02",
+            "PreventBuilding"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 1173017984,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$ref": "Rigidbody",
+        "name": "workcart_aboveground.entity",
+        "instanceID": 1445444,
+        "goName": "workcart_aboveground.entity",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$type": "Spawnable",
+        "$name": "workcart_aboveground.entity",
+        "Population": null,
+        "ForceSpawnOnly": false,
+        "ForceSpawnInfoMessage": "",
+        "CanSpawnInSafeZone": true
+      },
+      {
+        "$ref": "Model",
+        "name": "workcart_aboveground.entity",
+        "instanceID": 1507424,
+        "goName": "workcart_aboveground.entity",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$type": "PrefabParameters",
+        "$name": "workcart_aboveground.entity",
+        "Priority": {
+          "$enum": "PrefabPriority",
+          "name": "Default",
+          "value": 2
+        },
+        "Count": 2.0
+      }
+    ],
+    "children": [
+      {
+        "name": "CenterOfMass",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -0.27000001072883606,
+          "y": 1.4390000104904175,
+          "z": 1.0499999523162842
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "ServerOnly",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "WorldColliders",
+            "layer": {
+              "index": 15,
+              "name": "Vehicle World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.02500000037252903,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "Floor",
+                "layer": {
+                  "index": 15,
+                  "name": "Vehicle World"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Floor",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.009746551513671875,
+                      "y": 1.0759702920913696,
+                      "z": -0.11049270629882813
+                    },
+                    "size": {
+                      "x": 3.1852188110351563,
+                      "y": 0.64231562614440918,
+                      "z": 9.5149002075195313
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Cabin",
+                "layer": {
+                  "index": 15,
+                  "name": "Vehicle World"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Cabin",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -0.68183386325836182,
+                      "y": 2.4060885906219482,
+                      "z": -3.0885348320007324
+                    },
+                    "size": {
+                      "x": 1.7867794036865234,
+                      "y": 2.82692289352417,
+                      "z": 2.6947546005249023
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Box",
+                "layer": {
+                  "index": 15,
+                  "name": "Vehicle World"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$ref": "BoxCollider",
+                    "name": "Box",
+                    "instanceID": 1472996,
+                    "goName": "Box",
+                    "$alreadyDumpedElsewhereInThisFile": true
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Fencing",
+                "layer": {
+                  "index": 15,
+                  "name": "Vehicle World"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Fencing",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -0.96568632125854492,
+                      "y": 1.7900435924530029,
+                      "z": 4.3499999046325684
+                    },
+                    "size": {
+                      "x": 0.88769340515136719,
+                      "y": 1.432732105255127,
+                      "z": 0.5
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Fencing",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -1.3309401273727417,
+                      "y": 1.7900435924530029,
+                      "z": 1.4724273681640625
+                    },
+                    "size": {
+                      "x": 0.5,
+                      "y": 1.432732105255127,
+                      "z": 6.34691047668457
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Fencing",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 1.3232678174972534,
+                      "y": 1.7900435924530029,
+                      "z": 4.0363216400146484
+                    },
+                    "size": {
+                      "x": 0.5,
+                      "y": 1.432732105255127,
+                      "z": 1.2191214561462402
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Fencing",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 1.3232678174972534,
+                      "y": 1.7900435924530029,
+                      "z": -2.0730085372924805
+                    },
+                    "size": {
+                      "x": 0.5,
+                      "y": 1.432732105255127,
+                      "z": 5.6127471923828125
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Fencing",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.98637497425079346,
+                      "y": 1.7900435924530029,
+                      "z": 4.3499999046325684
+                    },
+                    "size": {
+                      "x": 0.92907118797302246,
+                      "y": 1.432732105255127,
+                      "z": 0.5
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Wheels",
+                "layer": {
+                  "index": 15,
+                  "name": "Vehicle World"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "Wheels",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": 0.0,
+                      "y": 0.550000011920929,
+                      "z": 3.5999999046325684
+                    },
+                    "radius": 0.57749998569488525,
+                    "height": 2.5,
+                    "direction": 0,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "Wheels",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": 0.0,
+                      "y": 0.550000011920929,
+                      "z": 0.89999997615814209
+                    },
+                    "radius": 0.57749998569488525,
+                    "height": 2.5,
+                    "direction": 0,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "Wheels",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": 0.0,
+                      "y": 0.550000011920929,
+                      "z": -0.89999997615814209
+                    },
+                    "radius": 0.57749998569488525,
+                    "height": 2.5,
+                    "direction": 0,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "Wheels",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": 0.0,
+                      "y": 0.550000011920929,
+                      "z": -3.5999999046325684
+                    },
+                    "radius": 0.57749998569488525,
+                    "height": 2.5,
+                    "direction": 0,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "FrontCollisionTrigger",
+            "layer": {
+              "index": 15,
+              "name": "Vehicle World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "BoxCollider",
+                "name": "FrontCollisionTrigger",
+                "instanceID": 1467316,
+                "goName": "FrontCollisionTrigger",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              {
+                "$ref": "TriggerTrainCollisions",
+                "name": "FrontCollisionTrigger",
+                "instanceID": 1528396,
+                "goName": "FrontCollisionTrigger",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "RearCollisionTrigger",
+            "layer": {
+              "index": 15,
+              "name": "Vehicle World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "BoxCollider",
+                "name": "RearCollisionTrigger",
+                "instanceID": 1464846,
+                "goName": "RearCollisionTrigger",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              {
+                "$ref": "TriggerTrainCollisions",
+                "name": "RearCollisionTrigger",
+                "instanceID": 1564034,
+                "goName": "RearCollisionTrigger",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "PlayerHurtRearTrigger",
+            "layer": {
+              "index": 18,
+              "name": "Trigger"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "TriggerHurtNotChild",
+                "name": "PlayerHurtRearTrigger",
+                "instanceID": 1570020,
+                "goName": "PlayerHurtRearTrigger",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "PlayerHurtRearTrigger",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 1.3200000524520874,
+                  "z": 5.0
+                },
+                "size": {
+                  "x": 3.0,
+                  "y": 2.4000000953674316,
+                  "z": 0.67000001668930054
+                },
+                "isTrigger": true,
+                "enabled": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "PlayerRepelTrigger",
+            "layer": {
+              "index": 18,
+              "name": "Trigger"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "PlayerRepelTrigger",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.44679206609725952,
+                  "z": -0.099999904632568359
+                },
+                "size": {
+                  "x": 2.2000000476837158,
+                  "y": 0.093584179878234863,
+                  "z": 8.0
+                },
+                "isTrigger": true,
+                "enabled": true
+              },
+              {
+                "$type": "TriggerHurtNotChild",
+                "$name": "PlayerRepelTrigger",
+                "DamagePerSecond": 75.0,
+                "DamageTickRate": 1.0,
+                "DamageDelay": 1.0,
+                "damageType": {
+                  "$enum": "Rust.DamageType",
+                  "name": "Generic",
+                  "value": 0
+                },
+                "ignoreNPC": false,
+                "npcMultiplier": 2.0,
+                "resourceMultiplier": 1.0,
+                "lootContainerMultiplier": 1.0,
+                "triggerHitImpacts": true,
+                "RequireUpAxis": true,
+                "SourceEntity": null,
+                "UseSourceEntityDamageMultiplier": false,
+                "ignoreAllVehicleMounted": true,
+                "activationDelay": 0.0,
+                "ScaleWithDistToTriggerCenter": false,
+                "triggerCollider": null,
+                "DamageMultAtCenter": 1.0,
+                "interestLayers": 133120,
+                "contents": null,
+                "entityContents": null,
+                "OnEntityEnterTrigger": null,
+                "OnEntityLeaveTrigger": null
+              },
+              {
+                "$type": "TriggerPlayerForce",
+                "$name": "PlayerRepelTrigger",
+                "triggerCollider": {
+                  "$ref": "BoxCollider",
+                  "name": "PlayerRepelTrigger",
+                  "instanceID": 1472766,
+                  "goName": "PlayerRepelTrigger",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                "pushVelocity": 5.0,
+                "requireUpAxis": true,
+                "pushDown": false,
+                "interestLayers": 133120,
+                "contents": null,
+                "entityContents": null,
+                "OnEntityEnterTrigger": null,
+                "OnEntityLeaveTrigger": null
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "PlayerHurtFrontTrigger",
+            "layer": {
+              "index": 18,
+              "name": "Trigger"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "TriggerHurtNotChild",
+                "name": "PlayerHurtFrontTrigger",
+                "instanceID": 1562728,
+                "goName": "PlayerHurtFrontTrigger",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "PlayerHurtFrontTrigger",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 1.3200000524520874,
+                  "z": -5.1999998092651367
+                },
+                "size": {
+                  "x": 3.0,
+                  "y": 2.4000000953674316,
+                  "z": 0.67000001668930054
+                },
+                "isTrigger": true,
+                "enabled": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "NavMeshObstacle",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.AI.NavMeshObstacle",
+                "$name": "NavMeshObstacle"
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "workcart_fuel_storage",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.86000001430511475,
+              "y": 2.0450000762939453,
+              "z": 0.85000002384185791
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "StorageContainer",
+                "$name": "workcart_fuel_storage",
+                "inventorySlots": 1,
+                "dropsLoot": true,
+                "dropLootDestroyPercent": 0.0,
+                "dropFloats": false,
+                "isLootable": false,
+                "isLockable": false,
+                "isMonitorable": false,
+                "panelName": "fuelsmall",
+                "panelTitle": {
+                  "$type": "Translate+Phrase",
+                  "token": "loot",
+                  "legacyEnglish": "Loot"
+                },
+                "allowedContents": {
+                  "$enum": "ItemContainer+ContentsType",
+                  "name": "0",
+                  "value": 0,
+                  "flagNames": []
+                },
+                "allowedItem": {
+                  "$ref": "ItemDefinition",
+                  "name": "fuel.lowgrade.item",
+                  "itemid": -946369541,
+                  "shortname": "lowgradefuel"
+                },
+                "allowedItem2": null,
+                "allowedItems": [],
+                "blockedItems": [],
+                "maxStackSize": 0,
+                "needsBuildingPrivilegeToUse": false,
+                "requireAuthIfNotLocked": false,
+                "allowSorting": false,
+                "mustBeMountedToUse": false,
+                "openSound": {
+                  "$ref": "SoundDefinition",
+                  "name": "workcart-open-fuel",
+                  "instanceID": 483662
+                },
+                "closeSound": {
+                  "$ref": "SoundDefinition",
+                  "name": "workcart-close-fuel",
+                  "instanceID": 87396
+                },
+                "dropPosition": {
+                  "x": 0.0,
+                  "y": 0.23999999463558197,
+                  "z": 0.0099999997764825821
+                },
+                "dropVelocity": {
+                  "x": 0.0,
+                  "y": 0.40999999642372131,
+                  "z": 0.0
+                },
+                "onlyAcceptCategory": {
+                  "$enum": "ItemCategory",
+                  "name": "All",
+                  "value": 11
+                },
+                "onlyOneUser": false,
+                "_inventory": null,
+                "isTransferringIndustrialItem": false,
+                "canBeDemolished": false,
+                "debrisPrefab": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "debrisRotationOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "DebrisPositions": [],
+                "buildingID": 0,
+                "timePlaced": 0.0,
+                "decayTimer": 0.0,
+                "upkeepTimer": 0.0,
+                "upkeep": null,
+                "decay": null,
+                "decayPoints": null,
+                "lastDecayTick": 0.0,
+                "decayVariance": 1.0,
+                "spawnDeployableCorpseOnDeath": false,
+                "deployableCorpsePrefab": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "ItemOwnership": {
+                  "$type": "ItemOwnershipShare",
+                  "username": null,
+                  "reason": null,
+                  "amount": 0
+                },
+                "lastDamage": {
+                  "$enum": "Rust.DamageType",
+                  "name": "Generic",
+                  "value": 0
+                },
+                "lastAttacker": null,
+                "lastDealtDamageTo": null,
+                "ResetLifeStateOnSpawn": true,
+                "propDirection": null,
+                "unHostileTime": 0.0,
+                "lastNoiseTime": 0.0,
+                "skeletonProperties": null,
+                "baseProtection": {
+                  "$type": "ProtectionProperties",
+                  "$name": "Immortal",
+                  "comments": "",
+                  "density": 100.0,
+                  "amounts": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "FilenameStringId": 3206051622
+                },
+                "startHealth": 150.0,
+                "pickup": {
+                  "$type": "BaseCombatEntity+Pickup",
+                  "enabled": false,
+                  "itemTarget": null,
+                  "itemCount": 0,
+                  "setConditionFromHealth": false,
+                  "subtractCondition": 0.0,
+                  "requireBuildingPrivilege": false,
+                  "requireHammer": false,
+                  "requireEmptyInv": false,
+                  "overridePickupTime": 0.0
+                },
+                "repair": {
+                  "$type": "BaseCombatEntity+Repair",
+                  "enabled": false,
+                  "itemTarget": null,
+                  "ignoreForRepair": null,
+                  "repairEffect": {
+                    "$ref": "GameObject",
+                    "guid": "",
+                    "resourcePath": null,
+                    "resourceID": 0
+                  },
+                  "repairFullEffect": {
+                    "$ref": "GameObject",
+                    "guid": "",
+                    "resourcePath": null,
+                    "resourceID": 0
+                  },
+                  "repairFailedEffect": {
+                    "$ref": "GameObject",
+                    "guid": "",
+                    "resourcePath": null,
+                    "resourceID": 0
+                  }
+                },
+                "ShowHealthInfo": false,
+                "showHealthInfoThreshold": {
+                  "$enum": "BaseCombatEntity+ShowHealthThreshold",
+                  "name": "ThreeQuarters",
+                  "value": 25
+                },
+                "lifestate": {
+                  "$enum": "BaseCombatEntity+LifeState",
+                  "name": "Alive",
+                  "value": 0
+                },
+                "sendsHitNotification": false,
+                "sendsMeleeHitNotification": false,
+                "markAttackerHostile": true,
+                "maxHealthOverride": 0.0,
+                "_health": 0.0,
+                "_maxHealth": 100.0,
+                "faction": {
+                  "$enum": "BaseCombatEntity+Faction",
+                  "name": "Default",
+                  "value": 0
+                },
+                "lastAttackedTime": "-Infinity",
+                "lastDealtDamageTime": "-Infinity",
+                "lastNotifyFrame": 0,
+                "links": [],
+                "creatorEntity": null,
+                "ticksSinceStopped": 0,
+                "isCallingUpdateNetworkGroup": false,
+                "bounds": {
+                  "center": {
+                    "x": -0.095390081405639648,
+                    "y": -0.019999980926513672,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 1.2407799959182739,
+                    "y": 1.2000000476837158,
+                    "z": 1.9249999523162842
+                  }
+                },
+                "impactEffect": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "enableSaving": true,
+                "syncPosition": false,
+                "model": null,
+                "flags": {
+                  "$enum": "BaseEntity+Flags",
+                  "name": "0",
+                  "value": 0,
+                  "flagNames": []
+                },
+                "parentBone": 0,
+                "skinID": 0,
+                "attachmentID": 0,
+                "HasBrain": false,
+                "_name": null,
+                "networkEntityScale": false,
+                "_spawnable": null,
+                "postNetworkUpdateComponents": [],
+                "_limitedNetworking": false,
+                "parentEntity": {
+                  "$type": "EntityRef"
+                },
+                "children": [],
+                "canTriggerParent": true,
+                "creationFrame": 0,
+                "isSpawned": false,
+                "_NetworkCache": null,
+                "prefabID": 340386975,
+                "globalBroadcast": false,
+                "globalNetworkBehavior": {
+                  "$enum": "GlobalNetworkBehavior",
+                  "name": "Default",
+                  "value": 0
+                },
+                "globalBuildingBlock": false,
+                "networkRange": {
+                  "$enum": "EntityNetworkRange",
+                  "name": "Medium",
+                  "value": 1
+                },
+                "net": null
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "TrainTriggerParent",
+            "layer": {
+              "index": 18,
+              "name": "Trigger"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "TrainTriggerParent",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.033346414566040039,
+                  "y": 3.1373999118804932,
+                  "z": 0.11970424652099609
+                },
+                "size": {
+                  "x": 3.0126705169677734,
+                  "y": 5.2847762107849121,
+                  "z": 12.0
+                },
+                "isTrigger": true,
+                "enabled": true
+              },
+              {
+                "$ref": "TriggerParentEnclosed",
+                "name": "TrainTriggerParent",
+                "instanceID": 1557062,
+                "goName": "TrainTriggerParent",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "WorkCartItemStorage",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.86500000953674316,
+              "y": 1.4259999990463257,
+              "z": -4.0570001602172852
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "Poolable",
+                "$name": "WorkCartItemStorage",
+                "restoreHierarchy": false,
+                "prefabID": 0,
+                "behaviours": [],
+                "rigidbodies": [],
+                "colliders": [],
+                "lodgroups": [],
+                "renderers": [],
+                "particles": [],
+                "behaviourStates": [],
+                "rigidbodyStates": [],
+                "colliderStates": [],
+                "lodgroupStates": [],
+                "rendererStates": [],
+                "childActiveStates": []
+              },
+              {
+                "$type": "StorageContainer",
+                "$name": "WorkCartItemStorage",
+                "inventorySlots": 18,
+                "dropsLoot": true,
+                "dropLootDestroyPercent": 0.0,
+                "dropFloats": false,
+                "isLootable": true,
+                "isLockable": false,
+                "isMonitorable": false,
+                "panelName": "generic_resizable",
+                "panelTitle": {
+                  "$type": "Translate+Phrase",
+                  "token": "loot",
+                  "legacyEnglish": "Loot"
+                },
+                "allowedContents": {
+                  "$enum": "ItemContainer+ContentsType",
+                  "name": "0",
+                  "value": 0,
+                  "flagNames": []
+                },
+                "allowedItem": null,
+                "allowedItem2": null,
+                "allowedItems": [],
+                "blockedItems": [],
+                "maxStackSize": 0,
+                "needsBuildingPrivilegeToUse": false,
+                "requireAuthIfNotLocked": false,
+                "allowSorting": false,
+                "mustBeMountedToUse": false,
+                "openSound": {
+                  "$ref": "SoundDefinition",
+                  "name": "crate-tools-open",
+                  "instanceID": 73006
+                },
+                "closeSound": {
+                  "$ref": "SoundDefinition",
+                  "name": "crate-tools-close",
+                  "instanceID": 72902
+                },
+                "dropPosition": {
+                  "x": 0.0,
+                  "y": 0.68999999761581421,
+                  "z": 0.039999999105930328
+                },
+                "dropVelocity": {
+                  "x": 0.0,
+                  "y": 0.40999999642372131,
+                  "z": 0.0
+                },
+                "onlyAcceptCategory": {
+                  "$enum": "ItemCategory",
+                  "name": "All",
+                  "value": 11
+                },
+                "onlyOneUser": false,
+                "_inventory": null,
+                "isTransferringIndustrialItem": false,
+                "canBeDemolished": false,
+                "debrisPrefab": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "debrisRotationOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "DebrisPositions": [],
+                "buildingID": 0,
+                "timePlaced": 0.0,
+                "decayTimer": 0.0,
+                "upkeepTimer": 0.0,
+                "upkeep": null,
+                "decay": null,
+                "decayPoints": null,
+                "lastDecayTick": 0.0,
+                "decayVariance": 1.0,
+                "spawnDeployableCorpseOnDeath": false,
+                "deployableCorpsePrefab": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "ItemOwnership": {
+                  "$type": "ItemOwnershipShare",
+                  "username": null,
+                  "reason": null,
+                  "amount": 0
+                },
+                "lastDamage": {
+                  "$enum": "Rust.DamageType",
+                  "name": "Generic",
+                  "value": 0
+                },
+                "lastAttacker": null,
+                "lastDealtDamageTo": null,
+                "ResetLifeStateOnSpawn": true,
+                "propDirection": null,
+                "unHostileTime": 0.0,
+                "lastNoiseTime": 0.0,
+                "skeletonProperties": null,
+                "baseProtection": {
+                  "$ref": "ProtectionProperties",
+                  "name": "Immortal",
+                  "instanceID": 48408,
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                "startHealth": 250.0,
+                "pickup": {
+                  "$type": "BaseCombatEntity+Pickup",
+                  "enabled": false,
+                  "itemTarget": null,
+                  "itemCount": 0,
+                  "setConditionFromHealth": false,
+                  "subtractCondition": 0.0,
+                  "requireBuildingPrivilege": false,
+                  "requireHammer": false,
+                  "requireEmptyInv": false,
+                  "overridePickupTime": 0.0
+                },
+                "repair": {
+                  "$type": "BaseCombatEntity+Repair",
+                  "enabled": false,
+                  "itemTarget": null,
+                  "ignoreForRepair": null,
+                  "repairEffect": {
+                    "$ref": "GameObject",
+                    "guid": "",
+                    "resourcePath": null,
+                    "resourceID": 0
+                  },
+                  "repairFullEffect": {
+                    "$ref": "GameObject",
+                    "guid": "",
+                    "resourcePath": null,
+                    "resourceID": 0
+                  },
+                  "repairFailedEffect": {
+                    "$ref": "GameObject",
+                    "guid": "",
+                    "resourcePath": null,
+                    "resourceID": 0
+                  }
+                },
+                "ShowHealthInfo": false,
+                "showHealthInfoThreshold": {
+                  "$enum": "BaseCombatEntity+ShowHealthThreshold",
+                  "name": "ThreeQuarters",
+                  "value": 25
+                },
+                "lifestate": {
+                  "$enum": "BaseCombatEntity+LifeState",
+                  "name": "Alive",
+                  "value": 0
+                },
+                "sendsHitNotification": false,
+                "sendsMeleeHitNotification": true,
+                "markAttackerHostile": false,
+                "maxHealthOverride": 0.0,
+                "_health": 0.0,
+                "_maxHealth": 100.0,
+                "faction": {
+                  "$enum": "BaseCombatEntity+Faction",
+                  "name": "Default",
+                  "value": 0
+                },
+                "lastAttackedTime": "-Infinity",
+                "lastDealtDamageTime": "-Infinity",
+                "lastNotifyFrame": 0,
+                "links": [],
+                "creatorEntity": null,
+                "ticksSinceStopped": 0,
+                "isCallingUpdateNetworkGroup": false,
+                "bounds": {
+                  "center": {
+                    "x": 0.10000000149011612,
+                    "y": 0.27000001072883606,
+                    "z": -0.18000000715255737
+                  },
+                  "size": {
+                    "x": 0.77999997138977051,
+                    "y": 0.72000002861022949,
+                    "z": 0.54000002145767212
+                  }
+                },
+                "impactEffect": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "enableSaving": true,
+                "syncPosition": false,
+                "model": null,
+                "flags": {
+                  "$enum": "BaseEntity+Flags",
+                  "name": "0",
+                  "value": 0,
+                  "flagNames": []
+                },
+                "parentBone": 0,
+                "skinID": 0,
+                "attachmentID": 0,
+                "HasBrain": false,
+                "_name": null,
+                "networkEntityScale": false,
+                "_spawnable": null,
+                "postNetworkUpdateComponents": [],
+                "_limitedNetworking": false,
+                "parentEntity": {
+                  "$type": "EntityRef"
+                },
+                "children": [],
+                "canTriggerParent": true,
+                "creationFrame": 0,
+                "isSpawned": false,
+                "_NetworkCache": null,
+                "prefabID": 317322483,
+                "globalBroadcast": false,
+                "globalNetworkBehavior": {
+                  "$enum": "GlobalNetworkBehavior",
+                  "name": "Default",
+                  "value": 0
+                },
+                "globalBuildingBlock": false,
+                "networkRange": {
+                  "$enum": "EntityNetworkRange",
+                  "name": "Medium",
+                  "value": 1
+                },
+                "net": null
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Shared",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "Mounting",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "MountAnchor",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.69900000095367432,
+                  "y": 2.3510000705718994,
+                  "z": 2.9670000076293945
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0,
+                  "w": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "DismountOnTrain1",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.87999999523162842,
+                  "y": 1.5390000343322754,
+                  "z": 2.4500000476837158
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0,
+                  "w": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "DismountOnTrain2",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.902999997138977,
+                  "y": 1.5390000343322754,
+                  "z": 3.6429998874664307
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0,
+                  "w": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "DismountOnTrain3",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.74400001764297485,
+                  "y": 1.5390000343322754,
+                  "z": 0.76700001955032349
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0,
+                  "w": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "DismountOnTrain4",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.48199999332427979,
+                  "y": 1.5390000343322754,
+                  "z": -1.0499999523162842
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0,
+                  "w": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "DismountOnTrain5",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.53799998760223389,
+                  "y": 1.5390000343322754,
+                  "z": -1.7890000343322754
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0,
+                  "w": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "DismountOnTrain6",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.24199999868869781,
+                  "y": 1.5390000343322754,
+                  "z": -3.3910000324249268
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0,
+                  "w": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "DismountOnTrain7",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.62000000476837158,
+                  "y": 1.5390000343322754,
+                  "z": -3.3910000324249268
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0,
+                  "w": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "DismountLeft1",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 2.5,
+                  "y": 0.095999971032142639,
+                  "z": 4.070000171661377
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0,
+                  "w": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "DismountLeft2",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 2.5,
+                  "y": 0.095999971032142639,
+                  "z": 2.559999942779541
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0,
+                  "w": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "DismountRight1",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -2.5,
+                  "y": 0.095999971032142639,
+                  "z": 3.8599998950958252
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0,
+                  "w": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "DismountRight2",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -2.5,
+                  "y": 0.095999971032142639,
+                  "z": 2.3900001049041748
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0,
+                  "w": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "ItemStoragePoint",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Usable Tertiary",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.91399997472763062,
+                  "y": 2.1010000705718994,
+                  "z": -4.4499998092651367
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.7071068286895752,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "ItemStoragePoint",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -0.24319791793823242,
+                      "y": -0.37709122896194458,
+                      "z": 0.057213664054870605
+                    },
+                    "size": {
+                      "x": 0.47410798072814941,
+                      "y": 0.64058506488800049,
+                      "z": 0.80490756034851074
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "DetailedColliders",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.02500000037252903,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "Cabin",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Cabin",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -0.68352127075195313,
+                      "y": 3.635434627532959,
+                      "z": -3.0899925231933594
+                    },
+                    "size": {
+                      "x": 1.8028960227966309,
+                      "y": 0.36899471282958984,
+                      "z": 2.6679983139038086
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Cabin",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -0.6870429515838623,
+                      "y": 1.9439455270767212,
+                      "z": -3.9088060855865479
+                    },
+                    "size": {
+                      "x": 1.7958526611328125,
+                      "y": 1.1221916675567627,
+                      "z": 0.50212526321411133
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Cabin",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -0.6870429515838623,
+                      "y": 2.6017026901245117,
+                      "z": -1.9017951488494873
+                    },
+                    "size": {
+                      "x": 1.7958526611328125,
+                      "y": 2.43770694732666,
+                      "z": 0.18595373630523682
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Cabin",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -1.5537762641906738,
+                      "y": 1.9262032508850098,
+                      "z": -2.8414306640625
+                    },
+                    "size": {
+                      "x": 0.059999998658895493,
+                      "y": 1.0960407257080078,
+                      "z": 1.7809085845947266
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "Cabin",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": 0.14946386218070984,
+                      "y": 2.962226390838623,
+                      "z": -2.9272527694702148
+                    },
+                    "radius": 0.0625002384185791,
+                    "height": 1.1121578216552734,
+                    "direction": 1,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "Cabin",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": 0.14946389198303223,
+                      "y": 2.962226390838623,
+                      "z": -3.7887768745422363
+                    },
+                    "radius": 0.053056240081787109,
+                    "height": 1.1121578216552734,
+                    "direction": 1,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Cabin",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.17822030186653137,
+                      "y": 1.9262032508850098,
+                      "z": -3.2937211990356445
+                    },
+                    "size": {
+                      "x": 0.060000002384185791,
+                      "y": 1.0960407257080078,
+                      "z": 0.8763275146484375
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Cabin",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -1.564704418182373,
+                      "y": 2.9732398986816406,
+                      "z": -3.9683661460876465
+                    },
+                    "size": {
+                      "x": 0.084757804870605469,
+                      "y": 0.95843696594238281,
+                      "z": 0.46767902374267578
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Cabin",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -0.69209897518157959,
+                      "y": 1.7202329635620117,
+                      "z": -4.3005828857421875
+                    },
+                    "size": {
+                      "x": 1.0409524440765381,
+                      "y": 0.66705226898193359,
+                      "z": 0.31560516357421875
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "CabinRotated",
+                    "layer": {
+                      "index": 13,
+                      "name": "Vehicle Detailed"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": -0.078459024429321289,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 0.99691736698150635
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.CapsuleCollider",
+                        "$name": "CabinRotated",
+                        "colliderType": "Capsule",
+                        "center": {
+                          "x": 0.17071983218193054,
+                          "y": 3.6448161602020264,
+                          "z": -3.7317616939544678
+                        },
+                        "radius": 0.03057098388671875,
+                        "height": 1.1713242530822754,
+                        "direction": 1,
+                        "isTrigger": false,
+                        "enabled": true,
+                        "physicMaterial": {
+                          "$ref": "PhysicsMaterial",
+                          "name": "Metal",
+                          "instanceID": 609842
+                        }
+                      },
+                      {
+                        "$type": "UnityEngine.CapsuleCollider",
+                        "$name": "CabinRotated",
+                        "colliderType": "Capsule",
+                        "center": {
+                          "x": -1.5549999475479126,
+                          "y": 3.6448161602020264,
+                          "z": -3.7317616939544678
+                        },
+                        "radius": 0.03057098388671875,
+                        "height": 1.1713242530822754,
+                        "direction": 1,
+                        "isTrigger": false,
+                        "enabled": true,
+                        "physicMaterial": {
+                          "$ref": "PhysicsMaterial",
+                          "name": "Metal",
+                          "instanceID": 609842
+                        }
+                      }
+                    ],
+                    "children": []
+                  },
+                  {
+                    "name": "DoorInteractable",
+                    "layer": {
+                      "index": 13,
+                      "name": "Vehicle Detailed"
+                    },
+                    "tag": "Usable Primary",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.BoxCollider",
+                        "$name": "DoorInteractable",
+                        "colliderType": "Box",
+                        "center": {
+                          "x": 0.17822030186653137,
+                          "y": 2.4275078773498535,
+                          "z": -2.4031429290771484
+                        },
+                        "size": {
+                          "x": 0.060000002384185791,
+                          "y": 2.0477259159088135,
+                          "z": 0.90433406829833984
+                        },
+                        "isTrigger": false,
+                        "enabled": true,
+                        "physicMaterial": {
+                          "$ref": "PhysicsMaterial",
+                          "name": "Metal",
+                          "instanceID": 609842
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Floor",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Floor",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.009746551513671875,
+                      "y": 1.2341970205307007,
+                      "z": -0.11049270629882813
+                    },
+                    "size": {
+                      "x": 3.1852188110351563,
+                      "y": 0.32586216926574707,
+                      "z": 9.5149002075195313
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Floor",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.0,
+                      "y": 0.925000011920929,
+                      "z": -0.0869607925415039
+                    },
+                    "size": {
+                      "x": 2.4529628753662109,
+                      "y": 0.30000007152557373,
+                      "z": 9.3496589660644531
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Wheels",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "Wheels",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": 0.0,
+                      "y": 0.550000011920929,
+                      "z": 3.5999999046325684
+                    },
+                    "radius": 0.57749998569488525,
+                    "height": 2.5,
+                    "direction": 0,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "Wheels",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": 0.0,
+                      "y": 0.550000011920929,
+                      "z": 0.89999997615814209
+                    },
+                    "radius": 0.57749998569488525,
+                    "height": 2.5,
+                    "direction": 0,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "Wheels",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": 0.0,
+                      "y": 0.550000011920929,
+                      "z": -0.89999997615814209
+                    },
+                    "radius": 0.57749998569488525,
+                    "height": 2.5,
+                    "direction": 0,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "Wheels",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": 0.0,
+                      "y": 0.550000011920929,
+                      "z": -3.5999999046325684
+                    },
+                    "radius": 0.57749998569488525,
+                    "height": 2.5,
+                    "direction": 0,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Wheels",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -0.0061593055725097656,
+                      "y": 0.49275147914886475,
+                      "z": -2.2543370723724365
+                    },
+                    "size": {
+                      "x": 2.3550667762756348,
+                      "y": 0.95072436332702637,
+                      "z": 1.036956787109375
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Wheels",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.33568698167800903,
+                      "y": 0.49275147914886475,
+                      "z": 2.2543373107910156
+                    },
+                    "size": {
+                      "x": 1.6713739633560181,
+                      "y": 0.95072436332702637,
+                      "z": 1.036956787109375
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Railings",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "Railings",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": -1.5,
+                      "y": 2.4000000953674316,
+                      "z": 1.5
+                    },
+                    "radius": 0.02500000037252903,
+                    "height": 6.2399997711181641,
+                    "direction": 2,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "Railings",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": -1.5,
+                      "y": 1.940000057220459,
+                      "z": 1.5
+                    },
+                    "radius": 0.02500000037252903,
+                    "height": 6.2399997711181641,
+                    "direction": 2,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "Railings",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": 1.5,
+                      "y": 2.4000000953674316,
+                      "z": 4.0
+                    },
+                    "radius": 0.02500000037252903,
+                    "height": 1.1000000238418579,
+                    "direction": 2,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "Railings",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": 1.5,
+                      "y": 1.940000057220459,
+                      "z": 4.0
+                    },
+                    "radius": 0.02500000037252903,
+                    "height": 1.1000000238418579,
+                    "direction": 2,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "Railings",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": 1.5,
+                      "y": 2.4000000953674316,
+                      "z": -2.0454607009887695
+                    },
+                    "radius": 0.02499997615814209,
+                    "height": 5.4287214279174805,
+                    "direction": 2,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "Railings",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": 1.5,
+                      "y": 1.940000057220459,
+                      "z": -2.0527472496032715
+                    },
+                    "radius": 0.02499997615814209,
+                    "height": 5.4238862991333008,
+                    "direction": 2,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "Railings",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": -1.0730814933776855,
+                      "y": 1.940000057220459,
+                      "z": 4.5799999237060547
+                    },
+                    "radius": 0.02499997615814209,
+                    "height": 0.88789939880371094,
+                    "direction": 0,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "Railings",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": -1.0635495185852051,
+                      "y": 2.4000000953674316,
+                      "z": 4.5799999237060547
+                    },
+                    "radius": 0.025000095367431641,
+                    "height": 0.90101581811904907,
+                    "direction": 0,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "SideWalls",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "SideWalls",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -1.5111624002456665,
+                      "y": 1.4344955682754517,
+                      "z": 1.4977190494537354
+                    },
+                    "size": {
+                      "x": 0.14340090751647949,
+                      "y": 0.20108580589294434,
+                      "z": 6.2984766960144043
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "SideWalls",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 1.4850231409072876,
+                      "y": 1.4344955682754517,
+                      "z": 4.0452384948730469
+                    },
+                    "size": {
+                      "x": 0.12408232688903809,
+                      "y": 0.20108580589294434,
+                      "z": 1.2034378051757813
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "SideWalls",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 1.4850231409072876,
+                      "y": 1.4344955682754517,
+                      "z": -2.0549507141113281
+                    },
+                    "size": {
+                      "x": 0.12408232688903809,
+                      "y": 0.20108580589294434,
+                      "z": 5.6051578521728516
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "SideWalls",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -1.0402553081512451,
+                      "y": 1.4327720403671265,
+                      "z": 4.5808510780334473
+                    },
+                    "size": {
+                      "x": 1.0496430397033691,
+                      "y": 0.17387938499450684,
+                      "z": 0.13121700286865234
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Posts",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Posts",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 1.4874999523162842,
+                      "y": 2.0,
+                      "z": -4.7630000114440918
+                    },
+                    "size": {
+                      "x": 0.10999999940395355,
+                      "y": 1.0,
+                      "z": 0.11999999731779099
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Posts",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 1.4874999523162842,
+                      "y": 2.0,
+                      "z": -3.7899999618530273
+                    },
+                    "size": {
+                      "x": 0.10999999940395355,
+                      "y": 1.0,
+                      "z": 0.11999999731779099
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Posts",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 1.4874999523162842,
+                      "y": 2.0,
+                      "z": -2.7300000190734863
+                    },
+                    "size": {
+                      "x": 0.10999999940395355,
+                      "y": 1.0,
+                      "z": 0.11999999731779099
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Posts",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 1.4874999523162842,
+                      "y": 2.0,
+                      "z": 3.5199999809265137
+                    },
+                    "size": {
+                      "x": 0.10999999940395355,
+                      "y": 1.0,
+                      "z": 0.11999999731779099
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Posts",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 1.4874999523162842,
+                      "y": 2.0,
+                      "z": 4.5799999237060547
+                    },
+                    "size": {
+                      "x": 0.10999999940395355,
+                      "y": 1.0,
+                      "z": 0.11999999731779099
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Posts",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -1.5099999904632568,
+                      "y": 2.0,
+                      "z": 4.5500001907348633
+                    },
+                    "size": {
+                      "x": 0.10999999940395355,
+                      "y": 1.0,
+                      "z": 0.11999999731779099
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Posts",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -1.5099999904632568,
+                      "y": 2.0,
+                      "z": 1.5
+                    },
+                    "size": {
+                      "x": 0.10999999940395355,
+                      "y": 1.0,
+                      "z": 0.11999999731779099
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Posts",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -1.5099999904632568,
+                      "y": 2.0,
+                      "z": 0.43999999761581421
+                    },
+                    "size": {
+                      "x": 0.10999999940395355,
+                      "y": 1.0,
+                      "z": 0.11999999731779099
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Posts",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -0.58499997854232788,
+                      "y": 2.0,
+                      "z": 4.5500001907348633
+                    },
+                    "size": {
+                      "x": 0.10999999940395355,
+                      "y": 1.0,
+                      "z": 0.11999999731779099
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Ladders",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Ladders",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 1.5437188148498535,
+                      "y": 0.9475829005241394,
+                      "z": 2.9602389335632324
+                    },
+                    "size": {
+                      "x": 0.046565055847167969,
+                      "y": 0.73824059963226318,
+                      "z": 0.46461772918701172
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Ladders",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.94132447242736816,
+                      "y": 0.96895092725753784,
+                      "z": -4.8277173042297363
+                    },
+                    "size": {
+                      "x": 0.46053576469421387,
+                      "y": 0.78097665309906006,
+                      "z": 0.049500465393066406
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "FuelPoint",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Usable Secondary",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.86000001430511475,
+                  "y": 2.0199999809265137,
+                  "z": -0.85000002384185791
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "FuelPoint",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -0.095390081405639648,
+                      "y": -0.019999980926513672,
+                      "z": 0.0
+                    },
+                    "size": {
+                      "x": 1.2407801151275635,
+                      "y": 1.2000000476837158,
+                      "z": 1.9249999523162842
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Cover",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Cover",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 1.5462549924850464,
+                      "y": 1.9446001052856445,
+                      "z": -0.49953234195709229
+                    },
+                    "size": {
+                      "x": 0.11516451835632324,
+                      "y": 1.1868724822998047,
+                      "z": 2.3793771266937256
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Cover",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 1.0283182859420776,
+                      "y": 1.9639822244644165,
+                      "z": 4.6004171371459961
+                    },
+                    "size": {
+                      "x": 1.0164916515350342,
+                      "y": 1.1481082439422607,
+                      "z": 0.15379142761230469
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Cover",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -1.5487421751022339,
+                      "y": 1.9639822244644165,
+                      "z": 3.01682186126709
+                    },
+                    "size": {
+                      "x": 0.091040372848510742,
+                      "y": 1.1481082439422607,
+                      "z": 1.1092653274536133
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "TrainCouplingPointFront",
+            "layer": {
+              "index": 15,
+              "name": "Vehicle World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 1.2250000238418579,
+              "z": 5.5489997863769531
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "TrainCouplingPointFront",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0013541877269744873,
+                  "y": 0.030296742916107178,
+                  "z": -0.263477087020874
+                },
+                "size": {
+                  "x": 0.545680582523346,
+                  "y": 0.40543615818023682,
+                  "z": 0.821627140045166
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              }
+            ],
+            "children": [
+              {
+                "name": "InteractionCollider",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Usable Auxiliary",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "InteractionCollider",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.0013541877269744873,
+                      "y": 0.030296742916107178,
+                      "z": -0.263477087020874
+                    },
+                    "size": {
+                      "x": 0.545680582523346,
+                      "y": 0.40543615818023682,
+                      "z": 0.821627140045166
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "TrainCouplingPointRear",
+            "layer": {
+              "index": 15,
+              "name": "Vehicle World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 1.2250000238418579,
+              "z": -5.3029999732971191
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "TrainCouplingPointRear",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0013541877269744873,
+                  "y": 0.030296742916107178,
+                  "z": 0.26795697212219238
+                },
+                "size": {
+                  "x": 0.545680582523346,
+                  "y": 0.40543615818023682,
+                  "z": 0.831611156463623
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              }
+            ],
+            "children": [
+              {
+                "name": "InteractionCollider",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Usable Auxiliary",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "InteractionCollider",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.0013541877269744873,
+                      "y": 0.030296742916107178,
+                      "z": 0.26795697212219238
+                    },
+                    "size": {
+                      "x": 0.545680582523346,
+                      "y": 0.40543615818023682,
+                      "z": 0.831611156463623
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Ladder Volumes",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.02500000037252903,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "ladder_volume_01",
+                "layer": {
+                  "index": 18,
+                  "name": "Trigger"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -1.5659999847412109,
+                  "y": 0.86000001430511475,
+                  "z": -2.9709999561309814
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0,
+                  "w": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "ladder_volume_01",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.070041179656982422,
+                      "y": 0.1205826997756958,
+                      "z": 0.0
+                    },
+                    "size": {
+                      "x": 0.17529964447021484,
+                      "y": 0.78344607353210449,
+                      "z": 0.699999988079071
+                    },
+                    "isTrigger": true,
+                    "enabled": true
+                  },
+                  {
+                    "$type": "TriggerLadder",
+                    "$name": "ladder_volume_01",
+                    "Type": {
+                      "$enum": "TriggerLadder+LadderType",
+                      "name": "Rungs",
+                      "value": 0
+                    },
+                    "ForceLookAt": false,
+                    "RequireJumpToMount": false,
+                    "ClimbFootstepSound": null,
+                    "interestLayers": 131072,
+                    "contents": null,
+                    "entityContents": null,
+                    "OnEntityEnterTrigger": null,
+                    "OnEntityLeaveTrigger": null
+                  },
+                  {
+                    "$type": "TriggerParent",
+                    "$name": "ladder_volume_01",
+                    "StableIndex": -1,
+                    "doClippingCheck": false,
+                    "associatedMountable": {
+                      "$ref": "TrainEngine",
+                      "name": "workcart_aboveground.entity",
+                      "instanceID": 1575076,
+                      "goName": "workcart_aboveground.entity",
+                      "$alreadyDumpedElsewhereInThisFile": true
+                    },
+                    "parentMountedPlayers": false,
+                    "parentSleepers": true,
+                    "parentSwimmers": false,
+                    "ParentNPCPlayers": false,
+                    "SkipNPCChecks": false,
+                    "overrideOtherTriggers": false,
+                    "checkForObjUnderFeet": false,
+                    "doExpensivePlayerClippingChecks": false,
+                    "TriggerMovementMask": {
+                      "$enum": "BaseEntity+Axis",
+                      "name": "XYZ",
+                      "value": 7,
+                      "flagNames": [
+                        "X",
+                        "Y",
+                        "XY",
+                        "Z",
+                        "XZ",
+                        "YZ",
+                        "XYZ"
+                      ]
+                    },
+                    "EntityMovementMask": {
+                      "$enum": "BaseEntity+Axis",
+                      "name": "XYZ",
+                      "value": 7,
+                      "flagNames": [
+                        "X",
+                        "Y",
+                        "XY",
+                        "Z",
+                        "XZ",
+                        "YZ",
+                        "XYZ"
+                      ]
+                    },
+                    "interestLayers": 131072,
+                    "contents": null,
+                    "entityContents": null,
+                    "OnEntityEnterTrigger": null,
+                    "OnEntityLeaveTrigger": null
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "ladder_volume_02",
+                "layer": {
+                  "index": 18,
+                  "name": "Trigger"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.94800001382827759,
+                  "y": 0.871999979019165,
+                  "z": 4.8909997940063477
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.70710670948028564,
+                  "z": 0.0,
+                  "w": -0.70710694789886475
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "ladder_volume_02",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.027453765273094177,
+                      "y": 0.11483550071716309,
+                      "z": 2.1579053715897918E-16
+                    },
+                    "size": {
+                      "x": 0.18199826776981354,
+                      "y": 0.77195167541503906,
+                      "z": 0.699999988079071
+                    },
+                    "isTrigger": true,
+                    "enabled": true
+                  },
+                  {
+                    "$type": "TriggerLadder",
+                    "$name": "ladder_volume_02",
+                    "Type": {
+                      "$enum": "TriggerLadder+LadderType",
+                      "name": "Rungs",
+                      "value": 0
+                    },
+                    "ForceLookAt": false,
+                    "RequireJumpToMount": false,
+                    "ClimbFootstepSound": null,
+                    "interestLayers": 131072,
+                    "contents": null,
+                    "entityContents": null,
+                    "OnEntityEnterTrigger": null,
+                    "OnEntityLeaveTrigger": null
+                  },
+                  {
+                    "$type": "TriggerParent",
+                    "$name": "ladder_volume_02",
+                    "StableIndex": -1,
+                    "doClippingCheck": false,
+                    "associatedMountable": {
+                      "$ref": "TrainEngine",
+                      "name": "workcart_aboveground.entity",
+                      "instanceID": 1575076,
+                      "goName": "workcart_aboveground.entity",
+                      "$alreadyDumpedElsewhereInThisFile": true
+                    },
+                    "parentMountedPlayers": false,
+                    "parentSleepers": true,
+                    "parentSwimmers": false,
+                    "ParentNPCPlayers": false,
+                    "SkipNPCChecks": false,
+                    "overrideOtherTriggers": false,
+                    "checkForObjUnderFeet": false,
+                    "doExpensivePlayerClippingChecks": false,
+                    "TriggerMovementMask": {
+                      "$enum": "BaseEntity+Axis",
+                      "name": "XYZ",
+                      "value": 7,
+                      "flagNames": [
+                        "X",
+                        "Y",
+                        "XY",
+                        "Z",
+                        "XZ",
+                        "YZ",
+                        "XYZ"
+                      ]
+                    },
+                    "EntityMovementMask": {
+                      "$enum": "BaseEntity+Axis",
+                      "name": "XYZ",
+                      "value": 7,
+                      "flagNames": [
+                        "X",
+                        "Y",
+                        "XY",
+                        "Z",
+                        "XZ",
+                        "YZ",
+                        "XYZ"
+                      ]
+                    },
+                    "interestLayers": 131072,
+                    "contents": null,
+                    "entityContents": null,
+                    "OnEntityEnterTrigger": null,
+                    "OnEntityLeaveTrigger": null
+                  }
+                ],
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "PreventBuilding",
+            "layer": {
+              "index": 29,
+              "name": "Prevent Building"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "PreventBuilding",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 1.9467370510101318,
+                  "z": 0.159806489944458
+                },
+                "size": {
+                  "x": 3.4697413444519043,
+                  "y": 4.2542471885681152,
+                  "z": 11.605358123779297
+                },
+                "isTrigger": false,
+                "enabled": true
+              }
+            ],
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "PrefabInformation": [
+      {
+        "$type": "PrefabInformation",
+        "$name": "<destroyed native object>",
+        "prefabID": 1173017984,
+        "hierachyName": "workcart_aboveground.entity",
+        "associatedItemDefinition": {
+          "$ref": "ItemDefinition",
+          "name": "workcart.item",
+          "itemid": -810326667,
+          "shortname": "workcart"
+        },
+        "title": {
+          "$type": "Translate+Phrase",
+          "token": "workcart_name",
+          "legacyEnglish": "Work Cart"
+        },
+        "description": {
+          "$type": "Translate+Phrase",
+          "token": "",
+          "legacyEnglish": ""
+        },
+        "sprite": {
+          "$ref": "Sprite",
+          "name": "workcart.entity.icon",
+          "instanceID": 1022194
+        },
+        "shownOnDeathScreen": true,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/content/vehicles/trains/workcart/workcart_aboveground.entity.prefab",
+        "instanceID": 1576160,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "PrefabWeight": []
+  }
+}

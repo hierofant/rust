@@ -1,0 +1,1212 @@
+{
+  "prefabID": 1404456901,
+  "path": "assets/prefabs/deployable/chickencoop/simplechicken.entity.prefab",
+  "rootClassChain": [
+    "FarmableAnimal",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.0010830163955688477,
+      "y": 0.28334814310073853,
+      "z": -0.016269713640213013
+    },
+    "size": {
+      "x": 0.80689752101898193,
+      "y": 0.566696286201477,
+      "z": 0.7678484320640564
+    }
+  },
+  "hierarchy": {
+    "name": "simplechicken.entity",
+    "layer": {
+      "index": 11,
+      "name": "AI"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "FarmableAnimal",
+        "$name": "simplechicken.entity",
+        "AnimalAnimator": null,
+        "AllRenderers": [],
+        "RendererColourGradient": {
+          "$type": "UnityEngine.Gradient"
+        },
+        "CorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "652194f761e54364cb9f0a1271d50dc7",
+          "resourcePath": "assets/rust.ai/agents/chicken/chicken.corpse.prefab",
+          "resourceID": 345706504
+        },
+        "PettingGesture": {
+          "$ref": "GestureConfig",
+          "name": "Gesture.Petting",
+          "instanceID": 73076
+        },
+        "RepositionMinTime": 9.0,
+        "RepositionMaxTime": 36.0,
+        "AnimalMoveSpeed": 0.75,
+        "HungerDecayRate": 5.0,
+        "ThirstDecayRate": 8.0,
+        "LoveDecayRate": 3.0,
+        "SunlightDecayRate": 3.0,
+        "SunlightIncreaseRate": 300.0,
+        "MinimumTimeBetweenEating": 15.0,
+        "AmountPerFood": 0.40000000596046448,
+        "MinimumTimeBetweenDrinking": 10.0,
+        "AmountPerDrink": 0.10000000149011612,
+        "HealthChangeRate": 10.0,
+        "HealthChangeScale": 3.0,
+        "MinimumMinutesBetweenProduction": 4.0,
+        "MaximumMinutesBetweenProduction": 5.0,
+        "ItemToCreate": {
+          "$ref": "ItemDefinition",
+          "name": "egg.item",
+          "itemid": 1858828593,
+          "shortname": "egg"
+        },
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "chicken_protection",
+          "comments": "",
+          "density": 1.0,
+          "amounts": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "FilenameStringId": 3100712080
+        },
+        "startHealth": 100.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": false,
+          "itemTarget": null,
+          "itemCount": 0,
+          "setConditionFromHealth": false,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": false,
+          "requireHammer": false,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": false,
+          "itemTarget": null,
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.0010830163955688477,
+            "y": 0.28334814310073853,
+            "z": -0.016269713640213013
+          },
+          "size": {
+            "x": 0.80689752101898193,
+            "y": 0.566696286201477,
+            "z": 0.7678484320640564
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": true,
+        "model": {
+          "$type": "Model",
+          "$name": "chicken_rig",
+          "collision": null,
+          "rootBone": {
+            "$ref": "Transform",
+            "name": "<destroyed native object>",
+            "instanceID": 0,
+            "$error": "Object reference not set to an instance of an object."
+          },
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": {
+            "$type": "Facepunch.Skeleton",
+            "$name": "chicken_rig",
+            "Source": {
+              "$ref": "SkeletonDefinition",
+              "name": "Chicken_Update.Skeleton",
+              "instanceID": 120442
+            },
+            "Bones": [
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              }
+            ]
+          },
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            }
+          ],
+          "boneNames": [
+            "motion",
+            "Pelvis",
+            "Femur_l",
+            "Tibia_l",
+            "Metatarsus_l",
+            "Foot_l",
+            "Index_01_l",
+            "Index_02_l",
+            "Index_03_l",
+            "Index_04_l",
+            "Middle_01_l",
+            "Middle_02_l",
+            "Middle_03_l",
+            "Middle_04_l",
+            "Pinky_01_l",
+            "Pinky_02_l",
+            "Pinky_03_l",
+            "Pinky_04_l",
+            "Thumb_01_l",
+            "Thumb_02_l",
+            "Thumb_03_l",
+            "Femur_r",
+            "Tibia_r",
+            "Metatarsus_r",
+            "Foot_r",
+            "Index_01_r",
+            "Index_02_r",
+            "Index_03_r",
+            "Index_04_r",
+            "Middle_01_r",
+            "Middle_02_r",
+            "Middle_03_r",
+            "Middle_04_r",
+            "Pinky_01_r",
+            "Pinky_02_r",
+            "Pinky_03_r",
+            "Pinky_04_r",
+            "Thumb_01_r",
+            "Thumb_02_r",
+            "Thumb_03_r",
+            "Spine_01",
+            "Spine_02",
+            "Spine_03",
+            "Spine_04",
+            "Spine_05",
+            "Humerus_l",
+            "Radius_l",
+            "Metacarpus_l",
+            "Humerus_r",
+            "Radius_r",
+            "Metacarpus_r",
+            "Neck_01",
+            "Neck_02",
+            "Neck_03",
+            "Neck_04",
+            "Neck_05",
+            "Head",
+            "HeadChain_04",
+            "HeadChain_02",
+            "HeadChain_03",
+            "Jaw",
+            "chinChain_01_l1",
+            "chinChain_02_l",
+            "chinChain_03_l",
+            "chinChain_01_r1",
+            "chinChain_02_r",
+            "chinChain_03_r",
+            "Tail",
+            "Tail_l",
+            "Tail_r"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 1404456901,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$type": "UnityEngine.SphereCollider",
+        "$name": "simplechicken.entity",
+        "colliderType": "Sphere",
+        "center": {
+          "x": 0.0,
+          "y": 0.30000001192092896,
+          "z": 0.0
+        },
+        "radius": 0.2800000011920929,
+        "isTrigger": false,
+        "enabled": true
+      }
+    ],
+    "children": [
+      {
+        "name": "chicken_rig",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "Model",
+            "name": "chicken_rig",
+            "instanceID": 1579694,
+            "goName": "chicken_rig",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Skeleton",
+            "name": "chicken_rig",
+            "instanceID": 1527066,
+            "goName": "chicken_rig",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {}
+}

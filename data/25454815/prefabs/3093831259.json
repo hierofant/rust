@@ -1,0 +1,277 @@
+{
+  "prefabID": 3093831259,
+  "path": "assets/prefabs/deployable/mortar/mortar_shell_basic.prefab",
+  "rootClassChain": [
+    "TimedExplosive",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.0017752684652805328,
+      "y": 0.032835956662893295,
+      "z": -0.29009449481964111
+    },
+    "size": {
+      "x": 0.12265422940254211,
+      "y": 0.12221269309520721,
+      "z": 0.64825773239135742
+    }
+  },
+  "hierarchy": {
+    "name": "mortar_shell_basic",
+    "layer": {
+      "index": 20,
+      "name": "Physics Projectile"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "TimedExplosive",
+        "$name": "mortar_shell_basic",
+        "timerAmountMin": 90.0,
+        "timerAmountMax": 120.0,
+        "minExplosionRadius": 1.0,
+        "explosionRadius": 4.5,
+        "explodeOnContact": false,
+        "canStick": false,
+        "forceRunClippingChecks": false,
+        "onlyDamageParent": false,
+        "IgnoreAI": false,
+        "BlindAI": false,
+        "aiBlindDuration": 2.5,
+        "aiBlindRange": 4.0,
+        "explosionOffsetMode": {
+          "$enum": "TimedExplosive+ExplosionEffectOffsetMode",
+          "name": "Local",
+          "value": 0
+        },
+        "explosionEffectOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -0.75
+        },
+        "explosionMatchesNormal": true,
+        "explosionUsesForward": false,
+        "explosionMatchesOrientation": false,
+        "explosionMatchesVelocity": false,
+        "explosionMatchesInverseVelocity": false,
+        "explosionEffect": {
+          "$ref": "GameObject",
+          "guid": "46c6785694523c84f85f7b0cccb82234",
+          "resourcePath": "assets/prefabs/deployable/mortar/effects/mortar_explosion_he.prefab",
+          "resourceID": 2221146001
+        },
+        "underwaterExplosionEffect": {
+          "$ref": "GameObject",
+          "guid": "63d11a5699f6ee247aa89fc85f6153fc",
+          "resourcePath": "assets/content/effects/explosions/underwater/explosion_underwater_large.prefab",
+          "resourceID": 2593130125
+        },
+        "stickEffect": {
+          "$ref": "GameObject",
+          "guid": "5ee498ac602364d2dbd9efc3ecdbeb80",
+          "resourcePath": "assets/prefabs/tools/c4/effects/c4_stick.prefab",
+          "resourceID": 2722086713
+        },
+        "bounceEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "watersurfaceExplosionEffect": {
+          "$ref": "GameObject",
+          "guid": "43a1775bec85202438df2548e7e30c27",
+          "resourcePath": "assets/content/effects/explosions/underwater/explosion_underwater_surface_medium.prefab",
+          "resourceID": 4032387435
+        },
+        "underwaterExplosionDepth": 1.0,
+        "watersurfaceExplosionDepth": {
+          "$type": "MinMax",
+          "x": 0.5,
+          "y": 10.0
+        },
+        "waterCausesExplosion": false,
+        "vibrationLevel": 2,
+        "damageTypes": [
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Explosion",
+              "value": 16
+            },
+            "amount": 60.0
+          },
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Blunt",
+              "value": 11
+            },
+            "amount": 75.0
+          },
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "AntiVehicle",
+              "value": 22
+            },
+            "amount": 100.0
+          }
+        ],
+        "playerDamage": [
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Explosion",
+              "value": 16
+            },
+            "amount": 350.0
+          }
+        ],
+        "splashWallpaperThroughWalls": true,
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "wasDroneDropped": false,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.0017752684652805328,
+            "y": 0.032835956662893295,
+            "z": -0.29009449481964111
+          },
+          "size": {
+            "x": 0.12265422940254211,
+            "y": 0.12221269309520721,
+            "z": 0.64825773239135742
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": false,
+        "syncPosition": true,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 3093831259,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$type": "MortarServerProjectile",
+        "$name": "mortar_shell_basic",
+        "initialVelocity": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "drag": 0.0,
+        "gravityModifier": 0.5,
+        "speed": 15.0,
+        "scanRange": 0.0,
+        "swimScale": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "swimSpeed": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "radius": 0.0,
+        "IgnoreAI": false,
+        "runSpawnHitChecks": false,
+        "ignoreEntity": null,
+        "impacted": false,
+        "swimRandom": 0.0,
+        "_baseEntity": null
+      },
+      {
+        "$type": "HideUntilMobile",
+        "$name": "mortar_shell_basic",
+        "visuals": [
+          null
+        ],
+        "useConvarDistance": true,
+        "overrideDistance": 0.30000001192092896,
+        "_baseEntity": null
+      }
+    ],
+    "children": []
+  },
+  "prefabAttributes": {}
+}

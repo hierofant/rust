@@ -1,0 +1,1752 @@
+{
+  "prefabID": 401593261,
+  "path": "assets/bundled/prefabs/autospawn/resource/vine_swinging/vineswingingtree02.prefab",
+  "rootClassChain": [
+    "VineSwingingTree",
+    "TreeEntity",
+    "ResourceEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.29476165771484375,
+      "y": 20.714025497436523,
+      "z": -0.26093864440917969
+    },
+    "size": {
+      "x": 32.933761596679688,
+      "y": 45.787273406982422,
+      "z": 33.66656494140625
+    }
+  },
+  "hierarchy": {
+    "name": "vineswingingtree02",
+    "layer": {
+      "index": 30,
+      "name": "Tree"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "VineSwingingTree",
+        "$name": "vineswingingtree02",
+        "StumpPrefab": {
+          "$ref": "GameObject",
+          "guid": "f4e78879d4cdac9429889aef9b2fa1ed",
+          "resourcePath": "assets/content/nature/treessource/kapok_tree/vineswingingtreestump.prefab",
+          "resourceID": 3530583454
+        },
+        "BranchRenderers": [
+          null,
+          null
+        ],
+        "BranchRoots": [
+          {
+            "$ref": "GameObject",
+            "name": "kapok_branch_a",
+            "instanceID": 1167968
+          },
+          null,
+          {
+            "$ref": "GameObject",
+            "name": "kapok_branch_a (2)",
+            "instanceID": 1114894
+          }
+        ],
+        "BranchHighlightRenderer": null,
+        "VineSpawnHeight": 35.0,
+        "VineSpawnRadius": 10.0,
+        "LaunchPoints": [
+          {
+            "$type": "VineLaunchPoint",
+            "$name": "VineLaunchPoint",
+            "VineMountablePrefab": {
+              "$ref": "GameObject",
+              "guid": "2a4a7d26129260f4aae477577728db28",
+              "resourcePath": "assets/prefabs/building/swinging.vine/vineswingmountable.prefab",
+              "resourceID": 3723401517
+            },
+            "MaximumDestinationRange": 45.0,
+            "MinimumDestinationRange": 9.0,
+            "maxDistanceHeight": -10.0,
+            "minDistanceHeight": -4.0,
+            "resolution": 30,
+            "drawArc": true,
+            "angle": 0.0,
+            "VineSpawnOffset": 1.0,
+            "useLevelDirection": true,
+            "VineArrivalPoints": [
+              [],
+              [],
+              [],
+              []
+            ],
+            "ParentTree": {
+              "$cycle": true,
+              "type": "VineSwingingTree"
+            }
+          },
+          {
+            "$type": "VineLaunchPoint",
+            "$name": "VineLaunchPoint (2)",
+            "VineMountablePrefab": {
+              "$ref": "GameObject",
+              "guid": "2a4a7d26129260f4aae477577728db28",
+              "resourcePath": "assets/prefabs/building/swinging.vine/vineswingmountable.prefab",
+              "resourceID": 3723401517
+            },
+            "MaximumDestinationRange": 45.0,
+            "MinimumDestinationRange": 9.0,
+            "maxDistanceHeight": -10.0,
+            "minDistanceHeight": -4.0,
+            "resolution": 30,
+            "drawArc": true,
+            "angle": 0.0,
+            "VineSpawnOffset": 1.0,
+            "useLevelDirection": true,
+            "VineArrivalPoints": [
+              [],
+              [],
+              [],
+              []
+            ],
+            "ParentTree": {
+              "$cycle": true,
+              "type": "VineSwingingTree"
+            }
+          }
+        ],
+        "ClimbColliders": [
+          {
+            "$type": "UnityEngine.CapsuleCollider",
+            "$name": "TrunkLadder",
+            "colliderType": "Capsule",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "radius": 1.6699999570846558,
+            "height": 5.8000001907348633,
+            "direction": 1,
+            "isTrigger": true,
+            "enabled": true
+          },
+          {
+            "$type": "UnityEngine.CapsuleCollider",
+            "$name": "TrunkLadder (1)",
+            "colliderType": "Capsule",
+            "center": {
+              "x": 0.0,
+              "y": 2.7372856140136719,
+              "z": 0.0
+            },
+            "radius": 1.1299999952316284,
+            "height": 25.584571838378906,
+            "direction": 1,
+            "isTrigger": true,
+            "enabled": true
+          }
+        ],
+        "StumpCollider": {
+          "$type": "UnityEngine.MeshCollider",
+          "$name": "stumpCollider",
+          "colliderType": "Mesh",
+          "convex": false,
+          "sharedMesh": {
+            "$ref": "Mesh",
+            "name": "kapok_a_stump_COL",
+            "meshId": "kapok_a_stump_COL_a826cbe6"
+          },
+          "isTrigger": false,
+          "enabled": true,
+          "physicMaterial": {
+            "$ref": "PhysicsMaterial",
+            "name": "Wood",
+            "instanceID": 609850
+          }
+        },
+        "SpawnedVines": [],
+        "fallOnDied": true,
+        "fallDuration": 1.5,
+        "fallStartSound": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "fallImpactSound": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "fallImpactParticles": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "fallLeavesLoopDef": {
+          "$ref": "SoundDefinition",
+          "name": "tree-fall-leaves-loop",
+          "instanceID": 24302
+        },
+        "usedHeights": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "impactSoundPlayed": false,
+        "prefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "hasBonusGame": true,
+        "bonusHitEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "bonusHitSound": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "serverCollider": {
+          "$type": "UnityEngine.MeshCollider",
+          "$name": "MeshCollider",
+          "colliderType": "Mesh",
+          "convex": false,
+          "sharedMesh": {
+            "$ref": "Mesh",
+            "name": "kapok_b_COL",
+            "meshId": "kapok_b_COL_2ec6527d"
+          },
+          "isTrigger": false,
+          "enabled": true,
+          "physicMaterial": {
+            "$ref": "PhysicsMaterial",
+            "name": "Wood",
+            "instanceID": 609850
+          }
+        },
+        "clientCollider": {
+          "$ref": "MeshCollider",
+          "name": "MeshCollider",
+          "instanceID": 1455062,
+          "goName": "MeshCollider",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "smallCrackSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "tree-crack-small",
+          "instanceID": 24322
+        },
+        "medCrackSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "tree-crack-med",
+          "instanceID": 24310
+        },
+        "spawnTreeAddition": false,
+        "treeAdditionPrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "treeAdditionSpawnChance": 0.10000000149011612,
+        "treeAdditionSpawnPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "treeAdditionSpawnRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "xMarker": null,
+        "startHealth": 700.0,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "Tree Protection",
+          "comments": "",
+          "density": 2.0,
+          "amounts": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.800000011920929,
+            0.0,
+            0.0,
+            0.0,
+            0.800000011920929,
+            -4.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 2371210732
+        },
+        "health": 0.0,
+        "skipDecorComponents": false,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.29476165771484375,
+            "y": 20.714025497436523,
+            "z": -0.26093864440917969
+          },
+          "size": {
+            "x": 32.933761596679688,
+            "y": 45.787273406982422,
+            "z": 33.66656494140625
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "7fd5b101e5a3a406aac43add602ace56",
+          "resourcePath": "assets/bundled/prefabs/fx/entities/tree/tree-impact.prefab",
+          "resourceID": 2625768498
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 401593261,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$type": "ResourceDispenser",
+        "$name": "vineswingingtree02",
+        "OwnershipPhrase": {
+          "$type": "Translate+Phrase",
+          "token": "",
+          "legacyEnglish": ""
+        },
+        "gatherType": {
+          "$enum": "ResourceDispenser+GatherType",
+          "name": "Tree",
+          "value": 0
+        },
+        "containedItems": [
+          {
+            "$type": "ItemAmount",
+            "itemDef": {
+              "$ref": "ItemDefinition",
+              "name": "wood.item",
+              "itemid": -151838493,
+              "shortname": "wood"
+            },
+            "amount": 375.0,
+            "startAmount": 375.0,
+            "ignoreInTutorial": false,
+            "isBP": false
+          }
+        ],
+        "maxDestroyFractionForFinishBonus": 1.0,
+        "finishBonus": [
+          {
+            "$type": "ItemAmount",
+            "itemDef": {
+              "$ref": "ItemDefinition",
+              "name": "wood.item",
+              "itemid": -151838493,
+              "shortname": "wood"
+            },
+            "amount": 375.0,
+            "startAmount": 375.0,
+            "ignoreInTutorial": false,
+            "isBP": false
+          }
+        ],
+        "forceFullFinishBonus": false,
+        "fractionRemaining": 1.0,
+        "_baseEntity": null
+      }
+    ],
+    "children": [
+      {
+        "name": "TrunkLadder",
+        "layer": {
+          "index": 18,
+          "name": "Trigger"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 2.369999885559082,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "CapsuleCollider",
+            "name": "TrunkLadder",
+            "instanceID": 1477102,
+            "goName": "TrunkLadder",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$type": "TriggerLadder",
+            "$name": "TrunkLadder",
+            "Type": {
+              "$enum": "TriggerLadder+LadderType",
+              "name": "Rungs",
+              "value": 0
+            },
+            "ForceLookAt": true,
+            "RequireJumpToMount": true,
+            "ClimbFootstepSound": {
+              "$ref": "SoundDefinition",
+              "name": "footstep-climb-tree",
+              "instanceID": 90284
+            },
+            "interestLayers": 135168,
+            "contents": null,
+            "entityContents": null,
+            "OnEntityEnterTrigger": null,
+            "OnEntityLeaveTrigger": null
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "TrunkLadder (1)",
+        "layer": {
+          "index": 18,
+          "name": "Trigger"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -0.059999998658895493,
+          "y": 12.630000114440918,
+          "z": -0.059999998658895493
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "CapsuleCollider",
+            "name": "TrunkLadder (1)",
+            "instanceID": 1478032,
+            "goName": "TrunkLadder (1)",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$type": "TriggerLadder",
+            "$name": "TrunkLadder (1)",
+            "Type": {
+              "$enum": "TriggerLadder+LadderType",
+              "name": "Rungs",
+              "value": 0
+            },
+            "ForceLookAt": true,
+            "RequireJumpToMount": false,
+            "ClimbFootstepSound": {
+              "$ref": "SoundDefinition",
+              "name": "footstep-climb-tree",
+              "instanceID": 90284
+            },
+            "interestLayers": 135168,
+            "contents": null,
+            "entityContents": null,
+            "OnEntityEnterTrigger": null,
+            "OnEntityLeaveTrigger": null
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "VineLaunchPoint",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 1.6490000486373901,
+          "y": 22.979999542236328,
+          "z": 3.5260000228881836
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.12940084934234619,
+          "z": 0.0,
+          "w": 0.9915924072265625
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "VineLaunchPoint",
+            "name": "VineLaunchPoint",
+            "instanceID": 1539138,
+            "goName": "VineLaunchPoint",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": [
+          {
+            "name": "ArrivalPoint (1)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.5,
+              "y": 0.0,
+              "z": 0.5
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "ArrivalPoint (4)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.5,
+              "y": 0.0,
+              "z": 0.5
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "ArrivalPoint (2)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "ArrivalPoint (3)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -1.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "VineLaunchPoint (2)",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.38999998569488525,
+          "y": 20.520000457763672,
+          "z": -4.3499999046325684
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": -0.99999803304672241,
+          "z": 0.0,
+          "w": 0.0019804057665169239
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "VineLaunchPoint",
+            "name": "VineLaunchPoint (2)",
+            "instanceID": 1561884,
+            "goName": "VineLaunchPoint (2)",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": [
+          {
+            "name": "ArrivalPoint (1)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.5,
+              "y": 0.0,
+              "z": 0.5
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "ArrivalPoint (4)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.5,
+              "y": 0.0,
+              "z": 0.5
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "ArrivalPoint (2)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "ArrivalPoint (3)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -1.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "VineSwingPreventBuilding",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "VineSwingPreventBuilding",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 22.0,
+              "z": 0.0
+            },
+            "size": {
+              "x": 14.0,
+              "y": 20.0,
+              "z": 14.0
+            },
+            "isTrigger": false,
+            "enabled": true
+          },
+          {
+            "$type": "UnityEngine.CapsuleCollider",
+            "$name": "VineSwingPreventBuilding",
+            "colliderType": "Capsule",
+            "center": {
+              "x": 0.0,
+              "y": 7.9000000953674316,
+              "z": 0.0
+            },
+            "radius": 1.7899999618530273,
+            "height": 18.149999618530273,
+            "direction": 1,
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "kapok_branch_a",
+        "layer": {
+          "index": 28,
+          "name": "Prevent Movement"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -0.38999998569488525,
+          "y": 21.608999252319336,
+          "z": -0.40999999642372131
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": -0.7793547511100769,
+          "z": 0.0,
+          "w": 0.62658298015594482
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "kapok_branch_a",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "KapokBranchMoveCollider",
+              "meshId": "KapokBranchMoveCollider_0753eada"
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "kapok_branch_a (2)",
+        "layer": {
+          "index": 28,
+          "name": "Prevent Movement"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.34464120864868164,
+          "y": 18.590000152587891,
+          "z": 0.29835319519042969
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": -0.4238317608833313,
+          "z": 0.0,
+          "w": -0.90574097633361816
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "kapok_branch_a (2)",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "KapokBranchMoveCollider",
+              "meshId": "KapokBranchMoveCollider_0753eada"
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "PlayerBump",
+        "layer": {
+          "index": 28,
+          "name": "Prevent Movement"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": -2.5,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.SphereCollider",
+            "$name": "PlayerBump",
+            "colliderType": "Sphere",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "radius": 4.0,
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "MeshCollider",
+        "layer": {
+          "index": 30,
+          "name": "Tree"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "MeshCollider",
+            "name": "MeshCollider",
+            "instanceID": 1455062,
+            "goName": "MeshCollider",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "stumpCollider",
+        "layer": {
+          "index": 30,
+          "name": "Tree"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "MeshCollider",
+            "name": "stumpCollider",
+            "instanceID": 1454092,
+            "goName": "stumpCollider",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "TerrainModifier": [
+      {
+        "$type": "TerrainTopologyAdd",
+        "$name": "<destroyed native object>",
+        "prefabID": 401593261,
+        "hierachyName": "vineswingingtree02",
+        "TopologyType": {
+          "$enum": "TerrainTopology+Enum",
+          "name": "Forestside",
+          "value": 64,
+          "flagNames": [
+            "Forestside"
+          ]
+        },
+        "Opacity": 1.0,
+        "Radius": 9.0,
+        "Fade": 0.0,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/resource/vine_swinging/vineswingingtree02.prefab",
+        "instanceID": 1562068,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "DecorComponent": [
+      {
+        "$type": "DecorRotate",
+        "$name": "<destroyed native object>",
+        "prefabID": 401593261,
+        "hierachyName": "vineswingingtree02",
+        "MinRotation": {
+          "x": 0.0,
+          "y": -180.0,
+          "z": 0.0
+        },
+        "MaxRotation": {
+          "x": 0.0,
+          "y": 180.0,
+          "z": 0.0
+        },
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/resource/vine_swinging/vineswingingtree02.prefab",
+        "instanceID": 1541360,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "TreeMarkerData": [
+      {
+        "$type": "TreeMarkerData",
+        "$name": "<destroyed native object>",
+        "prefabID": 401593261,
+        "hierachyName": "vineswingingtree02",
+        "GenerationArcs": [
+          {
+            "$type": "TreeMarkerData+GenerationArc",
+            "CentrePoint": {
+              "x": 0.0,
+              "y": 2.5,
+              "z": 0.0
+            },
+            "Radius": 4.0,
+            "Rotation": {
+              "x": 0.5,
+              "y": 0.05000000074505806,
+              "z": 0.5
+            },
+            "OverrideCount": 0
+          },
+          {
+            "$type": "TreeMarkerData+GenerationArc",
+            "CentrePoint": {
+              "x": 0.0,
+              "y": 2.5,
+              "z": 0.0
+            },
+            "Radius": 4.0,
+            "Rotation": {
+              "x": 0.5,
+              "y": 0.0,
+              "z": -0.4699999988079071
+            },
+            "OverrideCount": 0
+          }
+        ],
+        "Markers": [
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": -0.94629371166229248,
+              "y": 2.5000004768371582,
+              "z": 0.30746924877166748
+            },
+            "LocalNormal": {
+              "x": -0.86100167036056519,
+              "y": 0.29042258858680725,
+              "z": 0.417529433965683
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": -0.87238866090774536,
+              "y": 2.5000004768371582,
+              "z": -0.091691687703132629
+            },
+            "LocalNormal": {
+              "x": -0.578759491443634,
+              "y": 0.089989453554153442,
+              "z": 0.81051802635192871
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": -0.86329710483551025,
+              "y": 2.5000004768371582,
+              "z": -0.49842482805252075
+            },
+            "LocalNormal": {
+              "x": -0.94693571329116821,
+              "y": 0.18410623073577881,
+              "z": 0.26347237825393677
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": -0.54312402009963989,
+              "y": 2.5000004768371582,
+              "z": -0.74754601716995239
+            },
+            "LocalNormal": {
+              "x": 0.11831887811422348,
+              "y": 0.160391166806221,
+              "z": -0.979936420917511
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": -0.17205186188220978,
+              "y": 2.5000002384185791,
+              "z": -0.809440553188324
+            },
+            "LocalNormal": {
+              "x": -0.24443666636943817,
+              "y": 0.19213998317718506,
+              "z": -0.95043832063674927
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": 0.18448810279369354,
+              "y": 2.5000002384185791,
+              "z": -0.86794811487197876
+            },
+            "LocalNormal": {
+              "x": -0.23679928481578827,
+              "y": 0.19387656450271606,
+              "z": -0.95201790332794189
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": 0.59273314476013184,
+              "y": 2.5000004768371582,
+              "z": -0.81582742929458618
+            },
+            "LocalNormal": {
+              "x": 0.57554936408996582,
+              "y": 0.29817149043083191,
+              "z": -0.76147013902664185
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": 0.78251969814300537,
+              "y": 2.5,
+              "z": -0.45178794860839844
+            },
+            "LocalNormal": {
+              "x": 0.3911253809928894,
+              "y": 0.18716371059417725,
+              "z": -0.90110522508621216
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": 0.91373860836029053,
+              "y": 2.4999995231628418,
+              "z": -0.096037723124027252
+            },
+            "LocalNormal": {
+              "x": 0.76267266273498535,
+              "y": 0.158150777220726,
+              "z": 0.62715119123458862
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": 0.86877965927124023,
+              "y": 2.4999995231628418,
+              "z": 0.28228366374969482
+            },
+            "LocalNormal": {
+              "x": 0.72265273332595825,
+              "y": 0.21643313765525818,
+              "z": 0.65645235776901245
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": 0.58130848407745361,
+              "y": 2.4999995231628418,
+              "z": 0.52341264486312866
+            },
+            "LocalNormal": {
+              "x": 0.98486924171447754,
+              "y": 0.13355803489685059,
+              "z": 0.11043024063110352
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": 0.36217284202575684,
+              "y": 2.4999995231628418,
+              "z": 0.81345391273498535
+            },
+            "LocalNormal": {
+              "x": 0.19291141629219055,
+              "y": 0.21507851779460907,
+              "z": 0.95735388994216919
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": -1.1548399925231934E-07,
+              "y": 2.4999997615814209,
+              "z": 0.90427267551422119
+            },
+            "LocalNormal": {
+              "x": -0.20970448851585388,
+              "y": 0.22707231342792511,
+              "z": 0.95103222131729126
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": -0.38886177539825439,
+              "y": 2.5,
+              "z": 0.87339746952056885
+            },
+            "LocalNormal": {
+              "x": 0.091025993227958679,
+              "y": 0.22023466229438782,
+              "z": 0.97119045257568359
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": -0.61751168966293335,
+              "y": 2.5,
+              "z": 0.55600994825363159
+            },
+            "LocalNormal": {
+              "x": -0.6957276463508606,
+              "y": 0.19194374978542328,
+              "z": 0.69218534231185913
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": -0.72521018981933594,
+              "y": 3.2495250701904297,
+              "z": 1.4901161193847656E-08
+            },
+            "LocalNormal": {
+              "x": -0.95922172069549561,
+              "y": 0.071388565003871918,
+              "z": -0.27349087595939636
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": -0.73317289352416992,
+              "y": 3.184725284576416,
+              "z": -0.33231577277183533
+            },
+            "LocalNormal": {
+              "x": -0.99092316627502441,
+              "y": 0.12507665157318115,
+              "z": 0.049265645444393158
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": -0.57554304599761963,
+              "y": 3.0015304088592529,
+              "z": -0.65073156356811523
+            },
+            "LocalNormal": {
+              "x": -0.33833938837051392,
+              "y": 0.16634514927864075,
+              "z": -0.9262050986289978
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": -0.24295565485954285,
+              "y": 2.7316164970397949,
+              "z": -0.76122415065765381
+            },
+            "LocalNormal": {
+              "x": -0.24777807295322418,
+              "y": 0.1020161360502243,
+              "z": -0.963430643081665
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": 0.090665683150291443,
+              "y": 2.4216537475585938,
+              "z": -0.878180742263794
+            },
+            "LocalNormal": {
+              "x": 0.49969631433486938,
+              "y": 0.19130039215087891,
+              "z": -0.84481233358383179
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": 0.5599510669708252,
+              "y": 2.1252386569976807,
+              "z": -0.98735225200653076
+            },
+            "LocalNormal": {
+              "x": 0.57554936408996582,
+              "y": 0.29817149043083191,
+              "z": -0.76147013902664185
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": 0.70925402641296387,
+              "y": 1.893621563911438,
+              "z": -0.524595320224762
+            },
+            "LocalNormal": {
+              "x": -0.057542029768228531,
+              "y": 0.10863205045461655,
+              "z": -0.99241524934768677
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": 1.1988410949707031,
+              "y": 1.7668536901474,
+              "z": -0.25941631197929382
+            },
+            "LocalNormal": {
+              "x": 0.91130977869033813,
+              "y": 0.26088535785675049,
+              "z": 0.31851714849472046
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": 1.1235429048538208,
+              "y": 1.7668541669845581,
+              "z": 0.2431228905916214
+            },
+            "LocalNormal": {
+              "x": 0.87635892629623413,
+              "y": 0.20970523357391357,
+              "z": -0.43361130356788635
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": 0.66691792011260986,
+              "y": 1.8936212062835693,
+              "z": 0.49328166246414185
+            },
+            "LocalNormal": {
+              "x": 0.98486924171447754,
+              "y": 0.13355803489685059,
+              "z": 0.11043024063110352
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": 0.45614397525787354,
+              "y": 2.1252374649047852,
+              "z": 0.80431181192398071
+            },
+            "LocalNormal": {
+              "x": 0.93691796064376831,
+              "y": 0.16333740949630737,
+              "z": 0.30903974175453186
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": 0.094682395458221436,
+              "y": 2.4216530323028564,
+              "z": 0.91708779335021973
+            },
+            "LocalNormal": {
+              "x": 0.49838680028915405,
+              "y": 0.21957096457481384,
+              "z": 0.83868896961212158
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": -0.26178693771362305,
+              "y": 2.7316157817840576,
+              "z": 0.82022589445114136
+            },
+            "LocalNormal": {
+              "x": 0.44517260789871216,
+              "y": 0.10182787477970123,
+              "z": 0.88963615894317627
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": -0.5449601411819458,
+              "y": 3.0015299320220947,
+              "z": 0.61615324020385742
+            },
+            "LocalNormal": {
+              "x": -0.97993427515029907,
+              "y": 0.11208585649728775,
+              "z": 0.16482007503509521
+            }
+          },
+          {
+            "$type": "TreeMarkerData+MarkerLocation",
+            "LocalPosition": {
+              "x": -0.7331538200378418,
+              "y": 3.184725284576416,
+              "z": 0.33230715990066528
+            },
+            "LocalNormal": {
+              "x": -0.56745702028274536,
+              "y": 0.10828062891960144,
+              "z": 0.81625223159790039
+            }
+          }
+        ],
+        "GenerationStartPoint": {
+          "x": 0.0,
+          "y": 2.0,
+          "z": 0.0
+        },
+        "GenerationRadius": 2.0,
+        "MaxY": 5.0,
+        "MinY": 0.40000000596046448,
+        "ProcessAngleChecks": false,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/resource/vine_swinging/vineswingingtree02.prefab",
+        "instanceID": 1522628,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ]
+  }
+}

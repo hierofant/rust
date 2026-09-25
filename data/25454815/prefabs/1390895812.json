@@ -1,0 +1,1712 @@
+{
+  "prefabID": 1390895812,
+  "path": "assets/content/props/fog machine/fogmachine.prefab",
+  "rootClassChain": [
+    "FogMachine",
+    "ContainerIOEntity",
+    "IOEntity",
+    "DecayEntity",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -0.010143816471099854,
+      "y": 0.12798874080181122,
+      "z": 0.045281946659088135
+    },
+    "size": {
+      "x": 0.26250645518302917,
+      "y": 0.25644415616989136,
+      "z": 0.5368468165397644
+    }
+  },
+  "hierarchy": {
+    "name": "fogmachine",
+    "layer": {
+      "index": 8,
+      "name": "Deployed"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "FogMachine",
+        "$name": "fogmachine",
+        "fogLength": 60.0,
+        "nozzleBlastDuration": 5.0,
+        "fuelPerSec": 1.0,
+        "motionTrigger": {
+          "$type": "TriggerBase",
+          "$name": "MotionTrigger",
+          "interestLayers": 131072,
+          "contents": null,
+          "entityContents": null,
+          "OnEntityEnterTrigger": null,
+          "OnEntityLeaveTrigger": null
+        },
+        "onlyAllowedItem": {
+          "$ref": "ItemDefinition",
+          "name": "fuel.lowgrade.item",
+          "itemid": -946369541,
+          "shortname": "lowgradefuel"
+        },
+        "allowedContents": {
+          "$enum": "ItemContainer+ContentsType",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "maxStackSize": 0,
+        "numSlots": 1,
+        "lootPanelName": "lantern",
+        "panelTitle": {
+          "$type": "Translate+Phrase",
+          "token": "loot",
+          "legacyEnglish": "Loot"
+        },
+        "needsBuildingPrivilegeToUse": true,
+        "requireAuthIfNotLocked": false,
+        "isLootable": true,
+        "isMonitorable": false,
+        "dropsLoot": true,
+        "dropLootDestroyPercent": 0.0,
+        "dropFloats": false,
+        "onlyOneUser": false,
+        "supportsChildDeployables": false,
+        "allowSorting": false,
+        "isLockable": false,
+        "openSound": {
+          "$ref": "SoundDefinition",
+          "name": "snowmobile-open-fuel",
+          "instanceID": 181380
+        },
+        "closeSound": {
+          "$ref": "SoundDefinition",
+          "name": "snowmobile-close-fuel",
+          "instanceID": 126552
+        },
+        "debugOrigin": [
+          [],
+          [
+            []
+          ],
+          [],
+          [
+            []
+          ]
+        ],
+        "sourceItem": {
+          "$ref": "ItemDefinition",
+          "name": "fogmachine.item",
+          "itemid": -1973785141,
+          "shortname": "fogmachine"
+        },
+        "lastResetIndex": 0,
+        "inputs": [
+          {
+            "$type": "IOEntity+IOSlot",
+            "niceName": "Toggle",
+            "type": {
+              "$enum": "IOEntity+IOType",
+              "name": "Electric",
+              "value": 0
+            },
+            "connectedTo": {
+              "$type": "IOEntity+IORef",
+              "entityRef": {
+                "$type": "EntityRef"
+              },
+              "ioEnt": null
+            },
+            "connectedToSlot": 0,
+            "importance": {
+              "$enum": "IOHandlePriority",
+              "name": "Normal",
+              "value": 0
+            },
+            "ArrowOffset": 0.0,
+            "linePoints": [],
+            "lineAnchors": null,
+            "slackLevels": [],
+            "worldSpaceLineEndRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "line": null,
+            "handlePosition": {
+              "x": 0.0,
+              "y": 0.090000003576278687,
+              "z": -0.2199999988079071
+            },
+            "handleDirection": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -1.0
+            },
+            "rootConnectionsOnly": false,
+            "mainPowerSlot": false,
+            "wireColour": {
+              "$enum": "WireTool+WireColour",
+              "name": "Gray",
+              "value": 0
+            },
+            "lineThickness": 0.0
+          },
+          {
+            "$type": "IOEntity+IOSlot",
+            "niceName": "Turn On",
+            "type": {
+              "$enum": "IOEntity+IOType",
+              "name": "Electric",
+              "value": 0
+            },
+            "connectedTo": {
+              "$type": "IOEntity+IORef",
+              "entityRef": {
+                "$type": "EntityRef"
+              },
+              "ioEnt": null
+            },
+            "connectedToSlot": 0,
+            "importance": {
+              "$enum": "IOHandlePriority",
+              "name": "Normal",
+              "value": 0
+            },
+            "ArrowOffset": 0.0,
+            "linePoints": [],
+            "lineAnchors": null,
+            "slackLevels": [],
+            "worldSpaceLineEndRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "line": null,
+            "handlePosition": {
+              "x": -0.079999998211860657,
+              "y": 0.090000003576278687,
+              "z": -0.2199999988079071
+            },
+            "handleDirection": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -1.0
+            },
+            "rootConnectionsOnly": false,
+            "mainPowerSlot": false,
+            "wireColour": {
+              "$enum": "WireTool+WireColour",
+              "name": "Gray",
+              "value": 0
+            },
+            "lineThickness": 0.0
+          },
+          {
+            "$type": "IOEntity+IOSlot",
+            "niceName": "Turn Off",
+            "type": {
+              "$enum": "IOEntity+IOType",
+              "name": "Electric",
+              "value": 0
+            },
+            "connectedTo": {
+              "$type": "IOEntity+IORef",
+              "entityRef": {
+                "$type": "EntityRef"
+              },
+              "ioEnt": null
+            },
+            "connectedToSlot": 0,
+            "importance": {
+              "$enum": "IOHandlePriority",
+              "name": "Normal",
+              "value": 0
+            },
+            "ArrowOffset": 0.0,
+            "linePoints": [],
+            "lineAnchors": null,
+            "slackLevels": [],
+            "worldSpaceLineEndRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "line": null,
+            "handlePosition": {
+              "x": 0.079999998211860657,
+              "y": 0.090000003576278687,
+              "z": -0.2199999988079071
+            },
+            "handleDirection": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -1.0
+            },
+            "rootConnectionsOnly": false,
+            "mainPowerSlot": false,
+            "wireColour": {
+              "$enum": "WireTool+WireColour",
+              "name": "Gray",
+              "value": 0
+            },
+            "lineThickness": 0.0
+          }
+        ],
+        "outputs": [],
+        "ioType": {
+          "$enum": "IOEntity+IOType",
+          "name": "Electric",
+          "value": 0
+        },
+        "cachedOutputsUsed": 0,
+        "lastPassthroughEnergy": -1,
+        "lastEnergy": 0,
+        "currentEnergy": 0,
+        "lastUpdateTime": 0.0,
+        "lastUpdateBlockedFrame": 0,
+        "ensureOutputsUpdated": false,
+        "canBeDemolished": false,
+        "debrisPrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "debrisRotationOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "DebrisPositions": [],
+        "buildingID": 0,
+        "timePlaced": 0.0,
+        "decayTimer": 0.0,
+        "upkeepTimer": 0.0,
+        "upkeep": null,
+        "decay": null,
+        "decayPoints": null,
+        "lastDecayTick": 0.0,
+        "decayVariance": 1.0,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "DeployableMetal",
+          "comments": "",
+          "density": 3.0,
+          "amounts": [
+            0.89999997615814209,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.949999988079071,
+            0.0,
+            0.0,
+            0.0,
+            0.99000000953674316,
+            0.99000000953674316,
+            0.99000000953674316,
+            0.0,
+            1.0,
+            1.0,
+            0.99000000953674316,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 3999396024
+        },
+        "startHealth": 100.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "fogmachine.item",
+            "itemid": -1973785141,
+            "shortname": "fogmachine"
+          },
+          "itemCount": 1,
+          "setConditionFromHealth": true,
+          "subtractCondition": 0.10000000149011612,
+          "requireBuildingPrivilege": true,
+          "requireHammer": true,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "fogmachine.item",
+            "itemid": -1973785141,
+            "shortname": "fogmachine"
+          },
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": false,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": false,
+        "markAttackerHostile": false,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -0.010143816471099854,
+            "y": 0.12798874080181122,
+            "z": 0.045281946659088135
+          },
+          "size": {
+            "x": 0.26250645518302917,
+            "y": 0.25644415616989136,
+            "z": 0.5368468165397644
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "fogmachine",
+          "collision": null,
+          "rootBone": {
+            "$ref": "Transform",
+            "name": "fogmachine",
+            "instanceID": 1291890,
+            "goName": "fogmachine",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "fogmachine",
+              "instanceID": 1291890,
+              "goName": "fogmachine",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "preventBuilding",
+              "instanceID": 1279262,
+              "goName": "preventBuilding",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "sockets",
+              "instanceID": 1288720,
+              "goName": "sockets",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "free",
+              "instanceID": 1275802,
+              "goName": "free",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "deploy",
+              "instanceID": 1285718,
+              "goName": "deploy",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "Server",
+              "instanceID": 1292394,
+              "goName": "Server",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "MotionTrigger",
+              "instanceID": 1339012,
+              "goName": "MotionTrigger",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "fogmachine",
+            "preventBuilding",
+            "sockets",
+            "free",
+            "angle",
+            "inside",
+            "notInWater",
+            "deploy",
+            "volume (1)",
+            "Server",
+            "MotionTrigger"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 1390895812,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Small",
+          "value": 0
+        },
+        "net": null
+      },
+      {
+        "$type": "UnityEngine.BoxCollider",
+        "$name": "fogmachine",
+        "colliderType": "Box",
+        "center": {
+          "x": -0.013275146484375,
+          "y": 0.12311804294586182,
+          "z": 0.0470733642578125
+        },
+        "size": {
+          "x": 0.28302001953125,
+          "y": 0.24680709838867188,
+          "z": 0.54373931884765625
+        },
+        "isTrigger": false,
+        "enabled": true,
+        "physicMaterial": {
+          "$ref": "PhysicsMaterial",
+          "name": "Metal",
+          "instanceID": 609842
+        }
+      },
+      {
+        "$ref": "Model",
+        "name": "fogmachine",
+        "instanceID": 1517778,
+        "goName": "fogmachine",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$type": "GroundWatch",
+        "$name": "fogmachine",
+        "groundPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "layers": 10551296,
+        "radius": 0.10000000149011612,
+        "needBuildingBlock": false,
+        "needOnlyOneAreaCheckValid": false,
+        "whitelist": [],
+        "fails": 0,
+        "_baseEntity": null
+      },
+      {
+        "$type": "DestroyOnGroundMissing",
+        "$name": "fogmachine"
+      },
+      {
+        "$type": "EntityFlag_Toggle",
+        "$name": "fogmachine",
+        "runClientside": false,
+        "runServerside": true,
+        "flag": {
+          "$enum": "BaseEntity+Flags",
+          "name": "Reserved9",
+          "value": 131072,
+          "flagNames": [
+            "Reserved9"
+          ]
+        },
+        "flagCheck": {
+          "$enum": "EntityFlag_Toggle+FlagCheck",
+          "name": "All",
+          "value": 0
+        },
+        "notFlag": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "onFlagEnabled": {
+          "$type": "UnityEngine.Events.UnityEvent",
+          "m_PersistentCalls": {
+            "$type": "UnityEngine.Events.PersistentCallGroup",
+            "m_Calls": [
+              {
+                "$type": "UnityEngine.Events.PersistentCall",
+                "m_Target": {
+                  "$ref": "GameObject",
+                  "name": "MotionTrigger",
+                  "instanceID": 1201982
+                },
+                "m_TargetAssemblyTypeName": "UnityEngine.GameObject, UnityEngine",
+                "m_MethodName": "SetActive",
+                "m_Mode": {
+                  "$enum": "UnityEngine.Events.PersistentListenerMode",
+                  "name": "Bool",
+                  "value": 6
+                },
+                "m_Arguments": {
+                  "$type": "UnityEngine.Events.ArgumentCache",
+                  "m_ObjectArgument": null,
+                  "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                  "m_IntArgument": 0,
+                  "m_FloatArgument": 0.0,
+                  "m_StringArgument": "",
+                  "m_BoolArgument": true
+                },
+                "m_CallState": {
+                  "$enum": "UnityEngine.Events.UnityEventCallState",
+                  "name": "RuntimeOnly",
+                  "value": 2
+                }
+              }
+            ]
+          }
+        },
+        "onFlagDisabled": {
+          "$type": "UnityEngine.Events.UnityEvent",
+          "m_PersistentCalls": {
+            "$type": "UnityEngine.Events.PersistentCallGroup",
+            "m_Calls": [
+              {
+                "$type": "UnityEngine.Events.PersistentCall",
+                "m_Target": {
+                  "$ref": "GameObject",
+                  "name": "MotionTrigger",
+                  "instanceID": 1201982
+                },
+                "m_TargetAssemblyTypeName": "UnityEngine.GameObject, UnityEngine",
+                "m_MethodName": "SetActive",
+                "m_Mode": {
+                  "$enum": "UnityEngine.Events.PersistentListenerMode",
+                  "name": "Bool",
+                  "value": 6
+                },
+                "m_Arguments": {
+                  "$type": "UnityEngine.Events.ArgumentCache",
+                  "m_ObjectArgument": null,
+                  "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                  "m_IntArgument": 0,
+                  "m_FloatArgument": 0.0,
+                  "m_StringArgument": "",
+                  "m_BoolArgument": false
+                },
+                "m_CallState": {
+                  "$enum": "UnityEngine.Events.UnityEventCallState",
+                  "name": "RuntimeOnly",
+                  "value": 2
+                }
+              }
+            ]
+          }
+        },
+        "_baseEntity": null
+      }
+    ],
+    "children": [
+      {
+        "name": "preventBuilding",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "preventBuilding",
+            "colliderType": "Box",
+            "center": {
+              "x": -0.013275146484375,
+              "y": 0.12311804294586182,
+              "z": 0.0470733642578125
+            },
+            "size": {
+              "x": 0.28302001953125,
+              "y": 0.24680709838867188,
+              "z": 0.54373931884765625
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "sockets",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "free",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "deploy",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "Server",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "MotionTrigger",
+            "layer": {
+              "index": 18,
+              "name": "Trigger"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 3.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.SphereCollider",
+                "$name": "MotionTrigger",
+                "colliderType": "Sphere",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "radius": 3.0,
+                "isTrigger": true,
+                "enabled": true
+              },
+              {
+                "$ref": "TriggerBase",
+                "name": "MotionTrigger",
+                "instanceID": 1568056,
+                "goName": "MotionTrigger",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Deployable": [
+      {
+        "$type": "Deployable",
+        "$name": "<destroyed native object>",
+        "prefabID": 1390895812,
+        "hierachyName": "fogmachine",
+        "guidePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "guideMesh": null,
+        "guideMeshScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "overrideRotation": false,
+        "guideMeshOrientation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "guideMeshPositionOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "moveGuideTowardsCamera": true,
+        "guideLights": true,
+        "wantsInstanceData": false,
+        "copyInventoryFromItem": true,
+        "setSocketParent": false,
+        "toSlot": false,
+        "slot": {
+          "$enum": "BaseEntity+Slot",
+          "name": "Lock",
+          "value": 0
+        },
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "0f33c94d75bc8485d99848cb3f5710bd",
+          "resourcePath": "assets/prefabs/deployable/woodenbox/effects/wooden-box-deploy.prefab",
+          "resourceID": 3309562397
+        },
+        "guideTargets": [],
+        "bounds": {
+          "center": {
+            "x": -0.010143816471099854,
+            "y": 0.12798874080181122,
+            "z": 0.045281946659088135
+          },
+          "size": {
+            "x": 0.26250645518302917,
+            "y": 0.25644415616989136,
+            "z": 0.5368468165397644
+          }
+        },
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/content/props/fog machine/fogmachine.prefab",
+        "instanceID": 1513046,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Construction": [
+      {
+        "$type": "Construction",
+        "$name": "<destroyed native object>",
+        "prefabID": 1390895812,
+        "hierachyName": "fogmachine",
+        "info": {
+          "$type": "BaseEntity+Menu+Option",
+          "name": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "description": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "icon": null,
+          "order": 0,
+          "usableWhileWounded": false
+        },
+        "canBypassBuildingPermission": false,
+        "showBuildingBlockedPreview": true,
+        "canPlaceOnRoads": false,
+        "canRotateBeforePlacement": true,
+        "canRotateAfterPlacement": true,
+        "canBeDeployedInDeepSeaWater": false,
+        "checkVolumeOnRotate": false,
+        "checkVolumeOnUpgrade": false,
+        "canPlaceAtMaxDistance": false,
+        "placeOnWater": false,
+        "overridePlacementLayer": false,
+        "overridedPlacementLayer": 0,
+        "additionalPlacementLayer": 0,
+        "rotationAmount": {
+          "x": 0.0,
+          "y": 90.0,
+          "z": 0.0
+        },
+        "applyStartingRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "deployOffset": null,
+        "enforceLineOfSightCheckAgainstParentEntity": false,
+        "canSnap": false,
+        "forceY": false,
+        "forceYValue": 0.0,
+        "forceYToOceanLevel": false,
+        "OceanLevelYOffset": 0.0,
+        "holdToPlaceDuration": 0.0,
+        "canFloodFillSockets": false,
+        "alternativeLOSChecks": false,
+        "alternativeLOSPositions": [],
+        "canUseLastValidPosition": true,
+        "healthMultiplier": 1.0,
+        "costMultiplier": 1.0,
+        "maxplaceDistance": 4.0,
+        "minPlaceDistance": 1.0,
+        "guideMesh": null,
+        "guideMeshMaterial": [],
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "hideBuildingPlannerViewmodel": false,
+        "allSockets": [
+          {
+            "$type": "Socket_Free",
+            "$name": "<destroyed native object>",
+            "prefabID": 1390895812,
+            "hierachyName": "fogmachine/sockets/free",
+            "idealPlacementNormal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "useTargetNormal": true,
+            "snapToTargetProvidedRotations": false,
+            "blendAimAngle": true,
+            "male": true,
+            "maleDummy": false,
+            "female": false,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": false,
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "selectSize": {
+              "x": 2.0,
+              "y": 0.10000000149011612,
+              "z": 2.0
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            },
+            "socketName": "FogMachine/sockets/free",
+            "socketMods": [
+              {
+                "$type": "SocketMod_AngleCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1390895812,
+                "hierachyName": "fogmachine/sockets/free/angle",
+                "wantsAngle": true,
+                "worldNormal": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0
+                },
+                "withinDegrees": 45.0,
+                "usePlacementNormal": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/content/props/fog machine/fogmachine.prefab",
+                "instanceID": 1512106,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1390895812,
+                "hierachyName": "fogmachine/sockets/free/inside",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 10551297,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/content/props/fog machine/fogmachine.prefab",
+                "instanceID": 1512432,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_InWater",
+                "$name": "<destroyed native object>",
+                "prefabID": 1390895812,
+                "hierachyName": "fogmachine/sockets/free/notInWater",
+                "wantsInWater": false,
+                "excludeArtificialWater": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/content/props/fog machine/fogmachine.prefab",
+                "instanceID": 1512566,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              }
+            ],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "worldRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": 0.99999994039535522,
+              "z": -1.1920928955078125E-07
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "fullName": "assets/content/props/fog machine/fogmachine.prefab",
+            "instanceID": 1514184,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          }
+        ],
+        "allProximities": [],
+        "defaultGrade": null,
+        "socketHandle": null,
+        "bounds": {
+          "center": {
+            "x": -0.010143816471099854,
+            "y": 0.12798874080181122,
+            "z": 0.045281946659088135
+          },
+          "size": {
+            "x": 0.26250645518302917,
+            "y": 0.25644415616989136,
+            "z": 0.5368468165397644
+          }
+        },
+        "isBuildingPrivilege": false,
+        "isSleepingBag": false,
+        "grades": [],
+        "deployable": {
+          "$ref": "Deployable",
+          "name": "<destroyed native object>",
+          "instanceID": 0,
+          "$error": "Object reference not set to an instance of an object.",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "placeholder": null,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/content/props/fog machine/fogmachine.prefab",
+        "instanceID": 1515974,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Decay": [
+      {
+        "$type": "DeployableDecay",
+        "$name": "<destroyed native object>",
+        "prefabID": 1390895812,
+        "hierachyName": "fogmachine",
+        "decayDelay": 48.0,
+        "decayDuration": 96.0,
+        "overrideHealRate": false,
+        "decayTickOverride": 0.0,
+        "decayIndoors": false,
+        "healRate": 1.0,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/content/props/fog machine/fogmachine.prefab",
+        "instanceID": 1512740,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Socket_Base": [
+      {
+        "$ref": "Socket_Free",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "SocketMod": [
+      {
+        "$ref": "SocketMod_AngleCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_InWater",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "DeployVolume": [
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 1390895812,
+        "hierachyName": "fogmachine/deploy/volume (1)",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.12999999523162842,
+            "z": 0.029999999329447746
+          },
+          "size": {
+            "x": 0.25999999046325684,
+            "y": 0.25999999046325684,
+            "z": 0.46000000834465027
+          }
+        },
+        "layers": 547553281,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.00800000037997961,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.00800000037997961,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/content/props/fog machine/fogmachine.prefab",
+        "instanceID": 1515840,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,1271 @@
+{
+  "prefabID": 844375121,
+  "path": "assets/prefabs/weapons/lr300/lr300.entity.prefab",
+  "rootClassChain": [
+    "BaseProjectile",
+    "AttackEntity",
+    "HeldEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.0011875797063112259,
+      "y": 0.0029566437005996704,
+      "z": 0.12997680902481079
+    },
+    "size": {
+      "x": 0.054362129420042038,
+      "y": 0.26704913377761841,
+      "z": 0.74697971343994141
+    }
+  },
+  "hierarchy": {
+    "name": "lr300.entity",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "BaseProjectile",
+        "$name": "lr300.entity",
+        "NoiseRadius": 75.0,
+        "damageScale": 0.800000011920929,
+        "distanceScale": 1.5,
+        "farDamageScale": -1.0,
+        "farDistanceScale": -1.0,
+        "projectileVelocityScale": 1.5,
+        "automatic": true,
+        "usableByTurret": true,
+        "turretDamageScale": 0.34999999403953552,
+        "largeTurretWeapon": false,
+        "turretReloadDurationOverride": -1.0,
+        "maxAttackEffectDistance": 500.0,
+        "attackFX": {
+          "$ref": "GameObject",
+          "guid": "2ed0696b0ba9cc04e98c407f939aaa4b",
+          "resourcePath": "assets/prefabs/weapons/lr300/effects/attack.prefab",
+          "resourceID": 1784300147
+        },
+        "silencedAttack": {
+          "$ref": "GameObject",
+          "guid": "a24b4f07085047d4fa624a40ddb45318",
+          "resourcePath": "assets/prefabs/weapons/lr300/effects/attack_silenced.prefab",
+          "resourceID": 1412430403
+        },
+        "muzzleBrakeAttack": {
+          "$ref": "GameObject",
+          "guid": "2d5be4ae648e7f346895bd32ab5950d9",
+          "resourcePath": "assets/prefabs/weapons/lr300/effects/attack_muzzlebrake.prefab",
+          "resourceID": 2487351901
+        },
+        "fireModeSound": {
+          "$ref": "SoundDefinition",
+          "name": "mp5-fire-select",
+          "instanceID": 30346
+        },
+        "MuzzlePoint": [],
+        "reloadTime": 4.0,
+        "canUnloadAmmo": true,
+        "primaryMagazine": {
+          "$type": "BaseProjectile+Magazine",
+          "definition": {
+            "$type": "BaseProjectile+Magazine+Definition",
+            "builtInSize": 30,
+            "ammoTypes": {
+              "$enum": "Rust.AmmoTypes",
+              "name": "RIFLE_556MM",
+              "value": 2,
+              "flagNames": [
+                "RIFLE_556MM"
+              ]
+            }
+          },
+          "capacity": 0,
+          "contents": 4,
+          "ammoType": {
+            "$ref": "ItemDefinition",
+            "name": "ammo_rifle.item",
+            "itemid": -1211166256,
+            "shortname": "ammo.rifle"
+          },
+          "allowPlayerReloading": true,
+          "allowAmmoSwitching": true
+        },
+        "fractionalReload": false,
+        "reloadStartDuration": 0.0,
+        "reloadFractionDuration": 0.0,
+        "reloadEndDuration": 0.0,
+        "alternateDryFireRate": 0.0,
+        "sendReloadSignalFromServer": false,
+        "aimSway": 1.0,
+        "aimSwaySpeed": 1.0,
+        "recoil": {
+          "$ref": "RecoilProperties",
+          "name": "lr300.recoil",
+          "instanceID": 228752
+        },
+        "aimconeCurve": {
+          "$type": "UnityEngine.AnimationCurve"
+        },
+        "aimCone": 0.20000000298023224,
+        "hipAimCone": 3.0,
+        "aimconePenaltyPerShot": 0.10000000149011612,
+        "aimConePenaltyMax": 1.0,
+        "aimconePenaltyRecoverTime": 0.14000000059604645,
+        "aimconePenaltyRecoverDelay": 0.14000000059604645,
+        "stancePenaltyScale": 1.0,
+        "hasADS": true,
+        "noAimingWhileCycling": false,
+        "manualCycle": false,
+        "CrosshairSettings": {
+          "$enum": "BaseProjectile+WeaponCrosshairSettings",
+          "name": "Standard",
+          "value": 0
+        },
+        "aiming": false,
+        "isBurstWeapon": true,
+        "canChangeFireModes": true,
+        "defaultOn": false,
+        "internalBurstRecoilScale": 0.64999997615814209,
+        "internalBurstFireRateScale": 0.699999988079071,
+        "internalBurstAimConeScale": 0.5,
+        "resetDuration": 0.25,
+        "numShotsFired": 0,
+        "deployDelay": 1.5,
+        "repeatDelay": 0.11999999731779099,
+        "animationDelay": 0.0,
+        "effectiveRange": 40.0,
+        "npcDamageScale": 0.20000000298023224,
+        "attackLengthMin": 0.40000000596046448,
+        "attackLengthMax": 0.40000000596046448,
+        "attackSpacing": 1.0,
+        "aiAimSwayOffset": 3.0,
+        "aiAimCone": 2.0,
+        "aiOnlyInRange": false,
+        "CloseRangeAddition": 0.0,
+        "MediumRangeAddition": 10.0,
+        "LongRangeAddition": 0.0,
+        "CanUseAtMediumRange": true,
+        "CanUseAtLongRange": true,
+        "reloadSounds": [
+          {
+            "$ref": "SoundDefinition",
+            "name": "lr300-charging-handle-back",
+            "instanceID": 24686
+          },
+          {
+            "$ref": "SoundDefinition",
+            "name": "lr300-charging-handle-shut",
+            "instanceID": 24904
+          },
+          {
+            "$ref": "SoundDefinition",
+            "name": "lr300-remove-mag",
+            "instanceID": 24776
+          },
+          {
+            "$ref": "SoundDefinition",
+            "name": "lr300-grab-mag",
+            "instanceID": 24910
+          },
+          {
+            "$ref": "SoundDefinition",
+            "name": "lr300-insert-mag",
+            "instanceID": 24682
+          },
+          {
+            "$ref": "SoundDefinition",
+            "name": "lr300-bolt-catch",
+            "instanceID": 24820
+          },
+          {
+            "$ref": "SoundDefinition",
+            "name": "lr300-buttstock-unlock",
+            "instanceID": 30298
+          }
+        ],
+        "thirdPersonMeleeSound": null,
+        "recoilCompDelayOverride": 0.15000000596046448,
+        "wantsRecoilComp": true,
+        "showCrosshairOnTutorial": false,
+        "noHeadshots": false,
+        "nextAttackTime": {
+          "$type": "EncryptedValue`1[[System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+        },
+        "worldModelAnimator": null,
+        "thirdPersonDeploySound": {
+          "$ref": "SoundDefinition",
+          "name": "lr300-deploy-3p",
+          "instanceID": 28440
+        },
+        "thirdPersonAimSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-up",
+          "instanceID": 24732
+        },
+        "thirdPersonAimEndSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-down",
+          "instanceID": 24854
+        },
+        "hideViewmodel": false,
+        "handBone": "r_prop",
+        "HoldAnimationOverride": {
+          "$ref": "AnimatorOverrideController",
+          "name": "HoldType.LR300",
+          "instanceID": 1022490
+        },
+        "holdInfo": {
+          "$type": "HeldEntity+HoldInfo",
+          "UseCustomSpineOffset": true,
+          "CustomSpineOffset": {
+            "x": 4.74399995803833,
+            "y": -57.055999755859375,
+            "z": -101.33899688720703
+          },
+          "ShieldBoneArmRotationAdditive": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "isBuildingTool": false,
+        "canBeUsedWithShield": false,
+        "ForwardSignalsFromPlayer": false,
+        "forcedOwner": null,
+        "useOwnerForward": true,
+        "CanSetLightsOn": false,
+        "holsterInfo": {
+          "$type": "HeldEntity+HolsterInfo",
+          "slot": {
+            "$enum": "HeldEntity+HolsterInfo+HolsterSlot",
+            "name": "BACK",
+            "value": 0
+          },
+          "backpackSlot": {
+            "$enum": "HeldEntity+HolsterInfo+BackpackSlot",
+            "name": "LEFT",
+            "value": 0
+          },
+          "displayWhenHolstered": true,
+          "holsterBone": "spine3",
+          "holsterOffset": {
+            "x": 0.019999999552965164,
+            "y": -0.15000000596046448,
+            "z": 0.10000000149011612
+          },
+          "holsterRotationOffset": {
+            "x": 97.0,
+            "y": 223.0,
+            "z": 36.0
+          },
+          "backpackHolsterOffset": {
+            "x": -0.14000000059604645,
+            "y": -0.20999999344348907,
+            "z": -0.019999999552965164
+          },
+          "backpackHolsterRotationOffset": {
+            "x": -127.59999847412109,
+            "y": -259.20001220703125,
+            "z": 39.599998474121094
+          }
+        },
+        "HeldCameraMode": {
+          "$enum": "BasePlayer+CameraMode",
+          "name": "FirstPerson",
+          "value": 0
+        },
+        "hostileScore": 11.0,
+        "FirstPersonArmOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonArmRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonRotationStrength": 1.0,
+        "AttachmentAnchor": [
+          []
+        ],
+        "holsterVisible": false,
+        "genericVisible": false,
+        "ownerItemUID": {
+          "$type": "ItemId",
+          "Value": 0
+        },
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.0011875797063112259,
+            "y": 0.0029566437005996704,
+            "z": 0.12997680902481079
+          },
+          "size": {
+            "x": 0.054362129420042038,
+            "y": 0.26704913377761841,
+            "z": 0.74697971343994141
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "w_lr300_rigged",
+          "collision": null,
+          "rootBone": [
+            [
+              [
+                []
+              ],
+              [
+                []
+              ],
+              [],
+              [],
+              {
+                "$ref": "Transform",
+                "name": "Charm",
+                "instanceID": 1367702,
+                "goName": "Charm",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            [],
+            [],
+            {
+              "$ref": "Transform",
+              "name": "muzzle",
+              "instanceID": 1265006,
+              "goName": "muzzle",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [],
+            [],
+            []
+          ],
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "ROOT_lr300",
+              "instanceID": 1264976,
+              "goName": "ROOT_lr300",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "joint2",
+              "instanceID": 1264898,
+              "goName": "joint2",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "bolt",
+              "instanceID": 1265652,
+              "goName": "bolt",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "joint4",
+              "instanceID": 1264970,
+              "goName": "joint4",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "cocking_handle",
+              "instanceID": 1270306,
+              "goName": "cocking_handle",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "joint6",
+              "instanceID": 1270376,
+              "goName": "joint6",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "mag_drop",
+              "instanceID": 1267108,
+              "goName": "mag_drop",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "shell_eject",
+              "instanceID": 1268078,
+              "goName": "shell_eject",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Charm",
+              "instanceID": 1367702,
+              "goName": "Charm",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "v_CharmAnchor",
+              "instanceID": 1315100,
+              "goName": "v_CharmAnchor",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "scope.attachment",
+              "instanceID": 1270928,
+              "goName": "scope.attachment",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "flashlight.attachment",
+              "instanceID": 1265374,
+              "goName": "flashlight.attachment",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "muzzle",
+              "instanceID": 1265006,
+              "goName": "muzzle",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "barrel",
+              "instanceID": 1266948,
+              "goName": "barrel",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "muzzle_offset_brake",
+              "instanceID": 1270834,
+              "goName": "muzzle_offset_brake",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "muzzle_offset_silencer",
+              "instanceID": 1266334,
+              "goName": "muzzle_offset_silencer",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "ROOT_lr300",
+            "joint2",
+            "bolt",
+            "joint4",
+            "cocking_handle",
+            "joint6",
+            "mag_drop",
+            "shell_eject",
+            "Charm",
+            "v_CharmAnchor",
+            "scope.attachment",
+            "flashlight.attachment",
+            "muzzle",
+            "barrel",
+            "muzzle_offset_brake",
+            "muzzle_offset_silencer"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 844375121,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Small",
+          "value": 0
+        },
+        "net": null
+      },
+      {
+        "$type": "Model",
+        "$name": "lr300.entity",
+        "collision": null,
+        "rootBone": [
+          [
+            {
+              "$ref": "Transform",
+              "name": "ROOT_lr300",
+              "instanceID": 1264976,
+              "goName": "ROOT_lr300",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ]
+        ],
+        "headBone": null,
+        "eyeBone": null,
+        "animator": null,
+        "skeleton": null,
+        "boneTransforms": [
+          {
+            "$ref": "Transform",
+            "name": "lr300.entity",
+            "instanceID": 1271004,
+            "goName": "lr300.entity",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "w_lr300_rigged",
+            "instanceID": 1267600,
+            "goName": "w_lr300_rigged",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "ROOT_lr300",
+            "instanceID": 1264976,
+            "goName": "ROOT_lr300",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "joint2",
+            "instanceID": 1264898,
+            "goName": "joint2",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "bolt",
+            "instanceID": 1265652,
+            "goName": "bolt",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "joint4",
+            "instanceID": 1264970,
+            "goName": "joint4",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "cocking_handle",
+            "instanceID": 1270306,
+            "goName": "cocking_handle",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "joint6",
+            "instanceID": 1270376,
+            "goName": "joint6",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "mag_drop",
+            "instanceID": 1267108,
+            "goName": "mag_drop",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "shell_eject",
+            "instanceID": 1268078,
+            "goName": "shell_eject",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "Charm",
+            "instanceID": 1367702,
+            "goName": "Charm",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "v_CharmAnchor",
+            "instanceID": 1315100,
+            "goName": "v_CharmAnchor",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "scope.attachment",
+            "instanceID": 1270928,
+            "goName": "scope.attachment",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "flashlight.attachment",
+            "instanceID": 1265374,
+            "goName": "flashlight.attachment",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "muzzle",
+            "instanceID": 1265006,
+            "goName": "muzzle",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "barrel",
+            "instanceID": 1266948,
+            "goName": "barrel",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "muzzle_offset_brake",
+            "instanceID": 1270834,
+            "goName": "muzzle_offset_brake",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "muzzle_offset_silencer",
+            "instanceID": 1266334,
+            "goName": "muzzle_offset_silencer",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "boneNames": [
+          "lr300.entity",
+          "w_lr300_rigged",
+          "ROOT_lr300",
+          "joint2",
+          "bolt",
+          "joint4",
+          "cocking_handle",
+          "joint6",
+          "mag_drop",
+          "shell_eject",
+          "Charm",
+          "v_CharmAnchor",
+          "scope.attachment",
+          "flashlight.attachment",
+          "muzzle",
+          "barrel",
+          "muzzle_offset_brake",
+          "muzzle_offset_silencer"
+        ]
+      }
+    ],
+    "children": [
+      {
+        "name": "w_lr300_rigged",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "Model",
+            "name": "w_lr300_rigged",
+            "instanceID": 1508222,
+            "goName": "w_lr300_rigged",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": [
+          {
+            "name": "ROOT_lr300",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "joint2",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.10564269125461578,
+                  "y": -8.8817839984779053E-18,
+                  "z": -4.9303805474287284E-34
+                },
+                "localRotation": {
+                  "x": -0.14875845611095428,
+                  "y": 0.69128209352493286,
+                  "z": 0.14875845611095428,
+                  "w": 0.69128209352493286
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "bolt",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -1.4131194588470077E-17,
+                      "y": 0.083643727004528046,
+                      "z": 0.12850670516490936
+                    },
+                    "localRotation": {
+                      "x": 5.5596379181162611E-33,
+                      "y": 0.7071068286895752,
+                      "z": -5.5596379181162611E-33,
+                      "w": 0.7071068286895752
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "joint4",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -0.0825502872467041,
+                          "y": 8.8817839984779053E-18,
+                          "z": 1.8329845918142263E-17
+                        },
+                        "localRotation": {
+                          "x": -1.9626157052021065E-17,
+                          "y": -0.7071068286895752,
+                          "z": -1.9626157052021065E-17,
+                          "w": 0.7071068286895752
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "cocking_handle",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -1.6841274848848986E-17,
+                      "y": 0.12238407880067825,
+                      "z": 0.020076533779501915
+                    },
+                    "localRotation": {
+                      "x": -1.9626157052021065E-17,
+                      "y": 0.7071068286895752,
+                      "z": 1.9626157052021065E-17,
+                      "w": 0.7071068286895752
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "joint6",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -0.10597213357686996,
+                          "y": 0.0,
+                          "z": 2.3530540533138736E-17
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": -0.7071068286895752,
+                          "z": 0.0,
+                          "w": 0.7071068286895752
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "mag_drop",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0040000001899898052,
+                      "y": -0.002099999925121665,
+                      "z": 0.17980000376701355
+                    },
+                    "localRotation": {
+                      "x": 0.4297223687171936,
+                      "y": 0.45874834060668945,
+                      "z": -0.52072715759277344,
+                      "w": 0.57769542932510376
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  },
+                  {
+                    "name": "shell_eject",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0073000001721084118,
+                      "y": 0.0869000032544136,
+                      "z": 0.16750000417232513
+                    },
+                    "localRotation": {
+                      "x": -0.0814657211303711,
+                      "y": 0.63693386316299438,
+                      "z": 0.13815955817699432,
+                      "w": 0.75404942035675049
+                    },
+                    "localScale": {
+                      "x": 1.0000003576278687,
+                      "y": 0.99999994039535522,
+                      "z": 1.0000001192092896
+                    },
+                    "components": [],
+                    "children": []
+                  },
+                  {
+                    "name": "Charm",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.011389999650418758,
+                      "y": 0.10241000354290009,
+                      "z": 0.18525999784469604
+                    },
+                    "localRotation": {
+                      "x": 0.71223163604736328,
+                      "y": 0.041375398635864258,
+                      "z": -0.69873499870300293,
+                      "w": 0.052760664373636246
+                    },
+                    "localScale": {
+                      "x": 0.75,
+                      "y": 0.75,
+                      "z": 0.75
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "v_CharmAnchor",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": false,
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "ViewModelRenderer",
+                            "$name": "v_CharmAnchor",
+                            "cachedTextureRefs": [
+                              null,
+                              null,
+                              null,
+                              null
+                            ],
+                            "opaqueEvents": [
+                              {
+                                "$type": "ViewModelDrawEvent",
+                                "viewModelRenderer": {
+                                  "$cycle": true,
+                                  "type": "ViewModelRenderer"
+                                },
+                                "renderer": null,
+                                "skipDepthPrePass": false,
+                                "material": null,
+                                "subMesh": 0,
+                                "pass": 2,
+                                "needsFilteredRefraction": false
+                              }
+                            ],
+                            "transparentEvents": [],
+                            "prevModelMatrix": [
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0
+                            ]
+                          }
+                        ],
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "scope.attachment",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.062600001692771912,
+                  "y": 0.14589999616146088,
+                  "z": 0.00030000001424923539
+                },
+                "localRotation": {
+                  "x": 0.14562021195888519,
+                  "y": -0.69095021486282349,
+                  "z": -0.14934253692626953,
+                  "w": -0.69215559959411621
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "flashlight.attachment",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.27318000793457031,
+                  "y": 0.22621999680995941,
+                  "z": 0.0010699999984353781
+                },
+                "localRotation": {
+                  "x": 0.14562022686004639,
+                  "y": -0.69095027446746826,
+                  "z": -0.14934256672859192,
+                  "w": -0.69215553998947144
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "muzzle",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.35600000619888306,
+                  "y": 0.30300000309944153,
+                  "z": 0.0020000000949949026
+                },
+                "localRotation": {
+                  "x": -0.14770430326461792,
+                  "y": 0.69050502777099609,
+                  "z": 0.14725643396377563,
+                  "w": 0.69260513782501221
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "barrel",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.38240000605583191,
+                  "y": 0.31330001354217529,
+                  "z": -0.0040000001899898052
+                },
+                "localRotation": {
+                  "x": 0.69095021486282349,
+                  "y": 0.14562034606933594,
+                  "z": 0.692155659198761,
+                  "w": -0.14934253692626953
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "muzzle_offset_brake",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.4122999906539917,
+                  "y": 0.32839998602867126,
+                  "z": 0.0023000000510364771
+                },
+                "localRotation": {
+                  "x": 0.69095021486282349,
+                  "y": 0.14562025666236877,
+                  "z": 0.692155659198761,
+                  "w": -0.14934252202510834
+                },
+                "localScale": {
+                  "x": 1.000001072883606,
+                  "y": 1.0000011920928955,
+                  "z": 1.0000013113021851
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "muzzle_offset_silencer",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.56220000982284546,
+                  "y": 0.3953000009059906,
+                  "z": 0.00279999990016222
+                },
+                "localRotation": {
+                  "x": 0.69095021486282349,
+                  "y": 0.14562025666236877,
+                  "z": 0.692155659198761,
+                  "w": -0.14934252202510834
+                },
+                "localScale": {
+                  "x": 1.0000021457672119,
+                  "y": 1.0000022649765015,
+                  "z": 1.0000025033950806
+                },
+                "components": [],
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Socket_Base": []
+  }
+}

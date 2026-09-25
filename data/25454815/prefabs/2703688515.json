@@ -1,0 +1,1722 @@
+{
+  "prefabID": 2703688515,
+  "path": "assets/prefabs/misc/confetticannon/confetticannon.deployed.prefab",
+  "rootClassChain": [
+    "ConfettiCannon",
+    "DecayEntity",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -3.7252902984619141E-09,
+      "y": 0.354701429605484,
+      "z": -0.00059172511100769043
+    },
+    "size": {
+      "x": 0.092757023870944977,
+      "y": 0.71636569499969482,
+      "z": 0.75333267450332642
+    }
+  },
+  "hierarchy": {
+    "name": "confetticannon.deployed",
+    "layer": {
+      "index": 8,
+      "name": "Deployed"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "ConfettiCannon",
+        "$name": "confetticannon.deployed",
+        "InitialBlastDelay": 1.0,
+        "BlastCooldown": 5.0,
+        "ConfettiPrefab": {
+          "$ref": "GameObject",
+          "guid": "4a81978e0fdd47d48990c0fb0e1f4d22",
+          "resourcePath": "assets/prefabs/misc/confetticannon/effects/confetticannon blast.prefab",
+          "resourceID": 1788867599
+        },
+        "ConfettiPrefabSpawnPoint": [],
+        "DamagePerBlast": 3.0,
+        "canBeDemolished": false,
+        "debrisPrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "debrisRotationOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "DebrisPositions": [],
+        "buildingID": 0,
+        "timePlaced": 0.0,
+        "decayTimer": 0.0,
+        "upkeepTimer": 0.0,
+        "upkeep": null,
+        "decay": null,
+        "decayPoints": null,
+        "lastDecayTick": 0.0,
+        "decayVariance": 1.0,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "BarricadeWood",
+          "comments": "",
+          "density": 1.0,
+          "amounts": [
+            0.89999997615814209,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.89999997615814209,
+            0.5,
+            0.5,
+            0.0,
+            1.0,
+            1.0,
+            0.5,
+            -0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 671741851
+        },
+        "startHealth": 100.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": false,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "confetticannon.item",
+            "itemid": 1603174987,
+            "shortname": "confetticannon"
+          },
+          "itemCount": 1,
+          "setConditionFromHealth": false,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": true,
+          "requireHammer": true,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": false,
+          "itemTarget": null,
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": false,
+        "markAttackerHostile": false,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -3.7252902984619141E-09,
+            "y": 0.354701429605484,
+            "z": -0.00059172511100769043
+          },
+          "size": {
+            "x": 0.092757023870944977,
+            "y": 0.71636569499969482,
+            "z": 0.75333267450332642
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "confetticannon.deployed",
+          "collision": null,
+          "rootBone": [
+            [
+              [],
+              {
+                "$ref": "Transform",
+                "name": "launchPosition",
+                "instanceID": 1336116,
+                "goName": "launchPosition",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            [
+              []
+            ],
+            [],
+            [],
+            [
+              [],
+              [],
+              [],
+              []
+            ]
+          ],
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "confetticannon.deployed",
+              "instanceID": 1344220,
+              "goName": "confetticannon.deployed",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Client",
+              "instanceID": 1396220,
+              "goName": "Client",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "wickSparks",
+              "instanceID": 1315542,
+              "goName": "wickSparks",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "launchPosition",
+              "instanceID": 1336116,
+              "goName": "launchPosition",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "sockets",
+              "instanceID": 1310714,
+              "goName": "sockets",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "free",
+              "instanceID": 1306052,
+              "goName": "free",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "prevent_building",
+              "instanceID": 1391830,
+              "goName": "prevent_building",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "deploy",
+              "instanceID": 1410792,
+              "goName": "deploy",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "Collider",
+              "instanceID": 1304344,
+              "goName": "Collider",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Part1",
+              "instanceID": 1360124,
+              "goName": "Part1",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Part2",
+              "instanceID": 1362606,
+              "goName": "Part2",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Part3",
+              "instanceID": 1304938,
+              "goName": "Part3",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Part4",
+              "instanceID": 1397430,
+              "goName": "Part4",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "confetticannon.deployed",
+            "Client",
+            "wickSparks",
+            "launchPosition",
+            "sockets",
+            "free",
+            "angle",
+            "inside",
+            "notInWater",
+            "prevent_building",
+            "deploy",
+            "volume (1)",
+            "volume (2)",
+            "Collider",
+            "Part1",
+            "Part2",
+            "Part3",
+            "Part4"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 2703688515,
+        "globalBroadcast": true,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Small",
+          "value": 0
+        },
+        "net": null
+      },
+      {
+        "$type": "GroundWatch",
+        "$name": "confetticannon.deployed",
+        "groundPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "layers": 144769024,
+        "radius": 0.10000000149011612,
+        "needBuildingBlock": false,
+        "needOnlyOneAreaCheckValid": false,
+        "whitelist": [],
+        "fails": 0,
+        "_baseEntity": null
+      },
+      {
+        "$type": "DestroyOnGroundMissing",
+        "$name": "confetticannon.deployed"
+      },
+      {
+        "$ref": "Model",
+        "name": "confetticannon.deployed",
+        "instanceID": 1536316,
+        "goName": "confetticannon.deployed",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "children": [
+      {
+        "name": "Client",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "wickSparks",
+            "layer": {
+              "index": 9,
+              "name": "Ragdoll"
+            },
+            "tag": "skin0",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.675000011920929,
+              "z": 0.047499999403953552
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "ParticleSystemContainer",
+                "$name": "wickSparks",
+                "precached": false,
+                "includeLights": false,
+                "particleGroups": [],
+                "lights": [],
+                "lightExs": []
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "launchPosition",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.699999988079071,
+              "z": -0.05000000074505806
+            },
+            "localRotation": {
+              "x": 1.9371510973087425E-07,
+              "y": 0.96592622995376587,
+              "z": -0.25881767272949219,
+              "w": 5.0058655887141867E-08
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "sockets",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "free",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "prevent_building",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "prevent_building",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.00035324692726135254,
+              "y": 0.36000001430511475,
+              "z": 0.0016372315585613251
+            },
+            "size": {
+              "x": 0.22484478354454041,
+              "y": 0.68999999761581421,
+              "z": 0.75999999046325684
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "deploy",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "Collider",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "Part1",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.3513999879360199,
+              "z": 0.15289999544620514
+            },
+            "localRotation": {
+              "x": -0.25881859660148621,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.96592599153518677
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.CapsuleCollider",
+                "$name": "Part1",
+                "colliderType": "Capsule",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "radius": 0.039999999105930328,
+                "height": 0.79000002145767212,
+                "direction": 1,
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Cloth",
+                  "instanceID": 609830
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "Part2",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.042100001126527786,
+              "y": 0.32899999618530273,
+              "z": -0.16300000250339508
+            },
+            "localRotation": {
+              "x": 0.25881949067115784,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.96592575311660767
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "Part2",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "size": {
+                  "x": 0.0099999997764825821,
+                  "y": 0.73000001907348633,
+                  "z": 0.070000000298023224
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Cloth",
+                  "instanceID": 609830
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "Part3",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.042100001126527786,
+              "y": 0.32899999618530273,
+              "z": -0.16300000250339508
+            },
+            "localRotation": {
+              "x": 0.25881949067115784,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.96592575311660767
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "Part3",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "size": {
+                  "x": 0.0099999997764825821,
+                  "y": 0.73000001907348633,
+                  "z": 0.070000000298023224
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Cloth",
+                  "instanceID": 609830
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "Part4",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.018999999389052391,
+              "z": -0.34200000762939453
+            },
+            "localRotation": {
+              "x": 0.25881949067115784,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.96592575311660767
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "Part4",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "size": {
+                  "x": 0.090000003576278687,
+                  "y": 0.0099999997764825821,
+                  "z": 0.070000000298023224
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Cloth",
+                  "instanceID": 609830
+                }
+              }
+            ],
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Deployable": [
+      {
+        "$type": "Deployable",
+        "$name": "<destroyed native object>",
+        "prefabID": 2703688515,
+        "hierachyName": "confetticannon.deployed",
+        "guidePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "guideMesh": null,
+        "guideMeshScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "overrideRotation": false,
+        "guideMeshOrientation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "guideMeshPositionOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "moveGuideTowardsCamera": true,
+        "guideLights": true,
+        "wantsInstanceData": false,
+        "copyInventoryFromItem": true,
+        "setSocketParent": false,
+        "toSlot": false,
+        "slot": {
+          "$enum": "BaseEntity+Slot",
+          "name": "Lock",
+          "value": 0
+        },
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "9c9985835d6d14d5481e44e2686e4e1f",
+          "resourcePath": "assets/prefabs/misc/confetticannon/effects/confetti-cannon-deploy.prefab",
+          "resourceID": 3390425340
+        },
+        "guideTargets": [],
+        "bounds": {
+          "center": {
+            "x": -3.7252902984619141E-09,
+            "y": 0.354701429605484,
+            "z": -0.00059172511100769043
+          },
+          "size": {
+            "x": 0.092757023870944977,
+            "y": 0.71636569499969482,
+            "z": 0.75333267450332642
+          }
+        },
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/confetticannon/confetticannon.deployed.prefab",
+        "instanceID": 1571286,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Construction": [
+      {
+        "$type": "Construction",
+        "$name": "<destroyed native object>",
+        "prefabID": 2703688515,
+        "hierachyName": "confetticannon.deployed",
+        "info": {
+          "$type": "BaseEntity+Menu+Option",
+          "name": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "description": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "icon": null,
+          "order": 0,
+          "usableWhileWounded": false
+        },
+        "canBypassBuildingPermission": false,
+        "showBuildingBlockedPreview": true,
+        "canPlaceOnRoads": false,
+        "canRotateBeforePlacement": true,
+        "canRotateAfterPlacement": true,
+        "canBeDeployedInDeepSeaWater": false,
+        "checkVolumeOnRotate": false,
+        "checkVolumeOnUpgrade": false,
+        "canPlaceAtMaxDistance": false,
+        "placeOnWater": false,
+        "overridePlacementLayer": false,
+        "overridedPlacementLayer": 0,
+        "additionalPlacementLayer": 0,
+        "rotationAmount": {
+          "x": 0.0,
+          "y": 90.0,
+          "z": 0.0
+        },
+        "applyStartingRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "deployOffset": null,
+        "enforceLineOfSightCheckAgainstParentEntity": false,
+        "canSnap": false,
+        "forceY": false,
+        "forceYValue": 0.0,
+        "forceYToOceanLevel": false,
+        "OceanLevelYOffset": 0.0,
+        "holdToPlaceDuration": 0.0,
+        "canFloodFillSockets": false,
+        "alternativeLOSChecks": false,
+        "alternativeLOSPositions": [],
+        "canUseLastValidPosition": true,
+        "healthMultiplier": 1.0,
+        "costMultiplier": 1.0,
+        "maxplaceDistance": 2.0,
+        "minPlaceDistance": 1.0,
+        "guideMesh": null,
+        "guideMeshMaterial": [],
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "hideBuildingPlannerViewmodel": false,
+        "allSockets": [
+          {
+            "$type": "Socket_Free",
+            "$name": "<destroyed native object>",
+            "prefabID": 2703688515,
+            "hierachyName": "confetticannon.deployed/sockets/free",
+            "idealPlacementNormal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "useTargetNormal": true,
+            "snapToTargetProvidedRotations": false,
+            "blendAimAngle": true,
+            "male": true,
+            "maleDummy": false,
+            "female": false,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": false,
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "selectSize": {
+              "x": 2.0,
+              "y": 0.10000000149011612,
+              "z": 2.0
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            },
+            "socketName": "confetticannon.deployed/sockets/free",
+            "socketMods": [
+              {
+                "$type": "SocketMod_AngleCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 2703688515,
+                "hierachyName": "confetticannon.deployed/sockets/free/angle",
+                "wantsAngle": true,
+                "worldNormal": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0
+                },
+                "withinDegrees": 45.0,
+                "usePlacementNormal": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/misc/confetticannon/confetticannon.deployed.prefab",
+                "instanceID": 1561812,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 2703688515,
+                "hierachyName": "confetticannon.deployed/sockets/free/inside",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 144769025,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/misc/confetticannon/confetticannon.deployed.prefab",
+                "instanceID": 1531542,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_InWater",
+                "$name": "<destroyed native object>",
+                "prefabID": 2703688515,
+                "hierachyName": "confetticannon.deployed/sockets/free/notInWater",
+                "wantsInWater": false,
+                "excludeArtificialWater": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/misc/confetticannon/confetticannon.deployed.prefab",
+                "instanceID": 1576272,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              }
+            ],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "worldRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": 0.99999994039535522,
+              "z": -1.1920928955078125E-07
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "fullName": "assets/prefabs/misc/confetticannon/confetticannon.deployed.prefab",
+            "instanceID": 1579470,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          }
+        ],
+        "allProximities": [],
+        "defaultGrade": null,
+        "socketHandle": null,
+        "bounds": {
+          "center": {
+            "x": -3.7252902984619141E-09,
+            "y": 0.354701429605484,
+            "z": -0.00059172511100769043
+          },
+          "size": {
+            "x": 0.092757023870944977,
+            "y": 0.71636569499969482,
+            "z": 0.75333267450332642
+          }
+        },
+        "isBuildingPrivilege": false,
+        "isSleepingBag": false,
+        "grades": [],
+        "deployable": {
+          "$ref": "Deployable",
+          "name": "<destroyed native object>",
+          "instanceID": 0,
+          "$error": "Object reference not set to an instance of an object.",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "placeholder": null,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/confetticannon/confetticannon.deployed.prefab",
+        "instanceID": 1555984,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Decay": [
+      {
+        "$type": "DeployableDecay",
+        "$name": "<destroyed native object>",
+        "prefabID": 2703688515,
+        "hierachyName": "confetticannon.deployed",
+        "decayDelay": 48.0,
+        "decayDuration": 48.0,
+        "overrideHealRate": false,
+        "decayTickOverride": 0.0,
+        "decayIndoors": false,
+        "healRate": 1.0,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/confetticannon/confetticannon.deployed.prefab",
+        "instanceID": 1541528,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Socket_Base": [
+      {
+        "$ref": "Socket_Free",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "SocketMod": [
+      {
+        "$ref": "SocketMod_AngleCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_InWater",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "DeployVolume": [
+      {
+        "$type": "DeployVolumeEntityBounds",
+        "$name": "<destroyed native object>",
+        "prefabID": 2703688515,
+        "hierachyName": "confetticannon.deployed/deploy/volume (1)",
+        "bounds": {
+          "center": {
+            "x": -3.7252902984619141E-09,
+            "y": 0.354701429605484,
+            "z": -0.00059172511100769043
+          },
+          "size": {
+            "x": 0.092757023870944977,
+            "y": 0.71636569499969482,
+            "z": 0.75333267450332642
+          }
+        },
+        "layers": 537001984,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/confetticannon/confetticannon.deployed.prefab",
+        "instanceID": 1540666,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 2703688515,
+        "hierachyName": "confetticannon.deployed/deploy/volume (2)",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.37000000476837158,
+            "z": 0.0
+          },
+          "size": {
+            "x": 0.14000000059604645,
+            "y": 0.68000000715255737,
+            "z": 0.8399999737739563
+          }
+        },
+        "layers": 673316864,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/confetticannon/confetticannon.deployed.prefab",
+        "instanceID": 1571202,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ]
+  }
+}

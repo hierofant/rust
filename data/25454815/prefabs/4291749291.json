@@ -1,0 +1,902 @@
+{
+  "prefabID": 4291749291,
+  "path": "assets/prefabs/npc/travelling vendor/npcvendorturretside.prefab",
+  "rootClassChain": [
+    "NPCAutoTurret",
+    "AutoTurret",
+    "ContainerIOEntity",
+    "IOEntity",
+    "DecayEntity",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -0.029999999329447746,
+      "y": 0.5,
+      "z": 0.0
+    },
+    "size": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.2200000286102295
+    }
+  },
+  "hierarchy": {
+    "name": "npcvendorturretside",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 0.89999997615814209,
+      "y": 0.89999997615814209,
+      "z": 0.89999997615814209
+    },
+    "components": [
+      {
+        "$type": "NPCAutoTurret",
+        "$name": "npcvendorturretside",
+        "centerMuzzle": [],
+        "muzzleLeft": null,
+        "muzzleRight": null,
+        "useSleeperHostile": true,
+        "gun_fire_effect": {
+          "$ref": "GameObject",
+          "guid": "c54ac2008c804c24cbfd249746a005f1",
+          "resourcePath": "assets/prefabs/npc/autoturret/silencedmuzzleshot.prefab",
+          "resourceID": 1685338318
+        },
+        "bulletEffect": {
+          "$ref": "GameObject",
+          "guid": "b6acc6de091239d4091329807e430f71",
+          "resourcePath": "assets/prefabs/npc/patrol helicopter/helibullet.prefab",
+          "resourceID": 1410987015
+        },
+        "bulletSpeed": 200.0,
+        "ambienceEmitter": null,
+        "playAmbientSounds": false,
+        "assignDialog": null,
+        "laserBeam": null,
+        "PowerOrder": 0,
+        "nearbyTurrets": [],
+        "rcTurnSensitivity": 4.0,
+        "RCEyes": null,
+        "IDPanelPrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "rcControls": {
+          "$enum": "RemoteControllableControls",
+          "name": "None",
+          "value": 0,
+          "flagNames": []
+        },
+        "rcIdentifier": "",
+        "targetTrigger": null,
+        "interferenceTrigger": null,
+        "maxInterference": -1.0,
+        "attachedWeaponZOffsetScale": -0.5,
+        "socketTransform": null,
+        "authDirty": false,
+        "nextVisCheck": 0.0,
+        "lastTargetSeenTime": 0.0,
+        "targetVisible": true,
+        "booting": false,
+        "targetAimDir": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "timeSinceLastServerTick": {
+          "$type": "RealTimeSinceEx"
+        },
+        "lastSentAimDir": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "peekIndex": 0,
+        "numConsecutiveMisses": 0,
+        "totalAmmo": 0,
+        "nextAmmoCheckTime": 0.0,
+        "totalAmmoDirty": true,
+        "currentAmmoGravity": 0.0,
+        "currentAmmoVelocity": 0.0,
+        "AttachedWeapon": null,
+        "target": null,
+        "eyePos": [],
+        "muzzlePos": {
+          "$ref": "Transform",
+          "name": "Muzzle",
+          "instanceID": 1362274,
+          "goName": "Muzzle",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "aimDir": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "gun_yaw": [
+          [
+            [
+              [
+                {
+                  "$ref": "Transform",
+                  "name": "Muzzle",
+                  "instanceID": 1362274,
+                  "goName": "Muzzle",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                }
+              ]
+            ],
+            []
+          ]
+        ],
+        "gun_pitch": {
+          "$ref": "Transform",
+          "name": "Gun Pitch",
+          "instanceID": 1398628,
+          "goName": "Gun Pitch",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "sightRange": 20.0,
+        "turnLoopDef": {
+          "$ref": "SoundDefinition",
+          "name": "turn-loop",
+          "instanceID": 48766
+        },
+        "movementChangeDef": {
+          "$ref": "SoundDefinition",
+          "name": "movement-change-click",
+          "instanceID": 116448
+        },
+        "ambientLoopDef": {
+          "$ref": "SoundDefinition",
+          "name": "ambient-loop",
+          "instanceID": 48990
+        },
+        "focusCameraDef": {
+          "$ref": "SoundDefinition",
+          "name": "focus-camera",
+          "instanceID": 116450
+        },
+        "focusSoundFreqMin": 10.0,
+        "focusSoundFreqMax": 15.0,
+        "peacekeeperToggleSound": {
+          "$ref": "GameObject",
+          "guid": "7461372d0861d38418e386da4e45de1a",
+          "resourcePath": "assets/prefabs/npc/autoturret/effects/targetacquired.prefab",
+          "resourceID": 2620246274
+        },
+        "onlineSound": {
+          "$ref": "GameObject",
+          "guid": "1437bfc8bd00a7140b379c09565549be",
+          "resourcePath": "assets/prefabs/npc/autoturret/effects/online.prefab",
+          "resourceID": 844092340
+        },
+        "offlineSound": {
+          "$ref": "GameObject",
+          "guid": "c33f0529519020e4cbcf3112a05b65d2",
+          "resourcePath": "assets/prefabs/npc/autoturret/effects/offline.prefab",
+          "resourceID": 3111275805
+        },
+        "targetAcquiredEffect": {
+          "$ref": "GameObject",
+          "guid": "7461372d0861d38418e386da4e45de1a",
+          "resourcePath": "assets/prefabs/npc/autoturret/effects/targetacquired.prefab",
+          "resourceID": 2620246274
+        },
+        "targetLostEffect": {
+          "$ref": "GameObject",
+          "guid": "6b9d6d52f7bc68f4e9fc3d5d5b3ae54d",
+          "resourcePath": "assets/prefabs/npc/autoturret/effects/targetlost.prefab",
+          "resourceID": 1932974102
+        },
+        "reloadEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "aimCone": 4.0,
+        "authorizedPlayers": [],
+        "consumptionAmount": 10,
+        "onlyAllowedItem": null,
+        "allowedContents": {
+          "$enum": "ItemContainer+ContentsType",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "maxStackSize": 0,
+        "numSlots": 0,
+        "lootPanelName": "generic",
+        "panelTitle": {
+          "$type": "Translate+Phrase",
+          "token": "loot",
+          "legacyEnglish": "Loot"
+        },
+        "needsBuildingPrivilegeToUse": false,
+        "requireAuthIfNotLocked": false,
+        "isLootable": true,
+        "isMonitorable": false,
+        "dropsLoot": false,
+        "dropLootDestroyPercent": 0.0,
+        "dropFloats": false,
+        "onlyOneUser": false,
+        "supportsChildDeployables": false,
+        "allowSorting": false,
+        "isLockable": false,
+        "openSound": null,
+        "closeSound": null,
+        "debugOrigin": null,
+        "sourceItem": null,
+        "lastResetIndex": 0,
+        "inputs": [],
+        "outputs": [],
+        "ioType": {
+          "$enum": "IOEntity+IOType",
+          "name": "Electric",
+          "value": 0
+        },
+        "cachedOutputsUsed": 0,
+        "lastPassthroughEnergy": -1,
+        "lastEnergy": 0,
+        "currentEnergy": 0,
+        "lastUpdateTime": 0.0,
+        "lastUpdateBlockedFrame": 0,
+        "ensureOutputsUpdated": false,
+        "canBeDemolished": false,
+        "debrisPrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "debrisRotationOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "DebrisPositions": [],
+        "buildingID": 0,
+        "timePlaced": 0.0,
+        "decayTimer": 0.0,
+        "upkeepTimer": 0.0,
+        "upkeep": null,
+        "decay": null,
+        "decayPoints": null,
+        "lastDecayTick": 0.0,
+        "decayVariance": 1.0,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "Immortal",
+          "comments": "",
+          "density": 100.0,
+          "amounts": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 3206051622
+        },
+        "startHealth": 1000.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "autoturret.item",
+            "itemid": -2139580305,
+            "shortname": "autoturret"
+          },
+          "itemCount": 1,
+          "setConditionFromHealth": true,
+          "subtractCondition": 0.33000001311302185,
+          "requireBuildingPrivilege": true,
+          "requireHammer": true,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "autoturret.item",
+            "itemid": -2139580305,
+            "shortname": "autoturret"
+          },
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -0.029999999329447746,
+            "y": 0.5,
+            "z": 0.0
+          },
+          "size": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.2200000286102295
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": false,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "npcvendorturretside",
+          "collision": null,
+          "rootBone": [
+            {
+              "$ref": "Transform",
+              "name": "Eyes",
+              "instanceID": 1400496,
+              "goName": "Eyes",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [
+              {
+                "$ref": "Transform",
+                "name": "NPCVendorTurretBase",
+                "instanceID": 1329648,
+                "goName": "NPCVendorTurretBase",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ]
+          ],
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "npcvendorturretside",
+              "instanceID": 1361112,
+              "goName": "npcvendorturretside",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Eyes",
+              "instanceID": 1400496,
+              "goName": "Eyes",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Base",
+              "instanceID": 1325868,
+              "goName": "Base",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "NPCVendorTurretBase",
+              "instanceID": 1329648,
+              "goName": "NPCVendorTurretBase",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Gun Pitch",
+              "instanceID": 1398628,
+              "goName": "Gun Pitch",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Camera Yaw",
+              "instanceID": 1367644,
+              "goName": "Camera Yaw",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Camera Pitch",
+              "instanceID": 1380578,
+              "goName": "Camera Pitch",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Muzzle",
+              "instanceID": 1362274,
+              "goName": "Muzzle",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Vendor Turret Laser Pointer",
+              "instanceID": 1355904,
+              "goName": "Vendor Turret Laser Pointer",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "npcvendorturretside",
+            "Eyes",
+            "Base",
+            "NPCVendorTurretBase",
+            "Gun Pitch",
+            "Camera Yaw",
+            "Camera Pitch",
+            "Muzzle",
+            "Vendor Turret Laser Pointer"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 4291749291,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$ref": "Model",
+        "name": "npcvendorturretside",
+        "instanceID": 1546372,
+        "goName": "npcvendorturretside",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "children": [
+      {
+        "name": "Eyes",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.69900000095367432,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "Base",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "NPCVendorTurretBase",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "Gun Pitch",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "Camera Yaw",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "Camera Pitch",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": [
+                          {
+                            "name": "Muzzle",
+                            "layer": {
+                              "index": 0,
+                              "name": "Default"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": 0.0,
+                              "y": 0.46799999475479126,
+                              "z": 0.621399998664856
+                            },
+                            "localRotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Vendor Turret Laser Pointer",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "PrefabInformation": [
+      {
+        "$type": "PrefabInformation",
+        "$name": "<destroyed native object>",
+        "prefabID": 4291749291,
+        "hierachyName": "npcvendorturretside",
+        "associatedItemDefinition": null,
+        "title": {
+          "$type": "Translate+Phrase",
+          "token": "travellingvendor.name",
+          "legacyEnglish": "Travelling Vendor\n"
+        },
+        "description": {
+          "$type": "Translate+Phrase",
+          "token": "",
+          "legacyEnglish": ""
+        },
+        "sprite": null,
+        "shownOnDeathScreen": true,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 0.89999997615814209,
+          "y": 0.89999997615814209,
+          "z": 0.89999997615814209
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/npc/travelling vendor/npcvendorturretside.prefab",
+        "instanceID": 1520944,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ]
+  }
+}

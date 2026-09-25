@@ -1,0 +1,1631 @@
+{
+  "prefabID": 195135006,
+  "path": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+  "rootClassChain": [
+    "UnityEngine.GameObject",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "hierarchy": {
+    "name": "ue_jungle_swamp_a",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "MonumentInfo",
+        "$name": "ue_jungle_swamp_a",
+        "Type": {
+          "$enum": "MonumentType",
+          "name": "Oasis",
+          "value": 10
+        },
+        "Tier": {
+          "$enum": "MonumentTier",
+          "name": "-1",
+          "value": -1
+        },
+        "MinWorldSize": 0,
+        "Bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "size": {
+            "x": 120.0,
+            "y": 40.0,
+            "z": 120.0
+          }
+        },
+        "HasNavmesh": false,
+        "IsSafeZone": false,
+        "AllowPatrolHeliCrash": false,
+        "DetachChildren": {
+          "$enum": "MonumentInfo+DetatchChildrenMode",
+          "name": "Default",
+          "value": 0
+        },
+        "WantsDungeonLink": true,
+        "HasDungeonLink": false,
+        "DungeonEntrance": null,
+        "shouldDisplayOnMap": false,
+        "isLayerSpecific": false,
+        "displayPhrase": {
+          "$type": "Translate+Phrase",
+          "token": "ue_jungle_swamp_a",
+          "legacyEnglish": "jungle swamp"
+        },
+        "mapIcon": null,
+        "isDynamic": false
+      },
+      {
+        "$type": "PrefabParameters",
+        "$name": "ue_jungle_swamp_a",
+        "Priority": {
+          "$enum": "PrefabPriority",
+          "name": "Default",
+          "value": 2
+        },
+        "Count": 3.0
+      }
+    ],
+    "children": [
+      {
+        "name": "Anchors",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "LakeWaterBody",
+        "layer": {
+          "index": 4,
+          "name": "Water"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": -8.880000114440918,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 31.0,
+          "y": 5.5215854644775391,
+          "z": 31.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "LakeWaterBody",
+            "colliderType": "Mesh",
+            "convex": true,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "Cylinder",
+              "meshId": "Cylinder_34eb26bd"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Water",
+              "instanceID": 609848
+            }
+          },
+          {
+            "$type": "WaterBody",
+            "$name": "LakeWaterBody",
+            "Type": {
+              "$enum": "WaterBodyType",
+              "name": "Lake",
+              "value": 4
+            },
+            "Renderer": null,
+            "Triggers": [
+              {
+                "$ref": "MeshCollider",
+                "name": "LakeWaterBody",
+                "instanceID": 1644036,
+                "goName": "LakeWaterBody",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "MaterialBlend": null,
+            "WantBlendFactorOverride": false,
+            "BlendFactorOverride": 0.0,
+            "IsOcean": false,
+            "FishingType": {
+              "$enum": "WaterBody+FishingTag",
+              "name": "River, Swamp",
+              "value": 10,
+              "flagNames": [
+                "River",
+                "Swamp"
+              ]
+            }
+          },
+          {
+            "$type": "AddToWaterMap",
+            "$name": "LakeWaterBody",
+            "automaticallyAddTerrainTopology": false
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "Cube",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": -5.179999828338623,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.AI.NavMeshObstacle",
+            "$name": "Cube"
+          }
+        ],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "TerrainPlacement": [
+      {
+        "$type": "Monument",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a",
+        "Radius": 32.400001525878906,
+        "Fade": 12.399999618530273,
+        "AutoCliffSplat": false,
+        "AutoCliffTopology": false,
+        "RemoveExistingTopology": true,
+        "size": {
+          "x": 64.0,
+          "y": 96.0,
+          "z": 64.0
+        },
+        "extents": {
+          "x": 32.0,
+          "y": 48.0,
+          "z": 32.0
+        },
+        "offset": {
+          "x": 0.0,
+          "y": -5.5199999809265137,
+          "z": 0.0
+        },
+        "HeightMap": true,
+        "AlphaMap": true,
+        "WaterMap": true,
+        "SplatMask": {
+          "$enum": "TerrainSplat+Enum",
+          "name": "251",
+          "value": 251
+        },
+        "BiomeMask": {
+          "$enum": "TerrainBiome+Enum",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "TopologyMask": {
+          "$enum": "TerrainTopology+Enum",
+          "name": "Field, Cliff, Beachside, Beach, Forest, Forestside, Decor, Monument, Road, Roadside, Swamp, River, Riverside, Lake, Lakeside, Rail, Railside, Building, Cliffside",
+          "value": 8126075,
+          "flagNames": [
+            "Field",
+            "Cliff",
+            "Beachside",
+            "Beach",
+            "Forest",
+            "Forestside",
+            "Decor",
+            "Monument",
+            "Road",
+            "Roadside",
+            "Swamp",
+            "River",
+            "Riverside",
+            "Lake",
+            "Lakeside",
+            "Rail",
+            "Railside",
+            "Building",
+            "Cliffside"
+          ]
+        },
+        "heightmap": {
+          "$ref": "Texture2D",
+          "guid": "d6afc4e6f2eb93b4ab37029e7e8df4d3",
+          "resourcePath": "assets/scenes/prefabs/unique environments/ue_jungle_swamp/heighttexture.png",
+          "resourceID": 280921198
+        },
+        "splatmap0": {
+          "$ref": "Texture2D",
+          "guid": "396f1366cf77f724294186ca96737379",
+          "resourcePath": "assets/scenes/prefabs/unique environments/ue_jungle_swamp/splattexture0.png",
+          "resourceID": 2851023004
+        },
+        "splatmap1": {
+          "$ref": "Texture2D",
+          "guid": "43c3c3a26141a7e408c7a4741f5fae2c",
+          "resourcePath": "assets/scenes/prefabs/unique environments/ue_jungle_swamp/splattexture1.png",
+          "resourceID": 3582135658
+        },
+        "alphamap": {
+          "$ref": "Texture2D",
+          "guid": "651160927517b304b88e5cf7032bd80b",
+          "resourcePath": "assets/scenes/prefabs/unique environments/ue_jungle_swamp/alphatexture.png",
+          "resourceID": 1902048752
+        },
+        "biomemap": {
+          "$ref": "Texture2D",
+          "guid": "182471476af459643a6c30ad0cb87d39",
+          "resourcePath": "assets/scenes/prefabs/unique environments/ue_jungle_swamp/biometexture.png",
+          "resourceID": 2829991936
+        },
+        "topologymap": {
+          "$ref": "Texture2D",
+          "guid": "7f9b2eb2acab43a4db571350fa5ab250",
+          "resourcePath": "assets/scenes/prefabs/unique environments/ue_jungle_swamp/topologytexture.png",
+          "resourceID": 853364156
+        },
+        "watermap": {
+          "$ref": "Texture2D",
+          "guid": "8a755c3e021ca69459e0e39ad478f49a",
+          "resourcePath": "assets/scenes/prefabs/unique environments/ue_oasis_a/watertexture.png",
+          "resourceID": 3431588072
+        },
+        "blendmap": {
+          "$ref": "Texture2D",
+          "guid": "4516fb03c1a455d46b4a1f03ab8d62f9",
+          "resourcePath": "assets/scenes/prefabs/unique environments/ue_jungle_swamp/blendtexture.png",
+          "resourceID": 172412200
+        },
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1665612,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "DecorComponent": [
+      {
+        "$type": "DecorRotate",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a",
+        "MinRotation": {
+          "x": 0.0,
+          "y": -180.0,
+          "z": 0.0
+        },
+        "MaxRotation": {
+          "x": 0.0,
+          "y": 180.0,
+          "z": 0.0
+        },
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1670668,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "TerrainAnchor": [
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(-38.04, -6.04)",
+        "Extents": 41.179042816162109,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -38.040000915527344,
+          "y": 0.0,
+          "z": -6.0400009155273438
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -38.040000915527344,
+          "y": 0.0,
+          "z": -6.0400009155273438
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1676150,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(-38.04, 9.96)",
+        "Extents": 39.536712646484375,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -38.040000915527344,
+          "y": 0.0,
+          "z": 9.9599990844726563
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -38.040000915527344,
+          "y": 0.0,
+          "z": 9.9599990844726563
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1661436,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(-22.04, -22.04)",
+        "Extents": 56.15435791015625,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -22.040000915527344,
+          "y": 0.0,
+          "z": -22.040000915527344
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -22.040000915527344,
+          "y": 0.0,
+          "z": -22.040000915527344
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1658574,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(-22.04, -6.04)",
+        "Extents": 64.0,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -22.040000915527344,
+          "y": 0.0,
+          "z": -6.0400009155273438
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -22.040000915527344,
+          "y": 0.0,
+          "z": -6.0400009155273438
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1652284,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(-22.04, 9.96)",
+        "Extents": 64.0,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -22.040000915527344,
+          "y": 0.0,
+          "z": 9.9599990844726563
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -22.040000915527344,
+          "y": 0.0,
+          "z": 9.9599990844726563
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1675826,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(-22.04, 25.96)",
+        "Extents": 50.274398803710938,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -22.040000915527344,
+          "y": 0.0,
+          "z": 25.959999084472656
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -22.040000915527344,
+          "y": 0.0,
+          "z": 25.959999084472656
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1668590,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(-6.04, -38.04)",
+        "Extents": 41.179042816162109,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -6.0400009155273438,
+          "y": 0.0,
+          "z": -38.040000915527344
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -6.0400009155273438,
+          "y": 0.0,
+          "z": -38.040000915527344
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1669200,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(-6.04, -22.04)",
+        "Extents": 64.0,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -6.0400009155273438,
+          "y": 0.0,
+          "z": -22.040000915527344
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -6.0400009155273438,
+          "y": 0.0,
+          "z": -22.040000915527344
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1651598,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(-6.04, -6.04)",
+        "Extents": 64.0,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -6.0400009155273438,
+          "y": 0.0,
+          "z": -6.0400009155273438
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -6.0400009155273438,
+          "y": 0.0,
+          "z": -6.0400009155273438
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1660714,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(-6.04, 9.96)",
+        "Extents": 64.0,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -6.0400009155273438,
+          "y": 0.0,
+          "z": 9.9599990844726563
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -6.0400009155273438,
+          "y": 0.0,
+          "z": 9.9599990844726563
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1667780,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(-6.04, 25.96)",
+        "Extents": 64.0,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -6.0400009155273438,
+          "y": 0.0,
+          "z": 25.959999084472656
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -6.0400009155273438,
+          "y": 0.0,
+          "z": 25.959999084472656
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1674814,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(-6.04, 41.96)",
+        "Extents": 33.279003143310547,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -6.0400009155273438,
+          "y": 0.0,
+          "z": 41.959999084472656
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -6.0400009155273438,
+          "y": 0.0,
+          "z": 41.959999084472656
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1664192,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(9.96, -38.04)",
+        "Extents": 39.536712646484375,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 9.9599990844726563,
+          "y": 0.0,
+          "z": -38.040000915527344
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 9.9599990844726563,
+          "y": 0.0,
+          "z": -38.040000915527344
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1654762,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(9.96, -22.04)",
+        "Extents": 64.0,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 9.9599990844726563,
+          "y": 0.0,
+          "z": -22.040000915527344
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 9.9599990844726563,
+          "y": 0.0,
+          "z": -22.040000915527344
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1662924,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(9.96, -6.04)",
+        "Extents": 64.0,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 9.9599990844726563,
+          "y": 0.0,
+          "z": -6.0400009155273438
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 9.9599990844726563,
+          "y": 0.0,
+          "z": -6.0400009155273438
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1667886,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(9.96, 9.96)",
+        "Extents": 64.0,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 9.9599990844726563,
+          "y": 0.0,
+          "z": 9.9599990844726563
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 9.9599990844726563,
+          "y": 0.0,
+          "z": 9.9599990844726563
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1667130,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(9.96, 25.96)",
+        "Extents": 63.011276245117188,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 9.9599990844726563,
+          "y": 0.0,
+          "z": 25.959999084472656
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 9.9599990844726563,
+          "y": 0.0,
+          "z": 25.959999084472656
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1654156,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(25.96, -22.04)",
+        "Extents": 50.274398803710938,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 25.959999084472656,
+          "y": 0.0,
+          "z": -22.040000915527344
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 25.959999084472656,
+          "y": 0.0,
+          "z": -22.040000915527344
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1672050,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(25.96, -6.04)",
+        "Extents": 64.0,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 25.959999084472656,
+          "y": 0.0,
+          "z": -6.0400009155273438
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 25.959999084472656,
+          "y": 0.0,
+          "z": -6.0400009155273438
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1655712,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(25.96, 9.96)",
+        "Extents": 63.011276245117188,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 25.959999084472656,
+          "y": 0.0,
+          "z": 9.9599990844726563
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 25.959999084472656,
+          "y": 0.0,
+          "z": 9.9599990844726563
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1655908,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(25.96, 25.96)",
+        "Extents": 44.855068206787109,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 25.959999084472656,
+          "y": 0.0,
+          "z": 25.959999084472656
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 25.959999084472656,
+          "y": 0.0,
+          "z": 25.959999084472656
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1654174,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 195135006,
+        "hierachyName": "ue_jungle_swamp_a/Anchors/(41.96, -6.04)",
+        "Extents": 33.279003143310547,
+        "Offset": 0.0,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 41.959999084472656,
+          "y": 0.0,
+          "z": -6.0400009155273438
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 41.959999084472656,
+          "y": 0.0,
+          "z": -6.0400009155273438
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/bundled/prefabs/autospawn/unique_environment/jungle/ue_jungle_swamp_a.prefab",
+        "instanceID": 1664786,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ]
+  }
+}

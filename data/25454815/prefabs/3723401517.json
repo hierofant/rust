@@ -1,0 +1,801 @@
+{
+  "prefabID": 3723401517,
+  "path": "assets/prefabs/building/swinging.vine/vineswingmountable.prefab",
+  "rootClassChain": [
+    "VineMountable",
+    "BaseMountable",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 1.4901161193847656E-08,
+      "y": 0.0,
+      "z": -2.9802322387695313E-08
+    },
+    "size": {
+      "x": 0.33066192269325256,
+      "y": 2.0,
+      "z": 0.33066198229789734
+    }
+  },
+  "hierarchy": {
+    "name": "vineswingmountable",
+    "layer": {
+      "index": 27,
+      "name": "Vehicle Large"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "VineMountable",
+        "$name": "vineswingmountable",
+        "moveSpeed": 0.375,
+        "rotationSpeed": 0.40000000596046448,
+        "descendSpeed": 5.0,
+        "WorldSpaceAnchorPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "currentLocation": {
+          "$type": "VineMountable+VinePoint",
+          "TreeEntity": {
+            "$type": "EntityRef`1[[VineSwingingTree, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+          },
+          "PointIndex": 0
+        },
+        "VineViewModel": null,
+        "DismountViewmodelHoldTime": 0.5,
+        "VineWorldModel": {
+          "$ref": "GameObject",
+          "guid": "b1f9f436ff19ed547aa75a768e8bca85",
+          "resourcePath": "assets/prefabs/building/swinging.vine/vinevisual_linerenderer.prefab",
+          "resourceID": 207264308
+        },
+        "VineDirectionArrows": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "ThisCollider": {
+          "$type": "UnityEngine.CapsuleCollider",
+          "$name": "vineswingmountable",
+          "colliderType": "Capsule",
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "radius": 0.25,
+          "height": 2.0,
+          "direction": 1,
+          "isTrigger": true,
+          "enabled": true
+        },
+        "mountSyncType": {
+          "$enum": "BaseMountable+MountSyncType",
+          "name": "RepositionPerFrame",
+          "value": 0
+        },
+        "eyePositionOverride": [],
+        "eyeCenterOverride": {
+          "$ref": "Transform",
+          "name": "EyeOverride",
+          "instanceID": 1394740,
+          "goName": "EyeOverride",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "overrideEyesRotation": false,
+        "pitchClamp": {
+          "x": -40.0,
+          "y": 25.0
+        },
+        "yawClamp": {
+          "x": -40.0,
+          "y": 40.0
+        },
+        "canWieldItems": false,
+        "relativeViewAngles": true,
+        "disableLegsWhenMounted": false,
+        "disableBreastCensorshipWhenMounted": false,
+        "AllowForceMountWhenRestrained": false,
+        "mountChaining": true,
+        "mountAnchor": [],
+        "mountLOSVertOffset": 0.5,
+        "mountedAnimationSpeed": 0.0,
+        "mountPose": {
+          "$enum": "PlayerModel+MountPoses",
+          "name": "VineSwinging",
+          "value": 34
+        },
+        "animateVehicleAim360": false,
+        "maxMountDistance": 1.5,
+        "dismountPositions": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        "checkPlayerLosOnMount": false,
+        "disableMeshCullingForPlayers": false,
+        "allowHeadLook": false,
+        "ignoreVehicleParent": false,
+        "legacyDismount": false,
+        "wearWhileMounted": null,
+        "modifiesPlayerCollider": false,
+        "customPlayerCollider": {
+          "$type": "BasePlayer+CapsuleColliderInfo",
+          "height": 0.0,
+          "radius": 0.0,
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "clippingCheckRadius": 0.40000000596046448,
+        "clippingAndVisChecks": false,
+        "clippingChecksLocation": {
+          "$enum": "BaseMountable+ClippingCheckLocation",
+          "name": "HeadOnly",
+          "value": 0
+        },
+        "mountSoundDef": null,
+        "swapSoundDef": null,
+        "dismountSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "vine-dismount",
+          "instanceID": 489422
+        },
+        "allowFootstepEffects": false,
+        "dismountHoldType": {
+          "$enum": "BaseMountable+DismountConvarType",
+          "name": "Misc",
+          "value": 0
+        },
+        "mountTimeStatType": {
+          "$enum": "BaseMountable+MountStatType",
+          "name": "None",
+          "value": 0
+        },
+        "allowedGestures": {
+          "$enum": "BaseMountable+MountGestureType",
+          "name": "None",
+          "value": 0
+        },
+        "canDrinkWhileMounted": false,
+        "allowSleeperMounting": false,
+        "shouldShowHudHealth": false,
+        "blockLooting": false,
+        "animateClothInLocalSpace": true,
+        "protectsFromAnimals": true,
+        "MountedCameraMode": {
+          "$enum": "BasePlayer+CameraMode",
+          "name": "FirstPerson",
+          "value": 0
+        },
+        "rigidBody": null,
+        "wantsBoundaryRepelCheck": false,
+        "isMobile": false,
+        "SideLeanAmount": 0.20000000298023224,
+        "_mounted": null,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "ImmortalLowDensity",
+          "comments": "",
+          "density": 0.0,
+          "amounts": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 1983969406
+        },
+        "startHealth": 10000.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": false,
+          "itemTarget": null,
+          "itemCount": 0,
+          "setConditionFromHealth": false,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": false,
+          "requireHammer": false,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": false,
+          "itemTarget": null,
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": false,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 1.4901161193847656E-08,
+            "y": 0.0,
+            "z": -2.9802322387695313E-08
+          },
+          "size": {
+            "x": 0.33066192269325256,
+            "y": 2.0,
+            "z": 0.33066198229789734
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 3723401517,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Small",
+          "value": 0
+        },
+        "net": null
+      },
+      {
+        "$ref": "CapsuleCollider",
+        "name": "vineswingmountable",
+        "instanceID": 1476736,
+        "goName": "vineswingmountable",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$type": "EntityCollisionMessage",
+        "$name": "vineswingmountable",
+        "_baseEntity": null
+      }
+    ],
+    "children": [
+      {
+        "name": "MountPoint",
+        "layer": {
+          "index": 27,
+          "name": "Vehicle Large"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 0.25
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "EyeOverride",
+        "layer": {
+          "index": 27,
+          "name": "Vehicle Large"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 1.3300000429153442,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "TopLinePos",
+        "layer": {
+          "index": 27,
+          "name": "Vehicle Large"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 1.6299999952316284,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "BotLinePos",
+        "layer": {
+          "index": 27,
+          "name": "Vehicle Large"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "InteractCollider",
+        "layer": {
+          "index": 14,
+          "name": "Game Trace"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "InteractCollider",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "size": {
+              "x": 0.5,
+              "y": 0.800000011920929,
+              "z": 0.5
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "DismountBack",
+        "layer": {
+          "index": 15,
+          "name": "Vehicle World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": -1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "DismountCentre",
+        "layer": {
+          "index": 15,
+          "name": "Vehicle World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "DismountCentreHigh",
+        "layer": {
+          "index": 15,
+          "name": "Vehicle World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "DismountLeft",
+        "layer": {
+          "index": 15,
+          "name": "Vehicle World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -1.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "DismountRight",
+        "layer": {
+          "index": 15,
+          "name": "Vehicle World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 1.0,
+          "y": -1.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "DismountBackHigh",
+        "layer": {
+          "index": 15,
+          "name": "Vehicle World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "DismountLeftHigh",
+        "layer": {
+          "index": 15,
+          "name": "Vehicle World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -1.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "DismountRightHigh",
+        "layer": {
+          "index": 15,
+          "name": "Vehicle World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 1.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {}
+}

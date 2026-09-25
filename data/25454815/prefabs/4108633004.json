@@ -1,0 +1,1609 @@
+{
+  "prefabID": 4108633004,
+  "path": "assets/prefabs/deployable/sculptures/rocksculpture/sculpture.rock.deployed.prefab",
+  "rootClassChain": [
+    "BaseSculpture",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.0060551166534423828,
+      "y": 1.0,
+      "z": -0.0067092776298522949
+    },
+    "size": {
+      "x": 1.5409910678863525,
+      "y": 2.0,
+      "z": 1.5577325820922852
+    }
+  },
+  "hierarchy": {
+    "name": "sculpture.rock.deployed",
+    "layer": {
+      "index": 8,
+      "name": "Deployed"
+    },
+    "tag": "Usable Secondary",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "BaseSculpture",
+        "$name": "sculpture.rock.deployed",
+        "targetMesh": null,
+        "sharedMeshCollider": {
+          "$type": "UnityEngine.MeshCollider",
+          "$name": "Block",
+          "colliderType": "Mesh",
+          "convex": false,
+          "isTrigger": false,
+          "enabled": true,
+          "physicMaterial": {
+            "$ref": "PhysicsMaterial",
+            "name": "Concrete",
+            "instanceID": 609832
+          }
+        },
+        "meshLOD": null,
+        "clientBlockRenderer": null,
+        "carvingDamageType": {
+          "$enum": "Rust.DamageType",
+          "name": "Stab",
+          "value": 15
+        },
+        "gridResolution": {
+          "x": 30,
+          "y": 36,
+          "z": 30
+        },
+        "gridOffset": {
+          "x": 0.0,
+          "y": -18.200000762939453,
+          "z": 0.0
+        },
+        "gridScale": 0.03125,
+        "SDFSet": {
+          "$type": "Facepunch.MarchingCubes.SDFSet",
+          "$name": "SDFSet",
+          "TargetRoot": {
+            "$ref": "GameObject",
+            "name": "SDFSet",
+            "instanceID": 1107338
+          },
+          "ChunkPrefab": {
+            "$ref": "GameObject",
+            "guid": "0527ad6239bc6da4eb8b124d2a5b942d",
+            "resourcePath": "assets/prefabs/deployable/sculptures/shared/sdfchunk.prefab",
+            "resourceID": 1578392436
+          },
+          "ChunkScale": 0.03125,
+          "iso": 0.0,
+          "Chunks": null,
+          "CensorChunks": null
+        },
+        "playerPushTrigger": {
+          "$type": "TriggerPlayerForce",
+          "$name": "PlayerPushTrigger",
+          "triggerCollider": {
+            "$type": "UnityEngine.CapsuleCollider",
+            "$name": "PlayerPushTrigger",
+            "colliderType": "Capsule",
+            "center": {
+              "x": 0.0,
+              "y": 0.50184774398803711,
+              "z": 0.0
+            },
+            "radius": 0.30199998617172241,
+            "height": 0.97996950149536133,
+            "direction": 1,
+            "isTrigger": true,
+            "enabled": true
+          },
+          "pushVelocity": 0.25,
+          "requireUpAxis": false,
+          "pushDown": false,
+          "interestLayers": 131072,
+          "contents": null,
+          "entityContents": null,
+          "OnEntityEnterTrigger": null,
+          "OnEntityLeaveTrigger": null
+        },
+        "playerPushCollider": {
+          "$ref": "CapsuleCollider",
+          "name": "PlayerPushTrigger",
+          "instanceID": 1475772,
+          "goName": "PlayerPushTrigger",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "meshPaintDialogueRef": {
+          "$ref": "GameObject",
+          "guid": "528aed8b7faf2014eacb404fabf60ec9",
+          "resourcePath": "assets/bundled/prefabs/ui/dialogs/ui.dialog.sign.update.sculpture.prefab",
+          "resourceID": 2941209537
+        },
+        "BasePlate": {
+          "$ref": "GameObject",
+          "guid": "131565287f0ca284c93c0903eb440288",
+          "resourcePath": "assets/prefabs/deployable/sculptures/rocksculpture/sculpture.rock.pedestal.prefab",
+          "resourceID": 2646685049
+        },
+        "meshPaintableSources": [
+          null
+        ],
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "StoneSculpture",
+          "comments": "",
+          "density": 0.20000000298023224,
+          "amounts": [
+            0.949999988079071,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.949999988079071,
+            0.699999988079071,
+            0.699999988079071,
+            0.0,
+            1.0,
+            1.0,
+            0.699999988079071,
+            -0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 3298534469
+        },
+        "startHealth": 100.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "sculpture.rock.item",
+            "itemid": 1852905808,
+            "shortname": "sculpture.rock"
+          },
+          "itemCount": 1,
+          "setConditionFromHealth": true,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": true,
+          "requireHammer": true,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "sculpture.rock.item",
+            "itemid": 1852905808,
+            "shortname": "sculpture.rock"
+          },
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.0060551166534423828,
+            "y": 1.0,
+            "z": -0.0067092776298522949
+          },
+          "size": {
+            "x": 1.5409910678863525,
+            "y": 2.0,
+            "z": 1.5577325820922852
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 4108633004,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$type": "DestroyOnGroundMissing",
+        "$name": "sculpture.rock.deployed"
+      },
+      {
+        "$type": "GroundWatch",
+        "$name": "sculpture.rock.deployed",
+        "groundPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "layers": 2097408,
+        "radius": 0.10000000149011612,
+        "needBuildingBlock": false,
+        "needOnlyOneAreaCheckValid": false,
+        "whitelist": [],
+        "fails": 0,
+        "_baseEntity": null
+      },
+      {
+        "$type": "UnityEngine.MeshCollider",
+        "$name": "sculpture.rock.deployed",
+        "colliderType": "Mesh",
+        "convex": false,
+        "sharedMesh": {
+          "$ref": "Mesh",
+          "name": "rock_sculpture_COL",
+          "meshId": "rock_sculpture_COL_caeb2e41"
+        },
+        "isTrigger": false,
+        "enabled": true,
+        "physicMaterial": {
+          "$ref": "PhysicsMaterial",
+          "name": "Wood",
+          "instanceID": 609850
+        }
+      }
+    ],
+    "children": [
+      {
+        "name": "Block",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Usable Primary",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.73799997568130493,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "MeshCollider",
+            "name": "Block",
+            "instanceID": 1455694,
+            "goName": "Block",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": [
+          {
+            "name": "SDFSet",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "SDFSet",
+                "name": "SDFSet",
+                "instanceID": 1545208,
+                "goName": "SDFSet",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "PlayerPushTrigger",
+            "layer": {
+              "index": 18,
+              "name": "Trigger"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "TriggerPlayerForce",
+                "name": "PlayerPushTrigger",
+                "instanceID": 1536506,
+                "goName": "PlayerPushTrigger",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              {
+                "$ref": "CapsuleCollider",
+                "name": "PlayerPushTrigger",
+                "instanceID": 1475772,
+                "goName": "PlayerPushTrigger",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "sockets",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "free",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.7071068286895752
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "building_blocker",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "building_blocker",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "size": {
+              "x": 1.5199999809265137,
+              "y": 1.9800000190734863,
+              "z": 1.5199999809265137
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "rock_sculpture_pedestal",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -0.078390002250671387,
+          "y": 0.71248000860214233,
+          "z": 0.75999999046325684
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Construction": [
+      {
+        "$type": "Construction",
+        "$name": "<destroyed native object>",
+        "prefabID": 4108633004,
+        "hierachyName": "sculpture.rock.deployed",
+        "info": {
+          "$type": "BaseEntity+Menu+Option",
+          "name": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "description": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "icon": null,
+          "order": 0,
+          "usableWhileWounded": false
+        },
+        "canBypassBuildingPermission": false,
+        "showBuildingBlockedPreview": true,
+        "canPlaceOnRoads": false,
+        "canRotateBeforePlacement": true,
+        "canRotateAfterPlacement": true,
+        "canBeDeployedInDeepSeaWater": false,
+        "checkVolumeOnRotate": false,
+        "checkVolumeOnUpgrade": false,
+        "canPlaceAtMaxDistance": false,
+        "placeOnWater": false,
+        "overridePlacementLayer": false,
+        "overridedPlacementLayer": 0,
+        "additionalPlacementLayer": 0,
+        "rotationAmount": {
+          "x": 0.0,
+          "y": 90.0,
+          "z": 0.0
+        },
+        "applyStartingRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "deployOffset": null,
+        "enforceLineOfSightCheckAgainstParentEntity": false,
+        "canSnap": false,
+        "forceY": false,
+        "forceYValue": 0.0,
+        "forceYToOceanLevel": false,
+        "OceanLevelYOffset": 0.0,
+        "holdToPlaceDuration": 0.0,
+        "canFloodFillSockets": false,
+        "alternativeLOSChecks": false,
+        "alternativeLOSPositions": [],
+        "canUseLastValidPosition": true,
+        "healthMultiplier": 1.0,
+        "costMultiplier": 1.0,
+        "maxplaceDistance": 4.0,
+        "minPlaceDistance": 1.0,
+        "guideMesh": null,
+        "guideMeshMaterial": [],
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "hideBuildingPlannerViewmodel": false,
+        "allSockets": [
+          {
+            "$type": "Socket_Free",
+            "$name": "<destroyed native object>",
+            "prefabID": 4108633004,
+            "hierachyName": "sculpture.rock.deployed/sockets/free",
+            "idealPlacementNormal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "useTargetNormal": true,
+            "snapToTargetProvidedRotations": false,
+            "blendAimAngle": true,
+            "male": true,
+            "maleDummy": false,
+            "female": false,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": false,
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.7071068286895752
+            },
+            "selectSize": {
+              "x": 2.0,
+              "y": 0.10000000149011612,
+              "z": 2.0
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            },
+            "socketName": "sculpture.rock.deployed/sockets/free",
+            "socketMods": [
+              {
+                "$type": "SocketMod_AngleCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 4108633004,
+                "hierachyName": "sculpture.rock.deployed/sockets/free/angle",
+                "wantsAngle": true,
+                "worldNormal": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0
+                },
+                "withinDegrees": 45.0,
+                "usePlacementNormal": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 1.0000001192092896,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/sculptures/rocksculpture/sculpture.rock.deployed.prefab",
+                "instanceID": 1531504,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 4108633004,
+                "hierachyName": "sculpture.rock.deployed/sockets/free/inside",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 2097409,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 1.0000001192092896,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/sculptures/rocksculpture/sculpture.rock.deployed.prefab",
+                "instanceID": 1558362,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 4108633004,
+                "hierachyName": "sculpture.rock.deployed/sockets/free/inside (1)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 2097409,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.60000002384185791,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 1.0000001192092896,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.60000002384185791,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/sculptures/rocksculpture/sculpture.rock.deployed.prefab",
+                "instanceID": 1571506,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 4108633004,
+                "hierachyName": "sculpture.rock.deployed/sockets/free/inside (2)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 2097409,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -0.60000002384185791,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 1.0000001192092896,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -0.60000002384185791,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/sculptures/rocksculpture/sculpture.rock.deployed.prefab",
+                "instanceID": 1544540,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 4108633004,
+                "hierachyName": "sculpture.rock.deployed/sockets/free/inside (3)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 2097409,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": -5.9604644775390625E-08,
+                  "z": -0.60000008344650269
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 1.0000001192092896,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.60000002384185791,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/sculptures/rocksculpture/sculpture.rock.deployed.prefab",
+                "instanceID": 1522716,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 4108633004,
+                "hierachyName": "sculpture.rock.deployed/sockets/free/inside (4)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 2097409,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 5.9604644775390625E-08,
+                  "z": 0.60000008344650269
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 1.0000001192092896,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": -0.60000002384185791,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/sculptures/rocksculpture/sculpture.rock.deployed.prefab",
+                "instanceID": 1580756,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_InWater",
+                "$name": "<destroyed native object>",
+                "prefabID": 4108633004,
+                "hierachyName": "sculpture.rock.deployed/sockets/free/notInWater",
+                "wantsInWater": false,
+                "excludeArtificialWater": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 1.0000001192092896,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/sculptures/rocksculpture/sculpture.rock.deployed.prefab",
+                "instanceID": 1549804,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              }
+            ],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "worldRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.7071068286895752
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": 1.0000001192092896,
+              "z": -1.1920928955078125E-07
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.7071068286895752
+            },
+            "fullName": "assets/prefabs/deployable/sculptures/rocksculpture/sculpture.rock.deployed.prefab",
+            "instanceID": 1579292,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          }
+        ],
+        "allProximities": [],
+        "defaultGrade": null,
+        "socketHandle": null,
+        "bounds": {
+          "center": {
+            "x": 0.0060551166534423828,
+            "y": 1.0,
+            "z": -0.0067092776298522949
+          },
+          "size": {
+            "x": 1.5409910678863525,
+            "y": 2.0,
+            "z": 1.5577325820922852
+          }
+        },
+        "isBuildingPrivilege": false,
+        "isSleepingBag": false,
+        "grades": [],
+        "deployable": {
+          "$type": "Deployable",
+          "$name": "<destroyed native object>",
+          "prefabID": 4108633004,
+          "hierachyName": "sculpture.rock.deployed",
+          "guidePrefab": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "guideMesh": null,
+          "guideMeshScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "overrideRotation": false,
+          "guideMeshOrientation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "guideMeshPositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "moveGuideTowardsCamera": true,
+          "guideLights": true,
+          "wantsInstanceData": false,
+          "copyInventoryFromItem": false,
+          "setSocketParent": false,
+          "toSlot": false,
+          "slot": {
+            "$enum": "BaseEntity+Slot",
+            "name": "Lock",
+            "value": 0
+          },
+          "placeEffect": {
+            "$ref": "GameObject",
+            "guid": "7d09e6443213744f2b45b13f23dbce03",
+            "resourcePath": "assets/prefabs/deployable/tool cupboard/effects/tool-cupboard-deploy.prefab",
+            "resourceID": 2780470567
+          },
+          "guideTargets": [],
+          "bounds": {
+            "center": {
+              "x": 0.0060551166534423828,
+              "y": 1.0,
+              "z": -0.0067092776298522949
+            },
+            "size": {
+              "x": 1.5409910678863525,
+              "y": 2.0,
+              "z": 1.5577325820922852
+            }
+          },
+          "worldPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "worldRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "worldForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "localScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "localRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "fullName": "assets/prefabs/deployable/sculptures/rocksculpture/sculpture.rock.deployed.prefab",
+          "instanceID": 1490262,
+          "prefabAttribute": {
+            "$ref": "Library",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "gameManager": {
+            "$ref": "GameManager",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "isServer": true
+        },
+        "placeholder": null,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/sculptures/rocksculpture/sculpture.rock.deployed.prefab",
+        "instanceID": 1490264,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Deployable": [
+      {
+        "$ref": "Deployable",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "DeployVolume": [
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 4108633004,
+        "hierachyName": "sculpture.rock.deployed",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "size": {
+            "x": 1.5199999809265137,
+            "y": 1.9800000190734863,
+            "z": 1.5199999809265137
+          }
+        },
+        "layers": 539099136,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/sculptures/rocksculpture/sculpture.rock.deployed.prefab",
+        "instanceID": 1543192,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Socket_Base": [
+      {
+        "$ref": "Socket_Free",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "SocketMod": [
+      {
+        "$ref": "SocketMod_AngleCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_InWater",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ]
+  }
+}

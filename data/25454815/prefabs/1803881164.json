@@ -1,0 +1,675 @@
+{
+  "prefabID": 1803881164,
+  "path": "assets/content/vehicles/modularcar/subents/modular_car_2mod_fuel_tank.prefab",
+  "rootClassChain": [
+    "LiquidContainerCrude",
+    "LiquidContainer",
+    "ContainerIOEntity",
+    "IOEntity",
+    "DecayEntity",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.0,
+      "y": 0.89999997615814209,
+      "z": -0.85000002384185791
+    },
+    "size": {
+      "x": 1.6000000238418579,
+      "y": 1.3999999761581421,
+      "z": 2.5999999046325684
+    }
+  },
+  "hierarchy": {
+    "name": "modular_car_2mod_fuel_tank",
+    "layer": {
+      "index": 13,
+      "name": "Vehicle Detailed"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "LiquidContainerCrude",
+        "$name": "modular_car_2mod_fuel_tank",
+        "defaultLiquid": {
+          "$ref": "ItemDefinition",
+          "name": "water.item",
+          "itemid": -1779180711,
+          "shortname": "water"
+        },
+        "startingAmount": 0,
+        "autofillOutputs": true,
+        "autofillTickRate": 1.0,
+        "autofillTickAmount": 500,
+        "maxOutputFlow": 500,
+        "prioritizeDrinkMenuOption": false,
+        "ValidItems": [
+          {
+            "$ref": "ItemDefinition",
+            "name": "water.item",
+            "itemid": -1779180711,
+            "shortname": "water"
+          },
+          {
+            "$ref": "ItemDefinition",
+            "name": "salt_water.item",
+            "itemid": -277057363,
+            "shortname": "water.salt"
+          },
+          {
+            "$ref": "ItemDefinition",
+            "name": "radioactive_water.item",
+            "itemid": 1811780502,
+            "shortname": "water.radioactive"
+          },
+          {
+            "$ref": "ItemDefinition",
+            "name": "crude_oil.item",
+            "itemid": -321733511,
+            "shortname": "crude.oil"
+          }
+        ],
+        "onlyAllowedItem": null,
+        "allowedContents": {
+          "$enum": "ItemContainer+ContentsType",
+          "name": "-1",
+          "value": -1,
+          "flagNames": [
+            "Generic",
+            "Liquid"
+          ]
+        },
+        "maxStackSize": 200000,
+        "numSlots": 1,
+        "lootPanelName": "watercatcher",
+        "panelTitle": {
+          "$type": "Translate+Phrase",
+          "token": "loot",
+          "legacyEnglish": "Loot"
+        },
+        "needsBuildingPrivilegeToUse": false,
+        "requireAuthIfNotLocked": false,
+        "isLootable": false,
+        "isMonitorable": false,
+        "dropsLoot": false,
+        "dropLootDestroyPercent": 0.0,
+        "dropFloats": false,
+        "onlyOneUser": false,
+        "supportsChildDeployables": false,
+        "allowSorting": false,
+        "isLockable": false,
+        "openSound": {
+          "$ref": "SoundDefinition",
+          "name": "workcart-open-fuel",
+          "instanceID": 483662
+        },
+        "closeSound": {
+          "$ref": "SoundDefinition",
+          "name": "workcart-close-fuel",
+          "instanceID": 87396
+        },
+        "debugOrigin": [
+          []
+        ],
+        "sourceItem": {
+          "$ref": "ItemDefinition",
+          "name": "2module_fuel_tank.item",
+          "itemid": 1186655046,
+          "shortname": "vehicle.2mod.fuel.tank"
+        },
+        "lastResetIndex": 0,
+        "inputs": [
+          {
+            "$type": "IOEntity+IOSlot",
+            "niceName": "Fluid In",
+            "type": {
+              "$enum": "IOEntity+IOType",
+              "name": "Fluidic",
+              "value": 1
+            },
+            "connectedTo": {
+              "$type": "IOEntity+IORef",
+              "entityRef": {
+                "$type": "EntityRef"
+              },
+              "ioEnt": null
+            },
+            "connectedToSlot": 0,
+            "importance": {
+              "$enum": "IOHandlePriority",
+              "name": "Normal",
+              "value": 0
+            },
+            "ArrowOffset": 0.0,
+            "linePoints": [],
+            "lineAnchors": null,
+            "slackLevels": [],
+            "worldSpaceLineEndRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "line": null,
+            "handlePosition": {
+              "x": 0.81099998950958252,
+              "y": 0.328000009059906,
+              "z": -0.71299999952316284
+            },
+            "handleDirection": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rootConnectionsOnly": false,
+            "mainPowerSlot": true,
+            "wireColour": {
+              "$enum": "WireTool+WireColour",
+              "name": "Gray",
+              "value": 0
+            },
+            "lineThickness": 0.0
+          },
+          {
+            "$type": "IOEntity+IOSlot",
+            "niceName": "Fluid In",
+            "type": {
+              "$enum": "IOEntity+IOType",
+              "name": "Fluidic",
+              "value": 1
+            },
+            "connectedTo": {
+              "$type": "IOEntity+IORef",
+              "entityRef": {
+                "$type": "EntityRef"
+              },
+              "ioEnt": null
+            },
+            "connectedToSlot": 0,
+            "importance": {
+              "$enum": "IOHandlePriority",
+              "name": "Normal",
+              "value": 0
+            },
+            "ArrowOffset": 0.0,
+            "linePoints": [],
+            "lineAnchors": null,
+            "slackLevels": [],
+            "worldSpaceLineEndRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "line": null,
+            "handlePosition": {
+              "x": -0.81099998950958252,
+              "y": 0.328000009059906,
+              "z": -0.71299999952316284
+            },
+            "handleDirection": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rootConnectionsOnly": false,
+            "mainPowerSlot": true,
+            "wireColour": {
+              "$enum": "WireTool+WireColour",
+              "name": "Gray",
+              "value": 0
+            },
+            "lineThickness": 0.0
+          }
+        ],
+        "outputs": [
+          {
+            "$type": "IOEntity+IOSlot",
+            "niceName": "Fluid Out",
+            "type": {
+              "$enum": "IOEntity+IOType",
+              "name": "Fluidic",
+              "value": 1
+            },
+            "connectedTo": {
+              "$type": "IOEntity+IORef",
+              "entityRef": {
+                "$type": "EntityRef"
+              },
+              "ioEnt": null
+            },
+            "connectedToSlot": 0,
+            "importance": {
+              "$enum": "IOHandlePriority",
+              "name": "Normal",
+              "value": 0
+            },
+            "ArrowOffset": 0.0,
+            "linePoints": [],
+            "lineAnchors": null,
+            "slackLevels": [],
+            "worldSpaceLineEndRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "line": null,
+            "handlePosition": {
+              "x": 0.81099998950958252,
+              "y": 0.328000009059906,
+              "z": -1.0140000581741333
+            },
+            "handleDirection": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rootConnectionsOnly": false,
+            "mainPowerSlot": false,
+            "wireColour": {
+              "$enum": "WireTool+WireColour",
+              "name": "Gray",
+              "value": 0
+            },
+            "lineThickness": 0.0
+          },
+          {
+            "$type": "IOEntity+IOSlot",
+            "niceName": "Fluid Out",
+            "type": {
+              "$enum": "IOEntity+IOType",
+              "name": "Fluidic",
+              "value": 1
+            },
+            "connectedTo": {
+              "$type": "IOEntity+IORef",
+              "entityRef": {
+                "$type": "EntityRef"
+              },
+              "ioEnt": null
+            },
+            "connectedToSlot": 0,
+            "importance": {
+              "$enum": "IOHandlePriority",
+              "name": "Normal",
+              "value": 0
+            },
+            "ArrowOffset": 0.0,
+            "linePoints": [],
+            "lineAnchors": null,
+            "slackLevels": [],
+            "worldSpaceLineEndRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "line": null,
+            "handlePosition": {
+              "x": -0.81099998950958252,
+              "y": 0.328000009059906,
+              "z": -1.0140000581741333
+            },
+            "handleDirection": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rootConnectionsOnly": false,
+            "mainPowerSlot": false,
+            "wireColour": {
+              "$enum": "WireTool+WireColour",
+              "name": "Gray",
+              "value": 0
+            },
+            "lineThickness": 0.0
+          }
+        ],
+        "ioType": {
+          "$enum": "IOEntity+IOType",
+          "name": "Fluidic",
+          "value": 1
+        },
+        "cachedOutputsUsed": 0,
+        "lastPassthroughEnergy": -1,
+        "lastEnergy": 0,
+        "currentEnergy": 0,
+        "lastUpdateTime": 0.0,
+        "lastUpdateBlockedFrame": 0,
+        "ensureOutputsUpdated": false,
+        "canBeDemolished": false,
+        "debrisPrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "debrisRotationOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "DebrisPositions": [],
+        "buildingID": 0,
+        "timePlaced": 0.0,
+        "decayTimer": 0.0,
+        "upkeepTimer": 0.0,
+        "upkeep": null,
+        "decay": null,
+        "decayPoints": null,
+        "lastDecayTick": 0.0,
+        "decayVariance": 1.0,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "Immortal",
+          "comments": "",
+          "density": 100.0,
+          "amounts": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 3206051622
+        },
+        "startHealth": 1.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": false,
+          "itemTarget": null,
+          "itemCount": 0,
+          "setConditionFromHealth": false,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": false,
+          "requireHammer": false,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": false,
+          "itemTarget": null,
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": false,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": false,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.89999997615814209,
+            "z": -0.85000002384185791
+          },
+          "size": {
+            "x": 1.6000000238418579,
+            "y": 1.3999999761581421,
+            "z": 2.5999999046325684
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 1803881164,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$type": "IOEntityMovementChecker",
+        "$name": "modular_car_2mod_fuel_tank"
+      }
+    ],
+    "children": [
+      {
+        "name": "InteractionCollider",
+        "layer": {
+          "index": 13,
+          "name": "Vehicle Detailed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "InteractionCollider",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0026651620864868164,
+              "y": 0.33848762512207031,
+              "z": -0.858212947845459
+            },
+            "size": {
+              "x": 1.6000000238418579,
+              "y": 0.25,
+              "z": 0.5
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Socket_Base": [],
+    "DirectionProperties": [],
+    "Decay": [],
+    "DecayPoint": [],
+    "Upkeep": []
+  }
+}

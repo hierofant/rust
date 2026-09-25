@@ -1,0 +1,2840 @@
+{
+  "prefabID": 3978222077,
+  "path": "assets/prefabs/deployable/elevator/elevator.prefab",
+  "rootClassChain": [
+    "Elevator",
+    "IOEntity",
+    "DecayEntity",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 1.1920928955078125E-07,
+      "y": 1.4062556028366089,
+      "z": -0.011084079742431641
+    },
+    "size": {
+      "x": 3.131258487701416,
+      "y": 3.0741198062896729,
+      "z": 3.1503684520721436
+    }
+  },
+  "hierarchy": {
+    "name": "elevator",
+    "layer": {
+      "index": 8,
+      "name": "Deployed"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "Elevator",
+        "$name": "elevator",
+        "LiftRoot": [],
+        "LiftEntityPrefab": {
+          "$ref": "GameObject",
+          "guid": "7075e812318724f48b996fa17f7ddb1b",
+          "resourcePath": "assets/prefabs/deployable/elevator/elevator_lift.prefab",
+          "resourceID": 147094869
+        },
+        "IoEntitySpawnPoint": [],
+        "FloorBlockerVolume": {
+          "$ref": "GameObject",
+          "name": "PreventBuilding",
+          "instanceID": 1186804
+        },
+        "LiftSpeedPerMetre": 5.0,
+        "PoweredObjects": [
+          null,
+          null
+        ],
+        "PoweredMesh": null,
+        "PoweredLightColour": {
+          "r": 3.2784316539764404,
+          "g": 3.7333335876464844,
+          "b": 4.0,
+          "a": 1.0
+        },
+        "UnpoweredLightColour": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "LiftMoveDelay": 0.0,
+        "LiftEndMoveDelay": 0.20000000298023224,
+        "FloorHeightOverride": 0.0,
+        "liftEntity": {
+          "$type": "EntityRef`1[[ElevatorLift, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+        },
+        "previousPowerAmount": [
+          0,
+          0,
+          0
+        ],
+        "debugOrigin": [
+          [
+            [],
+            [],
+            []
+          ],
+          [
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+          ],
+          [
+            [],
+            []
+          ],
+          {
+            "$ref": "Transform",
+            "name": "ioentityspawnpoint",
+            "instanceID": 1377940,
+            "goName": "ioentityspawnpoint",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          [],
+          [],
+          [],
+          [],
+          {
+            "$ref": "Transform",
+            "name": "liftSpawnPoint",
+            "instanceID": 1421546,
+            "goName": "liftSpawnPoint",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          [],
+          [],
+          [],
+          []
+        ],
+        "sourceItem": {
+          "$ref": "ItemDefinition",
+          "name": "elevator.item",
+          "itemid": 1177596584,
+          "shortname": "elevator"
+        },
+        "lastResetIndex": 0,
+        "inputs": [
+          {
+            "$type": "IOEntity+IOSlot",
+            "niceName": "Call Elevator",
+            "type": {
+              "$enum": "IOEntity+IOType",
+              "name": "Electric",
+              "value": 0
+            },
+            "connectedTo": {
+              "$type": "IOEntity+IORef",
+              "entityRef": {
+                "$type": "EntityRef"
+              },
+              "ioEnt": null
+            },
+            "connectedToSlot": 0,
+            "importance": {
+              "$enum": "IOHandlePriority",
+              "name": "High",
+              "value": 2
+            },
+            "ArrowOffset": 0.0,
+            "linePoints": [],
+            "lineAnchors": null,
+            "slackLevels": [],
+            "worldSpaceLineEndRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "line": null,
+            "handlePosition": {
+              "x": 1.2699999809265137,
+              "y": 1.1499999761581421,
+              "z": -1.2999999523162842
+            },
+            "handleDirection": {
+              "x": -1.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rootConnectionsOnly": false,
+            "mainPowerSlot": false,
+            "wireColour": {
+              "$enum": "WireTool+WireColour",
+              "name": "Gray",
+              "value": 0
+            },
+            "lineThickness": 0.0
+          },
+          {
+            "$type": "IOEntity+IOSlot",
+            "niceName": "Call Elevator",
+            "type": {
+              "$enum": "IOEntity+IOType",
+              "name": "Electric",
+              "value": 0
+            },
+            "connectedTo": {
+              "$type": "IOEntity+IORef",
+              "entityRef": {
+                "$type": "EntityRef"
+              },
+              "ioEnt": null
+            },
+            "connectedToSlot": 0,
+            "importance": {
+              "$enum": "IOHandlePriority",
+              "name": "High",
+              "value": 2
+            },
+            "ArrowOffset": 0.0,
+            "linePoints": [],
+            "lineAnchors": null,
+            "slackLevels": [],
+            "worldSpaceLineEndRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "line": null,
+            "handlePosition": {
+              "x": -1.2699999809265137,
+              "y": 1.1499999761581421,
+              "z": 1.2999999523162842
+            },
+            "handleDirection": {
+              "x": 1.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rootConnectionsOnly": false,
+            "mainPowerSlot": false,
+            "wireColour": {
+              "$enum": "WireTool+WireColour",
+              "name": "Gray",
+              "value": 0
+            },
+            "lineThickness": 0.0
+          },
+          {
+            "$type": "IOEntity+IOSlot",
+            "niceName": "Power In",
+            "type": {
+              "$enum": "IOEntity+IOType",
+              "name": "Electric",
+              "value": 0
+            },
+            "connectedTo": {
+              "$type": "IOEntity+IORef",
+              "entityRef": {
+                "$type": "EntityRef"
+              },
+              "ioEnt": null
+            },
+            "connectedToSlot": 0,
+            "importance": {
+              "$enum": "IOHandlePriority",
+              "name": "High",
+              "value": 2
+            },
+            "ArrowOffset": 0.0,
+            "linePoints": [],
+            "lineAnchors": null,
+            "slackLevels": [],
+            "worldSpaceLineEndRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "line": null,
+            "handlePosition": {
+              "x": -1.2699999809265137,
+              "y": 1.309999942779541,
+              "z": 1.2999999523162842
+            },
+            "handleDirection": {
+              "x": 1.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rootConnectionsOnly": false,
+            "mainPowerSlot": false,
+            "wireColour": {
+              "$enum": "WireTool+WireColour",
+              "name": "Gray",
+              "value": 0
+            },
+            "lineThickness": 0.0
+          }
+        ],
+        "outputs": [],
+        "ioType": {
+          "$enum": "IOEntity+IOType",
+          "name": "Electric",
+          "value": 0
+        },
+        "cachedOutputsUsed": 0,
+        "lastPassthroughEnergy": -1,
+        "lastEnergy": 0,
+        "currentEnergy": 0,
+        "lastUpdateTime": 0.0,
+        "lastUpdateBlockedFrame": 0,
+        "ensureOutputsUpdated": false,
+        "canBeDemolished": false,
+        "debrisPrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "debrisRotationOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "DebrisPositions": [],
+        "buildingID": 0,
+        "timePlaced": 0.0,
+        "decayTimer": 0.0,
+        "upkeepTimer": 0.0,
+        "upkeep": null,
+        "decay": null,
+        "decayPoints": null,
+        "lastDecayTick": 0.0,
+        "decayVariance": 1.0,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "DeployableMetal",
+          "comments": "",
+          "density": 3.0,
+          "amounts": [
+            0.89999997615814209,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.949999988079071,
+            0.0,
+            0.0,
+            0.0,
+            0.99000000953674316,
+            0.99000000953674316,
+            0.99000000953674316,
+            0.0,
+            1.0,
+            1.0,
+            0.99000000953674316,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 3999396024
+        },
+        "startHealth": 600.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "elevator.item",
+            "itemid": 1177596584,
+            "shortname": "elevator"
+          },
+          "itemCount": 1,
+          "setConditionFromHealth": true,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": true,
+          "requireHammer": true,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "elevator.item",
+            "itemid": 1177596584,
+            "shortname": "elevator"
+          },
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 1.1920928955078125E-07,
+            "y": 1.4062556028366089,
+            "z": -0.011084079742431641
+          },
+          "size": {
+            "x": 3.131258487701416,
+            "y": 3.0741198062896729,
+            "z": 3.1503684520721436
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 3978222077,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$type": "EntityFlag_Toggle",
+        "$name": "elevator",
+        "runClientside": true,
+        "runServerside": true,
+        "flag": {
+          "$enum": "BaseEntity+Flags",
+          "name": "Reserved1",
+          "value": 128,
+          "flagNames": [
+            "Reserved1"
+          ]
+        },
+        "flagCheck": {
+          "$enum": "EntityFlag_Toggle+FlagCheck",
+          "name": "All",
+          "value": 0
+        },
+        "notFlag": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "onFlagEnabled": {
+          "$type": "UnityEngine.Events.UnityEvent",
+          "m_PersistentCalls": {
+            "$type": "UnityEngine.Events.PersistentCallGroup",
+            "m_Calls": [
+              {
+                "$type": "UnityEngine.Events.PersistentCall",
+                "m_Target": {
+                  "$ref": "GameObject",
+                  "name": "elevator_shaft_top",
+                  "instanceID": 1110392
+                },
+                "m_TargetAssemblyTypeName": "",
+                "m_MethodName": "SetActive",
+                "m_Mode": {
+                  "$enum": "UnityEngine.Events.PersistentListenerMode",
+                  "name": "Bool",
+                  "value": 6
+                },
+                "m_Arguments": {
+                  "$type": "UnityEngine.Events.ArgumentCache",
+                  "m_ObjectArgument": null,
+                  "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                  "m_IntArgument": 0,
+                  "m_FloatArgument": 0.0,
+                  "m_StringArgument": "",
+                  "m_BoolArgument": true
+                },
+                "m_CallState": {
+                  "$enum": "UnityEngine.Events.UnityEventCallState",
+                  "name": "RuntimeOnly",
+                  "value": 2
+                }
+              }
+            ]
+          }
+        },
+        "onFlagDisabled": {
+          "$type": "UnityEngine.Events.UnityEvent",
+          "m_PersistentCalls": {
+            "$type": "UnityEngine.Events.PersistentCallGroup",
+            "m_Calls": [
+              {
+                "$type": "UnityEngine.Events.PersistentCall",
+                "m_Target": {
+                  "$ref": "GameObject",
+                  "name": "elevator_shaft_top",
+                  "instanceID": 1110392
+                },
+                "m_TargetAssemblyTypeName": "",
+                "m_MethodName": "SetActive",
+                "m_Mode": {
+                  "$enum": "UnityEngine.Events.PersistentListenerMode",
+                  "name": "Bool",
+                  "value": 6
+                },
+                "m_Arguments": {
+                  "$type": "UnityEngine.Events.ArgumentCache",
+                  "m_ObjectArgument": null,
+                  "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                  "m_IntArgument": 0,
+                  "m_FloatArgument": 0.0,
+                  "m_StringArgument": "",
+                  "m_BoolArgument": false
+                },
+                "m_CallState": {
+                  "$enum": "UnityEngine.Events.UnityEventCallState",
+                  "name": "RuntimeOnly",
+                  "value": 2
+                }
+              }
+            ]
+          }
+        },
+        "_baseEntity": null
+      },
+      {
+        "$type": "GroundWatch",
+        "$name": "elevator",
+        "groundPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -1.0
+        },
+        "layers": 10551296,
+        "radius": 0.5,
+        "needBuildingBlock": false,
+        "needOnlyOneAreaCheckValid": false,
+        "whitelist": [],
+        "fails": 0,
+        "_baseEntity": null
+      },
+      {
+        "$type": "EntityFlag_Toggle",
+        "$name": "elevator",
+        "runClientside": true,
+        "runServerside": true,
+        "flag": {
+          "$enum": "BaseEntity+Flags",
+          "name": "Busy",
+          "value": 8192,
+          "flagNames": [
+            "Busy"
+          ]
+        },
+        "flagCheck": {
+          "$enum": "EntityFlag_Toggle+FlagCheck",
+          "name": "All",
+          "value": 0
+        },
+        "notFlag": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "onFlagEnabled": {
+          "$type": "UnityEngine.Events.UnityEvent",
+          "m_PersistentCalls": {
+            "$type": "UnityEngine.Events.PersistentCallGroup",
+            "m_Calls": [
+              {
+                "$type": "UnityEngine.Events.PersistentCall",
+                "m_Target": {
+                  "$type": "UnityEngine.MeshCollider",
+                  "$name": "lift_shaft_section",
+                  "colliderType": "Mesh",
+                  "convex": false,
+                  "sharedMesh": {
+                    "$ref": "Mesh",
+                    "name": "lift_shaft_section_COL",
+                    "meshId": "lift_shaft_section_COL_fdad0d0a"
+                  },
+                  "isTrigger": false,
+                  "enabled": true,
+                  "physicMaterial": {
+                    "$ref": "PhysicsMaterial",
+                    "name": "Metal",
+                    "instanceID": 609842
+                  }
+                },
+                "m_TargetAssemblyTypeName": "UnityEngine.Collider, UnityEngine",
+                "m_MethodName": "set_enabled",
+                "m_Mode": {
+                  "$enum": "UnityEngine.Events.PersistentListenerMode",
+                  "name": "Bool",
+                  "value": 6
+                },
+                "m_Arguments": {
+                  "$type": "UnityEngine.Events.ArgumentCache",
+                  "m_ObjectArgument": null,
+                  "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                  "m_IntArgument": 0,
+                  "m_FloatArgument": 0.0,
+                  "m_StringArgument": "",
+                  "m_BoolArgument": false
+                },
+                "m_CallState": {
+                  "$enum": "UnityEngine.Events.UnityEventCallState",
+                  "name": "RuntimeOnly",
+                  "value": 2
+                }
+              }
+            ]
+          }
+        },
+        "onFlagDisabled": {
+          "$type": "UnityEngine.Events.UnityEvent",
+          "m_PersistentCalls": {
+            "$type": "UnityEngine.Events.PersistentCallGroup",
+            "m_Calls": [
+              {
+                "$type": "UnityEngine.Events.PersistentCall",
+                "m_Target": {
+                  "$ref": "MeshCollider",
+                  "name": "lift_shaft_section",
+                  "instanceID": 1456752,
+                  "goName": "lift_shaft_section",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                "m_TargetAssemblyTypeName": "UnityEngine.Collider, UnityEngine",
+                "m_MethodName": "set_enabled",
+                "m_Mode": {
+                  "$enum": "UnityEngine.Events.PersistentListenerMode",
+                  "name": "Bool",
+                  "value": 6
+                },
+                "m_Arguments": {
+                  "$type": "UnityEngine.Events.ArgumentCache",
+                  "m_ObjectArgument": null,
+                  "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                  "m_IntArgument": 0,
+                  "m_FloatArgument": 0.0,
+                  "m_StringArgument": "",
+                  "m_BoolArgument": true
+                },
+                "m_CallState": {
+                  "$enum": "UnityEngine.Events.UnityEventCallState",
+                  "name": "RuntimeOnly",
+                  "value": 2
+                }
+              }
+            ]
+          }
+        },
+        "_baseEntity": null
+      }
+    ],
+    "children": [
+      {
+        "name": "sockets",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "block-male",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.10000000149011612,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": -0.5,
+              "w": 0.5
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "elevator-female",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 3.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "elevator-male",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "elevator_shaft_top",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": -0.10000000149011612,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "lift_pulley",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.2157000303268433,
+              "y": 2.4316999912261963,
+              "z": -1.0249999761581421
+            },
+            "localRotation": {
+              "x": 5.7601145186936265E-08,
+              "y": -0.7071070671081543,
+              "z": -5.7601184266786731E-08,
+              "w": 0.70710653066635132
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.MeshCollider",
+                "$name": "lift_pulley",
+                "colliderType": "Mesh",
+                "convex": false,
+                "sharedMesh": {
+                  "$ref": "Mesh",
+                  "name": "lift_pulley_COL",
+                  "meshId": "lift_pulley_COL_4ed774e5"
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "lift_motor_wheel",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.2167999744415283,
+              "y": 2.5072000026702881,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": -2.6692502430591958E-08,
+              "y": -0.7071070671081543,
+              "z": 8.8509800377778447E-08,
+              "w": 0.70710653066635132
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.MeshCollider",
+                "$name": "lift_motor_wheel",
+                "colliderType": "Mesh",
+                "convex": false,
+                "sharedMesh": {
+                  "$ref": "Mesh",
+                  "name": "lift_motor_wheel_COL",
+                  "meshId": "lift_motor_wheel_COL_ab43078d"
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "lift_shaft_top",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 8.1460342471473268E-08,
+              "y": 8.7422776573475858E-08,
+              "z": -7.1214896433797852E-15,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.MeshCollider",
+                "$name": "lift_shaft_top",
+                "colliderType": "Mesh",
+                "convex": false,
+                "sharedMesh": {
+                  "$ref": "Mesh",
+                  "name": "lift_shaft_top_COL",
+                  "meshId": "lift_shaft_top_COL_6273d5aa"
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "lift_motor_wheel (1)",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -1.2170000076293945,
+              "y": 2.5069999694824219,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": -2.6692502430591958E-08,
+              "y": -0.7071070671081543,
+              "z": 8.8509800377778447E-08,
+              "w": 0.70710653066635132
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.MeshCollider",
+                "$name": "lift_motor_wheel (1)",
+                "colliderType": "Mesh",
+                "convex": false,
+                "sharedMesh": {
+                  "$ref": "Mesh",
+                  "name": "lift_motor_wheel_COL",
+                  "meshId": "lift_motor_wheel_COL_ab43078d"
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "lift_pulley (1)",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.215999960899353,
+              "y": 2.4319999217987061,
+              "z": 1.0268000364303589
+            },
+            "localRotation": {
+              "x": 5.7601145186936265E-08,
+              "y": -0.7071070671081543,
+              "z": -5.7601184266786731E-08,
+              "w": 0.70710653066635132
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.MeshCollider",
+                "$name": "lift_pulley (1)",
+                "colliderType": "Mesh",
+                "convex": false,
+                "sharedMesh": {
+                  "$ref": "Mesh",
+                  "name": "lift_pulley_COL",
+                  "meshId": "lift_pulley_COL_4ed774e5"
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "lift_pulley (2)",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -1.2170000076293945,
+              "y": 2.4316999912261963,
+              "z": -1.0249999761581421
+            },
+            "localRotation": {
+              "x": 5.7601145186936265E-08,
+              "y": -0.7071070671081543,
+              "z": -5.7601184266786731E-08,
+              "w": 0.70710653066635132
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.MeshCollider",
+                "$name": "lift_pulley (2)",
+                "colliderType": "Mesh",
+                "convex": false,
+                "sharedMesh": {
+                  "$ref": "Mesh",
+                  "name": "lift_pulley_COL",
+                  "meshId": "lift_pulley_COL_4ed774e5"
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "lift_pulley (3)",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -1.2166999578475952,
+              "y": 2.4319999217987061,
+              "z": 1.0268000364303589
+            },
+            "localRotation": {
+              "x": 5.7601145186936265E-08,
+              "y": -0.7071070671081543,
+              "z": -5.7601184266786731E-08,
+              "w": 0.70710653066635132
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.MeshCollider",
+                "$name": "lift_pulley (3)",
+                "colliderType": "Mesh",
+                "convex": false,
+                "sharedMesh": {
+                  "$ref": "Mesh",
+                  "name": "lift_pulley_COL",
+                  "meshId": "lift_pulley_COL_4ed774e5"
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "elevator_shaft_section",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "lift_shaft_section",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 8.1460342471473268E-08,
+              "y": 8.7422776573475858E-08,
+              "z": -7.1214896433797852E-15,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "MeshCollider",
+                "name": "lift_shaft_section",
+                "instanceID": 1456752,
+                "goName": "lift_shaft_section",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "chainlink_fence_col",
+            "layer": {
+              "index": 24,
+              "name": "Transparent"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.MeshCollider",
+                "$name": "chainlink_fence_col",
+                "colliderType": "Mesh",
+                "convex": false,
+                "sharedMesh": {
+                  "$ref": "Mesh",
+                  "name": "lift_shaft_section_fence_COL",
+                  "meshId": "lift_shaft_section_fence_COL_1a192a7c"
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              },
+              {
+                "$type": "ColliderInfo",
+                "$name": "chainlink_fence_col",
+                "flags": {
+                  "$enum": "ColliderInfo+Flags",
+                  "name": "Usable, Melee, Opaque",
+                  "value": 13,
+                  "flagNames": [
+                    "Usable",
+                    "Melee",
+                    "Opaque"
+                  ]
+                }
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "ioentityspawnpoint",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.902999997138977,
+          "y": 2.0750000476837158,
+          "z": -0.0099999997764825821
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "PreventBuilding",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "PreventBuilding",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "size": {
+              "x": 2.5,
+              "y": 0.25,
+              "z": 2.5
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "PreventBuilding (1)",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -1.2999999523162842,
+          "y": 1.2999999523162842,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "PreventBuilding (1)",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "size": {
+              "x": 0.15000000596046448,
+              "y": 1.5,
+              "z": 2.5
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "PreventBuilding (2)",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 1.2999999523162842,
+          "y": 1.2999999523162842,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "PreventBuilding (2)",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "size": {
+              "x": 0.15000000596046448,
+              "y": 1.5,
+              "z": 2.5
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "PreventBuilding (3)",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 2.75,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "PreventBuilding (3)",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "size": {
+              "x": 2.5,
+              "y": 0.25,
+              "z": 2.5
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "liftSpawnPoint",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "PreventBuilding (4)",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -3.814697265625E-06,
+          "y": 1.2999999523162842,
+          "z": -1.3000001907348633
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": -0.70710575580596924,
+          "z": 0.0,
+          "w": 0.70710784196853638
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "PreventBuilding (4)",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "size": {
+              "x": 0.10000000149011612,
+              "y": 1.5,
+              "z": 2.5
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "PreventBuilding (5)",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 3.337860107421875E-06,
+          "y": 1.2999999523162842,
+          "z": 1.3000001907348633
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": -0.70710575580596924,
+          "z": 0.0,
+          "w": 0.70710784196853638
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "PreventBuilding (5)",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "size": {
+              "x": 0.10000000149011612,
+              "y": 1.5,
+              "z": 2.5
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "PreventBuilding (6)",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.25,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "PreventBuilding (6)",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "size": {
+              "x": 2.5,
+              "y": 0.25,
+              "z": 2.5
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "DeployOffset",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.25,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Construction": [
+      {
+        "$type": "Construction",
+        "$name": "<destroyed native object>",
+        "prefabID": 3978222077,
+        "hierachyName": "elevator",
+        "info": {
+          "$type": "BaseEntity+Menu+Option",
+          "name": {
+            "$type": "Translate+Phrase",
+            "token": "Ladder Hatch",
+            "legacyEnglish": "Ladder Hatch"
+          },
+          "description": {
+            "$type": "Translate+Phrase",
+            "token": "ladder_hatch_desc",
+            "legacyEnglish": "A hatch that opens and changes into a ladder"
+          },
+          "icon": {
+            "$ref": "Sprite",
+            "name": "wall.doorway.door",
+            "instanceID": 1012642
+          },
+          "order": 500,
+          "usableWhileWounded": false
+        },
+        "canBypassBuildingPermission": false,
+        "showBuildingBlockedPreview": true,
+        "canPlaceOnRoads": false,
+        "canRotateBeforePlacement": true,
+        "canRotateAfterPlacement": true,
+        "canBeDeployedInDeepSeaWater": false,
+        "checkVolumeOnRotate": false,
+        "checkVolumeOnUpgrade": false,
+        "canPlaceAtMaxDistance": false,
+        "placeOnWater": false,
+        "overridePlacementLayer": false,
+        "overridedPlacementLayer": 0,
+        "additionalPlacementLayer": 0,
+        "rotationAmount": {
+          "x": 0.0,
+          "y": 90.0,
+          "z": 0.0
+        },
+        "applyStartingRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "deployOffset": [],
+        "enforceLineOfSightCheckAgainstParentEntity": true,
+        "canSnap": false,
+        "forceY": false,
+        "forceYValue": 0.0,
+        "forceYToOceanLevel": false,
+        "OceanLevelYOffset": 0.0,
+        "holdToPlaceDuration": 0.0,
+        "canFloodFillSockets": false,
+        "alternativeLOSChecks": false,
+        "alternativeLOSPositions": [],
+        "canUseLastValidPosition": true,
+        "healthMultiplier": 1.0,
+        "costMultiplier": 1.0,
+        "maxplaceDistance": 4.0,
+        "minPlaceDistance": 1.0,
+        "guideMesh": null,
+        "guideMeshMaterial": [],
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "hideBuildingPlannerViewmodel": false,
+        "allSockets": [
+          {
+            "$type": "ConstructionSocket",
+            "$name": "<destroyed native object>",
+            "prefabID": 3978222077,
+            "hierachyName": "elevator/sockets/block-male",
+            "socketType": {
+              "$enum": "ConstructionSocket+Type",
+              "name": "Block",
+              "value": 6
+            },
+            "blockType": {
+              "$enum": "ConstructionSocket+BlockType",
+              "name": "Building",
+              "value": 0
+            },
+            "rotationDegrees": 90,
+            "rotationOffset": 0,
+            "restrictPlacementRotation": false,
+            "restrictPlacementAngle": false,
+            "faceAngle": 0.0,
+            "angleAllowed": 360.0,
+            "wantsInside": false,
+            "support": 0.25,
+            "male": true,
+            "maleDummy": false,
+            "female": false,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": false,
+            "position": {
+              "x": 0.0,
+              "y": 0.10000000149011612,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": -0.5,
+              "w": 0.5
+            },
+            "selectSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "socketName": "elevator/sockets/block-male",
+            "socketMods": [],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 0.0,
+              "y": 0.10000000149011612,
+              "z": 0.0
+            },
+            "worldRotation": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": -0.5,
+              "w": 0.5
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": -1.0,
+              "z": 0.0
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.10000000149011612,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": -0.5,
+              "w": 0.5
+            },
+            "fullName": "assets/prefabs/deployable/elevator/elevator.prefab",
+            "instanceID": 1529518,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          },
+          {
+            "$type": "ConstructionSocket_Elevator",
+            "$name": "<destroyed native object>",
+            "prefabID": 3978222077,
+            "hierachyName": "elevator/sockets/elevator-female",
+            "MaxFloor": 10,
+            "socketType": {
+              "$enum": "ConstructionSocket+Type",
+              "name": "Elevator",
+              "value": 17
+            },
+            "blockType": {
+              "$enum": "ConstructionSocket+BlockType",
+              "name": "Building",
+              "value": 0
+            },
+            "rotationDegrees": 0,
+            "rotationOffset": 0,
+            "restrictPlacementRotation": false,
+            "restrictPlacementAngle": false,
+            "faceAngle": 0.0,
+            "angleAllowed": 150.0,
+            "wantsInside": false,
+            "support": 0.25,
+            "male": false,
+            "maleDummy": false,
+            "female": true,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": false,
+            "position": {
+              "x": 0.0,
+              "y": 3.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "selectSize": {
+              "x": 2.0,
+              "y": 0.10000000149011612,
+              "z": 2.0
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "socketName": "elevator/sockets/elevator-female",
+            "socketMods": [
+              {
+                "$type": "SocketMod_BuildingBlock",
+                "$name": "<destroyed native object>",
+                "prefabID": 3978222077,
+                "hierachyName": "elevator/sockets/elevator-female/socketmod_buildingblock",
+                "sphereRadius": 1.0,
+                "layerMask": 2097152,
+                "queryTriggers": {
+                  "$enum": "UnityEngine.QueryTriggerInteraction",
+                  "name": "UseGlobal",
+                  "value": 0
+                },
+                "wantsCollide": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "ConstructionSocket_Elevator"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": -3.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/elevator/elevator.prefab",
+                "instanceID": 1534688,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              }
+            ],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 0.0,
+              "y": 3.0,
+              "z": 0.0
+            },
+            "worldRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 3.0,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "fullName": "assets/prefabs/deployable/elevator/elevator.prefab",
+            "instanceID": 1571688,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          },
+          {
+            "$type": "ConstructionSocket_Elevator",
+            "$name": "<destroyed native object>",
+            "prefabID": 3978222077,
+            "hierachyName": "elevator/sockets/elevator-male",
+            "MaxFloor": 10,
+            "socketType": {
+              "$enum": "ConstructionSocket+Type",
+              "name": "Elevator",
+              "value": 17
+            },
+            "blockType": {
+              "$enum": "ConstructionSocket+BlockType",
+              "name": "Building",
+              "value": 0
+            },
+            "rotationDegrees": 0,
+            "rotationOffset": 0,
+            "restrictPlacementRotation": false,
+            "restrictPlacementAngle": false,
+            "faceAngle": 0.0,
+            "angleAllowed": 150.0,
+            "wantsInside": false,
+            "support": 1.0,
+            "male": true,
+            "maleDummy": false,
+            "female": false,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": false,
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "selectSize": {
+              "x": 2.0,
+              "y": 0.10000000149011612,
+              "z": 2.0
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "socketName": "elevator/sockets/elevator-male",
+            "socketMods": [
+              {
+                "$type": "SocketMod_BuildingBlock",
+                "$name": "<destroyed native object>",
+                "prefabID": 3978222077,
+                "hierachyName": "elevator/sockets/elevator-male/socketmod_buildingblock",
+                "sphereRadius": 1.0,
+                "layerMask": 2097152,
+                "queryTriggers": {
+                  "$enum": "UnityEngine.QueryTriggerInteraction",
+                  "name": "UseGlobal",
+                  "value": 0
+                },
+                "wantsCollide": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "ConstructionSocket_Elevator"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/elevator/elevator.prefab",
+                "instanceID": 1536086,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              }
+            ],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "worldRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "fullName": "assets/prefabs/deployable/elevator/elevator.prefab",
+            "instanceID": 1548044,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          }
+        ],
+        "allProximities": [],
+        "defaultGrade": null,
+        "socketHandle": {
+          "$type": "SocketHandle",
+          "$name": "<destroyed native object>",
+          "prefabID": 3978222077,
+          "hierachyName": "elevator/sockets/block-male/handle",
+          "worldPosition": {
+            "x": 0.0,
+            "y": 0.10000000149011612,
+            "z": 0.0
+          },
+          "worldRotation": {
+            "x": 0.5,
+            "y": 0.5,
+            "z": -0.5,
+            "w": 0.5
+          },
+          "worldForward": {
+            "x": 0.0,
+            "y": -1.0,
+            "z": 0.0
+          },
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "localScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "localRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "fullName": "assets/prefabs/deployable/elevator/elevator.prefab",
+          "instanceID": 1562106,
+          "prefabAttribute": {
+            "$ref": "Library",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "gameManager": {
+            "$ref": "GameManager",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "isServer": true
+        },
+        "bounds": {
+          "center": {
+            "x": 1.1920928955078125E-07,
+            "y": 1.4062556028366089,
+            "z": -0.011084079742431641
+          },
+          "size": {
+            "x": 3.131258487701416,
+            "y": 3.0741198062896729,
+            "z": 3.1503684520721436
+          }
+        },
+        "isBuildingPrivilege": false,
+        "isSleepingBag": false,
+        "grades": [],
+        "deployable": {
+          "$type": "Deployable",
+          "$name": "<destroyed native object>",
+          "prefabID": 3978222077,
+          "hierachyName": "elevator",
+          "guidePrefab": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "guideMesh": null,
+          "guideMeshScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "overrideRotation": false,
+          "guideMeshOrientation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "guideMeshPositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "moveGuideTowardsCamera": true,
+          "guideLights": false,
+          "wantsInstanceData": false,
+          "copyInventoryFromItem": false,
+          "setSocketParent": false,
+          "toSlot": false,
+          "slot": {
+            "$enum": "BaseEntity+Slot",
+            "name": "Lock",
+            "value": 0
+          },
+          "placeEffect": {
+            "$ref": "GameObject",
+            "guid": "32208692617114786b1c44c91bc674b9",
+            "resourcePath": "assets/prefabs/building/floor.ladder.hatch/effects/door-ladder-hatch-deploy.prefab",
+            "resourceID": 666723058
+          },
+          "guideTargets": [],
+          "bounds": {
+            "center": {
+              "x": 1.1920928955078125E-07,
+              "y": 1.4062556028366089,
+              "z": -0.011084079742431641
+            },
+            "size": {
+              "x": 3.131258487701416,
+              "y": 3.0741198062896729,
+              "z": 3.1503684520721436
+            }
+          },
+          "worldPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "worldRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "worldForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "localScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "localRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "fullName": "assets/prefabs/deployable/elevator/elevator.prefab",
+          "instanceID": 1488256,
+          "prefabAttribute": {
+            "$ref": "Library",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "gameManager": {
+            "$ref": "GameManager",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "isServer": true
+        },
+        "placeholder": null,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/elevator/elevator.prefab",
+        "instanceID": 1488264,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Deployable": [
+      {
+        "$ref": "Deployable",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "Decay": [
+      {
+        "$type": "BuildingGradeDecay",
+        "$name": "<destroyed native object>",
+        "prefabID": 3978222077,
+        "hierachyName": "elevator",
+        "decayGrade": {
+          "$enum": "BuildingGrade+Enum",
+          "name": "Metal",
+          "value": 3
+        },
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/elevator/elevator.prefab",
+        "instanceID": 1515238,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Upkeep": [
+      {
+        "$type": "Upkeep",
+        "$name": "<destroyed native object>",
+        "prefabID": 3978222077,
+        "hierachyName": "elevator",
+        "upkeepMultiplier": 1.0,
+        "highWall": false,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/elevator/elevator.prefab",
+        "instanceID": 1515800,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Socket_Base": [
+      {
+        "$ref": "ConstructionSocket",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "ConstructionSocket_Elevator",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "ConstructionSocket_Elevator",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "SocketHandle": [
+      {
+        "$ref": "SocketHandle",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "SocketMod": [
+      {
+        "$ref": "SocketMod_BuildingBlock",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_BuildingBlock",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "DeployVolume": [
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 3978222077,
+        "hierachyName": "elevator/DeployVolume",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "size": {
+            "x": 2.5,
+            "y": 2.5,
+            "z": 2.5
+          }
+        },
+        "layers": 547553553,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 1.3600000143051147,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 1.3600000143051147,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/elevator/elevator.prefab",
+        "instanceID": 1571714,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 3978222077,
+        "hierachyName": "elevator/DeployVolume (1)",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.5,
+            "z": 0.0
+          },
+          "size": {
+            "x": 4.4000000953674316,
+            "y": 3.4000000953674316,
+            "z": 4.4000000953674316
+          }
+        },
+        "layers": 65536,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 1.3600000143051147,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 1.3600000143051147,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/elevator/elevator.prefab",
+        "instanceID": 1528192,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ]
+  }
+}

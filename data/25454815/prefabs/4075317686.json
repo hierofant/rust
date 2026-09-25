@@ -1,0 +1,1951 @@
+{
+  "prefabID": 4075317686,
+  "path": "assets/prefabs/npc/flame turret/flameturret.deployed.prefab",
+  "rootClassChain": [
+    "FlameTurret",
+    "StorageContainer",
+    "DecayEntity",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -0.15085786581039429,
+      "y": 0.6401132345199585,
+      "z": 0.074425816535949707
+    },
+    "size": {
+      "x": 1.1091058254241943,
+      "y": 1.2810347080230713,
+      "z": 1.1091058254241943
+    }
+  },
+  "hierarchy": {
+    "name": "flameturret.deployed",
+    "layer": {
+      "index": 8,
+      "name": "Deployed"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "FlameTurret",
+        "$name": "flameturret.deployed",
+        "upper": null,
+        "arc": 45.0,
+        "triggeredDuration": 4.0,
+        "flameRange": 8.0,
+        "flameRadius": 2.0,
+        "fuelPerSec": 0.5,
+        "eyeTransform": [
+          []
+        ],
+        "damagePerSec": [
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Heat",
+              "value": 5
+            },
+            "amount": 40.0
+          }
+        ],
+        "triggeredEffect": {
+          "$ref": "GameObject",
+          "guid": "245b83f9c08e2407f95e0374144269df",
+          "resourcePath": "assets/bundled/prefabs/fx/weapons/landmine/landmine_trigger.prefab",
+          "resourceID": 2497258973
+        },
+        "fireballPrefab": {
+          "$ref": "GameObject",
+          "guid": "62cdd8d62eac8874f90060473bbaef95",
+          "resourcePath": "assets/prefabs/npc/flame turret/flameturret_fireball.prefab",
+          "resourceID": 2781905939
+        },
+        "explosionEffect": {
+          "$ref": "GameObject",
+          "guid": "01467c95d6cc84848b112af8a7803eef",
+          "resourcePath": "assets/bundled/prefabs/fx/weapons/landmine/landmine_explosion.prefab",
+          "resourceID": 2341946113
+        },
+        "trigger": {
+          "$type": "TargetTrigger",
+          "$name": "trigger",
+          "losEyes": null,
+          "interestLayers": 131072,
+          "contents": null,
+          "entityContents": null,
+          "OnEntityEnterTrigger": null,
+          "OnEntityLeaveTrigger": null
+        },
+        "inventorySlots": 1,
+        "dropsLoot": true,
+        "dropLootDestroyPercent": 0.0,
+        "dropFloats": false,
+        "isLootable": true,
+        "isLockable": false,
+        "isMonitorable": false,
+        "panelName": "fuelsmall",
+        "panelTitle": {
+          "$type": "Translate+Phrase",
+          "token": "loot",
+          "legacyEnglish": "Loot"
+        },
+        "allowedContents": {
+          "$enum": "ItemContainer+ContentsType",
+          "name": "Generic",
+          "value": 1,
+          "flagNames": [
+            "Generic"
+          ]
+        },
+        "allowedItem": {
+          "$ref": "ItemDefinition",
+          "name": "fuel.lowgrade.item",
+          "itemid": -946369541,
+          "shortname": "lowgradefuel"
+        },
+        "allowedItem2": null,
+        "allowedItems": [],
+        "blockedItems": [],
+        "maxStackSize": 500,
+        "needsBuildingPrivilegeToUse": true,
+        "requireAuthIfNotLocked": false,
+        "allowSorting": false,
+        "mustBeMountedToUse": false,
+        "openSound": {
+          "$ref": "SoundDefinition",
+          "name": "flameturret-open",
+          "instanceID": 26846
+        },
+        "closeSound": {
+          "$ref": "SoundDefinition",
+          "name": "flameturret-close",
+          "instanceID": 27172
+        },
+        "dropPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "dropVelocity": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "onlyAcceptCategory": {
+          "$enum": "ItemCategory",
+          "name": "All",
+          "value": 11
+        },
+        "onlyOneUser": false,
+        "_inventory": null,
+        "isTransferringIndustrialItem": false,
+        "canBeDemolished": false,
+        "debrisPrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "debrisRotationOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "DebrisPositions": [],
+        "buildingID": 0,
+        "timePlaced": 0.0,
+        "decayTimer": 0.0,
+        "upkeepTimer": 0.0,
+        "upkeep": null,
+        "decay": null,
+        "decayPoints": null,
+        "lastDecayTick": 0.0,
+        "decayVariance": 1.0,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "flame_turret_protection",
+          "comments": "",
+          "density": 100.0,
+          "amounts": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.89999997615814209,
+            0.5,
+            0.89999997615814209,
+            1.0,
+            1.0,
+            0.0,
+            0.5,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.89999997615814209,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "FilenameStringId": 4031306792
+        },
+        "startHealth": 300.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "flameturret.item",
+            "itemid": 528668503,
+            "shortname": "flameturret"
+          },
+          "itemCount": 1,
+          "setConditionFromHealth": true,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": true,
+          "requireHammer": true,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "flameturret.item",
+            "itemid": 528668503,
+            "shortname": "flameturret"
+          },
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": true,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -0.15085786581039429,
+            "y": 0.6401132345199585,
+            "z": 0.074425816535949707
+          },
+          "size": {
+            "x": 1.1091058254241943,
+            "y": 1.2810347080230713,
+            "z": 1.1091058254241943
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "flameturret.deployed",
+          "collision": null,
+          "rootBone": [
+            [],
+            [
+              []
+            ],
+            {
+              "$ref": "Transform",
+              "name": "Eyes",
+              "instanceID": 1268888,
+              "goName": "Eyes",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "headBone": null,
+          "eyeBone": {
+            "$ref": "Transform",
+            "name": "Eyes",
+            "instanceID": 1268888,
+            "goName": "Eyes",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "flameturret.deployed",
+              "instanceID": 1270732,
+              "goName": "flameturret.deployed",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "preventbuilding",
+              "instanceID": 1267672,
+              "goName": "preventbuilding",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "sockets",
+              "instanceID": 1266276,
+              "goName": "sockets",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "free",
+              "instanceID": 1266484,
+              "goName": "free",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "Eyes",
+              "instanceID": 1268888,
+              "goName": "Eyes",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "trigger",
+              "instanceID": 1277604,
+              "goName": "trigger",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "flameturret.deployed",
+            "preventbuilding",
+            "sockets",
+            "free",
+            "angle",
+            "inside 1",
+            "inside 1 (1)",
+            "inside 1 (2)",
+            "inside 1 (3)",
+            "inside 1 (4)",
+            "notInSphere 1",
+            "notInWater",
+            "notInSphere 1 (1)",
+            "notInSphere 1 (2)",
+            "Eyes",
+            "trigger"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 4075317686,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$ref": "Model",
+        "name": "flameturret.deployed",
+        "instanceID": 1511104,
+        "goName": "flameturret.deployed",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$type": "DestroyOnGroundMissing",
+        "$name": "flameturret.deployed"
+      },
+      {
+        "$type": "GroundWatch",
+        "$name": "flameturret.deployed",
+        "groundPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "layers": 136314880,
+        "radius": 0.10000000149011612,
+        "needBuildingBlock": false,
+        "needOnlyOneAreaCheckValid": false,
+        "whitelist": [],
+        "fails": 0,
+        "_baseEntity": null
+      },
+      {
+        "$type": "UnityEngine.CapsuleCollider",
+        "$name": "flameturret.deployed",
+        "colliderType": "Capsule",
+        "center": {
+          "x": 0.0,
+          "y": 0.699999988079071,
+          "z": 0.0
+        },
+        "radius": 0.20000000298023224,
+        "height": 1.25,
+        "direction": 1,
+        "isTrigger": false,
+        "enabled": true,
+        "physicMaterial": {
+          "$ref": "PhysicsMaterial",
+          "name": "Metal",
+          "instanceID": 609842
+        }
+      }
+    ],
+    "children": [
+      {
+        "name": "preventbuilding",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.CapsuleCollider",
+            "$name": "preventbuilding",
+            "colliderType": "Capsule",
+            "center": {
+              "x": 0.0,
+              "y": 0.800000011920929,
+              "z": 0.0
+            },
+            "radius": 0.30000001192092896,
+            "height": 1.6000000238418579,
+            "direction": 1,
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "sockets",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "free",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Eyes",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.97100001573562622,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "trigger",
+            "layer": {
+              "index": 18,
+              "name": "Trigger"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 3.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.SphereCollider",
+                "$name": "trigger",
+                "colliderType": "Sphere",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "radius": 2.5,
+                "isTrigger": true,
+                "enabled": true
+              },
+              {
+                "$ref": "TargetTrigger",
+                "name": "trigger",
+                "instanceID": 1515142,
+                "goName": "trigger",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Deployable": [
+      {
+        "$type": "Deployable",
+        "$name": "<destroyed native object>",
+        "prefabID": 4075317686,
+        "hierachyName": "flameturret.deployed",
+        "guidePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "guideMesh": {
+          "$ref": "Mesh",
+          "name": "flameturret.guide",
+          "meshId": "flameturret.guide_d6fa6248"
+        },
+        "guideMeshScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "overrideRotation": false,
+        "guideMeshOrientation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "guideMeshPositionOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "moveGuideTowardsCamera": true,
+        "guideLights": true,
+        "wantsInstanceData": false,
+        "copyInventoryFromItem": false,
+        "setSocketParent": false,
+        "toSlot": false,
+        "slot": {
+          "$enum": "BaseEntity+Slot",
+          "name": "Lock",
+          "value": 0
+        },
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "890431e2a21fb435aa681e548c65a216",
+          "resourcePath": "assets/prefabs/npc/flame turret/effects/flameturret-deploy.prefab",
+          "resourceID": 505548274
+        },
+        "guideTargets": [],
+        "bounds": {
+          "center": {
+            "x": -0.15085786581039429,
+            "y": 0.6401132345199585,
+            "z": 0.074425816535949707
+          },
+          "size": {
+            "x": 1.1091058254241943,
+            "y": 1.2810347080230713,
+            "z": 1.1091058254241943
+          }
+        },
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/npc/flame turret/flameturret.deployed.prefab",
+        "instanceID": 1508404,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Construction": [
+      {
+        "$type": "Construction",
+        "$name": "<destroyed native object>",
+        "prefabID": 4075317686,
+        "hierachyName": "flameturret.deployed",
+        "info": {
+          "$type": "BaseEntity+Menu+Option",
+          "name": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "description": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "icon": null,
+          "order": 0,
+          "usableWhileWounded": false
+        },
+        "canBypassBuildingPermission": false,
+        "showBuildingBlockedPreview": true,
+        "canPlaceOnRoads": false,
+        "canRotateBeforePlacement": true,
+        "canRotateAfterPlacement": true,
+        "canBeDeployedInDeepSeaWater": false,
+        "checkVolumeOnRotate": false,
+        "checkVolumeOnUpgrade": false,
+        "canPlaceAtMaxDistance": false,
+        "placeOnWater": false,
+        "overridePlacementLayer": false,
+        "overridedPlacementLayer": 0,
+        "additionalPlacementLayer": 0,
+        "rotationAmount": {
+          "x": 0.0,
+          "y": 90.0,
+          "z": 0.0
+        },
+        "applyStartingRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "deployOffset": null,
+        "enforceLineOfSightCheckAgainstParentEntity": false,
+        "canSnap": false,
+        "forceY": false,
+        "forceYValue": 0.0,
+        "forceYToOceanLevel": false,
+        "OceanLevelYOffset": 0.0,
+        "holdToPlaceDuration": 0.0,
+        "canFloodFillSockets": false,
+        "alternativeLOSChecks": false,
+        "alternativeLOSPositions": [],
+        "canUseLastValidPosition": true,
+        "healthMultiplier": 1.0,
+        "costMultiplier": 1.0,
+        "maxplaceDistance": 3.9000000953674316,
+        "minPlaceDistance": 1.0,
+        "guideMesh": null,
+        "guideMeshMaterial": [],
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "hideBuildingPlannerViewmodel": false,
+        "allSockets": [
+          {
+            "$type": "Socket_Free",
+            "$name": "<destroyed native object>",
+            "prefabID": 4075317686,
+            "hierachyName": "flameturret.deployed/sockets/free",
+            "idealPlacementNormal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "useTargetNormal": true,
+            "snapToTargetProvidedRotations": false,
+            "blendAimAngle": true,
+            "male": true,
+            "maleDummy": false,
+            "female": false,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": false,
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "selectSize": {
+              "x": 2.0,
+              "y": 0.10000000149011612,
+              "z": 2.0
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            },
+            "socketName": "flameturret.deployed/sockets/free",
+            "socketMods": [
+              {
+                "$type": "SocketMod_AngleCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 4075317686,
+                "hierachyName": "flameturret.deployed/sockets/free/angle",
+                "wantsAngle": true,
+                "worldNormal": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0
+                },
+                "withinDegrees": 1.0,
+                "usePlacementNormal": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/flame turret/flameturret.deployed.prefab",
+                "instanceID": 1509970,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 4075317686,
+                "hierachyName": "flameturret.deployed/sockets/free/inside 1",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 136314880,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0030000000260770321,
+                  "y": -0.014999926090240479,
+                  "z": 0.453000009059906
+                },
+                "worldRotation": {
+                  "x": -0.50000005960464478,
+                  "y": -0.49999994039535522,
+                  "z": -0.5,
+                  "w": 0.49999994039535522
+                },
+                "worldForward": {
+                  "x": 1.7881393432617188E-07,
+                  "y": 0.99999994039535522,
+                  "z": 0.0
+                },
+                "localPosition": {
+                  "x": 0.0030000000260770321,
+                  "y": -0.453000009059906,
+                  "z": -0.014999999664723873
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": -2.1073423894790722E-08,
+                  "y": 9.3022606506565353E-08,
+                  "z": -0.70710676908493042,
+                  "w": 0.7071068286895752
+                },
+                "fullName": "assets/prefabs/npc/flame turret/flameturret.deployed.prefab",
+                "instanceID": 1508618,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 4075317686,
+                "hierachyName": "flameturret.deployed/sockets/free/inside 1 (1)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 136314880,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.453000009059906,
+                  "y": -0.014999998733401299,
+                  "z": 1.862645149230957E-09
+                },
+                "worldRotation": {
+                  "x": -0.50000005960464478,
+                  "y": -0.49999994039535522,
+                  "z": -0.5,
+                  "w": 0.49999994039535522
+                },
+                "worldForward": {
+                  "x": 1.7881393432617188E-07,
+                  "y": 0.99999994039535522,
+                  "z": 0.0
+                },
+                "localPosition": {
+                  "x": 0.453000009059906,
+                  "y": 0.0,
+                  "z": -0.014999999664723873
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": -2.1073423894790722E-08,
+                  "y": 9.3022606506565353E-08,
+                  "z": -0.70710676908493042,
+                  "w": 0.7071068286895752
+                },
+                "fullName": "assets/prefabs/npc/flame turret/flameturret.deployed.prefab",
+                "instanceID": 1511174,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 4075317686,
+                "hierachyName": "flameturret.deployed/sockets/free/inside 1 (2)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 136314880,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.004999999888241291,
+                  "y": -0.015000045299530029,
+                  "z": -0.44899994134902954
+                },
+                "worldRotation": {
+                  "x": -0.50000005960464478,
+                  "y": -0.49999994039535522,
+                  "z": -0.5,
+                  "w": 0.49999994039535522
+                },
+                "worldForward": {
+                  "x": 1.7881393432617188E-07,
+                  "y": 0.99999994039535522,
+                  "z": 0.0
+                },
+                "localPosition": {
+                  "x": 0.004999999888241291,
+                  "y": 0.44900000095367432,
+                  "z": -0.014999999664723873
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": -2.1073423894790722E-08,
+                  "y": 9.3022606506565353E-08,
+                  "z": -0.70710676908493042,
+                  "w": 0.7071068286895752
+                },
+                "fullName": "assets/prefabs/npc/flame turret/flameturret.deployed.prefab",
+                "instanceID": 1510854,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 4075317686,
+                "hierachyName": "flameturret.deployed/sockets/free/inside 1 (3)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 136314880,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -0.0030000000260770321,
+                  "y": -0.014999997802078724,
+                  "z": 0.010000000707805157
+                },
+                "worldRotation": {
+                  "x": -0.50000005960464478,
+                  "y": -0.49999994039535522,
+                  "z": -0.5,
+                  "w": 0.49999997019767761
+                },
+                "worldForward": {
+                  "x": 1.4901161193847656E-07,
+                  "y": 0.99999994039535522,
+                  "z": 0.0
+                },
+                "localPosition": {
+                  "x": -0.0030000000260770321,
+                  "y": -0.0099999997764825821,
+                  "z": -0.014999999664723873
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 8.94069742685133E-08,
+                  "z": -0.70710676908493042,
+                  "w": 0.7071068286895752
+                },
+                "fullName": "assets/prefabs/npc/flame turret/flameturret.deployed.prefab",
+                "instanceID": 1508304,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 4075317686,
+                "hierachyName": "flameturret.deployed/sockets/free/inside 1 (4)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 136314880,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -0.45100000500679016,
+                  "y": -0.014999998733401299,
+                  "z": 0.0010000010952353477
+                },
+                "worldRotation": {
+                  "x": -0.50000005960464478,
+                  "y": -0.49999994039535522,
+                  "z": -0.5,
+                  "w": 0.49999997019767761
+                },
+                "worldForward": {
+                  "x": 1.4901161193847656E-07,
+                  "y": 0.99999994039535522,
+                  "z": 0.0
+                },
+                "localPosition": {
+                  "x": -0.45100000500679016,
+                  "y": -0.0010000000474974513,
+                  "z": -0.014999999664723873
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 8.94069742685133E-08,
+                  "z": -0.70710676908493042,
+                  "w": 0.7071068286895752
+                },
+                "fullName": "assets/prefabs/npc/flame turret/flameturret.deployed.prefab",
+                "instanceID": 1508472,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 4075317686,
+                "hierachyName": "flameturret.deployed/sockets/free/notInSphere 1",
+                "sphereRadius": 0.31999999284744263,
+                "layerMask": 1755381761,
+                "wantsCollide": false,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.63899993896484375,
+                  "z": -5.9604644775390625E-08
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.63899999856948853
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/flame turret/flameturret.deployed.prefab",
+                "instanceID": 1510858,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_InWater",
+                "$name": "<destroyed native object>",
+                "prefabID": 4075317686,
+                "hierachyName": "flameturret.deployed/sockets/free/notInWater",
+                "wantsInWater": false,
+                "excludeArtificialWater": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.51899993419647217,
+                  "z": -5.9604644775390625E-08
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.51899999380111694
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/flame turret/flameturret.deployed.prefab",
+                "instanceID": 1511202,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 4075317686,
+                "hierachyName": "flameturret.deployed/sockets/free/notInSphere 1 (1)",
+                "sphereRadius": 0.31999999284744263,
+                "layerMask": 1755381761,
+                "wantsCollide": false,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -0.28099998831748962,
+                  "y": 0.63899999856948853,
+                  "z": 0.44499990344047546
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -0.28099998831748962,
+                  "y": -0.44499999284744263,
+                  "z": 0.63899999856948853
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.99999982118606567,
+                  "z": 0.99999982118606567
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/flame turret/flameturret.deployed.prefab",
+                "instanceID": 1509442,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 4075317686,
+                "hierachyName": "flameturret.deployed/sockets/free/notInSphere 1 (2)",
+                "sphereRadius": 0.31999999284744263,
+                "layerMask": 1755381761,
+                "wantsCollide": false,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.2720000147819519,
+                  "y": 0.6389998197555542,
+                  "z": 0.44499960541725159
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.2720000147819519,
+                  "y": -0.44499969482421875,
+                  "z": 0.6389998197555542
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.99999964237213135,
+                  "z": 0.99999964237213135
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/flame turret/flameturret.deployed.prefab",
+                "instanceID": 1508626,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              }
+            ],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "worldRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": 0.99999994039535522,
+              "z": -1.1920928955078125E-07
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "fullName": "assets/prefabs/npc/flame turret/flameturret.deployed.prefab",
+            "instanceID": 1510294,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          }
+        ],
+        "allProximities": [],
+        "defaultGrade": null,
+        "socketHandle": null,
+        "bounds": {
+          "center": {
+            "x": -0.15085786581039429,
+            "y": 0.6401132345199585,
+            "z": 0.074425816535949707
+          },
+          "size": {
+            "x": 1.1091058254241943,
+            "y": 1.2810347080230713,
+            "z": 1.1091058254241943
+          }
+        },
+        "isBuildingPrivilege": false,
+        "isSleepingBag": false,
+        "grades": [],
+        "deployable": {
+          "$ref": "Deployable",
+          "name": "<destroyed native object>",
+          "instanceID": 0,
+          "$error": "Object reference not set to an instance of an object.",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "placeholder": null,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/npc/flame turret/flameturret.deployed.prefab",
+        "instanceID": 1510334,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "DeployVolume": [
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 4075317686,
+        "hierachyName": "flameturret.deployed",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.550000011920929,
+            "z": 0.0
+          },
+          "size": {
+            "x": 0.56000000238418579,
+            "y": 1.0,
+            "z": 0.46000000834465027
+          }
+        },
+        "layers": 673382401,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/npc/flame turret/flameturret.deployed.prefab",
+        "instanceID": 1511036,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Socket_Base": [
+      {
+        "$ref": "Socket_Free",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "SocketMod": [
+      {
+        "$ref": "SocketMod_AngleCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_InWater",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ]
+  }
+}

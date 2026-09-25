@@ -1,0 +1,3422 @@
+{
+  "prefabID": 1891214172,
+  "path": "assets/prefabs/misc/divesite/divesite_c.prefab",
+  "rootClassChain": [
+    "DiveSite",
+    "JunkPile",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -0.23283672332763672,
+      "y": 4.5834507942199707,
+      "z": -0.20952892303466797
+    },
+    "size": {
+      "x": 20.445844650268555,
+      "y": 13.065034866333008,
+      "z": 26.220602035522461
+    }
+  },
+  "hierarchy": {
+    "name": "divesite_c",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "Spawnable",
+        "$name": "divesite_c",
+        "Population": null,
+        "ForceSpawnOnly": false,
+        "ForceSpawnInfoMessage": "",
+        "CanSpawnInSafeZone": true
+      },
+      {
+        "$type": "DiveSite",
+        "$name": "divesite_c",
+        "bobber": [],
+        "sinkEffect": {
+          "$ref": "GameObject",
+          "guid": "c4b1b20ffef54974081e6390d1ea0de9",
+          "resourcePath": "assets/prefabs/misc/junkpile/effects/despawn.prefab",
+          "resourceID": 2052091278
+        },
+        "spawngroups": [
+          {
+            "$type": "SpawnGroup",
+            "$name": "CrateSpawner",
+            "Tier": {
+              "$enum": "MonumentTier",
+              "name": "-1",
+              "value": -1
+            },
+            "prefabs": [
+              {
+                "$type": "SpawnGroup+SpawnEntry",
+                "prefab": {
+                  "$ref": "GameObject",
+                  "guid": "74d40e86915aabe419219f9fcce0158e",
+                  "resourcePath": "assets/bundled/prefabs/radtown/crate_underwater_basic.prefab",
+                  "resourceID": 3852690109
+                },
+                "weight": 100,
+                "mobile": true
+              },
+              {
+                "$type": "SpawnGroup+SpawnEntry",
+                "prefab": {
+                  "$ref": "GameObject",
+                  "guid": "f237e0ca48970134291ba0cb1b90ea6e",
+                  "resourcePath": "assets/bundled/prefabs/radtown/crate_underwater_advanced.prefab",
+                  "resourceID": 2803512399
+                },
+                "weight": 20,
+                "mobile": true
+              }
+            ],
+            "maxPopulation": 3,
+            "numToSpawnPerTickMin": 3,
+            "numToSpawnPerTickMax": 3,
+            "respawnDelayMin": "Infinity",
+            "respawnDelayMax": "Infinity",
+            "wantsInitialSpawn": true,
+            "temporary": true,
+            "forceInitialSpawn": false,
+            "preventDuplicates": false,
+            "isSpawnerActive": true,
+            "shouldBlockSpawnedEntitySaving": true,
+            "resetBehavior": {
+              "$enum": "SpawnGroupResetBehavior",
+              "name": "Default",
+              "value": 0
+            },
+            "setFreeIfMovedBeyond": null,
+            "category": "",
+            "Monument": null,
+            "fillOnSpawn": false,
+            "spawnPoints": null,
+            "spawnInstances": [],
+            "spawnClock": {
+              "$type": "LocalClock",
+              "events": []
+            }
+          },
+          {
+            "$type": "SpawnGroup",
+            "$name": "SharkSpawner",
+            "Tier": {
+              "$enum": "MonumentTier",
+              "name": "-1",
+              "value": -1
+            },
+            "prefabs": [
+              {
+                "$type": "SpawnGroup+SpawnEntry",
+                "prefab": {
+                  "$ref": "GameObject",
+                  "guid": "629d46d601e87a24ca36c291ec91ebb9",
+                  "resourcePath": "assets/rust.ai/agents/fish/simpleshark.prefab",
+                  "resourceID": 947646353
+                },
+                "weight": 15,
+                "mobile": true
+              },
+              {
+                "$type": "SpawnGroup+SpawnEntry",
+                "prefab": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "weight": 85,
+                "mobile": false
+              }
+            ],
+            "maxPopulation": 1,
+            "numToSpawnPerTickMin": 1,
+            "numToSpawnPerTickMax": 1,
+            "respawnDelayMin": "Infinity",
+            "respawnDelayMax": "Infinity",
+            "wantsInitialSpawn": true,
+            "temporary": true,
+            "forceInitialSpawn": true,
+            "preventDuplicates": false,
+            "isSpawnerActive": true,
+            "shouldBlockSpawnedEntitySaving": true,
+            "resetBehavior": {
+              "$enum": "SpawnGroupResetBehavior",
+              "name": "Default",
+              "value": 0
+            },
+            "setFreeIfMovedBeyond": null,
+            "category": "",
+            "Monument": null,
+            "fillOnSpawn": false,
+            "spawnPoints": null,
+            "spawnInstances": [],
+            "spawnClock": {
+              "$type": "LocalClock",
+              "events": []
+            }
+          }
+        ],
+        "NPCSpawn": null,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -0.23283672332763672,
+            "y": 4.5834507942199707,
+            "z": -0.20952892303466797
+          },
+          "size": {
+            "x": 20.445844650268555,
+            "y": 13.065034866333008,
+            "z": 26.220602035522461
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": false,
+        "syncPosition": false,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 1891214172,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      }
+    ],
+    "children": [
+      {
+        "name": "CrateSpawner",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Client Cull",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "SpawnGroup",
+            "name": "CrateSpawner",
+            "instanceID": 1512308,
+            "goName": "CrateSpawner",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": [
+          {
+            "name": "SpawnPoint",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 4.880000114440918,
+              "y": 0.64499998092651367,
+              "z": -8.3000001907348633
+            },
+            "localRotation": {
+              "x": -0.017645146697759628,
+              "y": 0.67126697301864624,
+              "z": 0.01947159506380558,
+              "w": 0.7407497763633728
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "GenericSpawnPoint",
+                "$name": "SpawnPoint",
+                "dropToGround": false,
+                "randomRot": false,
+                "randomRotSnapDegrees": 1.0,
+                "spawnEffect": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "OnObjectSpawnedEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "OnObjectRetiredEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "spawnPointType": {
+                  "$enum": "BaseSpawnPoint+SpawnPointType",
+                  "name": "Normal",
+                  "value": 0
+                },
+                "playerCheckMargin": 2.0
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "SpawnPoint (1)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.2400000095367432,
+              "y": 0.68199998140335083,
+              "z": -7.0970001220703125
+            },
+            "localRotation": {
+              "x": 0.018086986616253853,
+              "y": 0.026863658800721169,
+              "z": -0.020260825753211975,
+              "w": 0.99927014112472534
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "GenericSpawnPoint",
+                "$name": "SpawnPoint (1)",
+                "dropToGround": false,
+                "randomRot": false,
+                "randomRotSnapDegrees": 1.0,
+                "spawnEffect": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "OnObjectSpawnedEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "OnObjectRetiredEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "spawnPointType": {
+                  "$enum": "BaseSpawnPoint+SpawnPointType",
+                  "name": "Normal",
+                  "value": 0
+                },
+                "playerCheckMargin": 2.0
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "SpawnPoint (2)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -5.2140002250671387,
+              "y": 0.82999998331069946,
+              "z": 8.3950004577636719
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "GenericSpawnPoint",
+                "$name": "SpawnPoint (2)",
+                "dropToGround": false,
+                "randomRot": false,
+                "randomRotSnapDegrees": 1.0,
+                "spawnEffect": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "OnObjectSpawnedEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "OnObjectRetiredEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "spawnPointType": {
+                  "$enum": "BaseSpawnPoint+SpawnPointType",
+                  "name": "Normal",
+                  "value": 0
+                },
+                "playerCheckMargin": 2.0
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "SpawnPoint (3)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 11.529999732971191,
+              "y": 0.71700000762939453,
+              "z": 1.1299999952316284
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 0.99999988079071045,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "GenericSpawnPoint",
+                "$name": "SpawnPoint (3)",
+                "dropToGround": false,
+                "randomRot": false,
+                "randomRotSnapDegrees": 1.0,
+                "spawnEffect": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "OnObjectSpawnedEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "OnObjectRetiredEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "spawnPointType": {
+                  "$enum": "BaseSpawnPoint+SpawnPointType",
+                  "name": "Normal",
+                  "value": 0
+                },
+                "playerCheckMargin": 2.0
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "SpawnPoint (4)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 2.6700000762939453,
+              "y": 0.62599998712539673,
+              "z": 8.6499996185302734
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "GenericSpawnPoint",
+                "$name": "SpawnPoint (4)",
+                "dropToGround": false,
+                "randomRot": false,
+                "randomRotSnapDegrees": 1.0,
+                "spawnEffect": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "OnObjectSpawnedEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "OnObjectRetiredEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "spawnPointType": {
+                  "$enum": "BaseSpawnPoint+SpawnPointType",
+                  "name": "Normal",
+                  "value": 0
+                },
+                "playerCheckMargin": 2.0
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "SpawnPoint (7)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.190000057220459,
+              "y": 0.60100001096725464,
+              "z": 11.010000228881836
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 0.99999988079071045,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "GenericSpawnPoint",
+                "$name": "SpawnPoint (7)",
+                "dropToGround": false,
+                "randomRot": false,
+                "randomRotSnapDegrees": 1.0,
+                "spawnEffect": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "OnObjectSpawnedEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "OnObjectRetiredEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "spawnPointType": {
+                  "$enum": "BaseSpawnPoint+SpawnPointType",
+                  "name": "Normal",
+                  "value": 0
+                },
+                "playerCheckMargin": 2.0
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "prevent_building (6)",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.SphereCollider",
+            "$name": "prevent_building (6)",
+            "colliderType": "Sphere",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "radius": 8.0,
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "Foliage",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "TerrainAnchor",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "Bobber",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -2.8399999141693115,
+          "y": 6.0399999618530273,
+          "z": 5.369999885559082
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "tugboat_a",
+        "layer": {
+          "index": 16,
+          "name": "World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 4.8899998664855957,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": -0.23481784760951996,
+          "y": -0.55458146333694458,
+          "z": -0.77936780452728271,
+          "w": 0.17287494242191315
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "tugboat_a",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "tugboat_a_COL",
+              "meshId": "tugboat_a_COL_4ece0e46"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Metal",
+              "instanceID": 609842
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "SharkSpawner",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Client Cull",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "SpawnGroup",
+            "name": "SharkSpawner",
+            "instanceID": 1558274,
+            "goName": "SharkSpawner",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": [
+          {
+            "name": "SpawnPoint",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 5.46999979019165,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "GenericSpawnPoint",
+                "$name": "SpawnPoint",
+                "dropToGround": false,
+                "randomRot": false,
+                "randomRotSnapDegrees": 1.0,
+                "spawnEffect": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "OnObjectSpawnedEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "OnObjectRetiredEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "spawnPointType": {
+                  "$enum": "BaseSpawnPoint+SpawnPointType",
+                  "name": "Normal",
+                  "value": 0
+                },
+                "playerCheckMargin": 2.0
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "MissionPoint",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 5.59499979019165,
+          "y": 4.7410001754760742,
+          "z": 5.38100004196167
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": -0.172001451253891,
+          "z": 0.0,
+          "w": 0.98509675264358521
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "MissionPoint",
+            "$name": "MissionPoint",
+            "dropToGround": true,
+            "Flags": {
+              "$enum": "MissionPoint+MissionPointEnum",
+              "name": "26",
+              "value": 26
+            }
+          }
+        ],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "TerrainAnchor": [
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(173.6, 232.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -9.0,
+          "y": 0.0,
+          "z": -6.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -9.0,
+          "y": 0.0,
+          "z": -6.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1518296,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(173.6, 235.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -9.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -9.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1518470,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(173.6, 238.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -9.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -9.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1515714,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(173.6, 241.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -9.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -9.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1515326,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(173.6, 244.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -9.0,
+          "y": 0.0,
+          "z": 6.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -9.0,
+          "y": 0.0,
+          "z": 6.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1512248,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(176.6, 229.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -6.0,
+          "y": 0.0,
+          "z": -9.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -6.0,
+          "y": 0.0,
+          "z": -9.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1517404,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(176.6, 232.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -6.0,
+          "y": 0.0,
+          "z": -6.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -6.0,
+          "y": 0.0,
+          "z": -6.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1513058,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(176.6, 235.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -6.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -6.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1513700,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(176.6, 238.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -6.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -6.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1514146,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(176.6, 241.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -6.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -6.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1512286,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(176.6, 244.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -6.0,
+          "y": 0.0,
+          "z": 6.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -6.0,
+          "y": 0.0,
+          "z": 6.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1511598,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(176.6, 247.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -6.0,
+          "y": 0.0,
+          "z": 9.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -6.0,
+          "y": 0.0,
+          "z": 9.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1514704,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(179.6, 229.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -3.0,
+          "y": 0.0,
+          "z": -9.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -3.0,
+          "y": 0.0,
+          "z": -9.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1511720,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(179.6, 232.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -3.0,
+          "y": 0.0,
+          "z": -6.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -3.0,
+          "y": 0.0,
+          "z": -6.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1512188,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(179.6, 235.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -3.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -3.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1514862,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(179.6, 238.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -3.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -3.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1518536,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(179.6, 241.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -3.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -3.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1515838,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(179.6, 244.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -3.0,
+          "y": 0.0,
+          "z": 6.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -3.0,
+          "y": 0.0,
+          "z": 6.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1518268,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(179.6, 247.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -3.0,
+          "y": 0.0,
+          "z": 9.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -3.0,
+          "y": 0.0,
+          "z": 9.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1513288,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(182.6, 229.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -9.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -9.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1513276,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(182.6, 232.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -6.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -6.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1516464,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(182.6, 235.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1514142,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(182.6, 238.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1514424,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(182.6, 241.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1518248,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(182.6, 244.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 6.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 6.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1515998,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(182.6, 247.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 9.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 9.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1517732,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(185.6, 229.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 3.0,
+          "y": 0.0,
+          "z": -9.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 3.0,
+          "y": 0.0,
+          "z": -9.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1511600,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(185.6, 232.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 3.0,
+          "y": 0.0,
+          "z": -6.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 3.0,
+          "y": 0.0,
+          "z": -6.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1512958,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(185.6, 235.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 3.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 3.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1513540,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(185.6, 238.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 3.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 3.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1517078,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(185.6, 241.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 3.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 3.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1516628,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(185.6, 244.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 3.0,
+          "y": 0.0,
+          "z": 6.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 3.0,
+          "y": 0.0,
+          "z": 6.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1513950,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(185.6, 247.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 3.0,
+          "y": 0.0,
+          "z": 9.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 3.0,
+          "y": 0.0,
+          "z": 9.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1513896,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(188.6, 229.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 6.0,
+          "y": 0.0,
+          "z": -9.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 6.0,
+          "y": 0.0,
+          "z": -9.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1515902,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(188.6, 232.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 6.0,
+          "y": 0.0,
+          "z": -6.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 6.0,
+          "y": 0.0,
+          "z": -6.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1518108,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(188.6, 235.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 6.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 6.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1516820,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(188.6, 238.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 6.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 6.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1517772,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(188.6, 241.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 6.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 6.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1512680,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(188.6, 244.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 6.0,
+          "y": 0.0,
+          "z": 6.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 6.0,
+          "y": 0.0,
+          "z": 6.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1517406,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(188.6, 247.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 6.0,
+          "y": 0.0,
+          "z": 9.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 6.0,
+          "y": 0.0,
+          "z": 9.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1511832,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(191.6, 232.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 9.0,
+          "y": 0.0,
+          "z": -6.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 9.0,
+          "y": 0.0,
+          "z": -6.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1515656,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(191.6, 235.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 9.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 9.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1512612,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(191.6, 238.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 9.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 9.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1518640,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(191.6, 241.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 9.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 9.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1516082,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/TerrainAnchor/(191.6, 244.4)",
+        "Extents": 2.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 9.0,
+          "y": 0.0,
+          "z": 6.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 9.0,
+          "y": 0.0,
+          "z": 6.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1513114,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "WaterCheck": [
+      {
+        "$type": "WaterCheck",
+        "$name": "<destroyed native object>",
+        "prefabID": 1891214172,
+        "hierachyName": "divesite_c/UnderwaterCheck",
+        "Rotate": true,
+        "worldPosition": {
+          "x": 0.699999988079071,
+          "y": 10.579999923706055,
+          "z": -1.8200000524520874
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.699999988079071,
+          "y": 10.579999923706055,
+          "z": -1.8200000524520874
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/divesite/divesite_c.prefab",
+        "instanceID": 1512020,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ]
+  }
+}

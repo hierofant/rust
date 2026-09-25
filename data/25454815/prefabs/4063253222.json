@@ -1,0 +1,2384 @@
+{
+  "prefabID": 4063253222,
+  "path": "assets/prefabs/misc/xmas/sled/sled.deployed.prefab",
+  "rootClassChain": [
+    "Sled",
+    "BaseVehicle",
+    "BaseMountable",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -0.00084680318832397461,
+      "y": 0.52999997138977051,
+      "z": 0.12116694450378418
+    },
+    "size": {
+      "x": 0.80604064464569092,
+      "y": 1.0,
+      "z": 1.9670901298522949
+    }
+  },
+  "hierarchy": {
+    "name": "sled.deployed",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "Sled",
+        "$name": "sled.deployed",
+        "BrakeMaterial": {
+          "$ref": "PhysicsMaterial",
+          "name": "Wood",
+          "instanceID": 609850
+        },
+        "SnowMaterial": {
+          "$ref": "PhysicsMaterial",
+          "name": "Sled No Friction",
+          "instanceID": 1022026
+        },
+        "NonSnowMaterial": {
+          "$ref": "PhysicsMaterial",
+          "name": "Sled Friction",
+          "instanceID": 1022024
+        },
+        "CentreOfMassTransform": [],
+        "PhysicsMaterialTargets": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "WorldCollision",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "size": {
+              "x": 0.81999999284744263,
+              "y": 0.68000000715255737,
+              "z": 1.8999999761581421
+            },
+            "isTrigger": false,
+            "enabled": true
+          },
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "DetailCollision",
+            "colliderType": "Mesh",
+            "convex": true,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "sled_COL",
+              "meshId": "sled_COL_bb7bc40a"
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "InitialForceCutoff": 1.0,
+        "InitialForceIncreaseRate": 0.05000000074505806,
+        "TurnForce": 9.0,
+        "DirectionMatchForce": 3.0,
+        "VerticalAdjustmentForce": 1.5,
+        "VerticalAdjustmentAngleThreshold": 10.0,
+        "NudgeCooldown": 3.0,
+        "NudgeForce": 30.0,
+        "MaxNudgeVelocity": 2.0,
+        "DecayAmount": 10.0,
+        "TrailEffects": null,
+        "enterSnowSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "sled-enter-snow",
+          "instanceID": 281864
+        },
+        "snowSlideLoopSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "sled-slide-snow-loop",
+          "instanceID": 507174
+        },
+        "dirtSlideLoopSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "sled-slide-dirt-loop",
+          "instanceID": 496250
+        },
+        "movementLoopGainCurve": {
+          "$type": "UnityEngine.AnimationCurve"
+        },
+        "movementLoopPitchCurve": {
+          "$type": "UnityEngine.AnimationCurve"
+        },
+        "terrainHandler": null,
+        "cachedMaterial": null,
+        "initialForceScale": 0.0,
+        "leftIce": {
+          "$type": "TimeSince"
+        },
+        "lastNudge": {
+          "$type": "TimeSince"
+        },
+        "timeSinceLastPush": {
+          "$type": "TimeSince"
+        },
+        "recentDrivers": [],
+        "clearRecentDriverAction": null,
+        "safeAreaRadius": 0.0,
+        "safeAreaOrigin": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "spawnTime": -1.0,
+        "checkVehicleClipping": false,
+        "excludeCollisionLayers": 0,
+        "dismountStyle": {
+          "$enum": "BaseVehicle+DismountStyle",
+          "name": "Closest",
+          "value": 0
+        },
+        "ignoreDamageFromOutside": false,
+        "npcVisibilityCategory": {
+          "$enum": "BaseVehicle+NpcVisibilityCategory",
+          "name": "LikeNormalPlayer",
+          "value": 0
+        },
+        "mountPoints": [
+          {
+            "$type": "BaseVehicle+MountPointInfo",
+            "isDriver": true,
+            "pos": {
+              "x": 0.0,
+              "y": 0.28999999165534973,
+              "z": 0.046999998390674591
+            },
+            "rot": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bone": "",
+            "prefab": {
+              "$ref": "GameObject",
+              "guid": "e972ba1b6fc70dc4db462dcaa260d9f5",
+              "resourcePath": "assets/prefabs/vehicle/seats/sledseatfront.prefab",
+              "resourceID": 1212881407
+            },
+            "mountable": null
+          },
+          {
+            "$type": "BaseVehicle+MountPointInfo",
+            "isDriver": true,
+            "pos": {
+              "x": 0.0,
+              "y": 0.32400000095367432,
+              "z": -0.65700000524520874
+            },
+            "rot": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bone": "",
+            "prefab": {
+              "$ref": "GameObject",
+              "guid": "578f5012337fefd4ba126dc2fc6efc23",
+              "resourcePath": "assets/prefabs/vehicle/seats/sledseatrear.prefab",
+              "resourceID": 518673090
+            },
+            "mountable": null
+          }
+        ],
+        "childMountableHandleDismountPoints": false,
+        "mountedPlayerRagdolls": {
+          "$enum": "BaseVehicle+RagdollMode",
+          "name": "Collide",
+          "value": 0
+        },
+        "clippingChecks": {
+          "$enum": "BaseVehicle+ClippingCheckMode",
+          "name": "Always",
+          "value": 1
+        },
+        "clippingAiChecks": {
+          "$enum": "BaseVehicle+ClippingCheckAiMode",
+          "name": "All",
+          "value": 0
+        },
+        "damageRenderer": null,
+        "explosionForceMultiplier": 150.0,
+        "explosionForceMax": 15000.0,
+        "HasBuildingPrivilege": false,
+        "mountSyncType": {
+          "$enum": "BaseMountable+MountSyncType",
+          "name": "RepositionPerFrame",
+          "value": 0
+        },
+        "eyePositionOverride": null,
+        "eyeCenterOverride": null,
+        "overrideEyesRotation": false,
+        "pitchClamp": {
+          "x": -80.0,
+          "y": 50.0
+        },
+        "yawClamp": {
+          "x": -80.0,
+          "y": 80.0
+        },
+        "canWieldItems": true,
+        "relativeViewAngles": true,
+        "disableLegsWhenMounted": false,
+        "disableBreastCensorshipWhenMounted": false,
+        "AllowForceMountWhenRestrained": false,
+        "mountChaining": true,
+        "mountAnchor": [],
+        "mountLOSVertOffset": 0.5,
+        "mountedAnimationSpeed": 0.0,
+        "mountPose": {
+          "$enum": "PlayerModel+MountPoses",
+          "name": "SitRaft",
+          "value": 8
+        },
+        "animateVehicleAim360": false,
+        "maxMountDistance": 20.0,
+        "dismountPositions": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        "checkPlayerLosOnMount": true,
+        "disableMeshCullingForPlayers": false,
+        "allowHeadLook": false,
+        "ignoreVehicleParent": false,
+        "legacyDismount": false,
+        "wearWhileMounted": null,
+        "modifiesPlayerCollider": false,
+        "customPlayerCollider": {
+          "$type": "BasePlayer+CapsuleColliderInfo",
+          "height": 0.0,
+          "radius": 0.0,
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "clippingCheckRadius": 0.40000000596046448,
+        "clippingAndVisChecks": false,
+        "clippingChecksLocation": {
+          "$enum": "BaseMountable+ClippingCheckLocation",
+          "name": "HeadOnly",
+          "value": 0
+        },
+        "mountSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "sled-mount",
+          "instanceID": 511972
+        },
+        "swapSoundDef": null,
+        "dismountSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "sled-dismount",
+          "instanceID": 288202
+        },
+        "allowFootstepEffects": false,
+        "dismountHoldType": {
+          "$enum": "BaseMountable+DismountConvarType",
+          "name": "Misc",
+          "value": 0
+        },
+        "mountTimeStatType": {
+          "$enum": "BaseMountable+MountStatType",
+          "name": "None",
+          "value": 0
+        },
+        "allowedGestures": {
+          "$enum": "BaseMountable+MountGestureType",
+          "name": "None",
+          "value": 0
+        },
+        "canDrinkWhileMounted": true,
+        "allowSleeperMounting": false,
+        "shouldShowHudHealth": false,
+        "blockLooting": false,
+        "animateClothInLocalSpace": true,
+        "protectsFromAnimals": true,
+        "MountedCameraMode": {
+          "$enum": "BasePlayer+CameraMode",
+          "name": "FirstPerson",
+          "value": 0
+        },
+        "rigidBody": {
+          "$type": "UnityEngine.Rigidbody",
+          "$name": "sled.deployed"
+        },
+        "wantsBoundaryRepelCheck": false,
+        "isMobile": true,
+        "SideLeanAmount": 0.20000000298023224,
+        "_mounted": null,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "DeployableWood",
+          "comments": "",
+          "density": 2.0,
+          "amounts": [
+            0.89999997615814209,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.89999997615814209,
+            0.5,
+            0.5,
+            0.0,
+            1.0,
+            1.0,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.5,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 3789131351
+        },
+        "startHealth": 200.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "sled.item",
+            "itemid": -333406828,
+            "shortname": "sled"
+          },
+          "itemCount": 1,
+          "setConditionFromHealth": true,
+          "subtractCondition": 0.25,
+          "requireBuildingPrivilege": false,
+          "requireHammer": true,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "sled.item",
+            "itemid": -333406828,
+            "shortname": "sled"
+          },
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": false,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -0.00084680318832397461,
+            "y": 0.52999997138977051,
+            "z": 0.12116694450378418
+          },
+          "size": {
+            "x": 0.80604064464569092,
+            "y": 1.0,
+            "z": 1.9670901298522949
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": true,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 4063253222,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Small",
+          "value": 0
+        },
+        "net": null
+      },
+      {
+        "$ref": "Rigidbody",
+        "name": "sled.deployed",
+        "instanceID": 1445226,
+        "goName": "sled.deployed",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$type": "PhysicsEffects",
+        "$name": "sled.deployed",
+        "entity": {
+          "$ref": "Sled",
+          "name": "sled.deployed",
+          "instanceID": 1513660,
+          "goName": "sled.deployed",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "physImpactSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "sled-impact",
+          "instanceID": 158364
+        },
+        "minTimeBetweenEffects": 0.25,
+        "minDistBetweenEffects": 0.10000000149011612,
+        "hardnessScale": 2.0,
+        "lowMedThreshold": 0.40000000596046448,
+        "medHardThreshold": 0.699999988079071,
+        "enableDelay": 0.10000000149011612,
+        "ignoreLayers": 8523776,
+        "useCollisionPositionInsteadOfTransform": false,
+        "minimumRigidbodyImpactWeight": 0.0
+      }
+    ],
+    "children": [
+      {
+        "name": "Dismounting",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "GameObject",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -1.5110000371932983,
+              "y": 0.79600024223327637,
+              "z": -1.4049999713897705
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "GameObject (1)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -1.5700000524520874,
+              "y": 0.79600000381469727,
+              "z": -0.25999999046325684
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "GameObject (2)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -1.559999942779541,
+              "y": 0.79600024223327637,
+              "z": 0.88999998569488525
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "GameObject (3)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -1.1699999570846558,
+              "y": 0.79600024223327637,
+              "z": 1.9900000095367432
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "GameObject (4)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.070000000298023224,
+              "y": 0.79600024223327637,
+              "z": 1.9800000190734863
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "GameObject (5)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.2799999713897705,
+              "y": 0.79600024223327637,
+              "z": 1.7400000095367432
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "GameObject (6)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.559999942779541,
+              "y": 0.79600024223327637,
+              "z": 0.60000002384185791
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "GameObject (7)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.5900000333786011,
+              "y": 0.79600024223327637,
+              "z": -0.51999998092651367
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "GameObject (8)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.6000000238418579,
+              "y": 0.79600024223327637,
+              "z": -1.6000000238418579
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "GameObject (9)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.034000001847743988,
+              "y": 0.79600024223327637,
+              "z": -1.7400000095367432
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "DismountEyes",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.29399999976158142,
+              "z": -0.31470000743865967
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "GameObject (15)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.039999999105930328,
+              "y": 0.84500002861022949,
+              "z": 1.1000000238418579
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "GameObject (16)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.33799999952316284,
+              "y": 0.82999998331069946,
+              "z": -0.11599999666213989
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "GameObject (17)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.38899999856948853,
+              "y": 0.81499999761581421,
+              "z": -0.052000001072883606
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "GameObject (18)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.06999969482421875,
+              "y": 0.88999998569488525,
+              "z": -1.2890000343322754
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "mountAnchor",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.51999998092651367,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "Server",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "WorldCollision",
+            "layer": {
+              "index": 15,
+              "name": "Vehicle World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.34999999403953552,
+              "z": 0.13899999856948853
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "BoxCollider",
+                "name": "WorldCollision",
+                "instanceID": 1461252,
+                "goName": "WorldCollision",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "DetailCollision",
+        "layer": {
+          "index": 13,
+          "name": "Vehicle Detailed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "DetailCollision",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": -0.0010000020265579224,
+              "z": -0.0049999989569187164
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "MeshCollider",
+                "name": "DetailCollision",
+                "instanceID": 1457872,
+                "goName": "DetailCollision",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "CentreOfMass",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.071999996900558472,
+          "z": -0.019999999552965164
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "preventBuilding",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 0.63041001558303833,
+          "y": 1.0,
+          "z": 0.48533999919891357
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "preventBuilding",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0008087158203125,
+              "y": 0.27603781223297119,
+              "z": -0.13401031494140625
+            },
+            "size": {
+              "x": 1.7799999713897705,
+              "y": 1.0299999713897705,
+              "z": 4.0500001907348633
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "TerrainSocket",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": -0.70710676908493042,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.7071068286895752
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "ColliderSocket(SnowMachine)",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": -0.70710676908493042,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.7071068286895752
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "VehicleKillTrigger",
+        "layer": {
+          "index": 18,
+          "name": "Trigger"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.18299999833106995
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "VehicleKillTrigger",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.00589752197265625,
+              "y": 0.45518290996551514,
+              "z": 0.016862869262695313
+            },
+            "size": {
+              "x": 1.3799999952316284,
+              "y": 1.5,
+              "z": 2.4600000381469727
+            },
+            "isTrigger": true,
+            "enabled": true
+          },
+          {
+            "$type": "TriggerNotify",
+            "$name": "VehicleKillTrigger",
+            "notifyTarget": {
+              "$ref": "GameObject",
+              "name": "sled.deployed",
+              "prefabID": 4063253222,
+              "instanceID": 1079554
+            },
+            "runClientside": false,
+            "runServerside": true,
+            "interestLayers": 40960,
+            "contents": null,
+            "entityContents": null,
+            "OnEntityEnterTrigger": null,
+            "OnEntityLeaveTrigger": null
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "LeftHandOffset",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -0.335999995470047,
+          "y": 0.29899999499320984,
+          "z": 0.16899999976158142
+        },
+        "localRotation": {
+          "x": -0.13038058578968048,
+          "y": -0.34166571497917175,
+          "z": 0.331830769777298,
+          "w": 0.86957108974456787
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "RightHandOffset",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.32499998807907104,
+          "y": 0.29580000042915344,
+          "z": 0.11079999804496765
+        },
+        "localRotation": {
+          "x": -0.13038055598735809,
+          "y": 0.34166562557220459,
+          "z": -0.331830769777298,
+          "w": 0.86957108974456787
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "DecorComponent": [
+      {
+        "$type": "DecorOffset",
+        "$name": "<destroyed native object>",
+        "prefabID": 4063253222,
+        "hierachyName": "sled.deployed",
+        "MinOffset": {
+          "x": 0.0,
+          "y": 2.0,
+          "z": 0.0
+        },
+        "MaxOffset": {
+          "x": 0.0,
+          "y": 2.0,
+          "z": 0.0
+        },
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/xmas/sled/sled.deployed.prefab",
+        "instanceID": 1514622,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Deployable": [
+      {
+        "$type": "Deployable",
+        "$name": "<destroyed native object>",
+        "prefabID": 4063253222,
+        "hierachyName": "sled.deployed",
+        "guidePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "guideMesh": null,
+        "guideMeshScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "overrideRotation": false,
+        "guideMeshOrientation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "guideMeshPositionOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "moveGuideTowardsCamera": true,
+        "guideLights": true,
+        "wantsInstanceData": false,
+        "copyInventoryFromItem": false,
+        "setSocketParent": false,
+        "toSlot": false,
+        "slot": {
+          "$enum": "BaseEntity+Slot",
+          "name": "Lock",
+          "value": 0
+        },
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "f94488791080143d580028f0ef4a8e01",
+          "resourcePath": "assets/prefabs/misc/xmas/sled/effects/sled-deploy.prefab",
+          "resourceID": 1553126150
+        },
+        "guideTargets": [],
+        "bounds": {
+          "center": {
+            "x": -0.00084680318832397461,
+            "y": 0.52999997138977051,
+            "z": 0.12116694450378418
+          },
+          "size": {
+            "x": 0.80604064464569092,
+            "y": 1.0,
+            "z": 1.9670901298522949
+          }
+        },
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/xmas/sled/sled.deployed.prefab",
+        "instanceID": 1560010,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Construction": [
+      {
+        "$type": "Construction",
+        "$name": "<destroyed native object>",
+        "prefabID": 4063253222,
+        "hierachyName": "sled.deployed",
+        "info": {
+          "$type": "BaseEntity+Menu+Option",
+          "name": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "description": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "icon": null,
+          "order": 0,
+          "usableWhileWounded": false
+        },
+        "canBypassBuildingPermission": false,
+        "showBuildingBlockedPreview": true,
+        "canPlaceOnRoads": false,
+        "canRotateBeforePlacement": true,
+        "canRotateAfterPlacement": false,
+        "canBeDeployedInDeepSeaWater": false,
+        "checkVolumeOnRotate": true,
+        "checkVolumeOnUpgrade": false,
+        "canPlaceAtMaxDistance": false,
+        "placeOnWater": false,
+        "overridePlacementLayer": false,
+        "overridedPlacementLayer": 0,
+        "additionalPlacementLayer": 0,
+        "rotationAmount": {
+          "x": 0.0,
+          "y": 90.0,
+          "z": 0.0
+        },
+        "applyStartingRotation": {
+          "x": 0.0,
+          "y": 180.0,
+          "z": 0.0
+        },
+        "deployOffset": null,
+        "enforceLineOfSightCheckAgainstParentEntity": false,
+        "canSnap": false,
+        "forceY": false,
+        "forceYValue": 0.0,
+        "forceYToOceanLevel": false,
+        "OceanLevelYOffset": 0.0,
+        "holdToPlaceDuration": 0.0,
+        "canFloodFillSockets": false,
+        "alternativeLOSChecks": false,
+        "alternativeLOSPositions": [],
+        "canUseLastValidPosition": true,
+        "healthMultiplier": 1.0,
+        "costMultiplier": 1.0,
+        "maxplaceDistance": 4.0,
+        "minPlaceDistance": 1.0,
+        "guideMesh": null,
+        "guideMeshMaterial": [],
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "hideBuildingPlannerViewmodel": false,
+        "allSockets": [
+          {
+            "$type": "Socket_Free",
+            "$name": "<destroyed native object>",
+            "prefabID": 4063253222,
+            "hierachyName": "sled.deployed/TerrainSocket",
+            "idealPlacementNormal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "useTargetNormal": true,
+            "snapToTargetProvidedRotations": false,
+            "blendAimAngle": true,
+            "male": true,
+            "maleDummy": false,
+            "female": false,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": false,
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": -0.70710676908493042,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.7071068286895752
+            },
+            "selectSize": {
+              "x": 2.0,
+              "y": 0.10000000149011612,
+              "z": 2.0
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            },
+            "socketName": "sled.deployed/TerrainSocket",
+            "socketMods": [
+              {
+                "$type": "SocketMod_AngleCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 4063253222,
+                "hierachyName": "sled.deployed/TerrainSocket/Angle",
+                "wantsAngle": true,
+                "worldNormal": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0
+                },
+                "withinDegrees": 90.0,
+                "usePlacementNormal": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.70710676908493042,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 5.9604644775390625E-08
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/misc/xmas/sled/sled.deployed.prefab",
+                "instanceID": 1539856,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_TerrainCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 4063253222,
+                "hierachyName": "sled.deployed/TerrainSocket/TerrainCheck",
+                "wantsInTerrain": true,
+                "preventWorldLayerInMonuments": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.70710676908493042,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 5.9604644775390625E-08
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/misc/xmas/sled/sled.deployed.prefab",
+                "instanceID": 1546178,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              }
+            ],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "worldRotation": {
+              "x": -0.70710676908493042,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.7071068286895752
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 5.9604644775390625E-08
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": -0.70710676908493042,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.7071068286895752
+            },
+            "fullName": "assets/prefabs/misc/xmas/sled/sled.deployed.prefab",
+            "instanceID": 1534072,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          },
+          {
+            "$type": "Socket_Free",
+            "$name": "<destroyed native object>",
+            "prefabID": 4063253222,
+            "hierachyName": "sled.deployed/ColliderSocket(SnowMachine)",
+            "idealPlacementNormal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "useTargetNormal": true,
+            "snapToTargetProvidedRotations": false,
+            "blendAimAngle": true,
+            "male": true,
+            "maleDummy": false,
+            "female": false,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": false,
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": -0.70710676908493042,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.7071068286895752
+            },
+            "selectSize": {
+              "x": 2.0,
+              "y": 0.10000000149011612,
+              "z": 2.0
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            },
+            "socketName": "sled.deployed/ColliderSocket(SnowMachine)",
+            "socketMods": [
+              {
+                "$type": "SocketMod_AngleCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 4063253222,
+                "hierachyName": "sled.deployed/ColliderSocket(SnowMachine)/Angle",
+                "wantsAngle": true,
+                "worldNormal": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0
+                },
+                "withinDegrees": 90.0,
+                "usePlacementNormal": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.70710676908493042,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 5.9604644775390625E-08
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/misc/xmas/sled/sled.deployed.prefab",
+                "instanceID": 1547200,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_PhysicMaterial",
+                "$name": "<destroyed native object>",
+                "prefabID": 4063253222,
+                "hierachyName": "sled.deployed/ColliderSocket(SnowMachine)/TerrainCheck",
+                "ValidMaterials": [
+                  {
+                    "$ref": "PhysicsMaterial",
+                    "name": "Snow",
+                    "instanceID": 1012632
+                  }
+                ],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.70710676908493042,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 5.9604644775390625E-08
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/misc/xmas/sled/sled.deployed.prefab",
+                "instanceID": 1567766,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              }
+            ],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "worldRotation": {
+              "x": -0.70710676908493042,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.7071068286895752
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 5.9604644775390625E-08
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": -0.70710676908493042,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.7071068286895752
+            },
+            "fullName": "assets/prefabs/misc/xmas/sled/sled.deployed.prefab",
+            "instanceID": 1526216,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          }
+        ],
+        "allProximities": [],
+        "defaultGrade": null,
+        "socketHandle": null,
+        "bounds": {
+          "center": {
+            "x": -0.00084680318832397461,
+            "y": 0.52999997138977051,
+            "z": 0.12116694450378418
+          },
+          "size": {
+            "x": 0.80604064464569092,
+            "y": 1.0,
+            "z": 1.9670901298522949
+          }
+        },
+        "isBuildingPrivilege": false,
+        "isSleepingBag": false,
+        "grades": [],
+        "deployable": {
+          "$ref": "Deployable",
+          "name": "<destroyed native object>",
+          "instanceID": 0,
+          "$error": "Object reference not set to an instance of an object.",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "placeholder": null,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/xmas/sled/sled.deployed.prefab",
+        "instanceID": 1543876,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "DeployVolume": [
+      {
+        "$type": "DeployVolumeEntityBounds",
+        "$name": "<destroyed native object>",
+        "prefabID": 4063253222,
+        "hierachyName": "sled.deployed",
+        "bounds": {
+          "center": {
+            "x": -0.00084680318832397461,
+            "y": 0.52999997138977051,
+            "z": 0.12116694450378418
+          },
+          "size": {
+            "x": 0.80604064464569092,
+            "y": 1.0,
+            "z": 1.9670901298522949
+          }
+        },
+        "layers": 1612840960,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/xmas/sled/sled.deployed.prefab",
+        "instanceID": 1576814,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 4063253222,
+        "hierachyName": "sled.deployed",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.72000002861022949,
+            "z": 0.11999999731779099
+          },
+          "size": {
+            "x": 1.0399999618530273,
+            "y": 1.1200000047683716,
+            "z": 2.0199999809265137
+          }
+        },
+        "layers": 1654849793,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/xmas/sled/sled.deployed.prefab",
+        "instanceID": 1529080,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Socket_Base": [
+      {
+        "$ref": "Socket_Free",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "Socket_Free",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "SocketMod": [
+      {
+        "$ref": "SocketMod_AngleCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_TerrainCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AngleCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_PhysicMaterial",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ]
+  }
+}

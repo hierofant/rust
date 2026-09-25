@@ -1,0 +1,4069 @@
+{
+  "prefabID": 2059775839,
+  "path": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+  "rootClassChain": [
+    "SamSite",
+    "ContainerIOEntity",
+    "IOEntity",
+    "DecayEntity",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 1.1920928955078125E-07,
+      "y": 1.6368602514266968,
+      "z": -0.092386960983276367
+    },
+    "size": {
+      "x": 1.9238908290863037,
+      "y": 3.2737209796905518,
+      "z": 2.1086647510528564
+    }
+  },
+  "hierarchy": {
+    "name": "sam_site_turret_deployed",
+    "layer": {
+      "index": 8,
+      "name": "Deployed"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "SamSite",
+        "$name": "sam_site_turret_deployed",
+        "pitchAnimator": null,
+        "yaw": {
+          "$ref": "GameObject",
+          "name": "rig_yaw",
+          "instanceID": 1079448
+        },
+        "pitch": {
+          "$ref": "GameObject",
+          "name": "turret_pitch_axle",
+          "instanceID": 1082152
+        },
+        "gear": {
+          "$ref": "GameObject",
+          "name": "gear_wheel",
+          "instanceID": 1087648
+        },
+        "eyePoint": [],
+        "gearEpislonDegrees": -4.0,
+        "turnSpeed": 1.0,
+        "clientLerpSpeed": 2.0,
+        "currentAimDir": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "targetAimDir": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "vehicleScanRadius": 150.0,
+        "missileScanRadius": 225.0,
+        "projectileTest": {
+          "$ref": "GameObject",
+          "guid": "bd443f1d235161a439a37b6518a195b7",
+          "resourcePath": "assets/prefabs/npc/sam_site_turret/rocket_sam.prefab",
+          "resourceID": 2160908677
+        },
+        "muzzleFlashTest": {
+          "$ref": "GameObject",
+          "guid": "be384afd5144bf44097277871fd26964",
+          "resourcePath": "assets/prefabs/npc/sam_site_turret/effects/tube_launch.prefab",
+          "resourceID": 1125943349
+        },
+        "staticRespawn": false,
+        "ammoType": {
+          "$ref": "ItemDefinition",
+          "name": "sam.rocket.item",
+          "itemid": -384243979,
+          "shortname": "ammo.rocket.sam"
+        },
+        "tubes": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        "yawMovementLoopDef": {
+          "$ref": "SoundDefinition",
+          "name": "yaw-movement-loop",
+          "instanceID": 93410
+        },
+        "yawGainLerp": 6.0,
+        "yawGainMovementSpeedMult": 0.30000001192092896,
+        "pitchMovementLoopDef": {
+          "$ref": "SoundDefinition",
+          "name": "pitch-movement-loop",
+          "instanceID": 477454
+        },
+        "pitchGainLerp": 10.0,
+        "pitchGainMovementSpeedMult": 0.5,
+        "lowAmmoThreshold": 10,
+        "Flag_TargetMode": {
+          "$enum": "BaseEntity+Flags",
+          "name": "Reserved9",
+          "value": 131072,
+          "flagNames": [
+            "Reserved9"
+          ]
+        },
+        "Flag_ManuallySetMode": {
+          "$enum": "BaseEntity+Flags",
+          "name": "Reserved10",
+          "value": 262144,
+          "flagNames": [
+            "Reserved10"
+          ]
+        },
+        "currentTarget": null,
+        "mostRecentTargetType": null,
+        "ammoItem": null,
+        "lockOnTime": 0.0,
+        "lastTargetVisibleTime": 0.0,
+        "lastAmmoCount": 0,
+        "currentTubeIndex": 0,
+        "firedCount": 0,
+        "onlyAllowedItem": {
+          "$ref": "ItemDefinition",
+          "name": "sam.rocket.item",
+          "itemid": -384243979,
+          "shortname": "ammo.rocket.sam"
+        },
+        "allowedContents": {
+          "$enum": "ItemContainer+ContentsType",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "maxStackSize": 0,
+        "numSlots": 6,
+        "lootPanelName": "generic_resizable",
+        "panelTitle": {
+          "$type": "Translate+Phrase",
+          "token": "turret_ammo_storage",
+          "legacyEnglish": "Ammo storage"
+        },
+        "needsBuildingPrivilegeToUse": true,
+        "requireAuthIfNotLocked": false,
+        "isLootable": true,
+        "isMonitorable": false,
+        "dropsLoot": true,
+        "dropLootDestroyPercent": 0.0,
+        "dropFloats": false,
+        "onlyOneUser": false,
+        "supportsChildDeployables": false,
+        "allowSorting": false,
+        "isLockable": false,
+        "openSound": {
+          "$ref": "SoundDefinition",
+          "name": "dropbox-open",
+          "instanceID": 27080
+        },
+        "closeSound": {
+          "$ref": "SoundDefinition",
+          "name": "dropbox-close",
+          "instanceID": 27120
+        },
+        "debugOrigin": [
+          [
+            []
+          ],
+          [
+            [],
+            [
+              [
+                [
+                  []
+                ],
+                [
+                  {
+                    "$ref": "Transform",
+                    "name": "Tube 1",
+                    "instanceID": 1274838,
+                    "goName": "Tube 1",
+                    "$alreadyDumpedElsewhereInThisFile": true
+                  },
+                  {
+                    "$ref": "Transform",
+                    "name": "Tube 2",
+                    "instanceID": 1291148,
+                    "goName": "Tube 2",
+                    "$alreadyDumpedElsewhereInThisFile": true
+                  },
+                  {
+                    "$ref": "Transform",
+                    "name": "Tube 3",
+                    "instanceID": 1291190,
+                    "goName": "Tube 3",
+                    "$alreadyDumpedElsewhereInThisFile": true
+                  },
+                  {
+                    "$ref": "Transform",
+                    "name": "Tube 4",
+                    "instanceID": 1289648,
+                    "goName": "Tube 4",
+                    "$alreadyDumpedElsewhereInThisFile": true
+                  },
+                  {
+                    "$ref": "Transform",
+                    "name": "Tube 5",
+                    "instanceID": 1272858,
+                    "goName": "Tube 5",
+                    "$alreadyDumpedElsewhereInThisFile": true
+                  },
+                  {
+                    "$ref": "Transform",
+                    "name": "Tube 6",
+                    "instanceID": 1287634,
+                    "goName": "Tube 6",
+                    "$alreadyDumpedElsewhereInThisFile": true
+                  }
+                ]
+              ]
+            ],
+            []
+          ],
+          [],
+          {
+            "$ref": "Transform",
+            "name": "EyePos",
+            "instanceID": 1291368,
+            "goName": "EyePos",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          [],
+          [],
+          [],
+          []
+        ],
+        "sourceItem": {
+          "$ref": "ItemDefinition",
+          "name": "sam.site.item",
+          "itemid": -1009359066,
+          "shortname": "samsite"
+        },
+        "lastResetIndex": 0,
+        "inputs": [
+          {
+            "$type": "IOEntity+IOSlot",
+            "niceName": "Power In",
+            "type": {
+              "$enum": "IOEntity+IOType",
+              "name": "Electric",
+              "value": 0
+            },
+            "connectedTo": {
+              "$type": "IOEntity+IORef",
+              "entityRef": {
+                "$type": "EntityRef"
+              },
+              "ioEnt": null
+            },
+            "connectedToSlot": 0,
+            "importance": {
+              "$enum": "IOHandlePriority",
+              "name": "Normal",
+              "value": 0
+            },
+            "ArrowOffset": 0.0,
+            "linePoints": [],
+            "lineAnchors": null,
+            "slackLevels": [],
+            "worldSpaceLineEndRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "line": null,
+            "handlePosition": {
+              "x": 0.0,
+              "y": 0.57999998331069946,
+              "z": -0.98000001907348633
+            },
+            "handleDirection": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -1.0
+            },
+            "rootConnectionsOnly": false,
+            "mainPowerSlot": true,
+            "wireColour": {
+              "$enum": "WireTool+WireColour",
+              "name": "Gray",
+              "value": 0
+            },
+            "lineThickness": 0.0
+          },
+          {
+            "$type": "IOEntity+IOSlot",
+            "niceName": "Invert Mode",
+            "type": {
+              "$enum": "IOEntity+IOType",
+              "name": "Electric",
+              "value": 0
+            },
+            "connectedTo": {
+              "$type": "IOEntity+IORef",
+              "entityRef": {
+                "$type": "EntityRef"
+              },
+              "ioEnt": null
+            },
+            "connectedToSlot": 0,
+            "importance": {
+              "$enum": "IOHandlePriority",
+              "name": "Normal",
+              "value": 0
+            },
+            "ArrowOffset": 0.0,
+            "linePoints": [],
+            "lineAnchors": null,
+            "slackLevels": [],
+            "worldSpaceLineEndRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "line": null,
+            "handlePosition": {
+              "x": -0.97000002861022949,
+              "y": 0.57999998331069946,
+              "z": 0.0
+            },
+            "handleDirection": {
+              "x": -1.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rootConnectionsOnly": false,
+            "mainPowerSlot": false,
+            "wireColour": {
+              "$enum": "WireTool+WireColour",
+              "name": "Gray",
+              "value": 0
+            },
+            "lineThickness": 0.0
+          }
+        ],
+        "outputs": [
+          {
+            "$type": "IOEntity+IOSlot",
+            "niceName": "Has Target",
+            "type": {
+              "$enum": "IOEntity+IOType",
+              "name": "Electric",
+              "value": 0
+            },
+            "connectedTo": {
+              "$type": "IOEntity+IORef",
+              "entityRef": {
+                "$type": "EntityRef"
+              },
+              "ioEnt": null
+            },
+            "connectedToSlot": 0,
+            "importance": {
+              "$enum": "IOHandlePriority",
+              "name": "Normal",
+              "value": 0
+            },
+            "ArrowOffset": 0.0,
+            "linePoints": [],
+            "lineAnchors": null,
+            "slackLevels": [],
+            "worldSpaceLineEndRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "line": null,
+            "handlePosition": {
+              "x": 0.949999988079071,
+              "y": 0.57999998331069946,
+              "z": -0.15999999642372131
+            },
+            "handleDirection": {
+              "x": 1.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rootConnectionsOnly": false,
+            "mainPowerSlot": false,
+            "wireColour": {
+              "$enum": "WireTool+WireColour",
+              "name": "Gray",
+              "value": 0
+            },
+            "lineThickness": 0.0
+          },
+          {
+            "$type": "IOEntity+IOSlot",
+            "niceName": "Low Ammo",
+            "type": {
+              "$enum": "IOEntity+IOType",
+              "name": "Electric",
+              "value": 0
+            },
+            "connectedTo": {
+              "$type": "IOEntity+IORef",
+              "entityRef": {
+                "$type": "EntityRef"
+              },
+              "ioEnt": null
+            },
+            "connectedToSlot": 0,
+            "importance": {
+              "$enum": "IOHandlePriority",
+              "name": "Normal",
+              "value": 0
+            },
+            "ArrowOffset": 0.0,
+            "linePoints": [],
+            "lineAnchors": null,
+            "slackLevels": [],
+            "worldSpaceLineEndRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "line": null,
+            "handlePosition": {
+              "x": 0.949999988079071,
+              "y": 0.57999998331069946,
+              "z": 0.0
+            },
+            "handleDirection": {
+              "x": 1.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rootConnectionsOnly": false,
+            "mainPowerSlot": false,
+            "wireColour": {
+              "$enum": "WireTool+WireColour",
+              "name": "Gray",
+              "value": 0
+            },
+            "lineThickness": 0.0
+          },
+          {
+            "$type": "IOEntity+IOSlot",
+            "niceName": "No Ammo",
+            "type": {
+              "$enum": "IOEntity+IOType",
+              "name": "Electric",
+              "value": 0
+            },
+            "connectedTo": {
+              "$type": "IOEntity+IORef",
+              "entityRef": {
+                "$type": "EntityRef"
+              },
+              "ioEnt": null
+            },
+            "connectedToSlot": 0,
+            "importance": {
+              "$enum": "IOHandlePriority",
+              "name": "Normal",
+              "value": 0
+            },
+            "ArrowOffset": 0.0,
+            "linePoints": [],
+            "lineAnchors": null,
+            "slackLevels": [],
+            "worldSpaceLineEndRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "line": null,
+            "handlePosition": {
+              "x": 0.949999988079071,
+              "y": 0.57999998331069946,
+              "z": 0.15999999642372131
+            },
+            "handleDirection": {
+              "x": 1.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rootConnectionsOnly": false,
+            "mainPowerSlot": false,
+            "wireColour": {
+              "$enum": "WireTool+WireColour",
+              "name": "Gray",
+              "value": 0
+            },
+            "lineThickness": 0.0
+          },
+          {
+            "$type": "IOEntity+IOSlot",
+            "niceName": "Passthrough",
+            "type": {
+              "$enum": "IOEntity+IOType",
+              "name": "Electric",
+              "value": 0
+            },
+            "connectedTo": {
+              "$type": "IOEntity+IORef",
+              "entityRef": {
+                "$type": "EntityRef"
+              },
+              "ioEnt": null
+            },
+            "connectedToSlot": 0,
+            "importance": {
+              "$enum": "IOHandlePriority",
+              "name": "Normal",
+              "value": 0
+            },
+            "ArrowOffset": 0.0,
+            "linePoints": [],
+            "lineAnchors": null,
+            "slackLevels": [],
+            "worldSpaceLineEndRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "line": null,
+            "handlePosition": {
+              "x": 0.949999988079071,
+              "y": 0.41999998688697815,
+              "z": 0.0
+            },
+            "handleDirection": {
+              "x": 1.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rootConnectionsOnly": false,
+            "mainPowerSlot": true,
+            "wireColour": {
+              "$enum": "WireTool+WireColour",
+              "name": "Gray",
+              "value": 0
+            },
+            "lineThickness": 0.0
+          }
+        ],
+        "ioType": {
+          "$enum": "IOEntity+IOType",
+          "name": "Electric",
+          "value": 0
+        },
+        "cachedOutputsUsed": 0,
+        "lastPassthroughEnergy": -1,
+        "lastEnergy": 0,
+        "currentEnergy": 0,
+        "lastUpdateTime": 0.0,
+        "lastUpdateBlockedFrame": 0,
+        "ensureOutputsUpdated": false,
+        "canBeDemolished": false,
+        "debrisPrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "debrisRotationOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "DebrisPositions": [],
+        "buildingID": 0,
+        "timePlaced": 0.0,
+        "decayTimer": 0.0,
+        "upkeepTimer": 0.0,
+        "upkeep": null,
+        "decay": null,
+        "decayPoints": null,
+        "lastDecayTick": 0.0,
+        "decayVariance": 1.0,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "SamSiteDeployed",
+          "comments": "",
+          "density": 1.0,
+          "amounts": [
+            0.89999997615814209,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.30000001192092896,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.5,
+            0.5,
+            0.0,
+            1.0,
+            1.0,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 3359097912
+        },
+        "startHealth": 1000.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "sam.site.item",
+            "itemid": -1009359066,
+            "shortname": "samsite"
+          },
+          "itemCount": 1,
+          "setConditionFromHealth": true,
+          "subtractCondition": 0.25,
+          "requireBuildingPrivilege": true,
+          "requireHammer": true,
+          "requireEmptyInv": true,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "sam.site.item",
+            "itemid": -1009359066,
+            "shortname": "samsite"
+          },
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": true,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 1.1920928955078125E-07,
+            "y": 1.6368602514266968,
+            "z": -0.092386960983276367
+          },
+          "size": {
+            "x": 1.9238908290863037,
+            "y": 3.2737209796905518,
+            "z": 2.1086647510528564
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "sam_site_turret_deployed",
+          "collision": null,
+          "rootBone": {
+            "$ref": "Transform",
+            "name": "sam_site_turret_deployed",
+            "instanceID": 1284258,
+            "goName": "sam_site_turret_deployed",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "sam_site_turret_deployed",
+              "instanceID": 1284258,
+              "goName": "sam_site_turret_deployed",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "sockets",
+              "instanceID": 1285756,
+              "goName": "sockets",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "free",
+              "instanceID": 1275810,
+              "goName": "free",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "rig_yaw",
+              "instanceID": 1289844,
+              "goName": "rig_yaw",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "gear_wheel",
+              "instanceID": 1288256,
+              "goName": "gear_wheel",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "sam_site_turret_pitch",
+              "instanceID": 1278736,
+              "goName": "sam_site_turret_pitch",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "root_piston",
+              "instanceID": 1291688,
+              "goName": "root_piston",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "piston_axle",
+              "instanceID": 1288610,
+              "goName": "piston_axle",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "piston_scale",
+              "instanceID": 1292046,
+              "goName": "piston_scale",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "turret_pitch_axle",
+              "instanceID": 1273224,
+              "goName": "turret_pitch_axle",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Tube 1",
+              "instanceID": 1274838,
+              "goName": "Tube 1",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Tube 2",
+              "instanceID": 1291148,
+              "goName": "Tube 2",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Tube 3",
+              "instanceID": 1291190,
+              "goName": "Tube 3",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Tube 4",
+              "instanceID": 1289648,
+              "goName": "Tube 4",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Tube 5",
+              "instanceID": 1272858,
+              "goName": "Tube 5",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Tube 6",
+              "instanceID": 1287634,
+              "goName": "Tube 6",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "PowerIn2",
+              "instanceID": 1359088,
+              "goName": "PowerIn2",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "sam_site_turret_base",
+              "instanceID": 1278764,
+              "goName": "sam_site_turret_base",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "EyePos",
+              "instanceID": 1291368,
+              "goName": "EyePos",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "tubeTest",
+              "instanceID": 1273064,
+              "goName": "tubeTest",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "preventMovement",
+              "instanceID": 1281620,
+              "goName": "preventMovement",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "deploy",
+              "instanceID": 1274702,
+              "goName": "deploy",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "preventBuilding",
+              "instanceID": 1283684,
+              "goName": "preventBuilding",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "sam_site_turret_deployed",
+            "sockets",
+            "free",
+            "preventbuilding",
+            "angle",
+            "notInSphere",
+            "notInSphere-sides",
+            "notInSphere-sides",
+            "notInSphere-sides",
+            "notInSphere-sides",
+            "notInWater",
+            "notInWater",
+            "notInWater",
+            "notInWater",
+            "notInWater",
+            "InSphere",
+            "InSphere (1)",
+            "InSphere (2)",
+            "InSphere (3)",
+            "InSphere (4)",
+            "check (1)",
+            "check (2)",
+            "check (3)",
+            "check (4)",
+            "rig_yaw",
+            "gear_wheel",
+            "sam_site_turret_pitch",
+            "root_piston",
+            "piston_axle",
+            "piston_scale",
+            "turret_pitch_axle",
+            "Tube 1",
+            "Tube 2",
+            "Tube 3",
+            "Tube 4",
+            "Tube 5",
+            "Tube 6",
+            "PowerIn2",
+            "sam_site_turret_base",
+            "EyePos",
+            "tubeTest",
+            "preventMovement",
+            "deploy",
+            "volume (1)",
+            "volume (2)",
+            "preventBuilding"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 2059775839,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": true,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$ref": "Model",
+        "name": "sam_site_turret_deployed",
+        "instanceID": 1518000,
+        "goName": "sam_site_turret_deployed",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$type": "GroundWatch",
+        "$name": "sam_site_turret_deployed",
+        "groundPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "layers": 27328512,
+        "radius": 0.10000000149011612,
+        "needBuildingBlock": false,
+        "needOnlyOneAreaCheckValid": false,
+        "whitelist": [],
+        "fails": 0,
+        "_baseEntity": null
+      },
+      {
+        "$type": "DestroyOnGroundMissing",
+        "$name": "sam_site_turret_deployed"
+      }
+    ],
+    "children": [
+      {
+        "name": "sockets",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "free",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "rig_yaw",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "rig_yaw",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "sam_site_turret_yaw_COL",
+              "meshId": "sam_site_turret_yaw_COL_15079102"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Metal",
+              "instanceID": 609842
+            }
+          }
+        ],
+        "children": [
+          {
+            "name": "gear_wheel",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.68102025985717773,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "sam_site_turret_pitch",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "root_piston",
+                "layer": {
+                  "index": 8,
+                  "name": "Deployed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": -6.1232336011813492E-17,
+                  "y": 6.1232336011813492E-17,
+                  "z": -6.1232336011813492E-17,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "piston_axle",
+                    "layer": {
+                      "index": 8,
+                      "name": "Deployed"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -1.82298606432596E-07,
+                      "y": 1.0826380252838135,
+                      "z": -0.14355376362800598
+                    },
+                    "localRotation": {
+                      "x": -0.3800491988658905,
+                      "y": 0.59629052877426147,
+                      "z": -0.38004949688911438,
+                      "w": 0.5962907075881958
+                    },
+                    "localScale": {
+                      "x": 1.0000001192092896,
+                      "y": 1.0000001192092896,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.MeshCollider",
+                        "$name": "piston_axle",
+                        "colliderType": "Mesh",
+                        "convex": false,
+                        "sharedMesh": {
+                          "$ref": "Mesh",
+                          "name": "sam_site_turret_piston_COL",
+                          "meshId": "sam_site_turret_piston_COL_11846de6"
+                        },
+                        "isTrigger": false,
+                        "enabled": true,
+                        "physicMaterial": {
+                          "$ref": "PhysicsMaterial",
+                          "name": "Metal",
+                          "instanceID": 609842
+                        }
+                      }
+                    ],
+                    "children": [
+                      {
+                        "name": "piston_scale",
+                        "layer": {
+                          "index": 8,
+                          "name": "Deployed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -1.1059290170669556,
+                          "y": 1.5258788721439487E-07,
+                          "z": -7.6293943607197434E-08
+                        },
+                        "localRotation": {
+                          "x": -1.3315805347247078E-07,
+                          "y": 6.1232349246703293E-17,
+                          "z": -6.1232329394368592E-17,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 0.99999982118606567,
+                          "y": 0.99999982118606567,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "turret_pitch_axle",
+                    "layer": {
+                      "index": 8,
+                      "name": "Deployed"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -3.5590593938650272E-07,
+                      "y": 1.8528133630752563,
+                      "z": -0.58061844110488892
+                    },
+                    "localRotation": {
+                      "x": 0.092295937240123749,
+                      "y": 0.70105743408203125,
+                      "z": 0.092295929789543152,
+                      "w": 0.70105737447738647
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.MeshCollider",
+                        "$name": "turret_pitch_axle",
+                        "colliderType": "Mesh",
+                        "convex": false,
+                        "sharedMesh": {
+                          "$ref": "Mesh",
+                          "name": "sam_site_turret_pitch_COL",
+                          "meshId": "sam_site_turret_pitch_COL_34e15e49"
+                        },
+                        "isTrigger": false,
+                        "enabled": true,
+                        "physicMaterial": {
+                          "$ref": "PhysicsMaterial",
+                          "name": "Metal",
+                          "instanceID": 609842
+                        }
+                      }
+                    ],
+                    "children": [
+                      {
+                        "name": "Tube 1",
+                        "layer": {
+                          "index": 8,
+                          "name": "Deployed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -1.1990000009536743,
+                          "y": 1.0160000324249268,
+                          "z": 0.42300000786781311
+                        },
+                        "localRotation": {
+                          "x": -0.089198537170887,
+                          "y": -0.70145827531814575,
+                          "z": -0.08919854462146759,
+                          "w": 0.701458215713501
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": []
+                      },
+                      {
+                        "name": "Tube 2",
+                        "layer": {
+                          "index": 8,
+                          "name": "Deployed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -1.1990000009536743,
+                          "y": 1.0160000324249268,
+                          "z": -0.0070000002160668373
+                        },
+                        "localRotation": {
+                          "x": -0.0891985297203064,
+                          "y": -0.70145827531814575,
+                          "z": -0.089198537170887,
+                          "w": 0.701458215713501
+                        },
+                        "localScale": {
+                          "x": 1.0000001192092896,
+                          "y": 0.99999988079071045,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": []
+                      },
+                      {
+                        "name": "Tube 3",
+                        "layer": {
+                          "index": 8,
+                          "name": "Deployed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -1.1990000009536743,
+                          "y": 1.0160000324249268,
+                          "z": -0.43900001049041748
+                        },
+                        "localRotation": {
+                          "x": -0.0891985297203064,
+                          "y": -0.70145827531814575,
+                          "z": -0.089198537170887,
+                          "w": 0.701458215713501
+                        },
+                        "localScale": {
+                          "x": 1.0000001192092896,
+                          "y": 0.99999988079071045,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": []
+                      },
+                      {
+                        "name": "Tube 4",
+                        "layer": {
+                          "index": 8,
+                          "name": "Deployed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -1.284000039100647,
+                          "y": 0.68699997663497925,
+                          "z": 0.42699998617172241
+                        },
+                        "localRotation": {
+                          "x": -0.0891985297203064,
+                          "y": -0.70145827531814575,
+                          "z": -0.089198537170887,
+                          "w": 0.701458215713501
+                        },
+                        "localScale": {
+                          "x": 1.0000001192092896,
+                          "y": 0.99999988079071045,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": []
+                      },
+                      {
+                        "name": "Tube 5",
+                        "layer": {
+                          "index": 8,
+                          "name": "Deployed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -1.284000039100647,
+                          "y": 0.68699997663497925,
+                          "z": -0.0070000002160668373
+                        },
+                        "localRotation": {
+                          "x": -0.0891985297203064,
+                          "y": -0.70145827531814575,
+                          "z": -0.089198537170887,
+                          "w": 0.701458215713501
+                        },
+                        "localScale": {
+                          "x": 1.0000001192092896,
+                          "y": 0.99999988079071045,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": []
+                      },
+                      {
+                        "name": "Tube 6",
+                        "layer": {
+                          "index": 8,
+                          "name": "Deployed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -1.284000039100647,
+                          "y": 0.68699997663497925,
+                          "z": -0.43900001049041748
+                        },
+                        "localRotation": {
+                          "x": -0.0891985297203064,
+                          "y": -0.70145827531814575,
+                          "z": -0.089198537170887,
+                          "w": 0.701458215713501
+                        },
+                        "localScale": {
+                          "x": 1.0000001192092896,
+                          "y": 0.99999988079071045,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "PowerIn2",
+            "layer": {
+              "index": 16,
+              "name": "World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.000701904296875,
+              "y": 0.82099997997283936,
+              "z": -0.54349994659423828
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "sam_site_turret_base",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "sam_site_turret_base",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "sam_site_turret_base_COL",
+              "meshId": "sam_site_turret_base_COL_6c177674"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Concrete",
+              "instanceID": 609832
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "EyePos",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 2.5710000991821289,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "tubeTest",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 4.1620001792907715,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "preventMovement",
+        "layer": {
+          "index": 28,
+          "name": "Prevent Movement"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.CapsuleCollider",
+            "$name": "preventMovement",
+            "colliderType": "Capsule",
+            "center": {
+              "x": 0.0,
+              "y": 1.7300000190734863,
+              "z": 0.0
+            },
+            "radius": 0.9100000262260437,
+            "height": 3.809999942779541,
+            "direction": 1,
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "deploy",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "preventBuilding",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "preventBuilding",
+            "colliderType": "Box",
+            "center": {
+              "x": -0.008331298828125,
+              "y": 1.8979408740997314,
+              "z": 0.0
+            },
+            "size": {
+              "x": 1.915679931640625,
+              "y": 3.763669490814209,
+              "z": 1.9656181335449219
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Deployable": [
+      {
+        "$type": "Deployable",
+        "$name": "<destroyed native object>",
+        "prefabID": 2059775839,
+        "hierachyName": "sam_site_turret_deployed",
+        "guidePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "guideMesh": {
+          "$ref": "Mesh",
+          "name": "sam_site_turret_guide",
+          "meshId": "sam_site_turret_guide_4119d6c0"
+        },
+        "guideMeshScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "overrideRotation": false,
+        "guideMeshOrientation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "guideMeshPositionOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "moveGuideTowardsCamera": true,
+        "guideLights": true,
+        "wantsInstanceData": false,
+        "copyInventoryFromItem": false,
+        "setSocketParent": false,
+        "toSlot": false,
+        "slot": {
+          "$enum": "BaseEntity+Slot",
+          "name": "Lock",
+          "value": 0
+        },
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "006bdc7cb31c34760a9a2d903bd2dc00",
+          "resourcePath": "assets/prefabs/deployable/furnace.large/effects/enabled.prefab",
+          "resourceID": 1088301580
+        },
+        "guideTargets": [],
+        "bounds": {
+          "center": {
+            "x": 1.1920928955078125E-07,
+            "y": 1.6368602514266968,
+            "z": -0.092386960983276367
+          },
+          "size": {
+            "x": 1.9238908290863037,
+            "y": 3.2737209796905518,
+            "z": 2.1086647510528564
+          }
+        },
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+        "instanceID": 1515162,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Construction": [
+      {
+        "$type": "Construction",
+        "$name": "<destroyed native object>",
+        "prefabID": 2059775839,
+        "hierachyName": "sam_site_turret_deployed",
+        "info": {
+          "$type": "BaseEntity+Menu+Option",
+          "name": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "description": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "icon": null,
+          "order": 0,
+          "usableWhileWounded": false
+        },
+        "canBypassBuildingPermission": false,
+        "showBuildingBlockedPreview": true,
+        "canPlaceOnRoads": false,
+        "canRotateBeforePlacement": true,
+        "canRotateAfterPlacement": true,
+        "canBeDeployedInDeepSeaWater": false,
+        "checkVolumeOnRotate": false,
+        "checkVolumeOnUpgrade": false,
+        "canPlaceAtMaxDistance": true,
+        "placeOnWater": false,
+        "overridePlacementLayer": false,
+        "overridedPlacementLayer": 0,
+        "additionalPlacementLayer": 0,
+        "rotationAmount": {
+          "x": 0.0,
+          "y": 90.0,
+          "z": 0.0
+        },
+        "applyStartingRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "deployOffset": null,
+        "enforceLineOfSightCheckAgainstParentEntity": false,
+        "canSnap": false,
+        "forceY": false,
+        "forceYValue": 0.0,
+        "forceYToOceanLevel": false,
+        "OceanLevelYOffset": 0.0,
+        "holdToPlaceDuration": 0.0,
+        "canFloodFillSockets": false,
+        "alternativeLOSChecks": false,
+        "alternativeLOSPositions": [],
+        "canUseLastValidPosition": true,
+        "healthMultiplier": 1.0,
+        "costMultiplier": 1.0,
+        "maxplaceDistance": 6.0,
+        "minPlaceDistance": 1.0,
+        "guideMesh": null,
+        "guideMeshMaterial": [],
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "hideBuildingPlannerViewmodel": false,
+        "allSockets": [
+          {
+            "$type": "Socket_Terrain",
+            "$name": "<destroyed native object>",
+            "prefabID": 2059775839,
+            "hierachyName": "sam_site_turret_deployed/sockets/free",
+            "placementHeight": 0.0,
+            "alignToNormal": false,
+            "male": true,
+            "maleDummy": false,
+            "female": false,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": false,
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "selectSize": {
+              "x": 2.0,
+              "y": 0.10000000149011612,
+              "z": 2.0
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            },
+            "socketName": "SAM_site_turret_deployed/sockets/free",
+            "socketMods": [
+              {
+                "$type": "SocketMod_AngleCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 2059775839,
+                "hierachyName": "sam_site_turret_deployed/sockets/free/angle",
+                "wantsAngle": true,
+                "worldNormal": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0
+                },
+                "withinDegrees": 1.0,
+                "usePlacementNormal": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+                "instanceID": 1514768,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 2059775839,
+                "hierachyName": "sam_site_turret_deployed/sockets/free/notInSphere",
+                "sphereRadius": 1.0,
+                "layerMask": 1621295361,
+                "wantsCollide": false,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 1.4379998445510864,
+                  "z": -1.1920928955078125E-07
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.437999963760376
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+                "instanceID": 1515878,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 2059775839,
+                "hierachyName": "sam_site_turret_deployed/sockets/free/notInSphere-sides",
+                "sphereRadius": 1.0,
+                "layerMask": 1621164033,
+                "wantsCollide": false,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 1.4380000829696655,
+                  "z": 1.4159997701644897
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": -1.4160000085830688,
+                  "z": 1.437999963760376
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+                "instanceID": 1517712,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 2059775839,
+                "hierachyName": "sam_site_turret_deployed/sockets/free/notInSphere-sides",
+                "sphereRadius": 1.0,
+                "layerMask": 1621164033,
+                "wantsCollide": false,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 1.281000018119812,
+                  "y": 1.4379998445510864,
+                  "z": -0.0070000886917114258
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 1.281000018119812,
+                  "y": 0.0070000002160668373,
+                  "z": 1.437999963760376
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+                "instanceID": 1517358,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 2059775839,
+                "hierachyName": "sam_site_turret_deployed/sockets/free/notInSphere-sides",
+                "sphereRadius": 1.0,
+                "layerMask": 1621164033,
+                "wantsCollide": false,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -0.039999999105930328,
+                  "y": 1.4369997978210449,
+                  "z": -1.2599999904632568
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -0.039999999105930328,
+                  "y": 1.2599999904632568,
+                  "z": 1.437000036239624
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+                "instanceID": 1517826,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 2059775839,
+                "hierachyName": "sam_site_turret_deployed/sockets/free/notInSphere-sides",
+                "sphereRadius": 1.0,
+                "layerMask": 1621164033,
+                "wantsCollide": false,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -1.3980000019073486,
+                  "y": 1.4369999170303345,
+                  "z": -0.034000158309936523
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -1.3980000019073486,
+                  "y": 0.034000001847743988,
+                  "z": 1.437000036239624
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+                "instanceID": 1513552,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_InWater",
+                "$name": "<destroyed native object>",
+                "prefabID": 2059775839,
+                "hierachyName": "sam_site_turret_deployed/sockets/free/notInWater",
+                "wantsInWater": false,
+                "excludeArtificialWater": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 1.7899999618530273,
+                  "y": 0.21999998390674591,
+                  "z": 0.028999969363212585
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 1.7899999618530273,
+                  "y": -0.028999999165534973,
+                  "z": 0.2199999988079071
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+                "instanceID": 1515642,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_InWater",
+                "$name": "<destroyed native object>",
+                "prefabID": 2059775839,
+                "hierachyName": "sam_site_turret_deployed/sockets/free/notInWater",
+                "wantsInWater": false,
+                "excludeArtificialWater": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -1.8710000514984131,
+                  "y": 0.21999998390674591,
+                  "z": 0.028999969363212585
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -1.8710000514984131,
+                  "y": -0.028999999165534973,
+                  "z": 0.2199999988079071
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.99999982118606567,
+                  "z": 0.99999982118606567
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+                "instanceID": 1513354,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_InWater",
+                "$name": "<destroyed native object>",
+                "prefabID": 2059775839,
+                "hierachyName": "sam_site_turret_deployed/sockets/free/notInWater",
+                "wantsInWater": false,
+                "excludeArtificialWater": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -0.013000000268220901,
+                  "y": 0.22000026702880859,
+                  "z": 1.8559998273849487
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -0.013000000268220901,
+                  "y": -1.8559999465942383,
+                  "z": 0.2199999988079071
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.99999964237213135,
+                  "z": 0.99999964237213135
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+                "instanceID": 1512018,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_InWater",
+                "$name": "<destroyed native object>",
+                "prefabID": 2059775839,
+                "hierachyName": "sam_site_turret_deployed/sockets/free/notInWater",
+                "wantsInWater": false,
+                "excludeArtificialWater": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -0.01300048828125,
+                  "y": 0.21999979019165039,
+                  "z": -1.9479997158050537
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -0.01300048828125,
+                  "y": 1.9479999542236328,
+                  "z": 0.2199999988079071
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.999999463558197,
+                  "z": 0.999999463558197
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+                "instanceID": 1516164,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_InWater",
+                "$name": "<destroyed native object>",
+                "prefabID": 2059775839,
+                "hierachyName": "sam_site_turret_deployed/sockets/free/notInWater",
+                "wantsInWater": false,
+                "excludeArtificialWater": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -0.01300048828125,
+                  "y": 0.21999998390674591,
+                  "z": -0.0020000338554382324
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -0.01300048828125,
+                  "y": 0.0020000000949949026,
+                  "z": 0.2199999988079071
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.9999992847442627,
+                  "z": 0.9999992847442627
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+                "instanceID": 1516304,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 2059775839,
+                "hierachyName": "sam_site_turret_deployed/sockets/free/InSphere",
+                "sphereRadius": 0.10000000149011612,
+                "layerMask": 2097152,
+                "wantsCollide": true,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 1.1920928955078125E-07,
+                  "z": 0.84299993515014648
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": -0.84299999475479126,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.9999997615814209,
+                  "z": 0.9999997615814209
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+                "instanceID": 1516622,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 2059775839,
+                "hierachyName": "sam_site_turret_deployed/sockets/free/InSphere (1)",
+                "sphereRadius": 0.10000000149011612,
+                "layerMask": 2097152,
+                "wantsCollide": true,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": -1.1920928955078125E-07,
+                  "z": -0.85599994659423828
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.85600000619888306,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.9999997615814209,
+                  "z": 0.9999997615814209
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+                "instanceID": 1514300,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 2059775839,
+                "hierachyName": "sam_site_turret_deployed/sockets/free/InSphere (2)",
+                "sphereRadius": 0.10000000149011612,
+                "layerMask": 2097152,
+                "wantsCollide": true,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.9999997615814209,
+                  "z": 0.9999997615814209
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+                "instanceID": 1517810,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 2059775839,
+                "hierachyName": "sam_site_turret_deployed/sockets/free/InSphere (3)",
+                "sphereRadius": 0.10000000149011612,
+                "layerMask": 2097152,
+                "wantsCollide": true,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.871999979019165,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.871999979019165,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.9999997615814209,
+                  "z": 0.9999997615814209
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+                "instanceID": 1515102,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 2059775839,
+                "hierachyName": "sam_site_turret_deployed/sockets/free/InSphere (4)",
+                "sphereRadius": 0.10000000149011612,
+                "layerMask": 2097152,
+                "wantsCollide": true,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -0.8190000057220459,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -0.8190000057220459,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.9999997615814209,
+                  "z": 0.9999997615814209
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+                "instanceID": 1512782,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 2059775839,
+                "hierachyName": "sam_site_turret_deployed/sockets/free/check (1)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.20000000298023224,
+                    "y": 0.20000000298023224,
+                    "z": 0.20000000298023224
+                  }
+                },
+                "layerMask": 10485760,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 5.9604644775390625E-08,
+                  "z": 0.59999996423721313
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": -0.60000002384185791,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+                "instanceID": 1519084,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 2059775839,
+                "hierachyName": "sam_site_turret_deployed/sockets/free/check (2)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.20000000298023224,
+                    "y": 0.20000000298023224,
+                    "z": 0.20000000298023224
+                  }
+                },
+                "layerMask": 10485760,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": -5.9604644775390625E-08,
+                  "z": -0.59999996423721313
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.60000002384185791,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+                "instanceID": 1543290,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 2059775839,
+                "hierachyName": "sam_site_turret_deployed/sockets/free/check (3)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.20000000298023224,
+                    "y": 0.20000000298023224,
+                    "z": 0.20000000298023224
+                  }
+                },
+                "layerMask": 10485760,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.60000002384185791,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.60000002384185791,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+                "instanceID": 1563136,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 2059775839,
+                "hierachyName": "sam_site_turret_deployed/sockets/free/check (4)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.20000000298023224,
+                    "y": 0.20000000298023224,
+                    "z": 0.20000000298023224
+                  }
+                },
+                "layerMask": 10485760,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -0.60000002384185791,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -0.60000002384185791,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+                "instanceID": 1548658,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              }
+            ],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "worldRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": 0.99999994039535522,
+              "z": -1.1920928955078125E-07
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+            "instanceID": 1512682,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          }
+        ],
+        "allProximities": [],
+        "defaultGrade": null,
+        "socketHandle": null,
+        "bounds": {
+          "center": {
+            "x": 1.1920928955078125E-07,
+            "y": 1.6368602514266968,
+            "z": -0.092386960983276367
+          },
+          "size": {
+            "x": 1.9238908290863037,
+            "y": 3.2737209796905518,
+            "z": 2.1086647510528564
+          }
+        },
+        "isBuildingPrivilege": false,
+        "isSleepingBag": false,
+        "grades": [],
+        "deployable": {
+          "$ref": "Deployable",
+          "name": "<destroyed native object>",
+          "instanceID": 0,
+          "$error": "Object reference not set to an instance of an object.",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "placeholder": null,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+        "instanceID": 1516738,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Decay": [
+      {
+        "$type": "DeployableDecay",
+        "$name": "<destroyed native object>",
+        "prefabID": 2059775839,
+        "hierachyName": "sam_site_turret_deployed",
+        "decayDelay": 8.0,
+        "decayDuration": 12.0,
+        "overrideHealRate": false,
+        "decayTickOverride": 0.0,
+        "decayIndoors": false,
+        "healRate": 1.0,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+        "instanceID": 1518596,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Socket_Base": [
+      {
+        "$ref": "Socket_Terrain",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "DeployVolume": [
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 2059775839,
+        "hierachyName": "sam_site_turret_deployed/sockets/free/preventbuilding",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "size": {
+            "x": 3.5999999046325684,
+            "y": 3.5999999046325684,
+            "z": 2.0
+          }
+        },
+        "layers": 537001984,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 1.0879999399185181,
+          "z": -1.1920928955078125E-07
+        },
+        "worldRotation": {
+          "x": -0.7071068286895752,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.70710670948028564
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.99999994039535522,
+          "z": -1.1920928955078125E-07
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0880000591278076
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+        "instanceID": 1507344,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 2059775839,
+        "hierachyName": "sam_site_turret_deployed/deploy/volume (1)",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 2.0,
+            "z": 0.0
+          },
+          "size": {
+            "x": 2.0,
+            "y": 4.0,
+            "z": 2.0
+          }
+        },
+        "layers": 539099136,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.020999999716877937,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.020999999716877937,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+        "instanceID": 1513318,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 2059775839,
+        "hierachyName": "sam_site_turret_deployed/deploy/volume (2)",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 1.6299999952316284,
+            "z": 0.0
+          },
+          "size": {
+            "x": 1.8600000143051147,
+            "y": 3.1800000667572021,
+            "z": 1.6000000238418579
+          }
+        },
+        "layers": 8454144,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/npc/sam_site_turret/sam_site_turret_deployed.prefab",
+        "instanceID": 1518142,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "SocketMod": [
+      {
+        "$ref": "SocketMod_AngleCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_InWater",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_InWater",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_InWater",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_InWater",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_InWater",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ]
+  }
+}

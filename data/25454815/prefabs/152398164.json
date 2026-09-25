@@ -1,0 +1,4003 @@
+{
+  "prefabID": 152398164,
+  "path": "assets/rust.ai/agents/chicken/chicken.prefab",
+  "rootClassChain": [
+    "Chicken",
+    "BaseAnimalNPC",
+    "BaseNpc",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.0,
+      "y": 0.30000001192092896,
+      "z": -0.02500000037252903
+    },
+    "size": {
+      "x": 0.60000002384185791,
+      "y": 0.800000011920929,
+      "z": 1.1000000238418579
+    }
+  },
+  "hierarchy": {
+    "name": "chicken",
+    "layer": {
+      "index": 11,
+      "name": "AI"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "Chicken",
+        "$name": "chicken",
+        "EggDefinition": {
+          "$ref": "ItemDefinition",
+          "name": "egg.item",
+          "itemid": 1858828593,
+          "shortname": "egg"
+        },
+        "EggDropFrequency": 30.0,
+        "EggDropLocalPos": {
+          "x": 0.0,
+          "y": 0.25,
+          "z": -0.30000001192092896
+        },
+        "deathStatName": "kill_chicken",
+        "brain": null,
+        "ChaseTransform": null,
+        "agentTypeIndex": 1,
+        "NewAI": true,
+        "LegacyNavigation": false,
+        "canSwim": true,
+        "waterDepth": 0.0,
+        "swimming": false,
+        "wasSwimming": false,
+        "nextAttackTime": 0.0,
+        "topologyPreference": {
+          "$enum": "TerrainTopology+Enum",
+          "name": "Forest, Forestside",
+          "value": 96,
+          "flagNames": [
+            "Forest",
+            "Forestside"
+          ]
+        },
+        "aiFlags": {
+          "$enum": "BaseNpc+AiFlags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "CurrentFacts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ForgetUnseenEntityTime": 10,
+        "SensesTickRate": 0.5,
+        "SensesResults": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "playerTargetDecisionStartTime": 0.0,
+        "CorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "652194f761e54364cb9f0a1271d50dc7",
+          "resourcePath": "assets/rust.ai/agents/chicken/chicken.corpse.prefab",
+          "resourceID": 345706504
+        },
+        "Stats": {
+          "$type": "BaseNpc+AiStatistics",
+          "Size": 0.20000000298023224,
+          "Speed": 2.0,
+          "Acceleration": 1.0,
+          "TurnSpeed": 4.0,
+          "Tolerance": 1.0,
+          "VisionRange": 10.0,
+          "VisionCone": 0.89999997615814209,
+          "DistanceVisibility": {
+            "$type": "UnityEngine.AnimationCurve"
+          },
+          "Hostility": 0.15000000596046448,
+          "Defensiveness": 0.0,
+          "AggressionRange": 3.0,
+          "DeaggroRange": 6.0,
+          "DeaggroChaseTime": 4.0,
+          "DeaggroCooldown": 2.0,
+          "HealthThresholdForFleeing": 0.89999997615814209,
+          "HealthThresholdFleeChance": 1.0,
+          "MinFleeRange": 10.0,
+          "MaxFleeRange": 20.0,
+          "MaxFleeTime": 60.0,
+          "AfraidRange": 8.0,
+          "Family": {
+            "$enum": "BaseNpc+AiStatistics+FamilyEnum",
+            "name": "Chicken",
+            "value": 4
+          },
+          "IsAfraidOf": [
+            {
+              "$enum": "BaseNpc+AiStatistics+FamilyEnum",
+              "name": "Bear",
+              "value": 0
+            },
+            {
+              "$enum": "BaseNpc+AiStatistics+FamilyEnum",
+              "name": "Wolf",
+              "value": 1
+            },
+            {
+              "$enum": "BaseNpc+AiStatistics+FamilyEnum",
+              "name": "Zombie",
+              "value": 6
+            },
+            {
+              "$enum": "BaseNpc+AiStatistics+FamilyEnum",
+              "name": "Scientist",
+              "value": 7
+            },
+            {
+              "$enum": "BaseNpc+AiStatistics+FamilyEnum",
+              "name": "Murderer",
+              "value": 8
+            },
+            {
+              "$enum": "BaseNpc+AiStatistics+FamilyEnum",
+              "name": "Player",
+              "value": 9
+            }
+          ],
+          "MinRoamRange": 15.0,
+          "MaxRoamRange": 25.0,
+          "MinRoamDelay": 2.0,
+          "MaxRoamDelay": 15.0,
+          "IsMobile": false,
+          "RoamDelayDistribution": {
+            "$type": "UnityEngine.AnimationCurve"
+          },
+          "AttackedMemoryTime": 10.0,
+          "WakeupBlockMoveTime": 1.2000000476837158,
+          "MaxWaterDepth": 0.10000000149011612,
+          "WaterLevelNeck": 0.34999999403953552,
+          "WaterLevelNeckOffset": 0.0,
+          "CloseRange": 0.0,
+          "MediumRange": 0.0,
+          "LongRange": 0.0,
+          "OutOfRangeOfSpawnPointTimeout": 0.0,
+          "OnlyAggroMarkedTargets": false
+        },
+        "AttackOffset": {
+          "x": 0.0,
+          "y": 0.20000000298023224,
+          "z": 0.5
+        },
+        "AttackDamage": 3.0,
+        "AttackDamageType": {
+          "$enum": "Rust.DamageType",
+          "name": "Bite",
+          "value": 14
+        },
+        "MinimumTargetHealthFraction": 0.0,
+        "AttackCost": 0.10000000149011612,
+        "AttackRate": 1.0,
+        "AttackRange": 1.2000000476837158,
+        "NavAgent": null,
+        "movementMask": 1403068673,
+        "stuckDuration": 0.0,
+        "lastStuckTime": 0.0,
+        "idleDuration": 0.0,
+        "BusyTimer": {
+          "$type": "StateTimer",
+          "ReleaseTime": 0.0,
+          "OnFinished": null
+        },
+        "Sleep": 0.0,
+        "Stamina": {
+          "$type": "VitalLevel",
+          "Level": 0.0
+        },
+        "Energy": {
+          "$type": "VitalLevel",
+          "Level": 0.0
+        },
+        "Hydration": {
+          "$type": "VitalLevel",
+          "Level": 0.0
+        },
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "chicken_protection",
+          "comments": "",
+          "density": 1.0,
+          "amounts": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "FilenameStringId": 3100712080
+        },
+        "startHealth": 25.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": false,
+          "itemTarget": null,
+          "itemCount": 0,
+          "setConditionFromHealth": false,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": false,
+          "requireHammer": false,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": false,
+          "itemTarget": null,
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": true,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": false,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.30000001192092896,
+            "z": -0.02500000037252903
+          },
+          "size": {
+            "x": 0.60000002384185791,
+            "y": 0.800000011920929,
+            "z": 1.1000000238418579
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": false,
+        "syncPosition": true,
+        "model": {
+          "$type": "Model",
+          "$name": "chicken_rig",
+          "collision": null,
+          "rootBone": [
+            [
+              [
+                [
+                  [
+                    [
+                      [
+                        {
+                          "$truncated": true,
+                          "type": "UnityEngine.Transform",
+                          "reason": "max-depth"
+                        }
+                      ],
+                      [
+                        {
+                          "$truncated": true,
+                          "type": "UnityEngine.Transform",
+                          "reason": "max-depth"
+                        }
+                      ],
+                      [
+                        {
+                          "$truncated": true,
+                          "type": "UnityEngine.Transform",
+                          "reason": "max-depth"
+                        }
+                      ],
+                      [
+                        {
+                          "$truncated": true,
+                          "type": "UnityEngine.Transform",
+                          "reason": "max-depth"
+                        }
+                      ]
+                    ]
+                  ]
+                ]
+              ],
+              [
+                [
+                  [
+                    [
+                      [
+                        {
+                          "$truncated": true,
+                          "type": "UnityEngine.Transform",
+                          "reason": "max-depth"
+                        }
+                      ],
+                      [
+                        {
+                          "$truncated": true,
+                          "type": "UnityEngine.Transform",
+                          "reason": "max-depth"
+                        }
+                      ],
+                      [
+                        {
+                          "$truncated": true,
+                          "type": "UnityEngine.Transform",
+                          "reason": "max-depth"
+                        }
+                      ],
+                      [
+                        {
+                          "$truncated": true,
+                          "type": "UnityEngine.Transform",
+                          "reason": "max-depth"
+                        }
+                      ]
+                    ]
+                  ]
+                ]
+              ],
+              [
+                [
+                  [
+                    [
+                      [
+                        {
+                          "$truncated": true,
+                          "type": "UnityEngine.Transform",
+                          "reason": "max-depth"
+                        },
+                        {
+                          "$truncated": true,
+                          "type": "UnityEngine.Transform",
+                          "reason": "max-depth"
+                        },
+                        {
+                          "$truncated": true,
+                          "type": "UnityEngine.Transform",
+                          "reason": "max-depth"
+                        }
+                      ]
+                    ]
+                  ]
+                ]
+              ],
+              [],
+              [],
+              []
+            ]
+          ],
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": {
+            "$type": "Facepunch.Skeleton",
+            "$name": "chicken_rig",
+            "Source": {
+              "$ref": "SkeletonDefinition",
+              "name": "Chicken_Update.Skeleton",
+              "instanceID": 120442
+            },
+            "Bones": [
+              {
+                "$ref": "GameObject",
+                "name": "motion",
+                "instanceID": 1165378
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Pelvis",
+                "instanceID": 1114002
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Femur_l",
+                "instanceID": 1136880
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Tibia_l",
+                "instanceID": 1130330
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Metatarsus_l",
+                "instanceID": 1190330
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Foot_l",
+                "instanceID": 1221534
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Index_01_l",
+                "instanceID": 1237090
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Index_02_l",
+                "instanceID": 1181912
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Index_03_l",
+                "instanceID": 1217450
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Index_04_l",
+                "instanceID": 1104030
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Middle_01_l",
+                "instanceID": 1207940
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Middle_02_l",
+                "instanceID": 1189272
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Middle_03_l",
+                "instanceID": 1107746
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Middle_04_l",
+                "instanceID": 1155324
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Pinky_01_l",
+                "instanceID": 1184620
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Pinky_02_l",
+                "instanceID": 1237782
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Pinky_03_l",
+                "instanceID": 1241516
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Pinky_04_l",
+                "instanceID": 1179308
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Thumb_01_l",
+                "instanceID": 1211546
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Thumb_02_l",
+                "instanceID": 1227318
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Thumb_03_l",
+                "instanceID": 1182486
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Femur_r",
+                "instanceID": 1225172
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Tibia_r",
+                "instanceID": 1202724
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Metatarsus_r",
+                "instanceID": 1120202
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Foot_r",
+                "instanceID": 1165502
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Index_01_r",
+                "instanceID": 1241636
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Index_02_r",
+                "instanceID": 1198752
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Index_03_r",
+                "instanceID": 1189918
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Index_04_r",
+                "instanceID": 1172802
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Middle_01_r",
+                "instanceID": 1146638
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Middle_02_r",
+                "instanceID": 1188174
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Middle_03_r",
+                "instanceID": 1104802
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Middle_04_r",
+                "instanceID": 1209782
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Pinky_01_r",
+                "instanceID": 1104990
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Pinky_02_r",
+                "instanceID": 1242686
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Pinky_03_r",
+                "instanceID": 1159244
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Pinky_04_r",
+                "instanceID": 1098386
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Thumb_01_r",
+                "instanceID": 1128136
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Thumb_02_r",
+                "instanceID": 1228876
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Thumb_03_r",
+                "instanceID": 1241644
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Spine_01",
+                "instanceID": 1171196
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Spine_02",
+                "instanceID": 1151378
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Spine_03",
+                "instanceID": 1116016
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Spine_04",
+                "instanceID": 1235804
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Spine_05",
+                "instanceID": 1153736
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Humerus_l",
+                "instanceID": 1188030
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Radius_l",
+                "instanceID": 1191304
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Metacarpus_l",
+                "instanceID": 1206070
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Humerus_r",
+                "instanceID": 1243364
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Radius_r",
+                "instanceID": 1134540
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Metacarpus_r",
+                "instanceID": 1169056
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Neck_01",
+                "instanceID": 1207194
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Neck_02",
+                "instanceID": 1165192
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Neck_03",
+                "instanceID": 1199414
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Neck_04",
+                "instanceID": 1122902
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Neck_05",
+                "instanceID": 1142238
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Head",
+                "instanceID": 1131754
+              },
+              {
+                "$ref": "GameObject",
+                "name": "HeadChain_04",
+                "instanceID": 1164804
+              },
+              {
+                "$ref": "GameObject",
+                "name": "HeadChain_02",
+                "instanceID": 1132378
+              },
+              {
+                "$ref": "GameObject",
+                "name": "HeadChain_03",
+                "instanceID": 1135968
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Jaw",
+                "instanceID": 1237474
+              },
+              {
+                "$ref": "GameObject",
+                "name": "chinChain_01_l1",
+                "instanceID": 1245328
+              },
+              {
+                "$ref": "GameObject",
+                "name": "chinChain_02_l",
+                "instanceID": 1151658
+              },
+              {
+                "$ref": "GameObject",
+                "name": "chinChain_03_l",
+                "instanceID": 1157710
+              },
+              {
+                "$ref": "GameObject",
+                "name": "chinChain_01_r1",
+                "instanceID": 1151612
+              },
+              {
+                "$ref": "GameObject",
+                "name": "chinChain_02_r",
+                "instanceID": 1116732
+              },
+              {
+                "$ref": "GameObject",
+                "name": "chinChain_03_r",
+                "instanceID": 1194220
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Tail",
+                "instanceID": 1218006
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Tail_l",
+                "instanceID": 1125054
+              },
+              {
+                "$ref": "GameObject",
+                "name": "Tail_r",
+                "instanceID": 1229026
+              }
+            ]
+          },
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "motion",
+              "instanceID": 1316906,
+              "goName": "motion",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Pelvis",
+              "instanceID": 1394388,
+              "goName": "Pelvis",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Femur_l",
+              "instanceID": 1366084,
+              "goName": "Femur_l",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Tibia_l",
+              "instanceID": 1382254,
+              "goName": "Tibia_l",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Metatarsus_l",
+              "instanceID": 1415790,
+              "goName": "Metatarsus_l",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Foot_l",
+              "instanceID": 1399434,
+              "goName": "Foot_l",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Index_01_l",
+              "instanceID": 1296902,
+              "goName": "Index_01_l",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [
+              [
+                []
+              ]
+            ],
+            {
+              "$ref": "Transform",
+              "name": "Index_03_l",
+              "instanceID": 1357978,
+              "goName": "Index_03_l",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Index_04_l",
+              "instanceID": 1430458,
+              "goName": "Index_04_l",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Middle_01_l",
+              "instanceID": 1375326,
+              "goName": "Middle_01_l",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [
+              [
+                []
+              ]
+            ],
+            {
+              "$ref": "Transform",
+              "name": "Middle_03_l",
+              "instanceID": 1304960,
+              "goName": "Middle_03_l",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Middle_04_l",
+              "instanceID": 1369044,
+              "goName": "Middle_04_l",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Pinky_01_l",
+              "instanceID": 1405756,
+              "goName": "Pinky_01_l",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [
+              [
+                []
+              ]
+            ],
+            {
+              "$ref": "Transform",
+              "name": "Pinky_03_l",
+              "instanceID": 1366708,
+              "goName": "Pinky_03_l",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Pinky_04_l",
+              "instanceID": 1429158,
+              "goName": "Pinky_04_l",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Thumb_01_l",
+              "instanceID": 1295922,
+              "goName": "Thumb_01_l",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [
+              []
+            ],
+            {
+              "$ref": "Transform",
+              "name": "Thumb_03_l",
+              "instanceID": 1367902,
+              "goName": "Thumb_03_l",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Femur_r",
+              "instanceID": 1339442,
+              "goName": "Femur_r",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Tibia_r",
+              "instanceID": 1363560,
+              "goName": "Tibia_r",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Metatarsus_r",
+              "instanceID": 1377740,
+              "goName": "Metatarsus_r",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Foot_r",
+              "instanceID": 1407378,
+              "goName": "Foot_r",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Index_01_r",
+              "instanceID": 1369650,
+              "goName": "Index_01_r",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [
+              [
+                []
+              ]
+            ],
+            {
+              "$ref": "Transform",
+              "name": "Index_03_r",
+              "instanceID": 1352570,
+              "goName": "Index_03_r",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Index_04_r",
+              "instanceID": 1331556,
+              "goName": "Index_04_r",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Middle_01_r",
+              "instanceID": 1400174,
+              "goName": "Middle_01_r",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [
+              [
+                []
+              ]
+            ],
+            {
+              "$ref": "Transform",
+              "name": "Middle_03_r",
+              "instanceID": 1333696,
+              "goName": "Middle_03_r",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Middle_04_r",
+              "instanceID": 1300836,
+              "goName": "Middle_04_r",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Pinky_01_r",
+              "instanceID": 1404146,
+              "goName": "Pinky_01_r",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [
+              [
+                []
+              ]
+            ],
+            {
+              "$ref": "Transform",
+              "name": "Pinky_03_r",
+              "instanceID": 1391164,
+              "goName": "Pinky_03_r",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Pinky_04_r",
+              "instanceID": 1383758,
+              "goName": "Pinky_04_r",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Thumb_01_r",
+              "instanceID": 1328300,
+              "goName": "Thumb_01_r",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [
+              []
+            ],
+            {
+              "$ref": "Transform",
+              "name": "Thumb_03_r",
+              "instanceID": 1353522,
+              "goName": "Thumb_03_r",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Spine_01",
+              "instanceID": 1410988,
+              "goName": "Spine_01",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Spine_02",
+              "instanceID": 1307558,
+              "goName": "Spine_02",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Spine_03",
+              "instanceID": 1342300,
+              "goName": "Spine_03",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Spine_04",
+              "instanceID": 1296620,
+              "goName": "Spine_04",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Spine_05",
+              "instanceID": 1300906,
+              "goName": "Spine_05",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [
+              [
+                []
+              ]
+            ],
+            {
+              "$ref": "Transform",
+              "name": "Radius_l",
+              "instanceID": 1393228,
+              "goName": "Radius_l",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Metacarpus_l",
+              "instanceID": 1401252,
+              "goName": "Metacarpus_l",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [
+              [
+                []
+              ]
+            ],
+            {
+              "$ref": "Transform",
+              "name": "Radius_r",
+              "instanceID": 1393698,
+              "goName": "Radius_r",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Metacarpus_r",
+              "instanceID": 1339778,
+              "goName": "Metacarpus_r",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [
+              [
+                [
+                  [
+                    [
+                      [
+                        {
+                          "$truncated": true,
+                          "type": "UnityEngine.Transform",
+                          "reason": "max-depth"
+                        },
+                        {
+                          "$truncated": true,
+                          "type": "UnityEngine.Transform",
+                          "reason": "max-depth"
+                        }
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            {
+              "$ref": "Transform",
+              "name": "Neck_02",
+              "instanceID": 1417078,
+              "goName": "Neck_02",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Neck_03",
+              "instanceID": 1373720,
+              "goName": "Neck_03",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Neck_04",
+              "instanceID": 1419318,
+              "goName": "Neck_04",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Neck_05",
+              "instanceID": 1371772,
+              "goName": "Neck_05",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Head",
+              "instanceID": 1360570,
+              "goName": "Head",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [
+              [
+                []
+              ]
+            ],
+            {
+              "$ref": "Transform",
+              "name": "HeadChain_02",
+              "instanceID": 1341296,
+              "goName": "HeadChain_02",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "HeadChain_03",
+              "instanceID": 1411318,
+              "goName": "HeadChain_03",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [
+              [
+                [
+                  []
+                ]
+              ],
+              [
+                [
+                  []
+                ]
+              ]
+            ],
+            {
+              "$ref": "Transform",
+              "name": "chinChain_01_l1",
+              "instanceID": 1398618,
+              "goName": "chinChain_01_l1",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "chinChain_02_l",
+              "instanceID": 1422326,
+              "goName": "chinChain_02_l",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "chinChain_03_l",
+              "instanceID": 1354540,
+              "goName": "chinChain_03_l",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "chinChain_01_r1",
+              "instanceID": 1314958,
+              "goName": "chinChain_01_r1",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "chinChain_02_r",
+              "instanceID": 1386974,
+              "goName": "chinChain_02_r",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "chinChain_03_r",
+              "instanceID": 1407266,
+              "goName": "chinChain_03_r",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Tail",
+              "instanceID": 1300494,
+              "goName": "Tail",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Tail_l",
+              "instanceID": 1370326,
+              "goName": "Tail_l",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Tail_r",
+              "instanceID": 1367480,
+              "goName": "Tail_r",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "motion",
+            "Pelvis",
+            "Femur_l",
+            "Tibia_l",
+            "Metatarsus_l",
+            "Foot_l",
+            "Index_01_l",
+            "Index_02_l",
+            "Index_03_l",
+            "Index_04_l",
+            "Middle_01_l",
+            "Middle_02_l",
+            "Middle_03_l",
+            "Middle_04_l",
+            "Pinky_01_l",
+            "Pinky_02_l",
+            "Pinky_03_l",
+            "Pinky_04_l",
+            "Thumb_01_l",
+            "Thumb_02_l",
+            "Thumb_03_l",
+            "Femur_r",
+            "Tibia_r",
+            "Metatarsus_r",
+            "Foot_r",
+            "Index_01_r",
+            "Index_02_r",
+            "Index_03_r",
+            "Index_04_r",
+            "Middle_01_r",
+            "Middle_02_r",
+            "Middle_03_r",
+            "Middle_04_r",
+            "Pinky_01_r",
+            "Pinky_02_r",
+            "Pinky_03_r",
+            "Pinky_04_r",
+            "Thumb_01_r",
+            "Thumb_02_r",
+            "Thumb_03_r",
+            "Spine_01",
+            "Spine_02",
+            "Spine_03",
+            "Spine_04",
+            "Spine_05",
+            "Humerus_l",
+            "Radius_l",
+            "Metacarpus_l",
+            "Humerus_r",
+            "Radius_r",
+            "Metacarpus_r",
+            "Neck_01",
+            "Neck_02",
+            "Neck_03",
+            "Neck_04",
+            "Neck_05",
+            "Head",
+            "HeadChain_04",
+            "HeadChain_02",
+            "HeadChain_03",
+            "Jaw",
+            "chinChain_01_l1",
+            "chinChain_02_l",
+            "chinChain_03_l",
+            "chinChain_01_r1",
+            "chinChain_02_r",
+            "chinChain_03_r",
+            "Tail",
+            "Tail_l",
+            "Tail_r"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 152398164,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$type": "Spawnable",
+        "$name": "chicken",
+        "Population": null,
+        "ForceSpawnOnly": false,
+        "ForceSpawnInfoMessage": "",
+        "CanSpawnInSafeZone": true
+      },
+      {
+        "$type": "UnityEngine.CapsuleCollider",
+        "$name": "chicken",
+        "colliderType": "Capsule",
+        "center": {
+          "x": 0.0,
+          "y": 0.30000001192092896,
+          "z": 0.0
+        },
+        "radius": 0.25,
+        "height": 0.800000011920929,
+        "direction": 2,
+        "isTrigger": false,
+        "enabled": true
+      },
+      {
+        "$type": "NPCNavigator",
+        "$name": "chicken",
+        "DestroyOnFailedSampleCount": 5,
+        "CanNavigateMounted": false,
+        "CanUseNavMesh": true,
+        "CanUseAStar": false,
+        "CanUseBaseNav": false,
+        "CanUseCustomNav": false,
+        "StoppingDistance": 2.0,
+        "DefaultArea": "Walkable",
+        "CanPathFindToChaseTargetIfNoMovePoint": false,
+        "PathFindChaseLOSAttemptCount": 5,
+        "PathFindChaseLOSDistanceMultiplier": 1.5,
+        "TriggerStuckEvent": false,
+        "StuckDistance": 1.0,
+        "Speed": 2.0,
+        "Acceleration": 1.0,
+        "TurnSpeed": 4.0,
+        "MoveTowardsSpeed": {
+          "$enum": "BaseNavigator+NavigationSpeed",
+          "name": "Normal",
+          "value": 2
+        },
+        "FaceMoveTowardsTarget": false,
+        "SlowestSpeedFraction": 0.15999999642372131,
+        "SlowSpeedFraction": 0.30000001192092896,
+        "NormalSpeedFraction": 0.5,
+        "FastSpeedFraction": 1.0,
+        "LowHealthSpeedReductionTriggerFraction": 0.10000000149011612,
+        "LowHealthMaxSpeedFraction": 0.60000002384185791,
+        "SwimmingSpeedMultiplier": 0.25,
+        "BestMovementPointMaxDistance": 10.0,
+        "BestCoverPointMaxDistance": 20.0,
+        "BestRoamPointMaxDistance": 20.0,
+        "MaxRoamDistanceFromHome": -1.0,
+        "FaceTargetChaseDistance": 10.0,
+        "CanUseRandomMovePointIfNonFound": false,
+        "MaxWaterDepth": 0.75,
+        "SpeedBasedAvoidancePriority": false,
+        "biomePreference": {
+          "$enum": "TerrainBiome+Enum",
+          "name": "Tundra, Arctic",
+          "value": 12,
+          "flagNames": [
+            "Tundra",
+            "Arctic"
+          ]
+        },
+        "UseBiomePreference": false,
+        "topologyPreference": {
+          "$enum": "TerrainTopology+Enum",
+          "name": "Forest, Forestside",
+          "value": 96,
+          "flagNames": [
+            "Forest",
+            "Forestside"
+          ]
+        },
+        "topologyPrevent": {
+          "$enum": "TerrainTopology+Enum",
+          "name": "Beachside, Beach, Ocean, Oceanside",
+          "value": 408,
+          "flagNames": [
+            "Beachside",
+            "Beach",
+            "Ocean",
+            "Oceanside"
+          ]
+        },
+        "biomeRequirement": {
+          "$enum": "TerrainBiome+Enum",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "stuckTimer": 0.0,
+        "stuckCheckPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
+      },
+      {
+        "$type": "AnimalBrain",
+        "$name": "chicken",
+        "SendClientCurrentState": false,
+        "UseQueuedMovementUpdates": false,
+        "AllowedToSleep": true,
+        "DefaultDesignSO": {
+          "$ref": "AIDesignSO",
+          "name": "Animal.AIDesign",
+          "instanceID": 271056
+        },
+        "Designs": [
+          {
+            "$ref": "AIDesignSO",
+            "name": "Animal.AIDesign",
+            "instanceID": 271056
+          },
+          {
+            "$ref": "AIDesignSO",
+            "name": "Animal.ControlTest.AIDesign",
+            "instanceID": 247552
+          }
+        ],
+        "InstanceSpecificDesign": null,
+        "SenseRange": 10.0,
+        "AttackRangeMultiplier": 1.0,
+        "TargetLostRange": 40.0,
+        "VisionCone": -0.800000011920929,
+        "CheckVisionCone": true,
+        "CheckLOS": false,
+        "IgnoreNonVisionSneakers": true,
+        "IgnoreSneakersMaxDistance": 4.0,
+        "IgnoreNonVisionMaxDistance": 15.0,
+        "ListenRange": 0.0,
+        "SenseTypes": {
+          "$enum": "EntityType",
+          "name": "Player, NPC",
+          "value": 3,
+          "flagNames": [
+            "Player",
+            "NPC"
+          ]
+        },
+        "HostileTargetsOnly": false,
+        "IgnoreSafeZonePlayers": true,
+        "MaxGroupSize": 0,
+        "MemoryDuration": 10.0,
+        "RefreshKnownLOS": false,
+        "CanBeBlinded": true,
+        "BlindDurationMultiplier": 1.0,
+        "MovementTickStartDelay": 1.0,
+        "ClientCurrentState": {
+          "$enum": "AIState",
+          "name": "None",
+          "value": 0
+        },
+        "mainInterestPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "UseAIDesign": true,
+        "Pet": false,
+        "groupMembers": [],
+        "CanUseHealingItems": false,
+        "HealChance": 0.5,
+        "HealBelowHealthFraction": 0.5,
+        "currentStateContainerID": -1,
+        "sleeping": false,
+        "states": null,
+        "_baseEntity": null
+      },
+      {
+        "$type": "Rust.Ai.Gen2.RustNavMeshAgent",
+        "$name": "chicken",
+        "letUnityMoveAgentIfPossible": true,
+        "lastValidPath": [],
+        "_agentTypeID": -1372625422,
+        "_baseOffset": -0.375,
+        "_desiredSpeed": 0.0,
+        "_angularSpeed": 1.0,
+        "_acceleration": {
+          "$type": "ResettableFloat",
+          "defaultValue": 10.0
+        },
+        "_stoppingDistance": 0.5,
+        "_autoBraking": true,
+        "_height": 2.0,
+        "_avoidancePriority": 50,
+        "_areaMask": 1,
+        "_updatePosition": true,
+        "_updateRotation": true,
+        "overrideDirectionWS": null,
+        "canOpenDoors": false,
+        "sneakSpeed": 0.60000002384185791,
+        "walkSpeed": 0.88999998569488525,
+        "jogSpeed": 2.4500000476837158,
+        "runSpeed": 4.4000000953674316,
+        "sprintSpeed": 6.0,
+        "fullSprintSpeed": 9.0,
+        "deceleration": {
+          "$type": "ResettableFloat",
+          "defaultValue": 2.0
+        },
+        "emergencyDeceleration": 10.0,
+        "canSteer": true,
+        "maxTurnRadius": 2.0,
+        "currentDeviation": 0.0,
+        "canSwim": false,
+        "swimSpeed": 0.60000002384185791,
+        "swimSprintSpeed": 0.88999998569488525,
+        "desiredSwimDepth": {
+          "$type": "ResettableFloat",
+          "defaultValue": 0.699999988079071
+        },
+        "preferedTopology": {
+          "$enum": "TerrainTopology+Enum",
+          "name": "Field, Forest, Forestside, Lakeside, Mainland",
+          "value": 537002081,
+          "flagNames": [
+            "Field",
+            "Forest",
+            "Forestside",
+            "Lakeside",
+            "Mainland"
+          ]
+        },
+        "preferedBiome": {
+          "$enum": "TerrainBiome+Enum",
+          "name": "Arid, Temperate, Tundra, Arctic",
+          "value": 15,
+          "flagNames": [
+            "Arid",
+            "Temperate",
+            "Tundra",
+            "Arctic"
+          ]
+        },
+        "_baseEntity": null
+      },
+      {
+        "$type": "UnityEngine.AI.NavMeshAgent",
+        "$name": "chicken"
+      }
+    ],
+    "children": [
+      {
+        "name": "chicken_rig",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "Model",
+            "name": "chicken_rig",
+            "instanceID": 1578152,
+            "goName": "chicken_rig",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Skeleton",
+            "name": "chicken_rig",
+            "instanceID": 1529490,
+            "goName": "chicken_rig",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": [
+          {
+            "name": "motion",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "Pelvis",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.33572986721992493,
+                  "z": -0.11368811130523682
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "Femur_l",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.04180101677775383,
+                      "y": -0.0007225454319268465,
+                      "z": 0.0026027478743344545
+                    },
+                    "localRotation": {
+                      "x": 0.30698931217193604,
+                      "y": 0.60546916723251343,
+                      "z": 0.31950768828392029,
+                      "w": 0.66111987829208374
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "Tibia_l",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -0.12628045678138733,
+                          "y": -0.00010915016173385084,
+                          "z": -4.44089183380283E-17
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.37373766303062439,
+                          "w": 0.92753446102142334
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": [
+                          {
+                            "name": "Metatarsus_l",
+                            "layer": {
+                              "index": 0,
+                              "name": "Default"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": -0.10312189906835556,
+                              "y": -0.00015877227997407317,
+                              "z": -1.332267550140849E-16
+                            },
+                            "localRotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": -0.22380581498146057,
+                              "w": 0.97463375329971313
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [],
+                            "children": [
+                              {
+                                "name": "Foot_l",
+                                "layer": {
+                                  "index": 0,
+                                  "name": "Default"
+                                },
+                                "tag": "Untagged",
+                                "customTags": [],
+                                "activeSelf": true,
+                                "localPosition": {
+                                  "x": -0.12031402438879013,
+                                  "y": 0.00019595345656853169,
+                                  "z": -1.1546319032585154E-16
+                                },
+                                "localRotation": {
+                                  "x": 0.0,
+                                  "y": 0.0,
+                                  "z": -0.00081364705692976713,
+                                  "w": 0.99999970197677612
+                                },
+                                "localScale": {
+                                  "x": 1.0,
+                                  "y": 1.0,
+                                  "z": 1.0
+                                },
+                                "components": [],
+                                "children": [
+                                  {
+                                    "name": "Index_01_l",
+                                    "layer": {
+                                      "index": 0,
+                                      "name": "Default"
+                                    },
+                                    "tag": "Untagged",
+                                    "customTags": [],
+                                    "activeSelf": true,
+                                    "localPosition": {
+                                      "x": -0.0067910021170973778,
+                                      "y": 0.0060674599371850491,
+                                      "z": 0.016268158331513405
+                                    },
+                                    "localRotation": {
+                                      "x": 0.81910091638565063,
+                                      "y": -0.49354419112205505,
+                                      "z": -0.2308952808380127,
+                                      "w": -0.17937469482421875
+                                    },
+                                    "localScale": {
+                                      "x": 1.0,
+                                      "y": 1.0,
+                                      "z": 1.0
+                                    },
+                                    "components": [],
+                                    "children": [
+                                      {
+                                        "name": "Index_02_l",
+                                        "layer": {
+                                          "index": 0,
+                                          "name": "Default"
+                                        },
+                                        "tag": "Untagged",
+                                        "customTags": [],
+                                        "activeSelf": true,
+                                        "localPosition": {
+                                          "x": -0.020449630916118622,
+                                          "y": 1.3322675997716858E-17,
+                                          "z": -1.3322675997716858E-17
+                                        },
+                                        "localRotation": {
+                                          "x": 0.0,
+                                          "y": 0.0,
+                                          "z": 0.024029426276683807,
+                                          "w": 0.999711275100708
+                                        },
+                                        "localScale": {
+                                          "x": 1.0,
+                                          "y": 1.0,
+                                          "z": 1.0
+                                        },
+                                        "components": [],
+                                        "children": [
+                                          {
+                                            "name": "Index_03_l",
+                                            "layer": {
+                                              "index": 0,
+                                              "name": "Default"
+                                            },
+                                            "tag": "Untagged",
+                                            "customTags": [],
+                                            "activeSelf": true,
+                                            "localPosition": {
+                                              "x": -0.016266899183392525,
+                                              "y": -4.4408919992389527E-18,
+                                              "z": -2.9753975154130064E-16
+                                            },
+                                            "localRotation": {
+                                              "x": 0.0,
+                                              "y": 0.0,
+                                              "z": -0.039272986352443695,
+                                              "w": 0.99922853708267212
+                                            },
+                                            "localScale": {
+                                              "x": 1.0,
+                                              "y": 1.0,
+                                              "z": 1.0
+                                            },
+                                            "components": [],
+                                            "children": [
+                                              {
+                                                "name": "Index_04_l",
+                                                "layer": {
+                                                  "index": 0,
+                                                  "name": "Default"
+                                                },
+                                                "tag": "Untagged",
+                                                "customTags": [],
+                                                "activeSelf": true,
+                                                "localPosition": {
+                                                  "x": -0.017604794353246689,
+                                                  "y": 2.2204459996194763E-18,
+                                                  "z": -1.0214051350095407E-16
+                                                },
+                                                "localRotation": {
+                                                  "x": 0.0,
+                                                  "y": 0.0,
+                                                  "z": -0.03911668062210083,
+                                                  "w": 0.999234676361084
+                                                },
+                                                "localScale": {
+                                                  "x": 1.0,
+                                                  "y": 1.0,
+                                                  "z": 1.0
+                                                },
+                                                "components": [],
+                                                "children": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "Middle_01_l",
+                                    "layer": {
+                                      "index": 0,
+                                      "name": "Default"
+                                    },
+                                    "tag": "Untagged",
+                                    "customTags": [],
+                                    "activeSelf": true,
+                                    "localPosition": {
+                                      "x": -0.010494787245988846,
+                                      "y": 0.015609717927873135,
+                                      "z": -9.65849103522487E-05
+                                    },
+                                    "localRotation": {
+                                      "x": 0.85122150182724,
+                                      "y": -0.52467399835586548,
+                                      "z": -0.00052647537086158991,
+                                      "w": 0.011784635484218597
+                                    },
+                                    "localScale": {
+                                      "x": 1.0,
+                                      "y": 1.0,
+                                      "z": 1.0
+                                    },
+                                    "components": [],
+                                    "children": [
+                                      {
+                                        "name": "Middle_02_l",
+                                        "layer": {
+                                          "index": 0,
+                                          "name": "Default"
+                                        },
+                                        "tag": "Untagged",
+                                        "customTags": [],
+                                        "activeSelf": true,
+                                        "localPosition": {
+                                          "x": -0.016623640432953835,
+                                          "y": -4.4408919992389527E-18,
+                                          "z": 0.0
+                                        },
+                                        "localRotation": {
+                                          "x": 0.0,
+                                          "y": 0.0,
+                                          "z": -0.011392077431082726,
+                                          "w": 0.99993515014648438
+                                        },
+                                        "localScale": {
+                                          "x": 1.0,
+                                          "y": 1.0,
+                                          "z": 1.0
+                                        },
+                                        "components": [],
+                                        "children": [
+                                          {
+                                            "name": "Middle_03_l",
+                                            "layer": {
+                                              "index": 0,
+                                              "name": "Default"
+                                            },
+                                            "tag": "Untagged",
+                                            "customTags": [],
+                                            "activeSelf": true,
+                                            "localPosition": {
+                                              "x": -0.01548991072922945,
+                                              "y": -8.8817839984779053E-18,
+                                              "z": -2.8421708795129297E-16
+                                            },
+                                            "localRotation": {
+                                              "x": 0.0,
+                                              "y": 0.0,
+                                              "z": 0.092727214097976685,
+                                              "w": 0.99569159746170044
+                                            },
+                                            "localScale": {
+                                              "x": 1.0,
+                                              "y": 1.0,
+                                              "z": 1.0
+                                            },
+                                            "components": [],
+                                            "children": [
+                                              {
+                                                "name": "Middle_04_l",
+                                                "layer": {
+                                                  "index": 0,
+                                                  "name": "Default"
+                                                },
+                                                "tag": "Untagged",
+                                                "customTags": [],
+                                                "activeSelf": true,
+                                                "localPosition": {
+                                                  "x": -0.020498229190707207,
+                                                  "y": 6.661337998858429E-18,
+                                                  "z": -1.0658140798173486E-16
+                                                },
+                                                "localRotation": {
+                                                  "x": 0.0,
+                                                  "y": 0.0,
+                                                  "z": -0.059230607002973557,
+                                                  "w": 0.99824434518814087
+                                                },
+                                                "localScale": {
+                                                  "x": 1.0,
+                                                  "y": 1.0,
+                                                  "z": 1.0
+                                                },
+                                                "components": [],
+                                                "children": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "Pinky_01_l",
+                                    "layer": {
+                                      "index": 0,
+                                      "name": "Default"
+                                    },
+                                    "tag": "Untagged",
+                                    "customTags": [],
+                                    "activeSelf": true,
+                                    "localPosition": {
+                                      "x": -0.0073320935480296612,
+                                      "y": 0.0058877798728644848,
+                                      "z": -0.01371375098824501
+                                    },
+                                    "localRotation": {
+                                      "x": 0.81507164239883423,
+                                      "y": -0.48437470197677612,
+                                      "z": 0.23898963630199432,
+                                      "w": 0.2095789760351181
+                                    },
+                                    "localScale": {
+                                      "x": 1.0,
+                                      "y": 1.0,
+                                      "z": 1.0
+                                    },
+                                    "components": [],
+                                    "children": [
+                                      {
+                                        "name": "Pinky_02_l",
+                                        "layer": {
+                                          "index": 0,
+                                          "name": "Default"
+                                        },
+                                        "tag": "Untagged",
+                                        "customTags": [],
+                                        "activeSelf": true,
+                                        "localPosition": {
+                                          "x": -0.020449630916118622,
+                                          "y": 8.8817839984779053E-18,
+                                          "z": 0.0
+                                        },
+                                        "localRotation": {
+                                          "x": 0.0,
+                                          "y": 0.0,
+                                          "z": 0.024029426276683807,
+                                          "w": 0.999711275100708
+                                        },
+                                        "localScale": {
+                                          "x": 1.0,
+                                          "y": 1.0,
+                                          "z": 1.0
+                                        },
+                                        "components": [],
+                                        "children": [
+                                          {
+                                            "name": "Pinky_03_l",
+                                            "layer": {
+                                              "index": 0,
+                                              "name": "Default"
+                                            },
+                                            "tag": "Untagged",
+                                            "customTags": [],
+                                            "activeSelf": true,
+                                            "localPosition": {
+                                              "x": -0.016266899183392525,
+                                              "y": -2.2204459996194763E-18,
+                                              "z": -2.5757173430149803E-16
+                                            },
+                                            "localRotation": {
+                                              "x": 0.0,
+                                              "y": 0.0,
+                                              "z": -0.039272986352443695,
+                                              "w": 0.99922853708267212
+                                            },
+                                            "localScale": {
+                                              "x": 1.0,
+                                              "y": 1.0,
+                                              "z": 1.0
+                                            },
+                                            "components": [],
+                                            "children": [
+                                              {
+                                                "name": "Pinky_04_l",
+                                                "layer": {
+                                                  "index": 0,
+                                                  "name": "Default"
+                                                },
+                                                "tag": "Untagged",
+                                                "customTags": [],
+                                                "activeSelf": true,
+                                                "localPosition": {
+                                                  "x": -0.017604794353246689,
+                                                  "y": 0.0,
+                                                  "z": -6.2172489643706562E-17
+                                                },
+                                                "localRotation": {
+                                                  "x": 0.0,
+                                                  "y": 0.0,
+                                                  "z": -0.03911668062210083,
+                                                  "w": 0.999234676361084
+                                                },
+                                                "localScale": {
+                                                  "x": 1.0,
+                                                  "y": 1.0,
+                                                  "z": 1.0
+                                                },
+                                                "components": [],
+                                                "children": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "Thumb_01_l",
+                                    "layer": {
+                                      "index": 0,
+                                      "name": "Default"
+                                    },
+                                    "tag": "Untagged",
+                                    "customTags": [],
+                                    "activeSelf": true,
+                                    "localPosition": {
+                                      "x": 0.0089178504422307014,
+                                      "y": -0.017045529559254646,
+                                      "z": 0.0017568855546414852
+                                    },
+                                    "localRotation": {
+                                      "x": 0.00053975626360625029,
+                                      "y": 0.010728576220571995,
+                                      "z": 0.76738685369491577,
+                                      "w": 0.6410943865776062
+                                    },
+                                    "localScale": {
+                                      "x": 1.0,
+                                      "y": 1.0,
+                                      "z": 1.0
+                                    },
+                                    "components": [],
+                                    "children": [
+                                      {
+                                        "name": "Thumb_02_l",
+                                        "layer": {
+                                          "index": 0,
+                                          "name": "Default"
+                                        },
+                                        "tag": "Untagged",
+                                        "customTags": [],
+                                        "activeSelf": true,
+                                        "localPosition": {
+                                          "x": -0.015495417639613152,
+                                          "y": 4.4408919992389527E-18,
+                                          "z": 8.8817839984779053E-18
+                                        },
+                                        "localRotation": {
+                                          "x": 0.0,
+                                          "y": 0.0,
+                                          "z": -0.078289568424224854,
+                                          "w": 0.99693065881729126
+                                        },
+                                        "localScale": {
+                                          "x": 1.0,
+                                          "y": 1.0,
+                                          "z": 1.0
+                                        },
+                                        "components": [],
+                                        "children": [
+                                          {
+                                            "name": "Thumb_03_l",
+                                            "layer": {
+                                              "index": 0,
+                                              "name": "Default"
+                                            },
+                                            "tag": "Untagged",
+                                            "customTags": [],
+                                            "activeSelf": true,
+                                            "localPosition": {
+                                              "x": -0.010802817530930042,
+                                              "y": 2.2204459169014151E-17,
+                                              "z": -3.6415314890067779E-16
+                                            },
+                                            "localRotation": {
+                                              "x": 0.0,
+                                              "y": 0.0,
+                                              "z": -0.0626111850142479,
+                                              "w": 0.99803799390792847
+                                            },
+                                            "localScale": {
+                                              "x": 1.0,
+                                              "y": 1.0,
+                                              "z": 1.0
+                                            },
+                                            "components": [],
+                                            "children": []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Femur_r",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.04180101677775383,
+                      "y": -0.0007225454319268465,
+                      "z": 0.0026027478743344545
+                    },
+                    "localRotation": {
+                      "x": 0.66111987829208374,
+                      "y": -0.31950768828392029,
+                      "z": 0.60546916723251343,
+                      "w": -0.30698931217193604
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "Tibia_r",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.12628045678138733,
+                          "y": 0.00010914971790043637,
+                          "z": -2.1316281596346973E-16
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.37373766303062439,
+                          "w": 0.92753446102142334
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": [
+                          {
+                            "name": "Metatarsus_r",
+                            "layer": {
+                              "index": 0,
+                              "name": "Default"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": 0.10312189906835556,
+                              "y": 0.00015877190162427723,
+                              "z": -3.5527135993911621E-17
+                            },
+                            "localRotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": -0.22380581498146057,
+                              "w": 0.97463375329971313
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [],
+                            "children": [
+                              {
+                                "name": "Foot_r",
+                                "layer": {
+                                  "index": 0,
+                                  "name": "Default"
+                                },
+                                "tag": "Untagged",
+                                "customTags": [],
+                                "activeSelf": true,
+                                "localPosition": {
+                                  "x": 0.12031402438879013,
+                                  "y": -0.00019595387857407331,
+                                  "z": -1.2434497928741312E-16
+                                },
+                                "localRotation": {
+                                  "x": 0.0,
+                                  "y": 0.0,
+                                  "z": -0.00081364705692976713,
+                                  "w": 0.99999970197677612
+                                },
+                                "localScale": {
+                                  "x": 1.0,
+                                  "y": 1.0,
+                                  "z": 1.0
+                                },
+                                "components": [],
+                                "children": [
+                                  {
+                                    "name": "Index_01_r",
+                                    "layer": {
+                                      "index": 0,
+                                      "name": "Default"
+                                    },
+                                    "tag": "Untagged",
+                                    "customTags": [],
+                                    "activeSelf": true,
+                                    "localPosition": {
+                                      "x": 0.0067910021170973778,
+                                      "y": -0.0060674599371850491,
+                                      "z": -0.016268158331513405
+                                    },
+                                    "localRotation": {
+                                      "x": 0.81910091638565063,
+                                      "y": -0.49354419112205505,
+                                      "z": -0.2308952808380127,
+                                      "w": -0.17937469482421875
+                                    },
+                                    "localScale": {
+                                      "x": 1.0,
+                                      "y": 1.0,
+                                      "z": 1.0
+                                    },
+                                    "components": [],
+                                    "children": [
+                                      {
+                                        "name": "Index_02_r",
+                                        "layer": {
+                                          "index": 0,
+                                          "name": "Default"
+                                        },
+                                        "tag": "Untagged",
+                                        "customTags": [],
+                                        "activeSelf": true,
+                                        "localPosition": {
+                                          "x": 0.020449630916118622,
+                                          "y": -2.2204459996194763E-18,
+                                          "z": -1.3322675997716858E-17
+                                        },
+                                        "localRotation": {
+                                          "x": 0.0,
+                                          "y": 0.0,
+                                          "z": 0.024029426276683807,
+                                          "w": 0.999711275100708
+                                        },
+                                        "localScale": {
+                                          "x": 1.0,
+                                          "y": 1.0,
+                                          "z": 1.0
+                                        },
+                                        "components": [],
+                                        "children": [
+                                          {
+                                            "name": "Index_03_r",
+                                            "layer": {
+                                              "index": 0,
+                                              "name": "Default"
+                                            },
+                                            "tag": "Untagged",
+                                            "customTags": [],
+                                            "activeSelf": true,
+                                            "localPosition": {
+                                              "x": 0.016266899183392525,
+                                              "y": 2.2204459996194763E-18,
+                                              "z": 2.9753975154130064E-16
+                                            },
+                                            "localRotation": {
+                                              "x": 0.0,
+                                              "y": 0.0,
+                                              "z": -0.039272986352443695,
+                                              "w": 0.99922853708267212
+                                            },
+                                            "localScale": {
+                                              "x": 1.0,
+                                              "y": 1.0,
+                                              "z": 1.0
+                                            },
+                                            "components": [],
+                                            "children": [
+                                              {
+                                                "name": "Index_04_r",
+                                                "layer": {
+                                                  "index": 0,
+                                                  "name": "Default"
+                                                },
+                                                "tag": "Untagged",
+                                                "customTags": [],
+                                                "activeSelf": true,
+                                                "localPosition": {
+                                                  "x": 0.017604794353246689,
+                                                  "y": 2.2204459996194763E-18,
+                                                  "z": 8.4376948812720713E-17
+                                                },
+                                                "localRotation": {
+                                                  "x": 0.0,
+                                                  "y": 0.0,
+                                                  "z": -0.03911668062210083,
+                                                  "w": 0.999234676361084
+                                                },
+                                                "localScale": {
+                                                  "x": 1.0,
+                                                  "y": 1.0,
+                                                  "z": 1.0
+                                                },
+                                                "components": [],
+                                                "children": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "Middle_01_r",
+                                    "layer": {
+                                      "index": 0,
+                                      "name": "Default"
+                                    },
+                                    "tag": "Untagged",
+                                    "customTags": [],
+                                    "activeSelf": true,
+                                    "localPosition": {
+                                      "x": 0.010494787245988846,
+                                      "y": -0.015609717927873135,
+                                      "z": 9.65849103522487E-05
+                                    },
+                                    "localRotation": {
+                                      "x": 0.85122150182724,
+                                      "y": -0.52467399835586548,
+                                      "z": -0.00052647537086158991,
+                                      "w": 0.011784635484218597
+                                    },
+                                    "localScale": {
+                                      "x": 1.0,
+                                      "y": 1.0,
+                                      "z": 1.0
+                                    },
+                                    "components": [],
+                                    "children": [
+                                      {
+                                        "name": "Middle_02_r",
+                                        "layer": {
+                                          "index": 0,
+                                          "name": "Default"
+                                        },
+                                        "tag": "Untagged",
+                                        "customTags": [],
+                                        "activeSelf": true,
+                                        "localPosition": {
+                                          "x": 0.016623640432953835,
+                                          "y": 0.0,
+                                          "z": 0.0
+                                        },
+                                        "localRotation": {
+                                          "x": 0.0,
+                                          "y": 0.0,
+                                          "z": -0.011392077431082726,
+                                          "w": 0.99993515014648438
+                                        },
+                                        "localScale": {
+                                          "x": 1.0,
+                                          "y": 1.0,
+                                          "z": 1.0
+                                        },
+                                        "components": [],
+                                        "children": [
+                                          {
+                                            "name": "Middle_03_r",
+                                            "layer": {
+                                              "index": 0,
+                                              "name": "Default"
+                                            },
+                                            "tag": "Untagged",
+                                            "customTags": [],
+                                            "activeSelf": true,
+                                            "localPosition": {
+                                              "x": 0.01548991072922945,
+                                              "y": 6.661337998858429E-18,
+                                              "z": 2.7533531222462119E-16
+                                            },
+                                            "localRotation": {
+                                              "x": 0.0,
+                                              "y": 0.0,
+                                              "z": 0.092727214097976685,
+                                              "w": 0.99569159746170044
+                                            },
+                                            "localScale": {
+                                              "x": 1.0,
+                                              "y": 1.0,
+                                              "z": 1.0
+                                            },
+                                            "components": [],
+                                            "children": [
+                                              {
+                                                "name": "Middle_04_r",
+                                                "layer": {
+                                                  "index": 0,
+                                                  "name": "Default"
+                                                },
+                                                "tag": "Untagged",
+                                                "customTags": [],
+                                                "activeSelf": true,
+                                                "localPosition": {
+                                                  "x": 0.020498229190707207,
+                                                  "y": 1.4432898790731443E-17,
+                                                  "z": 1.332267550140849E-16
+                                                },
+                                                "localRotation": {
+                                                  "x": 0.0,
+                                                  "y": 0.0,
+                                                  "z": -0.059230607002973557,
+                                                  "w": 0.99824434518814087
+                                                },
+                                                "localScale": {
+                                                  "x": 1.0,
+                                                  "y": 1.0,
+                                                  "z": 1.0
+                                                },
+                                                "components": [],
+                                                "children": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "Pinky_01_r",
+                                    "layer": {
+                                      "index": 0,
+                                      "name": "Default"
+                                    },
+                                    "tag": "Untagged",
+                                    "customTags": [],
+                                    "activeSelf": true,
+                                    "localPosition": {
+                                      "x": 0.0073320935480296612,
+                                      "y": -0.0058877798728644848,
+                                      "z": 0.01371375098824501
+                                    },
+                                    "localRotation": {
+                                      "x": 0.81507164239883423,
+                                      "y": -0.48437470197677612,
+                                      "z": 0.23898963630199432,
+                                      "w": 0.2095789909362793
+                                    },
+                                    "localScale": {
+                                      "x": 1.0,
+                                      "y": 1.0,
+                                      "z": 1.0
+                                    },
+                                    "components": [],
+                                    "children": [
+                                      {
+                                        "name": "Pinky_02_r",
+                                        "layer": {
+                                          "index": 0,
+                                          "name": "Default"
+                                        },
+                                        "tag": "Untagged",
+                                        "customTags": [],
+                                        "activeSelf": true,
+                                        "localPosition": {
+                                          "x": 0.020449630916118622,
+                                          "y": 0.0,
+                                          "z": -1.7763567996955811E-17
+                                        },
+                                        "localRotation": {
+                                          "x": 0.0,
+                                          "y": 0.0,
+                                          "z": 0.024029426276683807,
+                                          "w": 0.999711275100708
+                                        },
+                                        "localScale": {
+                                          "x": 1.0,
+                                          "y": 1.0,
+                                          "z": 1.0
+                                        },
+                                        "components": [],
+                                        "children": [
+                                          {
+                                            "name": "Pinky_03_r",
+                                            "layer": {
+                                              "index": 0,
+                                              "name": "Default"
+                                            },
+                                            "tag": "Untagged",
+                                            "customTags": [],
+                                            "activeSelf": true,
+                                            "localPosition": {
+                                              "x": 0.016266899183392525,
+                                              "y": 0.0,
+                                              "z": 2.5757173430149803E-16
+                                            },
+                                            "localRotation": {
+                                              "x": 0.0,
+                                              "y": 0.0,
+                                              "z": -0.039272986352443695,
+                                              "w": 0.99922853708267212
+                                            },
+                                            "localScale": {
+                                              "x": 1.0,
+                                              "y": 1.0,
+                                              "z": 1.0
+                                            },
+                                            "components": [],
+                                            "children": [
+                                              {
+                                                "name": "Pinky_04_r",
+                                                "layer": {
+                                                  "index": 0,
+                                                  "name": "Default"
+                                                },
+                                                "tag": "Untagged",
+                                                "customTags": [],
+                                                "activeSelf": true,
+                                                "localPosition": {
+                                                  "x": 0.017604794353246689,
+                                                  "y": 8.8817839984779053E-18,
+                                                  "z": 9.7699625637618184E-17
+                                                },
+                                                "localRotation": {
+                                                  "x": 0.0,
+                                                  "y": 0.0,
+                                                  "z": -0.03911668062210083,
+                                                  "w": 0.999234676361084
+                                                },
+                                                "localScale": {
+                                                  "x": 1.0,
+                                                  "y": 1.0,
+                                                  "z": 1.0
+                                                },
+                                                "components": [],
+                                                "children": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "Thumb_01_r",
+                                    "layer": {
+                                      "index": 0,
+                                      "name": "Default"
+                                    },
+                                    "tag": "Untagged",
+                                    "customTags": [],
+                                    "activeSelf": true,
+                                    "localPosition": {
+                                      "x": -0.0089178504422307014,
+                                      "y": 0.017045529559254646,
+                                      "z": -0.0017568855546414852
+                                    },
+                                    "localRotation": {
+                                      "x": 0.00053975626360625029,
+                                      "y": 0.010728576220571995,
+                                      "z": 0.76738685369491577,
+                                      "w": 0.6410943865776062
+                                    },
+                                    "localScale": {
+                                      "x": 1.0,
+                                      "y": 1.0,
+                                      "z": 1.0
+                                    },
+                                    "components": [],
+                                    "children": [
+                                      {
+                                        "name": "Thumb_02_r",
+                                        "layer": {
+                                          "index": 0,
+                                          "name": "Default"
+                                        },
+                                        "tag": "Untagged",
+                                        "customTags": [],
+                                        "activeSelf": true,
+                                        "localPosition": {
+                                          "x": 0.015495417639613152,
+                                          "y": -8.8817839984779053E-18,
+                                          "z": 1.7763567996955811E-17
+                                        },
+                                        "localRotation": {
+                                          "x": 0.0,
+                                          "y": 0.0,
+                                          "z": -0.078289568424224854,
+                                          "w": 0.99693065881729126
+                                        },
+                                        "localScale": {
+                                          "x": 1.0,
+                                          "y": 1.0,
+                                          "z": 1.0
+                                        },
+                                        "components": [],
+                                        "children": [
+                                          {
+                                            "name": "Thumb_03_r",
+                                            "layer": {
+                                              "index": 0,
+                                              "name": "Default"
+                                            },
+                                            "tag": "Untagged",
+                                            "customTags": [],
+                                            "activeSelf": true,
+                                            "localPosition": {
+                                              "x": 0.010802817530930042,
+                                              "y": 8.8817839984779053E-18,
+                                              "z": 3.6415314890067779E-16
+                                            },
+                                            "localRotation": {
+                                              "x": 0.0,
+                                              "y": 0.0,
+                                              "z": -0.0626111850142479,
+                                              "w": 0.99803799390792847
+                                            },
+                                            "localScale": {
+                                              "x": 1.0,
+                                              "y": 1.0,
+                                              "z": 1.0
+                                            },
+                                            "components": [],
+                                            "children": []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Spine_01",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.020879905670881271
+                    },
+                    "localRotation": {
+                      "x": 0.64823281764984131,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 0.76144218444824219
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "Spine_02",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": 0.038044597953557968,
+                          "z": 1.5524789787058069E-10
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": [
+                          {
+                            "name": "Spine_03",
+                            "layer": {
+                              "index": 0,
+                              "name": "Default"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": 0.0,
+                              "y": 0.03804437443614006,
+                              "z": -7.1054271987823242E-17
+                            },
+                            "localRotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [],
+                            "children": [
+                              {
+                                "name": "Spine_04",
+                                "layer": {
+                                  "index": 0,
+                                  "name": "Default"
+                                },
+                                "tag": "Untagged",
+                                "customTags": [],
+                                "activeSelf": true,
+                                "localPosition": {
+                                  "x": 0.0,
+                                  "y": 0.038044597953557968,
+                                  "z": -7.1054271987823242E-17
+                                },
+                                "localRotation": {
+                                  "x": 0.0,
+                                  "y": 0.0,
+                                  "z": 0.0,
+                                  "w": 1.0
+                                },
+                                "localScale": {
+                                  "x": 1.0,
+                                  "y": 1.0,
+                                  "z": 1.0
+                                },
+                                "components": [],
+                                "children": [
+                                  {
+                                    "name": "Spine_05",
+                                    "layer": {
+                                      "index": 0,
+                                      "name": "Default"
+                                    },
+                                    "tag": "Untagged",
+                                    "customTags": [],
+                                    "activeSelf": true,
+                                    "localPosition": {
+                                      "x": 0.0,
+                                      "y": 0.038044597953557968,
+                                      "z": 7.8159700510094547E-16
+                                    },
+                                    "localRotation": {
+                                      "x": 0.0,
+                                      "y": 0.0,
+                                      "z": 0.0,
+                                      "w": 1.0
+                                    },
+                                    "localScale": {
+                                      "x": 1.0,
+                                      "y": 1.0,
+                                      "z": 1.0
+                                    },
+                                    "components": [],
+                                    "children": [
+                                      {
+                                        "name": "Humerus_l",
+                                        "layer": {
+                                          "index": 0,
+                                          "name": "Default"
+                                        },
+                                        "tag": "Untagged",
+                                        "customTags": [],
+                                        "activeSelf": true,
+                                        "localPosition": {
+                                          "x": -0.0659172460436821,
+                                          "y": -0.04015856608748436,
+                                          "z": -0.030219035223126411
+                                        },
+                                        "localRotation": {
+                                          "x": 0.9799005389213562,
+                                          "y": 0.18270048499107361,
+                                          "z": -0.071021795272827148,
+                                          "w": 0.037032287567853928
+                                        },
+                                        "localScale": {
+                                          "x": 1.0,
+                                          "y": 1.0,
+                                          "z": 1.0
+                                        },
+                                        "components": [],
+                                        "children": [
+                                          {
+                                            "name": "Radius_l",
+                                            "layer": {
+                                              "index": 0,
+                                              "name": "Default"
+                                            },
+                                            "tag": "Untagged",
+                                            "customTags": [],
+                                            "activeSelf": true,
+                                            "localPosition": {
+                                              "x": -0.073576278984546661,
+                                              "y": -9.7837670182343572E-05,
+                                              "z": 1.7078604155895682E-11
+                                            },
+                                            "localRotation": {
+                                              "x": 0.0029419697821140289,
+                                              "y": 0.0011930777691304684,
+                                              "z": 0.3757902979850769,
+                                              "w": 0.92669928073883057
+                                            },
+                                            "localScale": {
+                                              "x": 1.0,
+                                              "y": 1.0,
+                                              "z": 1.0
+                                            },
+                                            "components": [],
+                                            "children": [
+                                              {
+                                                "name": "Metacarpus_l",
+                                                "layer": {
+                                                  "index": 0,
+                                                  "name": "Default"
+                                                },
+                                                "tag": "Untagged",
+                                                "customTags": [],
+                                                "activeSelf": true,
+                                                "localPosition": {
+                                                  "x": -0.070089578628540039,
+                                                  "y": -1.4978101603446703E-07,
+                                                  "z": -7.553087044698259E-09
+                                                },
+                                                "localRotation": {
+                                                  "x": 0.58329790830612183,
+                                                  "y": -0.44033563137054443,
+                                                  "z": -0.19425182044506073,
+                                                  "w": 0.65431976318359375
+                                                },
+                                                "localScale": {
+                                                  "x": 1.0,
+                                                  "y": 1.0,
+                                                  "z": 1.0
+                                                },
+                                                "components": [],
+                                                "children": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "name": "Humerus_r",
+                                        "layer": {
+                                          "index": 0,
+                                          "name": "Default"
+                                        },
+                                        "tag": "Untagged",
+                                        "customTags": [],
+                                        "activeSelf": true,
+                                        "localPosition": {
+                                          "x": 0.0659172385931015,
+                                          "y": -0.04015856608748436,
+                                          "z": -0.030219035223126411
+                                        },
+                                        "localRotation": {
+                                          "x": -0.037032287567853928,
+                                          "y": -0.071021795272827148,
+                                          "z": -0.18270048499107361,
+                                          "w": 0.9799005389213562
+                                        },
+                                        "localScale": {
+                                          "x": 1.0,
+                                          "y": 1.0,
+                                          "z": 1.0
+                                        },
+                                        "components": [],
+                                        "children": [
+                                          {
+                                            "name": "Radius_r",
+                                            "layer": {
+                                              "index": 0,
+                                              "name": "Default"
+                                            },
+                                            "tag": "Untagged",
+                                            "customTags": [],
+                                            "activeSelf": true,
+                                            "localPosition": {
+                                              "x": 0.073576278984546661,
+                                              "y": 9.7837670182343572E-05,
+                                              "z": -1.7079173145195803E-11
+                                            },
+                                            "localRotation": {
+                                              "x": 0.0029419697821140289,
+                                              "y": 0.0011930777691304684,
+                                              "z": 0.3757902979850769,
+                                              "w": 0.92669928073883057
+                                            },
+                                            "localScale": {
+                                              "x": 1.0,
+                                              "y": 1.0,
+                                              "z": 1.0
+                                            },
+                                            "components": [],
+                                            "children": [
+                                              {
+                                                "name": "Metacarpus_r",
+                                                "layer": {
+                                                  "index": 0,
+                                                  "name": "Default"
+                                                },
+                                                "tag": "Untagged",
+                                                "customTags": [],
+                                                "activeSelf": true,
+                                                "localPosition": {
+                                                  "x": 0.070089578628540039,
+                                                  "y": 1.4978101603446703E-07,
+                                                  "z": 7.5530888210550984E-09
+                                                },
+                                                "localRotation": {
+                                                  "x": 0.58329790830612183,
+                                                  "y": -0.44033563137054443,
+                                                  "z": -0.19425182044506073,
+                                                  "w": 0.65431976318359375
+                                                },
+                                                "localScale": {
+                                                  "x": 1.0,
+                                                  "y": 1.0,
+                                                  "z": 1.0
+                                                },
+                                                "components": [],
+                                                "children": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "name": "Neck_01",
+                                        "layer": {
+                                          "index": 0,
+                                          "name": "Default"
+                                        },
+                                        "tag": "Untagged",
+                                        "customTags": [],
+                                        "activeSelf": true,
+                                        "localPosition": {
+                                          "x": 0.0,
+                                          "y": 0.03530101478099823,
+                                          "z": -0.023090528324246407
+                                        },
+                                        "localRotation": {
+                                          "x": -0.44271108508110046,
+                                          "y": 0.0,
+                                          "z": 0.0,
+                                          "w": 0.8966643214225769
+                                        },
+                                        "localScale": {
+                                          "x": 1.0,
+                                          "y": 1.0,
+                                          "z": 1.0
+                                        },
+                                        "components": [],
+                                        "children": [
+                                          {
+                                            "name": "Neck_02",
+                                            "layer": {
+                                              "index": 0,
+                                              "name": "Default"
+                                            },
+                                            "tag": "Untagged",
+                                            "customTags": [],
+                                            "activeSelf": true,
+                                            "localPosition": {
+                                              "x": 0.0,
+                                              "y": 0.038072064518928528,
+                                              "z": -0.0059030554257333279
+                                            },
+                                            "localRotation": {
+                                              "x": -0.17293485999107361,
+                                              "y": 0.0,
+                                              "z": 0.0,
+                                              "w": 0.98493325710296631
+                                            },
+                                            "localScale": {
+                                              "x": 1.0,
+                                              "y": 1.0,
+                                              "z": 1.0
+                                            },
+                                            "components": [],
+                                            "children": [
+                                              {
+                                                "name": "Neck_03",
+                                                "layer": {
+                                                  "index": 0,
+                                                  "name": "Default"
+                                                },
+                                                "tag": "Untagged",
+                                                "customTags": [],
+                                                "activeSelf": true,
+                                                "localPosition": {
+                                                  "x": 0.0,
+                                                  "y": 0.038705628365278244,
+                                                  "z": -0.0015997861046344042
+                                                },
+                                                "localRotation": {
+                                                  "x": -0.023481201380491257,
+                                                  "y": 0.0,
+                                                  "z": 0.0,
+                                                  "w": 0.99972432851791382
+                                                },
+                                                "localScale": {
+                                                  "x": 1.0,
+                                                  "y": 1.0,
+                                                  "z": 1.0
+                                                },
+                                                "components": [],
+                                                "children": [
+                                                  {
+                                                    "name": "Neck_04",
+                                                    "layer": {
+                                                      "index": 0,
+                                                      "name": "Default"
+                                                    },
+                                                    "tag": "Untagged",
+                                                    "customTags": [],
+                                                    "activeSelf": true,
+                                                    "localPosition": {
+                                                      "x": 0.0,
+                                                      "y": 0.03868204727768898,
+                                                      "z": 0.0017898635705932975
+                                                    },
+                                                    "localRotation": {
+                                                      "x": 0.0562763549387455,
+                                                      "y": 0.0,
+                                                      "z": 0.0,
+                                                      "w": 0.99841523170471191
+                                                    },
+                                                    "localScale": {
+                                                      "x": 1.0,
+                                                      "y": 1.0,
+                                                      "z": 1.0
+                                                    },
+                                                    "components": [],
+                                                    "children": [
+                                                      {
+                                                        "name": "Neck_05",
+                                                        "layer": {
+                                                          "index": 0,
+                                                          "name": "Default"
+                                                        },
+                                                        "tag": "Untagged",
+                                                        "customTags": [],
+                                                        "activeSelf": true,
+                                                        "localPosition": {
+                                                          "x": 0.0,
+                                                          "y": 0.03841274231672287,
+                                                          "z": 0.0042580906301736832
+                                                        },
+                                                        "localRotation": {
+                                                          "x": 0.11741454899311066,
+                                                          "y": 0.0,
+                                                          "z": 0.0,
+                                                          "w": 0.99308300018310547
+                                                        },
+                                                        "localScale": {
+                                                          "x": 1.0,
+                                                          "y": 1.0,
+                                                          "z": 1.0
+                                                        },
+                                                        "components": [],
+                                                        "children": [
+                                                          {
+                                                            "name": "Head",
+                                                            "layer": {
+                                                              "index": 0,
+                                                              "name": "Default"
+                                                            },
+                                                            "tag": "Untagged",
+                                                            "customTags": [],
+                                                            "activeSelf": true,
+                                                            "localPosition": {
+                                                              "x": 0.0,
+                                                              "y": 0.038265541195869446,
+                                                              "z": 0.0054412935860455036
+                                                            },
+                                                            "localRotation": {
+                                                              "x": -0.21070195734500885,
+                                                              "y": 0.0,
+                                                              "z": 0.0,
+                                                              "w": 0.97755032777786255
+                                                            },
+                                                            "localScale": {
+                                                              "x": 1.0,
+                                                              "y": 1.0,
+                                                              "z": 1.0
+                                                            },
+                                                            "components": [],
+                                                            "children": [
+                                                              {
+                                                                "name": "HeadChain_04",
+                                                                "layer": {
+                                                                  "index": 0,
+                                                                  "name": "Default"
+                                                                },
+                                                                "tag": "Untagged",
+                                                                "customTags": [],
+                                                                "activeSelf": true,
+                                                                "localPosition": {
+                                                                  "x": -3.0450421490968438E-06,
+                                                                  "y": 0.025013787671923637,
+                                                                  "z": 0.043937582522630692
+                                                                },
+                                                                "localRotation": {
+                                                                  "x": 0.59253615140914917,
+                                                                  "y": -0.38587582111358643,
+                                                                  "z": 0.59243732690811157,
+                                                                  "w": -0.38602960109710693
+                                                                },
+                                                                "localScale": {
+                                                                  "x": 1.0,
+                                                                  "y": 1.0,
+                                                                  "z": 1.0
+                                                                },
+                                                                "components": [],
+                                                                "children": [
+                                                                  {
+                                                                    "name": "HeadChain_02",
+                                                                    "layer": {
+                                                                      "index": 0,
+                                                                      "name": "Default"
+                                                                    },
+                                                                    "tag": "Untagged",
+                                                                    "customTags": [],
+                                                                    "activeSelf": true,
+                                                                    "localPosition": {
+                                                                      "x": -0.015276795253157616,
+                                                                      "y": -7.1054271987823242E-17,
+                                                                      "z": -3.4694468744054318E-20
+                                                                    },
+                                                                    "localRotation": {
+                                                                      "x": 0.0,
+                                                                      "y": 0.0,
+                                                                      "z": -0.087288394570350647,
+                                                                      "w": 0.99618309736251831
+                                                                    },
+                                                                    "localScale": {
+                                                                      "x": 1.0,
+                                                                      "y": 1.0,
+                                                                      "z": 1.0
+                                                                    },
+                                                                    "components": [],
+                                                                    "children": [
+                                                                      {
+                                                                        "name": "HeadChain_03",
+                                                                        "layer": {
+                                                                          "index": 0,
+                                                                          "name": "Default"
+                                                                        },
+                                                                        "tag": "Untagged",
+                                                                        "customTags": [],
+                                                                        "activeSelf": true,
+                                                                        "localPosition": {
+                                                                          "x": -0.01470277551561594,
+                                                                          "y": -1.4210854397564648E-16,
+                                                                          "z": -3.9846597052047177E-17
+                                                                        },
+                                                                        "localRotation": {
+                                                                          "x": 0.0,
+                                                                          "y": 0.0,
+                                                                          "z": -0.0763755589723587,
+                                                                          "w": 0.99707913398742676
+                                                                        },
+                                                                        "localScale": {
+                                                                          "x": 1.0,
+                                                                          "y": 1.0,
+                                                                          "z": 1.0
+                                                                        },
+                                                                        "components": [],
+                                                                        "children": []
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              },
+                                                              {
+                                                                "name": "Jaw",
+                                                                "layer": {
+                                                                  "index": 0,
+                                                                  "name": "Default"
+                                                                },
+                                                                "tag": "Untagged",
+                                                                "customTags": [],
+                                                                "activeSelf": true,
+                                                                "localPosition": {
+                                                                  "x": -2.0017671562109763E-17,
+                                                                  "y": -0.017563559114933014,
+                                                                  "z": 0.022245913743972778
+                                                                },
+                                                                "localRotation": {
+                                                                  "x": -0.011048235930502415,
+                                                                  "y": 0.0,
+                                                                  "z": 0.0,
+                                                                  "w": 0.99993896484375
+                                                                },
+                                                                "localScale": {
+                                                                  "x": 1.0,
+                                                                  "y": 1.0,
+                                                                  "z": 1.0
+                                                                },
+                                                                "components": [],
+                                                                "children": [
+                                                                  {
+                                                                    "name": "chinChain_01_l1",
+                                                                    "layer": {
+                                                                      "index": 0,
+                                                                      "name": "Default"
+                                                                    },
+                                                                    "tag": "Untagged",
+                                                                    "customTags": [],
+                                                                    "activeSelf": true,
+                                                                    "localPosition": {
+                                                                      "x": -0.0098140332847833633,
+                                                                      "y": -0.011921380646526814,
+                                                                      "z": 0.008734971284866333
+                                                                    },
+                                                                    "localRotation": {
+                                                                      "x": 4.9065392630052662E-18,
+                                                                      "y": -4.9065392630052662E-18,
+                                                                      "z": 0.7071068286895752,
+                                                                      "w": 0.7071068286895752
+                                                                    },
+                                                                    "localScale": {
+                                                                      "x": 1.0,
+                                                                      "y": 1.0,
+                                                                      "z": 1.0
+                                                                    },
+                                                                    "components": [],
+                                                                    "children": [
+                                                                      {
+                                                                        "name": "chinChain_02_l",
+                                                                        "layer": {
+                                                                          "index": 0,
+                                                                          "name": "Default"
+                                                                        },
+                                                                        "tag": "Untagged",
+                                                                        "customTags": [],
+                                                                        "activeSelf": true,
+                                                                        "localPosition": {
+                                                                          "x": -0.0086438935250043869,
+                                                                          "y": -1.1102229998097382E-18,
+                                                                          "z": -3.5527135993911621E-17
+                                                                        },
+                                                                        "localRotation": {
+                                                                          "x": 0.0,
+                                                                          "y": 0.0,
+                                                                          "z": 0.0,
+                                                                          "w": 1.0
+                                                                        },
+                                                                        "localScale": {
+                                                                          "x": 1.0,
+                                                                          "y": 1.0,
+                                                                          "z": 1.0
+                                                                        },
+                                                                        "components": [],
+                                                                        "children": [
+                                                                          {
+                                                                            "name": "chinChain_03_l",
+                                                                            "layer": {
+                                                                              "index": 0,
+                                                                              "name": "Default"
+                                                                            },
+                                                                            "tag": "Untagged",
+                                                                            "customTags": [],
+                                                                            "activeSelf": true,
+                                                                            "localPosition": {
+                                                                              "x": -0.0086438935250043869,
+                                                                              "y": 0.0,
+                                                                              "z": 0.0
+                                                                            },
+                                                                            "localRotation": {
+                                                                              "x": 0.0,
+                                                                              "y": 0.0,
+                                                                              "z": 0.0,
+                                                                              "w": 1.0
+                                                                            },
+                                                                            "localScale": {
+                                                                              "x": 1.0,
+                                                                              "y": 1.0,
+                                                                              "z": 1.0
+                                                                            },
+                                                                            "components": [],
+                                                                            "children": []
+                                                                          }
+                                                                        ]
+                                                                      }
+                                                                    ]
+                                                                  },
+                                                                  {
+                                                                    "name": "chinChain_01_r1",
+                                                                    "layer": {
+                                                                      "index": 0,
+                                                                      "name": "Default"
+                                                                    },
+                                                                    "tag": "Untagged",
+                                                                    "customTags": [],
+                                                                    "activeSelf": true,
+                                                                    "localPosition": {
+                                                                      "x": 0.0098140332847833633,
+                                                                      "y": -0.011921380646526814,
+                                                                      "z": 0.008734971284866333
+                                                                    },
+                                                                    "localRotation": {
+                                                                      "x": 0.7071068286895752,
+                                                                      "y": -0.7071068286895752,
+                                                                      "z": -4.8204343934499263E-17,
+                                                                      "w": 3.8391268717211181E-17
+                                                                    },
+                                                                    "localScale": {
+                                                                      "x": 1.0,
+                                                                      "y": 1.0,
+                                                                      "z": 1.0
+                                                                    },
+                                                                    "components": [],
+                                                                    "children": [
+                                                                      {
+                                                                        "name": "chinChain_02_r",
+                                                                        "layer": {
+                                                                          "index": 0,
+                                                                          "name": "Default"
+                                                                        },
+                                                                        "tag": "Untagged",
+                                                                        "customTags": [],
+                                                                        "activeSelf": true,
+                                                                        "localPosition": {
+                                                                          "x": 0.0086438935250043869,
+                                                                          "y": 1.1102229998097382E-18,
+                                                                          "z": 3.5527135993911621E-17
+                                                                        },
+                                                                        "localRotation": {
+                                                                          "x": 0.0,
+                                                                          "y": 0.0,
+                                                                          "z": 0.0,
+                                                                          "w": 1.0
+                                                                        },
+                                                                        "localScale": {
+                                                                          "x": 1.0,
+                                                                          "y": 1.0,
+                                                                          "z": 1.0
+                                                                        },
+                                                                        "components": [],
+                                                                        "children": [
+                                                                          {
+                                                                            "name": "chinChain_03_r",
+                                                                            "layer": {
+                                                                              "index": 0,
+                                                                              "name": "Default"
+                                                                            },
+                                                                            "tag": "Untagged",
+                                                                            "customTags": [],
+                                                                            "activeSelf": true,
+                                                                            "localPosition": {
+                                                                              "x": 0.0086438935250043869,
+                                                                              "y": -2.2204459996194763E-18,
+                                                                              "z": -3.5527135993911621E-17
+                                                                            },
+                                                                            "localRotation": {
+                                                                              "x": 0.0,
+                                                                              "y": 0.0,
+                                                                              "z": 0.0,
+                                                                              "w": 1.0
+                                                                            },
+                                                                            "localScale": {
+                                                                              "x": 1.0,
+                                                                              "y": 1.0,
+                                                                              "z": 1.0
+                                                                            },
+                                                                            "components": [],
+                                                                            "children": []
+                                                                          }
+                                                                        ]
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Tail",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -7.099747841360575E-32,
+                      "y": 0.043229084461927414,
+                      "z": -0.026576640084385872
+                    },
+                    "localRotation": {
+                      "x": 0.6919475793838501,
+                      "y": -0.145631805062294,
+                      "z": 0.6919475793838501,
+                      "w": -0.145631805062294
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  },
+                  {
+                    "name": "Tail_l",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.041129592806100845,
+                      "y": 0.022781861945986748,
+                      "z": -0.034826532006263733
+                    },
+                    "localRotation": {
+                      "x": 0.64404737949371338,
+                      "y": 0.29189550876617432,
+                      "z": 0.55945092439651489,
+                      "w": -0.43245193362236023
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  },
+                  {
+                    "name": "Tail_r",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.041129592806100845,
+                      "y": 0.022781861945986748,
+                      "z": -0.034826532006263733
+                    },
+                    "localRotation": {
+                      "x": 0.43245193362236023,
+                      "y": 0.55945092439651489,
+                      "z": -0.29189550876617432,
+                      "w": 0.64404737949371338
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ScentEmission",
+        "layer": {
+          "index": 11,
+          "name": "AI"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "AnimalScentTrail",
+            "layer": {
+              "index": 11,
+              "name": "AI"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "Line2",
+                "layer": {
+                  "index": 11,
+                  "name": "AI"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "PrefabInformation": [
+      {
+        "$type": "PrefabInformation",
+        "$name": "<destroyed native object>",
+        "prefabID": 152398164,
+        "hierachyName": "chicken",
+        "associatedItemDefinition": null,
+        "title": {
+          "$type": "Translate+Phrase",
+          "token": "chicken.name",
+          "legacyEnglish": "Chicken"
+        },
+        "description": {
+          "$type": "Translate+Phrase",
+          "token": "",
+          "legacyEnglish": ""
+        },
+        "sprite": {
+          "$ref": "Sprite",
+          "name": "ChickenAvatar_White",
+          "instanceID": 1022094
+        },
+        "shownOnDeathScreen": true,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/rust.ai/agents/chicken/chicken.prefab",
+        "instanceID": 1555082,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "PrefabWeight": []
+  }
+}

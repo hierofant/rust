@@ -1,0 +1,267 @@
+{
+  "prefabID": 1217937936,
+  "path": "assets/prefabs/ammo/rocket/rocket_hv.prefab",
+  "rootClassChain": [
+    "TimedExplosive",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -0.0002852901816368103,
+      "y": 0.029278809204697609,
+      "z": -0.2527153491973877
+    },
+    "size": {
+      "x": 0.1065542921423912,
+      "y": 0.10655420273542404,
+      "z": 0.64562177658081055
+    }
+  },
+  "hierarchy": {
+    "name": "rocket_hv",
+    "layer": {
+      "index": 20,
+      "name": "Physics Projectile"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "TimedExplosive",
+        "$name": "rocket_hv",
+        "timerAmountMin": 8.0,
+        "timerAmountMax": 10.0,
+        "minExplosionRadius": 1.0,
+        "explosionRadius": 3.5,
+        "explodeOnContact": false,
+        "canStick": false,
+        "forceRunClippingChecks": false,
+        "onlyDamageParent": false,
+        "IgnoreAI": false,
+        "BlindAI": false,
+        "aiBlindDuration": 2.5,
+        "aiBlindRange": 4.0,
+        "explosionOffsetMode": {
+          "$enum": "TimedExplosive+ExplosionEffectOffsetMode",
+          "name": "Local",
+          "value": 0
+        },
+        "explosionEffectOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -0.75
+        },
+        "explosionMatchesNormal": true,
+        "explosionUsesForward": false,
+        "explosionMatchesOrientation": false,
+        "explosionMatchesVelocity": false,
+        "explosionMatchesInverseVelocity": false,
+        "explosionEffect": {
+          "$ref": "GameObject",
+          "guid": "0882e27a84670459089723e863ca1b82",
+          "resourcePath": "assets/prefabs/weapons/rocketlauncher/effects/rocket_explosion_hv.prefab",
+          "resourceID": 2253809414
+        },
+        "underwaterExplosionEffect": {
+          "$ref": "GameObject",
+          "guid": "63d11a5699f6ee247aa89fc85f6153fc",
+          "resourcePath": "assets/content/effects/explosions/underwater/explosion_underwater_large.prefab",
+          "resourceID": 2593130125
+        },
+        "stickEffect": {
+          "$ref": "GameObject",
+          "guid": "5ee498ac602364d2dbd9efc3ecdbeb80",
+          "resourcePath": "assets/prefabs/tools/c4/effects/c4_stick.prefab",
+          "resourceID": 2722086713
+        },
+        "bounceEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "watersurfaceExplosionEffect": {
+          "$ref": "GameObject",
+          "guid": "43a1775bec85202438df2548e7e30c27",
+          "resourcePath": "assets/content/effects/explosions/underwater/explosion_underwater_surface_medium.prefab",
+          "resourceID": 4032387435
+        },
+        "underwaterExplosionDepth": 1.0,
+        "watersurfaceExplosionDepth": {
+          "$type": "MinMax",
+          "x": 0.5,
+          "y": 10.0
+        },
+        "waterCausesExplosion": false,
+        "vibrationLevel": 1,
+        "damageTypes": [
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Explosion",
+              "value": 16
+            },
+            "amount": 30.0
+          },
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Bullet",
+              "value": 9
+            },
+            "amount": 150.0
+          },
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "AntiVehicle",
+              "value": 22
+            },
+            "amount": 300.0
+          }
+        ],
+        "playerDamage": [
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Explosion",
+              "value": 16
+            },
+            "amount": 180.0
+          }
+        ],
+        "splashWallpaperThroughWalls": false,
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "wasDroneDropped": false,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -0.0002852901816368103,
+            "y": 0.029278809204697609,
+            "z": -0.2527153491973877
+          },
+          "size": {
+            "x": 0.1065542921423912,
+            "y": 0.10655420273542404,
+            "z": 0.64562177658081055
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": false,
+        "syncPosition": true,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 1217937936,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$type": "ServerProjectile",
+        "$name": "rocket_hv",
+        "initialVelocity": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "drag": 0.0,
+        "gravityModifier": 0.05000000074505806,
+        "speed": 40.0,
+        "scanRange": 0.0,
+        "swimScale": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "swimSpeed": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "radius": 0.0,
+        "IgnoreAI": false,
+        "runSpawnHitChecks": false,
+        "ignoreEntity": null,
+        "impacted": false,
+        "swimRandom": 0.0,
+        "_baseEntity": null
+      }
+    ],
+    "children": []
+  },
+  "prefabAttributes": {}
+}

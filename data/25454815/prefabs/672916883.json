@@ -1,0 +1,5154 @@
+{
+  "prefabID": 672916883,
+  "path": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+  "rootClassChain": [
+    "MiningQuarry",
+    "BaseResourceExtractor",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -0.27062511444091797,
+      "y": 4.89664363861084,
+      "z": 0.0
+    },
+    "size": {
+      "x": 18.790325164794922,
+      "y": 13.793289184570313,
+      "z": 13.331575393676758
+    }
+  },
+  "hierarchy": {
+    "name": "mining_quarry",
+    "layer": {
+      "index": 8,
+      "name": "Deployed"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "MiningQuarry",
+        "$name": "mining_quarry",
+        "beltAnimator": null,
+        "beltScrollRenderer": null,
+        "scrollMatIndex": 3,
+        "animatorSpeedChange": 1.0,
+        "beltScrollSpeedMultiplier": 0.62999999523162842,
+        "onSounds": [
+          null,
+          null
+        ],
+        "processRate": 10.0,
+        "workToAdd": 7.5,
+        "workPerFuel": 1000.0,
+        "pendingWork": 0.0,
+        "bucketDropEffect": {
+          "$ref": "GameObject",
+          "guid": "2ee28dd02530a38479651678e89fec5a",
+          "resourcePath": "assets/bundled/prefabs/fx/bucket_drop_debris.prefab",
+          "resourceID": 2391551618
+        },
+        "bucketDropTransform": {
+          "$ref": "GameObject",
+          "name": "BucketDrop",
+          "instanceID": 1059544
+        },
+        "engineSwitchPrefab": {
+          "$type": "MiningQuarry+ChildPrefab",
+          "prefabToSpawn": {
+            "$ref": "GameObject",
+            "guid": "ec9442d58c642194fa3459a99b1a8004",
+            "resourcePath": "assets/prefabs/deployable/quarry/engineswitch.prefab",
+            "resourceID": 167149050
+          },
+          "origin": {
+            "$ref": "GameObject",
+            "name": "engine",
+            "instanceID": 1059564
+          },
+          "instance": null
+        },
+        "hopperPrefab": {
+          "$type": "MiningQuarry+ChildPrefab",
+          "prefabToSpawn": {
+            "$ref": "GameObject",
+            "guid": "436f06dc563659b42a0817e3c242b9f5",
+            "resourcePath": "assets/prefabs/deployable/quarry/hopperoutput.prefab",
+            "resourceID": 875142383
+          },
+          "origin": {
+            "$ref": "GameObject",
+            "name": "hopper_output",
+            "instanceID": 1059580
+          },
+          "instance": null
+        },
+        "fuelStoragePrefab": {
+          "$type": "MiningQuarry+ChildPrefab",
+          "prefabToSpawn": {
+            "$ref": "GameObject",
+            "guid": "e4cfa665475bf154c9009b48619d151c",
+            "resourcePath": "assets/prefabs/deployable/quarry/fuelstorage.prefab",
+            "resourceID": 362963830
+          },
+          "origin": {
+            "$ref": "GameObject",
+            "name": "fuelstorage",
+            "instanceID": 1059554
+          },
+          "instance": null
+        },
+        "staticType": {
+          "$enum": "MiningQuarry+QuarryType",
+          "name": "None",
+          "value": 0
+        },
+        "isStatic": false,
+        "_linkedDeposit": {
+          "$type": "ResourceDepositManager+ResourceDeposit",
+          "lastSurveyTime": "-Infinity",
+          "origin": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "_resources": []
+        },
+        "canExtractLiquid": false,
+        "canExtractSolid": true,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "DeployableMetal",
+          "comments": "",
+          "density": 3.0,
+          "amounts": [
+            0.89999997615814209,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.949999988079071,
+            0.0,
+            0.0,
+            0.0,
+            0.99000000953674316,
+            0.99000000953674316,
+            0.99000000953674316,
+            0.0,
+            1.0,
+            1.0,
+            0.99000000953674316,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 3999396024
+        },
+        "startHealth": 2500.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": false,
+          "itemTarget": null,
+          "itemCount": 0,
+          "setConditionFromHealth": false,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": false,
+          "requireHammer": false,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "mining.quarry.item",
+            "itemid": 1052926200,
+            "shortname": "mining.quarry"
+          },
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -0.27062511444091797,
+            "y": 4.89664363861084,
+            "z": 0.0
+          },
+          "size": {
+            "x": 18.790325164794922,
+            "y": 13.793289184570313,
+            "z": 13.331575393676758
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 672916883,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      }
+    ],
+    "children": [
+      {
+        "name": "retaining_wall_cover_b (1)",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -4.190000057220459,
+          "y": 3.0,
+          "z": -2.75
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 1.4901161193847656E-07
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "retaining_wall_cover_b (1)",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "retaining_wall_cover_b_COL",
+              "meshId": "retaining_wall_cover_b_COL_8c3aee35"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "retaining_wall (5)",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -6.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.70710694789886475,
+          "z": 0.0,
+          "w": -0.70710664987564087
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "retaining_wall (5)",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "retaining_wall_COL",
+              "meshId": "retaining_wall_COL_b7158f84"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "retaining_wall (4)",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -6.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 1.4901161193847656E-07
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "retaining_wall (4)",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "retaining_wall_COL",
+              "meshId": "retaining_wall_COL_b7158f84"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "retaining_wall (3)",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -3.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 1.4901161193847656E-07
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "retaining_wall (3)",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "retaining_wall_COL",
+              "meshId": "retaining_wall_COL_b7158f84"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "retaining_wall (2)",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 3.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 1.4901161193847656E-07
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "retaining_wall (2)",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "retaining_wall_COL",
+              "meshId": "retaining_wall_COL_b7158f84"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "retaining_wall_stairs (2)",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 0.0,
+          "w": 1.4901161193847656E-07
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "retaining_wall_stairs (2)",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "retaining_wall_stairs_COL",
+              "meshId": "retaining_wall_stairs_COL_b5251d19"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "retaining_wall_stairs (1)",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -6.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": -0.70710676908493042,
+          "z": 0.0,
+          "w": 0.7071068286895752
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "retaining_wall_stairs (1)",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "retaining_wall_stairs_COL",
+              "meshId": "retaining_wall_stairs_COL_b5251d19"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "retaining_wall_corner (5)",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -6.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 0.0,
+          "w": 2.0861625671386719E-07
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "retaining_wall_corner (5)",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "retaining_wall_corner_COL",
+              "meshId": "retaining_wall_corner_COL_6e9080ba"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "retaining_wall_corner (4)",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -6.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": -0.70710670948028564,
+          "z": 0.0,
+          "w": 0.7071068286895752
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "retaining_wall_corner (4)",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "retaining_wall_corner_COL",
+              "meshId": "retaining_wall_corner_COL_6e9080ba"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "retaining_wall_corner (3)",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -6.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 2.9802322387695313E-08,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "retaining_wall_corner (3)",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "retaining_wall_corner_COL",
+              "meshId": "retaining_wall_corner_COL_6e9080ba"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "retaining_wall_corner (2)",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 3.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": -0.70710670948028564,
+          "z": 0.0,
+          "w": 0.7071068286895752
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "retaining_wall_corner (2)",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "retaining_wall_corner_COL",
+              "meshId": "retaining_wall_corner_COL_6e9080ba"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "retaining_wall_corner (1)",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 6.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 2.9802322387695313E-08,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "retaining_wall_corner (1)",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "retaining_wall_corner_COL",
+              "meshId": "retaining_wall_corner_COL_6e9080ba"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "retaining_wall (1)",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 6.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.70710676908493042,
+          "z": 0.0,
+          "w": 0.7071068286895752
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "retaining_wall (1)",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "retaining_wall_COL",
+              "meshId": "retaining_wall_COL_b7158f84"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "retaining_wall",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 6.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.70710676908493042,
+          "z": 0.0,
+          "w": 0.7071068286895752
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "retaining_wall",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "retaining_wall_COL",
+              "meshId": "retaining_wall_COL_b7158f84"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "retaining_wall_stairs",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 6.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "retaining_wall_stairs",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "retaining_wall_stairs_COL",
+              "meshId": "retaining_wall_stairs_COL_b5251d19"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "retaining_wall_cover_b",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -0.69200003147125244,
+          "y": 3.0,
+          "z": 3.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "retaining_wall_cover_b",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "retaining_wall_cover_b_COL",
+              "meshId": "retaining_wall_cover_b_COL_8c3aee35"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "retaining_wall_cover_a",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 5.5,
+          "y": 3.0,
+          "z": -2.5
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.70710676908493042,
+          "z": 0.0,
+          "w": 0.7071068286895752
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "retaining_wall_cover_a",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "retaining_wall_cover_a_COL",
+              "meshId": "retaining_wall_cover_a_COL_0bbb9f18"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "retaining_wall_corner",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 6.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.70710676908493042,
+          "z": 0.0,
+          "w": 0.7071068286895752
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "retaining_wall_corner",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "retaining_wall_corner_COL",
+              "meshId": "retaining_wall_corner_COL_6e9080ba"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "quarry_track",
+        "layer": {
+          "index": 16,
+          "name": "World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "quarry_track",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "quarry_track_rubber_COL",
+              "meshId": "quarry_track_rubber_COL_88d2f88f"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Cloth",
+              "instanceID": 609830
+            }
+          },
+          {
+            "$type": "AnimationEventForward",
+            "$name": "quarry_track",
+            "targetObject": {
+              "$ref": "GameObject",
+              "name": "mining_quarry",
+              "prefabID": 672916883,
+              "instanceID": 1059612
+            }
+          }
+        ],
+        "children": [
+          {
+            "name": "root",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.5620126703197457E-07
+            },
+            "localRotation": {
+              "x": 1.9973708731413353E-07,
+              "y": 8.7422776573475858E-08,
+              "z": -1.490117895741605E-08,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "barrel_a",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 2.1154444217681885,
+                  "y": 3.5766060352325439,
+                  "z": -1.050993660101085E-06
+                },
+                "localRotation": {
+                  "x": -0.13450275361537933,
+                  "y": -0.69419664144515991,
+                  "z": 0.69419676065444946,
+                  "w": 0.13450244069099426
+                },
+                "localScale": {
+                  "x": 1.0000001192092896,
+                  "y": 1.0,
+                  "z": 1.0000001192092896
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "barrel_a",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": -0.34000000357627869,
+                      "y": 0.0,
+                      "z": -0.34000000357627869
+                    },
+                    "radius": 0.4699999988079071,
+                    "height": 1.3799999952316284,
+                    "direction": 1,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "barrel_a_dirt",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.63673216104507446,
+                      "y": 3.0517580285049917E-07,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 1.3315640501332382E-07,
+                      "y": 0.004967973567545414,
+                      "z": -6.6152583411138721E-10,
+                      "w": 0.99998766183853149
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 0.99999982118606567,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "barrel_b",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.74614095687866211,
+                  "y": 5.8480019569396973,
+                  "z": -1.9743115444725845E-06
+                },
+                "localRotation": {
+                  "x": -0.13423429429531097,
+                  "y": -0.69424855709075928,
+                  "z": 0.6942487359046936,
+                  "w": 0.1342339962720871
+                },
+                "localScale": {
+                  "x": 1.0000003576278687,
+                  "y": 1.0,
+                  "z": 1.0000003576278687
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "barrel_b",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": -0.34000000357627869,
+                      "y": 0.0,
+                      "z": -0.34000000357627869
+                    },
+                    "radius": 0.4699999988079071,
+                    "height": 1.3799999952316284,
+                    "direction": 1,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "barrel_b_dirt",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.63673216104507446,
+                      "y": 3.05175660741952E-07,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 1.3315614921793895E-07,
+                      "y": 0.0053543928079307079,
+                      "z": -7.129807300110258E-10,
+                      "w": 0.99998569488525391
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 0.99999988079071045,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "barrel_c",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.58268481492996216,
+                  "y": 8.0452241897583,
+                  "z": -2.8673105134657817E-06
+                },
+                "localRotation": {
+                  "x": -0.13352073729038239,
+                  "y": -0.69438618421554565,
+                  "z": 0.69438630342483521,
+                  "w": 0.13352043926715851
+                },
+                "localScale": {
+                  "x": 1.0000005960464478,
+                  "y": 1.0,
+                  "z": 1.0000005960464478
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "barrel_c",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": -0.34000000357627869,
+                      "y": 0.0,
+                      "z": -0.34000000357627869
+                    },
+                    "radius": 0.4699999988079071,
+                    "height": 1.3799999952316284,
+                    "direction": 1,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "barrel_c_dirt",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.636731743812561,
+                      "y": 3.0517568916366145E-07,
+                      "z": -1.2207030977151589E-06
+                    },
+                    "localRotation": {
+                      "x": -6.0058705688943655E-17,
+                      "y": 0.0063822227530181408,
+                      "z": -1.8330249582281189E-16,
+                      "w": 0.99997967481613159
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "barrel_d",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -1.7454719543457031,
+                  "y": 9.9572162628173828,
+                  "z": -3.644130629254505E-06
+                },
+                "localRotation": {
+                  "x": -0.13255253434181213,
+                  "y": -0.69457167387008667,
+                  "z": 0.694571852684021,
+                  "w": 0.13255223631858826
+                },
+                "localScale": {
+                  "x": 0.9999997615814209,
+                  "y": 1.0,
+                  "z": 0.9999997615814209
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "barrel_d",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": -0.34000000357627869,
+                      "y": 0.0,
+                      "z": -0.34000000357627869
+                    },
+                    "radius": 0.4699999988079071,
+                    "height": 1.3799999952316284,
+                    "direction": 1,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "barrel_d_dirt",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.63673186302185059,
+                      "y": 4.09634210996046E-08,
+                      "z": 6.1035154885757947E-07
+                    },
+                    "localRotation": {
+                      "x": 1.3315403180058638E-07,
+                      "y": 0.0077764852903783321,
+                      "z": -1.0355017954211121E-09,
+                      "w": 0.99996978044509888
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 0.99999982118606567,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "barrel_e",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -3.1647114753723145,
+                  "y": 10.729673385620117,
+                  "z": -4.1238668018195312E-06
+                },
+                "localRotation": {
+                  "x": 0.48831182718276978,
+                  "y": -0.51142102479934692,
+                  "z": 0.51142120361328125,
+                  "w": -0.48831188678741455
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "barrel_e",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": -0.34000000357627869,
+                      "y": 0.0,
+                      "z": -0.34000000357627869
+                    },
+                    "radius": 0.4699999988079071,
+                    "height": 1.3799999952316284,
+                    "direction": 1,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "barrel_e_dirt",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.63673305511474609,
+                      "y": 3.0517600180246518E-07,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 1.4626681377194473E-06,
+                      "y": -0.0012949616648256779,
+                      "z": -1.5959985830704682E-06,
+                      "w": 0.99999916553497314
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "barrel_f",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -2.1474432945251465,
+                  "y": 8.2626628875732422,
+                  "z": -3.3284920846199384E-06
+                },
+                "localRotation": {
+                  "x": -0.694305419921875,
+                  "y": 0.13394030928611755,
+                  "z": -0.13394047319889069,
+                  "w": 0.69430536031723022
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "barrel_f",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": -0.34000000357627869,
+                      "y": 0.0,
+                      "z": -0.34000000357627869
+                    },
+                    "radius": 0.4699999988079071,
+                    "height": 1.3799999952316284,
+                    "direction": 1,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "barrel_f_dirt",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.63673216104507446,
+                      "y": 3.0517543336827657E-07,
+                      "z": -6.1035154885757947E-07
+                    },
+                    "localRotation": {
+                      "x": -6.2833513039049991E-19,
+                      "y": -0.0051307454705238342,
+                      "z": -1.2246307060196108E-16,
+                      "w": 0.99998682737350464
+                    },
+                    "localScale": {
+                      "x": 0.0099999997764825821,
+                      "y": 0.800000011920929,
+                      "z": 0.0099999997764825821
+                    },
+                    "components": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "barrel_g",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.88692200183868408,
+                  "y": 6.1785087585449219,
+                  "z": -2.5113665742537705E-06
+                },
+                "localRotation": {
+                  "x": -0.69431585073471069,
+                  "y": 0.13388606905937195,
+                  "z": -0.13388623297214508,
+                  "w": 0.69431585073471069
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "barrel_g",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": -0.34000000357627869,
+                      "y": 0.0,
+                      "z": -0.34000000357627869
+                    },
+                    "radius": 0.4699999988079071,
+                    "height": 1.3799999952316284,
+                    "direction": 1,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "barrel_g_dirt",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.63673186302185059,
+                      "y": 3.0517600180246518E-07,
+                      "z": 6.1035154885757947E-07
+                    },
+                    "localRotation": {
+                      "x": 7.17139069605085E-19,
+                      "y": 0.0058558848686516285,
+                      "z": -1.2246259414592825E-16,
+                      "w": 0.99998289346694946
+                    },
+                    "localScale": {
+                      "x": 0.0099999997764825821,
+                      "y": 0.800000011920929,
+                      "z": 0.0099999997764825821
+                    },
+                    "components": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "barrel_h",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.48437392711639404,
+                  "y": 3.9118294715881348,
+                  "z": -1.6210633475566283E-06
+                },
+                "localRotation": {
+                  "x": -0.69432169198989868,
+                  "y": 0.13385573029518127,
+                  "z": -0.13385589420795441,
+                  "w": 0.69432169198989868
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "barrel_h",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": -0.34000000357627869,
+                      "y": 0.0,
+                      "z": -0.34000000357627869
+                    },
+                    "radius": 0.4699999988079071,
+                    "height": 1.3799999952316284,
+                    "direction": 1,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "barrel_h_dirt",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.50651603937149048,
+                      "y": 2.8858354994554247E-07,
+                      "z": -0.2010931521654129
+                    },
+                    "localRotation": {
+                      "x": -6.1338596046892361E-19,
+                      "y": -0.0050086765550076962,
+                      "z": -1.2246315001129989E-16,
+                      "w": 0.99998748302459717
+                    },
+                    "localScale": {
+                      "x": 0.0099999997764825821,
+                      "y": 0.800000011920929,
+                      "z": 0.0099999997764825821
+                    },
+                    "components": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "barrel_i",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 1.7913284301757813,
+                  "y": 1.7517309188842773,
+                  "z": -7.7204225590321585E-07
+                },
+                "localRotation": {
+                  "x": -0.69432216882705688,
+                  "y": 0.13385327160358429,
+                  "z": -0.13385342061519623,
+                  "w": 0.69432222843170166
+                },
+                "localScale": {
+                  "x": 1.0000001192092896,
+                  "y": 1.0,
+                  "z": 1.0000001192092896
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "barrel_i",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": -0.34000000357627869,
+                      "y": 0.0,
+                      "z": -0.34000000357627869
+                    },
+                    "radius": 0.4699999988079071,
+                    "height": 1.3799999952316284,
+                    "direction": 1,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "barrel_i_dirt",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.62193572521209717,
+                      "y": 2.9559822678493219E-07,
+                      "z": -0.030272463336586952
+                    },
+                    "localRotation": {
+                      "x": -2.3841559482207231E-07,
+                      "y": -0.00500510074198246,
+                      "z": -1.1933091181859368E-09,
+                      "w": 0.99998748302459717
+                    },
+                    "localScale": {
+                      "x": 0.0099999997764825821,
+                      "y": 1.0,
+                      "z": 0.0099999997764825821
+                    },
+                    "components": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "barrel_j",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 3.1550283432006836,
+                  "y": -0.50233209133148193,
+                  "z": 1.1346242700938092E-07
+                },
+                "localRotation": {
+                  "x": -0.69431734085083008,
+                  "y": 0.13387872278690338,
+                  "z": -0.13387890160083771,
+                  "w": 0.6943172812461853
+                },
+                "localScale": {
+                  "x": 1.0000001192092896,
+                  "y": 1.0,
+                  "z": 1.0000001192092896
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "barrel_j",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": -0.34000000357627869,
+                      "y": 0.0,
+                      "z": -0.34000000357627869
+                    },
+                    "radius": 0.4699999988079071,
+                    "height": 1.3799999952316284,
+                    "direction": 1,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "barrel_j_dirt",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.63347721099853516,
+                      "y": 3.034387816569506E-07,
+                      "z": -0.0035183890722692013
+                    },
+                    "localRotation": {
+                      "x": -2.3822278194529645E-07,
+                      "y": 0.040519014000892639,
+                      "z": 9.66048574468914E-09,
+                      "w": 0.99917876720428467
+                    },
+                    "localScale": {
+                      "x": 0.0099999997764825821,
+                      "y": 0.0099999997764825821,
+                      "z": 0.0099999997764825821
+                    },
+                    "components": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "barrel_k",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 3.2893645763397217,
+                  "y": 1.6287506818771362,
+                  "z": -2.5918103574440465E-07
+                },
+                "localRotation": {
+                  "x": -0.13434910774230957,
+                  "y": -0.69422638416290283,
+                  "z": 0.69422650337219238,
+                  "w": 0.13434880971908569
+                },
+                "localScale": {
+                  "x": 1.0000001192092896,
+                  "y": 1.0,
+                  "z": 1.0000001192092896
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "barrel_k",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": -0.34000000357627869,
+                      "y": 0.0,
+                      "z": -0.34000000357627869
+                    },
+                    "radius": 0.4699999988079071,
+                    "height": 1.3799999952316284,
+                    "direction": 1,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "barrel_k_dirt",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.63673192262649536,
+                      "y": 3.0517585969391803E-07,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": -6.0278312215409133E-17,
+                      "y": 0.005189012736082077,
+                      "z": -1.8337680972904365E-16,
+                      "w": 0.99998652935028076
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 0.99999988079071045,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "belt",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 1.9132431745529175,
+                  "y": 2.715228796005249,
+                  "z": -6.1035154885757947E-07
+                },
+                "localRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 3.68069464684595E-07,
+                  "z": -4.5236311052576639E-07,
+                  "w": 0.70710670948028564
+                },
+                "localScale": {
+                  "x": 1.0000003576278687,
+                  "y": 1.0000001192092896,
+                  "z": 1.0000002384185791
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "engine_main",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.86088061332702637,
+                  "y": 9.66588306427002,
+                  "z": 0.43816265463829041
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "engine_belt_lower",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -1.7692118883132935,
+                      "y": 0.1230299100279808,
+                      "z": 0.44960883259773254
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": -0.054460238665342331,
+                      "w": 0.99851596355438232
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  },
+                  {
+                    "name": "engine_belt_upper",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -1.6856074333190918,
+                      "y": 0.88718438148498535,
+                      "z": 0.4505353569984436
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": -0.054460238665342331,
+                      "w": 0.99851596355438232
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  },
+                  {
+                    "name": "engine_exhast",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.40631183981895447,
+                      "y": 1.0765414237976074,
+                      "z": -0.19854736328125
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  },
+                  {
+                    "name": "engine_filter",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.32032462954521179,
+                      "y": 0.86619603633880615,
+                      "z": 0.10689764469861984
+                    },
+                    "localRotation": {
+                      "x": 0.00545812351629138,
+                      "y": 0.054733533412218094,
+                      "z": 0.099079348146915436,
+                      "w": 0.99355816841125488
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  },
+                  {
+                    "name": "engine_side_panel",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.057260222733020782,
+                      "y": 0.37387305498123169,
+                      "z": 0.2774462103843689
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  },
+                  {
+                    "name": "engine_tank",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.072438046336174011,
+                      "y": 0.90853172540664673,
+                      "z": 0.076516732573509216
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": -0.011980049312114716,
+                      "w": 0.99992823600769043
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  },
+                  {
+                    "name": "engine_wheel",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.34252211451530457,
+                      "z": 0.40952605009078979
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "roller_a",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 1.9132431745529175,
+                  "y": 2.715228796005249,
+                  "z": -6.1035154885757947E-07
+                },
+                "localRotation": {
+                  "x": -0.7071068286895752,
+                  "y": -4.2146847789581443E-08,
+                  "z": -4.2146851342295122E-08,
+                  "w": 0.70710670948028564
+                },
+                "localScale": {
+                  "x": 1.0000003576278687,
+                  "y": 1.0000001192092896,
+                  "z": 1.0000002384185791
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "roller_b",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.49880510568618774,
+                  "y": 6.6797094345092773,
+                  "z": -1.8310546465727384E-06
+                },
+                "localRotation": {
+                  "x": -0.7071068286895752,
+                  "y": -4.2146847789581443E-08,
+                  "z": -4.2146851342295122E-08,
+                  "w": 0.70710670948028564
+                },
+                "localScale": {
+                  "x": 1.0000003576278687,
+                  "y": 1.0000001192092896,
+                  "z": 1.0000002384185791
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "roller_c",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -2.6907567977905273,
+                  "y": 10.33680248260498,
+                  "z": -2.4414061954303179E-06
+                },
+                "localRotation": {
+                  "x": -0.7071068286895752,
+                  "y": -5.3342102290798721E-08,
+                  "z": -3.0951596841077844E-08,
+                  "w": 0.70710670948028564
+                },
+                "localScale": {
+                  "x": 1.0000003576278687,
+                  "y": 1.0000001192092896,
+                  "z": 1.0000002384185791
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "track_01",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 3.9150557518005371,
+                  "y": 0.5919836163520813,
+                  "z": 1.6223587806507567E-07
+                },
+                "localRotation": {
+                  "x": -0.26833710074424744,
+                  "y": 0.96332508325576782,
+                  "z": -9.2543245955312159E-08,
+                  "w": 1.6400574054387107E-07
+                },
+                "localScale": {
+                  "x": 1.0000004768371582,
+                  "y": 1.0000001192092896,
+                  "z": 1.0000004768371582
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "track_02",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 2.7669322490692139,
+                  "y": 2.4953570365905762,
+                  "z": -6.1145459540057345E-07
+                },
+                "localRotation": {
+                  "x": -0.267869770526886,
+                  "y": 0.96345514059066772,
+                  "z": -9.262279832000786E-08,
+                  "w": 1.6396082003211632E-07
+                },
+                "localScale": {
+                  "x": 1.0000007152557373,
+                  "y": 1.0000002384185791,
+                  "z": 1.0000004768371582
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "track_03",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 1.4355850219726563,
+                  "y": 4.7048416137695313,
+                  "z": -1.5096308061401942E-06
+                },
+                "localRotation": {
+                  "x": -0.26790902018547058,
+                  "y": 0.96344423294067383,
+                  "z": -9.2616112112864357E-08,
+                  "w": 1.6396460011947056E-07
+                },
+                "localScale": {
+                  "x": 1.0000004768371582,
+                  "y": 1.0000001192092896,
+                  "z": 1.0000004768371582
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "track_04",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.074213370680809021,
+                  "y": 6.9603104591369629,
+                  "z": -2.4264084004244069E-06
+                },
+                "localRotation": {
+                  "x": -0.26860761642456055,
+                  "y": 0.963249683380127,
+                  "z": -9.2497188575180189E-08,
+                  "w": 1.6403171798629046E-07
+                },
+                "localScale": {
+                  "x": 1.0000004768371582,
+                  "y": 1.0,
+                  "z": 1.0000004768371582
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "track_05",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -1.1920768022537231,
+                  "y": 9.0487861633300781,
+                  "z": -3.2750831451267004E-06
+                },
+                "localRotation": {
+                  "x": -0.26982206106185913,
+                  "y": 0.96291017532348633,
+                  "z": -9.2290264319672133E-08,
+                  "w": 1.641482327841004E-07
+                },
+                "localScale": {
+                  "x": 1.0000005960464478,
+                  "y": 1.0000002384185791,
+                  "z": 1.0000004768371582
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "track_06",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -2.0492897033691406,
+                  "y": 10.45460033416748,
+                  "z": -3.8461603253381327E-06
+                },
+                "localRotation": {
+                  "x": -0.27097678184509277,
+                  "y": 0.9625859260559082,
+                  "z": -9.2093337400456221E-08,
+                  "w": 1.642588216554941E-07
+                },
+                "localScale": {
+                  "x": 1.0000005960464478,
+                  "y": 1.0000002384185791,
+                  "z": 1.0000004768371582
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "track_07",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -2.6988418102264404,
+                  "y": 9.1746129989624023,
+                  "z": -3.6853625715593807E-06
+                },
+                "localRotation": {
+                  "x": 0.96326518058776855,
+                  "y": 0.26855212450027466,
+                  "z": 1.2042191599448415E-07,
+                  "w": 2.4289943212352227E-07
+                },
+                "localScale": {
+                  "x": 1.0000004768371582,
+                  "y": 1.0000001192092896,
+                  "z": 1.0000003576278687
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "track_08",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -1.5486351251602173,
+                  "y": 7.27249813079834,
+                  "z": -2.9405171062535373E-06
+                },
+                "localRotation": {
+                  "x": 0.9632411003112793,
+                  "y": 0.26863843202590942,
+                  "z": 1.2041091679293459E-07,
+                  "w": 2.4289775524266588E-07
+                },
+                "localScale": {
+                  "x": 1.0000004768371582,
+                  "y": 1.0000001192092896,
+                  "z": 1.0000003576278687
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "track_09",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.21349154412746429,
+                  "y": 5.0653061866760254,
+                  "z": -2.0742695596709382E-06
+                },
+                "localRotation": {
+                  "x": 0.96322554349899292,
+                  "y": 0.268694132566452,
+                  "z": 1.2040383978728642E-07,
+                  "w": 2.4289670363941696E-07
+                },
+                "localScale": {
+                  "x": 1.0000004768371582,
+                  "y": 1.0000001192092896,
+                  "z": 1.0000003576278687
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "track_10",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 1.1644636392593384,
+                  "y": 2.7877926826477051,
+                  "z": -1.1792718623837573E-06
+                },
+                "localRotation": {
+                  "x": 0.9632192850112915,
+                  "y": 0.26871654391288757,
+                  "z": 1.2040095498377923E-07,
+                  "w": 2.428962773137755E-07
+                },
+                "localScale": {
+                  "x": 1.0000004768371582,
+                  "y": 1.0000001192092896,
+                  "z": 1.0000003576278687
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "track_11",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 2.4287855625152588,
+                  "y": 0.69812417030334473,
+                  "z": -3.5801326703222003E-07
+                },
+                "localRotation": {
+                  "x": 0.96322309970855713,
+                  "y": 0.26870295405387878,
+                  "z": 1.204027029189092E-07,
+                  "w": 2.4289653310916037E-07
+                },
+                "localScale": {
+                  "x": 1.0000004768371582,
+                  "y": 1.0000001192092896,
+                  "z": 1.0000003576278687
+                },
+                "components": [],
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "quarry_main",
+        "layer": {
+          "index": 16,
+          "name": "World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "quarry_main",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "quarry_main_wood_COL",
+              "meshId": "quarry_main_wood_COL_e95fb8d8"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          },
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "quarry_main",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "quarry_main_rock_COL",
+              "meshId": "quarry_main_rock_COL_dd2544c6"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Rock",
+              "instanceID": 609844
+            }
+          },
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "quarry_main",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "quarry_main_metal_COL",
+              "meshId": "quarry_main_metal_COL_aa7cd284"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Metal",
+              "instanceID": 609842
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "water_drum_a",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -3.1739950180053711,
+          "y": 3.4429998397827148,
+          "z": -1.5750083923339844
+        },
+        "localRotation": {
+          "x": 0.69769811630249023,
+          "y": -0.707079291343689,
+          "z": 0.1149265468120575,
+          "w": 0.006939321756362915
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.CapsuleCollider",
+            "$name": "water_drum_a",
+            "colliderType": "Capsule",
+            "center": {
+              "x": -9.5367431640625E-07,
+              "y": 0.70076322555541992,
+              "z": 1.4901161193847656E-08
+            },
+            "radius": 0.43517488241195679,
+            "height": 1.6000000238418579,
+            "direction": 1,
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Generic",
+              "instanceID": 609836
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "water_drum_a",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -0.75600433349609375,
+          "y": 3.003000020980835,
+          "z": 2.2139987945556641
+        },
+        "localRotation": {
+          "x": 1.0288920826440062E-08,
+          "y": -0.88225823640823364,
+          "z": 1.928237836068547E-08,
+          "w": 0.47076588869094849
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.CapsuleCollider",
+            "$name": "water_drum_a",
+            "colliderType": "Capsule",
+            "center": {
+              "x": -9.5367431640625E-07,
+              "y": 0.70076322555541992,
+              "z": 1.4901161193847656E-08
+            },
+            "radius": 0.43517488241195679,
+            "height": 1.6000000238418579,
+            "direction": 1,
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Generic",
+              "instanceID": 609836
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "water_drum_a",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.20499610900878906,
+          "y": 3.003000020980835,
+          "z": 2.1860008239746094
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": -0.70710569620132446,
+          "z": 0.0,
+          "w": -0.70710790157318115
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.CapsuleCollider",
+            "$name": "water_drum_a",
+            "colliderType": "Capsule",
+            "center": {
+              "x": -9.5367431640625E-07,
+              "y": 0.70076322555541992,
+              "z": 1.4901161193847656E-08
+            },
+            "radius": 0.43517488241195679,
+            "height": 1.6000000238418579,
+            "direction": 1,
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Generic",
+              "instanceID": 609836
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "quarry_ladder",
+        "layer": {
+          "index": 16,
+          "name": "World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 1.5399999618530273,
+          "y": 3.0336999893188477,
+          "z": -2.130000114440918
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "quarry_ladder",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "quarry_ladder_COL",
+              "meshId": "quarry_ladder_COL_d2750ce1"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "ladder",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "ladder trigger",
+            "layer": {
+              "index": 18,
+              "name": "Trigger"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.5369999408721924,
+              "y": 5.5320000648498535,
+              "z": -2.1400001049041748
+            },
+            "localRotation": {
+              "x": 0.01392840314656496,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.99990302324295044
+            },
+            "localScale": {
+              "x": 0.5,
+              "y": 4.6875004768371582,
+              "z": 0.20000000298023224
+            },
+            "components": [
+              {
+                "$type": "TriggerLadder",
+                "$name": "ladder trigger",
+                "Type": {
+                  "$enum": "TriggerLadder+LadderType",
+                  "name": "Rungs",
+                  "value": 0
+                },
+                "ForceLookAt": false,
+                "RequireJumpToMount": false,
+                "ClimbFootstepSound": null,
+                "interestLayers": 131072,
+                "contents": null,
+                "entityContents": null,
+                "OnEntityEnterTrigger": null,
+                "OnEntityLeaveTrigger": null
+              },
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "ladder trigger",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.016106367111206055,
+                  "y": 0.2219662219285965,
+                  "z": -0.43757081031799316
+                },
+                "size": {
+                  "x": 1.4831879138946533,
+                  "y": 1.272132396697998,
+                  "z": 1.875145435333252
+                },
+                "isTrigger": true,
+                "enabled": true
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "sockets",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "survey_crater_male",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 1.6599999666213989,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "hardpoints",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "fuelstorage",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.25,
+              "y": 3.0550003051757813,
+              "z": 2.2159996032714844
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "engine",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.89800000190734863,
+              "y": 9.5500001907348633,
+              "z": 0.8970000147819519
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "hopper_output",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -4.3600001335144043,
+              "y": 3.0199999809265137,
+              "z": -0.059999998658895493
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "BucketDrop",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -3.4530000686645508,
+              "y": 11.152999877929688,
+              "z": -0.0099999997764825821
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": -0.7071068286895752,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Prevent Building",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.SphereCollider",
+            "$name": "Prevent Building",
+            "colliderType": "Sphere",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "radius": 15.0,
+            "isTrigger": true,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "aiobstacle",
+        "layer": {
+          "index": 21,
+          "name": "Construction"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.AI.NavMeshObstacle",
+            "$name": "aiobstacle"
+          }
+        ],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Construction": [
+      {
+        "$type": "Construction",
+        "$name": "<destroyed native object>",
+        "prefabID": 672916883,
+        "hierachyName": "mining_quarry",
+        "info": {
+          "$type": "BaseEntity+Menu+Option",
+          "name": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "description": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "icon": null,
+          "order": 0,
+          "usableWhileWounded": false
+        },
+        "canBypassBuildingPermission": true,
+        "showBuildingBlockedPreview": true,
+        "canPlaceOnRoads": false,
+        "canRotateBeforePlacement": true,
+        "canRotateAfterPlacement": true,
+        "canBeDeployedInDeepSeaWater": false,
+        "checkVolumeOnRotate": false,
+        "checkVolumeOnUpgrade": false,
+        "canPlaceAtMaxDistance": false,
+        "placeOnWater": false,
+        "overridePlacementLayer": false,
+        "overridedPlacementLayer": 0,
+        "additionalPlacementLayer": 0,
+        "rotationAmount": {
+          "x": 0.0,
+          "y": 90.0,
+          "z": 0.0
+        },
+        "applyStartingRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "deployOffset": null,
+        "enforceLineOfSightCheckAgainstParentEntity": false,
+        "canSnap": false,
+        "forceY": false,
+        "forceYValue": 0.0,
+        "forceYToOceanLevel": false,
+        "OceanLevelYOffset": 0.0,
+        "holdToPlaceDuration": 0.0,
+        "canFloodFillSockets": false,
+        "alternativeLOSChecks": false,
+        "alternativeLOSPositions": [],
+        "canUseLastValidPosition": true,
+        "healthMultiplier": 1.0,
+        "costMultiplier": 1.0,
+        "maxplaceDistance": 10.0,
+        "minPlaceDistance": 1.0,
+        "guideMesh": null,
+        "guideMeshMaterial": [],
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "hideBuildingPlannerViewmodel": false,
+        "allSockets": [
+          {
+            "$type": "Socket_Specific",
+            "$name": "<destroyed native object>",
+            "prefabID": 672916883,
+            "hierachyName": "mining_quarry/sockets/survey_crater_male",
+            "useFemaleRotation": false,
+            "targetSocketName": "survey_crater",
+            "blockPlacementOnChildEntities": false,
+            "canRotate": false,
+            "male": true,
+            "maleDummy": false,
+            "female": false,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": false,
+            "position": {
+              "x": 0.0,
+              "y": 1.6599999666213989,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "selectSize": {
+              "x": 2.0,
+              "y": 0.10000000149011612,
+              "z": 2.0
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            },
+            "socketName": "mining_quarry/sockets/survey_crater_male",
+            "socketMods": [
+              {
+                "$type": "SocketMod_InWater",
+                "$name": "<destroyed native object>",
+                "prefabID": 672916883,
+                "hierachyName": "mining_quarry/sockets/survey_crater_male/notInWater (5)",
+                "wantsInWater": false,
+                "excludeArtificialWater": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Specific"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -6.28000020980835,
+                  "y": 2.190000057220459,
+                  "z": -2.9500000476837158
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                },
+                "localPosition": {
+                  "x": -6.28000020980835,
+                  "y": 0.53000009059906006,
+                  "z": -2.9500000476837158
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+                "instanceID": 1495110,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_InWater",
+                "$name": "<destroyed native object>",
+                "prefabID": 672916883,
+                "hierachyName": "mining_quarry/sockets/survey_crater_male/notInWater (6)",
+                "wantsInWater": false,
+                "excludeArtificialWater": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Specific"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 4.5799999237060547,
+                  "y": 2.190000057220459,
+                  "z": -2.869999885559082
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                },
+                "localPosition": {
+                  "x": 4.5799999237060547,
+                  "y": 0.53000009059906006,
+                  "z": -2.869999885559082
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+                "instanceID": 1495118,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_InWater",
+                "$name": "<destroyed native object>",
+                "prefabID": 672916883,
+                "hierachyName": "mining_quarry/sockets/survey_crater_male/notInWater (7)",
+                "wantsInWater": false,
+                "excludeArtificialWater": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Specific"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 5.2300000190734863,
+                  "y": 2.190000057220459,
+                  "z": 2.7799999713897705
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                },
+                "localPosition": {
+                  "x": 5.2300000190734863,
+                  "y": 0.53000009059906006,
+                  "z": 2.7799999713897705
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+                "instanceID": 1495116,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_InWater",
+                "$name": "<destroyed native object>",
+                "prefabID": 672916883,
+                "hierachyName": "mining_quarry/sockets/survey_crater_male/notInWater (8)",
+                "wantsInWater": false,
+                "excludeArtificialWater": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Specific"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -6.1700000762939453,
+                  "y": 2.190000057220459,
+                  "z": 2.6700000762939453
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                },
+                "localPosition": {
+                  "x": -6.1700000762939453,
+                  "y": 0.53000009059906006,
+                  "z": 2.6700000762939453
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+                "instanceID": 1495126,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_TerrainCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 672916883,
+                "hierachyName": "mining_quarry/sockets/survey_crater_male/terrain_test",
+                "wantsInTerrain": true,
+                "preventWorldLayerInMonuments": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Specific"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -5.42999267578125,
+                  "y": -1.1899999380111694,
+                  "z": 4.929999828338623
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                },
+                "localPosition": {
+                  "x": -5.42999267578125,
+                  "y": -2.8499999046325684,
+                  "z": 4.929999828338623
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+                "instanceID": 1495144,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 672916883,
+                "hierachyName": "mining_quarry/sockets/survey_crater_male/sphere_test (6)",
+                "sphereRadius": 15.0,
+                "layerMask": 807403520,
+                "wantsCollide": false,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Specific"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 2.2599999904632568,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 1.0000001192092896,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.60000002384185791,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+                "instanceID": 1495134,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 672916883,
+                "hierachyName": "mining_quarry/sockets/survey_crater_male/sphere_test (7)",
+                "sphereRadius": 3.2000000476837158,
+                "layerMask": 815857665,
+                "wantsCollide": false,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Specific"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -0.2599945068359375,
+                  "y": 8.8100004196167,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 1.0000001192092896,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -0.2599945068359375,
+                  "y": 7.15000057220459,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+                "instanceID": 1495112,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 672916883,
+                "hierachyName": "mining_quarry/sockets/survey_crater_male/sphere_test (8)",
+                "sphereRadius": 3.2000000476837158,
+                "layerMask": 815857665,
+                "wantsCollide": false,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Specific"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.529998779296875,
+                  "y": 6.1700000762939453,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 1.0000001192092896,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.529998779296875,
+                  "y": 4.5100002288818359,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+                "instanceID": 1495114,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 672916883,
+                "hierachyName": "mining_quarry/sockets/survey_crater_male/sphere_test (9)",
+                "sphereRadius": 3.2000000476837158,
+                "layerMask": 815857665,
+                "wantsCollide": false,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Specific"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -2.6699981689453125,
+                  "y": 6.1700000762939453,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 1.0000001192092896,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -2.6699981689453125,
+                  "y": 4.5100002288818359,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+                "instanceID": 1495132,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 672916883,
+                "hierachyName": "mining_quarry/sockets/survey_crater_male/sphere_test (10)",
+                "sphereRadius": 1.0,
+                "layerMask": 815857665,
+                "wantsCollide": false,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Specific"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -0.30999755859375,
+                  "y": 3.7599997520446777,
+                  "z": 1.910003662109375
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 1.0000001192092896,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -0.30999755859375,
+                  "y": 2.0999999046325684,
+                  "z": 1.910003662109375
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+                "instanceID": 1495142,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 672916883,
+                "hierachyName": "mining_quarry/sockets/survey_crater_male/sphere_test (11)",
+                "sphereRadius": 2.0,
+                "layerMask": 815857665,
+                "wantsCollide": false,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Specific"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 2.130000114440918,
+                  "y": 4.5199999809265137,
+                  "z": -0.029999999329447746
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 1.0000001192092896,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 2.130000114440918,
+                  "y": 2.8599998950958252,
+                  "z": -0.029999999329447746
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+                "instanceID": 1495128,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 672916883,
+                "hierachyName": "mining_quarry/sockets/survey_crater_male/sphere_test (12)",
+                "sphereRadius": 3.2000000476837158,
+                "layerMask": 815857665,
+                "wantsCollide": false,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Specific"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -0.2599945068359375,
+                  "y": 14.149999618530273,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 1.0000001192092896,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -0.2599945068359375,
+                  "y": 12.489999771118164,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+                "instanceID": 1495102,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 672916883,
+                "hierachyName": "mining_quarry/sockets/survey_crater_male/sphere_test (13)",
+                "sphereRadius": 3.2000000476837158,
+                "layerMask": 815857665,
+                "wantsCollide": false,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Specific"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -0.2599945068359375,
+                  "y": 19.190000534057617,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 1.0000001192092896,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -0.2599945068359375,
+                  "y": 17.530000686645508,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+                "instanceID": 1495146,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 672916883,
+                "hierachyName": "mining_quarry/sockets/survey_crater_male/sphere_test (14)",
+                "sphereRadius": 3.2000000476837158,
+                "layerMask": 815857665,
+                "wantsCollide": false,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Specific"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -0.2599945068359375,
+                  "y": 23.719999313354492,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 1.0000001192092896,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -0.2599945068359375,
+                  "y": 22.059999465942383,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+                "instanceID": 1495120,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_TerrainCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 672916883,
+                "hierachyName": "mining_quarry/sockets/survey_crater_male/terrain_test (1)",
+                "wantsInTerrain": true,
+                "preventWorldLayerInMonuments": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Specific"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -5.42999267578125,
+                  "y": -1.1899999380111694,
+                  "z": -5.0900001525878906
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                },
+                "localPosition": {
+                  "x": -5.42999267578125,
+                  "y": -2.8499999046325684,
+                  "z": -5.0900001525878906
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+                "instanceID": 1495098,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_TerrainCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 672916883,
+                "hierachyName": "mining_quarry/sockets/survey_crater_male/terrain_test (2)",
+                "wantsInTerrain": true,
+                "preventWorldLayerInMonuments": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Specific"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 5.559999942779541,
+                  "y": -1.1899999380111694,
+                  "z": -5.089996337890625
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                },
+                "localPosition": {
+                  "x": 5.559999942779541,
+                  "y": -2.8499999046325684,
+                  "z": -5.089996337890625
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+                "instanceID": 1495104,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_TerrainCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 672916883,
+                "hierachyName": "mining_quarry/sockets/survey_crater_male/terrain_test (3)",
+                "wantsInTerrain": true,
+                "preventWorldLayerInMonuments": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Specific"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 5.559999942779541,
+                  "y": -1.1899999380111694,
+                  "z": 4.9300003051757813
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                },
+                "localPosition": {
+                  "x": 5.559999942779541,
+                  "y": -2.8499999046325684,
+                  "z": 4.9300003051757813
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+                "instanceID": 1495124,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_TerrainCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 672916883,
+                "hierachyName": "mining_quarry/sockets/survey_crater_male/terrain_test (4)",
+                "wantsInTerrain": true,
+                "preventWorldLayerInMonuments": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Specific"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 7.809999942779541,
+                  "y": -1.1899999380111694,
+                  "z": -0.019999999552965164
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                },
+                "localPosition": {
+                  "x": 7.809999942779541,
+                  "y": -2.8499999046325684,
+                  "z": -0.019999999552965164
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+                "instanceID": 1495100,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_TerrainCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 672916883,
+                "hierachyName": "mining_quarry/sockets/survey_crater_male/terrain_test (5)",
+                "wantsInTerrain": true,
+                "preventWorldLayerInMonuments": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Specific"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -7.9899997711181641,
+                  "y": -1.1899999380111694,
+                  "z": -0.01999664306640625
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                },
+                "localPosition": {
+                  "x": -7.9899997711181641,
+                  "y": -2.8499999046325684,
+                  "z": -0.01999664306640625
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+                "instanceID": 1495106,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              }
+            ],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 0.0,
+              "y": 1.6599999666213989,
+              "z": 0.0
+            },
+            "worldRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 1.6599999666213989,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+            "instanceID": 1495138,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          }
+        ],
+        "allProximities": [],
+        "defaultGrade": null,
+        "socketHandle": null,
+        "bounds": {
+          "center": {
+            "x": -0.27062511444091797,
+            "y": 4.89664363861084,
+            "z": 0.0
+          },
+          "size": {
+            "x": 18.790325164794922,
+            "y": 13.793289184570313,
+            "z": 13.331575393676758
+          }
+        },
+        "isBuildingPrivilege": false,
+        "isSleepingBag": false,
+        "grades": [],
+        "deployable": {
+          "$type": "Deployable",
+          "$name": "<destroyed native object>",
+          "prefabID": 672916883,
+          "hierachyName": "mining_quarry",
+          "guidePrefab": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "guideMesh": {
+            "$ref": "Mesh",
+            "name": "quarry_main_guide",
+            "meshId": "quarry_main_guide_242a71b0"
+          },
+          "guideMeshScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "overrideRotation": false,
+          "guideMeshOrientation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "guideMeshPositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "moveGuideTowardsCamera": true,
+          "guideLights": true,
+          "wantsInstanceData": false,
+          "copyInventoryFromItem": false,
+          "setSocketParent": false,
+          "toSlot": false,
+          "slot": {
+            "$enum": "BaseEntity+Slot",
+            "name": "Lock",
+            "value": 0
+          },
+          "placeEffect": {
+            "$ref": "GameObject",
+            "guid": "684ab84ee590043efa5bb68a12fa26b1",
+            "resourcePath": "assets/prefabs/deployable/quarry/effects/mining-quarry-deploy.prefab",
+            "resourceID": 723300401
+          },
+          "guideTargets": [],
+          "bounds": {
+            "center": {
+              "x": -0.27062511444091797,
+              "y": 4.89664363861084,
+              "z": 0.0
+            },
+            "size": {
+              "x": 18.790325164794922,
+              "y": 13.793289184570313,
+              "z": 13.331575393676758
+            }
+          },
+          "worldPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "worldRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "worldForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "localScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "localRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+          "instanceID": 1495140,
+          "prefabAttribute": {
+            "$ref": "Library",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "gameManager": {
+            "$ref": "GameManager",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "isServer": true
+        },
+        "placeholder": null,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+        "instanceID": 1495130,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Deployable": [
+      {
+        "$ref": "Deployable",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "DeployVolume": [
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 672916883,
+        "hierachyName": "mining_quarry",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 6.0,
+            "z": 0.0
+          },
+          "size": {
+            "x": 20.0,
+            "y": 16.0,
+            "z": 16.0
+          }
+        },
+        "layers": 537001984,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/quarry/mining_quarry.prefab",
+        "instanceID": 1495122,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Socket_Base": [
+      {
+        "$ref": "Socket_Specific",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "SocketMod": [
+      {
+        "$ref": "SocketMod_InWater",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_InWater",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_InWater",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_InWater",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_TerrainCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_TerrainCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_TerrainCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_TerrainCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_TerrainCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_TerrainCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ]
+  }
+}

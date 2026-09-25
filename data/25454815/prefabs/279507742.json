@@ -1,0 +1,934 @@
+{
+  "prefabID": 279507742,
+  "path": "assets/content/vehicles/boats/ptboat/turrets/ptboat_turret_front.prefab",
+  "rootClassChain": [
+    "MountedWeapon",
+    "StorageContainer",
+    "DecayEntity",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -0.0042706727981567383,
+      "y": 0.94449996948242188,
+      "z": -0.0512998104095459
+    },
+    "size": {
+      "x": 1.4764926433563232,
+      "y": 1.8889999389648438,
+      "z": 1.642669677734375
+    }
+  },
+  "hierarchy": {
+    "name": "ptboat_turret_front",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "MountedWeapon",
+        "$name": "ptboat_turret_front",
+        "_eyes": [],
+        "_usingSights": false,
+        "_flipPitch": true,
+        "_invertForward": false,
+        "_clientAuthority": true,
+        "_ammoItem": {
+          "$ref": "ItemDefinition",
+          "name": "ammo_rifle.item",
+          "itemid": -1211166256,
+          "shortname": "ammo.rifle"
+        },
+        "_weapon": {
+          "$ref": "ItemDefinition",
+          "name": "50cal.mounted.left.item",
+          "itemid": -1467876094,
+          "shortname": "50cal.mounted.left"
+        },
+        "_attachPoint": [
+          [],
+          []
+        ],
+        "_yawPivot": [
+          [
+            [
+              {
+                "$ref": "Transform",
+                "name": "Attach",
+                "instanceID": 1306812,
+                "goName": "Attach",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            {
+              "$ref": "Transform",
+              "name": "Eyes",
+              "instanceID": 1361242,
+              "goName": "Eyes",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            []
+          ]
+        ],
+        "_pitchPivot": {
+          "$ref": "Transform",
+          "name": "pitch_offset",
+          "instanceID": 1345682,
+          "goName": "pitch_offset",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "_screenshakeEffect": {
+          "$ref": "GameObject",
+          "guid": "e29c08aac7b896f479975baf848b5029",
+          "resourcePath": "assets/content/vehicles/boats/ptboat/effects/50cal_screenshake.prefab",
+          "resourceID": 3775484246
+        },
+        "_dryFireEffect": {
+          "$ref": "GameObject",
+          "guid": "513e7ba7b2eb1224a955decfd7cda303",
+          "resourcePath": "assets/content/vehicles/boats/ptboat/effects/50cal_dryfire.prefab",
+          "resourceID": 1557722559
+        },
+        "AmmoDef": {
+          "$ref": "ItemDefinition",
+          "name": "ammo_rifle.item",
+          "itemid": -1211166256,
+          "shortname": "ammo.rifle"
+        },
+        "_weapon2": {
+          "$ref": "ItemDefinition",
+          "name": "50cal.mounted.right.item",
+          "itemid": 1248383659,
+          "shortname": "50cal.mounted.right"
+        },
+        "_attachPoint2": {
+          "$ref": "Transform",
+          "name": "Attach",
+          "instanceID": 1306812,
+          "goName": "Attach",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "_turretAnimationType": 1,
+        "_leftHandIdleIKPosition": {
+          "$ref": "Transform",
+          "name": "LeftHandIK",
+          "instanceID": 1323358,
+          "goName": "LeftHandIK",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "_rightHandIdleIKPosition": {
+          "$ref": "Transform",
+          "name": "RightHandIK",
+          "instanceID": 1439430,
+          "goName": "RightHandIK",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "_reloadIKBlendCurve": {
+          "$type": "UnityEngine.AnimationCurve"
+        },
+        "_walkAroundTurret": false,
+        "_minWalkAroundDistance": -2.0,
+        "_walkAroundDistance": 1.1299999952316284,
+        "_reloadWalkAroundDistance": 0.36500000953674316,
+        "_walkAroundDistanceCurve": {
+          "$type": "UnityEngine.AnimationCurve"
+        },
+        "_reloadWalkAroundBlendCurve": {
+          "$type": "UnityEngine.AnimationCurve"
+        },
+        "_forceSeatPositionUpdates": true,
+        "_cameraAnimation": null,
+        "_cameraAnimationController": null,
+        "_fovMultiplier": 0.95999997854232788,
+        "_useViewmodel": false,
+        "_viewmodel": null,
+        "aimMovementSoundDef": null,
+        "aimMovementYawSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "pt-boat-double-turret-yaw-movement-loop",
+          "instanceID": 494518
+        },
+        "aimMovementPitchSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "pt-boat-double-turret-pitch-movement-loop",
+          "instanceID": 39242
+        },
+        "aimMovementGainCurve": {
+          "$type": "UnityEngine.AnimationCurve"
+        },
+        "aimMovementSpeedDecayRate": 200.0,
+        "aimMovementSpeedMax": 100.0,
+        "inventorySlots": 6,
+        "dropsLoot": true,
+        "dropLootDestroyPercent": 0.0,
+        "dropFloats": false,
+        "isLootable": false,
+        "isLockable": true,
+        "isMonitorable": false,
+        "panelName": "generic",
+        "panelTitle": {
+          "$type": "Translate+Phrase",
+          "token": "loot",
+          "legacyEnglish": ""
+        },
+        "allowedContents": {
+          "$enum": "ItemContainer+ContentsType",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "allowedItem": null,
+        "allowedItem2": null,
+        "allowedItems": [],
+        "blockedItems": [],
+        "maxStackSize": 0,
+        "needsBuildingPrivilegeToUse": false,
+        "requireAuthIfNotLocked": false,
+        "allowSorting": false,
+        "mustBeMountedToUse": false,
+        "openSound": null,
+        "closeSound": null,
+        "dropPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "dropVelocity": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "onlyAcceptCategory": {
+          "$enum": "ItemCategory",
+          "name": "All",
+          "value": 11
+        },
+        "onlyOneUser": false,
+        "_inventory": null,
+        "isTransferringIndustrialItem": false,
+        "canBeDemolished": false,
+        "debrisPrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "debrisRotationOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "DebrisPositions": [],
+        "buildingID": 0,
+        "timePlaced": 0.0,
+        "decayTimer": 0.0,
+        "upkeepTimer": 0.0,
+        "upkeep": null,
+        "decay": null,
+        "decayPoints": null,
+        "lastDecayTick": 0.0,
+        "decayVariance": 1.0,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "ImmortalLowDensity",
+          "comments": "",
+          "density": 0.0,
+          "amounts": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 1983969406
+        },
+        "startHealth": 100000.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": false,
+          "itemTarget": null,
+          "itemCount": 0,
+          "setConditionFromHealth": false,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": false,
+          "requireHammer": false,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": false,
+          "itemTarget": null,
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": false,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -0.0042706727981567383,
+            "y": 0.94449996948242188,
+            "z": -0.0512998104095459
+          },
+          "size": {
+            "x": 1.4764926433563232,
+            "y": 1.8889999389648438,
+            "z": 1.642669677734375
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "ptboat_turret_front",
+          "collision": null,
+          "rootBone": [
+            {
+              "$ref": "Transform",
+              "name": "yaw_offset",
+              "instanceID": 1387556,
+              "goName": "yaw_offset",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "ptboat_turret_front",
+              "instanceID": 1438506,
+              "goName": "ptboat_turret_front",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "yaw_offset",
+              "instanceID": 1387556,
+              "goName": "yaw_offset",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "front_turret_yaw_LOD0",
+              "instanceID": 1332294,
+              "goName": "front_turret_yaw_LOD0",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "pitch_offset",
+              "instanceID": 1345682,
+              "goName": "pitch_offset",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Attach",
+              "instanceID": 1306812,
+              "goName": "Attach",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "LeftHandIK",
+              "instanceID": 1323358,
+              "goName": "LeftHandIK",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "RightHandIK",
+              "instanceID": 1439430,
+              "goName": "RightHandIK",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Eyes",
+              "instanceID": 1361242,
+              "goName": "Eyes",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "TurretDetailedCollision",
+              "instanceID": 1303478,
+              "goName": "TurretDetailedCollision",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "ptboat_turret_front",
+            "yaw_offset",
+            "front_turret_yaw_LOD0",
+            "pitch_offset",
+            "Attach",
+            "LeftHandIK",
+            "RightHandIK",
+            "Eyes",
+            "TurretDetailedCollision"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 279507742,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$ref": "Model",
+        "name": "ptboat_turret_front",
+        "instanceID": 1579202,
+        "goName": "ptboat_turret_front",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$type": "AiMountedWeaponController",
+        "$name": "ptboat_turret_front",
+        "_maxAttackDistance": 75.0,
+        "_accuracy": 4.0,
+        "_mountedWeapon": {
+          "$ref": "MountedWeapon",
+          "name": "ptboat_turret_front",
+          "instanceID": 1576592,
+          "goName": "ptboat_turret_front",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "_invertedForward": false,
+        "_flipPitch": false,
+        "_offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
+      }
+    ],
+    "children": [
+      {
+        "name": "yaw_offset",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "front_turret_yaw_LOD0",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "pitch_offset",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.16899999976158142,
+                  "z": 0.35030001401901245
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "Attach",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.06679999828338623,
+                      "z": 0.053399998694658279
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": -1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "LeftHandIK",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -0.37900000810623169,
+                          "y": 0.05000000074505806,
+                          "z": -0.56800001859664917
+                        },
+                        "localRotation": {
+                          "x": -0.11646895855665207,
+                          "y": -0.12909665703773499,
+                          "z": 0.6974489688873291,
+                          "w": 0.69522237777709961
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": []
+                      },
+                      {
+                        "name": "RightHandIK",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.37099999189376831,
+                          "y": 0.05000000074505806,
+                          "z": -0.54500001668930054
+                        },
+                        "localRotation": {
+                          "x": -0.15990607440471649,
+                          "y": 0.12320099771022797,
+                          "z": -0.68878883123397827,
+                          "w": 0.69629126787185669
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Eyes",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.64999997615814209,
+                  "z": 0.10000000149011612
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "TurretDetailedCollision",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.MeshCollider",
+                    "$name": "TurretDetailedCollision",
+                    "colliderType": "Mesh",
+                    "convex": true,
+                    "sharedMesh": {
+                      "$ref": "Mesh",
+                      "name": "PT_Boat_col.004",
+                      "meshId": "PT_Boat_col.004_9eb27eab"
+                    },
+                    "isTrigger": false,
+                    "enabled": true
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "TurretDetailedCollision",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.0021470002830028534,
+                      "y": 0.21708947420120239,
+                      "z": 0.52896177768707275
+                    },
+                    "size": {
+                      "x": 0.057393103837966919,
+                      "y": 0.12904345989227295,
+                      "z": 0.410564661026001
+                    },
+                    "isTrigger": false,
+                    "enabled": true
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "TurretDetailedCollision",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.070197552442550659,
+                      "y": 0.21708947420120239,
+                      "z": 0.37623739242553711
+                    },
+                    "size": {
+                      "x": 0.97837120294570923,
+                      "y": 0.12904345989227295,
+                      "z": 0.10511589050292969
+                    },
+                    "isTrigger": false,
+                    "enabled": true
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "TurretDetailedCollision",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.0,
+                      "y": 0.20000000298023224,
+                      "z": 0.87000000476837158
+                    },
+                    "size": {
+                      "x": 0.43332606554031372,
+                      "y": 0.378237247467041,
+                      "z": 0.090143680572509766
+                    },
+                    "isTrigger": false,
+                    "enabled": true
+                  }
+                ],
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "PrefabInformation": [
+      {
+        "$type": "PrefabInformation",
+        "$name": "<destroyed native object>",
+        "prefabID": 279507742,
+        "hierachyName": "ptboat_turret_front",
+        "associatedItemDefinition": null,
+        "title": {
+          "$type": "Translate+Phrase",
+          "token": "50.cal.turret.dual",
+          "legacyEnglish": ""
+        },
+        "description": {
+          "$type": "Translate+Phrase",
+          "token": "",
+          "legacyEnglish": ""
+        },
+        "sprite": {
+          "$ref": "Sprite",
+          "name": "double_turret.icon",
+          "instanceID": 622310
+        },
+        "shownOnDeathScreen": false,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/content/vehicles/boats/ptboat/turrets/ptboat_turret_front.prefab",
+        "instanceID": 1564572,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,1209 @@
+{
+  "prefabID": 2905007296,
+  "path": "assets/prefabs/deployable/waterpurifier/waterpurifier.deployed.prefab",
+  "rootClassChain": [
+    "WaterPurifier",
+    "LiquidContainer",
+    "ContainerIOEntity",
+    "IOEntity",
+    "DecayEntity",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.19619637727737427,
+      "y": 0.53508234024047852,
+      "z": 2.9802322387695313E-08
+    },
+    "size": {
+      "x": 1.2202489376068115,
+      "y": 1.0809614658355713,
+      "z": 0.82789647579193115
+    }
+  },
+  "hierarchy": {
+    "name": "waterpurifier.deployed",
+    "layer": {
+      "index": 8,
+      "name": "Deployed"
+    },
+    "tag": "Not Player Usable",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "WaterPurifier",
+        "$name": "waterpurifier.deployed",
+        "storagePrefab": {
+          "$ref": "GameObject",
+          "guid": "ec862a61f82ebbb429770e71071f91c4",
+          "resourcePath": "assets/prefabs/deployable/waterpurifier/waterstorage.prefab",
+          "resourceID": 1488612322
+        },
+        "storagePrefabAnchor": [],
+        "freshWater": {
+          "$ref": "ItemDefinition",
+          "name": "water.item",
+          "itemid": -1779180711,
+          "shortname": "water"
+        },
+        "waterToProcessPerMinute": 1000,
+        "freshWaterRatio": 4,
+        "stopWhenOutputFull": false,
+        "purifiedWaterStorage": null,
+        "dirtyWaterProcssed": 0.0,
+        "pendingFreshWater": 0.0,
+        "defaultLiquid": null,
+        "startingAmount": 0,
+        "autofillOutputs": false,
+        "autofillTickRate": 2.0,
+        "autofillTickAmount": 2,
+        "maxOutputFlow": 6,
+        "prioritizeDrinkMenuOption": false,
+        "ValidItems": [
+          {
+            "$ref": "ItemDefinition",
+            "name": "water.item",
+            "itemid": -1779180711,
+            "shortname": "water"
+          },
+          {
+            "$ref": "ItemDefinition",
+            "name": "salt_water.item",
+            "itemid": -277057363,
+            "shortname": "water.salt"
+          }
+        ],
+        "onlyAllowedItem": null,
+        "allowedContents": {
+          "$enum": "ItemContainer+ContentsType",
+          "name": "Liquid",
+          "value": 2,
+          "flagNames": [
+            "Liquid"
+          ]
+        },
+        "maxStackSize": 5000,
+        "numSlots": 1,
+        "lootPanelName": "watercatcher",
+        "panelTitle": {
+          "$type": "Translate+Phrase",
+          "token": "loot",
+          "legacyEnglish": "Loot"
+        },
+        "needsBuildingPrivilegeToUse": false,
+        "requireAuthIfNotLocked": false,
+        "isLootable": true,
+        "isMonitorable": false,
+        "dropsLoot": true,
+        "dropLootDestroyPercent": 0.0,
+        "dropFloats": false,
+        "onlyOneUser": false,
+        "supportsChildDeployables": false,
+        "allowSorting": false,
+        "isLockable": false,
+        "openSound": {
+          "$ref": "SoundDefinition",
+          "name": "camper-bbq-open",
+          "instanceID": 370996
+        },
+        "closeSound": {
+          "$ref": "SoundDefinition",
+          "name": "camper-bbq-close",
+          "instanceID": 337936
+        },
+        "debugOrigin": [
+          [
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+          ],
+          {
+            "$ref": "Transform",
+            "name": "cleanwaterstorage",
+            "instanceID": 1258546,
+            "goName": "cleanwaterstorage",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          []
+        ],
+        "sourceItem": {
+          "$ref": "ItemDefinition",
+          "name": "waterpurifier.item",
+          "itemid": 2114754781,
+          "shortname": "water.purifier"
+        },
+        "lastResetIndex": 0,
+        "inputs": [
+          {
+            "$type": "IOEntity+IOSlot",
+            "niceName": "Water In",
+            "type": {
+              "$enum": "IOEntity+IOType",
+              "name": "Fluidic",
+              "value": 1
+            },
+            "connectedTo": {
+              "$type": "IOEntity+IORef",
+              "entityRef": {
+                "$type": "EntityRef"
+              },
+              "ioEnt": null
+            },
+            "connectedToSlot": 0,
+            "importance": {
+              "$enum": "IOHandlePriority",
+              "name": "High",
+              "value": 2
+            },
+            "ArrowOffset": 0.0,
+            "linePoints": [],
+            "lineAnchors": null,
+            "slackLevels": [],
+            "worldSpaceLineEndRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "line": null,
+            "handlePosition": {
+              "x": -0.079999998211860657,
+              "y": 1.0399999618530273,
+              "z": -0.029999999329447746
+            },
+            "handleDirection": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "rootConnectionsOnly": false,
+            "mainPowerSlot": false,
+            "wireColour": {
+              "$enum": "WireTool+WireColour",
+              "name": "Gray",
+              "value": 0
+            },
+            "lineThickness": 0.0
+          }
+        ],
+        "outputs": [],
+        "ioType": {
+          "$enum": "IOEntity+IOType",
+          "name": "Fluidic",
+          "value": 1
+        },
+        "cachedOutputsUsed": 0,
+        "lastPassthroughEnergy": -1,
+        "lastEnergy": 0,
+        "currentEnergy": 0,
+        "lastUpdateTime": 0.0,
+        "lastUpdateBlockedFrame": 0,
+        "ensureOutputsUpdated": false,
+        "canBeDemolished": false,
+        "debrisPrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "debrisRotationOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "DebrisPositions": [],
+        "buildingID": 0,
+        "timePlaced": 0.0,
+        "decayTimer": 0.0,
+        "upkeepTimer": 0.0,
+        "upkeep": null,
+        "decay": null,
+        "decayPoints": null,
+        "lastDecayTick": 0.0,
+        "decayVariance": 1.0,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "DeployableGeneric",
+          "comments": "",
+          "density": 1.0,
+          "amounts": [
+            0.89999997615814209,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.89999997615814209,
+            0.5,
+            0.5,
+            0.0,
+            1.0,
+            1.0,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 3072075103
+        },
+        "startHealth": 150.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "waterpurifier.item",
+            "itemid": 2114754781,
+            "shortname": "water.purifier"
+          },
+          "itemCount": 1,
+          "setConditionFromHealth": false,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": true,
+          "requireHammer": true,
+          "requireEmptyInv": true,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "waterpurifier.item",
+            "itemid": 2114754781,
+            "shortname": "water.purifier"
+          },
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.19619637727737427,
+            "y": 0.53508234024047852,
+            "z": 2.9802322387695313E-08
+          },
+          "size": {
+            "x": 1.2202489376068115,
+            "y": 1.0809614658355713,
+            "z": 0.82789647579193115
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "waterpurifier.deployed",
+          "collision": null,
+          "rootBone": {
+            "$ref": "Transform",
+            "name": "waterpurifier.deployed",
+            "instanceID": 1258544,
+            "goName": "waterpurifier.deployed",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "waterpurifier.deployed",
+              "instanceID": 1258544,
+              "goName": "waterpurifier.deployed",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "collision",
+              "instanceID": 1413252,
+              "goName": "collision",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "cannister",
+              "instanceID": 1362058,
+              "goName": "cannister",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "pipe",
+              "instanceID": 1394994,
+              "goName": "pipe",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "leg0",
+              "instanceID": 1381126,
+              "goName": "leg0",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "leg1",
+              "instanceID": 1298178,
+              "goName": "leg1",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "leg2",
+              "instanceID": 1425728,
+              "goName": "leg2",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "leg3",
+              "instanceID": 1328124,
+              "goName": "leg3",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "cleanwaterstorage",
+              "instanceID": 1258546,
+              "goName": "cleanwaterstorage",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "particles",
+              "instanceID": 1258542,
+              "goName": "particles",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "waterpurifier.deployed",
+            "collision",
+            "cannister",
+            "pipe",
+            "leg0",
+            "leg1",
+            "leg2",
+            "leg3",
+            "cleanwaterstorage",
+            "particles"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 2905007296,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$ref": "Model",
+        "name": "waterpurifier.deployed",
+        "instanceID": 1540240,
+        "goName": "waterpurifier.deployed",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "children": [
+      {
+        "name": "collision",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.CapsuleCollider",
+            "$name": "collision",
+            "colliderType": "Capsule",
+            "center": {
+              "x": 0.60000002384185791,
+              "y": 0.33000001311302185,
+              "z": 0.20999999344348907
+            },
+            "radius": 0.17000000178813934,
+            "height": 0.47999998927116394,
+            "direction": 1,
+            "isTrigger": false,
+            "enabled": true
+          },
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "collision",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.57999998331069946,
+              "y": 0.18000000715255737,
+              "z": 0.18000000715255737
+            },
+            "size": {
+              "x": 0.37999999523162842,
+              "y": 0.012500000186264515,
+              "z": 0.33000001311302185
+            },
+            "isTrigger": false,
+            "enabled": true
+          },
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "collision",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 0.18000000715255737,
+              "z": 0.31000000238418579
+            },
+            "size": {
+              "x": 0.70999997854232788,
+              "y": 0.02500000037252903,
+              "z": 0.02500000037252903
+            },
+            "isTrigger": false,
+            "enabled": true
+          },
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "collision",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 0.18000000715255737,
+              "z": -0.31999999284744263
+            },
+            "size": {
+              "x": 0.70999997854232788,
+              "y": 0.02500000037252903,
+              "z": 0.02500000037252903
+            },
+            "isTrigger": false,
+            "enabled": true
+          },
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "collision",
+            "colliderType": "Box",
+            "center": {
+              "x": -0.31000000238418579,
+              "y": 0.18999999761581421,
+              "z": -0.0099999997764825821
+            },
+            "size": {
+              "x": 0.02500000037252903,
+              "y": 0.02500000037252903,
+              "z": 0.70999997854232788
+            },
+            "isTrigger": false,
+            "enabled": true
+          },
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "collision",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.31000000238418579,
+              "y": 0.18999999761581421,
+              "z": -0.0099999997764825821
+            },
+            "size": {
+              "x": 0.02500000037252903,
+              "y": 0.02500000037252903,
+              "z": 0.70999997854232788
+            },
+            "isTrigger": false,
+            "enabled": true
+          },
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "collision",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.10000000149011612,
+              "y": 0.63999998569488525,
+              "z": -0.2199999988079071
+            },
+            "size": {
+              "x": 0.88999998569488525,
+              "y": 0.02500000037252903,
+              "z": 0.02500000037252903
+            },
+            "isTrigger": false,
+            "enabled": true
+          },
+          {
+            "$type": "UnityEngine.CapsuleCollider",
+            "$name": "collision",
+            "colliderType": "Capsule",
+            "center": {
+              "x": 0.58899998664855957,
+              "y": 0.58459997177124023,
+              "z": -0.059999998658895493
+            },
+            "radius": 0.10000000149011612,
+            "height": 0.37000000476837158,
+            "direction": 2,
+            "isTrigger": false,
+            "enabled": true
+          },
+          {
+            "$type": "UnityEngine.CapsuleCollider",
+            "$name": "collision",
+            "colliderType": "Capsule",
+            "center": {
+              "x": 0.52999997138977051,
+              "y": 0.63999998569488525,
+              "z": -0.15000000596046448
+            },
+            "radius": 0.039999999105930328,
+            "height": 0.2199999988079071,
+            "direction": 0,
+            "isTrigger": false,
+            "enabled": true
+          },
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "collision",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 0.62999999523162842,
+              "z": 0.0
+            },
+            "size": {
+              "x": 0.43000000715255737,
+              "y": 0.019999999552965164,
+              "z": 0.43000000715255737
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": [
+          {
+            "name": "cannister",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.78899997472763062,
+              "z": -0.0560000017285347
+            },
+            "localRotation": {
+              "x": -0.29449877142906189,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.95565187931060791
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.CapsuleCollider",
+                "$name": "cannister",
+                "colliderType": "Capsule",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "radius": 0.2199999988079071,
+                "height": 0.60000002384185791,
+                "direction": 1,
+                "isTrigger": false,
+                "enabled": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "pipe",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.28600001335144043,
+              "y": 0.77499997615814209,
+              "z": -0.052000001072883606
+            },
+            "localRotation": {
+              "x": 0.13616707921028137,
+              "y": 0.052690625190734863,
+              "z": 0.35701236128807068,
+              "w": 0.92261826992034912
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.CapsuleCollider",
+                "$name": "pipe",
+                "colliderType": "Capsule",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "radius": 0.02500000037252903,
+                "height": 0.46000000834465027,
+                "direction": 1,
+                "isTrigger": false,
+                "enabled": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "leg0",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.27300000190734863,
+              "y": 0.31299999356269836,
+              "z": 0.27799999713897705
+            },
+            "localRotation": {
+              "x": -0.11036244034767151,
+              "y": -0.361310213804245,
+              "z": 0.22810588777065277,
+              "w": 0.89735323190689087
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "leg0",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "size": {
+                  "x": 0.02500000037252903,
+                  "y": 0.72000002861022949,
+                  "z": 0.02500000037252903
+                },
+                "isTrigger": false,
+                "enabled": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "leg1",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.28799998760223389,
+              "y": 0.31299999356269836,
+              "z": 0.27799999713897705
+            },
+            "localRotation": {
+              "x": -0.23838813602924347,
+              "y": -0.88572615385055542,
+              "z": 0.0859169214963913,
+              "w": 0.38894549012184143
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "leg1",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "size": {
+                  "x": 0.02500000037252903,
+                  "y": 0.72000002861022949,
+                  "z": 0.02500000037252903
+                },
+                "isTrigger": false,
+                "enabled": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "leg2",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.28799998760223389,
+              "y": 0.31299999356269836,
+              "z": -0.28700000047683716
+            },
+            "localRotation": {
+              "x": -0.23102475702762604,
+              "y": -0.90686798095703125,
+              "z": -0.1041073352098465,
+              "w": -0.33671912550926208
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "leg2",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "size": {
+                  "x": 0.02500000037252903,
+                  "y": 0.72000002861022949,
+                  "z": 0.02500000037252903
+                },
+                "isTrigger": false,
+                "enabled": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "leg3",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.27279999852180481,
+              "y": 0.31299999356269836,
+              "z": -0.28519999980926514
+            },
+            "localRotation": {
+              "x": -0.0901094302535057,
+              "y": -0.40451091527938843,
+              "z": -0.23683592677116394,
+              "w": -0.87872636318206787
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "leg3",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "size": {
+                  "x": 0.02500000037252903,
+                  "y": 0.72000002861022949,
+                  "z": 0.02500000037252903
+                },
+                "isTrigger": false,
+                "enabled": true
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "cleanwaterstorage",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.62400001287460327,
+          "y": 0.19599999487400055,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "particles",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.60599994659423828,
+          "y": 0.597000002861023,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "ParticleSystemContainer",
+            "$name": "particles",
+            "precached": false,
+            "includeLights": false,
+            "particleGroups": [],
+            "lights": [],
+            "lightExs": []
+          }
+        ],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Deployable": [
+      {
+        "$type": "Deployable",
+        "$name": "<destroyed native object>",
+        "prefabID": 2905007296,
+        "hierachyName": "waterpurifier.deployed",
+        "guidePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "guideMesh": null,
+        "guideMeshScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "overrideRotation": false,
+        "guideMeshOrientation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "guideMeshPositionOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "moveGuideTowardsCamera": true,
+        "guideLights": true,
+        "wantsInstanceData": false,
+        "copyInventoryFromItem": false,
+        "setSocketParent": false,
+        "toSlot": true,
+        "slot": {
+          "$enum": "BaseEntity+Slot",
+          "name": "FireMod",
+          "value": 1
+        },
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "a46476b718cb94becb533c34ec37d228",
+          "resourcePath": "assets/prefabs/deployable/waterpurifier/effects/water-purifier-deploy.prefab",
+          "resourceID": 1059257638
+        },
+        "guideTargets": [
+          null
+        ],
+        "bounds": {
+          "center": {
+            "x": 0.19619637727737427,
+            "y": 0.53508234024047852,
+            "z": 2.9802322387695313E-08
+          },
+          "size": {
+            "x": 1.2202489376068115,
+            "y": 1.0809614658355713,
+            "z": 0.82789647579193115
+          }
+        },
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/waterpurifier/waterpurifier.deployed.prefab",
+        "instanceID": 1498886,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ]
+  }
+}

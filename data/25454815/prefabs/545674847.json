@@ -1,0 +1,148 @@
+{
+  "prefabID": 545674847,
+  "path": "assets/bundled/prefabs/world/renderer_entity.prefab",
+  "rootClassChain": [
+    "UnityEngine.GameObject",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "hierarchy": {
+    "name": "renderer_entity",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "InstancedScheduler",
+        "$name": "renderer_entity",
+        "CullShader": null,
+        "SimplePostCullShader": null,
+        "ClearBufferShader": null,
+        "WriteIndirectArgsShader": null,
+        "CopyMeshShader": null,
+        "ContainerColorLookup": {
+          "$ref": "ConstructionSkin_ColourLookup",
+          "name": "ShippingContainerColourLookup",
+          "instanceID": 355334
+        },
+        "coloredSkins": [
+          {
+            "$type": "BuildingGrade",
+            "$name": "shipping_container",
+            "type": {
+              "$enum": "BuildingGrade+Enum",
+              "name": "Metal",
+              "value": 3
+            },
+            "skin": 10221,
+            "enabledInStandalone": true,
+            "alwaysUnlock": false,
+            "baseHealth": 1000.0,
+            "baseCost": [
+              {
+                "$type": "ItemAmount",
+                "itemDef": {
+                  "$ref": "ItemDefinition",
+                  "name": "metal_fragments.item",
+                  "itemid": 69511070,
+                  "shortname": "metal.fragments"
+                },
+                "amount": 200.0,
+                "startAmount": 200.0,
+                "ignoreInTutorial": false,
+                "isBP": false
+              }
+            ],
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Metal",
+              "instanceID": 43316
+            },
+            "damageProtecton": {
+              "$type": "ProtectionProperties",
+              "$name": "BlockMetal",
+              "comments": "",
+              "density": 4.0,
+              "amounts": [
+                0.98000001907348633,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.99989998340606689,
+                0.99000000953674316,
+                0.99000000953674316,
+                0.0,
+                1.0,
+                0.99000000953674316,
+                0.98000001907348633,
+                0.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0,
+                1.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0
+              ],
+              "FilenameStringId": 160628058
+            },
+            "supportsColourChange": true,
+            "upgradeMenu": {
+              "$type": "BaseEntity+Menu+Option",
+              "name": {
+                "$type": "Translate+Phrase",
+                "token": "shipping_container",
+                "legacyEnglish": "Upgrade to Shipping Container"
+              },
+              "description": {
+                "$type": "Translate+Phrase",
+                "token": "shipping_container_desc",
+                "legacyEnglish": "Shipping Container metal is twice as strong as stone"
+              },
+              "icon": {
+                "$ref": "Sprite",
+                "name": "level_metal",
+                "instanceID": 80102
+              },
+              "order": 0,
+              "usableWhileWounded": false
+            }
+          }
+        ]
+      }
+    ],
+    "children": []
+  },
+  "prefabAttributes": {
+    "PrefabWeight": []
+  }
+}

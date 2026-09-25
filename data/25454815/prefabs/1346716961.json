@@ -1,0 +1,3757 @@
+{
+  "prefabID": 1346716961,
+  "path": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+  "rootClassChain": [
+    "SteeringWheel",
+    "BaseMountable",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.0,
+      "y": 0.77999997138977051,
+      "z": -0.10000000149011612
+    },
+    "size": {
+      "x": 1.0,
+      "y": 1.6000000238418579,
+      "z": 0.56000000238418579
+    }
+  },
+  "hierarchy": {
+    "name": "steeringwheel.deployed",
+    "layer": {
+      "index": 8,
+      "name": "Deployed"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "SteeringWheel",
+        "$name": "steeringwheel.deployed",
+        "PrivPrefab": {
+          "$ref": "GameObject",
+          "guid": "6f9f600ca7216cc4f9fe2f4dcb36f491",
+          "resourcePath": "assets/prefabs/boat/playerboat_privilege.prefab",
+          "resourceID": 3736348749
+        },
+        "KeyEnterDialog": {
+          "$ref": "GameObject",
+          "guid": "0528f903cf9a5df49b6e2dce276ecd32",
+          "resourcePath": "assets/prefabs/locks/keypad/ui/ui.dialog.lock.code.prefab",
+          "resourceID": 189841836
+        },
+        "TurnLerpSpeed": 130.0,
+        "Wheel": null,
+        "Privilege": null,
+        "wheelTurnLoopDef": {
+          "$ref": "SoundDefinition",
+          "name": "boat-steering-wheel-turn-loop",
+          "instanceID": 197596
+        },
+        "wheelTurnStartDef": {
+          "$ref": "SoundDefinition",
+          "name": "boat-steering-wheel-start-turn",
+          "instanceID": 399504
+        },
+        "wheelTurnStopDef": {
+          "$ref": "SoundDefinition",
+          "name": "boat-steering-wheel-end-turn",
+          "instanceID": 42444
+        },
+        "wheelTurnLoopFadeTime": 0.10000000149011612,
+        "stopDelay": 0.10000000149011612,
+        "finishBuildingEffect": {
+          "$ref": "GameObject",
+          "guid": "89ae2abaf77fc4823a61b8ff693ac8e1",
+          "resourcePath": "assets/prefabs/deployable/boatbuilding/steeringwheel/effects/boat-steering-wheel-finish-building.prefab",
+          "resourceID": 1411653717
+        },
+        "wheelCenterDef": {
+          "$ref": "SoundDefinition",
+          "name": "boat-steering-wheel-half-turn",
+          "instanceID": 166688
+        },
+        "EffectLocation": [],
+        "effectUnlocked": {
+          "$ref": "GameObject",
+          "guid": "2b21c0fb05485574dacb7124117ac415",
+          "resourcePath": "assets/prefabs/locks/keypad/effects/lock.code.unlock.prefab",
+          "resourceID": 996087289
+        },
+        "effectLocked": {
+          "$ref": "GameObject",
+          "guid": "d892eb460cf781849b22214c97d46824",
+          "resourcePath": "assets/prefabs/locks/keypad/effects/lock.code.updated.prefab",
+          "resourceID": 4109975300
+        },
+        "effectDenied": {
+          "$ref": "GameObject",
+          "guid": "5c370ba3385ab2943aaba9d8b90e7407",
+          "resourcePath": "assets/prefabs/locks/keypad/effects/lock.code.denied.prefab",
+          "resourceID": 4112119478
+        },
+        "effectCodeChanged": {
+          "$ref": "GameObject",
+          "guid": "d892eb460cf781849b22214c97d46824",
+          "resourcePath": "assets/prefabs/locks/keypad/effects/lock.code.updated.prefab",
+          "resourceID": 4109975300
+        },
+        "effectShock": {
+          "$ref": "GameObject",
+          "guid": "3f7d2200895985d40bbd421a0eb2f960",
+          "resourcePath": "assets/prefabs/locks/keypad/effects/lock.code.shock.prefab",
+          "resourceID": 821899790
+        },
+        "ParentBoat": null,
+        "mountSyncType": {
+          "$enum": "BaseMountable+MountSyncType",
+          "name": "ParentAIOnly",
+          "value": 2
+        },
+        "eyePositionOverride": [],
+        "eyeCenterOverride": {
+          "$ref": "Transform",
+          "name": "EyePos",
+          "instanceID": 1374412,
+          "goName": "EyePos",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "overrideEyesRotation": false,
+        "pitchClamp": {
+          "x": -80.0,
+          "y": 50.0
+        },
+        "yawClamp": {
+          "x": -80.0,
+          "y": 80.0
+        },
+        "canWieldItems": false,
+        "relativeViewAngles": true,
+        "disableLegsWhenMounted": false,
+        "disableBreastCensorshipWhenMounted": true,
+        "AllowForceMountWhenRestrained": false,
+        "mountChaining": true,
+        "mountAnchor": [],
+        "mountLOSVertOffset": 0.5,
+        "mountedAnimationSpeed": 0.0,
+        "mountPose": {
+          "$enum": "PlayerModel+MountPoses",
+          "name": "Steering_Boat",
+          "value": 37
+        },
+        "animateVehicleAim360": true,
+        "maxMountDistance": 1.5,
+        "dismountPositions": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        "checkPlayerLosOnMount": false,
+        "disableMeshCullingForPlayers": false,
+        "allowHeadLook": true,
+        "ignoreVehicleParent": true,
+        "legacyDismount": false,
+        "wearWhileMounted": null,
+        "modifiesPlayerCollider": false,
+        "customPlayerCollider": {
+          "$type": "BasePlayer+CapsuleColliderInfo",
+          "height": 0.0,
+          "radius": 0.0,
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "clippingCheckRadius": 0.40000000596046448,
+        "clippingAndVisChecks": true,
+        "clippingChecksLocation": {
+          "$enum": "BaseMountable+ClippingCheckLocation",
+          "name": "HeadOnly",
+          "value": 0
+        },
+        "mountSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "boat-steering-wheel-mount",
+          "instanceID": 206830
+        },
+        "swapSoundDef": null,
+        "dismountSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "boat-steering-wheel-dismount",
+          "instanceID": 102268
+        },
+        "allowFootstepEffects": false,
+        "dismountHoldType": {
+          "$enum": "BaseMountable+DismountConvarType",
+          "name": "Misc",
+          "value": 0
+        },
+        "mountTimeStatType": {
+          "$enum": "BaseMountable+MountStatType",
+          "name": "None",
+          "value": 0
+        },
+        "allowedGestures": {
+          "$enum": "BaseMountable+MountGestureType",
+          "name": "None",
+          "value": 0
+        },
+        "canDrinkWhileMounted": true,
+        "allowSleeperMounting": false,
+        "shouldShowHudHealth": false,
+        "blockLooting": false,
+        "animateClothInLocalSpace": true,
+        "protectsFromAnimals": true,
+        "MountedCameraMode": {
+          "$enum": "BasePlayer+CameraMode",
+          "name": "FirstPerson",
+          "value": 0
+        },
+        "rigidBody": null,
+        "wantsBoundaryRepelCheck": false,
+        "isMobile": false,
+        "SideLeanAmount": 0.20000000298023224,
+        "_mounted": null,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": null,
+        "startHealth": 300.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "steeringwheel.item",
+            "itemid": -1866909924,
+            "shortname": "steeringwheel.boat"
+          },
+          "itemCount": 1,
+          "setConditionFromHealth": false,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": true,
+          "requireHammer": true,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": false,
+          "itemTarget": null,
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.77999997138977051,
+            "z": -0.10000000149011612
+          },
+          "size": {
+            "x": 1.0,
+            "y": 1.6000000238418579,
+            "z": 0.56000000238418579
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "steeringwheel.deployed",
+          "collision": null,
+          "rootBone": [
+            [
+              [],
+              []
+            ],
+            [
+              []
+            ],
+            [],
+            {
+              "$ref": "Transform",
+              "name": "MountAnchor",
+              "instanceID": 1317436,
+              "goName": "MountAnchor",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [],
+            {
+              "$ref": "Transform",
+              "name": "Dismount",
+              "instanceID": 1396922,
+              "goName": "Dismount",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Dismount (3)",
+              "instanceID": 1413010,
+              "goName": "Dismount (3)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Dismount (4)",
+              "instanceID": 1360480,
+              "goName": "Dismount (4)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Dismount (7)",
+              "instanceID": 1319974,
+              "goName": "Dismount (7)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Dismount (8)",
+              "instanceID": 1378072,
+              "goName": "Dismount (8)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Dismount (5)",
+              "instanceID": 1301402,
+              "goName": "Dismount (5)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Dismount (6)",
+              "instanceID": 1335624,
+              "goName": "Dismount (6)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Dismount (1)",
+              "instanceID": 1382188,
+              "goName": "Dismount (1)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Dismount (2)",
+              "instanceID": 1337766,
+              "goName": "Dismount (2)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "EyePos",
+              "instanceID": 1374412,
+              "goName": "EyePos",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "EffectLocation",
+              "instanceID": 1408240,
+              "goName": "EffectLocation",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "steeringwheel.deployed",
+              "instanceID": 1278270,
+              "goName": "steeringwheel.deployed",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Collision",
+              "instanceID": 1289694,
+              "goName": "Collision",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Post",
+              "instanceID": 1292678,
+              "goName": "Post",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "WheelMountedInteract",
+              "instanceID": 1340750,
+              "goName": "WheelMountedInteract",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "sockets",
+              "instanceID": 1278170,
+              "goName": "sockets",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "free",
+              "instanceID": 1274386,
+              "goName": "free",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "prevent_building",
+              "instanceID": 1360160,
+              "goName": "prevent_building",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "MountAnchor",
+              "instanceID": 1317436,
+              "goName": "MountAnchor",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "deploy",
+              "instanceID": 1291918,
+              "goName": "deploy",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "Dismount",
+              "instanceID": 1396922,
+              "goName": "Dismount",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Dismount (3)",
+              "instanceID": 1413010,
+              "goName": "Dismount (3)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Dismount (4)",
+              "instanceID": 1360480,
+              "goName": "Dismount (4)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Dismount (7)",
+              "instanceID": 1319974,
+              "goName": "Dismount (7)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Dismount (8)",
+              "instanceID": 1378072,
+              "goName": "Dismount (8)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Dismount (5)",
+              "instanceID": 1301402,
+              "goName": "Dismount (5)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Dismount (6)",
+              "instanceID": 1335624,
+              "goName": "Dismount (6)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Dismount (1)",
+              "instanceID": 1382188,
+              "goName": "Dismount (1)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Dismount (2)",
+              "instanceID": 1337766,
+              "goName": "Dismount (2)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "EyePos",
+              "instanceID": 1374412,
+              "goName": "EyePos",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "EffectLocation",
+              "instanceID": 1408240,
+              "goName": "EffectLocation",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "steeringwheel.deployed",
+            "Collision",
+            "Post",
+            "WheelMountedInteract",
+            "sockets",
+            "free",
+            "angle",
+            "NotInside",
+            "NotInside (1)",
+            "NotInside (2)",
+            "NotInside (3)",
+            "inside",
+            "inside (5)",
+            "inside (1)",
+            "inside (2)",
+            "inside (3)",
+            "inside (4)",
+            "inside (6)",
+            "inside (7)",
+            "boat_building",
+            "entityLimit",
+            "prevent_building",
+            "MountAnchor",
+            "deploy",
+            "DeployVolume",
+            "Dismount",
+            "Dismount (3)",
+            "Dismount (4)",
+            "Dismount (7)",
+            "Dismount (8)",
+            "Dismount (5)",
+            "Dismount (6)",
+            "Dismount (1)",
+            "Dismount (2)",
+            "EyePos",
+            "EffectLocation"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 1346716961,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$type": "GroundWatch",
+        "$name": "steeringwheel.deployed",
+        "groundPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "layers": 144769024,
+        "radius": 0.10000000149011612,
+        "needBuildingBlock": false,
+        "needOnlyOneAreaCheckValid": false,
+        "whitelist": [],
+        "fails": 0,
+        "_baseEntity": null
+      },
+      {
+        "$type": "DestroyOnGroundMissing",
+        "$name": "steeringwheel.deployed"
+      },
+      {
+        "$ref": "Model",
+        "name": "steeringwheel.deployed",
+        "instanceID": 1529028,
+        "goName": "steeringwheel.deployed",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "children": [
+      {
+        "name": "Collision",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "Post",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "Post",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.5,
+                  "z": -7.5995922088623047E-07
+                },
+                "size": {
+                  "x": 0.30000001192092896,
+                  "y": 1.0,
+                  "z": 0.30000153183937073
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "WheelMountedInteract",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Usable Secondary",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.79100000858306885,
+              "z": -0.24099999666213989
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 0.5
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "WheelMountedInteract",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "size": {
+                  "x": 0.30000001192092896,
+                  "y": 0.30000001192092896,
+                  "z": 0.10000000149011612
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Wood",
+                  "instanceID": 609850
+                }
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "sockets",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "free",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "prevent_building",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "prevent_building",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 0.88171267509460449,
+              "z": -0.5
+            },
+            "size": {
+              "x": 1.2000000476837158,
+              "y": 1.8634252548217773,
+              "z": 1.5
+            },
+            "isTrigger": true,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "MountAnchor",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -0.699999988079071
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "deploy",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "Dismount",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.10000000149011612,
+          "z": -1.684999942779541
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "Dismount (3)",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.10000000149011612,
+          "z": -0.89999997615814209
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "Dismount (4)",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.14100000262260437,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "Dismount (7)",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -1.2999999523162842,
+          "y": 0.14100000262260437,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "Dismount (8)",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 1.2999999523162842,
+          "y": 0.14100000262260437,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "Dismount (5)",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 1.0,
+          "y": 0.14100000262260437,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "Dismount (6)",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -1.0,
+          "y": 0.14100000262260437,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "Dismount (1)",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -1.0,
+          "y": 0.10000000149011612,
+          "z": -1.684999942779541
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "Dismount (2)",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 1.0,
+          "y": 0.10000000149011612,
+          "z": -1.684999942779541
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "EyePos",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 1.3999999761581421,
+          "z": -0.699999988079071
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "EffectLocation",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.88300001621246338,
+          "z": -0.31099998950958252
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Construction": [
+      {
+        "$type": "Construction",
+        "$name": "<destroyed native object>",
+        "prefabID": 1346716961,
+        "hierachyName": "steeringwheel.deployed",
+        "info": {
+          "$type": "BaseEntity+Menu+Option",
+          "name": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "description": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "icon": null,
+          "order": 0,
+          "usableWhileWounded": false
+        },
+        "canBypassBuildingPermission": false,
+        "showBuildingBlockedPreview": true,
+        "canPlaceOnRoads": false,
+        "canRotateBeforePlacement": true,
+        "canRotateAfterPlacement": true,
+        "canBeDeployedInDeepSeaWater": false,
+        "checkVolumeOnRotate": false,
+        "checkVolumeOnUpgrade": false,
+        "canPlaceAtMaxDistance": false,
+        "placeOnWater": false,
+        "overridePlacementLayer": false,
+        "overridedPlacementLayer": 0,
+        "additionalPlacementLayer": 0,
+        "rotationAmount": {
+          "x": 0.0,
+          "y": 90.0,
+          "z": 0.0
+        },
+        "applyStartingRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "deployOffset": null,
+        "enforceLineOfSightCheckAgainstParentEntity": false,
+        "canSnap": false,
+        "forceY": false,
+        "forceYValue": 0.0,
+        "forceYToOceanLevel": false,
+        "OceanLevelYOffset": 0.0,
+        "holdToPlaceDuration": 0.0,
+        "canFloodFillSockets": false,
+        "alternativeLOSChecks": false,
+        "alternativeLOSPositions": [],
+        "canUseLastValidPosition": true,
+        "healthMultiplier": 1.0,
+        "costMultiplier": 1.0,
+        "maxplaceDistance": 4.0,
+        "minPlaceDistance": 1.0,
+        "guideMesh": null,
+        "guideMeshMaterial": [],
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "hideBuildingPlannerViewmodel": false,
+        "allSockets": [
+          {
+            "$type": "Socket_Free",
+            "$name": "<destroyed native object>",
+            "prefabID": 1346716961,
+            "hierachyName": "steeringwheel.deployed/sockets/free",
+            "idealPlacementNormal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "useTargetNormal": false,
+            "snapToTargetProvidedRotations": true,
+            "blendAimAngle": true,
+            "male": true,
+            "maleDummy": false,
+            "female": false,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": false,
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "selectSize": {
+              "x": 2.0,
+              "y": 0.10000000149011612,
+              "z": 2.0
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            },
+            "socketName": "steeringwheel.deployed/sockets/free",
+            "socketMods": [
+              {
+                "$type": "SocketMod_AngleCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1346716961,
+                "hierachyName": "steeringwheel.deployed/sockets/free/angle",
+                "wantsAngle": true,
+                "worldNormal": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0
+                },
+                "withinDegrees": 20.0,
+                "usePlacementNormal": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+                "instanceID": 1512586,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1346716961,
+                "hierachyName": "steeringwheel.deployed/sockets/free/NotInside",
+                "sphereRadius": 0.10000000149011612,
+                "layerMask": 1621164289,
+                "wantsCollide": false,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.27899998426437378,
+                  "z": -0.017000019550323486
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.017000000923871994,
+                  "z": 0.27900001406669617
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.9999997615814209,
+                  "z": 0.9999997615814209
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+                "instanceID": 1518480,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1346716961,
+                "hierachyName": "steeringwheel.deployed/sockets/free/NotInside (1)",
+                "sphereRadius": 0.10000000149011612,
+                "layerMask": 1621164289,
+                "wantsCollide": false,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.653999924659729,
+                  "z": -0.017000079154968262
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.017000000923871994,
+                  "z": 0.65399998426437378
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.9999997615814209,
+                  "z": 0.9999997615814209
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+                "instanceID": 1516932,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1346716961,
+                "hierachyName": "steeringwheel.deployed/sockets/free/NotInside (2)",
+                "sphereRadius": 0.10000000149011612,
+                "layerMask": 1621164289,
+                "wantsCollide": false,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 1.1059998273849487,
+                  "z": -0.017000079154968262
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.017000000923871994,
+                  "z": 1.1059999465942383
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.9999997615814209,
+                  "z": 0.9999997615814209
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+                "instanceID": 1514566,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_SphereCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1346716961,
+                "hierachyName": "steeringwheel.deployed/sockets/free/NotInside (3)",
+                "sphereRadius": 0.2800000011920929,
+                "layerMask": 1621164289,
+                "wantsCollide": false,
+                "requireMonument": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "entityWhitelist": [],
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 1.1059998273849487,
+                  "z": 0.260999858379364
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": -0.26100000739097595,
+                  "z": 1.1059999465942383
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.9999997615814209,
+                  "z": 0.9999997615814209
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+                "instanceID": 1513996,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1346716961,
+                "hierachyName": "steeringwheel.deployed/sockets/free/inside",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 134217728,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": true,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": -1.862645149230957E-09,
+                  "z": -0.018999997526407242
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.018999999389052391,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+                "instanceID": 1518036,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1346716961,
+                "hierachyName": "steeringwheel.deployed/sockets/free/inside (5)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 134217728,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": true,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": -1.1920928955078125E-07,
+                  "z": -0.87299996614456177
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.87300002574920654,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+                "instanceID": 1572736,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1346716961,
+                "hierachyName": "steeringwheel.deployed/sockets/free/inside (1)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 134217728,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": true,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 7.4505805969238281E-09,
+                  "z": 0.061499997973442078
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": -0.061500001698732376,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.9999997615814209,
+                  "z": 0.9999997615814209
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+                "instanceID": 1512314,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1346716961,
+                "hierachyName": "steeringwheel.deployed/sockets/free/inside (2)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 134217728,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": true,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": -1.4901161193847656E-08,
+                  "z": -0.097199991345405579
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.097199998795986176,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.9999997615814209,
+                  "z": 0.9999997615814209
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+                "instanceID": 1513524,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1346716961,
+                "hierachyName": "steeringwheel.deployed/sockets/free/inside (3)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 134217728,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": true,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.075999997556209564,
+                  "y": 0.0,
+                  "z": -0.0189971886575222
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.075999997556209564,
+                  "y": 0.018997190520167351,
+                  "z": 1.862645149230957E-09
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.9999997615814209,
+                  "z": 0.9999997615814209
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+                "instanceID": 1513934,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1346716961,
+                "hierachyName": "steeringwheel.deployed/sockets/free/inside (4)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 134217728,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": true,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -0.078000001609325409,
+                  "y": 0.0,
+                  "z": -0.0189971886575222
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -0.078000001609325409,
+                  "y": 0.018997190520167351,
+                  "z": 1.862645149230957E-09
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.9999997615814209,
+                  "z": 0.9999997615814209
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+                "instanceID": 1515018,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1346716961,
+                "hierachyName": "steeringwheel.deployed/sockets/free/inside (6)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 134217728,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": true,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -0.5,
+                  "y": 0.0,
+                  "z": -0.0189971886575222
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -0.5,
+                  "y": 0.018997190520167351,
+                  "z": 1.862645149230957E-09
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.9999997615814209,
+                  "z": 0.9999997615814209
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+                "instanceID": 1548712,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1346716961,
+                "hierachyName": "steeringwheel.deployed/sockets/free/inside (7)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 134217728,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": true,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.5,
+                  "y": 0.0,
+                  "z": -0.0189971886575222
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.5,
+                  "y": 0.018997190520167351,
+                  "z": 1.862645149230957E-09
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.9999997615814209,
+                  "z": 0.9999997615814209
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+                "instanceID": 1534758,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_BoatBuildingBlock",
+                "$name": "<destroyed native object>",
+                "prefabID": 1346716961,
+                "hierachyName": "steeringwheel.deployed/sockets/free/boat_building",
+                "RequireHull": false,
+                "RequireNoParentBoat": true,
+                "sphereRadius": 0.93000000715255737,
+                "layerMask": 134217728,
+                "queryTriggers": {
+                  "$enum": "UnityEngine.QueryTriggerInteraction",
+                  "name": "Ignore",
+                  "value": 1
+                },
+                "wantsCollide": true,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.42899996042251587,
+                  "z": -5.9604644775390625E-08
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.42899999022483826
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+                "instanceID": 1550530,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_BoatBuildingEntityLimit",
+                "$name": "<destroyed native object>",
+                "prefabID": 1346716961,
+                "hierachyName": "steeringwheel.deployed/sockets/free/entityLimit",
+                "LimitedEntityType": {
+                  "$type": "SteeringWheel",
+                  "$name": "steeringwheel.deployed",
+                  "PrivPrefab": {
+                    "$ref": "GameObject",
+                    "guid": "6f9f600ca7216cc4f9fe2f4dcb36f491",
+                    "resourcePath": "assets/prefabs/boat/playerboat_privilege.prefab",
+                    "resourceID": 3736348749
+                  },
+                  "KeyEnterDialog": {
+                    "$ref": "GameObject",
+                    "guid": "0528f903cf9a5df49b6e2dce276ecd32",
+                    "resourcePath": "assets/prefabs/locks/keypad/ui/ui.dialog.lock.code.prefab",
+                    "resourceID": 189841836
+                  },
+                  "TurnLerpSpeed": 130.0,
+                  "Wheel": null,
+                  "Privilege": null,
+                  "wheelTurnLoopDef": {
+                    "$ref": "SoundDefinition",
+                    "name": "boat-steering-wheel-turn-loop",
+                    "instanceID": 197596
+                  },
+                  "wheelTurnStartDef": {
+                    "$ref": "SoundDefinition",
+                    "name": "boat-steering-wheel-start-turn",
+                    "instanceID": 399504
+                  },
+                  "wheelTurnStopDef": {
+                    "$ref": "SoundDefinition",
+                    "name": "boat-steering-wheel-end-turn",
+                    "instanceID": 42444
+                  },
+                  "wheelTurnLoopFadeTime": 0.10000000149011612,
+                  "stopDelay": 0.10000000149011612,
+                  "finishBuildingEffect": {
+                    "$ref": "GameObject",
+                    "guid": "89ae2abaf77fc4823a61b8ff693ac8e1",
+                    "resourcePath": "assets/prefabs/deployable/boatbuilding/steeringwheel/effects/boat-steering-wheel-finish-building.prefab",
+                    "resourceID": 1411653717
+                  },
+                  "wheelCenterDef": {
+                    "$ref": "SoundDefinition",
+                    "name": "boat-steering-wheel-half-turn",
+                    "instanceID": 166688
+                  },
+                  "EffectLocation": [],
+                  "effectUnlocked": {
+                    "$ref": "GameObject",
+                    "guid": "2b21c0fb05485574dacb7124117ac415",
+                    "resourcePath": "assets/prefabs/locks/keypad/effects/lock.code.unlock.prefab",
+                    "resourceID": 996087289
+                  },
+                  "effectLocked": {
+                    "$ref": "GameObject",
+                    "guid": "d892eb460cf781849b22214c97d46824",
+                    "resourcePath": "assets/prefabs/locks/keypad/effects/lock.code.updated.prefab",
+                    "resourceID": 4109975300
+                  },
+                  "effectDenied": {
+                    "$ref": "GameObject",
+                    "guid": "5c370ba3385ab2943aaba9d8b90e7407",
+                    "resourcePath": "assets/prefabs/locks/keypad/effects/lock.code.denied.prefab",
+                    "resourceID": 4112119478
+                  },
+                  "effectCodeChanged": {
+                    "$ref": "GameObject",
+                    "guid": "d892eb460cf781849b22214c97d46824",
+                    "resourcePath": "assets/prefabs/locks/keypad/effects/lock.code.updated.prefab",
+                    "resourceID": 4109975300
+                  },
+                  "effectShock": {
+                    "$ref": "GameObject",
+                    "guid": "3f7d2200895985d40bbd421a0eb2f960",
+                    "resourcePath": "assets/prefabs/locks/keypad/effects/lock.code.shock.prefab",
+                    "resourceID": 821899790
+                  },
+                  "ParentBoat": null,
+                  "mountSyncType": {
+                    "$enum": "BaseMountable+MountSyncType",
+                    "name": "ParentAIOnly",
+                    "value": 2
+                  },
+                  "eyePositionOverride": [],
+                  "eyeCenterOverride": {
+                    "$ref": "Transform",
+                    "name": "EyePos",
+                    "instanceID": 1374412,
+                    "goName": "EyePos",
+                    "$alreadyDumpedElsewhereInThisFile": true
+                  },
+                  "overrideEyesRotation": false,
+                  "pitchClamp": {
+                    "x": -80.0,
+                    "y": 50.0
+                  },
+                  "yawClamp": {
+                    "x": -80.0,
+                    "y": 80.0
+                  },
+                  "canWieldItems": false,
+                  "relativeViewAngles": true,
+                  "disableLegsWhenMounted": false,
+                  "disableBreastCensorshipWhenMounted": true,
+                  "AllowForceMountWhenRestrained": false,
+                  "mountChaining": true,
+                  "mountAnchor": [],
+                  "mountLOSVertOffset": 0.5,
+                  "mountedAnimationSpeed": 0.0,
+                  "mountPose": {
+                    "$enum": "PlayerModel+MountPoses",
+                    "name": "Steering_Boat",
+                    "value": 37
+                  },
+                  "animateVehicleAim360": true,
+                  "maxMountDistance": 1.5,
+                  "dismountPositions": [
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    []
+                  ],
+                  "checkPlayerLosOnMount": false,
+                  "disableMeshCullingForPlayers": false,
+                  "allowHeadLook": true,
+                  "ignoreVehicleParent": true,
+                  "legacyDismount": false,
+                  "wearWhileMounted": null,
+                  "modifiesPlayerCollider": false,
+                  "customPlayerCollider": {
+                    "$type": "BasePlayer+CapsuleColliderInfo",
+                    "height": 0.0,
+                    "radius": 0.0,
+                    "center": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    }
+                  },
+                  "clippingCheckRadius": 0.40000000596046448,
+                  "clippingAndVisChecks": true,
+                  "clippingChecksLocation": {
+                    "$enum": "BaseMountable+ClippingCheckLocation",
+                    "name": "HeadOnly",
+                    "value": 0
+                  },
+                  "mountSoundDef": {
+                    "$ref": "SoundDefinition",
+                    "name": "boat-steering-wheel-mount",
+                    "instanceID": 206830
+                  },
+                  "swapSoundDef": null,
+                  "dismountSoundDef": {
+                    "$ref": "SoundDefinition",
+                    "name": "boat-steering-wheel-dismount",
+                    "instanceID": 102268
+                  },
+                  "allowFootstepEffects": false,
+                  "dismountHoldType": {
+                    "$enum": "BaseMountable+DismountConvarType",
+                    "name": "Misc",
+                    "value": 0
+                  },
+                  "mountTimeStatType": {
+                    "$enum": "BaseMountable+MountStatType",
+                    "name": "None",
+                    "value": 0
+                  },
+                  "allowedGestures": {
+                    "$enum": "BaseMountable+MountGestureType",
+                    "name": "None",
+                    "value": 0
+                  },
+                  "canDrinkWhileMounted": true,
+                  "allowSleeperMounting": false,
+                  "shouldShowHudHealth": false,
+                  "blockLooting": false,
+                  "animateClothInLocalSpace": true,
+                  "protectsFromAnimals": true,
+                  "MountedCameraMode": {
+                    "$enum": "BasePlayer+CameraMode",
+                    "name": "FirstPerson",
+                    "value": 0
+                  },
+                  "rigidBody": null,
+                  "wantsBoundaryRepelCheck": false,
+                  "isMobile": false,
+                  "SideLeanAmount": 0.20000000298023224,
+                  "_mounted": null,
+                  "spawnDeployableCorpseOnDeath": false,
+                  "deployableCorpsePrefab": {
+                    "$ref": "GameObject",
+                    "guid": "",
+                    "resourcePath": null,
+                    "resourceID": 0
+                  },
+                  "ItemOwnership": {
+                    "$type": "ItemOwnershipShare",
+                    "username": null,
+                    "reason": null,
+                    "amount": 0
+                  },
+                  "lastDamage": {
+                    "$enum": "Rust.DamageType",
+                    "name": "Generic",
+                    "value": 0
+                  },
+                  "lastAttacker": null,
+                  "lastDealtDamageTo": null,
+                  "ResetLifeStateOnSpawn": true,
+                  "propDirection": null,
+                  "unHostileTime": 0.0,
+                  "lastNoiseTime": 0.0,
+                  "skeletonProperties": null,
+                  "baseProtection": null,
+                  "startHealth": 300.0,
+                  "pickup": {
+                    "$type": "BaseCombatEntity+Pickup",
+                    "enabled": true,
+                    "itemTarget": {
+                      "$ref": "ItemDefinition",
+                      "name": "steeringwheel.item",
+                      "itemid": -1866909924,
+                      "shortname": "steeringwheel.boat"
+                    },
+                    "itemCount": 1,
+                    "setConditionFromHealth": false,
+                    "subtractCondition": 0.0,
+                    "requireBuildingPrivilege": true,
+                    "requireHammer": true,
+                    "requireEmptyInv": false,
+                    "overridePickupTime": 0.0
+                  },
+                  "repair": {
+                    "$type": "BaseCombatEntity+Repair",
+                    "enabled": false,
+                    "itemTarget": null,
+                    "ignoreForRepair": null,
+                    "repairEffect": {
+                      "$ref": "GameObject",
+                      "guid": "",
+                      "resourcePath": null,
+                      "resourceID": 0
+                    },
+                    "repairFullEffect": {
+                      "$ref": "GameObject",
+                      "guid": "",
+                      "resourcePath": null,
+                      "resourceID": 0
+                    },
+                    "repairFailedEffect": {
+                      "$ref": "GameObject",
+                      "guid": "",
+                      "resourcePath": null,
+                      "resourceID": 0
+                    }
+                  },
+                  "ShowHealthInfo": true,
+                  "showHealthInfoThreshold": {
+                    "$enum": "BaseCombatEntity+ShowHealthThreshold",
+                    "name": "ThreeQuarters",
+                    "value": 25
+                  },
+                  "lifestate": {
+                    "$enum": "BaseCombatEntity+LifeState",
+                    "name": "Alive",
+                    "value": 0
+                  },
+                  "sendsHitNotification": false,
+                  "sendsMeleeHitNotification": true,
+                  "markAttackerHostile": true,
+                  "maxHealthOverride": 0.0,
+                  "_health": 0.0,
+                  "_maxHealth": 100.0,
+                  "faction": {
+                    "$enum": "BaseCombatEntity+Faction",
+                    "name": "Default",
+                    "value": 0
+                  },
+                  "lastAttackedTime": "-Infinity",
+                  "lastDealtDamageTime": "-Infinity",
+                  "lastNotifyFrame": 0,
+                  "links": [],
+                  "creatorEntity": null,
+                  "ticksSinceStopped": 0,
+                  "isCallingUpdateNetworkGroup": false,
+                  "bounds": {
+                    "center": {
+                      "x": 0.0,
+                      "y": 0.77999997138977051,
+                      "z": -0.10000000149011612
+                    },
+                    "size": {
+                      "x": 1.0,
+                      "y": 1.6000000238418579,
+                      "z": 0.56000000238418579
+                    }
+                  },
+                  "impactEffect": {
+                    "$ref": "GameObject",
+                    "guid": "",
+                    "resourcePath": null,
+                    "resourceID": 0
+                  },
+                  "enableSaving": true,
+                  "syncPosition": false,
+                  "model": {
+                    "$type": "Model",
+                    "$name": "steeringwheel.deployed",
+                    "collision": null,
+                    "rootBone": [
+                      [
+                        {
+                          "$truncated": true,
+                          "type": "UnityEngine.Transform",
+                          "reason": "max-depth"
+                        },
+                        {
+                          "$truncated": true,
+                          "type": "UnityEngine.Transform",
+                          "reason": "max-depth"
+                        }
+                      ],
+                      [
+                        {
+                          "$truncated": true,
+                          "type": "UnityEngine.Transform",
+                          "reason": "max-depth"
+                        }
+                      ],
+                      [],
+                      {
+                        "$ref": "Transform",
+                        "name": "MountAnchor",
+                        "instanceID": 1317436,
+                        "goName": "MountAnchor",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      [],
+                      {
+                        "$ref": "Transform",
+                        "name": "Dismount",
+                        "instanceID": 1396922,
+                        "goName": "Dismount",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "Dismount (3)",
+                        "instanceID": 1413010,
+                        "goName": "Dismount (3)",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "Dismount (4)",
+                        "instanceID": 1360480,
+                        "goName": "Dismount (4)",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "Dismount (7)",
+                        "instanceID": 1319974,
+                        "goName": "Dismount (7)",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "Dismount (8)",
+                        "instanceID": 1378072,
+                        "goName": "Dismount (8)",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "Dismount (5)",
+                        "instanceID": 1301402,
+                        "goName": "Dismount (5)",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "Dismount (6)",
+                        "instanceID": 1335624,
+                        "goName": "Dismount (6)",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "Dismount (1)",
+                        "instanceID": 1382188,
+                        "goName": "Dismount (1)",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "Dismount (2)",
+                        "instanceID": 1337766,
+                        "goName": "Dismount (2)",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "EyePos",
+                        "instanceID": 1374412,
+                        "goName": "EyePos",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "EffectLocation",
+                        "instanceID": 1408240,
+                        "goName": "EffectLocation",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      }
+                    ],
+                    "headBone": null,
+                    "eyeBone": null,
+                    "animator": null,
+                    "skeleton": null,
+                    "boneTransforms": [
+                      {
+                        "$ref": "Transform",
+                        "name": "steeringwheel.deployed",
+                        "instanceID": 1278270,
+                        "goName": "steeringwheel.deployed",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "Collision",
+                        "instanceID": 1289694,
+                        "goName": "Collision",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      [],
+                      [],
+                      {
+                        "$ref": "Transform",
+                        "name": "sockets",
+                        "instanceID": 1278170,
+                        "goName": "sockets",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      [],
+                      {
+                        "$ref": "Transform",
+                        "name": "<destroyed native object>",
+                        "instanceID": 0,
+                        "$error": "Object reference not set to an instance of an object."
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "<destroyed native object>",
+                        "instanceID": 0,
+                        "$error": "Object reference not set to an instance of an object."
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "<destroyed native object>",
+                        "instanceID": 0,
+                        "$error": "Object reference not set to an instance of an object."
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "<destroyed native object>",
+                        "instanceID": 0,
+                        "$error": "Object reference not set to an instance of an object."
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "<destroyed native object>",
+                        "instanceID": 0,
+                        "$error": "Object reference not set to an instance of an object."
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "<destroyed native object>",
+                        "instanceID": 0,
+                        "$error": "Object reference not set to an instance of an object."
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "<destroyed native object>",
+                        "instanceID": 0,
+                        "$error": "Object reference not set to an instance of an object."
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "<destroyed native object>",
+                        "instanceID": 0,
+                        "$error": "Object reference not set to an instance of an object."
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "<destroyed native object>",
+                        "instanceID": 0,
+                        "$error": "Object reference not set to an instance of an object."
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "<destroyed native object>",
+                        "instanceID": 0,
+                        "$error": "Object reference not set to an instance of an object."
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "<destroyed native object>",
+                        "instanceID": 0,
+                        "$error": "Object reference not set to an instance of an object."
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "<destroyed native object>",
+                        "instanceID": 0,
+                        "$error": "Object reference not set to an instance of an object."
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "<destroyed native object>",
+                        "instanceID": 0,
+                        "$error": "Object reference not set to an instance of an object."
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "<destroyed native object>",
+                        "instanceID": 0,
+                        "$error": "Object reference not set to an instance of an object."
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "<destroyed native object>",
+                        "instanceID": 0,
+                        "$error": "Object reference not set to an instance of an object."
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "prevent_building",
+                        "instanceID": 1360160,
+                        "goName": "prevent_building",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "MountAnchor",
+                        "instanceID": 1317436,
+                        "goName": "MountAnchor",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "deploy",
+                        "instanceID": 1291918,
+                        "goName": "deploy",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "<destroyed native object>",
+                        "instanceID": 0,
+                        "$error": "Object reference not set to an instance of an object."
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "Dismount",
+                        "instanceID": 1396922,
+                        "goName": "Dismount",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "Dismount (3)",
+                        "instanceID": 1413010,
+                        "goName": "Dismount (3)",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "Dismount (4)",
+                        "instanceID": 1360480,
+                        "goName": "Dismount (4)",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "Dismount (7)",
+                        "instanceID": 1319974,
+                        "goName": "Dismount (7)",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "Dismount (8)",
+                        "instanceID": 1378072,
+                        "goName": "Dismount (8)",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "Dismount (5)",
+                        "instanceID": 1301402,
+                        "goName": "Dismount (5)",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "Dismount (6)",
+                        "instanceID": 1335624,
+                        "goName": "Dismount (6)",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "Dismount (1)",
+                        "instanceID": 1382188,
+                        "goName": "Dismount (1)",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "Dismount (2)",
+                        "instanceID": 1337766,
+                        "goName": "Dismount (2)",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "EyePos",
+                        "instanceID": 1374412,
+                        "goName": "EyePos",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$ref": "Transform",
+                        "name": "EffectLocation",
+                        "instanceID": 1408240,
+                        "goName": "EffectLocation",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      }
+                    ],
+                    "boneNames": [
+                      "steeringwheel.deployed",
+                      "Collision",
+                      "Post",
+                      "WheelMountedInteract",
+                      "sockets",
+                      "free",
+                      "angle",
+                      "NotInside",
+                      "NotInside (1)",
+                      "NotInside (2)",
+                      "NotInside (3)",
+                      "inside",
+                      "inside (5)",
+                      "inside (1)",
+                      "inside (2)",
+                      "inside (3)",
+                      "inside (4)",
+                      "inside (6)",
+                      "inside (7)",
+                      "boat_building",
+                      "entityLimit",
+                      "prevent_building",
+                      "MountAnchor",
+                      "deploy",
+                      "DeployVolume",
+                      "Dismount",
+                      "Dismount (3)",
+                      "Dismount (4)",
+                      "Dismount (7)",
+                      "Dismount (8)",
+                      "Dismount (5)",
+                      "Dismount (6)",
+                      "Dismount (1)",
+                      "Dismount (2)",
+                      "EyePos",
+                      "EffectLocation"
+                    ]
+                  },
+                  "flags": {
+                    "$enum": "BaseEntity+Flags",
+                    "name": "0",
+                    "value": 0,
+                    "flagNames": []
+                  },
+                  "parentBone": 0,
+                  "skinID": 0,
+                  "attachmentID": 0,
+                  "HasBrain": false,
+                  "_name": null,
+                  "networkEntityScale": false,
+                  "_spawnable": null,
+                  "postNetworkUpdateComponents": [],
+                  "_limitedNetworking": false,
+                  "parentEntity": {
+                    "$type": "EntityRef"
+                  },
+                  "children": [],
+                  "canTriggerParent": true,
+                  "creationFrame": 0,
+                  "isSpawned": false,
+                  "_NetworkCache": null,
+                  "prefabID": 1346716961,
+                  "globalBroadcast": false,
+                  "globalNetworkBehavior": {
+                    "$enum": "GlobalNetworkBehavior",
+                    "name": "Default",
+                    "value": 0
+                  },
+                  "globalBuildingBlock": false,
+                  "networkRange": {
+                    "$enum": "EntityNetworkRange",
+                    "name": "Medium",
+                    "value": 1
+                  },
+                  "net": null
+                },
+                "Limit": 1,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.70710676908493042,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710676908493042
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": 5.9604644775390625E-08
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 8.9406967163085938E-08,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+                "instanceID": 1554362,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              }
+            ],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "worldRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": 0.99999994039535522,
+              "z": -1.1920928955078125E-07
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "fullName": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+            "instanceID": 1512886,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          }
+        ],
+        "allProximities": [],
+        "defaultGrade": null,
+        "socketHandle": null,
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.77999997138977051,
+            "z": -0.10000000149011612
+          },
+          "size": {
+            "x": 1.0,
+            "y": 1.6000000238418579,
+            "z": 0.56000000238418579
+          }
+        },
+        "isBuildingPrivilege": false,
+        "isSleepingBag": false,
+        "grades": [],
+        "deployable": {
+          "$type": "Deployable",
+          "$name": "<destroyed native object>",
+          "prefabID": 1346716961,
+          "hierachyName": "steeringwheel.deployed",
+          "guidePrefab": {
+            "$ref": "GameObject",
+            "guid": "cd833019951fb6c438ed476a84816655",
+            "resourcePath": "assets/prefabs/deployable/steering wheels/steeringwheel_tier2_guide.prefab",
+            "resourceID": 3439850941
+          },
+          "guideMesh": null,
+          "guideMeshScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "overrideRotation": true,
+          "guideMeshOrientation": {
+            "x": 0.0,
+            "y": 180.0,
+            "z": 0.0
+          },
+          "guideMeshPositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "moveGuideTowardsCamera": true,
+          "guideLights": true,
+          "wantsInstanceData": false,
+          "copyInventoryFromItem": false,
+          "setSocketParent": false,
+          "toSlot": false,
+          "slot": {
+            "$enum": "BaseEntity+Slot",
+            "name": "Lock",
+            "value": 0
+          },
+          "placeEffect": {
+            "$ref": "GameObject",
+            "guid": "817e126f5bf18488e9ee359a936bb252",
+            "resourcePath": "assets/prefabs/deployable/boatbuilding/steeringwheel/effects/boat-steering-wheel-deploy.prefab",
+            "resourceID": 519927729
+          },
+          "guideTargets": [],
+          "bounds": {
+            "center": {
+              "x": 0.0,
+              "y": 0.77999997138977051,
+              "z": -0.10000000149011612
+            },
+            "size": {
+              "x": 1.0,
+              "y": 1.6000000238418579,
+              "z": 0.56000000238418579
+            }
+          },
+          "worldPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "worldRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "worldForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "localScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "localRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "fullName": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+          "instanceID": 1516638,
+          "prefabAttribute": {
+            "$ref": "Library",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "gameManager": {
+            "$ref": "GameManager",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "isServer": true
+        },
+        "placeholder": null,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+        "instanceID": 1518714,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Deployable": [
+      {
+        "$ref": "Deployable",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "Decay": [
+      {
+        "$type": "DeployableDecay",
+        "$name": "<destroyed native object>",
+        "prefabID": 1346716961,
+        "hierachyName": "steeringwheel.deployed",
+        "decayDelay": 5.0,
+        "decayDuration": 8.0,
+        "overrideHealRate": false,
+        "decayTickOverride": 0.0,
+        "decayIndoors": false,
+        "healRate": 1.0,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+        "instanceID": 1513872,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Socket_Base": [
+      {
+        "$ref": "Socket_Free",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "SocketMod": [
+      {
+        "$ref": "SocketMod_AngleCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_BoatBuildingBlock",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_BoatBuildingEntityLimit",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "DeployVolume": [
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 1346716961,
+        "hierachyName": "steeringwheel.deployed/deploy/DeployVolume",
+        "bounds": {
+          "center": {
+            "x": -0.02684783935546875,
+            "y": -0.29531455039978027,
+            "z": -0.07517242431640625
+          },
+          "size": {
+            "x": 1.0979461669921875,
+            "y": 1.4469561576843262,
+            "z": 0.5502777099609375
+          }
+        },
+        "layers": 136446208,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 1.0290000438690186,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 1.0290000438690186,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/boatbuilding/steeringwheel/steeringwheel.deployed.prefab",
+        "instanceID": 1553684,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ]
+  }
+}

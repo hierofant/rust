@@ -1,0 +1,719 @@
+{
+  "prefabID": 947646353,
+  "path": "assets/rust.ai/agents/fish/simpleshark.prefab",
+  "rootClassChain": [
+    "SimpleShark",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.00063252449035644531,
+      "y": 0.11412471532821655,
+      "z": -0.36353540420532227
+    },
+    "size": {
+      "x": 2.2150683403015137,
+      "y": 1.7671992778778076,
+      "z": 4.9842591285705566
+    }
+  },
+  "hierarchy": {
+    "name": "simpleshark",
+    "layer": {
+      "index": 11,
+      "name": "AI"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "SimpleShark",
+        "$name": "simpleshark",
+        "destination": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "minSpeed": 4.0,
+        "maxSpeed": 10.0,
+        "idealDepth": 6.0,
+        "minTurnSpeed": 1.5,
+        "maxTurnSpeed": 3.5,
+        "attackCooldown": 7.0,
+        "aggroRange": 15.0,
+        "obstacleDetectionRadius": 0.34999999403953552,
+        "animator": null,
+        "bloodCloud": {
+          "$ref": "GameObject",
+          "guid": "4eb3dbb1199eeec4aaca801a501b9f57",
+          "resourcePath": "assets/rust.ai/agents/fish/shark/effects/bloodcloud.prefab",
+          "resourceID": 2939690783
+        },
+        "corpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "cda12efa62f164849ad25e9636811411",
+          "resourcePath": "assets/rust.ai/agents/fish/shark.corpse.prefab",
+          "resourceID": 3051190050
+        },
+        "nextAttackTime": 0.0,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "shark.protection",
+          "comments": "",
+          "density": 1.0,
+          "amounts": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.5,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "FilenameStringId": 2859298331
+        },
+        "startHealth": 148.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": false,
+          "itemTarget": null,
+          "itemCount": 0,
+          "setConditionFromHealth": false,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": false,
+          "requireHammer": false,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": false,
+          "itemTarget": null,
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": false,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": true,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": false,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.00063252449035644531,
+            "y": 0.11412471532821655,
+            "z": -0.36353540420532227
+          },
+          "size": {
+            "x": 2.2150683403015137,
+            "y": 1.7671992778778076,
+            "z": 4.9842591285705566
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": false,
+        "syncPosition": true,
+        "model": {
+          "$type": "Model",
+          "$name": "Shark",
+          "collision": null,
+          "rootBone": {
+            "$ref": "Transform",
+            "name": "<destroyed native object>",
+            "instanceID": 0,
+            "$error": "Object reference not set to an instance of an object."
+          },
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": {
+            "$type": "Facepunch.Skeleton",
+            "$name": "Shark",
+            "Source": {
+              "$ref": "SkeletonDefinition",
+              "name": "SharkSkeletonDefinition",
+              "instanceID": 354950
+            },
+            "Bones": [
+              {
+                "$ref": "GameObject",
+                "name": "Shark",
+                "instanceID": 1147094
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              {
+                "$ref": "GameObject",
+                "name": "<destroyed native object>",
+                "$error": "Object reference not set to an instance of an object."
+              },
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            }
+          ],
+          "boneNames": [
+            "Root",
+            "Spine01",
+            "Chest",
+            "Head",
+            "UpperJaw",
+            "EyeL",
+            "EyeR",
+            "UpperJaw_END",
+            "Jaw",
+            "Jaw_END",
+            "ShoulderL",
+            "ArmL",
+            "ShoulderR",
+            "ArmR",
+            "Spine02",
+            "Spine03",
+            "Spine04",
+            "Spine05",
+            "Spine06",
+            "Spine07"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 947646353,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$type": "Spawnable",
+        "$name": "simpleshark",
+        "Population": null,
+        "ForceSpawnOnly": false,
+        "ForceSpawnInfoMessage": "",
+        "CanSpawnInSafeZone": true
+      },
+      {
+        "$type": "UnityEngine.CapsuleCollider",
+        "$name": "simpleshark",
+        "colliderType": "Capsule",
+        "center": {
+          "x": 0.0,
+          "y": 0.029999999329447746,
+          "z": 0.15000000596046448
+        },
+        "radius": 0.62000000476837158,
+        "height": 4.3600001335144043,
+        "direction": 2,
+        "isTrigger": false,
+        "enabled": true
+      }
+    ],
+    "children": [
+      {
+        "name": "Shark",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "Skeleton",
+            "name": "Shark",
+            "instanceID": 1544144,
+            "goName": "Shark",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Model",
+            "name": "Shark",
+            "instanceID": 1555064,
+            "goName": "Shark",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "ScentEmission",
+        "layer": {
+          "index": 11,
+          "name": "AI"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "PrefabInformation": [
+      {
+        "$type": "PrefabInformation",
+        "$name": "<destroyed native object>",
+        "prefabID": 947646353,
+        "hierachyName": "simpleshark",
+        "associatedItemDefinition": null,
+        "title": {
+          "$type": "Translate+Phrase",
+          "token": "shark.name",
+          "legacyEnglish": "Shark"
+        },
+        "description": {
+          "$type": "Translate+Phrase",
+          "token": "",
+          "legacyEnglish": ""
+        },
+        "sprite": {
+          "$ref": "Sprite",
+          "name": "SharkAvatar",
+          "instanceID": 1022240
+        },
+        "shownOnDeathScreen": true,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/rust.ai/agents/fish/simpleshark.prefab",
+        "instanceID": 1565794,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Socket_Base": [],
+    "DirectionProperties": []
+  }
+}

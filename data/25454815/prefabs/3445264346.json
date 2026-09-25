@@ -1,0 +1,1017 @@
+{
+  "prefabID": 3445264346,
+  "path": "assets/prefabs/weapons/rocketlauncher/skins/rpg7/rpg7.entity.prefab",
+  "rootClassChain": [
+    "RPGLauncher",
+    "BaseLauncher",
+    "BaseProjectile",
+    "AttackEntity",
+    "HeldEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.024164527654647827,
+      "y": 0.091114744544029236,
+      "z": -0.12359276413917542
+    },
+    "size": {
+      "x": 0.26885408163070679,
+      "y": 0.65482479333877563,
+      "z": 0.57653236389160156
+    }
+  },
+  "hierarchy": {
+    "name": "rpg7.entity",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "RPGLauncher",
+        "$name": "rpg7.entity",
+        "WorldSwapAmmo": {
+          "$type": "SwapAmmo",
+          "$name": "rpg7.entity",
+          "Setups": [
+            {
+              "$type": "SwapAmmo+AmmoSetup",
+              "TargetAmmo": {
+                "$ref": "ItemDefinition",
+                "name": "ammo_rocket_basic.item",
+                "itemid": -742865266,
+                "shortname": "ammo.rocket.basic"
+              },
+              "Roots": [
+                null,
+                null
+              ]
+            },
+            {
+              "$type": "SwapAmmo+AmmoSetup",
+              "TargetAmmo": {
+                "$ref": "ItemDefinition",
+                "name": "ammo_rocket_fire.item",
+                "itemid": 1638322904,
+                "shortname": "ammo.rocket.fire"
+              },
+              "Roots": [
+                null,
+                null
+              ]
+            },
+            {
+              "$type": "SwapAmmo+AmmoSetup",
+              "TargetAmmo": {
+                "$ref": "ItemDefinition",
+                "name": "ammo_rocket_hv.item",
+                "itemid": -1841918730,
+                "shortname": "ammo.rocket.hv"
+              },
+              "Roots": [
+                null,
+                null
+              ]
+            },
+            {
+              "$type": "SwapAmmo+AmmoSetup",
+              "TargetAmmo": {
+                "$ref": "ItemDefinition",
+                "name": "ammo_rocket_hv.item",
+                "itemid": -1841918730,
+                "shortname": "ammo.rocket.hv"
+              },
+              "Roots": []
+            }
+          ],
+          "EventDriven": false
+        },
+        "LeftHandRoot": [],
+        "LoadedAmmoRoot": [],
+        "initialSpeedMultiplier": 1.0,
+        "NoiseRadius": 100.0,
+        "damageScale": 1.0,
+        "distanceScale": 1.0,
+        "farDamageScale": -1.0,
+        "farDistanceScale": -1.0,
+        "projectileVelocityScale": 1.0,
+        "automatic": false,
+        "usableByTurret": false,
+        "turretDamageScale": 0.34999999403953552,
+        "largeTurretWeapon": false,
+        "turretReloadDurationOverride": -1.0,
+        "maxAttackEffectDistance": 400.0,
+        "attackFX": {
+          "$ref": "GameObject",
+          "guid": "d337779251db2c64ba9227b5c005d102",
+          "resourcePath": "assets/prefabs/weapons/rocketlauncher/skins/rpg7/effects/attack.prefab",
+          "resourceID": 3582013844
+        },
+        "silencedAttack": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "muzzleBrakeAttack": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "fireModeSound": null,
+        "MuzzlePoint": [],
+        "reloadTime": 6.1620001792907715,
+        "canUnloadAmmo": true,
+        "primaryMagazine": {
+          "$type": "BaseProjectile+Magazine",
+          "definition": {
+            "$type": "BaseProjectile+Magazine+Definition",
+            "builtInSize": 1,
+            "ammoTypes": {
+              "$enum": "Rust.AmmoTypes",
+              "name": "ROCKET",
+              "value": 32,
+              "flagNames": [
+                "ROCKET"
+              ]
+            }
+          },
+          "capacity": 0,
+          "contents": 0,
+          "ammoType": {
+            "$ref": "ItemDefinition",
+            "name": "ammo_rocket_basic.item",
+            "itemid": -742865266,
+            "shortname": "ammo.rocket.basic"
+          },
+          "allowPlayerReloading": true,
+          "allowAmmoSwitching": true
+        },
+        "fractionalReload": false,
+        "reloadStartDuration": 0.0,
+        "reloadFractionDuration": 0.0,
+        "reloadEndDuration": 0.0,
+        "alternateDryFireRate": 0.5,
+        "sendReloadSignalFromServer": false,
+        "aimSway": 2.0,
+        "aimSwaySpeed": 2.0,
+        "recoil": {
+          "$ref": "RecoilProperties",
+          "name": "RocketRecoil",
+          "instanceID": 230690
+        },
+        "aimconeCurve": {
+          "$type": "UnityEngine.AnimationCurve"
+        },
+        "aimCone": 2.25,
+        "hipAimCone": 1.7999999523162842,
+        "aimconePenaltyPerShot": 0.0,
+        "aimConePenaltyMax": 0.0,
+        "aimconePenaltyRecoverTime": 0.10000000149011612,
+        "aimconePenaltyRecoverDelay": 0.10000000149011612,
+        "stancePenaltyScale": 1.0,
+        "hasADS": true,
+        "noAimingWhileCycling": false,
+        "manualCycle": false,
+        "CrosshairSettings": {
+          "$enum": "BaseProjectile+WeaponCrosshairSettings",
+          "name": "StandardWithAiming",
+          "value": 1
+        },
+        "aiming": false,
+        "isBurstWeapon": false,
+        "canChangeFireModes": true,
+        "defaultOn": true,
+        "internalBurstRecoilScale": 0.800000011920929,
+        "internalBurstFireRateScale": 0.800000011920929,
+        "internalBurstAimConeScale": 0.800000011920929,
+        "resetDuration": 0.30000001192092896,
+        "numShotsFired": 0,
+        "deployDelay": 3.0,
+        "repeatDelay": 2.0,
+        "animationDelay": 0.0,
+        "effectiveRange": 1.0,
+        "npcDamageScale": 1.0,
+        "attackLengthMin": -1.0,
+        "attackLengthMax": -1.0,
+        "attackSpacing": 0.0,
+        "aiAimSwayOffset": 0.0,
+        "aiAimCone": 10.0,
+        "aiOnlyInRange": false,
+        "CloseRangeAddition": 0.0,
+        "MediumRangeAddition": 0.0,
+        "LongRangeAddition": 0.0,
+        "CanUseAtMediumRange": true,
+        "CanUseAtLongRange": true,
+        "reloadSounds": [
+          {
+            "$ref": "SoundDefinition",
+            "name": "rocket-launcher-reload-start",
+            "instanceID": 24758
+          },
+          {
+            "$ref": "SoundDefinition",
+            "name": "rocket-launcher-reload-open-hatch",
+            "instanceID": 24736
+          },
+          {
+            "$ref": "SoundDefinition",
+            "name": "rocket-launcher-reload-insert-rocket",
+            "instanceID": 24782
+          },
+          {
+            "$ref": "SoundDefinition",
+            "name": "rocket-launcher-reload-close-hatch",
+            "instanceID": 24796
+          },
+          {
+            "$ref": "SoundDefinition",
+            "name": "rocket-launcher-reload-finish",
+            "instanceID": 24794
+          }
+        ],
+        "thirdPersonMeleeSound": null,
+        "recoilCompDelayOverride": 0.0,
+        "wantsRecoilComp": false,
+        "showCrosshairOnTutorial": false,
+        "noHeadshots": false,
+        "nextAttackTime": {
+          "$type": "EncryptedValue`1[[System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+        },
+        "worldModelAnimator": null,
+        "thirdPersonDeploySound": {
+          "$ref": "SoundDefinition",
+          "name": "rocketlauncher_deploy-3p",
+          "instanceID": 28504
+        },
+        "thirdPersonAimSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-up",
+          "instanceID": 24732
+        },
+        "thirdPersonAimEndSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-down",
+          "instanceID": 24854
+        },
+        "hideViewmodel": false,
+        "handBone": "r_prop",
+        "HoldAnimationOverride": {
+          "$ref": "AnimatorOverrideController",
+          "name": "HoldType.rpg7",
+          "instanceID": 1022454
+        },
+        "holdInfo": {
+          "$type": "HeldEntity+HoldInfo",
+          "UseCustomSpineOffset": false,
+          "CustomSpineOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ShieldBoneArmRotationAdditive": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "isBuildingTool": false,
+        "canBeUsedWithShield": false,
+        "ForwardSignalsFromPlayer": false,
+        "forcedOwner": null,
+        "useOwnerForward": true,
+        "CanSetLightsOn": false,
+        "holsterInfo": {
+          "$type": "HeldEntity+HolsterInfo",
+          "slot": {
+            "$enum": "HeldEntity+HolsterInfo+HolsterSlot",
+            "name": "BACK",
+            "value": 0
+          },
+          "backpackSlot": {
+            "$enum": "HeldEntity+HolsterInfo+BackpackSlot",
+            "name": "LEFT",
+            "value": 0
+          },
+          "displayWhenHolstered": true,
+          "holsterBone": "spine3",
+          "holsterOffset": {
+            "x": -0.20000000298023224,
+            "y": -0.20000000298023224,
+            "z": -0.070000000298023224
+          },
+          "holsterRotationOffset": {
+            "x": 5.440000057220459,
+            "y": -121.0,
+            "z": -86.0
+          },
+          "backpackHolsterOffset": {
+            "x": -0.34999999403953552,
+            "y": -0.070000000298023224,
+            "z": 0.019999999552965164
+          },
+          "backpackHolsterRotationOffset": {
+            "x": 274.0,
+            "y": 253.0,
+            "z": -16.299999237060547
+          }
+        },
+        "HeldCameraMode": {
+          "$enum": "BasePlayer+CameraMode",
+          "name": "FirstPerson",
+          "value": 0
+        },
+        "hostileScore": 20.0,
+        "FirstPersonArmOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonArmRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonRotationStrength": 1.0,
+        "AttachmentAnchor": [
+          []
+        ],
+        "holsterVisible": false,
+        "genericVisible": false,
+        "ownerItemUID": {
+          "$type": "ItemId",
+          "Value": 0
+        },
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.024164527654647827,
+            "y": 0.091114744544029236,
+            "z": -0.12359276413917542
+          },
+          "size": {
+            "x": 0.26885408163070679,
+            "y": 0.65482479333877563,
+            "z": 0.57653236389160156
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "rpg7.entity",
+          "collision": null,
+          "rootBone": [
+            [
+              [
+                [
+                  [
+                    []
+                  ]
+                ]
+              ]
+            ],
+            [
+              {
+                "$ref": "Transform",
+                "name": "muzzle",
+                "instanceID": 1260780,
+                "goName": "muzzle",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              {
+                "$ref": "Transform",
+                "name": "AmmoChild",
+                "instanceID": 1340814,
+                "goName": "AmmoChild",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              {
+                "$ref": "Transform",
+                "name": "LHandChild",
+                "instanceID": 1423434,
+                "goName": "LHandChild",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              {
+                "$ref": "Transform",
+                "name": "Charm",
+                "instanceID": 1431504,
+                "goName": "Charm",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ]
+          ],
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "rpg7.entity",
+              "instanceID": 1260768,
+              "goName": "rpg7.entity",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "w_rocketlauncher_rigged",
+              "instanceID": 1260770,
+              "goName": "w_rocketlauncher_rigged",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "ROOT_rocket_launcher",
+              "instanceID": 1260774,
+              "goName": "ROOT_rocket_launcher",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "joint4",
+              "instanceID": 1260776,
+              "goName": "joint4",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "lid_cap",
+              "instanceID": 1260778,
+              "goName": "lid_cap",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "joint2",
+              "instanceID": 1260772,
+              "goName": "joint2",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "w_rpg7",
+              "instanceID": 1406782,
+              "goName": "w_rpg7",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "muzzle",
+              "instanceID": 1260780,
+              "goName": "muzzle",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "AmmoChild",
+              "instanceID": 1340814,
+              "goName": "AmmoChild",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "LHandChild",
+              "instanceID": 1423434,
+              "goName": "LHandChild",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Charm",
+              "instanceID": 1431504,
+              "goName": "Charm",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "v_CharmAnchor",
+              "instanceID": 1399104,
+              "goName": "v_CharmAnchor",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "rpg7.entity",
+            "w_rocketlauncher_rigged",
+            "ROOT_rocket_launcher",
+            "joint4",
+            "lid_cap",
+            "joint2",
+            "w_rpg7",
+            "muzzle",
+            "AmmoChild",
+            "LHandChild",
+            "Charm",
+            "v_CharmAnchor"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 3445264346,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$ref": "Model",
+        "name": "rpg7.entity",
+        "instanceID": 1512122,
+        "goName": "rpg7.entity",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SwapAmmo",
+        "name": "rpg7.entity",
+        "instanceID": 1538016,
+        "goName": "rpg7.entity",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "children": [
+      {
+        "name": "w_rocketlauncher_rigged",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": false,
+        "localPosition": {
+          "x": -0.044199999421834946,
+          "y": 0.0608999989926815,
+          "z": -0.12610000371932983
+        },
+        "localRotation": {
+          "x": -0.248268723487854,
+          "y": -0.62317091226577759,
+          "z": 0.71139061450958252,
+          "w": 0.20962847769260406
+        },
+        "localScale": {
+          "x": 1.0499999523162842,
+          "y": 1.0499999523162842,
+          "z": 1.0499999523162842
+        },
+        "components": [
+          {
+            "$type": "Model",
+            "$name": "w_rocketlauncher_rigged",
+            "collision": null,
+            "rootBone": {
+              "$ref": "Transform",
+              "name": "ROOT_rocket_launcher",
+              "instanceID": 1260774,
+              "goName": "ROOT_rocket_launcher",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            "headBone": null,
+            "eyeBone": null,
+            "animator": null,
+            "skeleton": null,
+            "boneTransforms": [
+              {
+                "$ref": "Transform",
+                "name": "ROOT_rocket_launcher",
+                "instanceID": 1260774,
+                "goName": "ROOT_rocket_launcher",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              {
+                "$ref": "Transform",
+                "name": "joint4",
+                "instanceID": 1260776,
+                "goName": "joint4",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              {
+                "$ref": "Transform",
+                "name": "lid_cap",
+                "instanceID": 1260778,
+                "goName": "lid_cap",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              {
+                "$ref": "Transform",
+                "name": "joint2",
+                "instanceID": 1260772,
+                "goName": "joint2",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "boneNames": [
+              "ROOT_rocket_launcher",
+              "joint4",
+              "lid_cap",
+              "joint2"
+            ]
+          }
+        ],
+        "children": [
+          {
+            "name": "ROOT_rocket_launcher",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": -0.099099859595298767,
+              "z": -0.29588308930397034
+            },
+            "localRotation": {
+              "x": 0.30830633640289307,
+              "y": -0.63635462522506714,
+              "z": -0.30830633640289307,
+              "w": 0.63635462522506714
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "joint4",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.13294351100921631,
+                  "y": -3.5527135993911621E-17,
+                  "z": -7.8886088758859654E-33
+                },
+                "localRotation": {
+                  "x": -0.30830630660057068,
+                  "y": 0.63635462522506714,
+                  "z": 0.30830630660057068,
+                  "w": 0.63635462522506714
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "lid_cap",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.00246899900957942,
+                      "y": -0.065348327159881592,
+                      "z": -0.16150811314582825
+                    },
+                    "localRotation": {
+                      "x": -0.69210559129714966,
+                      "y": 0.72179627418518066,
+                      "z": 4.4197275906500484E-17,
+                      "w": -4.2379242107949786E-17
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "joint2",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -0.11937681585550308,
+                          "y": 2.1094237203180178E-17,
+                          "z": 2.5884497644412084E-33
+                        },
+                        "localRotation": {
+                          "x": -0.69210559129714966,
+                          "y": 0.72179627418518066,
+                          "z": 4.4197275906500484E-17,
+                          "w": -4.2379242107949786E-17
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "w_rpg7",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "muzzle",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.00029754638671875,
+              "y": 0.00020000338554382324,
+              "z": 0.30070000886917114
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "AmmoChild",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.002696990966796875,
+              "y": 0.0,
+              "z": 0.24259999394416809
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -0.067230097949504852,
+              "w": 0.99773752689361572
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "LHandChild",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "Charm",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.035539999604225159,
+              "y": 0.052120000123977661,
+              "z": -0.022600000724196434
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": -0.7071068286895752,
+              "z": 0.0,
+              "w": 0.7071068286895752
+            },
+            "localScale": {
+              "x": 0.75,
+              "y": 0.75,
+              "z": 0.75
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "v_CharmAnchor",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": false,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "ViewModelRenderer",
+                    "$name": "v_CharmAnchor",
+                    "cachedTextureRefs": [
+                      null,
+                      null,
+                      null,
+                      null
+                    ],
+                    "opaqueEvents": [
+                      {
+                        "$type": "ViewModelDrawEvent",
+                        "viewModelRenderer": {
+                          "$cycle": true,
+                          "type": "ViewModelRenderer"
+                        },
+                        "renderer": null,
+                        "skipDepthPrePass": false,
+                        "material": null,
+                        "subMesh": 0,
+                        "pass": 2,
+                        "needsFilteredRefraction": false
+                      }
+                    ],
+                    "transparentEvents": [],
+                    "prevModelMatrix": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ]
+                  }
+                ],
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {}
+}

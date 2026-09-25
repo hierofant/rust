@@ -1,0 +1,220 @@
+{
+  "prefabID": 687916422,
+  "path": "assets/bundled/prefabs/autospawn/collectable/stone/hqm-collectable.prefab",
+  "rootClassChain": [
+    "CollectibleEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.052246809005737305,
+      "y": 0.15433406829833984,
+      "z": -0.015958964824676514
+    },
+    "size": {
+      "x": 1.3122469186782837,
+      "y": 0.8953326940536499,
+      "z": 1.0142992734909058
+    }
+  },
+  "hierarchy": {
+    "name": "hqm-collectable",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "CollectibleEntity",
+        "$name": "hqm-collectable",
+        "itemName": {
+          "$type": "Translate+Phrase",
+          "token": "hq.metal.ore",
+          "legacyEnglish": "Metal Ore"
+        },
+        "itemList": [
+          {
+            "$type": "ItemAmount",
+            "itemDef": {
+              "$ref": "ItemDefinition",
+              "name": "hq_metal_ore.item",
+              "itemid": -1982036270,
+              "shortname": "hq.metal.ore"
+            },
+            "amount": 5.0,
+            "startAmount": 5.0,
+            "ignoreInTutorial": false,
+            "isBP": false
+          }
+        ],
+        "pickupEffect": {
+          "$ref": "GameObject",
+          "guid": "dd5eec66f013b3845b83a09c2f513d84",
+          "resourcePath": "assets/bundled/prefabs/fx/collect/collect stone.prefab",
+          "resourceID": 3886703761
+        },
+        "xpScale": 1.0,
+        "suppressGatherRateMultiplier": false,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.052246809005737305,
+            "y": 0.15433406829833984,
+            "z": -0.015958964824676514
+          },
+          "size": {
+            "x": 1.3122469186782837,
+            "y": 0.8953326940536499,
+            "z": 1.0142992734909058
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": false,
+        "syncPosition": false,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 687916422,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Small",
+          "value": 0
+        },
+        "net": null
+      },
+      {
+        "$type": "Spawnable",
+        "$name": "hqm-collectable",
+        "Population": null,
+        "ForceSpawnOnly": false,
+        "ForceSpawnInfoMessage": "",
+        "CanSpawnInSafeZone": true
+      }
+    ],
+    "children": [
+      {
+        "name": "hqm",
+        "layer": {
+          "index": 19,
+          "name": "Harvestable"
+        },
+        "tag": "skin0",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": -0.25,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.5
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.CapsuleCollider",
+            "$name": "hqm",
+            "colliderType": "Capsule",
+            "center": {
+              "x": 0.0,
+              "y": 0.25,
+              "z": 0.0
+            },
+            "radius": 0.30000001192092896,
+            "height": 1.0,
+            "direction": 0,
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "MetalOre",
+              "instanceID": 610880
+            }
+          }
+        ],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "PrefabWeight": [],
+    "DecorComponent": [],
+    "TerrainFilter": [],
+    "WaterCheck": [],
+    "TerrainAnchor": [],
+    "TerrainCheck": [],
+    "EnvironmentVolumeCheck": [],
+    "BoundsCheck": [],
+    "Socket_Base": []
+  }
+}

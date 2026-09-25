@@ -1,0 +1,161 @@
+{
+  "prefabID": 3855189929,
+  "path": "assets/bundled/prefabs/world/ai.prefab",
+  "rootClassChain": [
+    "UnityEngine.GameObject",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "hierarchy": {
+    "name": "ai",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "Rust.Ai.AiManager",
+        "$name": "ai",
+        "UseCover": true,
+        "CoverPointVolumeCellSize": 100.0,
+        "CoverPointVolumeCellHeight": 8.0,
+        "CoverPointRayLength": 3.0,
+        "cpvPrefab": {
+          "$ref": "CoverPointVolume",
+          "name": "CoverPointVolume",
+          "instanceID": 1582160,
+          "goName": "CoverPointVolume"
+        },
+        "DynamicCoverPointVolumeLayerMask": 1084293377
+      },
+      {
+        "$type": "DynamicNavMesh",
+        "$name": "ai",
+        "NavMeshAgentTypeIndex": 1,
+        "DefaultAreaName": "Walkable",
+        "AsyncTerrainNavMeshBakeCellSize": 80,
+        "AsyncTerrainNavMeshBakeCellHeight": 100,
+        "Bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "size": {
+            "x": 8192.0,
+            "y": 2048.0,
+            "z": 8192.0
+          }
+        },
+        "NavMeshData": null,
+        "NavMeshDataInstance": {
+          "$type": "UnityEngine.AI.NavMeshDataInstance"
+        },
+        "LayerMask": 1090584833,
+        "NavMeshCollectGeometry": {
+          "$enum": "UnityEngine.AI.NavMeshCollectGeometry",
+          "name": "PhysicsColliders",
+          "value": 1
+        }
+      },
+      {
+        "$type": "VDDraw",
+        "$name": "ai"
+      },
+      {
+        "$type": "Rust.Ai.Gen2.NpcNoiseManager",
+        "$name": "ai"
+      },
+      {
+        "$type": "NpcFoodManager",
+        "$name": "ai"
+      },
+      {
+        "$type": "NpcFireManager",
+        "$name": "ai"
+      },
+      {
+        "$type": "Rust.Ai.Gen2.NpcCoverManager",
+        "$name": "ai"
+      },
+      {
+        "$type": "Rust.Ai.Gen2.NpcBarkManager",
+        "$name": "ai",
+        "voicelinesDatabase": {
+          "$ref": "NPCVoicelinesDatabase",
+          "name": "NPCVoicelineDB",
+          "instanceID": 339844
+        }
+      },
+      {
+        "$type": "Rust.Ai.Gen2.Nav.RustNavigation",
+        "$name": "ai",
+        "BuildParams": {
+          "$type": "Rust.Ai.Gen2.Nav.NavMeshBuildParams",
+          "cellSize": 0.3333333432674408,
+          "cellHeight": 0.33333331346511841,
+          "agentHeight": 2.0,
+          "agentRadius": 0.5,
+          "agentMaxClimb": 0.75,
+          "agentMaxSlope": 45.0,
+          "tileSize": 32.0,
+          "partitionType": {
+            "$enum": "Rust.Ai.Gen2.Nav.NavMeshBuildParams+EPartitionType",
+            "name": "Watershed",
+            "value": 0
+          },
+          "maxNodes": 2048,
+          "minRegionSizeMeters": 5.7600002288818359,
+          "filterLowHangingObstacles": true,
+          "filterLedgeSpans": true,
+          "filterWalkableLowHeightSpans": true,
+          "buildDetailMesh": true
+        },
+        "BuildParamsHiRes": {
+          "$type": "Rust.Ai.Gen2.Nav.NavMeshBuildParams",
+          "cellSize": 0.0833333358168602,
+          "cellHeight": 0.0833333432674408,
+          "agentHeight": 1.7000000476837158,
+          "agentRadius": 0.25,
+          "agentMaxClimb": 0.50499999523162842,
+          "agentMaxSlope": 45.0,
+          "tileSize": 128.0,
+          "partitionType": {
+            "$enum": "Rust.Ai.Gen2.Nav.NavMeshBuildParams+EPartitionType",
+            "name": "Watershed",
+            "value": 0
+          },
+          "maxNodes": 2048,
+          "minRegionSizeMeters": 5.7600002288818359,
+          "filterLowHangingObstacles": true,
+          "filterLedgeSpans": true,
+          "filterWalkableLowHeightSpans": true,
+          "buildDetailMesh": true
+        }
+      }
+    ],
+    "children": []
+  },
+  "prefabAttributes": {
+    "PrefabWeight": []
+  }
+}

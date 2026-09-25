@@ -1,0 +1,2359 @@
+{
+  "prefabID": 495819493,
+  "path": "assets/prefabs/deployable/easel_deployable/easel.deployed.prefab",
+  "rootClassChain": [
+    "EaselDeployable",
+    "DecorDeployable",
+    "DecayEntity",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -0.0059999227523803711,
+      "y": 0.95602041482925415,
+      "z": -0.44001871347427368
+    },
+    "size": {
+      "x": 0.8271644115447998,
+      "y": 1.9142085313796997,
+      "z": 0.95238244533538818
+    }
+  },
+  "hierarchy": {
+    "name": "easel.deployed",
+    "layer": {
+      "index": 8,
+      "name": "Deployed"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "EaselDeployable",
+        "$name": "easel.deployed",
+        "easelTopBar": [
+          []
+        ],
+        "easelBottomBar": [
+          []
+        ],
+        "cameraPaintingAnchor": [],
+        "paintable": null,
+        "canBeDemolished": false,
+        "debrisPrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "debrisRotationOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "DebrisPositions": [],
+        "buildingID": 0,
+        "timePlaced": 0.0,
+        "decayTimer": 0.0,
+        "upkeepTimer": 0.0,
+        "upkeep": null,
+        "decay": null,
+        "decayPoints": null,
+        "lastDecayTick": 0.0,
+        "decayVariance": 1.0,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "DeployableWood",
+          "comments": "",
+          "density": 2.0,
+          "amounts": [
+            0.89999997615814209,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.89999997615814209,
+            0.5,
+            0.5,
+            0.0,
+            1.0,
+            1.0,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.5,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 3789131351
+        },
+        "startHealth": 100.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "easel.item",
+            "itemid": -1779203452,
+            "shortname": "easel"
+          },
+          "itemCount": 1,
+          "setConditionFromHealth": false,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": false,
+          "requireHammer": true,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "easel.item",
+            "itemid": -1779203452,
+            "shortname": "easel"
+          },
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": false,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -0.0059999227523803711,
+            "y": 0.95602041482925415,
+            "z": -0.44001871347427368
+          },
+          "size": {
+            "x": 0.8271644115447998,
+            "y": 1.9142085313796997,
+            "z": 0.95238244533538818
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "easel.deployed",
+          "collision": null,
+          "rootBone": [
+            [
+              []
+            ],
+            [],
+            [],
+            [],
+            [
+              [],
+              [],
+              [],
+              [],
+              []
+            ],
+            {
+              "$ref": "Transform",
+              "name": "Easel_Top",
+              "instanceID": 1316338,
+              "goName": "Easel_Top",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Easel_Bottom",
+              "instanceID": 1360202,
+              "goName": "Easel_Bottom",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "PaintingCameraAnchor",
+              "instanceID": 1301594,
+              "goName": "PaintingCameraAnchor",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [],
+            []
+          ],
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "easel.deployed",
+              "instanceID": 1267952,
+              "goName": "easel.deployed",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "sockets",
+              "instanceID": 1271002,
+              "goName": "sockets",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "free",
+              "instanceID": 1266420,
+              "goName": "free",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "preventbuilding",
+              "instanceID": 1382706,
+              "goName": "preventbuilding",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "preventbuilding (1)",
+              "instanceID": 1409010,
+              "goName": "preventbuilding (1)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "preventbuilding_painting_occupied",
+              "instanceID": 1377746,
+              "goName": "preventbuilding_painting_occupied",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "Easel_Deployable",
+              "instanceID": 1366002,
+              "goName": "Easel_Deployable",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Easel",
+              "instanceID": 1344822,
+              "goName": "Easel",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "col_rot1",
+              "instanceID": 1422936,
+              "goName": "col_rot1",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "col_rot2",
+              "instanceID": 1438900,
+              "goName": "col_rot2",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "col_rot3",
+              "instanceID": 1331446,
+              "goName": "col_rot3",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "col_rot4",
+              "instanceID": 1401776,
+              "goName": "col_rot4",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Easel_Top",
+              "instanceID": 1316338,
+              "goName": "Easel_Top",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Easel_Top",
+              "instanceID": 1360434,
+              "goName": "Easel_Top",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Easel_Bottom",
+              "instanceID": 1360202,
+              "goName": "Easel_Bottom",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Easel_Bottom",
+              "instanceID": 1405330,
+              "goName": "Easel_Bottom",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "PaintingCameraAnchor",
+              "instanceID": 1301594,
+              "goName": "PaintingCameraAnchor",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "HighestPointForBottomBar",
+              "instanceID": 1337994,
+              "goName": "HighestPointForBottomBar",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "LowestPointForBottomBar",
+              "instanceID": 1383824,
+              "goName": "LowestPointForBottomBar",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "easel.deployed",
+            "sockets",
+            "free",
+            "inside",
+            "inside 1",
+            "inside 2",
+            "inside 3",
+            "notInWater 1",
+            "angle (2)",
+            "easel_female",
+            "preventbuilding",
+            "preventbuilding (1)",
+            "preventbuilding_painting_occupied",
+            "deployvolume",
+            "Easel_Deployable",
+            "Easel",
+            "col_rot1",
+            "col_rot2",
+            "col_rot3",
+            "col_rot4",
+            "Easel_Top",
+            "Easel_Top",
+            "Easel_Bottom",
+            "Easel_Bottom",
+            "PaintingCameraAnchor",
+            "HighestPointForBottomBar",
+            "LowestPointForBottomBar"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 495819493,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Small",
+          "value": 0
+        },
+        "net": null
+      },
+      {
+        "$ref": "Model",
+        "name": "easel.deployed",
+        "instanceID": 1573004,
+        "goName": "easel.deployed",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$type": "GroundWatch",
+        "$name": "easel.deployed",
+        "groundPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "layers": 144769024,
+        "radius": 0.10000000149011612,
+        "needBuildingBlock": false,
+        "needOnlyOneAreaCheckValid": false,
+        "whitelist": [],
+        "fails": 0,
+        "_baseEntity": null
+      },
+      {
+        "$type": "DestroyOnGroundMissing",
+        "$name": "easel.deployed"
+      },
+      {
+        "$type": "EntityFlag_Toggle",
+        "$name": "easel.deployed",
+        "runClientside": true,
+        "runServerside": true,
+        "flag": {
+          "$enum": "BaseEntity+Flags",
+          "name": "Reserved3",
+          "value": 512,
+          "flagNames": [
+            "Reserved3"
+          ]
+        },
+        "flagCheck": {
+          "$enum": "EntityFlag_Toggle+FlagCheck",
+          "name": "All",
+          "value": 0
+        },
+        "notFlag": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "onFlagEnabled": {
+          "$type": "UnityEngine.Events.UnityEvent",
+          "m_PersistentCalls": {
+            "$type": "UnityEngine.Events.PersistentCallGroup",
+            "m_Calls": [
+              {
+                "$type": "UnityEngine.Events.PersistentCall",
+                "m_Target": {
+                  "$ref": "GameObject",
+                  "name": "preventbuilding_painting_occupied",
+                  "instanceID": 1148030
+                },
+                "m_TargetAssemblyTypeName": "UnityEngine.GameObject, UnityEngine",
+                "m_MethodName": "SetActive",
+                "m_Mode": {
+                  "$enum": "UnityEngine.Events.PersistentListenerMode",
+                  "name": "Bool",
+                  "value": 6
+                },
+                "m_Arguments": {
+                  "$type": "UnityEngine.Events.ArgumentCache",
+                  "m_ObjectArgument": null,
+                  "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                  "m_IntArgument": 0,
+                  "m_FloatArgument": 0.0,
+                  "m_StringArgument": "",
+                  "m_BoolArgument": true
+                },
+                "m_CallState": {
+                  "$enum": "UnityEngine.Events.UnityEventCallState",
+                  "name": "RuntimeOnly",
+                  "value": 2
+                }
+              }
+            ]
+          }
+        },
+        "onFlagDisabled": {
+          "$type": "UnityEngine.Events.UnityEvent",
+          "m_PersistentCalls": {
+            "$type": "UnityEngine.Events.PersistentCallGroup",
+            "m_Calls": [
+              {
+                "$type": "UnityEngine.Events.PersistentCall",
+                "m_Target": {
+                  "$ref": "GameObject",
+                  "name": "preventbuilding_painting_occupied",
+                  "instanceID": 1148030
+                },
+                "m_TargetAssemblyTypeName": "UnityEngine.GameObject, UnityEngine",
+                "m_MethodName": "SetActive",
+                "m_Mode": {
+                  "$enum": "UnityEngine.Events.PersistentListenerMode",
+                  "name": "Bool",
+                  "value": 6
+                },
+                "m_Arguments": {
+                  "$type": "UnityEngine.Events.ArgumentCache",
+                  "m_ObjectArgument": null,
+                  "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                  "m_IntArgument": 0,
+                  "m_FloatArgument": 0.0,
+                  "m_StringArgument": "",
+                  "m_BoolArgument": false
+                },
+                "m_CallState": {
+                  "$enum": "UnityEngine.Events.UnityEventCallState",
+                  "name": "RuntimeOnly",
+                  "value": 2
+                }
+              }
+            ]
+          }
+        },
+        "_baseEntity": null
+      }
+    ],
+    "children": [
+      {
+        "name": "sockets",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "free",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "preventbuilding",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.62300002574920654,
+          "z": -0.53799998760223389
+        },
+        "localRotation": {
+          "x": -0.13052596151828766,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.99144494533538818
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "preventbuilding",
+            "colliderType": "Box",
+            "center": {
+              "x": -0.00695037841796875,
+              "y": 0.34905499219894409,
+              "z": 0.32339814305305481
+            },
+            "size": {
+              "x": 0.845489501953125,
+              "y": 1.6948158740997314,
+              "z": 0.089236617088317871
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "preventbuilding (1)",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.88099998235702515,
+          "z": -0.8880000114440918
+        },
+        "localRotation": {
+          "x": 0.1735384464263916,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.98482710123062134
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "preventbuilding (1)",
+            "colliderType": "Box",
+            "center": {
+              "x": -0.005813252180814743,
+              "y": -0.12326323986053467,
+              "z": 0.32340005040168762
+            },
+            "size": {
+              "x": 0.10216165333986282,
+              "y": 1.3370375633239746,
+              "z": 0.089236624538898468
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "preventbuilding_painting_occupied",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": false,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.671999990940094,
+          "z": -0.35600000619888306
+        },
+        "localRotation": {
+          "x": -0.13052596151828766,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.99144494533538818
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "preventbuilding_painting_occupied",
+            "colliderType": "Box",
+            "center": {
+              "x": -2.0056962966918945E-05,
+              "y": 0.52002918720245361,
+              "z": 0.31586739420890808
+            },
+            "size": {
+              "x": 1.0309062004089355,
+              "y": 1.5509440898895264,
+              "z": 0.3021511435508728
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "Easel_Deployable",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "Easel_Deployable",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0025498718023300171,
+              "y": 1.2229468822479248,
+              "z": -0.38490206003189087
+            },
+            "size": {
+              "x": 0.63605105876922607,
+              "y": 0.11519098281860352,
+              "z": 0.11444711685180664
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": [
+          {
+            "name": "Easel",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": -1.5099580252808664E-07,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "col_rot1",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": -0.1421150267124176,
+              "y": -0.0071573583409190178,
+              "z": 0.049788009375333786,
+              "w": 0.98857134580612183
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "col_rot1",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.31999382376670837,
+                  "y": 0.66838449239730835,
+                  "z": 0.020592188462615013
+                },
+                "size": {
+                  "x": 0.063514478504657745,
+                  "y": 1.4144608974456787,
+                  "z": 0.073452778160572052
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Wood",
+                  "instanceID": 609850
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "col_rot2",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.036124162375926971,
+              "y": 0.98916512727737427,
+              "z": -0.14016325771808624,
+              "w": 0.024528317153453827
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "col_rot2",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.31999507546424866,
+                  "y": 0.73302721977233887,
+                  "z": -0.0433269664645195
+                },
+                "size": {
+                  "x": 0.063514463603496552,
+                  "y": 1.5437381267547607,
+                  "z": 0.059691309928894043
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Wood",
+                  "instanceID": 609850
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "col_rot3",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0029425236862152815,
+              "y": 0.99068248271942139,
+              "z": -0.13471536338329315,
+              "w": 0.019782697781920433
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "col_rot3",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.014841855503618717,
+                  "y": 1.1832351684570313,
+                  "z": -0.025955714285373688
+                },
+                "size": {
+                  "x": 0.068461500108242035,
+                  "y": 1.580970287322998,
+                  "z": 0.051257029175758362
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Wood",
+                  "instanceID": 609850
+                }
+              },
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "col_rot3",
+                "colliderType": "Box",
+                "center": {
+                  "x": -0.0031380055006593466,
+                  "y": 0.44488248229026794,
+                  "z": -0.011249127797782421
+                },
+                "size": {
+                  "x": 0.60457861423492432,
+                  "y": 0.098327755928039551,
+                  "z": 0.060244258493185043
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Wood",
+                  "instanceID": 609850
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "col_rot4",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": -0.001288525527343154,
+              "y": 0.98129647970199585,
+              "z": 0.19147519767284393,
+              "w": 0.019820278510451317
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "col_rot4",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.039562825113534927,
+                  "y": 0.37574920058250427,
+                  "z": 0.8576502799987793
+                },
+                "size": {
+                  "x": 0.053452197462320328,
+                  "y": 1.4169789552688599,
+                  "z": 0.047000758349895477
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Wood",
+                  "instanceID": 609850
+                }
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Easel_Top",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 1.4284000396728516,
+          "z": -0.34749999642372131
+        },
+        "localRotation": {
+          "x": -0.13048212230205536,
+          "y": -8.6121307288472538E-16,
+          "z": -6.5438097852205633E-15,
+          "w": 0.9914507269859314
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "Easel_Top",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": -2.8850549191879416E-22,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Easel_Bottom",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -0.0060000000521540642,
+          "y": 0.5559999942779541,
+          "z": -0.12200000137090683
+        },
+        "localRotation": {
+          "x": -0.13052596151828766,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.99144494533538818
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "Easel_Bottom",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": -1.5099580252808664E-07,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "PaintingCameraAnchor",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 1.3819999694824219,
+          "z": -0.47099998593330383
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "HighestPointForBottomBar",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -0.0060000000521540642,
+          "y": 0.89200001955032349,
+          "z": -0.21199999749660492
+        },
+        "localRotation": {
+          "x": -0.13052596151828766,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.99144494533538818
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "LowestPointForBottomBar",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -0.0060000000521540642,
+          "y": 0.53600001335144043,
+          "z": -0.11699999868869781
+        },
+        "localRotation": {
+          "x": -0.13052596151828766,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.99144494533538818
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Construction": [
+      {
+        "$type": "Construction",
+        "$name": "<destroyed native object>",
+        "prefabID": 495819493,
+        "hierachyName": "easel.deployed",
+        "info": {
+          "$type": "BaseEntity+Menu+Option",
+          "name": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "description": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "icon": null,
+          "order": 0,
+          "usableWhileWounded": false
+        },
+        "canBypassBuildingPermission": false,
+        "showBuildingBlockedPreview": true,
+        "canPlaceOnRoads": false,
+        "canRotateBeforePlacement": true,
+        "canRotateAfterPlacement": true,
+        "canBeDeployedInDeepSeaWater": false,
+        "checkVolumeOnRotate": true,
+        "checkVolumeOnUpgrade": false,
+        "canPlaceAtMaxDistance": false,
+        "placeOnWater": false,
+        "overridePlacementLayer": false,
+        "overridedPlacementLayer": 0,
+        "additionalPlacementLayer": 0,
+        "rotationAmount": {
+          "x": 0.0,
+          "y": 90.0,
+          "z": 0.0
+        },
+        "applyStartingRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "deployOffset": null,
+        "enforceLineOfSightCheckAgainstParentEntity": false,
+        "canSnap": false,
+        "forceY": false,
+        "forceYValue": 0.0,
+        "forceYToOceanLevel": false,
+        "OceanLevelYOffset": 0.0,
+        "holdToPlaceDuration": 0.0,
+        "canFloodFillSockets": false,
+        "alternativeLOSChecks": false,
+        "alternativeLOSPositions": [],
+        "canUseLastValidPosition": true,
+        "healthMultiplier": 1.0,
+        "costMultiplier": 1.0,
+        "maxplaceDistance": 4.0,
+        "minPlaceDistance": 1.0,
+        "guideMesh": null,
+        "guideMeshMaterial": [],
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "hideBuildingPlannerViewmodel": false,
+        "allSockets": [
+          {
+            "$type": "Socket_Free_Snappable",
+            "$name": "<destroyed native object>",
+            "prefabID": 495819493,
+            "hierachyName": "easel.deployed/sockets/free",
+            "generalPadding": 0.0,
+            "snappingPadding": 0.0,
+            "allowSnappingToCorners": true,
+            "cornerPadding": -0.0099999997764825821,
+            "allowSnappingToSameDeployable": true,
+            "sameDeployablePadding": 0.0,
+            "idealPlacementNormal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "useTargetNormal": true,
+            "snapToTargetProvidedRotations": false,
+            "blendAimAngle": true,
+            "male": true,
+            "maleDummy": false,
+            "female": false,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": false,
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "selectSize": {
+              "x": 2.0,
+              "y": 0.10000000149011612,
+              "z": 2.0
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            },
+            "socketName": "easel.deployed/sockets/free",
+            "socketMods": [
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 495819493,
+                "hierachyName": "easel.deployed/sockets/free/inside",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 144769024,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free_Snappable"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.030999999493360519,
+                  "y": -1.1920928955078125E-07,
+                  "z": -0.88699996471405029
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.030999999493360519,
+                  "y": 0.88700002431869507,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/easel_deployable/easel.deployed.prefab",
+                "instanceID": 1508988,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 495819493,
+                "hierachyName": "easel.deployed/sockets/free/inside 1",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 144769024,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free_Snappable"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -0.36399999260902405,
+                  "y": 9.3132257461547852E-10,
+                  "z": 0.0079999994486570358
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -0.36399999260902405,
+                  "y": -0.00800000037997961,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/easel_deployable/easel.deployed.prefab",
+                "instanceID": 1511422,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 495819493,
+                "hierachyName": "easel.deployed/sockets/free/inside 2",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 144769024,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free_Snappable"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.34099999070167542,
+                  "y": 9.3132257461547852E-10,
+                  "z": 0.0079999994486570358
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.34099999070167542,
+                  "y": -0.00800000037997961,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/easel_deployable/easel.deployed.prefab",
+                "instanceID": 1510496,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 495819493,
+                "hierachyName": "easel.deployed/sockets/free/inside 3",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 144769024,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free_Snappable"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": -2.9802322387695313E-08,
+                  "z": -0.36799997091293335
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.36800000071525574,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/easel_deployable/easel.deployed.prefab",
+                "instanceID": 1511392,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_InWater",
+                "$name": "<destroyed native object>",
+                "prefabID": 495819493,
+                "hierachyName": "easel.deployed/sockets/free/notInWater 1",
+                "wantsInWater": false,
+                "excludeArtificialWater": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free_Snappable"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -0.079000003635883331,
+                  "y": -3.7252902984619141E-09,
+                  "z": -0.040999997407197952
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -0.079000003635883331,
+                  "y": 0.041000001132488251,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/easel_deployable/easel.deployed.prefab",
+                "instanceID": 1507670,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AngleCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 495819493,
+                "hierachyName": "easel.deployed/sockets/free/angle (2)",
+                "wantsAngle": true,
+                "worldNormal": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0
+                },
+                "withinDegrees": 30.0,
+                "usePlacementNormal": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free_Snappable"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -99.17864990234375,
+                  "y": 3.557373046875,
+                  "z": -41.019481658935547
+                },
+                "worldRotation": {
+                  "x": -0.70576339960098267,
+                  "y": 0.043567139655351639,
+                  "z": 0.043567147105932236,
+                  "w": 0.70576328039169312
+                },
+                "worldForward": {
+                  "x": -1.862645149230957E-08,
+                  "y": 1.0,
+                  "z": -1.5040859580039978E-07
+                },
+                "localPosition": {
+                  "x": -99.17864990234375,
+                  "y": 41.019485473632813,
+                  "z": 3.5573768615722656
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": -1.1175871783564162E-08,
+                  "z": 0.06161324679851532,
+                  "w": 0.99810010194778442
+                },
+                "fullName": "assets/prefabs/deployable/easel_deployable/easel.deployed.prefab",
+                "instanceID": 1510570,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              }
+            ],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "worldRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": 0.99999994039535522,
+              "z": -1.1920928955078125E-07
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "fullName": "assets/prefabs/deployable/easel_deployable/easel.deployed.prefab",
+            "instanceID": 1508926,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          },
+          {
+            "$type": "Socket_Specific_Female",
+            "$name": "<destroyed native object>",
+            "prefabID": 495819493,
+            "hierachyName": "easel.deployed/sockets/easel_female",
+            "rotationDegrees": 0,
+            "rotationOffset": 0,
+            "allowedMaleSockets": [
+              "sign"
+            ],
+            "parentToBone": false,
+            "boneName": "",
+            "male": false,
+            "maleDummy": false,
+            "female": true,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": true,
+            "position": {
+              "x": 0.0,
+              "y": 1.4240000247955322,
+              "z": -0.28799998760223389
+            },
+            "rotation": {
+              "x": -6.2223488583867947E-09,
+              "y": -0.79335290193557739,
+              "z": -0.60876202583312988,
+              "w": 7.4505797087454084E-09
+            },
+            "selectSize": {
+              "x": 1.5,
+              "y": 0.05000000074505806,
+              "z": 1.5
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "socketName": "easel.deployed/sockets/easel_female",
+            "socketMods": [],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 0.0,
+              "y": 1.4240000247955322,
+              "z": -0.28799998760223389
+            },
+            "worldRotation": {
+              "x": -6.2223488583867947E-09,
+              "y": -0.79335290193557739,
+              "z": -0.60876202583312988,
+              "w": 7.4505797087454084E-09
+            },
+            "worldForward": {
+              "x": -4.2460186477910611E-09,
+              "y": 0.96592622995376587,
+              "z": -0.25881767272949219
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 1.4240000247955322,
+              "z": -0.28799998760223389
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": -6.2223488583867947E-09,
+              "y": -0.79335290193557739,
+              "z": -0.60876202583312988,
+              "w": 7.4505797087454084E-09
+            },
+            "fullName": "assets/prefabs/deployable/easel_deployable/easel.deployed.prefab",
+            "instanceID": 1580842,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          }
+        ],
+        "allProximities": [],
+        "defaultGrade": null,
+        "socketHandle": null,
+        "bounds": {
+          "center": {
+            "x": -0.0059999227523803711,
+            "y": 0.95602041482925415,
+            "z": -0.44001871347427368
+          },
+          "size": {
+            "x": 0.8271644115447998,
+            "y": 1.9142085313796997,
+            "z": 0.95238244533538818
+          }
+        },
+        "isBuildingPrivilege": false,
+        "isSleepingBag": false,
+        "grades": [],
+        "deployable": {
+          "$type": "Deployable",
+          "$name": "<destroyed native object>",
+          "prefabID": 495819493,
+          "hierachyName": "easel.deployed",
+          "guidePrefab": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "guideMesh": null,
+          "guideMeshScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "overrideRotation": false,
+          "guideMeshOrientation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "guideMeshPositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "moveGuideTowardsCamera": true,
+          "guideLights": true,
+          "wantsInstanceData": false,
+          "copyInventoryFromItem": false,
+          "setSocketParent": true,
+          "toSlot": false,
+          "slot": {
+            "$enum": "BaseEntity+Slot",
+            "name": "Lock",
+            "value": 0
+          },
+          "placeEffect": {
+            "$ref": "GameObject",
+            "guid": "a531f9c1ab57e4e0ca2e586cf25b74ac",
+            "resourcePath": "assets/prefabs/deployable/easel_deployable/sound/easel-deploy.prefab",
+            "resourceID": 3576401954
+          },
+          "guideTargets": [],
+          "bounds": {
+            "center": {
+              "x": -0.0059999227523803711,
+              "y": 0.95602041482925415,
+              "z": -0.44001871347427368
+            },
+            "size": {
+              "x": 0.8271644115447998,
+              "y": 1.9142085313796997,
+              "z": 0.95238244533538818
+            }
+          },
+          "worldPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "worldRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "worldForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "localScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "localRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "fullName": "assets/prefabs/deployable/easel_deployable/easel.deployed.prefab",
+          "instanceID": 1510920,
+          "prefabAttribute": {
+            "$ref": "Library",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "gameManager": {
+            "$ref": "GameManager",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "isServer": true
+        },
+        "placeholder": null,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/easel_deployable/easel.deployed.prefab",
+        "instanceID": 1510266,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Deployable": [
+      {
+        "$ref": "Deployable",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "Socket_Base": [
+      {
+        "$ref": "Socket_Free_Snappable",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "Socket_Specific_Female",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "SocketMod": [
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_InWater",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AngleCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "DeployVolume": [
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 495819493,
+        "hierachyName": "easel.deployed/deployvolume",
+        "bounds": {
+          "center": {
+            "x": -0.0018325746059417725,
+            "y": 0.4685361385345459,
+            "z": -0.41133058071136475
+          },
+          "size": {
+            "x": 0.81940168142318726,
+            "y": 1.9118990898132324,
+            "z": 1.0226609706878662
+          }
+        },
+        "layers": 673316864,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.49000000953674316,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.49000000953674316,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/easel_deployable/easel.deployed.prefab",
+        "instanceID": 1555794,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ]
+  }
+}

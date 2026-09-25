@@ -1,0 +1,1326 @@
+{
+  "prefabID": 1744083475,
+  "path": "assets/prefabs/misc/junkpile_water/junkpile_water_c.prefab",
+  "rootClassChain": [
+    "JunkPileWater",
+    "JunkPile",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.24203586578369141,
+      "y": 1.0027986764907837,
+      "z": -0.6707453727722168
+    },
+    "size": {
+      "x": 13.754100799560547,
+      "y": 3.4282832145690918,
+      "z": 11.869895935058594
+    }
+  },
+  "hierarchy": {
+    "name": "junkpile_water_c",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "Spawnable",
+        "$name": "junkpile_water_c",
+        "Population": null,
+        "ForceSpawnOnly": false,
+        "ForceSpawnInfoMessage": "",
+        "CanSpawnInSafeZone": true
+      },
+      {
+        "$type": "JunkPileWater",
+        "$name": "junkpile_water_c",
+        "buoyancyPoints": [
+          [],
+          [],
+          []
+        ],
+        "debugDraw": false,
+        "updateCullRange": 96.0,
+        "VehicleCheckRadius": 5.0,
+        "Body": {
+          "$type": "UnityEngine.Rigidbody",
+          "$name": "junkpile_water_c"
+        },
+        "buoyancyAmplitude": 1.0,
+        "sinkEffect": {
+          "$ref": "GameObject",
+          "guid": "c4b1b20ffef54974081e6390d1ea0de9",
+          "resourcePath": "assets/prefabs/misc/junkpile/effects/despawn.prefab",
+          "resourceID": 2052091278
+        },
+        "spawngroups": [
+          {
+            "$type": "JunkPileWaterSpawner",
+            "$name": "CrateSpawner",
+            "attachToParent": {
+              "$cycle": true,
+              "type": "JunkPileWater"
+            },
+            "Tier": {
+              "$enum": "MonumentTier",
+              "name": "-1",
+              "value": -1
+            },
+            "prefabs": [
+              {
+                "$type": "SpawnGroup+SpawnEntry",
+                "prefab": {
+                  "$ref": "GameObject",
+                  "guid": "df6f33b691a244149a297c53237fe822",
+                  "resourcePath": "assets/bundled/prefabs/radtown/crate_normal_2.prefab",
+                  "resourceID": 1546200557
+                },
+                "weight": 25,
+                "mobile": false
+              },
+              {
+                "$type": "SpawnGroup+SpawnEntry",
+                "prefab": {
+                  "$ref": "GameObject",
+                  "guid": "a467b5d4507a832499efe8e21129984a",
+                  "resourcePath": "assets/bundled/prefabs/radtown/crate_tools.prefab",
+                  "resourceID": 1892026534
+                },
+                "weight": 50,
+                "mobile": false
+              },
+              {
+                "$type": "SpawnGroup+SpawnEntry",
+                "prefab": {
+                  "$ref": "GameObject",
+                  "guid": "aed5e831d4b88f04083ad590dbaf46fb",
+                  "resourcePath": "assets/bundled/prefabs/radtown/oil_barrel.prefab",
+                  "resourceID": 3438187947
+                },
+                "weight": 75,
+                "mobile": false
+              },
+              {
+                "$type": "SpawnGroup+SpawnEntry",
+                "prefab": {
+                  "$ref": "GameObject",
+                  "guid": "237b56a87f48a7d48ad5287d23cdd45f",
+                  "resourcePath": "assets/bundled/prefabs/radtown/vehicle_parts.prefab",
+                  "resourceID": 356724277
+                },
+                "weight": 5,
+                "mobile": false
+              }
+            ],
+            "maxPopulation": 1,
+            "numToSpawnPerTickMin": 1,
+            "numToSpawnPerTickMax": 1,
+            "respawnDelayMin": "Infinity",
+            "respawnDelayMax": "Infinity",
+            "wantsInitialSpawn": true,
+            "temporary": true,
+            "forceInitialSpawn": false,
+            "preventDuplicates": false,
+            "isSpawnerActive": true,
+            "shouldBlockSpawnedEntitySaving": true,
+            "resetBehavior": {
+              "$enum": "SpawnGroupResetBehavior",
+              "name": "Default",
+              "value": 0
+            },
+            "setFreeIfMovedBeyond": null,
+            "category": "junkpile_water",
+            "Monument": null,
+            "fillOnSpawn": false,
+            "spawnPoints": null,
+            "spawnInstances": [],
+            "spawnClock": {
+              "$type": "LocalClock",
+              "events": []
+            }
+          },
+          {
+            "$type": "JunkPileWaterSpawner",
+            "$name": "BarrelSpawner",
+            "attachToParent": {
+              "$cycle": true,
+              "type": "JunkPileWater"
+            },
+            "Tier": {
+              "$enum": "MonumentTier",
+              "name": "-1",
+              "value": -1
+            },
+            "prefabs": [
+              {
+                "$type": "SpawnGroup+SpawnEntry",
+                "prefab": {
+                  "$ref": "GameObject",
+                  "guid": "3810e57f4d0ad0548908762963c8825a",
+                  "resourcePath": "assets/bundled/prefabs/radtown/loot_barrel_1.prefab",
+                  "resourceID": 3364121927
+                },
+                "weight": 45,
+                "mobile": false
+              },
+              {
+                "$type": "SpawnGroup+SpawnEntry",
+                "prefab": {
+                  "$ref": "GameObject",
+                  "guid": "8e37d3a3f2aa452449db874e54f2876a",
+                  "resourcePath": "assets/bundled/prefabs/radtown/loot_barrel_2.prefab",
+                  "resourceID": 3269883781
+                },
+                "weight": 45,
+                "mobile": false
+              },
+              {
+                "$type": "SpawnGroup+SpawnEntry",
+                "prefab": {
+                  "$ref": "GameObject",
+                  "guid": "aed5e831d4b88f04083ad590dbaf46fb",
+                  "resourcePath": "assets/bundled/prefabs/radtown/oil_barrel.prefab",
+                  "resourceID": 3438187947
+                },
+                "weight": 10,
+                "mobile": false
+              }
+            ],
+            "maxPopulation": 4,
+            "numToSpawnPerTickMin": 1,
+            "numToSpawnPerTickMax": 3,
+            "respawnDelayMin": "Infinity",
+            "respawnDelayMax": "Infinity",
+            "wantsInitialSpawn": true,
+            "temporary": true,
+            "forceInitialSpawn": false,
+            "preventDuplicates": false,
+            "isSpawnerActive": true,
+            "shouldBlockSpawnedEntitySaving": true,
+            "resetBehavior": {
+              "$enum": "SpawnGroupResetBehavior",
+              "name": "Default",
+              "value": 0
+            },
+            "setFreeIfMovedBeyond": null,
+            "category": "junkpile_water",
+            "Monument": null,
+            "fillOnSpawn": false,
+            "spawnPoints": null,
+            "spawnInstances": [],
+            "spawnClock": {
+              "$type": "LocalClock",
+              "events": []
+            }
+          }
+        ],
+        "NPCSpawn": null,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.24203586578369141,
+            "y": 1.0027986764907837,
+            "z": -0.6707453727722168
+          },
+          "size": {
+            "x": 13.754100799560547,
+            "y": 3.4282832145690918,
+            "z": 11.869895935058594
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 1744083475,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$ref": "Rigidbody",
+        "name": "junkpile_water_c",
+        "instanceID": 1445804,
+        "goName": "junkpile_water_c",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "children": [
+      {
+        "name": "prevent_building (6)",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.SphereCollider",
+            "$name": "prevent_building (6)",
+            "colliderType": "Sphere",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "radius": 8.0,
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "Buoyancy",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": -0.5,
+          "z": 0.0,
+          "w": 0.866025447845459
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "point0_center",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "JunkPileBuoyancyPoint",
+                "$name": "point0_center"
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "point1_arm_x",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -2.630000114440918,
+              "y": 0.0,
+              "z": 0.89999997615814209
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "JunkPileBuoyancyPoint",
+                "$name": "point1_arm_x"
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "point2_arm_z",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -1.3999999761581421,
+              "y": 0.0,
+              "z": -4.0900001525878906
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "JunkPileBuoyancyPoint",
+                "$name": "point2_arm_z"
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Server",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "trigger",
+            "layer": {
+              "index": 18,
+              "name": "Trigger"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.20000000298023224,
+              "y": 1.4070816040039063,
+              "z": 0.14000000059604645
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.35874569416046143,
+              "z": 0.0,
+              "w": 0.93343538045883179
+            },
+            "localScale": {
+              "x": 14.0,
+              "y": 3.0,
+              "z": 8.0793676376342773
+            },
+            "components": [
+              {
+                "$type": "TriggerParent",
+                "$name": "trigger",
+                "StableIndex": -1,
+                "doClippingCheck": false,
+                "associatedMountable": null,
+                "parentMountedPlayers": false,
+                "parentSleepers": true,
+                "parentSwimmers": false,
+                "ParentNPCPlayers": false,
+                "SkipNPCChecks": false,
+                "overrideOtherTriggers": false,
+                "checkForObjUnderFeet": false,
+                "doExpensivePlayerClippingChecks": false,
+                "TriggerMovementMask": {
+                  "$enum": "BaseEntity+Axis",
+                  "name": "XYZ",
+                  "value": 7,
+                  "flagNames": [
+                    "X",
+                    "Y",
+                    "XY",
+                    "Z",
+                    "XZ",
+                    "YZ",
+                    "XYZ"
+                  ]
+                },
+                "EntityMovementMask": {
+                  "$enum": "BaseEntity+Axis",
+                  "name": "XYZ",
+                  "value": 7,
+                  "flagNames": [
+                    "X",
+                    "Y",
+                    "XY",
+                    "Z",
+                    "XZ",
+                    "YZ",
+                    "XYZ"
+                  ]
+                },
+                "interestLayers": -2146303488,
+                "contents": null,
+                "entityContents": null,
+                "OnEntityEnterTrigger": null,
+                "OnEntityLeaveTrigger": null
+              },
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "trigger",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "size": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "isTrigger": true,
+                "enabled": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "CrateSpawner",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Client Cull",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "JunkPileWaterSpawner",
+                "name": "CrateSpawner",
+                "instanceID": 1557174,
+                "goName": "CrateSpawner",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": [
+              {
+                "name": "SpawnPoint",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 3.6979999542236328,
+                  "y": -0.0099999997764825821,
+                  "z": -3.7850000858306885
+                },
+                "localRotation": {
+                  "x": -0.007684644777327776,
+                  "y": 0.0036787523422390223,
+                  "z": -0.0063588568009436131,
+                  "w": 0.99994349479675293
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "GenericSpawnPoint",
+                    "$name": "SpawnPoint",
+                    "dropToGround": false,
+                    "randomRot": false,
+                    "randomRotSnapDegrees": 1.0,
+                    "spawnEffect": {
+                      "$ref": "GameObject",
+                      "guid": "",
+                      "resourcePath": null,
+                      "resourceID": 0
+                    },
+                    "OnObjectSpawnedEvent": {
+                      "$type": "UnityEngine.Events.UnityEvent",
+                      "m_PersistentCalls": {
+                        "$type": "UnityEngine.Events.PersistentCallGroup",
+                        "m_Calls": []
+                      }
+                    },
+                    "OnObjectRetiredEvent": {
+                      "$type": "UnityEngine.Events.UnityEvent",
+                      "m_PersistentCalls": {
+                        "$type": "UnityEngine.Events.PersistentCallGroup",
+                        "m_Calls": []
+                      }
+                    },
+                    "spawnPointType": {
+                      "$enum": "BaseSpawnPoint+SpawnPointType",
+                      "name": "Normal",
+                      "value": 0
+                    },
+                    "playerCheckMargin": 2.0
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "SpawnPoint (1)",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -2.4900000095367432,
+                  "y": -0.079999998211860657,
+                  "z": 3.9200000762939453
+                },
+                "localRotation": {
+                  "x": 0.018086986616253853,
+                  "y": 0.026863658800721169,
+                  "z": -0.020260825753211975,
+                  "w": 0.99927014112472534
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "GenericSpawnPoint",
+                    "$name": "SpawnPoint (1)",
+                    "dropToGround": false,
+                    "randomRot": false,
+                    "randomRotSnapDegrees": 1.0,
+                    "spawnEffect": {
+                      "$ref": "GameObject",
+                      "guid": "",
+                      "resourcePath": null,
+                      "resourceID": 0
+                    },
+                    "OnObjectSpawnedEvent": {
+                      "$type": "UnityEngine.Events.UnityEvent",
+                      "m_PersistentCalls": {
+                        "$type": "UnityEngine.Events.PersistentCallGroup",
+                        "m_Calls": []
+                      }
+                    },
+                    "OnObjectRetiredEvent": {
+                      "$type": "UnityEngine.Events.UnityEvent",
+                      "m_PersistentCalls": {
+                        "$type": "UnityEngine.Events.PersistentCallGroup",
+                        "m_Calls": []
+                      }
+                    },
+                    "spawnPointType": {
+                      "$enum": "BaseSpawnPoint+SpawnPointType",
+                      "name": "Normal",
+                      "value": 0
+                    },
+                    "playerCheckMargin": 2.0
+                  }
+                ],
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "BarrelSpawner",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Client Cull",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "JunkPileWaterSpawner",
+                "name": "BarrelSpawner",
+                "instanceID": 1532702,
+                "goName": "BarrelSpawner",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": [
+              {
+                "name": "SpawnPoint",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 2.4100000858306885,
+                  "y": 0.10599999874830246,
+                  "z": -1.9570000171661377
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "GenericSpawnPoint",
+                    "$name": "SpawnPoint",
+                    "dropToGround": false,
+                    "randomRot": false,
+                    "randomRotSnapDegrees": 1.0,
+                    "spawnEffect": {
+                      "$ref": "GameObject",
+                      "guid": "",
+                      "resourcePath": null,
+                      "resourceID": 0
+                    },
+                    "OnObjectSpawnedEvent": {
+                      "$type": "UnityEngine.Events.UnityEvent",
+                      "m_PersistentCalls": {
+                        "$type": "UnityEngine.Events.PersistentCallGroup",
+                        "m_Calls": []
+                      }
+                    },
+                    "OnObjectRetiredEvent": {
+                      "$type": "UnityEngine.Events.UnityEvent",
+                      "m_PersistentCalls": {
+                        "$type": "UnityEngine.Events.PersistentCallGroup",
+                        "m_Calls": []
+                      }
+                    },
+                    "spawnPointType": {
+                      "$enum": "BaseSpawnPoint+SpawnPointType",
+                      "name": "Normal",
+                      "value": 0
+                    },
+                    "playerCheckMargin": 2.0
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "SpawnPoint (1)",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -2.0390000343322754,
+                  "y": 0.0729999989271164,
+                  "z": 2.2090001106262207
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "GenericSpawnPoint",
+                    "$name": "SpawnPoint (1)",
+                    "dropToGround": false,
+                    "randomRot": false,
+                    "randomRotSnapDegrees": 1.0,
+                    "spawnEffect": {
+                      "$ref": "GameObject",
+                      "guid": "",
+                      "resourcePath": null,
+                      "resourceID": 0
+                    },
+                    "OnObjectSpawnedEvent": {
+                      "$type": "UnityEngine.Events.UnityEvent",
+                      "m_PersistentCalls": {
+                        "$type": "UnityEngine.Events.PersistentCallGroup",
+                        "m_Calls": []
+                      }
+                    },
+                    "OnObjectRetiredEvent": {
+                      "$type": "UnityEngine.Events.UnityEvent",
+                      "m_PersistentCalls": {
+                        "$type": "UnityEngine.Events.PersistentCallGroup",
+                        "m_Calls": []
+                      }
+                    },
+                    "spawnPointType": {
+                      "$enum": "BaseSpawnPoint+SpawnPointType",
+                      "name": "Normal",
+                      "value": 0
+                    },
+                    "playerCheckMargin": 2.0
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "SpawnPoint (2)",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 1.5410000085830688,
+                  "y": 0.41600000858306885,
+                  "z": -4.0209999084472656
+                },
+                "localRotation": {
+                  "x": 0.71299105882644653,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70117312669754028
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "GenericSpawnPoint",
+                    "$name": "SpawnPoint (2)",
+                    "dropToGround": false,
+                    "randomRot": false,
+                    "randomRotSnapDegrees": 1.0,
+                    "spawnEffect": {
+                      "$ref": "GameObject",
+                      "guid": "",
+                      "resourcePath": null,
+                      "resourceID": 0
+                    },
+                    "OnObjectSpawnedEvent": {
+                      "$type": "UnityEngine.Events.UnityEvent",
+                      "m_PersistentCalls": {
+                        "$type": "UnityEngine.Events.PersistentCallGroup",
+                        "m_Calls": []
+                      }
+                    },
+                    "OnObjectRetiredEvent": {
+                      "$type": "UnityEngine.Events.UnityEvent",
+                      "m_PersistentCalls": {
+                        "$type": "UnityEngine.Events.PersistentCallGroup",
+                        "m_Calls": []
+                      }
+                    },
+                    "spawnPointType": {
+                      "$enum": "BaseSpawnPoint+SpawnPointType",
+                      "name": "Normal",
+                      "value": 0
+                    },
+                    "playerCheckMargin": 2.0
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "SpawnPoint (3)",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -4.2230000495910645,
+                  "y": 0.39300000667572021,
+                  "z": 1.7929999828338623
+                },
+                "localRotation": {
+                  "x": 0.711340606212616,
+                  "y": 0.00067762378603219986,
+                  "z": -0.0027759030926972628,
+                  "w": 0.70284169912338257
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0000004768371582,
+                  "z": 1.0000004768371582
+                },
+                "components": [
+                  {
+                    "$type": "GenericSpawnPoint",
+                    "$name": "SpawnPoint (3)",
+                    "dropToGround": false,
+                    "randomRot": false,
+                    "randomRotSnapDegrees": 1.0,
+                    "spawnEffect": {
+                      "$ref": "GameObject",
+                      "guid": "",
+                      "resourcePath": null,
+                      "resourceID": 0
+                    },
+                    "OnObjectSpawnedEvent": {
+                      "$type": "UnityEngine.Events.UnityEvent",
+                      "m_PersistentCalls": {
+                        "$type": "UnityEngine.Events.PersistentCallGroup",
+                        "m_Calls": []
+                      }
+                    },
+                    "OnObjectRetiredEvent": {
+                      "$type": "UnityEngine.Events.UnityEvent",
+                      "m_PersistentCalls": {
+                        "$type": "UnityEngine.Events.PersistentCallGroup",
+                        "m_Calls": []
+                      }
+                    },
+                    "spawnPointType": {
+                      "$enum": "BaseSpawnPoint+SpawnPointType",
+                      "name": "Normal",
+                      "value": 0
+                    },
+                    "playerCheckMargin": 2.0
+                  }
+                ],
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Shared",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "floating_planks",
+            "layer": {
+              "index": 16,
+              "name": "World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -3.1472320556640625,
+              "y": -0.026999950408935547,
+              "z": 2.7001266479492188
+            },
+            "localRotation": {
+              "x": 0.0044884365051984787,
+              "y": 0.25198259949684143,
+              "z": 0.0046802852302789688,
+              "w": -0.967710018157959
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "floating_planks",
+                "colliderType": "Box",
+                "center": {
+                  "x": -0.13932722806930542,
+                  "y": -0.099802985787391663,
+                  "z": 0.040471073240041733
+                },
+                "size": {
+                  "x": 2.87652850151062,
+                  "y": 0.39474585652351379,
+                  "z": 2.810389518737793
+                },
+                "isTrigger": false,
+                "enabled": true
+              }
+            ],
+            "children": [
+              {
+                "name": "floating_planks (1)",
+                "layer": {
+                  "index": 28,
+                  "name": "Prevent Movement"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": -0.59211885929107666,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "floating_planks (1)",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -0.13932722806930542,
+                      "y": -0.099802985787391663,
+                      "z": 0.040471073240041733
+                    },
+                    "size": {
+                      "x": 2.87652850151062,
+                      "y": 0.78949177265167236,
+                      "z": 2.810389518737793
+                    },
+                    "isTrigger": false,
+                    "enabled": true
+                  }
+                ],
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "floating_planks",
+            "layer": {
+              "index": 16,
+              "name": "World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 2.4599990844726563,
+              "y": 0.0,
+              "z": -3.0400009155273438
+            },
+            "localRotation": {
+              "x": -5.6934044145862117E-09,
+              "y": 0.96547394990921021,
+              "z": -2.1101161706837956E-08,
+              "w": -0.26049986481666565
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "floating_planks",
+                "colliderType": "Box",
+                "center": {
+                  "x": -0.23153799772262573,
+                  "y": -0.19897055625915527,
+                  "z": -0.0098043614998459816
+                },
+                "size": {
+                  "x": 2.4836146831512451,
+                  "y": 0.60205888748168945,
+                  "z": 2.8616523742675781
+                },
+                "isTrigger": false,
+                "enabled": true
+              }
+            ],
+            "children": [
+              {
+                "name": "floating_planks (1)",
+                "layer": {
+                  "index": 28,
+                  "name": "Prevent Movement"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": -0.90308833122253418,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "floating_planks (1)",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -0.23153799772262573,
+                      "y": -0.19897055625915527,
+                      "z": -0.0098043614998459816
+                    },
+                    "size": {
+                      "x": 2.4836146831512451,
+                      "y": 1.2041177749633789,
+                      "z": 2.8616523742675781
+                    },
+                    "isTrigger": false,
+                    "enabled": true
+                  }
+                ],
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "floating_sail",
+            "layer": {
+              "index": 16,
+              "name": "World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 2.1899948120117188,
+              "y": 0.0,
+              "z": 1.1999969482421875
+            },
+            "localRotation": {
+              "x": 2.1855694143368964E-08,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.MeshCollider",
+                "$name": "floating_sail",
+                "colliderType": "Mesh",
+                "convex": false,
+                "sharedMesh": {
+                  "$ref": "Mesh",
+                  "name": "floating_sail_COL",
+                  "meshId": "floating_sail_COL_1d3fb3bc"
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Wood",
+                  "instanceID": 609850
+                }
+              }
+            ],
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Socket_Base": [],
+    "PrefabWeight": []
+  }
+}

@@ -1,0 +1,3533 @@
+{
+  "prefabID": 3111236903,
+  "path": "assets/prefabs/deployable/hot air balloon/hotairballoon.prefab",
+  "rootClassChain": [
+    "HotAirBalloon",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.0,
+      "y": 2.0,
+      "z": 0.0
+    },
+    "size": {
+      "x": 7.0,
+      "y": 4.0,
+      "z": 6.0
+    }
+  },
+  "hierarchy": {
+    "name": "hotairballoon",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "HotAirBalloon",
+        "$name": "hotairballoon",
+        "centerOfMass": [],
+        "myRigidbody": {
+          "$type": "UnityEngine.Rigidbody",
+          "$name": "hotairballoon"
+        },
+        "buoyancyPoint": [],
+        "liftAmount": 2400.0,
+        "windSock": null,
+        "windFlags": [
+          null,
+          null,
+          null
+        ],
+        "AltitudeNeedles": [
+          null,
+          null,
+          null
+        ],
+        "AltitudeNeedleSpeed": 5.0,
+        "staticBalloonDeflated": null,
+        "staticBalloon": null,
+        "animatedBalloon": null,
+        "balloonAnimator": null,
+        "groundSample": [],
+        "parentTrigger": {
+          "$ref": "GameObject",
+          "name": "trigger",
+          "instanceID": 1077806
+        },
+        "engineOffTimeToPreventHomingTarget": 4.0,
+        "inflationLevel": 0.0,
+        "fuelStoragePrefab": {
+          "$ref": "GameObject",
+          "guid": "971f3f1033886ee4bbc34137ab015717",
+          "resourcePath": "assets/content/vehicles/boats/rhib/subents/fuel_storage.prefab",
+          "resourceID": 1394312733
+        },
+        "fuelPerSec": 0.20000000298023224,
+        "storageUnitPrefab": {
+          "$ref": "GameObject",
+          "guid": "343264fb2eb41724997117acb91b1576",
+          "resourcePath": "assets/prefabs/deployable/hot air balloon/subents/hab_storage.prefab",
+          "resourceID": 675927205
+        },
+        "storageUnitInstance": {
+          "$type": "EntityRef`1[[StorageContainer, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+        },
+        "damageRenderer": null,
+        "engineHeight": [],
+        "crushTriggers": [
+          {
+            "$ref": "GameObject",
+            "name": "triggerHurt",
+            "instanceID": 1085882
+          },
+          {
+            "$ref": "GameObject",
+            "name": "triggerMovePos",
+            "instanceID": 1126794
+          }
+        ],
+        "UpgradeOptions": [
+          {
+            "$type": "HotAirBalloon+UpgradeOption",
+            "TokenItem": {
+              "$ref": "ItemDefinition",
+              "name": "hab.armor.item",
+              "itemid": -1989600732,
+              "shortname": "hab.armor"
+            },
+            "Title": {
+              "$type": "Translate+Phrase",
+              "token": "hab.upgrade.armor",
+              "legacyEnglish": "Equip Armor"
+            },
+            "Description": {
+              "$type": "Translate+Phrase",
+              "token": "hab.upgrade.armor.desc",
+              "legacyEnglish": "Equip the Armor upgrade."
+            },
+            "Icon": null,
+            "order": 0
+          }
+        ],
+        "fuelSystem": null,
+        "NextUpgradeTime": 0.0,
+        "windForce": 2400.0,
+        "currentWindVec": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "collapsedBounds": {
+          "center": {
+            "x": 0.0,
+            "y": 2.0,
+            "z": 0.0
+          },
+          "size": {
+            "x": 7.0,
+            "y": 4.0,
+            "z": 6.0
+          }
+        },
+        "raisedBounds": {
+          "center": {
+            "x": 0.0,
+            "y": 11.0,
+            "z": 0.0
+          },
+          "size": {
+            "x": 14.0,
+            "y": 22.0,
+            "z": 14.0
+          }
+        },
+        "balloonColliders": [
+          {
+            "$ref": "GameObject",
+            "name": "inflated_balloon_collider_world",
+            "instanceID": 1236292
+          },
+          {
+            "$ref": "GameObject",
+            "name": "inflated_balloon_collider_detail",
+            "instanceID": 1093788
+          }
+        ],
+        "lastFailedDecayPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "currentBuoyancy": 0.0,
+        "sinceLastBlast": {
+          "$type": "TimeSince"
+        },
+        "avgTerrainHeight": 0.0,
+        "grounded": false,
+        "spawnTime": -1.0,
+        "safeAreaRadius": 0.0,
+        "safeAreaOrigin": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "DeployableWood",
+          "comments": "",
+          "density": 2.0,
+          "amounts": [
+            0.89999997615814209,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.89999997615814209,
+            0.5,
+            0.5,
+            0.0,
+            1.0,
+            1.0,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.5,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 3789131351
+        },
+        "startHealth": 1500.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": false,
+          "itemTarget": null,
+          "itemCount": 0,
+          "setConditionFromHealth": false,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": false,
+          "requireHammer": false,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "hab.repair.item",
+            "itemid": 696029539,
+            "shortname": "hab"
+          },
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": false,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 2.0,
+            "z": 0.0
+          },
+          "size": {
+            "x": 7.0,
+            "y": 4.0,
+            "z": 6.0
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": true,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 3111236903,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Large",
+          "value": 2
+        },
+        "net": null
+      },
+      {
+        "$ref": "Rigidbody",
+        "name": "hotairballoon",
+        "instanceID": 1445386,
+        "goName": "hotairballoon",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$type": "Spawnable",
+        "$name": "hotairballoon",
+        "Population": null,
+        "ForceSpawnOnly": false,
+        "ForceSpawnInfoMessage": "",
+        "CanSpawnInSafeZone": true
+      }
+    ],
+    "children": [
+      {
+        "name": "Server",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "trigger",
+            "layer": {
+              "index": 18,
+              "name": "Trigger"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "trigger",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 1.375,
+                  "z": 0.0
+                },
+                "size": {
+                  "x": 3.25,
+                  "y": 2.75,
+                  "z": 3.4000000953674316
+                },
+                "isTrigger": true,
+                "enabled": true
+              },
+              {
+                "$type": "TriggerParentEnclosed",
+                "$name": "trigger",
+                "Padding": 0.0,
+                "intersectionMode": {
+                  "$enum": "TriggerParentEnclosed+TriggerMode",
+                  "name": "TriggerPoint",
+                  "value": 0
+                },
+                "CheckBoundsOnUnparent": false,
+                "boxCollider": null,
+                "StableIndex": -1,
+                "doClippingCheck": false,
+                "associatedMountable": null,
+                "parentMountedPlayers": false,
+                "parentSleepers": true,
+                "parentSwimmers": false,
+                "ParentNPCPlayers": false,
+                "SkipNPCChecks": false,
+                "overrideOtherTriggers": true,
+                "checkForObjUnderFeet": false,
+                "doExpensivePlayerClippingChecks": false,
+                "TriggerMovementMask": {
+                  "$enum": "BaseEntity+Axis",
+                  "name": "XYZ",
+                  "value": 7,
+                  "flagNames": [
+                    "X",
+                    "Y",
+                    "XY",
+                    "Z",
+                    "XZ",
+                    "YZ",
+                    "XYZ"
+                  ]
+                },
+                "EntityMovementMask": {
+                  "$enum": "BaseEntity+Axis",
+                  "name": "XYZ",
+                  "value": 7,
+                  "flagNames": [
+                    "X",
+                    "Y",
+                    "XY",
+                    "Z",
+                    "XZ",
+                    "YZ",
+                    "XYZ"
+                  ]
+                },
+                "interestLayers": -2147352576,
+                "contents": null,
+                "entityContents": null,
+                "OnEntityEnterTrigger": null,
+                "OnEntityLeaveTrigger": null
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "ThrownItemHack",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": false,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.008999999612569809,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.MeshCollider",
+                "$name": "ThrownItemHack",
+                "colliderType": "Mesh",
+                "convex": true,
+                "sharedMesh": {
+                  "$ref": "Mesh",
+                  "name": "server_basket_floor",
+                  "meshId": "server_basket_floor_7eaf3e92"
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Wood",
+                  "instanceID": 609850
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "groundSample",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "triggerHurt",
+            "layer": {
+              "index": 18,
+              "name": "Trigger"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": -0.21470530331134796,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "triggerHurt",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.01560211181640625,
+                  "y": 0.028044223785400391,
+                  "z": -0.0862588882446289
+                },
+                "size": {
+                  "x": 3.100494384765625,
+                  "y": 0.13870525360107422,
+                  "z": 2.5
+                },
+                "isTrigger": true,
+                "enabled": true
+              },
+              {
+                "$type": "TriggerHurtNotChild",
+                "$name": "triggerHurt",
+                "DamagePerSecond": 1000000.0,
+                "DamageTickRate": 20.0,
+                "DamageDelay": 0.0,
+                "damageType": {
+                  "$enum": "Rust.DamageType",
+                  "name": "Generic",
+                  "value": 0
+                },
+                "ignoreNPC": false,
+                "npcMultiplier": 1.0,
+                "resourceMultiplier": 1.0,
+                "lootContainerMultiplier": 1.0,
+                "triggerHitImpacts": true,
+                "RequireUpAxis": false,
+                "SourceEntity": {
+                  "$ref": "HotAirBalloon",
+                  "name": "hotairballoon",
+                  "instanceID": 1511960,
+                  "goName": "hotairballoon",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                "UseSourceEntityDamageMultiplier": true,
+                "ignoreAllVehicleMounted": true,
+                "activationDelay": 0.0,
+                "ScaleWithDistToTriggerCenter": false,
+                "triggerCollider": null,
+                "DamageMultAtCenter": 1.0,
+                "interestLayers": 131072,
+                "contents": null,
+                "entityContents": null,
+                "OnEntityEnterTrigger": null,
+                "OnEntityLeaveTrigger": null
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "triggerMovePos",
+            "layer": {
+              "index": 18,
+              "name": "Trigger"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": -0.075999997556209564,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "triggerMovePos",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.01560211181640625,
+                  "y": 0.028044223785400391,
+                  "z": -0.0862588882446289
+                },
+                "size": {
+                  "x": 3.100494384765625,
+                  "y": 0.13870525360107422,
+                  "z": 2.5
+                },
+                "isTrigger": true,
+                "enabled": true
+              },
+              {
+                "$type": "TriggerPlayerMovePos",
+                "$name": "triggerMovePos",
+                "triggerCollider": {
+                  "$ref": "BoxCollider",
+                  "name": "triggerMovePos",
+                  "instanceID": 1473530,
+                  "goName": "triggerMovePos",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                "relativeMoveVector": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0
+                },
+                "shouldPauseMarkHostile": true,
+                "interestLayers": 131072,
+                "contents": null,
+                "entityContents": null,
+                "OnEntityEnterTrigger": null,
+                "OnEntityLeaveTrigger": null
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "WorldColliders",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "Cage",
+                "layer": {
+                  "index": 15,
+                  "name": "Vehicle World"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Cage",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.0,
+                      "y": 1.375,
+                      "z": 0.0
+                    },
+                    "size": {
+                      "x": 3.4000000953674316,
+                      "y": 2.75,
+                      "z": 3.4000000953674316
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "AboveCage",
+                "layer": {
+                  "index": 15,
+                  "name": "Vehicle World"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 2.2360000610351563,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.48642453551292419,
+                  "y": 0.32277220487594604,
+                  "z": 0.11571993678808212,
+                  "w": 0.803628146648407
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "AboveCage",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -0.11553859710693359,
+                      "y": -0.11565747112035751,
+                      "z": 0.11011181771755219
+                    },
+                    "size": {
+                      "x": 2.0439505577087402,
+                      "y": 1.7313146591186523,
+                      "z": 1.7202243804931641
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "inflated_balloon_collider_world",
+            "layer": {
+              "index": 15,
+              "name": "Vehicle World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.MeshCollider",
+                "$name": "inflated_balloon_collider_world",
+                "colliderType": "Mesh",
+                "convex": true,
+                "sharedMesh": {
+                  "$ref": "Mesh",
+                  "name": "server_balloon_col",
+                  "meshId": "server_balloon_col_f28d4065"
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Cloth",
+                  "instanceID": 609830
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "fuel_storage",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.14500045776367188,
+              "y": 2.8864002227783203,
+              "z": 0.041799545288085938
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "StorageContainer",
+                "$name": "fuel_storage",
+                "inventorySlots": 1,
+                "dropsLoot": true,
+                "dropLootDestroyPercent": 0.0,
+                "dropFloats": false,
+                "isLootable": false,
+                "isLockable": false,
+                "isMonitorable": false,
+                "panelName": "fuelsmall",
+                "panelTitle": {
+                  "$type": "Translate+Phrase",
+                  "token": "loot",
+                  "legacyEnglish": "Loot"
+                },
+                "allowedContents": {
+                  "$enum": "ItemContainer+ContentsType",
+                  "name": "0",
+                  "value": 0,
+                  "flagNames": []
+                },
+                "allowedItem": {
+                  "$ref": "ItemDefinition",
+                  "name": "fuel.lowgrade.item",
+                  "itemid": -946369541,
+                  "shortname": "lowgradefuel"
+                },
+                "allowedItem2": null,
+                "allowedItems": [],
+                "blockedItems": [],
+                "maxStackSize": 0,
+                "needsBuildingPrivilegeToUse": false,
+                "requireAuthIfNotLocked": false,
+                "allowSorting": false,
+                "mustBeMountedToUse": false,
+                "openSound": {
+                  "$ref": "SoundDefinition",
+                  "name": "small-boat-open-fuel-container",
+                  "instanceID": 170820
+                },
+                "closeSound": {
+                  "$ref": "SoundDefinition",
+                  "name": "small-boat-close-fuel-container",
+                  "instanceID": 178166
+                },
+                "dropPosition": {
+                  "x": 0.0,
+                  "y": 0.23999999463558197,
+                  "z": 0.0099999997764825821
+                },
+                "dropVelocity": {
+                  "x": 0.0,
+                  "y": 0.40999999642372131,
+                  "z": 0.0
+                },
+                "onlyAcceptCategory": {
+                  "$enum": "ItemCategory",
+                  "name": "All",
+                  "value": 11
+                },
+                "onlyOneUser": false,
+                "_inventory": null,
+                "isTransferringIndustrialItem": false,
+                "canBeDemolished": false,
+                "debrisPrefab": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "debrisRotationOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "DebrisPositions": [],
+                "buildingID": 0,
+                "timePlaced": 0.0,
+                "decayTimer": 0.0,
+                "upkeepTimer": 0.0,
+                "upkeep": null,
+                "decay": null,
+                "decayPoints": null,
+                "lastDecayTick": 0.0,
+                "decayVariance": 1.0,
+                "spawnDeployableCorpseOnDeath": false,
+                "deployableCorpsePrefab": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "ItemOwnership": {
+                  "$type": "ItemOwnershipShare",
+                  "username": null,
+                  "reason": null,
+                  "amount": 0
+                },
+                "lastDamage": {
+                  "$enum": "Rust.DamageType",
+                  "name": "Generic",
+                  "value": 0
+                },
+                "lastAttacker": null,
+                "lastDealtDamageTo": null,
+                "ResetLifeStateOnSpawn": true,
+                "propDirection": null,
+                "unHostileTime": 0.0,
+                "lastNoiseTime": 0.0,
+                "skeletonProperties": null,
+                "baseProtection": {
+                  "$type": "ProtectionProperties",
+                  "$name": "Immortal",
+                  "comments": "",
+                  "density": 100.0,
+                  "amounts": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "FilenameStringId": 3206051622
+                },
+                "startHealth": 150.0,
+                "pickup": {
+                  "$type": "BaseCombatEntity+Pickup",
+                  "enabled": false,
+                  "itemTarget": null,
+                  "itemCount": 0,
+                  "setConditionFromHealth": false,
+                  "subtractCondition": 0.0,
+                  "requireBuildingPrivilege": false,
+                  "requireHammer": false,
+                  "requireEmptyInv": false,
+                  "overridePickupTime": 0.0
+                },
+                "repair": {
+                  "$type": "BaseCombatEntity+Repair",
+                  "enabled": false,
+                  "itemTarget": null,
+                  "ignoreForRepair": null,
+                  "repairEffect": {
+                    "$ref": "GameObject",
+                    "guid": "",
+                    "resourcePath": null,
+                    "resourceID": 0
+                  },
+                  "repairFullEffect": {
+                    "$ref": "GameObject",
+                    "guid": "",
+                    "resourcePath": null,
+                    "resourceID": 0
+                  },
+                  "repairFailedEffect": {
+                    "$ref": "GameObject",
+                    "guid": "",
+                    "resourcePath": null,
+                    "resourceID": 0
+                  }
+                },
+                "ShowHealthInfo": false,
+                "showHealthInfoThreshold": {
+                  "$enum": "BaseCombatEntity+ShowHealthThreshold",
+                  "name": "ThreeQuarters",
+                  "value": 25
+                },
+                "lifestate": {
+                  "$enum": "BaseCombatEntity+LifeState",
+                  "name": "Alive",
+                  "value": 0
+                },
+                "sendsHitNotification": false,
+                "sendsMeleeHitNotification": false,
+                "markAttackerHostile": true,
+                "maxHealthOverride": 0.0,
+                "_health": 0.0,
+                "_maxHealth": 100.0,
+                "faction": {
+                  "$enum": "BaseCombatEntity+Faction",
+                  "name": "Default",
+                  "value": 0
+                },
+                "lastAttackedTime": "-Infinity",
+                "lastDealtDamageTime": "-Infinity",
+                "lastNotifyFrame": 0,
+                "links": [],
+                "creatorEntity": null,
+                "ticksSinceStopped": 0,
+                "isCallingUpdateNetworkGroup": false,
+                "bounds": {
+                  "center": {
+                    "x": 0.0078544467687606812,
+                    "y": 0.20806328952312469,
+                    "z": -0.10578323155641556
+                  },
+                  "size": {
+                    "x": 0.37772342562675476,
+                    "y": 0.47367587685585022,
+                    "z": 0.21156646311283112
+                  }
+                },
+                "impactEffect": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "enableSaving": true,
+                "syncPosition": false,
+                "model": null,
+                "flags": {
+                  "$enum": "BaseEntity+Flags",
+                  "name": "0",
+                  "value": 0,
+                  "flagNames": []
+                },
+                "parentBone": 0,
+                "skinID": 0,
+                "attachmentID": 0,
+                "HasBrain": false,
+                "_name": null,
+                "networkEntityScale": false,
+                "_spawnable": null,
+                "postNetworkUpdateComponents": [],
+                "_limitedNetworking": false,
+                "parentEntity": {
+                  "$type": "EntityRef"
+                },
+                "children": [],
+                "canTriggerParent": true,
+                "creationFrame": 0,
+                "isSpawned": false,
+                "_NetworkCache": null,
+                "prefabID": 1394312733,
+                "globalBroadcast": false,
+                "globalNetworkBehavior": {
+                  "$enum": "GlobalNetworkBehavior",
+                  "name": "Default",
+                  "value": 0
+                },
+                "globalBuildingBlock": false,
+                "networkRange": {
+                  "$enum": "EntityNetworkRange",
+                  "name": "Small",
+                  "value": 0
+                },
+                "net": null
+              }
+            ],
+            "children": [
+              {
+                "name": "jerrycan (1)",
+                "layer": {
+                  "index": 16,
+                  "name": "World"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.LODGroup",
+                    "$name": "jerrycan (1)"
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "jerrycan_LOD0",
+                    "layer": {
+                      "index": 16,
+                      "name": "World"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.MeshFilter",
+                        "$name": "jerrycan_LOD0",
+                        "sharedMesh": {
+                          "$ref": "Mesh",
+                          "name": "jerrycan_LOD0",
+                          "meshId": "jerrycan_LOD0_eceb0ecf"
+                        }
+                      },
+                      {
+                        "$type": "UnityEngine.MeshRenderer",
+                        "$name": "jerrycan_LOD0",
+                        "sharedMaterials": [
+                          null
+                        ],
+                        "enabled": true
+                      }
+                    ],
+                    "children": []
+                  },
+                  {
+                    "name": "jerrycan_LOD1",
+                    "layer": {
+                      "index": 16,
+                      "name": "World"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.MeshFilter",
+                        "$name": "jerrycan_LOD1",
+                        "sharedMesh": {
+                          "$ref": "Mesh",
+                          "name": "jerrycan_LOD1",
+                          "meshId": "jerrycan_LOD1_ebeb0f6c"
+                        }
+                      },
+                      {
+                        "$type": "UnityEngine.MeshRenderer",
+                        "$name": "jerrycan_LOD1",
+                        "sharedMaterials": [
+                          null
+                        ],
+                        "enabled": true
+                      }
+                    ],
+                    "children": []
+                  },
+                  {
+                    "name": "jerrycan_LOD2",
+                    "layer": {
+                      "index": 16,
+                      "name": "World"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.MeshFilter",
+                        "$name": "jerrycan_LOD2",
+                        "sharedMesh": {
+                          "$ref": "Mesh",
+                          "name": "jerrycan_LOD2",
+                          "meshId": "jerrycan_LOD2_eaeb0d91"
+                        }
+                      },
+                      {
+                        "$type": "UnityEngine.MeshRenderer",
+                        "$name": "jerrycan_LOD2",
+                        "sharedMaterials": [
+                          null
+                        ],
+                        "enabled": true
+                      }
+                    ],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "hab_storage",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -1.2470016479492188,
+              "y": 0.61400032043457031,
+              "z": 1.1860008239746094
+            },
+            "localRotation": {
+              "x": -0.078967571258544922,
+              "y": 0.90636736154556274,
+              "z": 0.19549112021923065,
+              "w": 0.36612227559089661
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "StorageContainer",
+                "$name": "hab_storage",
+                "inventorySlots": 18,
+                "dropsLoot": true,
+                "dropLootDestroyPercent": 0.0,
+                "dropFloats": false,
+                "isLootable": true,
+                "isLockable": false,
+                "isMonitorable": false,
+                "panelName": "generic_resizable",
+                "panelTitle": {
+                  "$type": "Translate+Phrase",
+                  "token": "storage",
+                  "legacyEnglish": "Storage"
+                },
+                "allowedContents": {
+                  "$enum": "ItemContainer+ContentsType",
+                  "name": "0",
+                  "value": 0,
+                  "flagNames": []
+                },
+                "allowedItem": null,
+                "allowedItem2": null,
+                "allowedItems": [],
+                "blockedItems": [],
+                "maxStackSize": 0,
+                "needsBuildingPrivilegeToUse": false,
+                "requireAuthIfNotLocked": false,
+                "allowSorting": false,
+                "mustBeMountedToUse": false,
+                "openSound": {
+                  "$ref": "SoundDefinition",
+                  "name": "small-stash-open",
+                  "instanceID": 27186
+                },
+                "closeSound": {
+                  "$ref": "SoundDefinition",
+                  "name": "small-stash-close",
+                  "instanceID": 27016
+                },
+                "dropPosition": {
+                  "x": 0.0,
+                  "y": 0.23999999463558197,
+                  "z": 0.0099999997764825821
+                },
+                "dropVelocity": {
+                  "x": 0.0,
+                  "y": 0.40999999642372131,
+                  "z": 0.0
+                },
+                "onlyAcceptCategory": {
+                  "$enum": "ItemCategory",
+                  "name": "All",
+                  "value": 11
+                },
+                "onlyOneUser": false,
+                "_inventory": null,
+                "isTransferringIndustrialItem": false,
+                "canBeDemolished": false,
+                "debrisPrefab": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "debrisRotationOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "DebrisPositions": [],
+                "buildingID": 0,
+                "timePlaced": 0.0,
+                "decayTimer": 0.0,
+                "upkeepTimer": 0.0,
+                "upkeep": null,
+                "decay": null,
+                "decayPoints": null,
+                "lastDecayTick": 0.0,
+                "decayVariance": 1.0,
+                "spawnDeployableCorpseOnDeath": false,
+                "deployableCorpsePrefab": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "ItemOwnership": {
+                  "$type": "ItemOwnershipShare",
+                  "username": null,
+                  "reason": null,
+                  "amount": 0
+                },
+                "lastDamage": {
+                  "$enum": "Rust.DamageType",
+                  "name": "Generic",
+                  "value": 0
+                },
+                "lastAttacker": null,
+                "lastDealtDamageTo": null,
+                "ResetLifeStateOnSpawn": true,
+                "propDirection": null,
+                "unHostileTime": 0.0,
+                "lastNoiseTime": 0.0,
+                "skeletonProperties": null,
+                "baseProtection": {
+                  "$ref": "ProtectionProperties",
+                  "name": "Immortal",
+                  "instanceID": 48408,
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                "startHealth": 150.0,
+                "pickup": {
+                  "$type": "BaseCombatEntity+Pickup",
+                  "enabled": false,
+                  "itemTarget": null,
+                  "itemCount": 0,
+                  "setConditionFromHealth": false,
+                  "subtractCondition": 0.0,
+                  "requireBuildingPrivilege": false,
+                  "requireHammer": false,
+                  "requireEmptyInv": false,
+                  "overridePickupTime": 0.0
+                },
+                "repair": {
+                  "$type": "BaseCombatEntity+Repair",
+                  "enabled": false,
+                  "itemTarget": null,
+                  "ignoreForRepair": null,
+                  "repairEffect": {
+                    "$ref": "GameObject",
+                    "guid": "",
+                    "resourcePath": null,
+                    "resourceID": 0
+                  },
+                  "repairFullEffect": {
+                    "$ref": "GameObject",
+                    "guid": "",
+                    "resourcePath": null,
+                    "resourceID": 0
+                  },
+                  "repairFailedEffect": {
+                    "$ref": "GameObject",
+                    "guid": "",
+                    "resourcePath": null,
+                    "resourceID": 0
+                  }
+                },
+                "ShowHealthInfo": false,
+                "showHealthInfoThreshold": {
+                  "$enum": "BaseCombatEntity+ShowHealthThreshold",
+                  "name": "ThreeQuarters",
+                  "value": 25
+                },
+                "lifestate": {
+                  "$enum": "BaseCombatEntity+LifeState",
+                  "name": "Alive",
+                  "value": 0
+                },
+                "sendsHitNotification": false,
+                "sendsMeleeHitNotification": false,
+                "markAttackerHostile": true,
+                "maxHealthOverride": 0.0,
+                "_health": 0.0,
+                "_maxHealth": 100.0,
+                "faction": {
+                  "$enum": "BaseCombatEntity+Faction",
+                  "name": "Default",
+                  "value": 0
+                },
+                "lastAttackedTime": "-Infinity",
+                "lastDealtDamageTime": "-Infinity",
+                "lastNotifyFrame": 0,
+                "links": [],
+                "creatorEntity": null,
+                "ticksSinceStopped": 0,
+                "isCallingUpdateNetworkGroup": false,
+                "bounds": {
+                  "center": {
+                    "x": 8.5264444351196289E-05,
+                    "y": 0.039999999105930328,
+                    "z": 1.1920928955078125E-07
+                  },
+                  "size": {
+                    "x": 0.41999998688697815,
+                    "y": 0.63999998569488525,
+                    "z": 0.54000002145767212
+                  }
+                },
+                "impactEffect": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "enableSaving": true,
+                "syncPosition": false,
+                "model": null,
+                "flags": {
+                  "$enum": "BaseEntity+Flags",
+                  "name": "0",
+                  "value": 0,
+                  "flagNames": []
+                },
+                "parentBone": 0,
+                "skinID": 0,
+                "attachmentID": 0,
+                "HasBrain": false,
+                "_name": null,
+                "networkEntityScale": false,
+                "_spawnable": null,
+                "postNetworkUpdateComponents": [],
+                "_limitedNetworking": false,
+                "parentEntity": {
+                  "$type": "EntityRef"
+                },
+                "children": [],
+                "canTriggerParent": true,
+                "creationFrame": 0,
+                "isSpawned": false,
+                "_NetworkCache": null,
+                "prefabID": 675927205,
+                "globalBroadcast": false,
+                "globalNetworkBehavior": {
+                  "$enum": "GlobalNetworkBehavior",
+                  "name": "Default",
+                  "value": 0
+                },
+                "globalBuildingBlock": false,
+                "networkRange": {
+                  "$enum": "EntityNetworkRange",
+                  "name": "Small",
+                  "value": 0
+                },
+                "net": null
+              },
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "hab_storage",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0087490081787109375,
+                  "y": 0.039999999105930328,
+                  "z": 0.10999999940395355
+                },
+                "size": {
+                  "x": 0.37000000476837158,
+                  "y": 0.54000002145767212,
+                  "z": 0.25999999046325684
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Wood",
+                  "instanceID": 609850
+                }
+              }
+            ],
+            "children": [
+              {
+                "name": "smallstash_rotated",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.LODGroup",
+                    "$name": "smallstash_rotated"
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "smallstash_LOD0",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 8.1460342471473268E-08,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 0.99999994039535522,
+                      "z": 0.99999994039535522
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.MeshFilter",
+                        "$name": "smallstash_LOD0"
+                      },
+                      {
+                        "$type": "UnityEngine.MeshRenderer",
+                        "$name": "smallstash_LOD0",
+                        "sharedMaterials": [
+                          null
+                        ],
+                        "enabled": true
+                      }
+                    ],
+                    "children": []
+                  },
+                  {
+                    "name": "smallstash_LOD1",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 8.1460342471473268E-08,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 0.99999994039535522,
+                      "z": 0.99999994039535522
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.MeshFilter",
+                        "$name": "smallstash_LOD1"
+                      },
+                      {
+                        "$type": "UnityEngine.MeshRenderer",
+                        "$name": "smallstash_LOD1",
+                        "sharedMaterials": [
+                          null
+                        ],
+                        "enabled": true
+                      }
+                    ],
+                    "children": []
+                  },
+                  {
+                    "name": "smallstash_LOD2",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 8.1460342471473268E-08,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 0.99999994039535522,
+                      "z": 0.99999994039535522
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.MeshFilter",
+                        "$name": "smallstash_LOD2"
+                      },
+                      {
+                        "$type": "UnityEngine.MeshRenderer",
+                        "$name": "smallstash_LOD2",
+                        "sharedMaterials": [
+                          null
+                        ],
+                        "enabled": true
+                      }
+                    ],
+                    "children": []
+                  },
+                  {
+                    "name": "smallstash_LOD3",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 8.1460342471473268E-08,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 0.99999994039535522,
+                      "z": 0.99999994039535522
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.MeshFilter",
+                        "$name": "smallstash_LOD3"
+                      },
+                      {
+                        "$type": "UnityEngine.MeshRenderer",
+                        "$name": "smallstash_LOD3",
+                        "sharedMaterials": [
+                          null
+                        ],
+                        "enabled": true
+                      }
+                    ],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Shared",
+        "layer": {
+          "index": 13,
+          "name": "Vehicle Detailed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "EntityFlag_Toggle",
+            "$name": "Shared",
+            "runClientside": true,
+            "runServerside": true,
+            "flag": {
+              "$enum": "BaseEntity+Flags",
+              "name": "Reserved1",
+              "value": 128,
+              "flagNames": [
+                "Reserved1"
+              ]
+            },
+            "flagCheck": {
+              "$enum": "EntityFlag_Toggle+FlagCheck",
+              "name": "All",
+              "value": 0
+            },
+            "notFlag": {
+              "$enum": "BaseEntity+Flags",
+              "name": "0",
+              "value": 0,
+              "flagNames": []
+            },
+            "onFlagEnabled": {
+              "$type": "UnityEngine.Events.UnityEvent",
+              "m_PersistentCalls": {
+                "$type": "UnityEngine.Events.PersistentCallGroup",
+                "m_Calls": [
+                  {
+                    "$type": "UnityEngine.Events.PersistentCall",
+                    "m_Target": {
+                      "$ref": "GameObject",
+                      "name": "SnareTrigger",
+                      "instanceID": 1213012
+                    },
+                    "m_TargetAssemblyTypeName": "",
+                    "m_MethodName": "SetActive",
+                    "m_Mode": {
+                      "$enum": "UnityEngine.Events.PersistentListenerMode",
+                      "name": "Bool",
+                      "value": 6
+                    },
+                    "m_Arguments": {
+                      "$type": "UnityEngine.Events.ArgumentCache",
+                      "m_ObjectArgument": null,
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": false
+                    },
+                    "m_CallState": {
+                      "$enum": "UnityEngine.Events.UnityEventCallState",
+                      "name": "RuntimeOnly",
+                      "value": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "onFlagDisabled": {
+              "$type": "UnityEngine.Events.UnityEvent",
+              "m_PersistentCalls": {
+                "$type": "UnityEngine.Events.PersistentCallGroup",
+                "m_Calls": [
+                  {
+                    "$type": "UnityEngine.Events.PersistentCall",
+                    "m_Target": {
+                      "$ref": "GameObject",
+                      "name": "SnareTrigger",
+                      "instanceID": 1213012
+                    },
+                    "m_TargetAssemblyTypeName": "",
+                    "m_MethodName": "SetActive",
+                    "m_Mode": {
+                      "$enum": "UnityEngine.Events.PersistentListenerMode",
+                      "name": "Bool",
+                      "value": 6
+                    },
+                    "m_Arguments": {
+                      "$type": "UnityEngine.Events.ArgumentCache",
+                      "m_ObjectArgument": null,
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": true
+                    },
+                    "m_CallState": {
+                      "$enum": "UnityEngine.Events.UnityEventCallState",
+                      "name": "RuntimeOnly",
+                      "value": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "_baseEntity": null
+          }
+        ],
+        "children": [
+          {
+            "name": "Prevent_move",
+            "layer": {
+              "index": 18,
+              "name": "Trigger"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "Prevent_move (1)",
+                "layer": {
+                  "index": 28,
+                  "name": "Prevent Movement"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -1.63100004196167,
+                  "y": 1.4309999942779541,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Prevent_move (1)",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -0.15016251802444458,
+                      "y": -0.25389671325683594,
+                      "z": -0.02310943603515625
+                    },
+                    "size": {
+                      "x": 0.60032498836517334,
+                      "y": 3.0077934265136719,
+                      "z": 3.0462188720703125
+                    },
+                    "isTrigger": false,
+                    "enabled": true
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Prevent_move (2)",
+                "layer": {
+                  "index": 28,
+                  "name": "Prevent Movement"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 1.6540000438690186,
+                  "y": 1.430999755859375,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Prevent_move (2)",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.18031769990921021,
+                      "y": -0.25642013549804688,
+                      "z": -0.037709236145019531
+                    },
+                    "size": {
+                      "x": 0.66063535213470459,
+                      "y": 3.0128402709960938,
+                      "z": 3.0754184722900391
+                    },
+                    "isTrigger": false,
+                    "enabled": true
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Prevent_move (3)",
+                "layer": {
+                  "index": 28,
+                  "name": "Prevent Movement"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 1.430999755859375,
+                  "z": -1.6840000152587891
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.70710575580596924,
+                  "z": 0.0,
+                  "w": 0.70710784196853638
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Prevent_move (3)",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.1518140435218811,
+                      "y": -0.25350522994995117,
+                      "z": 0.038610935211181641
+                    },
+                    "size": {
+                      "x": 0.60362803936004639,
+                      "y": 3.0070104598999023,
+                      "z": 4.2452163696289063
+                    },
+                    "isTrigger": false,
+                    "enabled": true
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Prevent_move (5)",
+                "layer": {
+                  "index": 28,
+                  "name": "Prevent Movement"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -1.1000000238418579,
+                  "y": 1.430999755859375,
+                  "z": 1.6499999761581421
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.70710575580596924,
+                  "z": 0.0,
+                  "w": 0.70710784196853638
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Prevent_move (5)",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -0.20010387897491455,
+                      "y": -0.25285863876342773,
+                      "z": -0.31615275144577026
+                    },
+                    "size": {
+                      "x": 0.70020782947540283,
+                      "y": 3.0057172775268555,
+                      "z": 1.3323056697845459
+                    },
+                    "isTrigger": false,
+                    "enabled": true
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Prevent_move (6)",
+                "layer": {
+                  "index": 28,
+                  "name": "Prevent Movement"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 1.3009999990463257,
+                  "y": 1.430999755859375,
+                  "z": 1.6499999761581421
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.70710575580596924,
+                  "z": 0.0,
+                  "w": 0.70710784196853638
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Prevent_move (6)",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -0.15941226482391357,
+                      "y": -0.25836753845214844,
+                      "z": 0.16208028793334961
+                    },
+                    "size": {
+                      "x": 0.61882448196411133,
+                      "y": 3.0167350769042969,
+                      "z": 1.4241797924041748
+                    },
+                    "isTrigger": false,
+                    "enabled": true
+                  }
+                ],
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "inflated_balloon_collider_detail",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.MeshCollider",
+                "$name": "inflated_balloon_collider_detail",
+                "colliderType": "Mesh",
+                "convex": true,
+                "sharedMesh": {
+                  "$ref": "Mesh",
+                  "name": "server_balloon_col",
+                  "meshId": "server_balloon_col_f28d4065"
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Cloth",
+                  "instanceID": 609830
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "GasCollider",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Usable Secondary",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 2.8259999752044678,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "GasCollider",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": -0.16885972023010254,
+                  "z": 0.0
+                },
+                "size": {
+                  "x": 1.0,
+                  "y": 0.23297882080078125,
+                  "z": 1.0
+                },
+                "isTrigger": false,
+                "enabled": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "SnareTrigger",
+            "layer": {
+              "index": 18,
+              "name": "Trigger"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -2.5
+            },
+            "localRotation": {
+              "x": 6.6579026736235392E-08,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 0.75
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.MeshCollider",
+                "$name": "SnareTrigger",
+                "colliderType": "Mesh",
+                "convex": true,
+                "sharedMesh": {
+                  "$ref": "Mesh",
+                  "name": "hot_air_balloon_sim_col",
+                  "meshId": "hot_air_balloon_sim_col_4fd14040"
+                },
+                "isTrigger": true,
+                "enabled": true
+              },
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "SnareTrigger",
+                "colliderType": "Box",
+                "center": {
+                  "x": 4.4600000381469727,
+                  "y": 1.2899999618530273,
+                  "z": 1.7799999713897705
+                },
+                "size": {
+                  "x": 5.6700000762939453,
+                  "y": 4.5900001525878906,
+                  "z": 4.71999979019165
+                },
+                "isTrigger": true,
+                "enabled": false
+              },
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "SnareTrigger",
+                "colliderType": "Box",
+                "center": {
+                  "x": -3.6700000762939453,
+                  "y": 2.4300000667572021,
+                  "z": 1.5800000429153442
+                },
+                "size": {
+                  "x": 3.5799999237060547,
+                  "y": 2.9500000476837158,
+                  "z": 5.1500000953674316
+                },
+                "isTrigger": true,
+                "enabled": false
+              },
+              {
+                "$type": "TriggerEnsnare",
+                "$name": "SnareTrigger",
+                "blockHands": true,
+                "interestLayers": 131072,
+                "contents": null,
+                "entityContents": null,
+                "OnEntityEnterTrigger": null,
+                "OnEntityLeaveTrigger": null
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "DetailedColliders",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Not Player Usable",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.MeshCollider",
+                "$name": "DetailedColliders",
+                "colliderType": "Mesh",
+                "convex": true,
+                "sharedMesh": {
+                  "$ref": "Mesh",
+                  "name": "server_gas_tank_col",
+                  "meshId": "server_gas_tank_col_1d3a56ce"
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              },
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "DetailedColliders",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.099475860595703125,
+                  "y": 0.35237503051757813,
+                  "z": -0.011998176574707031
+                },
+                "size": {
+                  "x": 2.7777175903320313,
+                  "y": 0.156341552734375,
+                  "z": 2.9167804718017578
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Wood",
+                  "instanceID": 609850
+                }
+              }
+            ],
+            "children": [
+              {
+                "name": "Corners",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.38268342614173889,
+                  "z": 0.0,
+                  "w": 0.92387956380844116
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Corners",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -0.031601134687662125,
+                      "y": 0.96705436706542969,
+                      "z": 1.7574197053909302
+                    },
+                    "size": {
+                      "x": 0.51765060424804688,
+                      "y": 1.3279075622558594,
+                      "z": 0.39508867263793945
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Corners",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -0.031609352678060532,
+                      "y": 0.97678756713867188,
+                      "z": -1.7574200630187988
+                    },
+                    "size": {
+                      "x": 0.51765060424804688,
+                      "y": 1.3473739624023438,
+                      "z": 0.39508867263793945
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Corners",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 1.7574199438095093,
+                      "y": 0.976834774017334,
+                      "z": -0.031605571508407593
+                    },
+                    "size": {
+                      "x": 0.39508867263793945,
+                      "y": 1.347468376159668,
+                      "z": 0.51765060424804688
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Corners",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -1.7574199438095093,
+                      "y": 0.97458171844482422,
+                      "z": -0.031605593860149384
+                    },
+                    "size": {
+                      "x": 0.39508867263793945,
+                      "y": 1.3429622650146484,
+                      "z": 0.51765060424804688
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Front",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Front",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.95672416687011719,
+                      "y": 0.81452274322509766,
+                      "z": 1.3329381942749023
+                    },
+                    "size": {
+                      "x": 0.79057693481445313,
+                      "y": 0.83313941955566406,
+                      "z": 0.088998794555664063
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Front",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -1.1618003845214844,
+                      "y": 0.81452274322509766,
+                      "z": 1.3329381942749023
+                    },
+                    "size": {
+                      "x": 0.43456268310546875,
+                      "y": 0.83313941955566406,
+                      "z": 0.088998794555664063
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Back",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Back",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 1.1115169525146484,
+                      "y": 0.778529167175293,
+                      "z": -1.4013299942016602
+                    },
+                    "size": {
+                      "x": 0.37426376342773438,
+                      "y": 0.76115226745605469,
+                      "z": 0.12866783142089844
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Back",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -0.87907028198242188,
+                      "y": 0.81438589096069336,
+                      "z": -1.4013299942016602
+                    },
+                    "size": {
+                      "x": 0.77008056640625,
+                      "y": 0.83286571502685547,
+                      "z": 0.12866783142089844
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Left",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Left",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 1.4819793701171875,
+                      "y": 1.2218871116638184,
+                      "z": 0.004962921142578125
+                    },
+                    "size": {
+                      "x": 0.23279571533203125,
+                      "y": 0.054461479187011719,
+                      "z": 0.88544082641601563
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Wood",
+                      "instanceID": 609850
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Left",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 1.4707756042480469,
+                      "y": 0.79953289031982422,
+                      "z": -0.86328315734863281
+                    },
+                    "size": {
+                      "x": 0.104034423828125,
+                      "y": 0.85862922668457031,
+                      "z": 0.72851943969726563
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Left",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 1.4707756042480469,
+                      "y": 0.51608896255493164,
+                      "z": 0.0040426254272460938
+                    },
+                    "size": {
+                      "x": 0.104034423828125,
+                      "y": 0.33468723297119141,
+                      "z": 1.0967235565185547
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Left",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 1.4707756042480469,
+                      "y": 0.76919269561767578,
+                      "z": 1.0632553100585938
+                    },
+                    "size": {
+                      "x": 0.104034423828125,
+                      "y": 0.84089469909667969,
+                      "z": 0.28745269775390625
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Right",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Right",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -1.4001121520996094,
+                      "y": 0.79969406127929688,
+                      "z": -1.0860261917114258
+                    },
+                    "size": {
+                      "x": 0.08942413330078125,
+                      "y": 0.72790908813476563,
+                      "z": 0.40386390686035156
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Right",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -1.4001121520996094,
+                      "y": 0.558405876159668,
+                      "z": 0.001781463623046875
+                    },
+                    "size": {
+                      "x": 0.08942413330078125,
+                      "y": 0.24533271789550781,
+                      "z": 1.1156654357910156
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Right",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -1.4001121520996094,
+                      "y": 0.83990859985351563,
+                      "z": 0.96291160583496094
+                    },
+                    "size": {
+                      "x": 0.08942413330078125,
+                      "y": 0.80833816528320313,
+                      "z": 0.92263412475585938
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Entrance",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.21643960475921631,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.976296067237854
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Entrance",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.0,
+                      "y": 0.75008696317672729,
+                      "z": 1.2836909294128418
+                    },
+                    "size": {
+                      "x": 1.0,
+                      "y": 0.17697113752365112,
+                      "z": 0.30649685859680176
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Wood",
+                      "instanceID": 609850
+                    }
+                  }
+                ],
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "centerOfMass",
+        "layer": {
+          "index": 13,
+          "name": "Vehicle Detailed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.800000011920929,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "airBuoyancyPoint",
+        "layer": {
+          "index": 13,
+          "name": "Vehicle Detailed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 15.359999656677246,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "basket_button",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "basket_button",
+            "colliderType": "Mesh",
+            "convex": true,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "basket_button_col",
+              "meshId": "basket_button_col_3c8a028b"
+            },
+            "isTrigger": false,
+            "enabled": false,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Metal",
+              "instanceID": 609842
+            }
+          }
+        ],
+        "children": [
+          {
+            "name": "big_button_button",
+            "layer": {
+              "index": 16,
+              "name": "World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.6380000114440918,
+              "y": 1.3569999933242798,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": -0.701608419418335,
+              "y": 0.08800932765007019,
+              "z": 0.701608419418335,
+              "w": 0.08800932765007019
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "Col",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Usable Primary",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.5759999752044678,
+              "y": 1.3580000400543213,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -0.11583149433135986,
+              "w": 0.99326890707015991
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "Col",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "size": {
+                  "x": 0.1381072998046875,
+                  "y": 0.31788063049316406,
+                  "z": 0.23999999463558197
+                },
+                "isTrigger": false,
+                "enabled": true
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "spawnpoints",
+        "layer": {
+          "index": 13,
+          "name": "Vehicle Detailed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "fuel",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.14499999582767487,
+              "y": 2.8863999843597412,
+              "z": 0.04179999977350235
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "storage",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -1.246999979019165,
+              "y": 0.61400002241134644,
+              "z": 1.1859999895095825
+            },
+            "localRotation": {
+              "x": -0.078967571258544922,
+              "y": 0.90636736154556274,
+              "z": 0.19549112021923065,
+              "w": 0.36612227559089661
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "preventBuildings",
+        "layer": {
+          "index": 13,
+          "name": "Vehicle Detailed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "preventBuilding (1)",
+            "layer": {
+              "index": 29,
+              "name": "Prevent Building"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.1000000238418579,
+              "y": 1.1000000238418579,
+              "z": 1.1000000238418579
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.MeshCollider",
+                "$name": "preventBuilding (1)",
+                "colliderType": "Mesh",
+                "convex": true,
+                "sharedMesh": {
+                  "$ref": "Mesh",
+                  "name": "server_balloon_col",
+                  "meshId": "server_balloon_col_f28d4065"
+                },
+                "isTrigger": false,
+                "enabled": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "preventBuilding",
+            "layer": {
+              "index": 29,
+              "name": "Prevent Building"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "preventBuilding",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.2140045166015625,
+                  "y": 2.8977384567260742,
+                  "z": 0.0093975067138671875
+                },
+                "size": {
+                  "x": 4.078643798828125,
+                  "y": 5.82158088684082,
+                  "z": 3.3303108215332031
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Wood",
+                  "instanceID": 609850
+                }
+              }
+            ],
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "PrefabInformation": [
+      {
+        "$type": "PrefabInformation",
+        "$name": "<destroyed native object>",
+        "prefabID": 3111236903,
+        "hierachyName": "hotairballoon",
+        "associatedItemDefinition": {
+          "$ref": "ItemDefinition",
+          "name": "hab.repair.item",
+          "itemid": 696029539,
+          "shortname": "hab"
+        },
+        "title": {
+          "$type": "Translate+Phrase",
+          "token": "hotairballoon_name",
+          "legacyEnglish": "Hot Air Balloon"
+        },
+        "description": {
+          "$type": "Translate+Phrase",
+          "token": "",
+          "legacyEnglish": ""
+        },
+        "sprite": null,
+        "shownOnDeathScreen": true,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/hot air balloon/hotairballoon.prefab",
+        "instanceID": 1537282,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "DirectionProperties": [],
+    "PrefabWeight": []
+  }
+}

@@ -1,0 +1,2410 @@
+{
+  "prefabID": 1745077396,
+  "path": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+  "rootClassChain": [
+    "SimpleBuildingBlock",
+    "StabilityEntity",
+    "DecayEntity",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -0.036191940307617188,
+      "y": 1.9996488094329834,
+      "z": 0.034096240997314453
+    },
+    "size": {
+      "x": 6.3871583938598633,
+      "y": 6.8249154090881348,
+      "z": 1.7223606109619141
+    }
+  },
+  "hierarchy": {
+    "name": "wall.external.high.wood",
+    "layer": {
+      "index": 21,
+      "name": "Construction"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "SimpleBuildingBlock",
+        "$name": "wall.external.high.wood",
+        "UpgradeItems": [
+          {
+            "$ref": "ItemDefinition",
+            "name": "wall.external.high.stone.item",
+            "itemid": -967648160,
+            "shortname": "wall.external.high.stone"
+          },
+          {
+            "$ref": "ItemDefinition",
+            "name": "wall.external.high.adobe.item",
+            "itemid": 756890702,
+            "shortname": "wall.external.high.adobe"
+          },
+          {
+            "$ref": "ItemDefinition",
+            "name": "wall.external.high.ice.item",
+            "itemid": -985781766,
+            "shortname": "wall.external.high.ice"
+          }
+        ],
+        "UpgradeMenu": {
+          "$type": "BaseEntity+Menu+Option",
+          "name": {
+            "$type": "Translate+Phrase",
+            "token": "simple.upgrade.stone",
+            "legacyEnglish": "Upgrade to Stone"
+          },
+          "description": {
+            "$type": "Translate+Phrase",
+            "token": "simple.upgrade.stone_desc",
+            "legacyEnglish": "A strong material. Impervious to fire and melee damage."
+          },
+          "icon": {
+            "$ref": "Sprite",
+            "name": "level_stone",
+            "instanceID": 1022182
+          },
+          "order": 0,
+          "usableWhileWounded": false
+        },
+        "grounded": true,
+        "cachedStability": 0.0,
+        "cachedDistanceFromGround": 2147483647,
+        "canBeDemolished": true,
+        "debrisPrefab": {
+          "$ref": "GameObject",
+          "guid": "708b866f5e465094d9077f5065c4e14d",
+          "resourcePath": "assets/prefabs/debris/debris.wood.external.wall.prefab",
+          "resourceID": 2304619954
+        },
+        "debrisRotationOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "DebrisPositions": [],
+        "buildingID": 0,
+        "timePlaced": 0.0,
+        "decayTimer": 0.0,
+        "upkeepTimer": 0.0,
+        "upkeep": null,
+        "decay": null,
+        "decayPoints": null,
+        "lastDecayTick": 0.0,
+        "decayVariance": 1.0,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "BlockWood",
+          "comments": "",
+          "density": 2.0,
+          "amounts": [
+            0.89999997615814209,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.89999997615814209,
+            0.0,
+            0.0,
+            0.0,
+            0.97000002861022949,
+            0.800000011920929,
+            0.98000001907348633,
+            0.0,
+            1.0,
+            0.99000000953674316,
+            0.89999997615814209,
+            0.10000000149011612,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 2996393914
+        },
+        "startHealth": 500.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": false,
+          "itemTarget": null,
+          "itemCount": 0,
+          "setConditionFromHealth": false,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": false,
+          "requireHammer": false,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "wall.external.high.wood.item",
+            "itemid": 99588025,
+            "shortname": "wall.external.high"
+          },
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -0.036191940307617188,
+            "y": 1.9996488094329834,
+            "z": 0.034096240997314453
+          },
+          "size": {
+            "x": 6.3871583938598633,
+            "y": 6.8249154090881348,
+            "z": 1.7223606109619141
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 1745077396,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": true,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$type": "UnityEngine.AI.NavMeshObstacle",
+        "$name": "wall.external.high.wood"
+      }
+    ],
+    "children": [
+      {
+        "name": "collider",
+        "layer": {
+          "index": 21,
+          "name": "Construction"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "collider",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "wall.external.high.wood_collision",
+              "meshId": "wall.external.high.wood_collision_21565978"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "sockets",
+        "layer": {
+          "index": 22,
+          "name": "Construction Socket"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "terrain",
+            "layer": {
+              "index": 22,
+              "name": "Construction Socket"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "damage",
+        "layer": {
+          "index": 18,
+          "name": "Trigger"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 5.53000020980835,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "damage",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "size": {
+              "x": 6.5,
+              "y": 1.5,
+              "z": 1.5
+            },
+            "isTrigger": true,
+            "enabled": true
+          },
+          {
+            "$type": "TriggerMovement",
+            "$name": "damage",
+            "losEyes": null,
+            "movementModify": {
+              "$type": "BaseEntity+MovementModify",
+              "drag": 0.800000011920929
+            },
+            "interestLayers": 131072,
+            "contents": null,
+            "entityContents": null,
+            "OnEntityEnterTrigger": null,
+            "OnEntityLeaveTrigger": null
+          },
+          {
+            "$type": "TriggerHurtEx",
+            "$name": "damage",
+            "repeatRate": 0.25,
+            "LOSCheck": false,
+            "LOSDistance": 2.0,
+            "damageOnEnter": [
+              {
+                "$type": "Rust.DamageTypeEntry",
+                "type": {
+                  "$enum": "Rust.DamageType",
+                  "name": "Stab",
+                  "value": 15
+                },
+                "amount": 30.0
+              }
+            ],
+            "effectOnEnter": {
+              "$ref": "GameObject",
+              "guid": "cfcbe2160d38142459a74a8c86c0e18a",
+              "resourcePath": "assets/prefabs/deployable/barricades/effects/damage.prefab",
+              "resourceID": 3240254756
+            },
+            "hurtTypeOnEnter": {
+              "$enum": "TriggerHurtEx+HurtType",
+              "name": "Simple",
+              "value": 0
+            },
+            "damageOnTimer": [],
+            "effectOnTimer": {
+              "$ref": "GameObject",
+              "guid": "",
+              "resourcePath": null,
+              "resourceID": 0
+            },
+            "hurtTypeOnTimer": {
+              "$enum": "TriggerHurtEx+HurtType",
+              "name": "Simple",
+              "value": 0
+            },
+            "damageOnMove": [
+              {
+                "$type": "Rust.DamageTypeEntry",
+                "type": {
+                  "$enum": "Rust.DamageType",
+                  "name": "Slash",
+                  "value": 10
+                },
+                "amount": 12.0
+              }
+            ],
+            "effectOnMove": {
+              "$ref": "GameObject",
+              "guid": "cfcbe2160d38142459a74a8c86c0e18a",
+              "resourcePath": "assets/prefabs/deployable/barricades/effects/damage.prefab",
+              "resourceID": 3240254756
+            },
+            "hurtTypeOnMove": {
+              "$enum": "TriggerHurtEx+HurtType",
+              "name": "Simple",
+              "value": 0
+            },
+            "damageOnLeave": [],
+            "effectOnLeave": {
+              "$ref": "GameObject",
+              "guid": "",
+              "resourcePath": null,
+              "resourceID": 0
+            },
+            "hurtTypeOnLeave": {
+              "$enum": "TriggerHurtEx+HurtType",
+              "name": "Simple",
+              "value": 0
+            },
+            "damageEnabled": true,
+            "enterDamageCooldown": 0.5,
+            "interestLayers": 131072,
+            "contents": null,
+            "entityContents": null,
+            "OnEntityEnterTrigger": null,
+            "OnEntityLeaveTrigger": null
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "deploy",
+        "layer": {
+          "index": 21,
+          "name": "Construction"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Construction": [
+      {
+        "$type": "Construction",
+        "$name": "<destroyed native object>",
+        "prefabID": 1745077396,
+        "hierachyName": "wall.external.high.wood",
+        "info": {
+          "$type": "BaseEntity+Menu+Option",
+          "name": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "description": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "icon": null,
+          "order": 301,
+          "usableWhileWounded": false
+        },
+        "canBypassBuildingPermission": false,
+        "showBuildingBlockedPreview": true,
+        "canPlaceOnRoads": false,
+        "canRotateBeforePlacement": true,
+        "canRotateAfterPlacement": true,
+        "canBeDeployedInDeepSeaWater": false,
+        "checkVolumeOnRotate": false,
+        "checkVolumeOnUpgrade": false,
+        "canPlaceAtMaxDistance": false,
+        "placeOnWater": false,
+        "overridePlacementLayer": false,
+        "overridedPlacementLayer": 0,
+        "additionalPlacementLayer": 0,
+        "rotationAmount": {
+          "x": 0.0,
+          "y": 90.0,
+          "z": 0.0
+        },
+        "applyStartingRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "deployOffset": null,
+        "enforceLineOfSightCheckAgainstParentEntity": false,
+        "canSnap": false,
+        "forceY": false,
+        "forceYValue": 0.0,
+        "forceYToOceanLevel": false,
+        "OceanLevelYOffset": 0.0,
+        "holdToPlaceDuration": 1.5,
+        "canFloodFillSockets": false,
+        "alternativeLOSChecks": false,
+        "alternativeLOSPositions": [],
+        "canUseLastValidPosition": true,
+        "healthMultiplier": 2.4000000953674316,
+        "costMultiplier": 2.0,
+        "maxplaceDistance": 6.0,
+        "minPlaceDistance": 1.0,
+        "guideMesh": null,
+        "guideMeshMaterial": [],
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "hideBuildingPlannerViewmodel": false,
+        "allSockets": [
+          {
+            "$type": "Socket_Terrain",
+            "$name": "<destroyed native object>",
+            "prefabID": 1745077396,
+            "hierachyName": "wall.external.high.wood/sockets/terrain",
+            "placementHeight": 0.0,
+            "alignToNormal": false,
+            "male": true,
+            "maleDummy": false,
+            "female": false,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": false,
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "selectSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "socketName": "wall.external.high.wood/sockets/terrain",
+            "socketMods": [
+              {
+                "$type": "SocketMod_Attraction",
+                "$name": "<destroyed native object>",
+                "prefabID": 1745077396,
+                "hierachyName": "wall.external.high.wood/sockets/terrain/connection 2",
+                "outerRadius": 2.0,
+                "innerRadius": 0.5,
+                "groupName": "outwall.bottom",
+                "lockRotation": false,
+                "bypassPlayerRotation": false,
+                "ignoreRotationForRadiusCheck": false,
+                "shiftDisableSnap": true,
+                "shiftEnableSnap": false,
+                "applyPostRotationSnapping": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 3.0,
+                  "y": 0.99999994039535522,
+                  "z": 1.1920928955078125E-07
+                },
+                "worldRotation": {
+                  "x": 0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": -0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 3.0,
+                  "y": 0.0,
+                  "z": -1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+                "instanceID": 1488956,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_Attraction",
+                "$name": "<destroyed native object>",
+                "prefabID": 1745077396,
+                "hierachyName": "wall.external.high.wood/sockets/terrain/connection 1",
+                "outerRadius": 2.0,
+                "innerRadius": 0.5,
+                "groupName": "outwall.bottom",
+                "lockRotation": false,
+                "bypassPlayerRotation": false,
+                "ignoreRotationForRadiusCheck": false,
+                "shiftDisableSnap": true,
+                "shiftEnableSnap": false,
+                "applyPostRotationSnapping": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -3.0,
+                  "y": 0.99999994039535522,
+                  "z": 1.1920928955078125E-07
+                },
+                "worldRotation": {
+                  "x": 0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": -0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -3.0,
+                  "y": 0.0,
+                  "z": -1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+                "instanceID": 1488944,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_Attraction",
+                "$name": "<destroyed native object>",
+                "prefabID": 1745077396,
+                "hierachyName": "wall.external.high.wood/sockets/terrain/connection 3",
+                "outerRadius": 2.0,
+                "innerRadius": 0.5,
+                "groupName": "outwall.top",
+                "lockRotation": false,
+                "bypassPlayerRotation": false,
+                "ignoreRotationForRadiusCheck": false,
+                "shiftDisableSnap": true,
+                "shiftEnableSnap": false,
+                "applyPostRotationSnapping": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 3.0,
+                  "y": 3.9999997615814209,
+                  "z": 4.76837158203125E-07
+                },
+                "worldRotation": {
+                  "x": 0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": -0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 3.0,
+                  "y": 0.0,
+                  "z": -4.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+                "instanceID": 1488946,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_Attraction",
+                "$name": "<destroyed native object>",
+                "prefabID": 1745077396,
+                "hierachyName": "wall.external.high.wood/sockets/terrain/connection 4",
+                "outerRadius": 2.0,
+                "innerRadius": 0.5,
+                "groupName": "outwall.top",
+                "lockRotation": false,
+                "bypassPlayerRotation": false,
+                "ignoreRotationForRadiusCheck": false,
+                "shiftDisableSnap": true,
+                "shiftEnableSnap": false,
+                "applyPostRotationSnapping": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -3.0,
+                  "y": 3.9999997615814209,
+                  "z": 4.76837158203125E-07
+                },
+                "worldRotation": {
+                  "x": 0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": -0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -3.0,
+                  "y": 0.0,
+                  "z": -4.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+                "instanceID": 1488952,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_TerrainCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1745077396,
+                "hierachyName": "wall.external.high.wood/sockets/terrain/in terrain 1",
+                "wantsInTerrain": true,
+                "preventWorldLayerInMonuments": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": -0.89999991655349731,
+                  "z": -1.1920928955078125E-07
+                },
+                "worldRotation": {
+                  "x": 0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": -0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.89999997615814209
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+                "instanceID": 1488972,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_TerrainCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1745077396,
+                "hierachyName": "wall.external.high.wood/sockets/terrain/in terrain 2",
+                "wantsInTerrain": true,
+                "preventWorldLayerInMonuments": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -2.5,
+                  "y": -0.89999991655349731,
+                  "z": -1.1920928955078125E-07
+                },
+                "worldRotation": {
+                  "x": 0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": -0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -2.5,
+                  "y": 0.0,
+                  "z": 0.89999997615814209
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+                "instanceID": 1488964,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_TerrainCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1745077396,
+                "hierachyName": "wall.external.high.wood/sockets/terrain/in terrain 3",
+                "wantsInTerrain": true,
+                "preventWorldLayerInMonuments": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Terrain"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 2.5,
+                  "y": -0.89999991655349731,
+                  "z": -1.1920928955078125E-07
+                },
+                "worldRotation": {
+                  "x": 0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": -0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 2.5,
+                  "y": 0.0,
+                  "z": 0.89999997615814209
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+                "instanceID": 1488976,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              }
+            ],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "worldRotation": {
+              "x": 0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": -0.99999994039535522,
+              "z": -1.1920928955078125E-07
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": 0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+            "instanceID": 1488982,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          }
+        ],
+        "allProximities": [],
+        "defaultGrade": null,
+        "socketHandle": {
+          "$type": "SocketHandle",
+          "$name": "<destroyed native object>",
+          "prefabID": 1745077396,
+          "hierachyName": "wall.external.high.wood/sockets/handle",
+          "worldPosition": {
+            "x": 0.0,
+            "y": 2.0,
+            "z": 0.0
+          },
+          "worldRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "worldForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "localPosition": {
+            "x": 0.0,
+            "y": 2.0,
+            "z": 0.0
+          },
+          "localScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "localRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+          "instanceID": 1488954,
+          "prefabAttribute": {
+            "$ref": "Library",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "gameManager": {
+            "$ref": "GameManager",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "isServer": true
+        },
+        "bounds": {
+          "center": {
+            "x": -0.036191940307617188,
+            "y": 1.9996488094329834,
+            "z": 0.034096240997314453
+          },
+          "size": {
+            "x": 6.3871583938598633,
+            "y": 6.8249154090881348,
+            "z": 1.7223606109619141
+          }
+        },
+        "isBuildingPrivilege": false,
+        "isSleepingBag": false,
+        "grades": [],
+        "deployable": {
+          "$type": "Deployable",
+          "$name": "<destroyed native object>",
+          "prefabID": 1745077396,
+          "hierachyName": "wall.external.high.wood",
+          "guidePrefab": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "guideMesh": null,
+          "guideMeshScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "overrideRotation": false,
+          "guideMeshOrientation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "guideMeshPositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "moveGuideTowardsCamera": true,
+          "guideLights": true,
+          "wantsInstanceData": false,
+          "copyInventoryFromItem": false,
+          "setSocketParent": false,
+          "toSlot": false,
+          "slot": {
+            "$enum": "BaseEntity+Slot",
+            "name": "Lock",
+            "value": 0
+          },
+          "placeEffect": {
+            "$ref": "GameObject",
+            "guid": "d572c2c04a76442bc888cb2745efbb3b",
+            "resourcePath": "assets/prefabs/building/wall.external.high.wood/effects/wall-external-wood-deploy.prefab",
+            "resourceID": 2885306130
+          },
+          "guideTargets": [],
+          "bounds": {
+            "center": {
+              "x": -0.036191940307617188,
+              "y": 1.9996488094329834,
+              "z": 0.034096240997314453
+            },
+            "size": {
+              "x": 6.3871583938598633,
+              "y": 6.8249154090881348,
+              "z": 1.7223606109619141
+            }
+          },
+          "worldPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "worldRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "worldForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "localScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "localRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+          "instanceID": 1488970,
+          "prefabAttribute": {
+            "$ref": "Library",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "gameManager": {
+            "$ref": "GameManager",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "isServer": true
+        },
+        "placeholder": null,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+        "instanceID": 1488978,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Decay": [
+      {
+        "$type": "DeployableDecay",
+        "$name": "<destroyed native object>",
+        "prefabID": 1745077396,
+        "hierachyName": "wall.external.high.wood",
+        "decayDelay": 0.0,
+        "decayDuration": 8.0,
+        "overrideHealRate": false,
+        "decayTickOverride": 0.0,
+        "decayIndoors": false,
+        "healRate": 1.0,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+        "instanceID": 1488950,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Deployable": [
+      {
+        "$ref": "Deployable",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "StripEmptyChildren": [
+      {
+        "$type": "StripEmptyChildren",
+        "$name": "<destroyed native object>",
+        "prefabID": 1745077396,
+        "hierachyName": "wall.external.high.wood",
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+        "instanceID": 1573050,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Upkeep": [
+      {
+        "$type": "Upkeep",
+        "$name": "<destroyed native object>",
+        "prefabID": 1745077396,
+        "hierachyName": "wall.external.high.wood",
+        "upkeepMultiplier": 1.0,
+        "highWall": true,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+        "instanceID": 1561750,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Socket_Base": [
+      {
+        "$ref": "Socket_Terrain",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "SocketMod": [
+      {
+        "$ref": "SocketMod_Attraction",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_Attraction",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_Attraction",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_Attraction",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_TerrainCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_TerrainCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_TerrainCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "AttractionPoint": [
+      {
+        "$type": "AttractionPoint",
+        "$name": "<destroyed native object>",
+        "prefabID": 1745077396,
+        "hierachyName": "wall.external.high.wood/sockets/terrain/connection 2",
+        "groupName": "outwall.bottom",
+        "worldPosition": {
+          "x": 3.0,
+          "y": 0.99999994039535522,
+          "z": 1.1920928955078125E-07
+        },
+        "worldRotation": {
+          "x": 0.7071068286895752,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.70710670948028564
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": -0.99999994039535522,
+          "z": -1.1920928955078125E-07
+        },
+        "localPosition": {
+          "x": 3.0,
+          "y": 0.0,
+          "z": -1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+        "instanceID": 1488980,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "AttractionPoint",
+        "$name": "<destroyed native object>",
+        "prefabID": 1745077396,
+        "hierachyName": "wall.external.high.wood/sockets/terrain/connection 1",
+        "groupName": "outwall.bottom",
+        "worldPosition": {
+          "x": -3.0,
+          "y": 0.99999994039535522,
+          "z": 1.1920928955078125E-07
+        },
+        "worldRotation": {
+          "x": 0.7071068286895752,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.70710670948028564
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": -0.99999994039535522,
+          "z": -1.1920928955078125E-07
+        },
+        "localPosition": {
+          "x": -3.0,
+          "y": 0.0,
+          "z": -1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+        "instanceID": 1488948,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "AttractionPoint",
+        "$name": "<destroyed native object>",
+        "prefabID": 1745077396,
+        "hierachyName": "wall.external.high.wood/sockets/terrain/connection 3",
+        "groupName": "outwall.top",
+        "worldPosition": {
+          "x": 3.0,
+          "y": 3.9999997615814209,
+          "z": 4.76837158203125E-07
+        },
+        "worldRotation": {
+          "x": 0.7071068286895752,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.70710670948028564
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": -0.99999994039535522,
+          "z": -1.1920928955078125E-07
+        },
+        "localPosition": {
+          "x": 3.0,
+          "y": 0.0,
+          "z": -4.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+        "instanceID": 1488962,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "AttractionPoint",
+        "$name": "<destroyed native object>",
+        "prefabID": 1745077396,
+        "hierachyName": "wall.external.high.wood/sockets/terrain/connection 4",
+        "groupName": "outwall.top",
+        "worldPosition": {
+          "x": -3.0,
+          "y": 3.9999997615814209,
+          "z": 4.76837158203125E-07
+        },
+        "worldRotation": {
+          "x": 0.7071068286895752,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.70710670948028564
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": -0.99999994039535522,
+          "z": -1.1920928955078125E-07
+        },
+        "localPosition": {
+          "x": -3.0,
+          "y": 0.0,
+          "z": -4.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+        "instanceID": 1488958,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "SocketHandle": [
+      {
+        "$ref": "SocketHandle",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "DirectionProperties": [
+      {
+        "$type": "DirectionProperties",
+        "$name": "<destroyed native object>",
+        "prefabID": 1745077396,
+        "hierachyName": "wall.external.high.wood/protection",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "size": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "extraProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "BuildingShell",
+          "comments": "This is used to make the outside of building blocks tougher.",
+          "density": 1.0,
+          "amounts": [
+            0.89999997615814209,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.5,
+            0.89999997615814209,
+            0.89999997615814209,
+            0.0,
+            1.0,
+            0.89999997615814209,
+            0.89999997615814209,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.5,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 32580326
+        },
+        "worldPosition": {
+          "x": 0.0,
+          "y": 2.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 2.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+        "instanceID": 1488974,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "DeployVolume": [
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 1745077396,
+        "hierachyName": "wall.external.high.wood/deploy/volume (1)",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 2.0999999046325684,
+            "z": 0.0
+          },
+          "size": {
+            "x": 6.0,
+            "y": 6.1999998092651367,
+            "z": 0.5
+          }
+        },
+        "layers": 537001984,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+        "instanceID": 1511130,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 1745077396,
+        "hierachyName": "wall.external.high.wood/deploy/volume (2)",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 3.0999999046325684,
+            "z": 0.0
+          },
+          "size": {
+            "x": 4.0,
+            "y": 4.1999998092651367,
+            "z": 0.5
+          }
+        },
+        "layers": 65536,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+        "instanceID": 1508582,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 1745077396,
+        "hierachyName": "wall.external.high.wood/deploy/volume (3)",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 1.6000000238418579,
+            "z": 0.0
+          },
+          "size": {
+            "x": 3.0,
+            "y": 5.1999998092651367,
+            "z": 1.0
+          }
+        },
+        "layers": 2097152,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+        "instanceID": 1513786,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 1745077396,
+        "hierachyName": "wall.external.high.wood/deploy/volume (4)",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 1.6000000238418579,
+            "z": 0.0
+          },
+          "size": {
+            "x": 1.0,
+            "y": 5.1999998092651367,
+            "z": 6.0
+          }
+        },
+        "layers": 2097152,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+        "instanceID": 1509284,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 1745077396,
+        "hierachyName": "wall.external.high.wood/deploy/volume (5)",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "size": {
+            "x": 7.5,
+            "y": 1.6599999666213989,
+            "z": 1.5
+          }
+        },
+        "layers": 131072,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+        "instanceID": 1528884,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 1745077396,
+        "hierachyName": "wall.external.high.wood/deploy/volume (6)",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 4.5,
+            "z": -0.10000000149011612
+          },
+          "size": {
+            "x": 7.0,
+            "y": 2.0,
+            "z": 2.0
+          }
+        },
+        "layers": 131072,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab",
+        "instanceID": 1555254,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,321 @@
+{
+  "prefabID": 2781905939,
+  "path": "assets/prefabs/npc/flame turret/flameturret_fireball.prefab",
+  "rootClassChain": [
+    "FireBall",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "size": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    }
+  },
+  "hierarchy": {
+    "name": "flameturret_fireball",
+    "layer": {
+      "index": 9,
+      "name": "Ragdoll"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "FireBall",
+        "$name": "flameturret_fireball",
+        "lifeTimeMin": 15.0,
+        "lifeTimeMax": 20.0,
+        "movementSystems": [
+          null,
+          null
+        ],
+        "restingSystems": [
+          null
+        ],
+        "generation": 0.0,
+        "spreadSubEntity": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "tickRate": 0.5,
+        "damagePerSecond": 5.0,
+        "radius": 1.0,
+        "waterToExtinguish": 25,
+        "canMerge": true,
+        "AttackLayers": 2230784,
+        "ignoreNPC": false,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "size": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": true,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 2781905939,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$type": "UnityEngine.Rigidbody",
+        "$name": "flameturret_fireball"
+      },
+      {
+        "$type": "UnityEngine.BoxCollider",
+        "$name": "flameturret_fireball",
+        "colliderType": "Box",
+        "center": {
+          "x": 0.0,
+          "y": 0.10000000149011612,
+          "z": 0.0
+        },
+        "size": {
+          "x": 0.20000000298023224,
+          "y": 0.20000000298023224,
+          "z": 0.20000000298023224
+        },
+        "isTrigger": false,
+        "enabled": true
+      }
+    ],
+    "children": [
+      {
+        "name": "painSource",
+        "layer": {
+          "index": 18,
+          "name": "Trigger"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": false,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.SphereCollider",
+            "$name": "painSource",
+            "colliderType": "Sphere",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "radius": 0.5,
+            "isTrigger": true,
+            "enabled": false
+          },
+          {
+            "$type": "TriggerHurtEx",
+            "$name": "painSource",
+            "repeatRate": 0.33000001311302185,
+            "LOSCheck": false,
+            "LOSDistance": 2.0,
+            "damageOnEnter": [
+              {
+                "$type": "Rust.DamageTypeEntry",
+                "type": {
+                  "$enum": "Rust.DamageType",
+                  "name": "Heat",
+                  "value": 5
+                },
+                "amount": 1.0
+              }
+            ],
+            "effectOnEnter": {
+              "$ref": "GameObject",
+              "guid": "",
+              "resourcePath": null,
+              "resourceID": 0
+            },
+            "hurtTypeOnEnter": {
+              "$enum": "TriggerHurtEx+HurtType",
+              "name": "Simple",
+              "value": 0
+            },
+            "damageOnTimer": [
+              {
+                "$type": "Rust.DamageTypeEntry",
+                "type": {
+                  "$enum": "Rust.DamageType",
+                  "name": "Heat",
+                  "value": 5
+                },
+                "amount": 1.0
+              }
+            ],
+            "effectOnTimer": {
+              "$ref": "GameObject",
+              "guid": "",
+              "resourcePath": null,
+              "resourceID": 0
+            },
+            "hurtTypeOnTimer": {
+              "$enum": "TriggerHurtEx+HurtType",
+              "name": "Simple",
+              "value": 0
+            },
+            "damageOnMove": [],
+            "effectOnMove": {
+              "$ref": "GameObject",
+              "guid": "",
+              "resourcePath": null,
+              "resourceID": 0
+            },
+            "hurtTypeOnMove": {
+              "$enum": "TriggerHurtEx+HurtType",
+              "name": "Simple",
+              "value": 0
+            },
+            "damageOnLeave": [],
+            "effectOnLeave": {
+              "$ref": "GameObject",
+              "guid": "",
+              "resourcePath": null,
+              "resourceID": 0
+            },
+            "hurtTypeOnLeave": {
+              "$enum": "TriggerHurtEx+HurtType",
+              "name": "Simple",
+              "value": 0
+            },
+            "damageEnabled": true,
+            "enterDamageCooldown": 0.5,
+            "interestLayers": 2230528,
+            "contents": null,
+            "entityContents": null,
+            "OnEntityEnterTrigger": null,
+            "OnEntityLeaveTrigger": null
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "triggers",
+        "layer": {
+          "index": 18,
+          "name": "Trigger"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {}
+}

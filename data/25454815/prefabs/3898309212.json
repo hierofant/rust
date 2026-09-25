@@ -1,0 +1,244 @@
+{
+  "prefabID": 3898309212,
+  "path": "assets/prefabs/tools/c4/explosive.timed.deployed.prefab",
+  "rootClassChain": [
+    "RFTimedExplosive",
+    "TimedExplosive",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -0.0003099590539932251,
+      "y": 0.0048060640692710876,
+      "z": 0.038988824933767319
+    },
+    "size": {
+      "x": 0.21736057102680206,
+      "y": 0.19695094227790833,
+      "z": 0.1156337708234787
+    }
+  },
+  "hierarchy": {
+    "name": "explosive.timed.deployed",
+    "layer": {
+      "index": 20,
+      "name": "Physics Projectile"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "UnityEngine.BoxCollider",
+        "$name": "explosive.timed.deployed",
+        "colliderType": "Box",
+        "center": {
+          "x": 0.002742767333984375,
+          "y": 0.0057060718536376953,
+          "z": 0.039613723754882813
+        },
+        "size": {
+          "x": 0.21620252728462219,
+          "y": 0.19572973251342773,
+          "z": 0.089122012257575989
+        },
+        "isTrigger": false,
+        "enabled": true,
+        "physicMaterial": {
+          "$ref": "PhysicsMaterial",
+          "name": "Generic",
+          "instanceID": 609836
+        }
+      },
+      {
+        "$type": "RFTimedExplosive",
+        "$name": "explosive.timed.deployed",
+        "beepLoop": null,
+        "pickupDefinition": {
+          "$ref": "ItemDefinition",
+          "name": "explosive.timed.item",
+          "itemid": 1248356124,
+          "shortname": "explosive.timed"
+        },
+        "minutesUntilDecayed": 1440.0,
+        "timerAmountMin": 10.0,
+        "timerAmountMax": 10.0,
+        "minExplosionRadius": 0.0,
+        "explosionRadius": 4.0,
+        "explodeOnContact": false,
+        "canStick": true,
+        "forceRunClippingChecks": false,
+        "onlyDamageParent": true,
+        "IgnoreAI": false,
+        "BlindAI": false,
+        "aiBlindDuration": 2.5,
+        "aiBlindRange": 4.0,
+        "explosionOffsetMode": {
+          "$enum": "TimedExplosive+ExplosionEffectOffsetMode",
+          "name": "Local",
+          "value": 0
+        },
+        "explosionEffectOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.34749999642372131
+        },
+        "explosionMatchesNormal": false,
+        "explosionUsesForward": true,
+        "explosionMatchesOrientation": true,
+        "explosionMatchesVelocity": false,
+        "explosionMatchesInverseVelocity": false,
+        "explosionEffect": {
+          "$ref": "GameObject",
+          "guid": "4bb2cb9fb832da842af5c3939588d3aa",
+          "resourcePath": "assets/prefabs/tools/c4/effects/c4_explosion.prefab",
+          "resourceID": 857997843
+        },
+        "underwaterExplosionEffect": {
+          "$ref": "GameObject",
+          "guid": "63d11a5699f6ee247aa89fc85f6153fc",
+          "resourcePath": "assets/content/effects/explosions/underwater/explosion_underwater_large.prefab",
+          "resourceID": 2593130125
+        },
+        "stickEffect": {
+          "$ref": "GameObject",
+          "guid": "5ee498ac602364d2dbd9efc3ecdbeb80",
+          "resourcePath": "assets/prefabs/tools/c4/effects/c4_stick.prefab",
+          "resourceID": 2722086713
+        },
+        "bounceEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "watersurfaceExplosionEffect": {
+          "$ref": "GameObject",
+          "guid": "15021be2eab13dd47ba0f337e64ad7e5",
+          "resourcePath": "assets/content/effects/explosions/underwater/explosion_underwater_surface_large.prefab",
+          "resourceID": 2588596879
+        },
+        "underwaterExplosionDepth": 1.0,
+        "watersurfaceExplosionDepth": {
+          "$type": "MinMax",
+          "x": 0.5,
+          "y": 20.0
+        },
+        "waterCausesExplosion": false,
+        "vibrationLevel": 3,
+        "damageTypes": [
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Explosion",
+              "value": 16
+            },
+            "amount": 550.0
+          }
+        ],
+        "playerDamage": [],
+        "splashWallpaperThroughWalls": true,
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "wasDroneDropped": false,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -0.0003099590539932251,
+            "y": 0.0048060640692710876,
+            "z": 0.038988824933767319
+          },
+          "size": {
+            "x": 0.21736057102680206,
+            "y": 0.19695094227790833,
+            "z": 0.1156337708234787
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": true,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 3898309212,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Small",
+          "value": 0
+        },
+        "net": null
+      },
+      {
+        "$type": "UnityEngine.Rigidbody",
+        "$name": "explosive.timed.deployed"
+      }
+    ],
+    "children": []
+  },
+  "prefabAttributes": {}
+}

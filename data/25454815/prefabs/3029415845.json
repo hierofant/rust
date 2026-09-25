@@ -1,0 +1,1700 @@
+{
+  "prefabID": 3029415845,
+  "path": "assets/prefabs/npc/patrol helicopter/patrolhelicopter.prefab",
+  "rootClassChain": [
+    "PatrolHelicopter",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -0.15000000596046448,
+      "y": 2.0099999904632568,
+      "z": -2.5199999809265137
+    },
+    "size": {
+      "x": 3.3599998950958252,
+      "y": 4.4000000953674316,
+      "z": 15.520000457763672
+    }
+  },
+  "hierarchy": {
+    "name": "patrolhelicopter",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "PatrolHelicopter",
+        "$name": "patrolhelicopter",
+        "weakspots": [
+          {
+            "$type": "PatrolHelicopter+weakspot",
+            "body": null,
+            "bonenames": [
+              "engine_col",
+              "main_rotor_col"
+            ],
+            "maxHealth": 900.0,
+            "health": 900.0,
+            "healthFractionOnDestroyed": 0.5,
+            "destroyedParticles": {
+              "$ref": "GameObject",
+              "guid": "520b82c5d6666ea4bb66104887074bcc",
+              "resourcePath": "assets/prefabs/npc/patrol helicopter/effects/component_destroyed.prefab",
+              "resourceID": 809949138
+            },
+            "damagedParticles": {
+              "$ref": "GameObject",
+              "guid": "23bca1df0148d634bb539bb3a3848b32",
+              "resourcePath": "assets/prefabs/npc/patrol helicopter/effects/component_damged.prefab",
+              "resourceID": 3010608110
+            },
+            "damagedEffect": null,
+            "destroyedEffect": null,
+            "attackers": []
+          },
+          {
+            "$type": "PatrolHelicopter+weakspot",
+            "body": null,
+            "bonenames": [
+              "tail_rotor_col"
+            ],
+            "maxHealth": 500.0,
+            "health": 500.0,
+            "healthFractionOnDestroyed": 0.5,
+            "destroyedParticles": {
+              "$ref": "GameObject",
+              "guid": "520b82c5d6666ea4bb66104887074bcc",
+              "resourcePath": "assets/prefabs/npc/patrol helicopter/effects/component_destroyed.prefab",
+              "resourceID": 809949138
+            },
+            "damagedParticles": {
+              "$ref": "GameObject",
+              "guid": "23bca1df0148d634bb539bb3a3848b32",
+              "resourcePath": "assets/prefabs/npc/patrol helicopter/effects/component_damged.prefab",
+              "resourceID": 3010608110
+            },
+            "damagedEffect": null,
+            "destroyedEffect": null,
+            "attackers": []
+          }
+        ],
+        "rotorPivot": {
+          "$ref": "GameObject",
+          "name": "RotorPivot",
+          "instanceID": 1067668
+        },
+        "mainRotor": null,
+        "mainRotor_blades": null,
+        "mainRotor_blur": null,
+        "tailRotor": null,
+        "tailRotor_blades": null,
+        "tailRotor_blur": null,
+        "rocket_tube_left": {
+          "$ref": "GameObject",
+          "name": "rocket_tube_left",
+          "instanceID": 1067696
+        },
+        "rocket_tube_right": {
+          "$ref": "GameObject",
+          "name": "rocket_tube_right",
+          "instanceID": 1067694
+        },
+        "left_gun_yaw": {
+          "$ref": "GameObject",
+          "name": "gun_left_yaw",
+          "instanceID": 1067676
+        },
+        "left_gun_pitch": {
+          "$ref": "GameObject",
+          "name": "gun_left",
+          "instanceID": 1067684
+        },
+        "left_gun_muzzle": {
+          "$ref": "GameObject",
+          "name": "gun_left_muzzle",
+          "instanceID": 1067666
+        },
+        "right_gun_yaw": {
+          "$ref": "GameObject",
+          "name": "gun_right_yaw",
+          "instanceID": 1067674
+        },
+        "right_gun_pitch": {
+          "$ref": "GameObject",
+          "name": "gun_right",
+          "instanceID": 1067688
+        },
+        "right_gun_muzzle": {
+          "$ref": "GameObject",
+          "name": "gun_right_muzzle",
+          "instanceID": 1067698
+        },
+        "spotlight_rotation": {
+          "$ref": "GameObject",
+          "name": "spotlight_pivot",
+          "instanceID": 1067680
+        },
+        "rocket_fire_effect": {
+          "$ref": "GameObject",
+          "guid": "42e1616cbdd819141b21f5ae5d174973",
+          "resourcePath": "assets/prefabs/npc/patrol helicopter/effects/rocket_fire.prefab",
+          "resourceID": 793388477
+        },
+        "gun_fire_effect": {
+          "$ref": "GameObject",
+          "guid": "7e554b9945f33e644927ebd5574f17de",
+          "resourcePath": "assets/prefabs/npc/patrol helicopter/effects/gun_fire.prefab",
+          "resourceID": 1676935941
+        },
+        "bulletEffect": {
+          "$ref": "GameObject",
+          "guid": "b6acc6de091239d4091329807e430f71",
+          "resourcePath": "assets/prefabs/npc/patrol helicopter/helibullet.prefab",
+          "resourceID": 1410987015
+        },
+        "explosionEffect": {
+          "$ref": "GameObject",
+          "guid": "d75a1056ea9b3cd47983289a3ca8b9f4",
+          "resourcePath": "assets/prefabs/npc/patrol helicopter/effects/heli_explosion.prefab",
+          "resourceID": 3949947230
+        },
+        "fireBall": {
+          "$ref": "GameObject",
+          "guid": "04a0b39c457466145bda92f87d7d6523",
+          "resourcePath": "assets/bundled/prefabs/oilfireballsmall.prefab",
+          "resourceID": 3550347674
+        },
+        "crateToDrop": {
+          "$ref": "GameObject",
+          "guid": "c175b252164d05d42ade2fb672b97331",
+          "resourcePath": "assets/prefabs/npc/patrol helicopter/heli_crate.prefab",
+          "resourceID": 1314849795
+        },
+        "maxCratesToSpawn": 4,
+        "bulletSpeed": 350.0,
+        "bulletDamage": 11.0,
+        "servergibs": {
+          "$ref": "GameObject",
+          "guid": "aa6e0dd3c2d021842937b470df1d1457",
+          "resourcePath": "assets/prefabs/npc/patrol helicopter/servergibs_patrolhelicopter.prefab",
+          "resourceID": 1829321077
+        },
+        "debrisFieldMarker": {
+          "$ref": "GameObject",
+          "guid": "80d28165e3f4e1644bdfb2681411806d",
+          "resourcePath": "assets/prefabs/tools/map/explosionmarker.prefab",
+          "resourceID": 4060989661
+        },
+        "flareDuration": 5.0,
+        "rotorWashSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "helicopter-rotor-wash",
+          "instanceID": 34824
+        },
+        "flightEngineSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "helicopter-flight-loop-engine",
+          "instanceID": 216964
+        },
+        "flightThwopsSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "helicopter-flight-loop-thwops",
+          "instanceID": 263800
+        },
+        "flightEngineGainMod": {
+          "$type": "SoundModulation+Modulator",
+          "param": {
+            "$enum": "SoundModulation+Parameter",
+            "name": "Gain",
+            "value": 0
+          },
+          "value": 1.0
+        },
+        "flightThwopsGainMod": {
+          "$type": "SoundModulation+Modulator",
+          "param": {
+            "$enum": "SoundModulation+Parameter",
+            "name": "Gain",
+            "value": 0
+          },
+          "value": 1.0
+        },
+        "rotorGainModSmoothing": 0.25,
+        "engineGainMin": 0.5,
+        "engineGainMax": 1.0,
+        "thwopGainMin": 0.5,
+        "thwopGainMax": 1.0,
+        "spotlightJitterAmount": 1.0,
+        "spotlightJitterSpeed": 10.0,
+        "nightLights": [
+          null,
+          null
+        ],
+        "spotlightTarget": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "engineSpeed": 1.0,
+        "targetEngineSpeed": 1.0,
+        "blur_rotationScale": 0.5,
+        "_rotorWashParticles": [
+          null,
+          null
+        ],
+        "myAI": null,
+        "mapMarkerEntityPrefab": {
+          "$ref": "GameObject",
+          "guid": "05ef32538a59b9347a137b489f15f827",
+          "resourcePath": "assets/prefabs/npc/patrol helicopter/patrolhelicoptermarker.prefab",
+          "resourceID": 3212876472
+        },
+        "fleeMapMarkerEntityPrefab": {
+          "$ref": "GameObject",
+          "guid": "f9056d5a3feebc9408627945f1fe67de",
+          "resourcePath": "assets/prefabs/npc/patrol helicopter/patrolhelicopterfleemarker.prefab",
+          "resourceID": 2618904203
+        },
+        "lastNetworkUpdate": "-Infinity",
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "helicopter_protection",
+          "comments": "",
+          "density": 100.0,
+          "amounts": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 796450244
+        },
+        "startHealth": 10000.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": false,
+          "itemTarget": null,
+          "itemCount": 0,
+          "setConditionFromHealth": false,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": false,
+          "requireHammer": false,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": false,
+          "itemTarget": null,
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": true,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -0.15000000596046448,
+            "y": 2.0099999904632568,
+            "z": -2.5199999809265137
+          },
+          "size": {
+            "x": 3.3599998950958252,
+            "y": 4.4000000953674316,
+            "z": 15.520000457763672
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": false,
+        "syncPosition": true,
+        "model": {
+          "$type": "Model",
+          "$name": "patrolhelicopter",
+          "collision": null,
+          "rootBone": [
+            [
+              [
+                [
+                  [
+                    [
+                      []
+                    ]
+                  ],
+                  [
+                    [
+                      []
+                    ]
+                  ]
+                ],
+                [],
+                [],
+                [],
+                [],
+                [],
+                [
+                  []
+                ]
+              ],
+              [
+                []
+              ],
+              [
+                []
+              ]
+            ]
+          ],
+          "headBone": null,
+          "eyeBone": {
+            "$ref": "Transform",
+            "name": "spotlight_pivot",
+            "instanceID": 1263526,
+            "goName": "spotlight_pivot",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "patrolhelicopter",
+              "instanceID": 1263558,
+              "goName": "patrolhelicopter",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "RotorPivot",
+              "instanceID": 1263528,
+              "goName": "RotorPivot",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "patrol_helicopter",
+              "instanceID": 1263536,
+              "goName": "patrol_helicopter",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "w_patrol_helicopter_body",
+              "instanceID": 1263556,
+              "goName": "w_patrol_helicopter_body",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "gun_left_yaw",
+              "instanceID": 1263546,
+              "goName": "gun_left_yaw",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "gun_left",
+              "instanceID": 1263552,
+              "goName": "gun_left",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "gun_left_muzzle",
+              "instanceID": 1263554,
+              "goName": "gun_left_muzzle",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "gun_right_yaw",
+              "instanceID": 1263532,
+              "goName": "gun_right_yaw",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "gun_right",
+              "instanceID": 1263534,
+              "goName": "gun_right",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "gun_right_muzzle",
+              "instanceID": 1263548,
+              "goName": "gun_right_muzzle",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "tail_rotor_col",
+              "instanceID": 1263544,
+              "goName": "tail_rotor_col",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "main_rotor_col",
+              "instanceID": 1263542,
+              "goName": "main_rotor_col",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "engine_col",
+              "instanceID": 1263524,
+              "goName": "engine_col",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "spotlight_pivot",
+              "instanceID": 1263526,
+              "goName": "spotlight_pivot",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "ColliderWorld",
+              "instanceID": 1338446,
+              "goName": "ColliderWorld",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "PFX_Flares_PatrolHelicopter",
+              "instanceID": 1430320,
+              "goName": "PFX_Flares_PatrolHelicopter",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Flares Left",
+              "instanceID": 1430318,
+              "goName": "Flares Left",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "rocket_tube_right",
+              "instanceID": 1263530,
+              "goName": "rocket_tube_right",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "right_tube_rear",
+              "instanceID": 1263540,
+              "goName": "right_tube_rear",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "rocket_tube_left",
+              "instanceID": 1263550,
+              "goName": "rocket_tube_left",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "left_tube_rear",
+              "instanceID": 1263538,
+              "goName": "left_tube_rear",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "patrolhelicopter",
+            "RotorPivot",
+            "patrol_helicopter",
+            "w_patrol_helicopter_body",
+            "gun_left_yaw",
+            "gun_left",
+            "gun_left_muzzle",
+            "gun_right_yaw",
+            "gun_right",
+            "gun_right_muzzle",
+            "tail_rotor_col",
+            "main_rotor_col",
+            "engine_col",
+            "spotlight_pivot",
+            "ColliderWorld",
+            "PFX_Flares_PatrolHelicopter",
+            "Flares Left",
+            "rocket_tube_right",
+            "right_tube_rear",
+            "rocket_tube_left",
+            "left_tube_rear"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 3029415845,
+        "globalBroadcast": true,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "MainIsland",
+          "value": 1
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$type": "PatrolHelicopterAI",
+        "$name": "patrolhelicopter",
+        "_targetList": [],
+        "dangerZones": [],
+        "noGoZones": [],
+        "interestZoneOrigin": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "destination": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "hasInterestZone": false,
+        "moveSpeed": 0.0,
+        "maxSpeed": 42.0,
+        "courseAdjustLerpTime": 2.0,
+        "targetRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "windVec": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "targetWindVec": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "windForce": 0.5,
+        "windFrequency": 1.0,
+        "targetThrottleSpeed": 0.0,
+        "throttleSpeed": 0.0,
+        "maxRotationSpeed": 1.0,
+        "rotationSpeed": 0.0,
+        "terrainPushForce": 50.0,
+        "obstaclePushForce": 20.0,
+        "leftGun": {
+          "$type": "HelicopterTurret",
+          "$name": "gun_left_yaw",
+          "_heliAI": {
+            "$cycle": true,
+            "type": "PatrolHelicopterAI"
+          },
+          "fireRate": 0.090000003576278687,
+          "burstLength": 3.0,
+          "timeBetweenBursts": 4.0,
+          "maxTargetRange": 150.0,
+          "loseTargetAfter": 5.0,
+          "gun_yaw": {
+            "$ref": "Transform",
+            "name": "gun_left_yaw",
+            "instanceID": 1263546,
+            "goName": "gun_left_yaw",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          "gun_pitch": {
+            "$ref": "Transform",
+            "name": "gun_left",
+            "instanceID": 1263552,
+            "goName": "gun_left",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          "muzzleTransform": {
+            "$ref": "Transform",
+            "name": "gun_left_muzzle",
+            "instanceID": 1263554,
+            "goName": "gun_left_muzzle",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          "left": true,
+          "_target": null
+        },
+        "rightGun": {
+          "$type": "HelicopterTurret",
+          "$name": "gun_right_yaw",
+          "_heliAI": {
+            "$cycle": true,
+            "type": "PatrolHelicopterAI"
+          },
+          "fireRate": 0.090000003576278687,
+          "burstLength": 3.0,
+          "timeBetweenBursts": 4.0,
+          "maxTargetRange": 150.0,
+          "loseTargetAfter": 5.0,
+          "gun_yaw": {
+            "$ref": "Transform",
+            "name": "gun_right_yaw",
+            "instanceID": 1263532,
+            "goName": "gun_right_yaw",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          "gun_pitch": {
+            "$ref": "Transform",
+            "name": "gun_right",
+            "instanceID": 1263534,
+            "goName": "gun_right",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          "muzzleTransform": {
+            "$ref": "Transform",
+            "name": "gun_right_muzzle",
+            "instanceID": 1263548,
+            "goName": "gun_right_muzzle",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          "left": false,
+          "_target": null
+        },
+        "helicopterBase": {
+          "$ref": "PatrolHelicopter",
+          "name": "patrolhelicopter",
+          "instanceID": 1505246,
+          "goName": "patrolhelicopter",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "_currentState": {
+          "$enum": "PatrolHelicopterAI+aiState",
+          "name": "IDLE",
+          "value": 0
+        },
+        "oceanDepthTargetCutoff": 3.0,
+        "anim": {
+          "$type": "AIHelicopterAnimation",
+          "$name": "patrolhelicopter",
+          "_ai": {
+            "$cycle": true,
+            "type": "PatrolHelicopterAI"
+          },
+          "swayAmount": 3.0,
+          "impactSwayAmount": 12.0,
+          "lastStrafeScalar": 0.0,
+          "lastForwardBackScalar": 0.0,
+          "degreeMax": 90.0,
+          "lastPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "oldMoveSpeed": 0.0,
+          "smoothRateOfChange": 0.0,
+          "flareAmount": 0.0,
+          "swaySmoothingFactor": 0.20000000298023224
+        },
+        "isDead": false,
+        "isRetiring": false,
+        "spawnTime": 0.0,
+        "lastDamageTime": 0.0,
+        "maxOrbitDuration": 30.0,
+        "_visitedMonuments": [],
+        "arrivalTime": 0.0,
+        "rocketProjectile": {
+          "$ref": "GameObject",
+          "guid": "ea77e3985b20239478d2bea3d3106a6d",
+          "resourcePath": "assets/prefabs/npc/patrol helicopter/rocket_heli.prefab",
+          "resourceID": 129320027
+        },
+        "rocketProjectile_Napalm": {
+          "$ref": "GameObject",
+          "guid": "a103d2e34a7dd12458245921d718a392",
+          "resourcePath": "assets/prefabs/npc/patrol helicopter/rocket_heli_napalm.prefab",
+          "resourceID": 200672762
+        },
+        "leftTubeFiredLast": false,
+        "lastRocketTime": 0.0,
+        "timeBetweenRockets": 0.20000000298023224,
+        "numRocketsLeft": 12,
+        "strafe_target_position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "strafe_target": null,
+        "puttingDistance": false,
+        "lastNapalmTime": "-Infinity",
+        "lastStrafeTime": "-Infinity"
+      },
+      {
+        "$ref": "AIHelicopterAnimation",
+        "name": "patrolhelicopter",
+        "instanceID": 1505244,
+        "goName": "patrolhelicopter",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$type": "UnityEngine.Rigidbody",
+        "$name": "patrolhelicopter"
+      },
+      {
+        "$ref": "Model",
+        "name": "patrolhelicopter",
+        "instanceID": 1505260,
+        "goName": "patrolhelicopter",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$type": "MusicChangeIntensity",
+        "$name": "patrolhelicopter",
+        "raiseTo": 0.0,
+        "distanceIntensities": [
+          {
+            "$type": "MusicChangeIntensity+DistanceIntensity",
+            "distance": 1000.0,
+            "raiseTo": 0.25,
+            "forceStartMusicInSuppressedMusicZones": false
+          },
+          {
+            "$type": "MusicChangeIntensity+DistanceIntensity",
+            "distance": 600.0,
+            "raiseTo": 0.5,
+            "forceStartMusicInSuppressedMusicZones": false
+          },
+          {
+            "$type": "MusicChangeIntensity+DistanceIntensity",
+            "distance": 250.0,
+            "raiseTo": 0.75,
+            "forceStartMusicInSuppressedMusicZones": false
+          }
+        ],
+        "tickInterval": 1.0
+      }
+    ],
+    "children": [
+      {
+        "name": "RotorPivot",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 3.7899999618530273,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": -2.1855694143368964E-08,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "patrol_helicopter",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": -3.7899999618530273,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 4.3711388286737929E-08,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.MeshCollider",
+                "$name": "patrol_helicopter",
+                "colliderType": "Mesh",
+                "convex": false,
+                "sharedMesh": {
+                  "$ref": "Mesh",
+                  "name": "Box001",
+                  "meshId": "Box001_f8dad137"
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              }
+            ],
+            "children": [
+              {
+                "name": "w_patrol_helicopter_body",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "skin0",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.075965568423271179,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 7.5497894158615964E-08,
+                  "y": -4.371138473402425E-08,
+                  "z": 4.3711391839451608E-08,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "gun_left_yaw",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "skin0",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -1.2698360681533813,
+                      "y": 1.1929805278778076,
+                      "z": 0.083935089409351349
+                    },
+                    "localRotation": {
+                      "x": -6.5909870272662374E-07,
+                      "y": -0.7071068286895752,
+                      "z": -6.5909881641346146E-07,
+                      "w": 0.70710670948028564
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$ref": "HelicopterTurret",
+                        "name": "gun_left_yaw",
+                        "instanceID": 1505236,
+                        "goName": "gun_left_yaw",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      }
+                    ],
+                    "children": [
+                      {
+                        "name": "gun_left",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 7.4768067861441523E-05,
+                          "y": 0.12037650495767593,
+                          "z": -0.0013315486721694469
+                        },
+                        "localRotation": {
+                          "x": 1.947071694985425E-07,
+                          "y": -4.3711469999152541E-08,
+                          "z": -4.0133929246621847E-07,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": [
+                          {
+                            "name": "gun_left_muzzle",
+                            "layer": {
+                              "index": 0,
+                              "name": "Default"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": -0.0011792754521593451,
+                              "y": 0.157450869679451,
+                              "z": 0.27261459827423096
+                            },
+                            "localRotation": {
+                              "x": 5.2651097348643816E-07,
+                              "y": 2.4992779113636177E-13,
+                              "z": 4.7683710135970614E-07,
+                              "w": 1.0
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [
+                              {
+                                "$type": "ScaleRenderer",
+                                "$name": "gun_left_muzzle",
+                                "useRandomScale": false,
+                                "scaleMin": 1.0,
+                                "scaleMax": 1.0,
+                                "myRenderer": null
+                              }
+                            ],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "gun_right_yaw",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "skin0",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 1.2782224416732788,
+                      "y": 1.1929798126220703,
+                      "z": 0.0722767636179924
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.7071068286895752,
+                      "z": 0.0,
+                      "w": 0.70710670948028564
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$ref": "HelicopterTurret",
+                        "name": "gun_right_yaw",
+                        "instanceID": 1505238,
+                        "goName": "gun_right_yaw",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      }
+                    ],
+                    "children": [
+                      {
+                        "name": "gun_right",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -6.6375730966683477E-05,
+                          "y": 0.12037612497806549,
+                          "z": 0.001332464162260294
+                        },
+                        "localRotation": {
+                          "x": 7.5497894158615964E-08,
+                          "y": -1.1924875309432537E-08,
+                          "z": 7.5497908369470679E-08,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": [
+                          {
+                            "name": "gun_right_muzzle",
+                            "layer": {
+                              "index": 0,
+                              "name": "Default"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": -0.0002346038818359375,
+                              "y": 0.15745192766189575,
+                              "z": 0.28160819411277771
+                            },
+                            "localRotation": {
+                              "x": -2.384185791015625E-07,
+                              "y": -1.4215567606520527E-15,
+                              "z": 2.1316282072803006E-14,
+                              "w": 1.0
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [
+                              {
+                                "$type": "ScaleRenderer",
+                                "$name": "gun_right_muzzle",
+                                "useRandomScale": false,
+                                "scaleMin": 1.0,
+                                "scaleMax": 1.0,
+                                "myRenderer": null
+                              }
+                            ],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "tail_rotor_col",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.0070000002160668373,
+                  "y": 3.3410000801086426,
+                  "z": -9.2720003128051758
+                },
+                "localRotation": {
+                  "x": -4.3711388286737929E-08,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.SphereCollider",
+                    "$name": "tail_rotor_col",
+                    "colliderType": "Sphere",
+                    "center": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "radius": 1.0,
+                    "isTrigger": false,
+                    "enabled": true
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "main_rotor_col",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.0070037841796875,
+                  "y": 3.8199999332427979,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": -4.3711388286737929E-08,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.SphereCollider",
+                    "$name": "main_rotor_col",
+                    "colliderType": "Sphere",
+                    "center": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "radius": 0.800000011920929,
+                    "isTrigger": false,
+                    "enabled": true
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "engine_col",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.0070037841796875,
+                  "y": 2.7730000019073486,
+                  "z": -2.128000020980835
+                },
+                "localRotation": {
+                  "x": -0.0069590187631547451,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.99997580051422119
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "engine_col",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.034942626953125,
+                      "y": -0.012950485572218895,
+                      "z": 0.42948150634765625
+                    },
+                    "size": {
+                      "x": 2.7656292915344238,
+                      "y": 0.85742759704589844,
+                      "z": 4.0199375152587891
+                    },
+                    "isTrigger": false,
+                    "enabled": true
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "spotlight_pivot",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.029999999329447746,
+                  "y": 0.35600000619888306,
+                  "z": 4.15500020980835
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "ColliderWorld",
+                "layer": {
+                  "index": 15,
+                  "name": "Vehicle World"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.MeshCollider",
+                    "$name": "ColliderWorld",
+                    "colliderType": "Mesh",
+                    "convex": false,
+                    "sharedMesh": {
+                      "$ref": "Mesh",
+                      "name": "Box001",
+                      "meshId": "Box001_f8dad137"
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "PFX_Flares_PatrolHelicopter",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": -0.20000000298023224,
+                  "z": -2.2699999809265137
+                },
+                "localRotation": {
+                  "x": -4.3711388286737929E-08,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "ParticleSystemContainer",
+                    "$name": "PFX_Flares_PatrolHelicopter",
+                    "precached": false,
+                    "includeLights": false,
+                    "particleGroups": [],
+                    "lights": [],
+                    "lightExs": []
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "Flares Left",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -1.1619999408721924,
+                      "y": 0.97600001096725464,
+                      "z": 2.127000093460083
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": -0.60876137018203735,
+                      "z": 0.0,
+                      "w": 0.7933533787727356
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "ParticleSystemContainer",
+                        "$name": "Flares Left",
+                        "precached": false,
+                        "includeLights": false,
+                        "particleGroups": [],
+                        "lights": [],
+                        "lightExs": []
+                      }
+                    ],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "rocket_tube_right",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.6821737289428711,
+              "y": -3.38906192779541,
+              "z": 1.4476622343063354
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "right_tube_rear",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": -2.9170000553131104
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "rocket_tube_left",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -1.690000057220459,
+              "y": -3.38906192779541,
+              "z": 1.4476622343063354
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "left_tube_rear",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": -2.9170000553131104
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "PrefabInformation": [
+      {
+        "$type": "PrefabInformation",
+        "$name": "<destroyed native object>",
+        "prefabID": 3029415845,
+        "hierachyName": "patrolhelicopter",
+        "associatedItemDefinition": null,
+        "title": {
+          "$type": "Translate+Phrase",
+          "token": "patrolhelicopter.name",
+          "legacyEnglish": "Patrol Helicopter"
+        },
+        "description": {
+          "$type": "Translate+Phrase",
+          "token": "",
+          "legacyEnglish": ""
+        },
+        "sprite": null,
+        "shownOnDeathScreen": true,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/npc/patrol helicopter/patrolhelicopter.prefab",
+        "instanceID": 1551116,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,585 @@
+{
+  "prefabID": 3537156861,
+  "path": "assets/prefabs/tools/jackhammer/jackhammer.entity.prefab",
+  "rootClassChain": [
+    "Jackhammer",
+    "BaseMelee",
+    "AttackEntity",
+    "HeldEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.25410076975822449,
+      "y": -0.0064235925674438477,
+      "z": 0.0074016004800796509
+    },
+    "size": {
+      "x": 0.66528159379959106,
+      "y": 0.21626639366149902,
+      "z": 0.11426560580730438
+    }
+  },
+  "hierarchy": {
+    "name": "jackhammer.entity",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "Jackhammer",
+        "$name": "jackhammer.entity",
+        "canThrowAsProjectile": false,
+        "canThrowAsEntity": false,
+        "canAiHearIt": false,
+        "canScareAiWhenAimed": false,
+        "onlyThrowAsProjectile": false,
+        "ThrowFullStack": true,
+        "damageProperties": {
+          "$ref": "DamageProperties",
+          "name": "Damage.Melee",
+          "instanceID": 200564
+        },
+        "damageTypes": [
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Stab",
+              "value": 15
+            },
+            "amount": 15.0
+          }
+        ],
+        "deployableDamageOverrides": [],
+        "maxDistance": 2.0,
+        "attackRadius": 0.30000001192092896,
+        "isAutomatic": true,
+        "blockSprintOnAttack": true,
+        "canUntieCrates": false,
+        "longResourceForgiveness": false,
+        "PlayerAnimSystem": null,
+        "strikeFX": {
+          "$ref": "GameObject",
+          "guid": "0e8bc165ae19342baa4628befd05b63f",
+          "resourcePath": "assets/prefabs/weapons/salvaged_icepick/effects/strike-soft.prefab",
+          "resourceID": 2865897653
+        },
+        "useStandardHitEffects": true,
+        "aiStrikeDelay": 0.20000000298023224,
+        "swingEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "materialStrikeFX": [
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "generic",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "413c35597f9aa6443bf6216573990556",
+              "resourcePath": "assets/prefabs/weapons/salvaged_icepick/effects/strike.prefab",
+              "resourceID": 4128605516
+            }
+          },
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "metal",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "413c35597f9aa6443bf6216573990556",
+              "resourcePath": "assets/prefabs/weapons/salvaged_icepick/effects/strike.prefab",
+              "resourceID": 4128605516
+            }
+          },
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "metalore",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "413c35597f9aa6443bf6216573990556",
+              "resourcePath": "assets/prefabs/weapons/salvaged_icepick/effects/strike.prefab",
+              "resourceID": 4128605516
+            }
+          },
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "rock",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "413c35597f9aa6443bf6216573990556",
+              "resourcePath": "assets/prefabs/weapons/salvaged_icepick/effects/strike.prefab",
+              "resourceID": 4128605516
+            }
+          },
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "concrete",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "413c35597f9aa6443bf6216573990556",
+              "resourcePath": "assets/prefabs/weapons/salvaged_icepick/effects/strike.prefab",
+              "resourceID": 4128605516
+            }
+          },
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "wood",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "cb5d6c06a7576456693d978b38ccbcc1",
+              "resourcePath": "assets/prefabs/weapons/salvaged_icepick/effects/strike-muted.prefab",
+              "resourceID": 457752274
+            }
+          }
+        ],
+        "heartStress": 0.5,
+        "gathering": {
+          "$type": "ResourceDispenser+GatherProperties",
+          "Tree": {
+            "$type": "ResourceDispenser+GatherPropertyEntry",
+            "gatherDamage": 0.0,
+            "destroyFraction": 0.0,
+            "conditionLost": 0.0
+          },
+          "Ore": {
+            "$type": "ResourceDispenser+GatherPropertyEntry",
+            "gatherDamage": 25.0,
+            "destroyFraction": 0.0,
+            "conditionLost": 0.20000000298023224
+          },
+          "Flesh": {
+            "$type": "ResourceDispenser+GatherPropertyEntry",
+            "gatherDamage": 5.0,
+            "destroyFraction": 0.20000000298023224,
+            "conditionLost": 0.5
+          },
+          "ProduceHeadItem": false
+        },
+        "deployDelay": 1.0,
+        "repeatDelay": 0.15000000596046448,
+        "animationDelay": 0.0,
+        "effectiveRange": 1.0,
+        "npcDamageScale": 1.0,
+        "attackLengthMin": -1.0,
+        "attackLengthMax": -1.0,
+        "attackSpacing": 0.0,
+        "aiAimSwayOffset": 0.0,
+        "aiAimCone": 0.0,
+        "aiOnlyInRange": false,
+        "CloseRangeAddition": 0.0,
+        "MediumRangeAddition": 0.0,
+        "LongRangeAddition": 0.0,
+        "CanUseAtMediumRange": true,
+        "CanUseAtLongRange": true,
+        "reloadSounds": [],
+        "thirdPersonMeleeSound": {
+          "$ref": "SoundDefinition",
+          "name": "salvaged-icepick-attack-3p",
+          "instanceID": 34234
+        },
+        "recoilCompDelayOverride": 0.0,
+        "wantsRecoilComp": false,
+        "showCrosshairOnTutorial": false,
+        "noHeadshots": false,
+        "nextAttackTime": {
+          "$type": "EncryptedValue`1[[System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+        },
+        "worldModelAnimator": null,
+        "thirdPersonDeploySound": {
+          "$ref": "SoundDefinition",
+          "name": "salvaged-icepick-deploy-3p",
+          "instanceID": 28496
+        },
+        "thirdPersonAimSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-up",
+          "instanceID": 24732
+        },
+        "thirdPersonAimEndSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-down",
+          "instanceID": 24854
+        },
+        "hideViewmodel": false,
+        "handBone": "r_prop",
+        "HoldAnimationOverride": {
+          "$ref": "AnimatorOverrideController",
+          "name": "HoldType.Jackhammer",
+          "instanceID": 1022348
+        },
+        "holdInfo": {
+          "$type": "HeldEntity+HoldInfo",
+          "UseCustomSpineOffset": true,
+          "CustomSpineOffset": {
+            "x": 4.74399995803833,
+            "y": -57.055999755859375,
+            "z": -101.33899688720703
+          },
+          "ShieldBoneArmRotationAdditive": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "isBuildingTool": false,
+        "canBeUsedWithShield": false,
+        "ForwardSignalsFromPlayer": false,
+        "forcedOwner": null,
+        "useOwnerForward": true,
+        "CanSetLightsOn": false,
+        "holsterInfo": {
+          "$type": "HeldEntity+HolsterInfo",
+          "slot": {
+            "$enum": "HeldEntity+HolsterInfo+HolsterSlot",
+            "name": "BACK",
+            "value": 0
+          },
+          "backpackSlot": {
+            "$enum": "HeldEntity+HolsterInfo+BackpackSlot",
+            "name": "RIGHT",
+            "value": 1
+          },
+          "displayWhenHolstered": true,
+          "holsterBone": "spine3",
+          "holsterOffset": {
+            "x": -0.23000000417232513,
+            "y": -0.2199999988079071,
+            "z": -0.079999998211860657
+          },
+          "holsterRotationOffset": {
+            "x": -90.0,
+            "y": -23.909999847412109,
+            "z": 0.0
+          },
+          "backpackHolsterOffset": {
+            "x": -0.38999998569488525,
+            "y": -0.12999999523162842,
+            "z": -0.40000000596046448
+          },
+          "backpackHolsterRotationOffset": {
+            "x": -90.0,
+            "y": -3.0,
+            "z": -32.409999847412109
+          }
+        },
+        "HeldCameraMode": {
+          "$enum": "BasePlayer+CameraMode",
+          "name": "FirstPerson",
+          "value": 0
+        },
+        "hostileScore": 4.0,
+        "FirstPersonArmOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonArmRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonRotationStrength": 1.0,
+        "AttachmentAnchor": [
+          []
+        ],
+        "holsterVisible": false,
+        "genericVisible": false,
+        "ownerItemUID": {
+          "$type": "ItemId",
+          "Value": 0
+        },
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.25410076975822449,
+            "y": -0.0064235925674438477,
+            "z": 0.0074016004800796509
+          },
+          "size": {
+            "x": 0.66528159379959106,
+            "y": 0.21626639366149902,
+            "z": 0.11426560580730438
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "jackhammer.entity",
+          "collision": null,
+          "rootBone": [
+            [
+              {
+                "$ref": "Transform",
+                "name": "Charm",
+                "instanceID": 1295074,
+                "goName": "Charm",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ]
+          ],
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "jackhammer.entity",
+              "instanceID": 1248030,
+              "goName": "jackhammer.entity",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "jackhammer",
+              "instanceID": 1275688,
+              "goName": "jackhammer",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Charm",
+              "instanceID": 1295074,
+              "goName": "Charm",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "v_CharmAnchor",
+              "instanceID": 1347038,
+              "goName": "v_CharmAnchor",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "jackhammer.entity",
+            "jackhammer",
+            "Charm",
+            "v_CharmAnchor"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 3537156861,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Small",
+          "value": 0
+        },
+        "net": null
+      },
+      {
+        "$ref": "Model",
+        "name": "jackhammer.entity",
+        "instanceID": 1573014,
+        "goName": "jackhammer.entity",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "children": [
+      {
+        "name": "jackhammer",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "Charm",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.013249999843537807,
+              "y": 0.082340002059936523,
+              "z": 0.013319999910891056
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": -2.3841855067985307E-07,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 0.75,
+              "y": 0.75,
+              "z": 0.75
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "v_CharmAnchor",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": false,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "ViewModelRenderer",
+                    "$name": "v_CharmAnchor",
+                    "cachedTextureRefs": [
+                      null,
+                      null,
+                      null,
+                      null
+                    ],
+                    "opaqueEvents": [
+                      {
+                        "$type": "ViewModelDrawEvent",
+                        "viewModelRenderer": {
+                          "$cycle": true,
+                          "type": "ViewModelRenderer"
+                        },
+                        "renderer": null,
+                        "skipDepthPrePass": false,
+                        "material": null,
+                        "subMesh": 0,
+                        "pass": 2,
+                        "needsFilteredRefraction": false
+                      }
+                    ],
+                    "transparentEvents": [],
+                    "prevModelMatrix": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ]
+                  }
+                ],
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Socket_Base": []
+  }
+}

@@ -1,0 +1,451 @@
+{
+  "prefabID": 365233245,
+  "path": "assets/prefabs/weapons/hatchet/hatchet.entity.prefab",
+  "rootClassChain": [
+    "BaseMelee",
+    "AttackEntity",
+    "HeldEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -0.11705908179283142,
+      "y": -0.02267373725771904,
+      "z": -0.099557474255561829
+    },
+    "size": {
+      "x": 0.23411816358566284,
+      "y": 0.10728935152292252,
+      "z": 0.36103096604347229
+    }
+  },
+  "hierarchy": {
+    "name": "hatchet.entity",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "BaseMelee",
+        "$name": "hatchet.entity",
+        "canThrowAsProjectile": true,
+        "canThrowAsEntity": false,
+        "canAiHearIt": false,
+        "canScareAiWhenAimed": false,
+        "onlyThrowAsProjectile": false,
+        "ThrowFullStack": true,
+        "damageProperties": {
+          "$ref": "DamageProperties",
+          "name": "Damage.Melee",
+          "instanceID": 200564
+        },
+        "damageTypes": [
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Slash",
+              "value": 10
+            },
+            "amount": 15.0
+          },
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Blunt",
+              "value": 11
+            },
+            "amount": 10.0
+          }
+        ],
+        "deployableDamageOverrides": [],
+        "maxDistance": 1.5,
+        "attackRadius": 0.30000001192092896,
+        "isAutomatic": true,
+        "blockSprintOnAttack": true,
+        "canUntieCrates": false,
+        "longResourceForgiveness": false,
+        "PlayerAnimSystem": null,
+        "strikeFX": {
+          "$ref": "GameObject",
+          "guid": "2a71bcd8baf774c298f55baa2079600c",
+          "resourcePath": "assets/prefabs/weapons/hatchet/effects/strike-soft.prefab",
+          "resourceID": 81194378
+        },
+        "useStandardHitEffects": true,
+        "aiStrikeDelay": 0.20000000298023224,
+        "swingEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "materialStrikeFX": [
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "generic",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "3d5571620a1796446b3244d4ac3baf94",
+              "resourcePath": "assets/prefabs/weapons/hatchet/effects/strike.prefab",
+              "resourceID": 474408751
+            }
+          },
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "metal",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "3d5571620a1796446b3244d4ac3baf94",
+              "resourcePath": "assets/prefabs/weapons/hatchet/effects/strike.prefab",
+              "resourceID": 474408751
+            }
+          },
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "metalore",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "3d5571620a1796446b3244d4ac3baf94",
+              "resourcePath": "assets/prefabs/weapons/hatchet/effects/strike.prefab",
+              "resourceID": 474408751
+            }
+          },
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "rock",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "3d5571620a1796446b3244d4ac3baf94",
+              "resourcePath": "assets/prefabs/weapons/hatchet/effects/strike.prefab",
+              "resourceID": 474408751
+            }
+          },
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "concrete",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "3d5571620a1796446b3244d4ac3baf94",
+              "resourcePath": "assets/prefabs/weapons/hatchet/effects/strike.prefab",
+              "resourceID": 474408751
+            }
+          },
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "wood",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "d6f93c4e9119d48f4a59ca110bddfdbf",
+              "resourcePath": "assets/prefabs/weapons/hatchet/effects/strike-muted.prefab",
+              "resourceID": 3369138660
+            }
+          }
+        ],
+        "heartStress": 0.5,
+        "gathering": {
+          "$type": "ResourceDispenser+GatherProperties",
+          "Tree": {
+            "$type": "ResourceDispenser+GatherPropertyEntry",
+            "gatherDamage": 30.0,
+            "destroyFraction": 0.10000000149011612,
+            "conditionLost": 0.33340001106262207
+          },
+          "Ore": {
+            "$type": "ResourceDispenser+GatherPropertyEntry",
+            "gatherDamage": 0.0,
+            "destroyFraction": 0.0,
+            "conditionLost": 0.0
+          },
+          "Flesh": {
+            "$type": "ResourceDispenser+GatherPropertyEntry",
+            "gatherDamage": 12.0,
+            "destroyFraction": 0.0,
+            "conditionLost": 1.0
+          },
+          "ProduceHeadItem": false
+        },
+        "deployDelay": 1.0,
+        "repeatDelay": 0.89999997615814209,
+        "animationDelay": 0.0,
+        "effectiveRange": 1.0,
+        "npcDamageScale": 0.5,
+        "attackLengthMin": -1.0,
+        "attackLengthMax": -1.0,
+        "attackSpacing": 0.0,
+        "aiAimSwayOffset": 0.0,
+        "aiAimCone": 0.0,
+        "aiOnlyInRange": false,
+        "CloseRangeAddition": 0.0,
+        "MediumRangeAddition": 0.0,
+        "LongRangeAddition": 0.0,
+        "CanUseAtMediumRange": true,
+        "CanUseAtLongRange": true,
+        "reloadSounds": [],
+        "thirdPersonMeleeSound": {
+          "$ref": "SoundDefinition",
+          "name": "hatchet-attack-3p",
+          "instanceID": 34250
+        },
+        "recoilCompDelayOverride": 0.0,
+        "wantsRecoilComp": false,
+        "showCrosshairOnTutorial": false,
+        "noHeadshots": false,
+        "nextAttackTime": {
+          "$type": "EncryptedValue`1[[System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+        },
+        "worldModelAnimator": null,
+        "thirdPersonDeploySound": {
+          "$ref": "SoundDefinition",
+          "name": "hatchet-deploy-3p",
+          "instanceID": 28436
+        },
+        "thirdPersonAimSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-up",
+          "instanceID": 24732
+        },
+        "thirdPersonAimEndSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-down",
+          "instanceID": 24854
+        },
+        "hideViewmodel": false,
+        "handBone": "r_prop",
+        "HoldAnimationOverride": null,
+        "holdInfo": {
+          "$type": "HeldEntity+HoldInfo",
+          "UseCustomSpineOffset": false,
+          "CustomSpineOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ShieldBoneArmRotationAdditive": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "isBuildingTool": false,
+        "canBeUsedWithShield": true,
+        "ForwardSignalsFromPlayer": false,
+        "forcedOwner": null,
+        "useOwnerForward": true,
+        "CanSetLightsOn": false,
+        "holsterInfo": {
+          "$type": "HeldEntity+HolsterInfo",
+          "slot": {
+            "$enum": "HeldEntity+HolsterInfo+HolsterSlot",
+            "name": "BACK",
+            "value": 0
+          },
+          "backpackSlot": {
+            "$enum": "HeldEntity+HolsterInfo+BackpackSlot",
+            "name": "RIGHT",
+            "value": 1
+          },
+          "displayWhenHolstered": true,
+          "holsterBone": "spine3",
+          "holsterOffset": {
+            "x": -0.10000000149011612,
+            "y": -0.17000000178813934,
+            "z": -0.070000000298023224
+          },
+          "holsterRotationOffset": {
+            "x": -169.03999328613281,
+            "y": -36.4900016784668,
+            "z": -88.0
+          },
+          "backpackHolsterOffset": {
+            "x": -0.23999999463558197,
+            "y": -0.10999999940395355,
+            "z": -0.38999998569488525
+          },
+          "backpackHolsterRotationOffset": {
+            "x": -184.39999389648438,
+            "y": -91.669998168945313,
+            "z": -42.0
+          }
+        },
+        "HeldCameraMode": {
+          "$enum": "BasePlayer+CameraMode",
+          "name": "FirstPerson",
+          "value": 0
+        },
+        "hostileScore": 3.0,
+        "FirstPersonArmOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonArmRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonRotationStrength": 1.0,
+        "AttachmentAnchor": null,
+        "holsterVisible": false,
+        "genericVisible": false,
+        "ownerItemUID": {
+          "$type": "ItemId",
+          "Value": 0
+        },
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -0.11705908179283142,
+            "y": -0.02267373725771904,
+            "z": -0.099557474255561829
+          },
+          "size": {
+            "x": 0.23411816358566284,
+            "y": 0.10728935152292252,
+            "z": 0.36103096604347229
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "w_hatchet",
+          "collision": null,
+          "rootBone": [],
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "w_hatchet",
+              "instanceID": 1270804,
+              "goName": "w_hatchet",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "w_hatchet"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 365233245,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Small",
+          "value": 0
+        },
+        "net": null
+      }
+    ],
+    "children": [
+      {
+        "name": "w_hatchet",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "Model",
+            "name": "w_hatchet",
+            "instanceID": 1542108,
+            "goName": "w_hatchet",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Socket_Base": []
+  }
+}

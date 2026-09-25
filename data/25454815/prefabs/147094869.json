@@ -1,0 +1,1293 @@
+{
+  "prefabID": 147094869,
+  "path": "assets/prefabs/deployable/elevator/elevator_lift.prefab",
+  "rootClassChain": [
+    "ElevatorLiftPlayer",
+    "ElevatorLift",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.00033974647521972656,
+      "y": -0.43470096588134766,
+      "z": -0.0011684894561767578
+    },
+    "size": {
+      "x": 2.5537662506103516,
+      "y": 1.3046009540557861,
+      "z": 2.675926685333252
+    }
+  },
+  "hierarchy": {
+    "name": "elevator_lift",
+    "layer": {
+      "index": 8,
+      "name": "Deployed"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "ElevatorLiftPlayer",
+        "$name": "elevator_lift",
+        "CableRoot": [],
+        "CableRootTop": [
+          [
+            {
+              "$ref": "Transform",
+              "name": "lift",
+              "instanceID": 1365546,
+              "goName": "lift",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        ],
+        "CableRootOffset": 0.0,
+        "CableRootTopOffset": -0.10000000149011612,
+        "DescendingHurtTrigger": {
+          "$ref": "GameObject",
+          "name": "HurtTrigger",
+          "instanceID": 1233712
+        },
+        "MovementCollider": {
+          "$ref": "GameObject",
+          "name": "HorseSurface",
+          "instanceID": 1182172
+        },
+        "Buttons": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "UpButtonPoint": [],
+        "DownButtonPoint": [],
+        "GoTopButtonPoint": null,
+        "GoBottomButtonPoint": null,
+        "VehicleTrigger": {
+          "$type": "TriggerNotify",
+          "$name": "VehicleTrigger",
+          "notifyTarget": null,
+          "runClientside": false,
+          "runServerside": true,
+          "interestLayers": 32768,
+          "contents": null,
+          "entityContents": null,
+          "OnEntityEnterTrigger": null,
+          "OnEntityLeaveTrigger": null
+        },
+        "LiftArrivalScreenBounce": {
+          "$ref": "GameObject",
+          "guid": "082b159f58699364b95d1a6dbf8026b0",
+          "resourcePath": "assets/bundled/prefabs/fx/elevator_arrive.prefab",
+          "resourceID": 3169767033
+        },
+        "liftMovementLoopDef": {
+          "$ref": "SoundDefinition",
+          "name": "elevator-movement-loop",
+          "instanceID": 405350
+        },
+        "liftMovementStartDef": {
+          "$ref": "SoundDefinition",
+          "name": "elevator-movement-start",
+          "instanceID": 185932
+        },
+        "liftMovementStopDef": {
+          "$ref": "SoundDefinition",
+          "name": "elevator-movement-stop",
+          "instanceID": 392356
+        },
+        "liftMovementAccentSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "elevator-movement-squeak",
+          "instanceID": 401628
+        },
+        "liftButtonPressedEffect": {
+          "$ref": "GameObject",
+          "guid": "3ed690e25adfb4d42b937c1e37655d4d",
+          "resourcePath": "assets/prefabs/deployable/elevator/effects/elevator-button-pressed.prefab",
+          "resourceID": 2675730867
+        },
+        "movementAccentMinInterval": 0.75,
+        "movementAccentMaxInterval": 3.0,
+        "lastPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "vehicleWhitelist": [
+          {
+            "$ref": "Drone",
+            "name": "drone.deployed",
+            "instanceID": 620964,
+            "goName": "drone.deployed"
+          },
+          {
+            "$ref": "Bike",
+            "name": "Motorbike",
+            "instanceID": 620344,
+            "goName": "Motorbike"
+          },
+          {
+            "$ref": "Bike",
+            "name": "PedalBike",
+            "instanceID": 620342,
+            "goName": "PedalBike"
+          },
+          {
+            "$ref": "Snowmobile",
+            "name": "Snowmobile",
+            "instanceID": 619820,
+            "goName": "Snowmobile"
+          },
+          {
+            "$ref": "Bike",
+            "name": "Motorbike_Sidecar",
+            "instanceID": 620754,
+            "goName": "Motorbike_Sidecar"
+          },
+          {
+            "$ref": "Bike",
+            "name": "PedalTrike",
+            "instanceID": 620122,
+            "goName": "PedalTrike"
+          },
+          {
+            "$ref": "RidableHorse",
+            "name": "RidableHorse",
+            "instanceID": 620924,
+            "goName": "RidableHorse"
+          }
+        ],
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "DeployableWood",
+          "comments": "",
+          "density": 2.0,
+          "amounts": [
+            0.89999997615814209,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.89999997615814209,
+            0.5,
+            0.5,
+            0.0,
+            1.0,
+            1.0,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.5,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 3789131351
+        },
+        "startHealth": 100.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": false,
+          "itemTarget": null,
+          "itemCount": 0,
+          "setConditionFromHealth": false,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": false,
+          "requireHammer": false,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": false,
+          "itemTarget": null,
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": false,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.00033974647521972656,
+            "y": -0.43470096588134766,
+            "z": -0.0011684894561767578
+          },
+          "size": {
+            "x": 2.5537662506103516,
+            "y": 1.3046009540557861,
+            "z": 2.675926685333252
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": true,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 147094869,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      }
+    ],
+    "children": [
+      {
+        "name": "lift",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 8.1460342471473268E-08,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "lift_col",
+        "layer": {
+          "index": 13,
+          "name": "Vehicle Detailed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "lift_col",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "lift_COL",
+              "meshId": "lift_COL_b785a327"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Metal",
+              "instanceID": 609842
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "lift_button_down",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -1.0575000047683716,
+          "y": -0.076299965381622314,
+          "z": -0.37700000405311584
+        },
+        "localRotation": {
+          "x": -0.015425420366227627,
+          "y": 0.70693749189376831,
+          "z": 0.015425372868776321,
+          "w": 0.70693957805633545
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.CapsuleCollider",
+            "$name": "lift_button_down",
+            "colliderType": "Capsule",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "radius": 0.029999999329447746,
+            "height": 0.090000003576278687,
+            "direction": 2,
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "lift_button_down_express",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -1.1230000257492065,
+          "y": -0.0812000036239624,
+          "z": -0.27320000529289246
+        },
+        "localRotation": {
+          "x": -4.4237822294235229E-08,
+          "y": -9.2387193717513583E-07,
+          "z": 0.021814808249473572,
+          "w": 0.99976205825805664
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.CapsuleCollider",
+            "$name": "lift_button_down_express",
+            "colliderType": "Capsule",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "radius": 0.029999999329447746,
+            "height": 0.090000003576278687,
+            "direction": 2,
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "lift_button_up",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -1.0611000061035156,
+          "y": 0.006399999838322401,
+          "z": -0.37700000405311584
+        },
+        "localRotation": {
+          "x": -0.015425420366227627,
+          "y": 0.70693749189376831,
+          "z": 0.015425372868776321,
+          "w": 0.70693957805633545
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.CapsuleCollider",
+            "$name": "lift_button_up",
+            "colliderType": "Capsule",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -0.029999999329447746
+            },
+            "radius": 0.029999999329447746,
+            "height": 0.090000003576278687,
+            "direction": 2,
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "lift_button_up_express",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -1.1289999485015869,
+          "y": 0.056200001388788223,
+          "z": -0.27320000529289246
+        },
+        "localRotation": {
+          "x": -4.4237822294235229E-08,
+          "y": -9.2387193717513583E-07,
+          "z": 0.021814808249473572,
+          "w": 0.99976205825805664
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.CapsuleCollider",
+            "$name": "lift_button_up_express",
+            "colliderType": "Capsule",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "radius": 0.029999999329447746,
+            "height": 0.090000003576278687,
+            "direction": 2,
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "RagdollTrigger",
+        "layer": {
+          "index": 18,
+          "name": "Trigger"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": -1.1499999761581421,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 2.821298892285995E-07,
+          "y": -7.1764648260433384E-13,
+          "z": -5.9604644775390625E-08,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "RagdollTrigger",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "size": {
+              "x": 2.5,
+              "y": 0.10000000149011612,
+              "z": 2.5
+            },
+            "isTrigger": true,
+            "enabled": true
+          },
+          {
+            "$type": "TriggerRagdollRelocate",
+            "$name": "RagdollTrigger",
+            "targetLocation": [],
+            "interestLayers": 512,
+            "contents": null,
+            "entityContents": null,
+            "OnEntityEnterTrigger": null,
+            "OnEntityLeaveTrigger": null
+          }
+        ],
+        "children": [
+          {
+            "name": "Reposition",
+            "layer": {
+              "index": 18,
+              "name": "Trigger"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.800000011920929,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "lift_cable_reel",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": -1.6292068494294654E-07
+        },
+        "localRotation": {
+          "x": 8.1460342471473268E-08,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "root",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": -5.9386088651081081E-06,
+              "y": 3.67337583961902E-11,
+              "z": -5.9604644775390625E-08,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "lift",
+                "layer": {
+                  "index": 8,
+                  "name": "Deployed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 6.1392784118652344E-06,
+                  "y": -3.709033080667723E-11,
+                  "z": 2.2770786721037356E-16,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "motor_wheel_A",
+                "layer": {
+                  "index": 8,
+                  "name": "Deployed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 1.2151334285736084,
+                  "y": 2.51579213142395,
+                  "z": 2.2125246687210165E-05
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.70710384845733643,
+                  "z": 0.0,
+                  "w": 0.707109808921814
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "motor_wheel_B",
+                "layer": {
+                  "index": 8,
+                  "name": "Deployed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -1.2162363529205322,
+                  "y": 2.5157918930053711,
+                  "z": 2.243041672045365E-05
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.70710384845733643,
+                  "z": 0.0,
+                  "w": 0.707109808921814
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "pulley_A",
+                "layer": {
+                  "index": 8,
+                  "name": "Deployed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 1.2173305749893188,
+                  "y": 2.4286866188049316,
+                  "z": -1.0274971723556519
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.70710384845733643,
+                  "z": 0.0,
+                  "w": 0.707109808921814
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "pulley_B",
+                "layer": {
+                  "index": 8,
+                  "name": "Deployed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 1.2173308134078979,
+                  "y": 2.4286689758300781,
+                  "z": 1.026823878288269
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.70710384845733643,
+                  "z": 0.0,
+                  "w": 0.707109808921814
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "pulley_C",
+                "layer": {
+                  "index": 8,
+                  "name": "Deployed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -1.217329740524292,
+                  "y": 2.4286863803863525,
+                  "z": -1.0274968147277832
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.70710384845733643,
+                  "z": 0.0,
+                  "w": 0.707109808921814
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "pulley_D",
+                "layer": {
+                  "index": 8,
+                  "name": "Deployed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -1.2173295021057129,
+                  "y": 2.428668737411499,
+                  "z": 1.0268241167068481
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.70710384845733643,
+                  "z": 0.0,
+                  "w": 0.707109808921814
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "HurtTrigger",
+        "layer": {
+          "index": 18,
+          "name": "Trigger"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": -1.1499999761581421,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 2.821298892285995E-07,
+          "y": -7.1764648260433384E-13,
+          "z": -5.9604644775390625E-08,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "HurtTrigger",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "size": {
+              "x": 2.2000000476837158,
+              "y": 0.12999999523162842,
+              "z": 2.2000000476837158
+            },
+            "isTrigger": true,
+            "enabled": true
+          },
+          {
+            "$type": "CrushTrigger",
+            "$name": "HurtTrigger",
+            "includeNPCs": true,
+            "requireCentreBelowPosition": true,
+            "lineOfSightCheck": true,
+            "DamagePerSecond": 300.0,
+            "DamageTickRate": 0.25,
+            "damageType": {
+              "$enum": "Rust.DamageType",
+              "name": "Blunt",
+              "value": 11
+            },
+            "interestLayers": 133120,
+            "contents": null,
+            "entityContents": null,
+            "OnEntityEnterTrigger": null,
+            "OnEntityLeaveTrigger": null
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "ParentTrigger",
+        "layer": {
+          "index": 18,
+          "name": "Trigger"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "ParentTrigger",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": -0.056035280227661133,
+              "z": 0.0
+            },
+            "size": {
+              "x": 2.0,
+              "y": 1.8879294395446777,
+              "z": 2.0
+            },
+            "isTrigger": true,
+            "enabled": true
+          },
+          {
+            "$type": "TriggerParentElevator",
+            "$name": "ParentTrigger",
+            "AllowHorsesToBypassClippingChecks": true,
+            "AllowBikesToBypassClippingChecks": true,
+            "IgnoreParentEntityColliders": true,
+            "Padding": 1.5,
+            "intersectionMode": {
+              "$enum": "TriggerParentEnclosed+TriggerMode",
+              "name": "TriggerPoint",
+              "value": 0
+            },
+            "CheckBoundsOnUnparent": false,
+            "boxCollider": null,
+            "StableIndex": -1,
+            "doClippingCheck": true,
+            "associatedMountable": null,
+            "parentMountedPlayers": false,
+            "parentSleepers": false,
+            "parentSwimmers": false,
+            "ParentNPCPlayers": false,
+            "SkipNPCChecks": false,
+            "overrideOtherTriggers": false,
+            "checkForObjUnderFeet": false,
+            "doExpensivePlayerClippingChecks": false,
+            "TriggerMovementMask": {
+              "$enum": "BaseEntity+Axis",
+              "name": "XYZ",
+              "value": 7,
+              "flagNames": [
+                "X",
+                "Y",
+                "XY",
+                "Z",
+                "XZ",
+                "YZ",
+                "XYZ"
+              ]
+            },
+            "EntityMovementMask": {
+              "$enum": "BaseEntity+Axis",
+              "name": "XYZ",
+              "value": 7,
+              "flagNames": [
+                "X",
+                "Y",
+                "XY",
+                "Z",
+                "XZ",
+                "YZ",
+                "XYZ"
+              ]
+            },
+            "interestLayers": -2147317248,
+            "contents": null,
+            "entityContents": null,
+            "OnEntityEnterTrigger": null,
+            "OnEntityLeaveTrigger": null
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "VehicleTrigger",
+        "layer": {
+          "index": 18,
+          "name": "Trigger"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "VehicleTrigger",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "size": {
+              "x": 2.0,
+              "y": 2.0,
+              "z": 2.0
+            },
+            "isTrigger": true,
+            "enabled": true
+          },
+          {
+            "$ref": "TriggerNotify",
+            "name": "VehicleTrigger",
+            "instanceID": 1559984,
+            "goName": "VehicleTrigger",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "HorseSurface",
+        "layer": {
+          "index": 16,
+          "name": "World"
+        },
+        "tag": "BlockBarricadePlacement",
+        "customTags": [
+          "BlockBarricadePlacement"
+        ],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": -0.925000011920929,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "HorseSurface",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": -0.083562582731246948,
+              "z": 0.0
+            },
+            "size": {
+              "x": 2.5999999046325684,
+              "y": 0.26712518930435181,
+              "z": 3.0
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "VehicleSurface",
+        "layer": {
+          "index": 16,
+          "name": "World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": -0.925000011920929,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "VehicleSurface",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": -0.083562582731246948,
+              "z": 0.0
+            },
+            "size": {
+              "x": 2.5999999046325684,
+              "y": 0.26712518930435181,
+              "z": 2.5999999046325684
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {}
+}

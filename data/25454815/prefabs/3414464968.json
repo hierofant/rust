@@ -1,0 +1,3745 @@
+{
+  "prefabID": 3414464968,
+  "path": "assets/content/vehicles/modularcar/module_entities/1module_cockpit_with_engine.prefab",
+  "rootClassChain": [
+    "VehicleModuleEngine",
+    "VehicleModuleStorage",
+    "VehicleModuleSeating",
+    "BaseVehicleModule",
+    "BaseVehicle",
+    "BaseMountable",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.0,
+      "y": 0.5,
+      "z": 0.0
+    },
+    "size": {
+      "x": 1.8500000238418579,
+      "y": 1.8480000495910645,
+      "z": 2.2400000095367432
+    }
+  },
+  "hierarchy": {
+    "name": "1module_cockpit_with_engine",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "ModularCarCentralLockingSwitch",
+        "$name": "1module_cockpit_with_engine",
+        "centralLockingSwitch": null,
+        "switchOffPos": {
+          "x": -0.19490000605583191,
+          "y": 0.5735812783241272,
+          "z": 0.10471359640359879
+        },
+        "switchOnPos": {
+          "x": -0.22614850103855133,
+          "y": 0.5735812783241272,
+          "z": 0.10471359640359879
+        },
+        "interactionColliderName": "CentralLockingInteraction",
+        "pressSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "modular-car-switch-press",
+          "instanceID": 354096
+        }
+      },
+      {
+        "$type": "VehicleModuleEngine",
+        "$name": "1module_cockpit_with_engine",
+        "engine": {
+          "$type": "VehicleModuleEngine+Engine",
+          "engineKW": 70,
+          "idleFuelPerSec": 0.02500000037252903,
+          "maxFuelPerSec": 0.079999998211860657,
+          "audioSet": {
+            "$ref": "EngineAudioSet",
+            "name": "Engine Audio Set I4",
+            "instanceID": 476688
+          },
+          "engineParticles": [
+            null,
+            null,
+            null
+          ],
+          "exhaustSmoke": [
+            null,
+            null,
+            null
+          ],
+          "exhaustBackfire": [
+            null,
+            null,
+            null
+          ],
+          "exhaustSmokeMinOpacity": 0.10000000149011612,
+          "exhaustSmokeMaxOpacity": 0.699999988079071,
+          "exhaustSmokeChangeRate": 0.5
+        },
+        "storage": {
+          "$type": "VehicleModuleStorage+Storage",
+          "storageUnitPrefab": {
+            "$ref": "GameObject",
+            "guid": "b04f1f0fe38c4c449a98bdea3b526884",
+            "resourcePath": "assets/content/vehicles/modularcar/subents/modular_car_i4_engine_storage.prefab",
+            "resourceID": 3092307067
+          },
+          "storageUnitPoint": []
+        },
+        "crudeExplosionEntity": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "crudeExplosionEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "explosionThreshold": 50.0,
+        "minimumTimeBetweenExplosions": 5.0,
+        "oilToConsumePerExplosion": 100,
+        "passengerProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "CarPassenger",
+          "comments": "",
+          "density": 1.0,
+          "amounts": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "FilenameStringId": 2349463936
+        },
+        "codeLockVisuals": null,
+        "seating": {
+          "$type": "VehicleModuleSeating+Seating",
+          "doorsAreLockable": true,
+          "mountPoints": [
+            {
+              "$type": "BaseVehicle+MountPointInfo",
+              "isDriver": true,
+              "pos": {
+                "x": -0.43000000715255737,
+                "y": -0.15000000596046448,
+                "z": -0.17000000178813934
+              },
+              "rot": {
+                "x": 4.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "bone": "",
+              "prefab": {
+                "$ref": "GameObject",
+                "guid": "23c85476fa0166a498090231b1ff938c",
+                "resourcePath": "assets/prefabs/vehicle/seats/modularcardriverseat.prefab",
+                "resourceID": 1924089654
+              },
+              "mountable": null
+            },
+            {
+              "$type": "BaseVehicle+MountPointInfo",
+              "isDriver": false,
+              "pos": {
+                "x": 0.5,
+                "y": -0.15000000596046448,
+                "z": -0.17000000178813934
+              },
+              "rot": {
+                "x": 4.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "bone": "",
+              "prefab": {
+                "$ref": "GameObject",
+                "guid": "76dfa10b1c9e01f418a5e5da568f1f2d",
+                "resourcePath": "assets/prefabs/vehicle/seats/modularcarpassengerseatright.prefab",
+                "resourceID": 205354363
+              },
+              "mountable": null
+            }
+          ],
+          "steeringWheel": null,
+          "accelPedal": null,
+          "brakePedal": null,
+          "steeringWheelLeftGrip": null,
+          "steeringWheelRightGrip": null,
+          "accelPedalGrip": null,
+          "brakePedalGrip": null,
+          "mountHotSpots": [
+            {
+              "$type": "VehicleModuleSeating+MountHotSpot",
+              "transform": null,
+              "size": {
+                "x": 1.5,
+                "y": 1.2999999523162842
+              }
+            },
+            {
+              "$type": "VehicleModuleSeating+MountHotSpot",
+              "transform": null,
+              "size": {
+                "x": 1.5,
+                "y": 1.2999999523162842
+              }
+            }
+          ],
+          "speedometer": null,
+          "fuelGauge": null,
+          "dashboardRenderer": null,
+          "checkEngineLightMatIndex": 2,
+          "checkEngineLightEmission": {
+            "r": 4.237095832824707,
+            "g": 0.31722751259803772,
+            "b": 0.11091867834329605,
+            "a": 1.0
+          },
+          "fuelLightMatIndex": 3,
+          "fuelLightEmission": {
+            "r": 4.2370953559875488,
+            "g": 1.5306782722473145,
+            "b": 0.17746990919113159,
+            "a": 1.0
+          }
+        },
+        "steerAngle": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "accelAngle": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "brakeAngle": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "speedometerAngle": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "fuelAngle": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "hornLoop": {
+          "$ref": "SoundDefinition",
+          "name": "modular-car-horn-small-loop",
+          "instanceID": 337666
+        },
+        "hornStart": {
+          "$ref": "SoundDefinition",
+          "name": "modular-car-horn-small-start",
+          "instanceID": 314228
+        },
+        "AssociatedItemInstance": null,
+        "centreOfMassTransform": [],
+        "mass": 320.0,
+        "visualGroup": {
+          "$enum": "BaseVehicleModule+VisualGroup",
+          "name": "Cabin",
+          "value": 2
+        },
+        "lights": [],
+        "lodRenderers": [
+          {
+            "$type": "BaseVehicleModule+LODLevel",
+            "renderers": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "$type": "BaseVehicleModule+LODLevel",
+            "renderers": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "$type": "BaseVehicleModule+LODLevel",
+            "renderers": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        ],
+        "conditionals": [
+          {
+            "$type": "Rust.Modular.ConditionalObject",
+            "gameObject": {
+              "$ref": "GameObject",
+              "name": "Back_A_COL",
+              "instanceID": 1121934
+            },
+            "ownerGameObject": {
+              "$ref": "GameObject",
+              "name": "1module_cockpit_with_engine",
+              "prefabID": 3414464968,
+              "instanceID": 1121040
+            },
+            "socketSettings": [
+              {
+                "$type": "Rust.Modular.ConditionalSocketSettings",
+                "restrictOnLocation": true,
+                "locationRestriction": {
+                  "$enum": "Rust.Modular.ConditionalSocketSettings+LocationCondition",
+                  "name": "Back",
+                  "value": 2
+                },
+                "restrictOnWheel": false,
+                "wheelRestriction": {
+                  "$enum": "Rust.Modular.ModularVehicleSocket+SocketWheelType",
+                  "name": "NoWheel",
+                  "value": 0
+                }
+              }
+            ],
+            "restrictOnHealth": false,
+            "healthRestrictionMin": 0.0,
+            "healthRestrictionMax": 0.0,
+            "restrictOnAdjacent": false,
+            "adjacentRestriction": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentCondition",
+              "name": "SameInFront",
+              "value": 0
+            },
+            "adjacentMatch": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentMatchType",
+              "name": "GroupOrExact",
+              "value": 0
+            },
+            "restrictOnLockable": false,
+            "lockableRestriction": false
+          },
+          {
+            "$type": "Rust.Modular.ConditionalObject",
+            "gameObject": {
+              "$ref": "GameObject",
+              "name": "BackPanel_COL",
+              "instanceID": 1232576
+            },
+            "ownerGameObject": {
+              "$ref": "GameObject",
+              "name": "1module_cockpit_with_engine",
+              "prefabID": 3414464968,
+              "instanceID": 1121040
+            },
+            "socketSettings": [
+              {
+                "$type": "Rust.Modular.ConditionalSocketSettings",
+                "restrictOnLocation": false,
+                "locationRestriction": {
+                  "$enum": "Rust.Modular.ConditionalSocketSettings+LocationCondition",
+                  "name": "Middle",
+                  "value": 0
+                },
+                "restrictOnWheel": false,
+                "wheelRestriction": {
+                  "$enum": "Rust.Modular.ModularVehicleSocket+SocketWheelType",
+                  "name": "NoWheel",
+                  "value": 0
+                }
+              }
+            ],
+            "restrictOnHealth": true,
+            "healthRestrictionMin": 0.25,
+            "healthRestrictionMax": 1.0,
+            "restrictOnAdjacent": true,
+            "adjacentRestriction": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentCondition",
+              "name": "DifferentBehind",
+              "value": 3
+            },
+            "adjacentMatch": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentMatchType",
+              "name": "GroupOrExact",
+              "value": 0
+            },
+            "restrictOnLockable": false,
+            "lockableRestriction": false
+          },
+          {
+            "$type": "Rust.Modular.ConditionalObject",
+            "gameObject": {
+              "$ref": "GameObject",
+              "name": "Side_Panel_A_COL",
+              "instanceID": 1231374
+            },
+            "ownerGameObject": {
+              "$ref": "GameObject",
+              "name": "1module_cockpit_with_engine",
+              "prefabID": 3414464968,
+              "instanceID": 1121040
+            },
+            "socketSettings": [
+              {
+                "$type": "Rust.Modular.ConditionalSocketSettings",
+                "restrictOnLocation": false,
+                "locationRestriction": {
+                  "$enum": "Rust.Modular.ConditionalSocketSettings+LocationCondition",
+                  "name": "Middle",
+                  "value": 0
+                },
+                "restrictOnWheel": false,
+                "wheelRestriction": {
+                  "$enum": "Rust.Modular.ModularVehicleSocket+SocketWheelType",
+                  "name": "NoWheel",
+                  "value": 0
+                }
+              }
+            ],
+            "restrictOnHealth": true,
+            "healthRestrictionMin": 0.34999999403953552,
+            "healthRestrictionMax": 1.0,
+            "restrictOnAdjacent": false,
+            "adjacentRestriction": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentCondition",
+              "name": "SameInFront",
+              "value": 0
+            },
+            "adjacentMatch": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentMatchType",
+              "name": "GroupOrExact",
+              "value": 0
+            },
+            "restrictOnLockable": false,
+            "lockableRestriction": false
+          },
+          {
+            "$type": "Rust.Modular.ConditionalObject",
+            "gameObject": {
+              "$ref": "GameObject",
+              "name": "Front_B_COL",
+              "instanceID": 1102260
+            },
+            "ownerGameObject": {
+              "$ref": "GameObject",
+              "name": "1module_cockpit_with_engine",
+              "prefabID": 3414464968,
+              "instanceID": 1121040
+            },
+            "socketSettings": [
+              {
+                "$type": "Rust.Modular.ConditionalSocketSettings",
+                "restrictOnLocation": true,
+                "locationRestriction": {
+                  "$enum": "Rust.Modular.ConditionalSocketSettings+LocationCondition",
+                  "name": "NotBack",
+                  "value": 5
+                },
+                "restrictOnWheel": false,
+                "wheelRestriction": {
+                  "$enum": "Rust.Modular.ModularVehicleSocket+SocketWheelType",
+                  "name": "NoWheel",
+                  "value": 0
+                }
+              }
+            ],
+            "restrictOnHealth": false,
+            "healthRestrictionMin": 0.0,
+            "healthRestrictionMax": 0.0,
+            "restrictOnAdjacent": true,
+            "adjacentRestriction": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentCondition",
+              "name": "DifferentInFront",
+              "value": 2
+            },
+            "adjacentMatch": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentMatchType",
+              "name": "GroupOrExact",
+              "value": 0
+            },
+            "restrictOnLockable": false,
+            "lockableRestriction": false
+          },
+          {
+            "$type": "Rust.Modular.ConditionalObject",
+            "gameObject": {
+              "$ref": "GameObject",
+              "name": "Cockpit_Engine_Front_A_COL",
+              "instanceID": 1156766
+            },
+            "ownerGameObject": {
+              "$ref": "GameObject",
+              "name": "1module_cockpit_with_engine",
+              "prefabID": 3414464968,
+              "instanceID": 1121040
+            },
+            "socketSettings": [
+              {
+                "$type": "Rust.Modular.ConditionalSocketSettings",
+                "restrictOnLocation": true,
+                "locationRestriction": {
+                  "$enum": "Rust.Modular.ConditionalSocketSettings+LocationCondition",
+                  "name": "Front",
+                  "value": 1
+                },
+                "restrictOnWheel": false,
+                "wheelRestriction": {
+                  "$enum": "Rust.Modular.ModularVehicleSocket+SocketWheelType",
+                  "name": "NoWheel",
+                  "value": 0
+                }
+              }
+            ],
+            "restrictOnHealth": true,
+            "healthRestrictionMin": 0.15000000596046448,
+            "healthRestrictionMax": 1.0,
+            "restrictOnAdjacent": false,
+            "adjacentRestriction": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentCondition",
+              "name": "SameInFront",
+              "value": 0
+            },
+            "adjacentMatch": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentMatchType",
+              "name": "GroupOrExact",
+              "value": 0
+            },
+            "restrictOnLockable": false,
+            "lockableRestriction": false
+          },
+          {
+            "$type": "Rust.Modular.ConditionalObject",
+            "gameObject": {
+              "$ref": "GameObject",
+              "name": "Panel_A_COL",
+              "instanceID": 1208510
+            },
+            "ownerGameObject": {
+              "$ref": "GameObject",
+              "name": "1module_cockpit_with_engine",
+              "prefabID": 3414464968,
+              "instanceID": 1121040
+            },
+            "socketSettings": [
+              {
+                "$type": "Rust.Modular.ConditionalSocketSettings",
+                "restrictOnLocation": false,
+                "locationRestriction": {
+                  "$enum": "Rust.Modular.ConditionalSocketSettings+LocationCondition",
+                  "name": "Middle",
+                  "value": 0
+                },
+                "restrictOnWheel": false,
+                "wheelRestriction": {
+                  "$enum": "Rust.Modular.ModularVehicleSocket+SocketWheelType",
+                  "name": "NoWheel",
+                  "value": 0
+                }
+              }
+            ],
+            "restrictOnHealth": true,
+            "healthRestrictionMin": 0.0,
+            "healthRestrictionMax": 1.0,
+            "restrictOnAdjacent": false,
+            "adjacentRestriction": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentCondition",
+              "name": "SameInFront",
+              "value": 0
+            },
+            "adjacentMatch": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentMatchType",
+              "name": "GroupOrExact",
+              "value": 0
+            },
+            "restrictOnLockable": false,
+            "lockableRestriction": false
+          },
+          {
+            "$type": "Rust.Modular.ConditionalObject",
+            "gameObject": {
+              "$ref": "GameObject",
+              "name": "Middle_A_COL",
+              "instanceID": 1183442
+            },
+            "ownerGameObject": {
+              "$ref": "GameObject",
+              "name": "1module_cockpit_with_engine",
+              "prefabID": 3414464968,
+              "instanceID": 1121040
+            },
+            "socketSettings": [
+              {
+                "$type": "Rust.Modular.ConditionalSocketSettings",
+                "restrictOnLocation": true,
+                "locationRestriction": {
+                  "$enum": "Rust.Modular.ConditionalSocketSettings+LocationCondition",
+                  "name": "Middle",
+                  "value": 0
+                },
+                "restrictOnWheel": false,
+                "wheelRestriction": {
+                  "$enum": "Rust.Modular.ModularVehicleSocket+SocketWheelType",
+                  "name": "NoWheel",
+                  "value": 0
+                }
+              }
+            ],
+            "restrictOnHealth": false,
+            "healthRestrictionMin": 0.0,
+            "healthRestrictionMax": 0.0,
+            "restrictOnAdjacent": true,
+            "adjacentRestriction": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentCondition",
+              "name": "SameInFront",
+              "value": 0
+            },
+            "adjacentMatch": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentMatchType",
+              "name": "GroupOrExact",
+              "value": 0
+            },
+            "restrictOnLockable": false,
+            "lockableRestriction": false
+          },
+          {
+            "$type": "Rust.Modular.ConditionalObject",
+            "gameObject": {
+              "$ref": "GameObject",
+              "name": "Bumper_Front_A_COL",
+              "instanceID": 1246858
+            },
+            "ownerGameObject": {
+              "$ref": "GameObject",
+              "name": "1module_cockpit_with_engine",
+              "prefabID": 3414464968,
+              "instanceID": 1121040
+            },
+            "socketSettings": [
+              {
+                "$type": "Rust.Modular.ConditionalSocketSettings",
+                "restrictOnLocation": false,
+                "locationRestriction": {
+                  "$enum": "Rust.Modular.ConditionalSocketSettings+LocationCondition",
+                  "name": "Middle",
+                  "value": 0
+                },
+                "restrictOnWheel": false,
+                "wheelRestriction": {
+                  "$enum": "Rust.Modular.ModularVehicleSocket+SocketWheelType",
+                  "name": "NoWheel",
+                  "value": 0
+                }
+              }
+            ],
+            "restrictOnHealth": true,
+            "healthRestrictionMin": 0.5,
+            "healthRestrictionMax": 1.0,
+            "restrictOnAdjacent": false,
+            "adjacentRestriction": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentCondition",
+              "name": "SameInFront",
+              "value": 0
+            },
+            "adjacentMatch": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentMatchType",
+              "name": "GroupOrExact",
+              "value": 0
+            },
+            "restrictOnLockable": false,
+            "lockableRestriction": false
+          },
+          {
+            "$type": "Rust.Modular.ConditionalObject",
+            "gameObject": {
+              "$ref": "GameObject",
+              "name": "Bumper_Back_A_COL",
+              "instanceID": 1164890
+            },
+            "ownerGameObject": {
+              "$ref": "GameObject",
+              "name": "1module_cockpit_with_engine",
+              "prefabID": 3414464968,
+              "instanceID": 1121040
+            },
+            "socketSettings": [
+              {
+                "$type": "Rust.Modular.ConditionalSocketSettings",
+                "restrictOnLocation": false,
+                "locationRestriction": {
+                  "$enum": "Rust.Modular.ConditionalSocketSettings+LocationCondition",
+                  "name": "Middle",
+                  "value": 0
+                },
+                "restrictOnWheel": false,
+                "wheelRestriction": {
+                  "$enum": "Rust.Modular.ModularVehicleSocket+SocketWheelType",
+                  "name": "NoWheel",
+                  "value": 0
+                }
+              }
+            ],
+            "restrictOnHealth": true,
+            "healthRestrictionMin": 0.5,
+            "healthRestrictionMax": 1.0,
+            "restrictOnAdjacent": false,
+            "adjacentRestriction": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentCondition",
+              "name": "SameInFront",
+              "value": 0
+            },
+            "adjacentMatch": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentMatchType",
+              "name": "GroupOrExact",
+              "value": 0
+            },
+            "restrictOnLockable": false,
+            "lockableRestriction": false
+          },
+          {
+            "$type": "Rust.Modular.ConditionalObject",
+            "gameObject": {
+              "$ref": "GameObject",
+              "name": "Bumper_Front_A_WorldCOL",
+              "instanceID": 1234736
+            },
+            "ownerGameObject": {
+              "$ref": "GameObject",
+              "name": "1module_cockpit_with_engine",
+              "prefabID": 3414464968,
+              "instanceID": 1121040
+            },
+            "socketSettings": [
+              {
+                "$type": "Rust.Modular.ConditionalSocketSettings",
+                "restrictOnLocation": true,
+                "locationRestriction": {
+                  "$enum": "Rust.Modular.ConditionalSocketSettings+LocationCondition",
+                  "name": "Front",
+                  "value": 1
+                },
+                "restrictOnWheel": false,
+                "wheelRestriction": {
+                  "$enum": "Rust.Modular.ModularVehicleSocket+SocketWheelType",
+                  "name": "NoWheel",
+                  "value": 0
+                }
+              }
+            ],
+            "restrictOnHealth": true,
+            "healthRestrictionMin": 0.5,
+            "healthRestrictionMax": 1.0,
+            "restrictOnAdjacent": false,
+            "adjacentRestriction": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentCondition",
+              "name": "SameInFront",
+              "value": 0
+            },
+            "adjacentMatch": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentMatchType",
+              "name": "GroupOrExact",
+              "value": 0
+            },
+            "restrictOnLockable": false,
+            "lockableRestriction": false
+          },
+          {
+            "$type": "Rust.Modular.ConditionalObject",
+            "gameObject": {
+              "$ref": "GameObject",
+              "name": "Bumper_Back_A_WorldCOL",
+              "instanceID": 1216870
+            },
+            "ownerGameObject": {
+              "$ref": "GameObject",
+              "name": "1module_cockpit_with_engine",
+              "prefabID": 3414464968,
+              "instanceID": 1121040
+            },
+            "socketSettings": [
+              {
+                "$type": "Rust.Modular.ConditionalSocketSettings",
+                "restrictOnLocation": true,
+                "locationRestriction": {
+                  "$enum": "Rust.Modular.ConditionalSocketSettings+LocationCondition",
+                  "name": "Back",
+                  "value": 2
+                },
+                "restrictOnWheel": false,
+                "wheelRestriction": {
+                  "$enum": "Rust.Modular.ModularVehicleSocket+SocketWheelType",
+                  "name": "NoWheel",
+                  "value": 0
+                }
+              }
+            ],
+            "restrictOnHealth": true,
+            "healthRestrictionMin": 0.5,
+            "healthRestrictionMax": 1.0,
+            "restrictOnAdjacent": false,
+            "adjacentRestriction": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentCondition",
+              "name": "SameInFront",
+              "value": 0
+            },
+            "adjacentMatch": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentMatchType",
+              "name": "GroupOrExact",
+              "value": 0
+            },
+            "restrictOnLockable": false,
+            "lockableRestriction": false
+          },
+          {
+            "$type": "Rust.Modular.ConditionalObject",
+            "gameObject": {
+              "$ref": "GameObject",
+              "name": "Glass_COL",
+              "instanceID": 1244236
+            },
+            "ownerGameObject": {
+              "$ref": "GameObject",
+              "name": "1module_cockpit_with_engine",
+              "prefabID": 3414464968,
+              "instanceID": 1121040
+            },
+            "socketSettings": [
+              {
+                "$type": "Rust.Modular.ConditionalSocketSettings",
+                "restrictOnLocation": false,
+                "locationRestriction": {
+                  "$enum": "Rust.Modular.ConditionalSocketSettings+LocationCondition",
+                  "name": "Middle",
+                  "value": 0
+                },
+                "restrictOnWheel": false,
+                "wheelRestriction": {
+                  "$enum": "Rust.Modular.ModularVehicleSocket+SocketWheelType",
+                  "name": "NoWheel",
+                  "value": 0
+                }
+              }
+            ],
+            "restrictOnHealth": true,
+            "healthRestrictionMin": 0.79000002145767212,
+            "healthRestrictionMax": 1.0,
+            "restrictOnAdjacent": false,
+            "adjacentRestriction": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentCondition",
+              "name": "SameInFront",
+              "value": 0
+            },
+            "adjacentMatch": {
+              "$enum": "Rust.Modular.ConditionalObject+AdjacentMatchType",
+              "name": "GroupOrExact",
+              "value": 0
+            },
+            "restrictOnLockable": false,
+            "lockableRestriction": false
+          }
+        ],
+        "triggerParents": [],
+        "slidingComponents": [],
+        "buttonComponents": [
+          {
+            "$ref": "ModularCarCentralLockingSwitch",
+            "name": "1module_cockpit_with_engine",
+            "instanceID": 1507492,
+            "goName": "1module_cockpit_with_engine",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "timeSinceLastPush": {
+          "$type": "TimeSince"
+        },
+        "recentDrivers": [],
+        "clearRecentDriverAction": null,
+        "safeAreaRadius": 0.0,
+        "safeAreaOrigin": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "spawnTime": -1.0,
+        "checkVehicleClipping": false,
+        "excludeCollisionLayers": 0,
+        "dismountStyle": {
+          "$enum": "BaseVehicle+DismountStyle",
+          "name": "Closest",
+          "value": 0
+        },
+        "ignoreDamageFromOutside": false,
+        "npcVisibilityCategory": {
+          "$enum": "BaseVehicle+NpcVisibilityCategory",
+          "name": "LikeNormalPlayer",
+          "value": 0
+        },
+        "mountPoints": [
+          {
+            "$type": "BaseVehicle+MountPointInfo",
+            "isDriver": true,
+            "pos": {
+              "x": -0.43000000715255737,
+              "y": -0.15000000596046448,
+              "z": -0.17000000178813934
+            },
+            "rot": {
+              "x": 4.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bone": "",
+            "prefab": {
+              "$ref": "GameObject",
+              "guid": "23c85476fa0166a498090231b1ff938c",
+              "resourcePath": "assets/prefabs/vehicle/seats/modularcardriverseat.prefab",
+              "resourceID": 1924089654
+            },
+            "mountable": null
+          },
+          {
+            "$type": "BaseVehicle+MountPointInfo",
+            "isDriver": false,
+            "pos": {
+              "x": 0.5,
+              "y": -0.15000000596046448,
+              "z": -0.17000000178813934
+            },
+            "rot": {
+              "x": 4.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bone": "",
+            "prefab": {
+              "$ref": "GameObject",
+              "guid": "76dfa10b1c9e01f418a5e5da568f1f2d",
+              "resourcePath": "assets/prefabs/vehicle/seats/modularcarpassengerseatright.prefab",
+              "resourceID": 205354363
+            },
+            "mountable": null
+          }
+        ],
+        "childMountableHandleDismountPoints": false,
+        "mountedPlayerRagdolls": {
+          "$enum": "BaseVehicle+RagdollMode",
+          "name": "FallThrough",
+          "value": 1
+        },
+        "clippingChecks": {
+          "$enum": "BaseVehicle+ClippingCheckMode",
+          "name": "OnMountOnly",
+          "value": 0
+        },
+        "clippingAiChecks": {
+          "$enum": "BaseVehicle+ClippingCheckAiMode",
+          "name": "All",
+          "value": 0
+        },
+        "damageRenderer": null,
+        "explosionForceMultiplier": 150.0,
+        "explosionForceMax": 15000.0,
+        "HasBuildingPrivilege": false,
+        "mountSyncType": {
+          "$enum": "BaseMountable+MountSyncType",
+          "name": "RepositionPerFrame",
+          "value": 0
+        },
+        "eyePositionOverride": null,
+        "eyeCenterOverride": null,
+        "overrideEyesRotation": false,
+        "pitchClamp": {
+          "x": -80.0,
+          "y": 50.0
+        },
+        "yawClamp": {
+          "x": -80.0,
+          "y": 80.0
+        },
+        "canWieldItems": true,
+        "relativeViewAngles": true,
+        "disableLegsWhenMounted": false,
+        "disableBreastCensorshipWhenMounted": false,
+        "AllowForceMountWhenRestrained": false,
+        "mountChaining": true,
+        "mountAnchor": null,
+        "mountLOSVertOffset": 0.5,
+        "mountedAnimationSpeed": 0.0,
+        "mountPose": {
+          "$enum": "PlayerModel+MountPoses",
+          "name": "Chair",
+          "value": 0
+        },
+        "animateVehicleAim360": false,
+        "maxMountDistance": 4.0,
+        "dismountPositions": [],
+        "checkPlayerLosOnMount": false,
+        "disableMeshCullingForPlayers": true,
+        "allowHeadLook": false,
+        "ignoreVehicleParent": false,
+        "legacyDismount": false,
+        "wearWhileMounted": null,
+        "modifiesPlayerCollider": false,
+        "customPlayerCollider": {
+          "$type": "BasePlayer+CapsuleColliderInfo",
+          "height": 0.0,
+          "radius": 0.0,
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "clippingCheckRadius": 0.40000000596046448,
+        "clippingAndVisChecks": true,
+        "clippingChecksLocation": {
+          "$enum": "BaseMountable+ClippingCheckLocation",
+          "name": "WholeBody",
+          "value": 1
+        },
+        "mountSoundDef": null,
+        "swapSoundDef": null,
+        "dismountSoundDef": null,
+        "allowFootstepEffects": false,
+        "dismountHoldType": {
+          "$enum": "BaseMountable+DismountConvarType",
+          "name": "Misc",
+          "value": 0
+        },
+        "mountTimeStatType": {
+          "$enum": "BaseMountable+MountStatType",
+          "name": "None",
+          "value": 0
+        },
+        "allowedGestures": {
+          "$enum": "BaseMountable+MountGestureType",
+          "name": "None",
+          "value": 0
+        },
+        "canDrinkWhileMounted": true,
+        "allowSleeperMounting": false,
+        "shouldShowHudHealth": false,
+        "blockLooting": false,
+        "animateClothInLocalSpace": true,
+        "protectsFromAnimals": true,
+        "MountedCameraMode": {
+          "$enum": "BasePlayer+CameraMode",
+          "name": "FirstPerson",
+          "value": 0
+        },
+        "rigidBody": null,
+        "wantsBoundaryRepelCheck": false,
+        "isMobile": true,
+        "SideLeanAmount": 0.20000000298023224,
+        "_mounted": null,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "CarProtection",
+          "comments": "",
+          "density": 100.0,
+          "amounts": [
+            0.89999997615814209,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.949999988079071,
+            1.0,
+            1.0,
+            1.0,
+            0.89999997615814209,
+            0.95999997854232788,
+            0.949999988079071,
+            1.0,
+            1.0,
+            1.0,
+            0.95999997854232788,
+            0.40000000596046448,
+            1.0,
+            1.0,
+            0.0,
+            0.949999988079071,
+            0.949999988079071,
+            0.25,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "FilenameStringId": 2852521530
+        },
+        "startHealth": 0.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": false,
+          "itemTarget": null,
+          "itemCount": 0,
+          "setConditionFromHealth": false,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": false,
+          "requireHammer": false,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "1module_cockpit_with_engine.item",
+            "itemid": 170758448,
+            "shortname": "vehicle.1mod.cockpit.with.engine"
+          },
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "9fc936b073a5f43a491118520ee9cfe3",
+            "resourcePath": "assets/bundled/prefabs/fx/build/repair_metal.prefab",
+            "resourceID": 2187858850
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "7079978c126dc430bb5b586bc04f0330",
+            "resourcePath": "assets/bundled/prefabs/fx/build/repair_full_metal.prefab",
+            "resourceID": 2350903527
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": false,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.5,
+            "z": 0.0
+          },
+          "size": {
+            "x": 1.8500000238418579,
+            "y": 1.8480000495910645,
+            "z": 2.2400000095367432
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 3414464968,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      }
+    ],
+    "children": [
+      {
+        "name": "CentreOfMass",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.24500000476837158,
+          "z": 0.21699999272823334
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "ServerOnly",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "WorldColliders",
+            "layer": {
+              "index": 15,
+              "name": "Vehicle World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "Bumper_Front_A_WorldCOL",
+                "layer": {
+                  "index": 15,
+                  "name": "Vehicle World"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.SphereCollider",
+                    "$name": "Bumper_Front_A_WorldCOL",
+                    "colliderType": "Sphere",
+                    "center": {
+                      "x": -0.5,
+                      "y": -0.075000002980232239,
+                      "z": 0.75
+                    },
+                    "radius": 0.30000001192092896,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Zero Friction Absolute",
+                      "instanceID": 609852
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.SphereCollider",
+                    "$name": "Bumper_Front_A_WorldCOL",
+                    "colliderType": "Sphere",
+                    "center": {
+                      "x": 0.5,
+                      "y": -0.075000002980232239,
+                      "z": 0.75
+                    },
+                    "radius": 0.30000001192092896,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Zero Friction Absolute",
+                      "instanceID": 609852
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Bumper_Back_A_WorldCOL",
+                "layer": {
+                  "index": 15,
+                  "name": "Vehicle World"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.SphereCollider",
+                    "$name": "Bumper_Back_A_WorldCOL",
+                    "colliderType": "Sphere",
+                    "center": {
+                      "x": -0.5,
+                      "y": 0.0,
+                      "z": -0.800000011920929
+                    },
+                    "radius": 0.30000001192092896,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Zero Friction Absolute",
+                      "instanceID": 609852
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.SphereCollider",
+                    "$name": "Bumper_Back_A_WorldCOL",
+                    "colliderType": "Sphere",
+                    "center": {
+                      "x": 0.5,
+                      "y": 0.0,
+                      "z": -0.800000011920929
+                    },
+                    "radius": 0.30000001192092896,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Zero Friction Absolute",
+                      "instanceID": 609852
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Main_WorldCOL",
+                "layer": {
+                  "index": 15,
+                  "name": "Vehicle World"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Main_WorldCOL",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.0,
+                      "y": 0.625942587852478,
+                      "z": -0.079999983310699463
+                    },
+                    "size": {
+                      "x": 1.7999999523162842,
+                      "y": 1.5381147861480713,
+                      "z": 1.8999999761581421
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "MountTrigger",
+            "layer": {
+              "index": 18,
+              "name": "Trigger"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.60000002384185791,
+              "z": -0.16099999845027924
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "TriggerMount",
+                "$name": "MountTrigger",
+                "interestLayers": 131072,
+                "contents": null,
+                "entityContents": null,
+                "OnEntityEnterTrigger": null,
+                "OnEntityLeaveTrigger": null
+              },
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "MountTrigger",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": -0.086755335330963135,
+                  "z": -0.14536073803901672
+                },
+                "size": {
+                  "x": 1.0,
+                  "y": 0.32648932933807373,
+                  "z": 0.45927852392196655
+                },
+                "isTrigger": true,
+                "enabled": true
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Shared",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "DetailedColliders",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "Cockpit_Main_B_COL",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Usable Primary",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 2.1855694143368964E-08,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "Cockpit_Main_B_COL",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": 0.0,
+                      "y": 0.41999998688697815,
+                      "z": 0.44999998807907104
+                    },
+                    "radius": 0.32499998807907104,
+                    "height": 1.8500000238418579,
+                    "direction": 0,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "BaseBox",
+                    "layer": {
+                      "index": 13,
+                      "name": "Vehicle Detailed"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.BoxCollider",
+                        "$name": "BaseBox",
+                        "colliderType": "Box",
+                        "center": {
+                          "x": 0.0,
+                          "y": 0.0449710488319397,
+                          "z": -0.012303590774536133
+                        },
+                        "size": {
+                          "x": 1.7000000476837158,
+                          "y": 0.29448044300079346,
+                          "z": 1.4695723056793213
+                        },
+                        "isTrigger": false,
+                        "enabled": true,
+                        "physicMaterial": {
+                          "$ref": "PhysicsMaterial",
+                          "name": "Metal",
+                          "instanceID": 609842
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Seat_A_COL",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.5,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.64278757572174072,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7660444974899292
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Seat_A_COL",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.0,
+                      "y": -0.50000119209289551,
+                      "z": -0.69529086351394653
+                    },
+                    "size": {
+                      "x": 0.40000000596046448,
+                      "y": 0.12499998509883881,
+                      "z": 0.84057718515396118
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Cloth",
+                      "instanceID": 609830
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Seat_A_COL",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.0,
+                      "y": -0.50000119209289551,
+                      "z": -1.2200000286102295
+                    },
+                    "size": {
+                      "x": 0.20000000298023224,
+                      "y": 0.12499998509883881,
+                      "z": 0.20000000298023224
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Cloth",
+                      "instanceID": 609830
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Seat_A_COL",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.5,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.64278757572174072,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.7660444974899292
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Seat_A_COL",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.0,
+                      "y": -0.50000119209289551,
+                      "z": -0.69529086351394653
+                    },
+                    "size": {
+                      "x": 0.40000000596046448,
+                      "y": 0.12499998509883881,
+                      "z": 0.84057718515396118
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Cloth",
+                      "instanceID": 609830
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Seat_A_COL",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.0,
+                      "y": -0.50000119209289551,
+                      "z": -1.2200000286102295
+                    },
+                    "size": {
+                      "x": 0.20000000298023224,
+                      "y": 0.12499998509883881,
+                      "z": 0.20000000298023224
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Cloth",
+                      "instanceID": 609830
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Back_A_COL",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 2.1855694143368964E-08,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Back_A_COL",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.0012860894203186035,
+                      "y": 1.3747584819793701,
+                      "z": -0.11740022897720337
+                    },
+                    "size": {
+                      "x": 1.4295316934585571,
+                      "y": 0.040627002716064453,
+                      "z": 1.2913855314254761
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "Collider",
+                    "layer": {
+                      "index": 13,
+                      "name": "Vehicle Detailed"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.77600002288818359,
+                      "y": 1.0069999694824219,
+                      "z": 0.49000000953674316
+                    },
+                    "localRotation": {
+                      "x": -0.051415860652923584,
+                      "y": 0.011077959090471268,
+                      "z": 0.11251354962587357,
+                      "w": 0.99225723743438721
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.CapsuleCollider",
+                        "$name": "Collider",
+                        "colliderType": "Capsule",
+                        "center": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "radius": 0.029999999329447746,
+                        "height": 0.75,
+                        "direction": 1,
+                        "isTrigger": false,
+                        "enabled": true,
+                        "physicMaterial": {
+                          "$ref": "PhysicsMaterial",
+                          "name": "Metal",
+                          "instanceID": 609842
+                        }
+                      }
+                    ],
+                    "children": []
+                  },
+                  {
+                    "name": "Collider",
+                    "layer": {
+                      "index": 13,
+                      "name": "Vehicle Detailed"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.77600002288818359,
+                      "y": 1.0069999694824219,
+                      "z": 0.49000000953674316
+                    },
+                    "localRotation": {
+                      "x": -0.05259125679731369,
+                      "y": -0.00068665930302813649,
+                      "z": -0.11196897178888321,
+                      "w": 0.992318868637085
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.CapsuleCollider",
+                        "$name": "Collider",
+                        "colliderType": "Capsule",
+                        "center": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "radius": 0.029999999329447746,
+                        "height": 0.75,
+                        "direction": 1,
+                        "isTrigger": false,
+                        "enabled": true,
+                        "physicMaterial": {
+                          "$ref": "PhysicsMaterial",
+                          "name": "Metal",
+                          "instanceID": 609842
+                        }
+                      }
+                    ],
+                    "children": []
+                  },
+                  {
+                    "name": "collider",
+                    "layer": {
+                      "index": 13,
+                      "name": "Vehicle Detailed"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 1.2829999923706055,
+                      "z": -0.78799998760223389
+                    },
+                    "localRotation": {
+                      "x": 0.13155749440193176,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 0.99130856990814209
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.BoxCollider",
+                        "$name": "collider",
+                        "colliderType": "Box",
+                        "center": {
+                          "x": 0.0,
+                          "y": 0.013102700002491474,
+                          "z": 0.0103500597178936
+                        },
+                        "size": {
+                          "x": 1.4536060094833374,
+                          "y": 0.19178074598312378,
+                          "z": 0.036565549671649933
+                        },
+                        "isTrigger": false,
+                        "enabled": true,
+                        "physicMaterial": {
+                          "$ref": "PhysicsMaterial",
+                          "name": "Metal",
+                          "instanceID": 609842
+                        }
+                      }
+                    ],
+                    "children": []
+                  },
+                  {
+                    "name": "Panel_B_COL",
+                    "layer": {
+                      "index": 13,
+                      "name": "Vehicle Detailed"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "Collider",
+                        "layer": {
+                          "index": 13,
+                          "name": "Vehicle Detailed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -0.88899999856948853,
+                          "y": 0.36800000071525574,
+                          "z": -0.83099997043609619
+                        },
+                        "localRotation": {
+                          "x": -0.046089351177215576,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.99893730878829956
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "Collider",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": 0.0038499236106872559,
+                              "y": 0.0076998472213745117,
+                              "z": 0.04336310550570488
+                            },
+                            "size": {
+                              "x": 0.037527322769165039,
+                              "y": 0.64580988883972168,
+                              "z": 0.27287089824676514
+                            },
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          }
+                        ],
+                        "children": []
+                      },
+                      {
+                        "name": "Collider (1)",
+                        "layer": {
+                          "index": 13,
+                          "name": "Vehicle Detailed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.88899999856948853,
+                          "y": 0.36800000071525574,
+                          "z": -0.83099997043609619
+                        },
+                        "localRotation": {
+                          "x": -0.046089351177215576,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.99893730878829956
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "Collider (1)",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": 0.0038499236106872559,
+                              "y": 0.0076998472213745117,
+                              "z": 0.04336310550570488
+                            },
+                            "size": {
+                              "x": 0.037527322769165039,
+                              "y": 0.64580988883972168,
+                              "z": 0.27287089824676514
+                            },
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          }
+                        ],
+                        "children": []
+                      },
+                      {
+                        "name": "Collider (2)",
+                        "layer": {
+                          "index": 13,
+                          "name": "Vehicle Detailed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -0.81000000238418579,
+                          "y": 1.0110000371932983,
+                          "z": -0.7929999828338623
+                        },
+                        "localRotation": {
+                          "x": 0.079391181468963623,
+                          "y": -0.0094439927488565445,
+                          "z": -0.11774416267871857,
+                          "w": 0.98982030153274536
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "Collider (2)",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": 0.0038499236106872559,
+                              "y": 0.0076998472213745117,
+                              "z": 0.04336310550570488
+                            },
+                            "size": {
+                              "x": 0.037527322769165039,
+                              "y": 0.75,
+                              "z": 0.27287089824676514
+                            },
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          }
+                        ],
+                        "children": []
+                      },
+                      {
+                        "name": "Collider (3)",
+                        "layer": {
+                          "index": 13,
+                          "name": "Vehicle Detailed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.80600005388259888,
+                          "y": 1.0110000371932983,
+                          "z": -0.7929999828338623
+                        },
+                        "localRotation": {
+                          "x": 0.082366526126861572,
+                          "y": 0.034658253192901611,
+                          "z": 0.11568043380975723,
+                          "w": 0.98925864696502686
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "Collider (3)",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": 0.0038499236106872559,
+                              "y": 0.0076998472213745117,
+                              "z": 0.04336310550570488
+                            },
+                            "size": {
+                              "x": 0.037527322769165039,
+                              "y": 0.75,
+                              "z": 0.27287089824676514
+                            },
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          }
+                        ],
+                        "children": []
+                      },
+                      {
+                        "name": "Bumper_Back_A_COL",
+                        "layer": {
+                          "index": 13,
+                          "name": "Vehicle Detailed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.CapsuleCollider",
+                            "$name": "Bumper_Back_A_COL",
+                            "colliderType": "Capsule",
+                            "center": {
+                              "x": 0.0,
+                              "y": -0.14000000059604645,
+                              "z": -0.89999997615814209
+                            },
+                            "radius": 0.10000000149011612,
+                            "height": 1.75,
+                            "direction": 0,
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          }
+                        ],
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "BackPanel_COL",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "Collider",
+                    "layer": {
+                      "index": 13,
+                      "name": "Vehicle Detailed"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.41499999165534973,
+                      "z": -0.73299998044967651
+                    },
+                    "localRotation": {
+                      "x": -0.069756470620632172,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 0.99756407737731934
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.BoxCollider",
+                        "$name": "Collider",
+                        "colliderType": "Box",
+                        "center": {
+                          "x": 0.0,
+                          "y": -0.049170855432748795,
+                          "z": 0.0091164801269769669
+                        },
+                        "size": {
+                          "x": 1.75,
+                          "y": 0.64181065559387207,
+                          "z": 0.076926283538341522
+                        },
+                        "isTrigger": false,
+                        "enabled": true,
+                        "physicMaterial": {
+                          "$ref": "PhysicsMaterial",
+                          "name": "Metal",
+                          "instanceID": 609842
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Side_Panel_A_COL",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 2.1855694143368964E-08,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Side_Panel_A_COL",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -0.88826477527618408,
+                      "y": 0.20000000298023224,
+                      "z": -0.046304643154144287
+                    },
+                    "size": {
+                      "x": 0.073462009429931641,
+                      "y": 0.875,
+                      "z": 1.411887526512146
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  },
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Side_Panel_A_COL",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.88826477527618408,
+                      "y": 0.20000000298023224,
+                      "z": -0.046304643154144287
+                    },
+                    "size": {
+                      "x": 0.073462009429931641,
+                      "y": 0.875,
+                      "z": 1.411887526512146
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Front_B_COL",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Usable Primary",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 2.1855694143368964E-08,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Front_B_COL",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.0012860894203186035,
+                      "y": 1.3747584819793701,
+                      "z": -0.55089664459228516
+                    },
+                    "size": {
+                      "x": 1.4295316934585571,
+                      "y": 0.040627002716064453,
+                      "z": 0.76241397857666016
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "Collider",
+                    "layer": {
+                      "index": 13,
+                      "name": "Vehicle Detailed"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.77499997615814209,
+                      "y": 0.98299998044967651,
+                      "z": 0.065999999642372131
+                    },
+                    "localRotation": {
+                      "x": -0.32085502147674561,
+                      "y": -0.03025299496948719,
+                      "z": 0.11577450484037399,
+                      "w": 0.93953877687454224
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.CapsuleCollider",
+                        "$name": "Collider",
+                        "colliderType": "Capsule",
+                        "center": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "radius": 0.039999999105930328,
+                        "height": 1.0,
+                        "direction": 1,
+                        "isTrigger": false,
+                        "enabled": true,
+                        "physicMaterial": {
+                          "$ref": "PhysicsMaterial",
+                          "name": "Metal",
+                          "instanceID": 609842
+                        }
+                      }
+                    ],
+                    "children": []
+                  },
+                  {
+                    "name": "Collider",
+                    "layer": {
+                      "index": 13,
+                      "name": "Vehicle Detailed"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.77499997615814209,
+                      "y": 0.98299998044967651,
+                      "z": 0.065999999642372131
+                    },
+                    "localRotation": {
+                      "x": -0.32085311412811279,
+                      "y": 0.030256420373916626,
+                      "z": -0.11577250808477402,
+                      "w": 0.93953961133956909
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.CapsuleCollider",
+                        "$name": "Collider",
+                        "colliderType": "Capsule",
+                        "center": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "radius": 0.039999999105930328,
+                        "height": 1.0,
+                        "direction": 1,
+                        "isTrigger": false,
+                        "enabled": true,
+                        "physicMaterial": {
+                          "$ref": "PhysicsMaterial",
+                          "name": "Metal",
+                          "instanceID": 609842
+                        }
+                      }
+                    ],
+                    "children": []
+                  },
+                  {
+                    "name": "Cockpit_Engine_Front_A_COL",
+                    "layer": {
+                      "index": 13,
+                      "name": "Vehicle Detailed"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.BoxCollider",
+                        "$name": "Cockpit_Engine_Front_A_COL",
+                        "colliderType": "Box",
+                        "center": {
+                          "x": 0.0,
+                          "y": 0.13702282309532166,
+                          "z": 0.77198988199234009
+                        },
+                        "size": {
+                          "x": 1.6517865657806396,
+                          "y": 0.624045729637146,
+                          "z": 0.27265369892120361
+                        },
+                        "isTrigger": false,
+                        "enabled": true,
+                        "physicMaterial": {
+                          "$ref": "PhysicsMaterial",
+                          "name": "Metal",
+                          "instanceID": 609842
+                        }
+                      }
+                    ],
+                    "children": [
+                      {
+                        "name": "Bumper_Front_A_COL",
+                        "layer": {
+                          "index": 13,
+                          "name": "Vehicle Detailed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.CapsuleCollider",
+                            "$name": "Bumper_Front_A_COL",
+                            "colliderType": "Capsule",
+                            "center": {
+                              "x": 0.0,
+                              "y": -0.25,
+                              "z": 0.89999997615814209
+                            },
+                            "radius": 0.085000000894069672,
+                            "height": 1.75,
+                            "direction": 0,
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          }
+                        ],
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Panel_A_COL",
+                    "layer": {
+                      "index": 13,
+                      "name": "Vehicle Detailed"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "Collider",
+                        "layer": {
+                          "index": 13,
+                          "name": "Vehicle Detailed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -0.88899999856948853,
+                          "y": 0.37000000476837158,
+                          "z": -0.77300000190734863
+                        },
+                        "localRotation": {
+                          "x": -0.13052624464035034,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.99144488573074341
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "Collider",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": 0.0038499236106872559,
+                              "y": 0.0076998472213745117,
+                              "z": 0.04336310550570488
+                            },
+                            "size": {
+                              "x": 0.037527322769165039,
+                              "y": 0.64580988883972168,
+                              "z": 0.27287089824676514
+                            },
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          }
+                        ],
+                        "children": []
+                      },
+                      {
+                        "name": "Collider (1)",
+                        "layer": {
+                          "index": 13,
+                          "name": "Vehicle Detailed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.88899999856948853,
+                          "y": 0.37000000476837158,
+                          "z": -0.77300000190734863
+                        },
+                        "localRotation": {
+                          "x": -0.13052624464035034,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.99144488573074341
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "Collider (1)",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": 0.0038499236106872559,
+                              "y": 0.0076998472213745117,
+                              "z": 0.04336310550570488
+                            },
+                            "size": {
+                              "x": 0.037527322769165039,
+                              "y": 0.64580988883972168,
+                              "z": 0.27287089824676514
+                            },
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          }
+                        ],
+                        "children": []
+                      },
+                      {
+                        "name": "Collider (2)",
+                        "layer": {
+                          "index": 13,
+                          "name": "Vehicle Detailed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -0.80800002813339233,
+                          "y": 1.0169999599456787,
+                          "z": -0.890999972820282
+                        },
+                        "localRotation": {
+                          "x": -0.053698599338531494,
+                          "y": 0.006387712899595499,
+                          "z": -0.11794945597648621,
+                          "w": 0.991546094417572
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "Collider (2)",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": 0.0038499236106872559,
+                              "y": 0.0076998472213745117,
+                              "z": 0.04336310550570488
+                            },
+                            "size": {
+                              "x": 0.037527322769165039,
+                              "y": 0.75,
+                              "z": 0.27287089824676514
+                            },
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          }
+                        ],
+                        "children": []
+                      },
+                      {
+                        "name": "Collider (3)",
+                        "layer": {
+                          "index": 13,
+                          "name": "Vehicle Detailed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.80800002813339233,
+                          "y": 1.0169999599456787,
+                          "z": -0.890999972820282
+                        },
+                        "localRotation": {
+                          "x": -0.050674866884946823,
+                          "y": 0.018876029178500175,
+                          "z": 0.11927634477615356,
+                          "w": 0.99138736724853516
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "Collider (3)",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": 0.0038499236106872559,
+                              "y": 0.0076998472213745117,
+                              "z": 0.04336310550570488
+                            },
+                            "size": {
+                              "x": 0.037527322769165039,
+                              "y": 0.75,
+                              "z": 0.27287089824676514
+                            },
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          }
+                        ],
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Glass_COL",
+                    "layer": {
+                      "index": 13,
+                      "name": "Vehicle Detailed"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 1.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": -0.33791667222976685,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 0.94117605686187744
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.BoxCollider",
+                        "$name": "Glass_COL",
+                        "colliderType": "Box",
+                        "center": {
+                          "x": 0.0,
+                          "y": -0.029999999329447746,
+                          "z": 0.064999997615814209
+                        },
+                        "size": {
+                          "x": 1.4500000476837158,
+                          "y": 0.756941556930542,
+                          "z": 0.093483313918113708
+                        },
+                        "isTrigger": false,
+                        "enabled": true,
+                        "physicMaterial": {
+                          "$ref": "PhysicsMaterial",
+                          "name": "Glass",
+                          "instanceID": 609838
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Middle_A_COL",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 2.1855694143368964E-08,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Middle_A_COL",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.0012860894203186035,
+                      "y": 1.3747584819793701,
+                      "z": -0.20190554857254028
+                    },
+                    "size": {
+                      "x": 1.4295316934585571,
+                      "y": 0.040627002716064453,
+                      "z": 1.46039617061615
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "Panel_A_COL",
+                    "layer": {
+                      "index": 13,
+                      "name": "Vehicle Detailed"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "Collider",
+                        "layer": {
+                          "index": 13,
+                          "name": "Vehicle Detailed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -0.88899999856948853,
+                          "y": 0.37000000476837158,
+                          "z": -0.77300000190734863
+                        },
+                        "localRotation": {
+                          "x": -0.13052624464035034,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.99144488573074341
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "Collider",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": 0.0038499236106872559,
+                              "y": 0.0076998472213745117,
+                              "z": 0.04336310550570488
+                            },
+                            "size": {
+                              "x": 0.037527322769165039,
+                              "y": 0.64580988883972168,
+                              "z": 0.27287089824676514
+                            },
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          }
+                        ],
+                        "children": []
+                      },
+                      {
+                        "name": "Collider (1)",
+                        "layer": {
+                          "index": 13,
+                          "name": "Vehicle Detailed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.88899999856948853,
+                          "y": 0.37000000476837158,
+                          "z": -0.77300000190734863
+                        },
+                        "localRotation": {
+                          "x": -0.13052624464035034,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.99144488573074341
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "Collider (1)",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": 0.0038499236106872559,
+                              "y": 0.0076998472213745117,
+                              "z": 0.04336310550570488
+                            },
+                            "size": {
+                              "x": 0.037527322769165039,
+                              "y": 0.64580988883972168,
+                              "z": 0.27287089824676514
+                            },
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          }
+                        ],
+                        "children": []
+                      },
+                      {
+                        "name": "Collider (2)",
+                        "layer": {
+                          "index": 13,
+                          "name": "Vehicle Detailed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -0.80800002813339233,
+                          "y": 1.0169999599456787,
+                          "z": -0.890999972820282
+                        },
+                        "localRotation": {
+                          "x": -0.053698599338531494,
+                          "y": 0.006387712899595499,
+                          "z": -0.11794945597648621,
+                          "w": 0.991546094417572
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "Collider (2)",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": 0.0038499236106872559,
+                              "y": 0.0076998472213745117,
+                              "z": 0.04336310550570488
+                            },
+                            "size": {
+                              "x": 0.037527322769165039,
+                              "y": 0.75,
+                              "z": 0.27287089824676514
+                            },
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          }
+                        ],
+                        "children": []
+                      },
+                      {
+                        "name": "Collider (3)",
+                        "layer": {
+                          "index": 13,
+                          "name": "Vehicle Detailed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.80800002813339233,
+                          "y": 1.0169999599456787,
+                          "z": -0.890999972820282
+                        },
+                        "localRotation": {
+                          "x": -0.050674866884946823,
+                          "y": 0.018876029178500175,
+                          "z": 0.11927634477615356,
+                          "w": 0.99138736724853516
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "Collider (3)",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": 0.0038499236106872559,
+                              "y": 0.0076998472213745117,
+                              "z": 0.04336310550570488
+                            },
+                            "size": {
+                              "x": 0.037527322769165039,
+                              "y": 0.75,
+                              "z": 0.27287089824676514
+                            },
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          }
+                        ],
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "EngineInteraction",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Usable Primary",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.19200000166893005,
+                  "z": 0.26899999380111694
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.CapsuleCollider",
+                    "$name": "EngineInteraction",
+                    "colliderType": "Capsule",
+                    "center": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.041272193193435669
+                    },
+                    "radius": 0.34999999403953552,
+                    "height": 1.0,
+                    "direction": 2,
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "StorageSpawnPoint",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Construction": [
+      {
+        "$type": "Construction",
+        "$name": "<destroyed native object>",
+        "prefabID": 3414464968,
+        "hierachyName": "1module_cockpit_with_engine",
+        "info": {
+          "$type": "BaseEntity+Menu+Option",
+          "name": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "description": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "icon": null,
+          "order": 0,
+          "usableWhileWounded": false
+        },
+        "canBypassBuildingPermission": false,
+        "showBuildingBlockedPreview": true,
+        "canPlaceOnRoads": false,
+        "canRotateBeforePlacement": false,
+        "canRotateAfterPlacement": false,
+        "canBeDeployedInDeepSeaWater": false,
+        "checkVolumeOnRotate": false,
+        "checkVolumeOnUpgrade": false,
+        "canPlaceAtMaxDistance": false,
+        "placeOnWater": false,
+        "overridePlacementLayer": false,
+        "overridedPlacementLayer": 0,
+        "additionalPlacementLayer": 0,
+        "rotationAmount": {
+          "x": 0.0,
+          "y": 90.0,
+          "z": 0.0
+        },
+        "applyStartingRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "deployOffset": null,
+        "enforceLineOfSightCheckAgainstParentEntity": false,
+        "canSnap": false,
+        "forceY": false,
+        "forceYValue": 0.0,
+        "forceYToOceanLevel": false,
+        "OceanLevelYOffset": 0.0,
+        "holdToPlaceDuration": 0.0,
+        "canFloodFillSockets": false,
+        "alternativeLOSChecks": false,
+        "alternativeLOSPositions": [],
+        "canUseLastValidPosition": true,
+        "healthMultiplier": 1.0,
+        "costMultiplier": 1.0,
+        "maxplaceDistance": 4.0,
+        "minPlaceDistance": 1.0,
+        "guideMesh": null,
+        "guideMeshMaterial": [],
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "hideBuildingPlannerViewmodel": false,
+        "allSockets": [
+          {
+            "$type": "Socket_Specific_Female",
+            "$name": "<destroyed native object>",
+            "prefabID": 3414464968,
+            "hierachyName": "1module_cockpit_with_engine/radiosocket",
+            "rotationDegrees": 0,
+            "rotationOffset": 0,
+            "allowedMaleSockets": [
+              "car_radio"
+            ],
+            "parentToBone": false,
+            "boneName": "",
+            "male": false,
+            "maleDummy": false,
+            "female": true,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": false,
+            "position": {
+              "x": -0.0044999998062849045,
+              "y": 0.7929999828338623,
+              "z": 0.2101999968290329
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": 0.79161840677261353,
+              "z": -0.61101573705673218,
+              "w": 0.0
+            },
+            "selectSize": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "socketName": "1module_cockpit_with_engine/radiosocket",
+            "socketMods": [],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": -0.0044999998062849045,
+              "y": 0.7929999828338623,
+              "z": 0.2101999968290329
+            },
+            "worldRotation": {
+              "x": 0.0,
+              "y": 0.79161840677261353,
+              "z": -0.61101573705673218,
+              "w": 0.0
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": -0.96738260984420776,
+              "z": -0.2533193826675415
+            },
+            "localPosition": {
+              "x": -0.0044999998062849045,
+              "y": 0.7929999828338623,
+              "z": 0.2101999968290329
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.79161840677261353,
+              "z": -0.61101573705673218,
+              "w": 0.0
+            },
+            "fullName": "assets/content/vehicles/modularcar/module_entities/1module_cockpit_with_engine.prefab",
+            "instanceID": 1574034,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          }
+        ],
+        "allProximities": [],
+        "defaultGrade": null,
+        "socketHandle": null,
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.5,
+            "z": 0.0
+          },
+          "size": {
+            "x": 1.8500000238418579,
+            "y": 1.8480000495910645,
+            "z": 2.2400000095367432
+          }
+        },
+        "isBuildingPrivilege": false,
+        "isSleepingBag": false,
+        "grades": [],
+        "deployable": null,
+        "placeholder": null,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/content/vehicles/modularcar/module_entities/1module_cockpit_with_engine.prefab",
+        "instanceID": 1538790,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Socket_Base": [
+      {
+        "$ref": "Socket_Specific_Female",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ]
+  }
+}

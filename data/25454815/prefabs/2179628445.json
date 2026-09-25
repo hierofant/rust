@@ -1,0 +1,2103 @@
+{
+  "prefabID": 2179628445,
+  "path": "assets/prefabs/boat/playerboat.prefab",
+  "rootClassChain": [
+    "PlayerBoat",
+    "BaseBoat",
+    "BaseVehicle",
+    "BaseMountable",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.0,
+      "y": 0.75,
+      "z": -0.032169818878173828
+    },
+    "size": {
+      "x": 1.773398756980896,
+      "y": 2.0,
+      "z": 4.83217716217041
+    }
+  },
+  "hierarchy": {
+    "name": "playerboat",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "PlayerBoat",
+        "$name": "playerboat",
+        "boatRear": null,
+        "wakeEffect": null,
+        "BoatBuildingStationItem": {
+          "$ref": "ItemDefinition",
+          "name": "BoatBuildingStation.item",
+          "itemid": 1993693904,
+          "shortname": "boatbuildingstation"
+        },
+        "BoatBuildingStationPrefab": {
+          "$ref": "GameObject",
+          "guid": "56115adb1c3794b4fac6e919cf480a9f",
+          "resourcePath": "assets/prefabs/deployable/boat building platform/boatbuildingstation.deployed.prefab",
+          "resourceID": 75540915
+        },
+        "ChildrenToDestroyOnDeath": [
+          {
+            "$ref": "StabilityEntity",
+            "name": "shutter.metal.embrasure.a",
+            "instanceID": 622988,
+            "goName": "shutter.metal.embrasure.a"
+          },
+          {
+            "$ref": "StabilityEntity",
+            "name": "shutter.metal.embrasure.b",
+            "instanceID": 622996,
+            "goName": "shutter.metal.embrasure.b"
+          },
+          {
+            "$ref": "Signage",
+            "name": "window.paintable",
+            "instanceID": 623162,
+            "goName": "window.paintable"
+          },
+          {
+            "$ref": "GunTrap",
+            "name": "guntrap.deployed",
+            "instanceID": 623140,
+            "goName": "guntrap.deployed"
+          },
+          {
+            "$ref": "FlameTurret",
+            "name": "flameturret.deployed",
+            "instanceID": 623022,
+            "goName": "flameturret.deployed"
+          }
+        ],
+        "sinkEffect": {
+          "$ref": "GameObject",
+          "guid": "66af0a68fa3b9487a842b49831789c11",
+          "resourcePath": "assets/prefabs/boat/effects/player-boat-sink.prefab",
+          "resourceID": 714270523
+        },
+        "DynamicBuildCost": [],
+        "MaxEditVelocity": 2.0,
+        "DeathSinkRate": 0.05000000074505806,
+        "AimSwayVelocityCurve": {
+          "$type": "UnityEngine.AnimationCurve"
+        },
+        "AimSwayClarityClampVelocityCurve": {
+          "$type": "UnityEngine.AnimationCurve"
+        },
+        "CannonAttackSlowdownCurve": {
+          "$type": "UnityEngine.AnimationCurve"
+        },
+        "BoatBuildingBlocks": {
+          "$type": "CachedBoatParts`1[[BoatBuildingBlock, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+        },
+        "Deployables": {
+          "$type": "CachedBoatParts`1[[BaseEntity, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+        },
+        "ParentedBoatDeployableProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "BlockPlayerBoatWood",
+          "comments": "",
+          "density": 2.0,
+          "amounts": [
+            0.89999997615814209,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.699999988079071,
+            0.0,
+            0.0,
+            0.0,
+            0.97000002861022949,
+            0.97000002861022949,
+            0.97000002861022949,
+            0.0,
+            1.0,
+            0.99000000953674316,
+            0.99000000953674316,
+            0.10000000149011612,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.89999997615814209,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "FilenameStringId": 668770609
+        },
+        "playerBoatSounds": null,
+        "lastEditLocalPos": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "lastEditLocalRot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "engineThrust": 2400.0,
+        "steeringScale": 0.10000000149011612,
+        "thrustPoint": [],
+        "centerOfMass": [],
+        "buoyancy": {
+          "$type": "Buoyancy",
+          "$name": "playerboat",
+          "points": [
+            {
+              "$type": "BuoyancyPoint",
+              "$name": "FC",
+              "buoyancyForce": 2.7400000095367432,
+              "size": 0.75,
+              "waveScale": 0.20000000298023224,
+              "waveFrequency": 1.0,
+              "doSplashEffects": true,
+              "randomOffset": 0.0,
+              "wasSubmergedLastFrame": false,
+              "nexSplashTime": 0.0
+            },
+            {
+              "$type": "BuoyancyPoint",
+              "$name": "FR",
+              "buoyancyForce": 2.7400000095367432,
+              "size": 0.75,
+              "waveScale": 0.20000000298023224,
+              "waveFrequency": 1.0,
+              "doSplashEffects": true,
+              "randomOffset": 0.0,
+              "wasSubmergedLastFrame": false,
+              "nexSplashTime": 0.0
+            },
+            {
+              "$type": "BuoyancyPoint",
+              "$name": "FL",
+              "buoyancyForce": 2.7400000095367432,
+              "size": 0.75,
+              "waveScale": 0.20000000298023224,
+              "waveFrequency": 1.0,
+              "doSplashEffects": true,
+              "randomOffset": 0.0,
+              "wasSubmergedLastFrame": false,
+              "nexSplashTime": 0.0
+            },
+            {
+              "$type": "BuoyancyPoint",
+              "$name": "MC",
+              "buoyancyForce": 2.7400000095367432,
+              "size": 0.75,
+              "waveScale": 0.20000000298023224,
+              "waveFrequency": 1.0,
+              "doSplashEffects": true,
+              "randomOffset": 0.0,
+              "wasSubmergedLastFrame": false,
+              "nexSplashTime": 0.0
+            },
+            {
+              "$type": "BuoyancyPoint",
+              "$name": "MR",
+              "buoyancyForce": 2.7400000095367432,
+              "size": 0.75,
+              "waveScale": 0.20000000298023224,
+              "waveFrequency": 1.0,
+              "doSplashEffects": true,
+              "randomOffset": 0.0,
+              "wasSubmergedLastFrame": false,
+              "nexSplashTime": 0.0
+            },
+            {
+              "$type": "BuoyancyPoint",
+              "$name": "ML",
+              "buoyancyForce": 2.7400000095367432,
+              "size": 0.75,
+              "waveScale": 0.20000000298023224,
+              "waveFrequency": 1.0,
+              "doSplashEffects": true,
+              "randomOffset": 0.0,
+              "wasSubmergedLastFrame": false,
+              "nexSplashTime": 0.0
+            },
+            {
+              "$type": "BuoyancyPoint",
+              "$name": "BC",
+              "buoyancyForce": 2.7400000095367432,
+              "size": 0.75,
+              "waveScale": 0.20000000298023224,
+              "waveFrequency": 1.0,
+              "doSplashEffects": true,
+              "randomOffset": 0.0,
+              "wasSubmergedLastFrame": false,
+              "nexSplashTime": 0.0
+            },
+            {
+              "$type": "BuoyancyPoint",
+              "$name": "BR",
+              "buoyancyForce": 2.7400000095367432,
+              "size": 0.75,
+              "waveScale": 0.20000000298023224,
+              "waveFrequency": 1.0,
+              "doSplashEffects": true,
+              "randomOffset": 0.0,
+              "wasSubmergedLastFrame": false,
+              "nexSplashTime": 0.0
+            },
+            {
+              "$type": "BuoyancyPoint",
+              "$name": "BL",
+              "buoyancyForce": 2.7400000095367432,
+              "size": 0.75,
+              "waveScale": 0.20000000298023224,
+              "waveFrequency": 1.0,
+              "doSplashEffects": true,
+              "randomOffset": 0.0,
+              "wasSubmergedLastFrame": false,
+              "nexSplashTime": 0.0
+            }
+          ],
+          "waterImpacts": [
+            {
+              "$ref": "GameObject",
+              "guid": "b69840910c472c84fb0b0909d0628322",
+              "resourcePath": "assets/content/vehicles/boats/effects/splash.prefab",
+              "resourceID": 2441402188
+            }
+          ],
+          "rigidBody": {
+            "$type": "UnityEngine.Rigidbody",
+            "$name": "playerboat"
+          },
+          "buoyancyScale": 1.0,
+          "scaleForceWithMass": false,
+          "doEffects": true,
+          "flowMovementScale": 1.0,
+          "requiredSubmergedFraction": 0.5,
+          "useUnderwaterDrag": false,
+          "underwaterDrag": 2.0,
+          "wavesEffect": 1.0,
+          "SubmergedChanged": null,
+          "forEntity": {
+            "$cycle": true,
+            "type": "PlayerBoat"
+          },
+          "submergedFraction": 0.0,
+          "FlowForceDisabled": false,
+          "pointData": [
+            {
+              "$type": "Buoyancy+BuoyancyPointData",
+              "localPosition": {
+                "x": -3.0,
+                "y": 0.0,
+                "z": -3.0
+              },
+              "rootToPoint": {
+                "x": -3.0,
+                "y": 0.0,
+                "z": -3.0
+              },
+              "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            {
+              "$type": "Buoyancy+BuoyancyPointData",
+              "localPosition": {
+                "x": 3.0,
+                "y": 0.0,
+                "z": -3.0
+              },
+              "rootToPoint": {
+                "x": 3.0,
+                "y": 0.0,
+                "z": -3.0
+              },
+              "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            {
+              "$type": "Buoyancy+BuoyancyPointData",
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -3.0
+              },
+              "rootToPoint": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -3.0
+              },
+              "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            {
+              "$type": "Buoyancy+BuoyancyPointData",
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "rootToPoint": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            {
+              "$type": "Buoyancy+BuoyancyPointData",
+              "localPosition": {
+                "x": -3.0,
+                "y": 0.0,
+                "z": 3.0
+              },
+              "rootToPoint": {
+                "x": -3.0,
+                "y": 0.0,
+                "z": 3.0
+              },
+              "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            {
+              "$type": "Buoyancy+BuoyancyPointData",
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 3.0
+              },
+              "rootToPoint": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 3.0
+              },
+              "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            {
+              "$type": "Buoyancy+BuoyancyPointData",
+              "localPosition": {
+                "x": 3.0,
+                "y": 0.0,
+                "z": 3.0
+              },
+              "rootToPoint": {
+                "x": 3.0,
+                "y": 0.0,
+                "z": 3.0
+              },
+              "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            {
+              "$type": "Buoyancy+BuoyancyPointData",
+              "localPosition": {
+                "x": 3.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "rootToPoint": {
+                "x": 3.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            {
+              "$type": "Buoyancy+BuoyancyPointData",
+              "localPosition": {
+                "x": -3.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "rootToPoint": {
+                "x": -3.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          ],
+          "ArtificialHeight": null
+        },
+        "preventDecayIndoors": true,
+        "applyCorrectionForces": true,
+        "planeFitPoints": [
+          [],
+          [],
+          []
+        ],
+        "inAirPID": {
+          "x": 10.0,
+          "y": 0.0099999997764825821,
+          "z": 0.10000000149011612
+        },
+        "inAirDesiredPitch": 0.0,
+        "wavePID": {
+          "x": 5.0,
+          "y": 0.0099999997764825821,
+          "z": 0.10000000149011612
+        },
+        "correctionRange": {
+          "$type": "MinMax",
+          "x": -0.75,
+          "y": 0.5
+        },
+        "correctionForceMode": {
+          "$enum": "BaseBoat+CorrectionForceMode",
+          "name": "Acceleration",
+          "value": 5
+        },
+        "correctionSpringForce": 10.0,
+        "correctionSpringDamping": 5.0,
+        "gasPedal": 0.0,
+        "steering": 0.0,
+        "timeSinceLastPush": {
+          "$type": "TimeSince"
+        },
+        "recentDrivers": [],
+        "clearRecentDriverAction": null,
+        "safeAreaRadius": 0.0,
+        "safeAreaOrigin": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "spawnTime": -1.0,
+        "checkVehicleClipping": true,
+        "excludeCollisionLayers": 0,
+        "dismountStyle": {
+          "$enum": "BaseVehicle+DismountStyle",
+          "name": "Closest",
+          "value": 0
+        },
+        "ignoreDamageFromOutside": false,
+        "npcVisibilityCategory": {
+          "$enum": "BaseVehicle+NpcVisibilityCategory",
+          "name": "LikeNormalPlayer",
+          "value": 0
+        },
+        "mountPoints": [],
+        "childMountableHandleDismountPoints": true,
+        "mountedPlayerRagdolls": {
+          "$enum": "BaseVehicle+RagdollMode",
+          "name": "Collide",
+          "value": 0
+        },
+        "clippingChecks": {
+          "$enum": "BaseVehicle+ClippingCheckMode",
+          "name": "OnMountOnly",
+          "value": 0
+        },
+        "clippingAiChecks": {
+          "$enum": "BaseVehicle+ClippingCheckAiMode",
+          "name": "All",
+          "value": 0
+        },
+        "damageRenderer": null,
+        "explosionForceMultiplier": 75.0,
+        "explosionForceMax": 17250.0,
+        "HasBuildingPrivilege": true,
+        "mountSyncType": {
+          "$enum": "BaseMountable+MountSyncType",
+          "name": "RepositionPerFrame",
+          "value": 0
+        },
+        "eyePositionOverride": null,
+        "eyeCenterOverride": null,
+        "overrideEyesRotation": false,
+        "pitchClamp": {
+          "x": -80.0,
+          "y": 50.0
+        },
+        "yawClamp": {
+          "x": -80.0,
+          "y": 80.0
+        },
+        "canWieldItems": true,
+        "relativeViewAngles": true,
+        "disableLegsWhenMounted": false,
+        "disableBreastCensorshipWhenMounted": false,
+        "AllowForceMountWhenRestrained": true,
+        "mountChaining": true,
+        "mountAnchor": [],
+        "mountLOSVertOffset": 0.5,
+        "mountedAnimationSpeed": 0.0,
+        "mountPose": {
+          "$enum": "PlayerModel+MountPoses",
+          "name": "Chair",
+          "value": 0
+        },
+        "animateVehicleAim360": false,
+        "maxMountDistance": 20.0,
+        "dismountPositions": [],
+        "checkPlayerLosOnMount": false,
+        "disableMeshCullingForPlayers": false,
+        "allowHeadLook": false,
+        "ignoreVehicleParent": false,
+        "legacyDismount": false,
+        "wearWhileMounted": null,
+        "modifiesPlayerCollider": false,
+        "customPlayerCollider": {
+          "$type": "BasePlayer+CapsuleColliderInfo",
+          "height": 0.0,
+          "radius": 0.0,
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "clippingCheckRadius": 0.40000000596046448,
+        "clippingAndVisChecks": true,
+        "clippingChecksLocation": {
+          "$enum": "BaseMountable+ClippingCheckLocation",
+          "name": "WholeBody",
+          "value": 1
+        },
+        "mountSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "small-boat-mount",
+          "instanceID": 199428
+        },
+        "swapSoundDef": null,
+        "dismountSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "small-boat-dismount",
+          "instanceID": 204350
+        },
+        "allowFootstepEffects": false,
+        "dismountHoldType": {
+          "$enum": "BaseMountable+DismountConvarType",
+          "name": "Misc",
+          "value": 0
+        },
+        "mountTimeStatType": {
+          "$enum": "BaseMountable+MountStatType",
+          "name": "None",
+          "value": 0
+        },
+        "allowedGestures": {
+          "$enum": "BaseMountable+MountGestureType",
+          "name": "None",
+          "value": 0
+        },
+        "canDrinkWhileMounted": true,
+        "allowSleeperMounting": false,
+        "shouldShowHudHealth": false,
+        "blockLooting": false,
+        "animateClothInLocalSpace": true,
+        "protectsFromAnimals": false,
+        "MountedCameraMode": {
+          "$enum": "BasePlayer+CameraMode",
+          "name": "FirstPerson",
+          "value": 0
+        },
+        "rigidBody": {
+          "$ref": "Rigidbody",
+          "name": "playerboat",
+          "instanceID": 895476,
+          "goName": "playerboat",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "wantsBoundaryRepelCheck": true,
+        "isMobile": true,
+        "SideLeanAmount": 0.20000000298023224,
+        "_mounted": null,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$ref": "ProtectionProperties",
+          "name": "BlockPlayerBoatWood",
+          "instanceID": 183914,
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "startHealth": 400.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": false,
+          "itemTarget": null,
+          "itemCount": 0,
+          "setConditionFromHealth": false,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": false,
+          "requireHammer": false,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "rowboat.item",
+            "itemid": 1878053256,
+            "shortname": "rowboat"
+          },
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": false,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.75,
+            "z": -0.032169818878173828
+          },
+          "size": {
+            "x": 1.773398756980896,
+            "y": 2.0,
+            "z": 4.83217716217041
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": true,
+        "model": {
+          "$type": "Model",
+          "$name": "playerboat",
+          "collision": null,
+          "rootBone": [
+            [
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ],
+            {
+              "$ref": "Transform",
+              "name": "mountAnchor",
+              "instanceID": 787876,
+              "goName": "mountAnchor",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "ThrustPoint",
+              "instanceID": 837990,
+              "goName": "ThrustPoint",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [
+              {
+                "$ref": "Transform",
+                "name": "f",
+                "instanceID": 820600,
+                "goName": "f",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              {
+                "$ref": "Transform",
+                "name": "br",
+                "instanceID": 821652,
+                "goName": "br",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              {
+                "$ref": "Transform",
+                "name": "bl",
+                "instanceID": 800768,
+                "goName": "bl",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              []
+            ],
+            {
+              "$ref": "Transform",
+              "name": "CenterOfMass",
+              "instanceID": 827084,
+              "goName": "CenterOfMass",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [],
+            []
+          ],
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "playerboat",
+              "instanceID": 841630,
+              "goName": "playerboat",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Buoyancy",
+              "instanceID": 755222,
+              "goName": "Buoyancy",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "FC",
+              "instanceID": 789542,
+              "goName": "FC",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "FR",
+              "instanceID": 798350,
+              "goName": "FR",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "FL",
+              "instanceID": 774968,
+              "goName": "FL",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "MC",
+              "instanceID": 830090,
+              "goName": "MC",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "MR",
+              "instanceID": 792338,
+              "goName": "MR",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "ML",
+              "instanceID": 752442,
+              "goName": "ML",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "BC",
+              "instanceID": 807952,
+              "goName": "BC",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "BR",
+              "instanceID": 827992,
+              "goName": "BR",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "BL",
+              "instanceID": 768158,
+              "goName": "BL",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "mountAnchor",
+              "instanceID": 787876,
+              "goName": "mountAnchor",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "ThrustPoint",
+              "instanceID": 837990,
+              "goName": "ThrustPoint",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Server",
+              "instanceID": 811344,
+              "goName": "Server",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "f",
+              "instanceID": 820600,
+              "goName": "f",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "br",
+              "instanceID": 821652,
+              "goName": "br",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "bl",
+              "instanceID": 800768,
+              "goName": "bl",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "TriggerParent",
+              "instanceID": 769428,
+              "goName": "TriggerParent",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "CenterOfMass",
+              "instanceID": 827084,
+              "goName": "CenterOfMass",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "storageSpawnPoint",
+              "instanceID": 745194,
+              "goName": "storageSpawnPoint",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "fuelStorageSpawnPoint",
+              "instanceID": 838212,
+              "goName": "fuelStorageSpawnPoint",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "playerboat",
+            "Buoyancy",
+            "FC",
+            "FR",
+            "FL",
+            "MC",
+            "MR",
+            "ML",
+            "BC",
+            "BR",
+            "BL",
+            "mountAnchor",
+            "ThrustPoint",
+            "Server",
+            "f",
+            "br",
+            "bl",
+            "TriggerParent",
+            "CenterOfMass",
+            "storageSpawnPoint",
+            "fuelStorageSpawnPoint"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 2179628445,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$ref": "Rigidbody",
+        "name": "playerboat",
+        "instanceID": 895476,
+        "goName": "playerboat",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "Buoyancy",
+        "name": "playerboat",
+        "instanceID": 983934,
+        "goName": "playerboat",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$type": "Spawnable",
+        "$name": "playerboat",
+        "Population": null,
+        "ForceSpawnOnly": false,
+        "ForceSpawnInfoMessage": "",
+        "CanSpawnInSafeZone": true
+      },
+      {
+        "$type": "PhysicsEffects",
+        "$name": "playerboat",
+        "entity": {
+          "$ref": "PlayerBoat",
+          "name": "playerboat",
+          "instanceID": 979464,
+          "goName": "playerboat",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "physImpactSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "player-boat-physics-impact",
+          "instanceID": 489282
+        },
+        "minTimeBetweenEffects": 0.25,
+        "minDistBetweenEffects": 0.10000000149011612,
+        "hardnessScale": 1.5,
+        "lowMedThreshold": 0.40000000596046448,
+        "medHardThreshold": 0.699999988079071,
+        "enableDelay": 0.10000000149011612,
+        "ignoreLayers": 135168,
+        "useCollisionPositionInsteadOfTransform": true,
+        "minimumRigidbodyImpactWeight": 5.5
+      },
+      {
+        "$ref": "Model",
+        "name": "playerboat",
+        "instanceID": 982224,
+        "goName": "playerboat",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "children": [
+      {
+        "name": "Buoyancy",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "FC",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -3.0,
+              "y": 0.0,
+              "z": -3.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0000007152557373,
+              "y": 0.99999934434890747,
+              "z": 1.0000007152557373
+            },
+            "components": [
+              {
+                "$ref": "BuoyancyPoint",
+                "name": "FC",
+                "instanceID": 967902,
+                "goName": "FC",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "FR",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 3.0,
+              "y": 0.0,
+              "z": -3.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0000007152557373,
+              "y": 0.99999934434890747,
+              "z": 1.0000007152557373
+            },
+            "components": [
+              {
+                "$ref": "BuoyancyPoint",
+                "name": "FR",
+                "instanceID": 986920,
+                "goName": "FR",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "FL",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -3.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0000007152557373,
+              "y": 0.99999934434890747,
+              "z": 1.0000007152557373
+            },
+            "components": [
+              {
+                "$ref": "BuoyancyPoint",
+                "name": "FL",
+                "instanceID": 984880,
+                "goName": "FL",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "MC",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0000007152557373,
+              "y": 0.99999934434890747,
+              "z": 1.0000007152557373
+            },
+            "components": [
+              {
+                "$ref": "BuoyancyPoint",
+                "name": "MC",
+                "instanceID": 982372,
+                "goName": "MC",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "MR",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -3.0,
+              "y": 0.0,
+              "z": 3.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0000007152557373,
+              "y": 0.99999934434890747,
+              "z": 1.0000007152557373
+            },
+            "components": [
+              {
+                "$ref": "BuoyancyPoint",
+                "name": "MR",
+                "instanceID": 993542,
+                "goName": "MR",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "ML",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 3.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0000007152557373,
+              "y": 0.99999934434890747,
+              "z": 1.0000007152557373
+            },
+            "components": [
+              {
+                "$ref": "BuoyancyPoint",
+                "name": "ML",
+                "instanceID": 990936,
+                "goName": "ML",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "BC",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 3.0,
+              "y": 0.0,
+              "z": 3.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0000007152557373,
+              "y": 0.99999934434890747,
+              "z": 1.0000007152557373
+            },
+            "components": [
+              {
+                "$ref": "BuoyancyPoint",
+                "name": "BC",
+                "instanceID": 970144,
+                "goName": "BC",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "BR",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 3.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0000007152557373,
+              "y": 0.99999934434890747,
+              "z": 1.0000007152557373
+            },
+            "components": [
+              {
+                "$ref": "BuoyancyPoint",
+                "name": "BR",
+                "instanceID": 991852,
+                "goName": "BR",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "BL",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -3.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0000007152557373,
+              "y": 0.99999934434890747,
+              "z": 1.0000007152557373
+            },
+            "components": [
+              {
+                "$ref": "BuoyancyPoint",
+                "name": "BL",
+                "instanceID": 981922,
+                "goName": "BL",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "mountAnchor",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.51999998092651367,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "ThrustPoint",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": -0.034000001847743988,
+          "z": -2.3369998931884766
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "Server",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "f",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 2.1089999675750732
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "br",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.5,
+              "y": 0.0,
+              "z": -2.0299999713897705
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "bl",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.5,
+              "y": 0.0,
+              "z": -2.0299999713897705
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "TriggerParent",
+            "layer": {
+              "index": 18,
+              "name": "Trigger"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": false,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "TriggerParent",
+                "$name": "TriggerParent",
+                "StableIndex": -1,
+                "doClippingCheck": false,
+                "associatedMountable": null,
+                "parentMountedPlayers": true,
+                "parentSleepers": true,
+                "parentSwimmers": false,
+                "ParentNPCPlayers": false,
+                "SkipNPCChecks": false,
+                "overrideOtherTriggers": false,
+                "checkForObjUnderFeet": true,
+                "doExpensivePlayerClippingChecks": false,
+                "TriggerMovementMask": {
+                  "$enum": "BaseEntity+Axis",
+                  "name": "XYZ",
+                  "value": 7,
+                  "flagNames": [
+                    "X",
+                    "Y",
+                    "XY",
+                    "Z",
+                    "XZ",
+                    "YZ",
+                    "XYZ"
+                  ]
+                },
+                "EntityMovementMask": {
+                  "$enum": "BaseEntity+Axis",
+                  "name": "XYZ",
+                  "value": 7,
+                  "flagNames": [
+                    "X",
+                    "Y",
+                    "XY",
+                    "Z",
+                    "XZ",
+                    "YZ",
+                    "XYZ"
+                  ]
+                },
+                "interestLayers": -2147350016,
+                "contents": null,
+                "entityContents": null,
+                "OnEntityEnterTrigger": null,
+                "OnEntityLeaveTrigger": null
+              },
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "TriggerParent",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "size": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "isTrigger": true,
+                "enabled": true
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "CenterOfMass",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "storageSpawnPoint",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.004999999888241291,
+          "y": 0.27799999713897705,
+          "z": 1.1640000343322754
+        },
+        "localRotation": {
+          "x": -0.5,
+          "y": -0.5,
+          "z": 0.5,
+          "w": 0.5
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "fuelStorageSpawnPoint",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0010000000474974513,
+          "y": 1.1130000352859497,
+          "z": -2.2929999828338623
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "DecorComponent": [
+      {
+        "$type": "DecorOffset",
+        "$name": "<destroyed native object>",
+        "prefabID": 2179628445,
+        "hierachyName": "playerboat",
+        "MinOffset": {
+          "x": 0.0,
+          "y": 2.0,
+          "z": 0.0
+        },
+        "MaxOffset": {
+          "x": 0.0,
+          "y": 2.0,
+          "z": 0.0
+        },
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/boat/playerboat.prefab",
+        "instanceID": 1005080,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Construction": [
+      {
+        "$type": "Construction",
+        "$name": "<destroyed native object>",
+        "prefabID": 2179628445,
+        "hierachyName": "playerboat",
+        "info": {
+          "$type": "BaseEntity+Menu+Option",
+          "name": {
+            "$type": "Translate+Phrase",
+            "token": "playerboat",
+            "legacyEnglish": "Player Boat"
+          },
+          "description": {
+            "$type": "Translate+Phrase",
+            "token": "playerboat_desc_planner",
+            "legacyEnglish": "A player boat"
+          },
+          "icon": {
+            "$ref": "Sprite",
+            "name": "tugboat.icon",
+            "instanceID": 610890
+          },
+          "order": 301,
+          "usableWhileWounded": false
+        },
+        "canBypassBuildingPermission": true,
+        "showBuildingBlockedPreview": true,
+        "canPlaceOnRoads": false,
+        "canRotateBeforePlacement": false,
+        "canRotateAfterPlacement": false,
+        "canBeDeployedInDeepSeaWater": false,
+        "checkVolumeOnRotate": false,
+        "checkVolumeOnUpgrade": false,
+        "canPlaceAtMaxDistance": true,
+        "placeOnWater": false,
+        "overridePlacementLayer": false,
+        "overridedPlacementLayer": 0,
+        "additionalPlacementLayer": 0,
+        "rotationAmount": {
+          "x": 0.0,
+          "y": 180.0,
+          "z": 0.0
+        },
+        "applyStartingRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "deployOffset": null,
+        "enforceLineOfSightCheckAgainstParentEntity": false,
+        "canSnap": false,
+        "forceY": false,
+        "forceYValue": 0.0,
+        "forceYToOceanLevel": false,
+        "OceanLevelYOffset": 0.0,
+        "holdToPlaceDuration": 0.0,
+        "canFloodFillSockets": false,
+        "alternativeLOSChecks": false,
+        "alternativeLOSPositions": [],
+        "canUseLastValidPosition": true,
+        "healthMultiplier": 1.0,
+        "costMultiplier": 0.699999988079071,
+        "maxplaceDistance": 4.0,
+        "minPlaceDistance": 1.0,
+        "guideMesh": null,
+        "guideMeshMaterial": [],
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "hideBuildingPlannerViewmodel": false,
+        "allSockets": [],
+        "allProximities": [],
+        "defaultGrade": null,
+        "socketHandle": null,
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.75,
+            "z": -0.032169818878173828
+          },
+          "size": {
+            "x": 1.773398756980896,
+            "y": 2.0,
+            "z": 4.83217716217041
+          }
+        },
+        "isBuildingPrivilege": false,
+        "isSleepingBag": false,
+        "grades": [],
+        "deployable": null,
+        "placeholder": null,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/boat/playerboat.prefab",
+        "instanceID": 971818,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "PrefabInformation": [
+      {
+        "$type": "PrefabInformation",
+        "$name": "<destroyed native object>",
+        "prefabID": 2179628445,
+        "hierachyName": "playerboat",
+        "associatedItemDefinition": null,
+        "title": {
+          "$type": "Translate+Phrase",
+          "token": "playerboat",
+          "legacyEnglish": ""
+        },
+        "description": {
+          "$type": "Translate+Phrase",
+          "token": "",
+          "legacyEnglish": ""
+        },
+        "sprite": {
+          "$ref": "Sprite",
+          "name": "tugboat.icon",
+          "instanceID": 610890
+        },
+        "shownOnDeathScreen": true,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/boat/playerboat.prefab",
+        "instanceID": 1001718,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ]
+  }
+}

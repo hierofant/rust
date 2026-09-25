@@ -1,0 +1,2391 @@
+{
+  "prefabID": 186002280,
+  "path": "assets/prefabs/deployable/vendingmachine/vendingmachine.deployed.prefab",
+  "rootClassChain": [
+    "VendingMachine",
+    "ContainerIOEntity",
+    "IOEntity",
+    "DecayEntity",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.022711575031280518,
+      "y": 1.0771669149398804,
+      "z": 0.07329857349395752
+    },
+    "size": {
+      "x": 1.3195559978485107,
+      "y": 2.1543338298797607,
+      "z": 0.86322379112243652
+    }
+  },
+  "hierarchy": {
+    "name": "vendingmachine.deployed",
+    "layer": {
+      "index": 8,
+      "name": "Deployed"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "VendingMachine",
+        "$name": "vendingmachine.deployed",
+        "adminMenuPrefab": {
+          "$ref": "GameObject",
+          "guid": "6d34ff94492958f4ca0c407e9d769650",
+          "resourcePath": "assets/bundled/prefabs/ui/dialogs/vending machine/ui.vendingadminmenu.prefab",
+          "resourceID": 1405459179
+        },
+        "customerPanel": "vendingmachine.customer",
+        "sellOrders": null,
+        "buySound": null,
+        "shopName": "A Shop",
+        "maxCurrencyVolume": 1,
+        "localDropPosition": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": -0.5
+        },
+        "mapMarkerPrefab": {
+          "$ref": "GameObject",
+          "guid": "806d81ff16e32ed41838953512b5fe96",
+          "resourcePath": "assets/prefabs/deployable/vendingmachine/vending_mapmarker.prefab",
+          "resourceID": 3459945130
+        },
+        "IsLocalized": false,
+        "PoweredFoodSpoilageRateMultiplier": 0.0,
+        "PowerConsumption": 5,
+        "IsInDeepSeaCached": false,
+        "predictionConfig": {
+          "$ref": "DeliveryDroneConfig",
+          "name": "CobaltDeliveryDroneConfig",
+          "instanceID": 109572
+        },
+        "transactionActive": false,
+        "onlyAllowedItem": null,
+        "allowedContents": {
+          "$enum": "ItemContainer+ContentsType",
+          "name": "-1",
+          "value": -1,
+          "flagNames": [
+            "Generic",
+            "Liquid"
+          ]
+        },
+        "maxStackSize": 0,
+        "numSlots": 30,
+        "lootPanelName": "generic_resizable",
+        "panelTitle": {
+          "$type": "Translate+Phrase",
+          "token": "vend_storage",
+          "legacyEnglish": "Loot"
+        },
+        "needsBuildingPrivilegeToUse": false,
+        "requireAuthIfNotLocked": false,
+        "isLootable": true,
+        "isMonitorable": true,
+        "dropsLoot": true,
+        "dropLootDestroyPercent": 0.5,
+        "dropFloats": false,
+        "onlyOneUser": false,
+        "supportsChildDeployables": false,
+        "allowSorting": true,
+        "isLockable": false,
+        "openSound": {
+          "$ref": "SoundDefinition",
+          "name": "vending-machine-open",
+          "instanceID": 27078
+        },
+        "closeSound": {
+          "$ref": "SoundDefinition",
+          "name": "vending-machine-close",
+          "instanceID": 27094
+        },
+        "debugOrigin": [
+          [
+            [],
+            []
+          ],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        "sourceItem": {
+          "$ref": "ItemDefinition",
+          "name": "vendingmachine.item",
+          "itemid": 198438816,
+          "shortname": "vending.machine"
+        },
+        "lastResetIndex": 0,
+        "inputs": [
+          {
+            "$type": "IOEntity+IOSlot",
+            "niceName": "[Fridge] Power In",
+            "type": {
+              "$enum": "IOEntity+IOType",
+              "name": "Electric",
+              "value": 0
+            },
+            "connectedTo": {
+              "$type": "IOEntity+IORef",
+              "entityRef": {
+                "$type": "EntityRef"
+              },
+              "ioEnt": null
+            },
+            "connectedToSlot": 0,
+            "importance": {
+              "$enum": "IOHandlePriority",
+              "name": "Normal",
+              "value": 0
+            },
+            "ArrowOffset": 0.0,
+            "linePoints": [],
+            "lineAnchors": null,
+            "slackLevels": [],
+            "worldSpaceLineEndRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "line": null,
+            "handlePosition": {
+              "x": -0.64999997615814209,
+              "y": 0.15000000596046448,
+              "z": -0.25
+            },
+            "handleDirection": {
+              "x": -1.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rootConnectionsOnly": false,
+            "mainPowerSlot": true,
+            "wireColour": {
+              "$enum": "WireTool+WireColour",
+              "name": "Gray",
+              "value": 0
+            },
+            "lineThickness": 0.0
+          }
+        ],
+        "outputs": [],
+        "ioType": {
+          "$enum": "IOEntity+IOType",
+          "name": "Electric",
+          "value": 0
+        },
+        "cachedOutputsUsed": 0,
+        "lastPassthroughEnergy": -1,
+        "lastEnergy": 0,
+        "currentEnergy": 0,
+        "lastUpdateTime": 0.0,
+        "lastUpdateBlockedFrame": 0,
+        "ensureOutputsUpdated": false,
+        "canBeDemolished": false,
+        "debrisPrefab": {
+          "$ref": "GameObject",
+          "guid": "796413a57ca6b4c8f85faf6a6732e002",
+          "resourcePath": "assets/prefabs/debris/debris.wall.prefab",
+          "resourceID": 1424066995
+        },
+        "debrisRotationOffset": {
+          "x": 0.0,
+          "y": 90.0,
+          "z": 0.0
+        },
+        "DebrisPositions": [],
+        "buildingID": 0,
+        "timePlaced": 0.0,
+        "decayTimer": 0.0,
+        "upkeepTimer": 0.0,
+        "upkeep": null,
+        "decay": null,
+        "decayPoints": null,
+        "lastDecayTick": 0.0,
+        "decayVariance": 1.0,
+        "spawnDeployableCorpseOnDeath": true,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "0bc6b2f91e4c1da4782124e9fe2e2e88",
+          "resourcePath": "assets/prefabs/deployable/vendingmachine/vendingmachine.deployed.corpse.prefab",
+          "resourceID": 2525285291
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "BlockMetal",
+          "comments": "",
+          "density": 4.0,
+          "amounts": [
+            0.98000001907348633,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.99989998340606689,
+            0.99000000953674316,
+            0.99000000953674316,
+            0.0,
+            1.0,
+            0.99000000953674316,
+            0.98000001907348633,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 160628058
+        },
+        "startHealth": 1250.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": false,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "vendingmachine.item",
+            "itemid": 198438816,
+            "shortname": "vending.machine"
+          },
+          "itemCount": 1,
+          "setConditionFromHealth": true,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": false,
+          "requireHammer": false,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "vendingmachine.item",
+            "itemid": 198438816,
+            "shortname": "vending.machine"
+          },
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.022711575031280518,
+            "y": 1.0771669149398804,
+            "z": 0.07329857349395752
+          },
+          "size": {
+            "x": 1.3195559978485107,
+            "y": 2.1543338298797607,
+            "z": 0.86322379112243652
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "vendingmachine.deployed",
+          "collision": null,
+          "rootBone": {
+            "$ref": "Transform",
+            "name": "vendingmachine.deployed",
+            "instanceID": 1270164,
+            "goName": "vendingmachine.deployed",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "vendingmachine.deployed",
+              "instanceID": 1270164,
+              "goName": "vendingmachine.deployed",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "sockets",
+              "instanceID": 1269176,
+              "goName": "sockets",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "doorway",
+              "instanceID": 1265398,
+              "goName": "doorway",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "free",
+              "instanceID": 1265428,
+              "goName": "free",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "lock",
+              "instanceID": 1266010,
+              "goName": "lock",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "prevent_building",
+              "instanceID": 1272212,
+              "goName": "prevent_building",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "sightBlocker",
+              "instanceID": 1282716,
+              "goName": "sightBlocker",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "prevent_movment",
+              "instanceID": 1267308,
+              "goName": "prevent_movment",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "storagemonitor",
+              "instanceID": 1369222,
+              "goName": "storagemonitor",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "prevent_building (1)",
+              "instanceID": 1386798,
+              "goName": "prevent_building (1)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            }
+          ],
+          "boneNames": [
+            "vendingmachine.deployed",
+            "sockets",
+            "doorway",
+            "handle",
+            "free",
+            "angle",
+            "notInWater",
+            "inside (1)",
+            "inside (2)",
+            "not-inside-doors",
+            "industrialstorageadaptor",
+            "lock",
+            "prevent_building",
+            "sightBlocker",
+            "prevent_movment",
+            "storagemonitor",
+            "prevent_building (1)",
+            "volume (1)",
+            "volume (2)",
+            "block_tugboat"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "Reserved4",
+          "value": 1024,
+          "flagNames": [
+            "Reserved4"
+          ]
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 186002280,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$ref": "Model",
+        "name": "vendingmachine.deployed",
+        "instanceID": 1510598,
+        "goName": "vendingmachine.deployed",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$type": "GroundWatch",
+        "$name": "vendingmachine.deployed",
+        "groundPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "layers": 2162688,
+        "radius": 0.20000000298023224,
+        "needBuildingBlock": false,
+        "needOnlyOneAreaCheckValid": false,
+        "whitelist": [],
+        "fails": 0,
+        "_baseEntity": null
+      },
+      {
+        "$type": "DestroyOnGroundMissing",
+        "$name": "vendingmachine.deployed"
+      },
+      {
+        "$type": "UnityEngine.BoxCollider",
+        "$name": "vendingmachine.deployed",
+        "colliderType": "Box",
+        "center": {
+          "x": 3.2785649750621815E-09,
+          "y": 1.0807263851165771,
+          "z": 0.095904640853405
+        },
+        "size": {
+          "x": 1.3195539712905884,
+          "y": 2.179999828338623,
+          "z": 0.81801354885101318
+        },
+        "isTrigger": false,
+        "enabled": true,
+        "physicMaterial": {
+          "$ref": "PhysicsMaterial",
+          "name": "Metal",
+          "instanceID": 609842
+        }
+      }
+    ],
+    "children": [
+      {
+        "name": "sockets",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "doorway",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.89999997615814209,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.70698952674865723,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70722401142120361
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "free",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "lock",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.27399998903274536,
+          "y": 1.0190000534057617,
+          "z": -0.18799999356269836
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.7071068286895752,
+          "z": 0.0,
+          "w": 0.7071068286895752
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "prevent_building",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "prevent_building",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.005523681640625,
+              "y": 1.1000163555145264,
+              "z": 0.04132080078125
+            },
+            "size": {
+              "x": 1.2392730712890625,
+              "y": 2.0211801528930664,
+              "z": 0.74112129211425781
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "sightBlocker",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "sightBlocker",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.00580596923828125,
+              "y": 1.0670253038406372,
+              "z": -0.014917373657226563
+            },
+            "size": {
+              "x": 1.2465057373046875,
+              "y": 2.1226551532745361,
+              "z": 0.13924789428710938
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Metal",
+              "instanceID": 609842
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "prevent_movment",
+        "layer": {
+          "index": 28,
+          "name": "Prevent Movement"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -0.36800000071525574
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "prevent_movment",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.005523681640625,
+              "y": 1.1000163555145264,
+              "z": 0.04132080078125
+            },
+            "size": {
+              "x": 1.0,
+              "y": 2.0,
+              "z": 0.20000000298023224
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "storagemonitor",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -0.39550000429153442,
+          "y": 2.1549999713897705,
+          "z": -0.13750000298023224
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.087155781686306,
+          "z": 0.0,
+          "w": 0.99619472026824951
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "prevent_building (1)",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 0.8399999737739563
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "prevent_building (1)",
+            "colliderType": "Box",
+            "center": {
+              "x": -0.031968891620635986,
+              "y": 1.671051025390625,
+              "z": 0.0091892480850219727
+            },
+            "size": {
+              "x": 0.61000001430511475,
+              "y": 0.63793063163757324,
+              "z": 1.9500000476837158
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Construction": [
+      {
+        "$type": "Construction",
+        "$name": "<destroyed native object>",
+        "prefabID": 186002280,
+        "hierachyName": "vendingmachine.deployed",
+        "info": {
+          "$type": "BaseEntity+Menu+Option",
+          "name": {
+            "$type": "Translate+Phrase",
+            "token": "door",
+            "legacyEnglish": "Door"
+          },
+          "description": {
+            "$type": "Translate+Phrase",
+            "token": "door_desc",
+            "legacyEnglish": "A hinged door"
+          },
+          "icon": {
+            "$ref": "Sprite",
+            "name": "wall.doorway.door",
+            "instanceID": 1012642
+          },
+          "order": 500,
+          "usableWhileWounded": false
+        },
+        "canBypassBuildingPermission": false,
+        "showBuildingBlockedPreview": true,
+        "canPlaceOnRoads": false,
+        "canRotateBeforePlacement": true,
+        "canRotateAfterPlacement": true,
+        "canBeDeployedInDeepSeaWater": false,
+        "checkVolumeOnRotate": false,
+        "checkVolumeOnUpgrade": false,
+        "canPlaceAtMaxDistance": false,
+        "placeOnWater": false,
+        "overridePlacementLayer": false,
+        "overridedPlacementLayer": 0,
+        "additionalPlacementLayer": 0,
+        "rotationAmount": {
+          "x": 0.0,
+          "y": 90.0,
+          "z": 0.0
+        },
+        "applyStartingRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "deployOffset": null,
+        "enforceLineOfSightCheckAgainstParentEntity": false,
+        "canSnap": false,
+        "forceY": false,
+        "forceYValue": 0.0,
+        "forceYToOceanLevel": false,
+        "OceanLevelYOffset": 0.0,
+        "holdToPlaceDuration": 0.0,
+        "canFloodFillSockets": false,
+        "alternativeLOSChecks": false,
+        "alternativeLOSPositions": [],
+        "canUseLastValidPosition": true,
+        "healthMultiplier": 1.0,
+        "costMultiplier": 1.0,
+        "maxplaceDistance": 4.0,
+        "minPlaceDistance": 1.0,
+        "guideMesh": null,
+        "guideMeshMaterial": [],
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "hideBuildingPlannerViewmodel": false,
+        "allSockets": [
+          {
+            "$type": "ConstructionSocket",
+            "$name": "<destroyed native object>",
+            "prefabID": 186002280,
+            "hierachyName": "vendingmachine.deployed/sockets/doorway",
+            "socketType": {
+              "$enum": "ConstructionSocket+Type",
+              "name": "Doorway",
+              "value": 4
+            },
+            "blockType": {
+              "$enum": "ConstructionSocket+BlockType",
+              "name": "Building",
+              "value": 0
+            },
+            "rotationDegrees": 0,
+            "rotationOffset": 0,
+            "restrictPlacementRotation": false,
+            "restrictPlacementAngle": false,
+            "faceAngle": 0.0,
+            "angleAllowed": 150.0,
+            "wantsInside": false,
+            "support": 1.0,
+            "male": true,
+            "maleDummy": false,
+            "female": false,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": false,
+            "position": {
+              "x": 0.0,
+              "y": 0.89999997615814209,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.70698952674865723,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70722401142120361
+            },
+            "selectSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "socketName": "vendingmachine.deployed/sockets/doorway",
+            "socketMods": [],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 0.0,
+              "y": 0.89999997615814209,
+              "z": 0.0
+            },
+            "worldRotation": {
+              "x": 0.70698952674865723,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70722401142120361
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": -0.99999994039535522,
+              "z": 0.00033164024353027344
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.89999997615814209,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": 0.70698952674865723,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70722401142120361
+            },
+            "fullName": "assets/prefabs/deployable/vendingmachine/vendingmachine.deployed.prefab",
+            "instanceID": 1510224,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          },
+          {
+            "$type": "Socket_Free",
+            "$name": "<destroyed native object>",
+            "prefabID": 186002280,
+            "hierachyName": "vendingmachine.deployed/sockets/free",
+            "idealPlacementNormal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "useTargetNormal": true,
+            "snapToTargetProvidedRotations": false,
+            "blendAimAngle": true,
+            "male": true,
+            "maleDummy": false,
+            "female": false,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": false,
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "selectSize": {
+              "x": 2.0,
+              "y": 0.10000000149011612,
+              "z": 2.0
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            },
+            "socketName": "vendingmachine.deployed/sockets/free",
+            "socketMods": [
+              {
+                "$type": "SocketMod_AngleCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 186002280,
+                "hierachyName": "vendingmachine.deployed/sockets/free/angle",
+                "wantsAngle": true,
+                "worldNormal": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0
+                },
+                "withinDegrees": 10.0,
+                "usePlacementNormal": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/vendingmachine/vendingmachine.deployed.prefab",
+                "instanceID": 1508014,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_InWater",
+                "$name": "<destroyed native object>",
+                "prefabID": 186002280,
+                "hierachyName": "vendingmachine.deployed/sockets/free/notInWater",
+                "wantsInWater": false,
+                "excludeArtificialWater": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.26799997687339783,
+                  "z": -2.9802322387695313E-08
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.26800000667572021
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/vendingmachine/vendingmachine.deployed.prefab",
+                "instanceID": 1508138,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 186002280,
+                "hierachyName": "vendingmachine.deployed/sockets/free/inside (1)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.20000000298023224,
+                    "y": 0.20000000298023224,
+                    "z": 0.20000000298023224
+                  }
+                },
+                "layerMask": 2097152,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -0.31799998879432678,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": -0.31799998879432678,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.99999982118606567,
+                  "z": 0.99999982118606567
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/vendingmachine/vendingmachine.deployed.prefab",
+                "instanceID": 1511536,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 186002280,
+                "hierachyName": "vendingmachine.deployed/sockets/free/inside (2)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.20000000298023224,
+                    "y": 0.20000000298023224,
+                    "z": 0.20000000298023224
+                  }
+                },
+                "layerMask": 2097152,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.31400001049041748,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.31400001049041748,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 0.99999964237213135,
+                  "z": 0.99999964237213135
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/vendingmachine/vendingmachine.deployed.prefab",
+                "instanceID": 1511386,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 186002280,
+                "hierachyName": "vendingmachine.deployed/sockets/free/not-inside-doors",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": -0.35858744382858276,
+                    "z": -0.045385584235191345
+                  },
+                  "size": {
+                    "x": 1.0987870693206787,
+                    "y": 0.65219449996948242,
+                    "z": 0.74657905101776123
+                  }
+                },
+                "layerMask": 2097152,
+                "wantsInside": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "error_notenoughspace",
+                  "legacyEnglish": "Not enough space"
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -1.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.4901161193847656E-07
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 2.9802322387695313E-07,
+                  "z": -1.0
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": -0.70710659027099609,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710694789886475
+                },
+                "fullName": "assets/prefabs/deployable/vendingmachine/vendingmachine.deployed.prefab",
+                "instanceID": 1580086,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              }
+            ],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "worldRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": 0.99999994039535522,
+              "z": -1.1920928955078125E-07
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "fullName": "assets/prefabs/deployable/vendingmachine/vendingmachine.deployed.prefab",
+            "instanceID": 1507964,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          },
+          {
+            "$type": "Socket_Specific_Female",
+            "$name": "<destroyed native object>",
+            "prefabID": 186002280,
+            "hierachyName": "vendingmachine.deployed/sockets/industrialstorageadaptor",
+            "rotationDegrees": 0,
+            "rotationOffset": 0,
+            "allowedMaleSockets": [
+              "storageadaptor"
+            ],
+            "parentToBone": false,
+            "boneName": "",
+            "male": false,
+            "maleDummy": false,
+            "female": true,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": true,
+            "position": {
+              "x": 0.0,
+              "y": 1.1424000263214111,
+              "z": -0.20749999582767487
+            },
+            "rotation": {
+              "x": -6.9505148303505848E-07,
+              "y": 0.7071068286895752,
+              "z": -0.7071068286895752,
+              "w": 8.8427663058610051E-07
+            },
+            "selectSize": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 0.5
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "socketName": "vendingmachine.deployed/sockets/industrialstorageadaptor",
+            "socketMods": [],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 0.0,
+              "y": 1.1424000263214111,
+              "z": -0.20749999582767487
+            },
+            "worldRotation": {
+              "x": -6.9505148303505848E-07,
+              "y": 0.7071068286895752,
+              "z": -0.7071068286895752,
+              "w": 8.8427663058610051E-07
+            },
+            "worldForward": {
+              "x": 2.2335075300361495E-06,
+              "y": -1.0000001192092896,
+              "z": -1.1921025588890188E-07
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 1.1424000263214111,
+              "z": -0.20749999582767487
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": -6.9505148303505848E-07,
+              "y": 0.7071068286895752,
+              "z": -0.7071068286895752,
+              "w": 8.8427663058610051E-07
+            },
+            "fullName": "assets/prefabs/deployable/vendingmachine/vendingmachine.deployed.prefab",
+            "instanceID": 1544494,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          }
+        ],
+        "allProximities": [],
+        "defaultGrade": null,
+        "socketHandle": {
+          "$type": "SocketHandle",
+          "$name": "<destroyed native object>",
+          "prefabID": 186002280,
+          "hierachyName": "vendingmachine.deployed/sockets/doorway/handle",
+          "worldPosition": {
+            "x": 0.0,
+            "y": 1.1499999761581421,
+            "z": -8.2910060882568359E-05
+          },
+          "worldRotation": {
+            "x": 0.70698952674865723,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.70722401142120361
+          },
+          "worldForward": {
+            "x": 0.0,
+            "y": -0.99999994039535522,
+            "z": 0.00033164024353027344
+          },
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.25
+          },
+          "localScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "localRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "fullName": "assets/prefabs/deployable/vendingmachine/vendingmachine.deployed.prefab",
+          "instanceID": 1510716,
+          "prefabAttribute": {
+            "$ref": "Library",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "gameManager": {
+            "$ref": "GameManager",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "isServer": true
+        },
+        "bounds": {
+          "center": {
+            "x": 0.022711575031280518,
+            "y": 1.0771669149398804,
+            "z": 0.07329857349395752
+          },
+          "size": {
+            "x": 1.3195559978485107,
+            "y": 2.1543338298797607,
+            "z": 0.86322379112243652
+          }
+        },
+        "isBuildingPrivilege": false,
+        "isSleepingBag": false,
+        "grades": [],
+        "deployable": {
+          "$type": "Deployable",
+          "$name": "<destroyed native object>",
+          "prefabID": 186002280,
+          "hierachyName": "vendingmachine.deployed",
+          "guidePrefab": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "guideMesh": null,
+          "guideMeshScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "overrideRotation": false,
+          "guideMeshOrientation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "guideMeshPositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "moveGuideTowardsCamera": true,
+          "guideLights": false,
+          "wantsInstanceData": false,
+          "copyInventoryFromItem": false,
+          "setSocketParent": false,
+          "toSlot": false,
+          "slot": {
+            "$enum": "BaseEntity+Slot",
+            "name": "Lock",
+            "value": 0
+          },
+          "placeEffect": {
+            "$ref": "GameObject",
+            "guid": "9070e908d240d456ba7998eb29227423",
+            "resourcePath": "assets/prefabs/deployable/vendingmachine/effects/vending-machine-deploy.prefab",
+            "resourceID": 3076959501
+          },
+          "guideTargets": [],
+          "bounds": {
+            "center": {
+              "x": 0.022711575031280518,
+              "y": 1.0771669149398804,
+              "z": 0.07329857349395752
+            },
+            "size": {
+              "x": 1.3195559978485107,
+              "y": 2.1543338298797607,
+              "z": 0.86322379112243652
+            }
+          },
+          "worldPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "worldRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "worldForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "localScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "localRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "fullName": "assets/prefabs/deployable/vendingmachine/vendingmachine.deployed.prefab",
+          "instanceID": 1510668,
+          "prefabAttribute": {
+            "$ref": "Library",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "gameManager": {
+            "$ref": "GameManager",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "isServer": true
+        },
+        "placeholder": null,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/vendingmachine/vendingmachine.deployed.prefab",
+        "instanceID": 1508134,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "DeployVolume": [
+      {
+        "$type": "DeployVolumeEntityBounds",
+        "$name": "<destroyed native object>",
+        "prefabID": 186002280,
+        "hierachyName": "vendingmachine.deployed",
+        "bounds": {
+          "center": {
+            "x": 0.022711575031280518,
+            "y": 1.0771669149398804,
+            "z": 0.07329857349395752
+          },
+          "size": {
+            "x": 1.3195559978485107,
+            "y": 2.1543338298797607,
+            "z": 0.86322379112243652
+          }
+        },
+        "layers": 131072,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/vendingmachine/vendingmachine.deployed.prefab",
+        "instanceID": 1510582,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 186002280,
+        "hierachyName": "vendingmachine.deployed",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 1.1599999666213989,
+            "z": 0.029999999329447746
+          },
+          "size": {
+            "x": 1.059999942779541,
+            "y": 1.7999999523162842,
+            "z": 0.89999997615814209
+          }
+        },
+        "layers": 539164672,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/vendingmachine/vendingmachine.deployed.prefab",
+        "instanceID": 1511336,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 186002280,
+        "hierachyName": "vendingmachine.deployed/volume (1)",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.51999998092651367,
+            "z": 0.0
+          },
+          "size": {
+            "x": 0.6600000262260437,
+            "y": 0.6600000262260437,
+            "z": 1.9600000381469727
+          }
+        },
+        "layers": 2293760,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 1.1690000295639038,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 1.1690000295639038,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 0.8399999737739563
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/vendingmachine/vendingmachine.deployed.prefab",
+        "instanceID": 1549368,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 186002280,
+        "hierachyName": "vendingmachine.deployed/volume (2)",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": -1.0499999523162842,
+            "z": 0.0
+          },
+          "size": {
+            "x": 3.0,
+            "y": 0.20000000298023224,
+            "z": 3.0
+          }
+        },
+        "layers": 256,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "IncludeList",
+          "value": 1
+        },
+        "entityList": [],
+        "entityGroups": [
+          {
+            "$type": "EntityListScriptableObject",
+            "$name": "vending_deploy_blacklist",
+            "AutoPopulateFromAssetLabel": "",
+            "entities": [
+              {
+                "$ref": "DebrisEntity",
+                "name": "debris.wall",
+                "instanceID": 71338,
+                "goName": "debris.wall"
+              }
+            ]
+          }
+        ],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 1.1690000295639038,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 1.1690000295639038,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 0.8399999737739563
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/vendingmachine/vendingmachine.deployed.prefab",
+        "instanceID": 1520154,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 186002280,
+        "hierachyName": "vendingmachine.deployed/block_tugboat",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.05000000074505806
+          },
+          "size": {
+            "x": 2.0,
+            "y": 2.4000000953674316,
+            "z": 1.0
+          }
+        },
+        "layers": 134217728,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/vendingmachine/vendingmachine.deployed.prefab",
+        "instanceID": 1580248,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Deployable": [
+      {
+        "$ref": "Deployable",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "Socket_Base": [
+      {
+        "$ref": "ConstructionSocket",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "Socket_Free",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "Socket_Specific_Female",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "SocketHandle": [
+      {
+        "$ref": "SocketHandle",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "SocketMod": [
+      {
+        "$ref": "SocketMod_AngleCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_InWater",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ]
+  }
+}

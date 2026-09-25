@@ -1,0 +1,65 @@
+{
+  "prefabID": 2741054453,
+  "path": "assets/bundled/prefabs/world/event_cargoship.prefab",
+  "rootClassChain": [
+    "UnityEngine.GameObject",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "hierarchy": {
+    "name": "event_cargoship",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "EventSchedule",
+        "$name": "event_cargoship",
+        "minimumHoursBetween": 45.0,
+        "maxmumHoursBetween": 78.0,
+        "Key": "cargo"
+      },
+      {
+        "$type": "TriggeredEventPrefab",
+        "$name": "event_cargoship",
+        "targetPrefab": {
+          "$ref": "GameObject",
+          "guid": "6254705daabaae94d9cbfd088f812639",
+          "resourcePath": "assets/content/vehicles/boats/cargoship/cargoshiptest.prefab",
+          "resourceID": 3234960997
+        },
+        "shouldBroadcastSpawn": true,
+        "notificationType": {
+          "$enum": "WorldNotificationConfig+NotificationType",
+          "name": "CargoShipSpawned",
+          "value": 4
+        },
+        "spawnedEntity": null
+      }
+    ],
+    "children": []
+  },
+  "prefabAttributes": {
+    "PrefabWeight": []
+  }
+}

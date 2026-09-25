@@ -1,0 +1,1555 @@
+{
+  "prefabID": 1202757502,
+  "path": "assets/content/props/sentry_scientists/sentry.scientist.barge.static.prefab",
+  "rootClassChain": [
+    "NPCAutoTurret",
+    "AutoTurret",
+    "ContainerIOEntity",
+    "IOEntity",
+    "DecayEntity",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.0,
+      "y": 0.93999999761581421,
+      "z": 0.0
+    },
+    "size": {
+      "x": 2.0,
+      "y": 2.0,
+      "z": 2.0
+    }
+  },
+  "hierarchy": {
+    "name": "sentry.scientist.barge.static",
+    "layer": {
+      "index": 8,
+      "name": "Deployed"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "NPCAutoTurret",
+        "$name": "sentry.scientist.barge.static",
+        "centerMuzzle": [],
+        "muzzleLeft": [],
+        "muzzleRight": [],
+        "useSleeperHostile": true,
+        "gun_fire_effect": {
+          "$ref": "GameObject",
+          "guid": "c54ac2008c804c24cbfd249746a005f1",
+          "resourcePath": "assets/prefabs/npc/autoturret/silencedmuzzleshot.prefab",
+          "resourceID": 1685338318
+        },
+        "bulletEffect": {
+          "$ref": "GameObject",
+          "guid": "b6acc6de091239d4091329807e430f71",
+          "resourcePath": "assets/prefabs/npc/patrol helicopter/helibullet.prefab",
+          "resourceID": 1410987015
+        },
+        "bulletSpeed": 200.0,
+        "ambienceEmitter": null,
+        "playAmbientSounds": true,
+        "assignDialog": null,
+        "laserBeam": null,
+        "PowerOrder": 0,
+        "nearbyTurrets": [],
+        "rcTurnSensitivity": 4.0,
+        "RCEyes": null,
+        "IDPanelPrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "rcControls": {
+          "$enum": "RemoteControllableControls",
+          "name": "None",
+          "value": 0,
+          "flagNames": []
+        },
+        "rcIdentifier": "",
+        "targetTrigger": null,
+        "interferenceTrigger": null,
+        "maxInterference": -1.0,
+        "attachedWeaponZOffsetScale": -0.5,
+        "socketTransform": null,
+        "authDirty": false,
+        "nextVisCheck": 0.0,
+        "lastTargetSeenTime": 0.0,
+        "targetVisible": true,
+        "booting": false,
+        "targetAimDir": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "timeSinceLastServerTick": {
+          "$type": "RealTimeSinceEx"
+        },
+        "lastSentAimDir": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "peekIndex": 0,
+        "numConsecutiveMisses": 0,
+        "totalAmmo": 0,
+        "nextAmmoCheckTime": 0.0,
+        "totalAmmoDirty": true,
+        "currentAmmoGravity": 0.0,
+        "currentAmmoVelocity": 0.0,
+        "AttachedWeapon": null,
+        "target": null,
+        "eyePos": [],
+        "muzzlePos": {
+          "$ref": "Transform",
+          "name": "muzzle_flash_R",
+          "instanceID": 1285002,
+          "goName": "muzzle_flash_R",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "aimDir": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "gun_yaw": [
+          [
+            {
+              "$ref": "Transform",
+              "name": "muzzle_flash_L",
+              "instanceID": 1287216,
+              "goName": "muzzle_flash_L",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "muzzle_flash_R",
+              "instanceID": 1285002,
+              "goName": "muzzle_flash_R",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "centerMuzzle",
+              "instanceID": 1289012,
+              "goName": "centerMuzzle",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ]
+        ],
+        "gun_pitch": {
+          "$ref": "Transform",
+          "name": "turret.pitch",
+          "instanceID": 1276402,
+          "goName": "turret.pitch",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "sightRange": 100.0,
+        "turnLoopDef": {
+          "$ref": "SoundDefinition",
+          "name": "turn-loop",
+          "instanceID": 48766
+        },
+        "movementChangeDef": {
+          "$ref": "SoundDefinition",
+          "name": "movement-change-click",
+          "instanceID": 116448
+        },
+        "ambientLoopDef": {
+          "$ref": "SoundDefinition",
+          "name": "ambient-loop",
+          "instanceID": 48990
+        },
+        "focusCameraDef": {
+          "$ref": "SoundDefinition",
+          "name": "focus-camera",
+          "instanceID": 116450
+        },
+        "focusSoundFreqMin": 10.0,
+        "focusSoundFreqMax": 15.0,
+        "peacekeeperToggleSound": {
+          "$ref": "GameObject",
+          "guid": "7461372d0861d38418e386da4e45de1a",
+          "resourcePath": "assets/prefabs/npc/autoturret/effects/targetacquired.prefab",
+          "resourceID": 2620246274
+        },
+        "onlineSound": {
+          "$ref": "GameObject",
+          "guid": "1437bfc8bd00a7140b379c09565549be",
+          "resourcePath": "assets/prefabs/npc/autoturret/effects/online.prefab",
+          "resourceID": 844092340
+        },
+        "offlineSound": {
+          "$ref": "GameObject",
+          "guid": "c33f0529519020e4cbcf3112a05b65d2",
+          "resourcePath": "assets/prefabs/npc/autoturret/effects/offline.prefab",
+          "resourceID": 3111275805
+        },
+        "targetAcquiredEffect": {
+          "$ref": "GameObject",
+          "guid": "7461372d0861d38418e386da4e45de1a",
+          "resourcePath": "assets/prefabs/npc/autoturret/effects/targetacquired.prefab",
+          "resourceID": 2620246274
+        },
+        "targetLostEffect": {
+          "$ref": "GameObject",
+          "guid": "6b9d6d52f7bc68f4e9fc3d5d5b3ae54d",
+          "resourcePath": "assets/prefabs/npc/autoturret/effects/targetlost.prefab",
+          "resourceID": 1932974102
+        },
+        "reloadEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "aimCone": 4.0,
+        "authorizedPlayers": [],
+        "consumptionAmount": 10,
+        "onlyAllowedItem": null,
+        "allowedContents": {
+          "$enum": "ItemContainer+ContentsType",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "maxStackSize": 0,
+        "numSlots": 0,
+        "lootPanelName": "generic",
+        "panelTitle": {
+          "$type": "Translate+Phrase",
+          "token": "loot",
+          "legacyEnglish": "Loot"
+        },
+        "needsBuildingPrivilegeToUse": false,
+        "requireAuthIfNotLocked": false,
+        "isLootable": true,
+        "isMonitorable": false,
+        "dropsLoot": false,
+        "dropLootDestroyPercent": 0.0,
+        "dropFloats": false,
+        "onlyOneUser": false,
+        "supportsChildDeployables": false,
+        "allowSorting": false,
+        "isLockable": false,
+        "openSound": {
+          "$ref": "SoundDefinition",
+          "name": "autoturret-open",
+          "instanceID": 27218
+        },
+        "closeSound": {
+          "$ref": "SoundDefinition",
+          "name": "autoturret-close",
+          "instanceID": 27150
+        },
+        "debugOrigin": null,
+        "sourceItem": null,
+        "lastResetIndex": 0,
+        "inputs": [],
+        "outputs": [],
+        "ioType": {
+          "$enum": "IOEntity+IOType",
+          "name": "Electric",
+          "value": 0
+        },
+        "cachedOutputsUsed": 0,
+        "lastPassthroughEnergy": -1,
+        "lastEnergy": 0,
+        "currentEnergy": 0,
+        "lastUpdateTime": 0.0,
+        "lastUpdateBlockedFrame": 0,
+        "ensureOutputsUpdated": false,
+        "canBeDemolished": false,
+        "debrisPrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "debrisRotationOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "DebrisPositions": [],
+        "buildingID": 0,
+        "timePlaced": 0.0,
+        "decayTimer": 0.0,
+        "upkeepTimer": 0.0,
+        "upkeep": null,
+        "decay": null,
+        "decayPoints": null,
+        "lastDecayTick": 0.0,
+        "decayVariance": 1.0,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "Immortal",
+          "comments": "",
+          "density": 100.0,
+          "amounts": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 3206051622
+        },
+        "startHealth": 1000.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "autoturret.item",
+            "itemid": -2139580305,
+            "shortname": "autoturret"
+          },
+          "itemCount": 1,
+          "setConditionFromHealth": true,
+          "subtractCondition": 0.33000001311302185,
+          "requireBuildingPrivilege": true,
+          "requireHammer": true,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "autoturret.item",
+            "itemid": -2139580305,
+            "shortname": "autoturret"
+          },
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.93999999761581421,
+            "z": 0.0
+          },
+          "size": {
+            "x": 2.0,
+            "y": 2.0,
+            "z": 2.0
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "sentry.scientist.barge.static",
+          "collision": null,
+          "rootBone": [
+            {
+              "$ref": "Transform",
+              "name": "eyes",
+              "instanceID": 1289304,
+              "goName": "eyes",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [
+              []
+            ],
+            [
+              {
+                "$ref": "Transform",
+                "name": "turret.yaw",
+                "instanceID": 1281224,
+                "goName": "turret.yaw",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            []
+          ],
+          "headBone": null,
+          "eyeBone": {
+            "$ref": "Transform",
+            "name": "eyes",
+            "instanceID": 1289304,
+            "goName": "eyes",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "sentry.scientist.barge.static",
+              "instanceID": 1284516,
+              "goName": "sentry.scientist.barge.static",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "eyes",
+              "instanceID": 1289304,
+              "goName": "eyes",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "sockets",
+              "instanceID": 1282802,
+              "goName": "sockets",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "free",
+              "instanceID": 1290386,
+              "goName": "free",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "sentry_scientists",
+              "instanceID": 1282102,
+              "goName": "sentry_scientists",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "turret.yaw",
+              "instanceID": 1281224,
+              "goName": "turret.yaw",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "turret.pitch",
+              "instanceID": 1276402,
+              "goName": "turret.pitch",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "muzzle_flash_L",
+              "instanceID": 1287216,
+              "goName": "muzzle_flash_L",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "muzzle_flash_R",
+              "instanceID": 1285002,
+              "goName": "muzzle_flash_R",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "centerMuzzle",
+              "instanceID": 1289012,
+              "goName": "centerMuzzle",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "preventbuilding",
+              "instanceID": 1285222,
+              "goName": "preventbuilding",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "sentry.scientist.barge.static",
+            "eyes",
+            "sockets",
+            "free",
+            "angle",
+            "inside 1",
+            "notInSphere 1",
+            "inside 1 (1)",
+            "inside 1 (2)",
+            "notInWater",
+            "sentry_scientists",
+            "turret.yaw",
+            "turret.pitch",
+            "muzzle_flash_L",
+            "muzzle_flash_R",
+            "centerMuzzle",
+            "preventbuilding"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 1202757502,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$ref": "Model",
+        "name": "sentry.scientist.barge.static",
+        "instanceID": 1517226,
+        "goName": "sentry.scientist.barge.static",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$type": "UnityEngine.CapsuleCollider",
+        "$name": "sentry.scientist.barge.static",
+        "colliderType": "Capsule",
+        "center": {
+          "x": 0.0,
+          "y": 1.2400000095367432,
+          "z": 0.0
+        },
+        "radius": 0.9100000262260437,
+        "height": 2.5699999332427979,
+        "direction": 1,
+        "isTrigger": false,
+        "enabled": true,
+        "physicMaterial": {
+          "$ref": "PhysicsMaterial",
+          "name": "Metal",
+          "instanceID": 609842
+        }
+      }
+    ],
+    "children": [
+      {
+        "name": "eyes",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 1.9420000314712524,
+          "z": 0.49399998784065247
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "sockets",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "free",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "sentry_scientists",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "turret.yaw",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.4901160305669237E-09,
+              "y": 1.0146840810775757,
+              "z": 0.40143674612045288
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "turret.pitch",
+                "layer": {
+                  "index": 8,
+                  "name": "Deployed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -4.2915342390870137E-08,
+                  "y": 0.56756103038787842,
+                  "z": -0.25056761503219604
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "muzzle_flash_L",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.38999998569488525,
+                      "y": -0.15610000491142273,
+                      "z": 0.55099999904632568
+                    },
+                    "localRotation": {
+                      "x": 1.4210853868169056E-14,
+                      "y": -8.74227694680485E-08,
+                      "z": -1.4210853868169056E-14,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  },
+                  {
+                    "name": "muzzle_flash_R",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.37700000405311584,
+                      "y": -0.06759999692440033,
+                      "z": 1.1950000524520874
+                    },
+                    "localRotation": {
+                      "x": 1.4210853868169056E-14,
+                      "y": -8.74227694680485E-08,
+                      "z": -1.4210853868169056E-14,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  },
+                  {
+                    "name": "centerMuzzle",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": -0.050946503877639771,
+                      "z": 0.053596280515193939
+                    },
+                    "localRotation": {
+                      "x": -2.3684757293981375E-14,
+                      "y": 1.6643577385429612E-14,
+                      "z": 8.7422783678903215E-08,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "preventbuilding",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.SphereCollider",
+            "$name": "preventbuilding",
+            "colliderType": "Sphere",
+            "center": {
+              "x": 0.0,
+              "y": 0.60000002384185791,
+              "z": 0.0
+            },
+            "radius": 0.60000002384185791,
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Socket_Base": [
+      {
+        "$type": "Socket_Free",
+        "$name": "<destroyed native object>",
+        "prefabID": 1202757502,
+        "hierachyName": "sentry.scientist.barge.static/sockets/free",
+        "idealPlacementNormal": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "useTargetNormal": true,
+        "snapToTargetProvidedRotations": false,
+        "blendAimAngle": true,
+        "male": true,
+        "maleDummy": false,
+        "female": false,
+        "femaleDummy": false,
+        "femaleNoStability": false,
+        "monogamous": false,
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": -0.7071068286895752,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.70710670948028564
+        },
+        "selectSize": {
+          "x": 2.0,
+          "y": 0.10000000149011612,
+          "z": 2.0
+        },
+        "selectCenter": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "socketName": "sentry.scientist.barge.static/sockets/free",
+        "socketMods": [
+          {
+            "$type": "SocketMod_AngleCheck",
+            "$name": "<destroyed native object>",
+            "prefabID": 1202757502,
+            "hierachyName": "sentry.scientist.barge.static/sockets/free/angle",
+            "wantsAngle": true,
+            "worldNormal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "withinDegrees": 1.0,
+            "usePlacementNormal": false,
+            "baseSocket": {
+              "$cycle": true,
+              "type": "Socket_Free"
+            },
+            "FailedPhrase": {
+              "$type": "Translate+Phrase",
+              "token": "",
+              "legacyEnglish": ""
+            },
+            "worldPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "worldRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": 0.99999994039535522,
+              "z": -1.1920928955078125E-07
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "fullName": "assets/content/props/sentry_scientists/sentry.scientist.barge.static.prefab",
+            "instanceID": 1514224,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          },
+          {
+            "$type": "SocketMod_AreaCheck",
+            "$name": "<destroyed native object>",
+            "prefabID": 1202757502,
+            "hierachyName": "sentry.scientist.barge.static/sockets/free/inside 1",
+            "bounds": {
+              "center": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "size": {
+                "x": 0.10000000149011612,
+                "y": 0.10000000149011612,
+                "z": 0.10000000149011612
+              }
+            },
+            "layerMask": 2097152,
+            "wantsInside": true,
+            "ignoreAntiLargeVehicleCheck": false,
+            "baseSocket": {
+              "$cycle": true,
+              "type": "Socket_Free"
+            },
+            "FailedPhrase": {
+              "$type": "Translate+Phrase",
+              "token": "",
+              "legacyEnglish": ""
+            },
+            "worldPosition": {
+              "x": -0.0010000000474974513,
+              "y": 5.9604644775390625E-08,
+              "z": 0.59499996900558472
+            },
+            "worldRotation": {
+              "x": -0.50000005960464478,
+              "y": -0.49999994039535522,
+              "z": -0.5,
+              "w": 0.49999994039535522
+            },
+            "worldForward": {
+              "x": 1.7881393432617188E-07,
+              "y": 0.99999994039535522,
+              "z": 0.0
+            },
+            "localPosition": {
+              "x": -0.0010000000474974513,
+              "y": -0.59500002861022949,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": -2.1073423894790722E-08,
+              "y": 9.3022606506565353E-08,
+              "z": -0.70710676908493042,
+              "w": 0.7071068286895752
+            },
+            "fullName": "assets/content/props/sentry_scientists/sentry.scientist.barge.static.prefab",
+            "instanceID": 1517444,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          },
+          {
+            "$type": "SocketMod_SphereCheck",
+            "$name": "<destroyed native object>",
+            "prefabID": 1202757502,
+            "hierachyName": "sentry.scientist.barge.static/sockets/free/notInSphere 1",
+            "sphereRadius": 0.5,
+            "layerMask": 1621164033,
+            "wantsCollide": false,
+            "requireMonument": false,
+            "ignoreAntiLargeVehicleCheck": false,
+            "entityWhitelist": [],
+            "baseSocket": {
+              "$cycle": true,
+              "type": "Socket_Free"
+            },
+            "FailedPhrase": {
+              "$type": "Translate+Phrase",
+              "token": "",
+              "legacyEnglish": ""
+            },
+            "worldPosition": {
+              "x": 0.0,
+              "y": 0.63899993896484375,
+              "z": -5.9604644775390625E-08
+            },
+            "worldRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": 0.99999994039535522,
+              "z": -1.1920928955078125E-07
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.63899999856948853
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "fullName": "assets/content/props/sentry_scientists/sentry.scientist.barge.static.prefab",
+            "instanceID": 1514040,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          },
+          {
+            "$type": "SocketMod_AreaCheck",
+            "$name": "<destroyed native object>",
+            "prefabID": 1202757502,
+            "hierachyName": "sentry.scientist.barge.static/sockets/free/inside 1 (1)",
+            "bounds": {
+              "center": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "size": {
+                "x": 0.10000000149011612,
+                "y": 0.10000000149011612,
+                "z": 0.10000000149011612
+              }
+            },
+            "layerMask": 2097152,
+            "wantsInside": true,
+            "ignoreAntiLargeVehicleCheck": false,
+            "baseSocket": {
+              "$cycle": true,
+              "type": "Socket_Free"
+            },
+            "FailedPhrase": {
+              "$type": "Translate+Phrase",
+              "token": "",
+              "legacyEnglish": ""
+            },
+            "worldPosition": {
+              "x": 0.41800001263618469,
+              "y": -5.9604644775390625E-08,
+              "z": -0.429999977350235
+            },
+            "worldRotation": {
+              "x": -0.50000005960464478,
+              "y": -0.49999994039535522,
+              "z": -0.5,
+              "w": 0.49999994039535522
+            },
+            "worldForward": {
+              "x": 1.7881393432617188E-07,
+              "y": 0.99999994039535522,
+              "z": 0.0
+            },
+            "localPosition": {
+              "x": 0.41800001263618469,
+              "y": 0.43000000715255737,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": -2.1073423894790722E-08,
+              "y": 9.3022606506565353E-08,
+              "z": -0.70710676908493042,
+              "w": 0.7071068286895752
+            },
+            "fullName": "assets/content/props/sentry_scientists/sentry.scientist.barge.static.prefab",
+            "instanceID": 1513774,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          },
+          {
+            "$type": "SocketMod_AreaCheck",
+            "$name": "<destroyed native object>",
+            "prefabID": 1202757502,
+            "hierachyName": "sentry.scientist.barge.static/sockets/free/inside 1 (2)",
+            "bounds": {
+              "center": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "size": {
+                "x": 0.10000000149011612,
+                "y": 0.10000000149011612,
+                "z": 0.10000000149011612
+              }
+            },
+            "layerMask": 2097152,
+            "wantsInside": true,
+            "ignoreAntiLargeVehicleCheck": false,
+            "baseSocket": {
+              "$cycle": true,
+              "type": "Socket_Free"
+            },
+            "FailedPhrase": {
+              "$type": "Translate+Phrase",
+              "token": "",
+              "legacyEnglish": ""
+            },
+            "worldPosition": {
+              "x": -0.43799999356269836,
+              "y": -5.9604644775390625E-08,
+              "z": -0.42499998211860657
+            },
+            "worldRotation": {
+              "x": -0.50000005960464478,
+              "y": -0.49999994039535522,
+              "z": -0.5,
+              "w": 0.49999994039535522
+            },
+            "worldForward": {
+              "x": 1.7881393432617188E-07,
+              "y": 0.99999994039535522,
+              "z": 0.0
+            },
+            "localPosition": {
+              "x": -0.43799999356269836,
+              "y": 0.42500001192092896,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": -2.1073423894790722E-08,
+              "y": 9.3022606506565353E-08,
+              "z": -0.70710676908493042,
+              "w": 0.7071068286895752
+            },
+            "fullName": "assets/content/props/sentry_scientists/sentry.scientist.barge.static.prefab",
+            "instanceID": 1517686,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          },
+          {
+            "$type": "SocketMod_InWater",
+            "$name": "<destroyed native object>",
+            "prefabID": 1202757502,
+            "hierachyName": "sentry.scientist.barge.static/sockets/free/notInWater",
+            "wantsInWater": false,
+            "excludeArtificialWater": false,
+            "baseSocket": {
+              "$cycle": true,
+              "type": "Socket_Free"
+            },
+            "FailedPhrase": {
+              "$type": "Translate+Phrase",
+              "token": "",
+              "legacyEnglish": ""
+            },
+            "worldPosition": {
+              "x": 0.0,
+              "y": 0.72399991750717163,
+              "z": -5.9604644775390625E-08
+            },
+            "worldRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": 0.99999994039535522,
+              "z": -1.1920928955078125E-07
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.72399997711181641
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "fullName": "assets/content/props/sentry_scientists/sentry.scientist.barge.static.prefab",
+            "instanceID": 1515076,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          }
+        ],
+        "checkOccupiedSockets": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": -0.7071068286895752,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.70710670948028564
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.99999994039535522,
+          "z": -1.1920928955078125E-07
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": -0.7071068286895752,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.70710670948028564
+        },
+        "fullName": "assets/content/props/sentry_scientists/sentry.scientist.barge.static.prefab",
+        "instanceID": 1511962,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "SocketMod": [
+      {
+        "$ref": "SocketMod_AngleCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_SphereCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_InWater",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ]
+  }
+}

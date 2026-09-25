@@ -1,0 +1,4425 @@
+{
+  "prefabID": 1853547378,
+  "path": "assets/content/vehicles/siegeweapons/ballista/ballistagun.static.entity.prefab",
+  "rootClassChain": [
+    "BallistaGun",
+    "BaseVehicleSeat",
+    "BaseVehicleMountPoint",
+    "BaseMountable",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -3.6597251892089844E-05,
+      "y": 0.86400002241134644,
+      "z": -0.33692073822021484
+    },
+    "size": {
+      "x": 1.9311974048614502,
+      "y": 2.0,
+      "z": 2.5901584625244141
+    }
+  },
+  "hierarchy": {
+    "name": "ballistagun.static.entity",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "UnityEngine.Rigidbody",
+        "$name": "ballistagun.static.entity"
+      },
+      {
+        "$type": "BallistaGun",
+        "$name": "ballistagun.static.entity",
+        "isMountedOnVehicle": false,
+        "turnSensivity": 0.5,
+        "reloadTime": 4.0,
+        "syncAimDirOnFire": true,
+        "syncAimDirOnReload": true,
+        "reloadPreventsAiming": false,
+        "fovMultiplier": 0.75,
+        "noHeadshots": true,
+        "playerServerCollider": {
+          "$type": "UnityEngine.CapsuleCollider",
+          "$name": "ServerPlayerCollider",
+          "colliderType": "Capsule",
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "radius": 0.44999998807907104,
+          "height": 1.6299999952316284,
+          "direction": 1,
+          "isTrigger": false,
+          "enabled": false
+        },
+        "alignRotationToParent": false,
+        "magazine": {
+          "$type": "BaseProjectile+Magazine",
+          "definition": {
+            "$type": "BaseProjectile+Magazine+Definition",
+            "builtInSize": 0,
+            "ammoTypes": {
+              "$enum": "Rust.AmmoTypes",
+              "name": "BALLISTA_ARROW",
+              "value": 16384,
+              "flagNames": [
+                "BALLISTA_ARROW"
+              ]
+            }
+          },
+          "capacity": 1,
+          "contents": 0,
+          "ammoType": {
+            "$ref": "ItemDefinition",
+            "name": "ballista.bolt.pitchfork.item",
+            "itemid": -357442017,
+            "shortname": "ballista.bolt.pitchfork"
+          },
+          "allowPlayerReloading": true,
+          "allowAmmoSwitching": true
+        },
+        "muzzle": [],
+        "pitchTransform": [
+          [
+            [],
+            [
+              [
+                [
+                  [
+                    [
+                      [
+                        {
+                          "$truncated": true,
+                          "type": "UnityEngine.Transform",
+                          "reason": "max-depth"
+                        }
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            [
+              [
+                [
+                  [
+                    [
+                      [
+                        {
+                          "$truncated": true,
+                          "type": "UnityEngine.Transform",
+                          "reason": "max-depth"
+                        }
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            [
+              [
+                [
+                  [
+                    [
+                      [
+                        {
+                          "$truncated": true,
+                          "type": "UnityEngine.Transform",
+                          "reason": "max-depth"
+                        }
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            [],
+            [
+              []
+            ],
+            []
+          ],
+          [
+            [],
+            []
+          ],
+          [
+            [],
+            []
+          ],
+          [
+            [],
+            []
+          ],
+          [],
+          [],
+          {
+            "$ref": "Transform",
+            "name": "Muzzle",
+            "instanceID": 1359806,
+            "goName": "Muzzle",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          [
+            [
+              [],
+              []
+            ],
+            [],
+            [],
+            [
+              []
+            ]
+          ]
+        ],
+        "yawTransform": [
+          [
+            []
+          ],
+          [],
+          [
+            []
+          ],
+          [
+            [
+              {
+                "$ref": "Transform",
+                "name": "motion",
+                "instanceID": 1407724,
+                "goName": "motion",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            [
+              []
+            ],
+            [],
+            [],
+            [],
+            [
+              [],
+              [],
+              [],
+              []
+            ]
+          ],
+          [
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        ],
+        "mountTransform": {
+          "$ref": "Transform",
+          "name": "siege_weapon_ballista_mount",
+          "instanceID": 1340016,
+          "goName": "siege_weapon_ballista_mount",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "animator": null,
+        "runInLateUpdate": false,
+        "ammoParent": {
+          "$ref": "GameObject",
+          "name": "Ammo",
+          "instanceID": 1147446
+        },
+        "useVehicleParentYaw": false,
+        "reloadButton": {
+          "$enum": "BUTTON",
+          "name": "RELOAD",
+          "value": 8192
+        },
+        "damageRenderer": null,
+        "ammoPrefabs": [
+          {
+            "$type": "BallistaGun+Ammo",
+            "item": {
+              "$ref": "ItemDefinition",
+              "name": "ballista.bolt.pitchfork.item",
+              "itemid": -357442017,
+              "shortname": "ballista.bolt.pitchfork"
+            },
+            "go": {
+              "$ref": "GameObject",
+              "name": "w_ballista_fork",
+              "instanceID": 1217938
+            }
+          },
+          {
+            "$type": "BallistaGun+Ammo",
+            "item": {
+              "$ref": "ItemDefinition",
+              "name": "ballista.bolt.incendiary.item",
+              "itemid": -1987565603,
+              "shortname": "ballista.bolt.incendiary"
+            },
+            "go": {
+              "$ref": "GameObject",
+              "name": "w_ballista_incendiary",
+              "instanceID": 1219222
+            }
+          },
+          {
+            "$type": "BallistaGun+Ammo",
+            "item": {
+              "$ref": "ItemDefinition",
+              "name": "ballista.bolt.hammerhead.item",
+              "itemid": -19318653,
+              "shortname": "ballista.bolt.hammerhead"
+            },
+            "go": {
+              "$ref": "GameObject",
+              "name": "w_ballista_sledge",
+              "instanceID": 1140380
+            }
+          },
+          {
+            "$type": "BallistaGun+Ammo",
+            "item": {
+              "$ref": "ItemDefinition",
+              "name": "ballista.bolt.piercer.item",
+              "itemid": -1127003365,
+              "shortname": "ballista.bolt.piercer"
+            },
+            "go": {
+              "$ref": "GameObject",
+              "name": "w_ballista_spear",
+              "instanceID": 1122450
+            }
+          }
+        ],
+        "leftHandTarget": {
+          "$ref": "Transform",
+          "name": "LHand_IK",
+          "instanceID": 1335140,
+          "goName": "LHand_IK",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "rightHandTarget": {
+          "$ref": "Transform",
+          "name": "RHand_IK",
+          "instanceID": 1304530,
+          "goName": "RHand_IK",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "muzzleFireEffects": [
+          {
+            "$type": "BallistaGun+FiringEffect",
+            "item": {
+              "$ref": "ItemDefinition",
+              "name": "ballista.bolt.hammerhead.item",
+              "itemid": -19318653,
+              "shortname": "ballista.bolt.hammerhead"
+            },
+            "effectPrefab": {
+              "$ref": "GameObject",
+              "guid": "5e3b87474a916a940bfd522b2ff591f0",
+              "resourcePath": "assets/content/vehicles/siegeweapons/ballista/effects/ballista_fire.prefab",
+              "resourceID": 3090882178
+            }
+          },
+          {
+            "$type": "BallistaGun+FiringEffect",
+            "item": {
+              "$ref": "ItemDefinition",
+              "name": "ballista.bolt.incendiary.item",
+              "itemid": -1987565603,
+              "shortname": "ballista.bolt.incendiary"
+            },
+            "effectPrefab": {
+              "$ref": "GameObject",
+              "guid": "5e3b87474a916a940bfd522b2ff591f0",
+              "resourcePath": "assets/content/vehicles/siegeweapons/ballista/effects/ballista_fire.prefab",
+              "resourceID": 3090882178
+            }
+          },
+          {
+            "$type": "BallistaGun+FiringEffect",
+            "item": {
+              "$ref": "ItemDefinition",
+              "name": "ballista.bolt.piercer.item",
+              "itemid": -1127003365,
+              "shortname": "ballista.bolt.piercer"
+            },
+            "effectPrefab": {
+              "$ref": "GameObject",
+              "guid": "5e3b87474a916a940bfd522b2ff591f0",
+              "resourcePath": "assets/content/vehicles/siegeweapons/ballista/effects/ballista_fire.prefab",
+              "resourceID": 3090882178
+            }
+          },
+          {
+            "$type": "BallistaGun+FiringEffect",
+            "item": {
+              "$ref": "ItemDefinition",
+              "name": "ballista.bolt.pitchfork.item",
+              "itemid": -357442017,
+              "shortname": "ballista.bolt.pitchfork"
+            },
+            "effectPrefab": {
+              "$ref": "GameObject",
+              "guid": "5e3b87474a916a940bfd522b2ff591f0",
+              "resourcePath": "assets/content/vehicles/siegeweapons/ballista/effects/ballista_fire.prefab",
+              "resourceID": 3090882178
+            }
+          }
+        ],
+        "reloadedSound": {
+          "$ref": "SoundDefinition",
+          "name": "ballista-reload-finish",
+          "instanceID": 381792
+        },
+        "aimMovementSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "ballista-aim-movement-loop",
+          "instanceID": 277612
+        },
+        "aimMovementYawSoundDef": null,
+        "aimMovementPitchSoundDef": null,
+        "aimMovementGainCurve": {
+          "$type": "UnityEngine.AnimationCurve"
+        },
+        "runSideChecks": true,
+        "leftGroundCheckTransform": {
+          "$ref": "Transform",
+          "name": "LeftGroundCheck",
+          "instanceID": 1295098,
+          "goName": "LeftGroundCheck",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "rightGroundCheckTransform": {
+          "$ref": "Transform",
+          "name": "RightGroundCheck",
+          "instanceID": 1335068,
+          "goName": "RightGroundCheck",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "leftSideCheckPositions": [
+          {
+            "$ref": "Transform",
+            "name": "LeftSideCheck",
+            "instanceID": 1294438,
+            "goName": "LeftSideCheck",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "LeftSideCheck2",
+            "instanceID": 1354730,
+            "goName": "LeftSideCheck2",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "rightSideCheckPositions": [
+          {
+            "$ref": "Transform",
+            "name": "RightSideCheck",
+            "instanceID": 1433046,
+            "goName": "RightSideCheck",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "RightSideCheck2",
+            "instanceID": 1399246,
+            "goName": "RightSideCheck2",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "originalLocalMountPos": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "runBoundsChecks": true,
+        "areaChecks": [
+          {
+            "center": {
+              "x": -0.550000011920929,
+              "y": 0.10999999940395355,
+              "z": 0.87999999523162842
+            },
+            "size": {
+              "x": 0.800000011920929,
+              "y": 0.11999999731779099,
+              "z": 0.11999999731779099
+            }
+          },
+          {
+            "center": {
+              "x": 0.550000011920929,
+              "y": 0.10999999940395355,
+              "z": 0.87999999523162842
+            },
+            "size": {
+              "x": 0.800000011920929,
+              "y": 0.11999999731779099,
+              "z": 0.11999999731779099
+            }
+          },
+          {
+            "center": {
+              "x": 0.0,
+              "y": 0.10999999940395355,
+              "z": 0.44999998807907104
+            },
+            "size": {
+              "x": 0.15999999642372131,
+              "y": 0.14000000059604645,
+              "z": 1.2999999523162842
+            }
+          }
+        ],
+        "ballistaOwner": null,
+        "reloadProgress": 0.0,
+        "sendClientInputToVehicleParent": false,
+        "forcePlayerModelUpdate": false,
+        "giveCrosshair": false,
+        "canTeamInteract": true,
+        "RequiresVehicleFixedUpdateOnSeat": false,
+        "mountSyncType": {
+          "$enum": "BaseMountable+MountSyncType",
+          "name": "RepositionPerFrame",
+          "value": 0
+        },
+        "eyePositionOverride": {
+          "$ref": "Transform",
+          "name": "eyePos",
+          "instanceID": 1368406,
+          "goName": "eyePos",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "eyeCenterOverride": {
+          "$ref": "Transform",
+          "name": "eyePos",
+          "instanceID": 1368406,
+          "goName": "eyePos",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "overrideEyesRotation": true,
+        "pitchClamp": {
+          "x": -40.0,
+          "y": 30.0
+        },
+        "yawClamp": {
+          "x": -180.0,
+          "y": 180.0
+        },
+        "canWieldItems": false,
+        "relativeViewAngles": true,
+        "disableLegsWhenMounted": true,
+        "disableBreastCensorshipWhenMounted": true,
+        "AllowForceMountWhenRestrained": true,
+        "mountChaining": false,
+        "mountAnchor": {
+          "$ref": "Transform",
+          "name": "MountAnchor",
+          "instanceID": 1378016,
+          "goName": "MountAnchor",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "mountLOSVertOffset": 1.25,
+        "mountedAnimationSpeed": 0.60000002384185791,
+        "mountPose": {
+          "$enum": "PlayerModel+MountPoses",
+          "name": "Standing_Ballista",
+          "value": 32
+        },
+        "animateVehicleAim360": false,
+        "maxMountDistance": 1.0,
+        "dismountPositions": [
+          {
+            "$ref": "Transform",
+            "name": "Dismount1",
+            "instanceID": 1312974,
+            "goName": "Dismount1",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "Dismount2",
+            "instanceID": 1434422,
+            "goName": "Dismount2",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "Dismount3",
+            "instanceID": 1422916,
+            "goName": "Dismount3",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "Dismount4",
+            "instanceID": 1327302,
+            "goName": "Dismount4",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "Dismount5",
+            "instanceID": 1334032,
+            "goName": "Dismount5",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "Dismount6",
+            "instanceID": 1350006,
+            "goName": "Dismount6",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "checkPlayerLosOnMount": true,
+        "disableMeshCullingForPlayers": false,
+        "allowHeadLook": false,
+        "ignoreVehicleParent": false,
+        "legacyDismount": false,
+        "wearWhileMounted": null,
+        "modifiesPlayerCollider": false,
+        "customPlayerCollider": {
+          "$type": "BasePlayer+CapsuleColliderInfo",
+          "height": 0.0,
+          "radius": 0.0,
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "clippingCheckRadius": 0.20000000298023224,
+        "clippingAndVisChecks": true,
+        "clippingChecksLocation": {
+          "$enum": "BaseMountable+ClippingCheckLocation",
+          "name": "HeadOnly",
+          "value": 0
+        },
+        "mountSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "ballista-mount",
+          "instanceID": 109722
+        },
+        "swapSoundDef": null,
+        "dismountSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "ballista-dismount",
+          "instanceID": 364854
+        },
+        "allowFootstepEffects": false,
+        "dismountHoldType": {
+          "$enum": "BaseMountable+DismountConvarType",
+          "name": "GroundVehicle",
+          "value": 3
+        },
+        "mountTimeStatType": {
+          "$enum": "BaseMountable+MountStatType",
+          "name": "Driving",
+          "value": 3
+        },
+        "allowedGestures": {
+          "$enum": "BaseMountable+MountGestureType",
+          "name": "None",
+          "value": 0
+        },
+        "canDrinkWhileMounted": false,
+        "allowSleeperMounting": false,
+        "shouldShowHudHealth": false,
+        "blockLooting": false,
+        "animateClothInLocalSpace": true,
+        "protectsFromAnimals": true,
+        "MountedCameraMode": {
+          "$enum": "BasePlayer+CameraMode",
+          "name": "FirstPerson",
+          "value": 0
+        },
+        "rigidBody": null,
+        "wantsBoundaryRepelCheck": false,
+        "isMobile": true,
+        "SideLeanAmount": 0.0,
+        "_mounted": null,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "SiegeWeaponProtection",
+          "comments": "",
+          "density": 100.0,
+          "amounts": [
+            0.89999997615814209,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            -0.30000001192092896,
+            1.0,
+            1.0,
+            1.0,
+            0.949999988079071,
+            0.95999997854232788,
+            0.949999988079071,
+            1.0,
+            1.0,
+            1.0,
+            0.95999997854232788,
+            0.40000000596046448,
+            1.0,
+            1.0,
+            0.0,
+            0.949999988079071,
+            0.949999988079071,
+            0.25,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 3687135823
+        },
+        "startHealth": 250.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "ballista.static.item",
+            "itemid": 1714509152,
+            "shortname": "ballista.static"
+          },
+          "itemCount": 1,
+          "setConditionFromHealth": true,
+          "subtractCondition": 0.25,
+          "requireBuildingPrivilege": true,
+          "requireHammer": true,
+          "requireEmptyInv": true,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "ballista.static.item",
+            "itemid": 1714509152,
+            "shortname": "ballista.static"
+          },
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": false,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -3.6597251892089844E-05,
+            "y": 0.86400002241134644,
+            "z": -0.33692073822021484
+          },
+          "size": {
+            "x": 1.9311974048614502,
+            "y": 2.0,
+            "z": 2.5901584625244141
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 1853547378,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$type": "GroundWatch",
+        "$name": "ballistagun.static.entity",
+        "groundPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "layers": 10485760,
+        "radius": 0.10000000149011612,
+        "needBuildingBlock": false,
+        "needOnlyOneAreaCheckValid": false,
+        "whitelist": [],
+        "fails": 0,
+        "_baseEntity": null
+      },
+      {
+        "$type": "DestroyOnGroundMissing",
+        "$name": "ballistagun.static.entity"
+      }
+    ],
+    "children": [
+      {
+        "name": "sockets",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "free",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "prevent_building",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "IgnoreWireCheck",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.34700000286102295
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "prevent_building",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 0.53955835103988647,
+              "z": -0.48700779676437378
+            },
+            "size": {
+              "x": 0.56587326526641846,
+              "y": 1.0791167020797729,
+              "z": 0.458645224571228
+            },
+            "isTrigger": true,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "siege_weapon_ballista_mount",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "GameObject",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.94509017467498779,
+              "z": -0.0048095309175550938
+            },
+            "localRotation": {
+              "x": 0.0034142949152737856,
+              "y": 1.4901159417490817E-08,
+              "z": 1.5657859009365893E-08,
+              "w": 0.999994158744812
+            },
+            "localScale": {
+              "x": 0.56070512533187866,
+              "y": 0.56070548295974731,
+              "z": 0.56070548295974731
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Yaw",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "siege_weapon_ballista_weapon_mount_rig",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 1.0872000455856323,
+              "z": 0.0034999996423721313
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "BallistaAnimationEvents",
+                "$name": "siege_weapon_ballista_weapon_mount_rig",
+                "ballista": {
+                  "$ref": "BallistaGun",
+                  "name": "ballistagun.static.entity",
+                  "instanceID": 1564328,
+                  "goName": "ballistagun.static.entity",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                "reloadClickSoundDef": {
+                  "$ref": "SoundDefinition",
+                  "name": "ballista-reload-gear-click",
+                  "instanceID": 121106
+                },
+                "reloadWrenchForwardDef": {
+                  "$ref": "SoundDefinition",
+                  "name": "ballista-reload-ratchet",
+                  "instanceID": 167884
+                },
+                "reloadCompleteDef": {
+                  "$ref": "SoundDefinition",
+                  "name": "ballista-reload-finish",
+                  "instanceID": 381792
+                }
+              }
+            ],
+            "children": [
+              {
+                "name": "motion",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "pelvis",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "latch",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.110966257750988,
+                          "y": 0.12438607960939407,
+                          "z": -0.15341562032699585
+                        },
+                        "localRotation": {
+                          "x": 0.1029159352183342,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.99469006061553955
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": []
+                      },
+                      {
+                        "name": "limb_l",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -0.041571538895368576,
+                          "y": 0.094359889626502991,
+                          "z": 1.0267616510391235
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": [
+                          {
+                            "name": "string_l",
+                            "layer": {
+                              "index": 0,
+                              "name": "Default"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": -0.84662574529647827,
+                              "y": -1.7763567996955811E-17,
+                              "z": -0.16150133311748505
+                            },
+                            "localRotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [],
+                            "children": [
+                              {
+                                "name": "bowString_01_l",
+                                "layer": {
+                                  "index": 0,
+                                  "name": "Default"
+                                },
+                                "tag": "Untagged",
+                                "customTags": [],
+                                "activeSelf": true,
+                                "localPosition": {
+                                  "x": 0.080016478896141052,
+                                  "y": 0.034370984882116318,
+                                  "z": -0.016067896038293839
+                                },
+                                "localRotation": {
+                                  "x": 0.0,
+                                  "y": 0.0,
+                                  "z": 0.99953711032867432,
+                                  "w": -0.030422568321228027
+                                },
+                                "localScale": {
+                                  "x": 1.0,
+                                  "y": 1.0,
+                                  "z": 1.0
+                                },
+                                "components": [],
+                                "children": [
+                                  {
+                                    "name": "bowString_02_l",
+                                    "layer": {
+                                      "index": 0,
+                                      "name": "Default"
+                                    },
+                                    "tag": "Untagged",
+                                    "customTags": [],
+                                    "activeSelf": true,
+                                    "localPosition": {
+                                      "x": -0.16197028756141663,
+                                      "y": 7.4864874477498233E-05,
+                                      "z": 0.000283395143924281
+                                    },
+                                    "localRotation": {
+                                      "x": 2.5117105906247161E-06,
+                                      "y": 0.0016134877223521471,
+                                      "z": -0.00058439001441001892,
+                                      "w": 0.99999856948852539
+                                    },
+                                    "localScale": {
+                                      "x": 1.0,
+                                      "y": 1.0,
+                                      "z": 1.0
+                                    },
+                                    "components": [],
+                                    "children": [
+                                      {
+                                        "name": "bowString_03_l",
+                                        "layer": {
+                                          "index": 0,
+                                          "name": "Default"
+                                        },
+                                        "tag": "Untagged",
+                                        "customTags": [],
+                                        "activeSelf": true,
+                                        "localPosition": {
+                                          "x": -0.16197057068347931,
+                                          "y": 0.00019337103003636003,
+                                          "z": 0.00015176546003203839
+                                        },
+                                        "localRotation": {
+                                          "x": 1.2036999578413088E-05,
+                                          "y": 0.00080274220090359449,
+                                          "z": -0.0013155830092728138,
+                                          "w": 0.99999880790710449
+                                        },
+                                        "localScale": {
+                                          "x": 1.0,
+                                          "y": 1.0,
+                                          "z": 1.0
+                                        },
+                                        "components": [],
+                                        "children": [
+                                          {
+                                            "name": "bowString_04_l",
+                                            "layer": {
+                                              "index": 0,
+                                              "name": "Default"
+                                            },
+                                            "tag": "Untagged",
+                                            "customTags": [],
+                                            "activeSelf": true,
+                                            "localPosition": {
+                                              "x": -0.16197016835212708,
+                                              "y": 0.00031180036603473127,
+                                              "z": 2.1601685148198158E-05
+                                            },
+                                            "localRotation": {
+                                              "x": 1.4682760593132116E-05,
+                                              "y": -2.3868614107414032E-07,
+                                              "z": -0.0020474405027925968,
+                                              "w": 0.99999791383743286
+                                            },
+                                            "localScale": {
+                                              "x": 1.0,
+                                              "y": 1.0,
+                                              "z": 1.0
+                                            },
+                                            "components": [],
+                                            "children": [
+                                              {
+                                                "name": "bowString_05_l",
+                                                "layer": {
+                                                  "index": 0,
+                                                  "name": "Default"
+                                                },
+                                                "tag": "Untagged",
+                                                "customTags": [],
+                                                "activeSelf": true,
+                                                "localPosition": {
+                                                  "x": -0.16196992993354797,
+                                                  "y": 0.000431261578341946,
+                                                  "z": -0.00010833567648660392
+                                                },
+                                                "localRotation": {
+                                                  "x": 6.1045234360790346E-06,
+                                                  "y": -0.00080305116716772318,
+                                                  "z": -0.0027867981698364019,
+                                                  "w": 0.99999582767486572
+                                                },
+                                                "localScale": {
+                                                  "x": 1.0,
+                                                  "y": 1.0,
+                                                  "z": 1.0
+                                                },
+                                                "components": [],
+                                                "children": [
+                                                  {
+                                                    "name": "bowString_06_l",
+                                                    "layer": {
+                                                      "index": 0,
+                                                      "name": "Default"
+                                                    },
+                                                    "tag": "Untagged",
+                                                    "customTags": [],
+                                                    "activeSelf": true,
+                                                    "localPosition": {
+                                                      "x": -0.16196912527084351,
+                                                      "y": 0.000552843208424747,
+                                                      "z": -0.00023924456036183983
+                                                    },
+                                                    "localRotation": {
+                                                      "x": -2.2583933514397359E-06,
+                                                      "y": -0.0016130723524838686,
+                                                      "z": -0.003540372010320425,
+                                                      "w": 0.99999243021011353
+                                                    },
+                                                    "localScale": {
+                                                      "x": 1.0,
+                                                      "y": 1.0,
+                                                      "z": 1.0
+                                                    },
+                                                    "components": [],
+                                                    "children": []
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "limb_r",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.042544953525066376,
+                          "y": 0.094359889626502991,
+                          "z": 1.0267616510391235
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 1.0,
+                          "w": -6.1232342629258393E-17
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": [
+                          {
+                            "name": "string_r",
+                            "layer": {
+                              "index": 0,
+                              "name": "Default"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": -0.84496861696243286,
+                              "y": -5.3290702005633962E-16,
+                              "z": -0.15901623666286469
+                            },
+                            "localRotation": {
+                              "x": -6.1232342629258393E-17,
+                              "y": 1.0,
+                              "z": 6.1232342629258393E-17,
+                              "w": -6.1232342629258393E-17
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [],
+                            "children": [
+                              {
+                                "name": "bowString_01_r",
+                                "layer": {
+                                  "index": 0,
+                                  "name": "Default"
+                                },
+                                "tag": "Untagged",
+                                "customTags": [],
+                                "activeSelf": true,
+                                "localPosition": {
+                                  "x": -0.083667047321796417,
+                                  "y": -0.034593414515256882,
+                                  "z": 0.015231779776513577
+                                },
+                                "localRotation": {
+                                  "x": 0.0,
+                                  "y": 0.0,
+                                  "z": 0.030422568321228027,
+                                  "w": 0.99953711032867432
+                                },
+                                "localScale": {
+                                  "x": 1.0,
+                                  "y": 1.0,
+                                  "z": 1.0
+                                },
+                                "components": [],
+                                "children": [
+                                  {
+                                    "name": "bowString_02_r",
+                                    "layer": {
+                                      "index": 0,
+                                      "name": "Default"
+                                    },
+                                    "tag": "Untagged",
+                                    "customTags": [],
+                                    "activeSelf": true,
+                                    "localPosition": {
+                                      "x": -0.16090793907642365,
+                                      "y": 6.3827981648501009E-05,
+                                      "z": 6.23027517576702E-05
+                                    },
+                                    "localRotation": {
+                                      "x": 5.7440212231085752E-07,
+                                      "y": 0.00035820307675749063,
+                                      "z": -0.00052504218183457851,
+                                      "w": 0.99999982118606567
+                                    },
+                                    "localScale": {
+                                      "x": 1.0,
+                                      "y": 1.0,
+                                      "z": 1.0
+                                    },
+                                    "components": [],
+                                    "children": [
+                                      {
+                                        "name": "bowString_03_r",
+                                        "layer": {
+                                          "index": 0,
+                                          "name": "Default"
+                                        },
+                                        "tag": "Untagged",
+                                        "customTags": [],
+                                        "activeSelf": true,
+                                        "localPosition": {
+                                          "x": -0.16090682148933411,
+                                          "y": 0.00018832700152415782,
+                                          "z": 3.395627936697565E-05
+                                        },
+                                        "localRotation": {
+                                          "x": 2.7095259156340035E-06,
+                                          "y": 0.00018105450726579875,
+                                          "z": -0.0012999789323657751,
+                                          "w": 0.99999916553497314
+                                        },
+                                        "localScale": {
+                                          "x": 1.0,
+                                          "y": 1.0,
+                                          "z": 1.0
+                                        },
+                                        "components": [],
+                                        "children": [
+                                          {
+                                            "name": "bowString_04_r",
+                                            "layer": {
+                                              "index": 0,
+                                              "name": "Default"
+                                            },
+                                            "tag": "Untagged",
+                                            "customTags": [],
+                                            "activeSelf": true,
+                                            "localPosition": {
+                                              "x": -0.16090592741966248,
+                                              "y": 0.00031306399614550173,
+                                              "z": 4.8684159992262721E-06
+                                            },
+                                            "localRotation": {
+                                              "x": 3.2870309496502159E-06,
+                                              "y": -5.3973202795987163E-08,
+                                              "z": -0.0020735242869704962,
+                                              "w": 0.99999785423278809
+                                            },
+                                            "localScale": {
+                                              "x": 1.0,
+                                              "y": 1.0,
+                                              "z": 1.0
+                                            },
+                                            "components": [],
+                                            "children": [
+                                              {
+                                                "name": "bowString_05_r",
+                                                "layer": {
+                                                  "index": 0,
+                                                  "name": "Default"
+                                                },
+                                                "tag": "Untagged",
+                                                "customTags": [],
+                                                "activeSelf": true,
+                                                "localPosition": {
+                                                  "x": -0.16090624034404755,
+                                                  "y": 0.00043525872752070427,
+                                                  "z": -2.4322898752870969E-05
+                                                },
+                                                "localRotation": {
+                                                  "x": 1.3369775615501567E-06,
+                                                  "y": -0.00018112370162270963,
+                                                  "z": -0.0028283812571316957,
+                                                  "w": 0.9999960064888
+                                                },
+                                                "localScale": {
+                                                  "x": 1.0,
+                                                  "y": 1.0,
+                                                  "z": 1.0
+                                                },
+                                                "components": [],
+                                                "children": [
+                                                  {
+                                                    "name": "bowString_06_r",
+                                                    "layer": {
+                                                      "index": 0,
+                                                      "name": "Default"
+                                                    },
+                                                    "tag": "Untagged",
+                                                    "customTags": [],
+                                                    "activeSelf": true,
+                                                    "localPosition": {
+                                                      "x": -0.16090674698352814,
+                                                      "y": 0.00055217818589881063,
+                                                      "z": -5.2964780479669571E-05
+                                                    },
+                                                    "localRotation": {
+                                                      "x": -5.0847518195951125E-07,
+                                                      "y": -0.00035811035195365548,
+                                                      "z": -0.0035477348137646914,
+                                                      "w": 0.99999368190765381
+                                                    },
+                                                    "localScale": {
+                                                      "x": 1.0,
+                                                      "y": 1.0,
+                                                      "z": 1.0
+                                                    },
+                                                    "components": [],
+                                                    "children": []
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "nock",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.00048670766409486532,
+                          "y": 0.16534215211868286,
+                          "z": -0.22844146192073822
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": [
+                          {
+                            "name": "nockRope_01",
+                            "layer": {
+                              "index": 0,
+                              "name": "Default"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": -0.0060106390155851841,
+                              "y": -0.0081559829413890839,
+                              "z": -0.16289015114307404
+                            },
+                            "localRotation": {
+                              "x": 0.65460562705993652,
+                              "y": 0.17145156860351563,
+                              "z": 0.71966671943664551,
+                              "w": 0.15548565983772278
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [],
+                            "children": [
+                              {
+                                "name": "nockRope_02",
+                                "layer": {
+                                  "index": 0,
+                                  "name": "Default"
+                                },
+                                "tag": "Untagged",
+                                "customTags": [],
+                                "activeSelf": true,
+                                "localPosition": {
+                                  "x": -0.0086554577574133873,
+                                  "y": 7.178998930612579E-05,
+                                  "z": 4.4408919992389527E-18
+                                },
+                                "localRotation": {
+                                  "x": 0.0,
+                                  "y": 0.0,
+                                  "z": -0.0082375826314091682,
+                                  "w": 0.9999660849571228
+                                },
+                                "localScale": {
+                                  "x": 1.0,
+                                  "y": 1.0,
+                                  "z": 1.0
+                                },
+                                "components": [],
+                                "children": [
+                                  {
+                                    "name": "nockRope_03",
+                                    "layer": {
+                                      "index": 0,
+                                      "name": "Default"
+                                    },
+                                    "tag": "Untagged",
+                                    "customTags": [],
+                                    "activeSelf": true,
+                                    "localPosition": {
+                                      "x": -0.0086554950103163719,
+                                      "y": 6.8853623815812171E-05,
+                                      "z": 2.2204459169014151E-17
+                                    },
+                                    "localRotation": {
+                                      "x": 0.0,
+                                      "y": 0.0,
+                                      "z": -0.0078977122902870178,
+                                      "w": 0.99996882677078247
+                                    },
+                                    "localScale": {
+                                      "x": 1.0,
+                                      "y": 1.0,
+                                      "z": 1.0
+                                    },
+                                    "components": [],
+                                    "children": [
+                                      {
+                                        "name": "nockRope_04",
+                                        "layer": {
+                                          "index": 0,
+                                          "name": "Default"
+                                        },
+                                        "tag": "Untagged",
+                                        "customTags": [],
+                                        "activeSelf": true,
+                                        "localPosition": {
+                                          "x": -0.0086555331945419312,
+                                          "y": 6.5889165853150189E-05,
+                                          "z": 3.5527135993911621E-17
+                                        },
+                                        "localRotation": {
+                                          "x": 0.0,
+                                          "y": 0.0,
+                                          "z": -0.0075548258610069752,
+                                          "w": 0.99997144937515259
+                                        },
+                                        "localScale": {
+                                          "x": 1.0,
+                                          "y": 1.0,
+                                          "z": 1.0
+                                        },
+                                        "components": [],
+                                        "children": [
+                                          {
+                                            "name": "nockRope_05",
+                                            "layer": {
+                                              "index": 0,
+                                              "name": "Default"
+                                            },
+                                            "tag": "Untagged",
+                                            "customTags": [],
+                                            "activeSelf": true,
+                                            "localPosition": {
+                                              "x": -0.0086555676534771919,
+                                              "y": 6.2908075051382184E-05,
+                                              "z": 7.1054271987823242E-17
+                                            },
+                                            "localRotation": {
+                                              "x": 0.0,
+                                              "y": 0.0,
+                                              "z": -0.00721022579818964,
+                                              "w": 0.99997401237487793
+                                            },
+                                            "localScale": {
+                                              "x": 1.0,
+                                              "y": 1.0,
+                                              "z": 1.0
+                                            },
+                                            "components": [],
+                                            "children": [
+                                              {
+                                                "name": "nockRope_06",
+                                                "layer": {
+                                                  "index": 0,
+                                                  "name": "Default"
+                                                },
+                                                "tag": "Untagged",
+                                                "customTags": [],
+                                                "activeSelf": true,
+                                                "localPosition": {
+                                                  "x": -0.0086555927991867065,
+                                                  "y": 5.9920370404142886E-05,
+                                                  "z": 9.3258731156837393E-17
+                                                },
+                                                "localRotation": {
+                                                  "x": 0.0,
+                                                  "y": 0.0,
+                                                  "z": -0.0068650441244244576,
+                                                  "w": 0.99997645616531372
+                                                },
+                                                "localScale": {
+                                                  "x": 1.0,
+                                                  "y": 1.0,
+                                                  "z": 1.0
+                                                },
+                                                "components": [],
+                                                "children": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "rope",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -0.0041007515974342823,
+                          "y": 0.11596456170082092,
+                          "z": -0.42205503582954407
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": []
+                      },
+                      {
+                        "name": "winch",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -0.16201701760292053,
+                          "y": 0.11596456170082092,
+                          "z": -0.42205503582954407
+                        },
+                        "localRotation": {
+                          "x": -0.25956487655639648,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.96572566032409668
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": [
+                          {
+                            "name": "LHand_IK",
+                            "layer": {
+                              "index": 0,
+                              "name": "Default"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": -0.027421891689300537,
+                              "y": 0.13767914474010468,
+                              "z": -0.064485624432563782
+                            },
+                            "localRotation": {
+                              "x": 0.011777074076235294,
+                              "y": -0.05080263689160347,
+                              "z": 0.68831634521484375,
+                              "w": 0.7235337495803833
+                            },
+                            "localScale": {
+                              "x": 0.708319902420044,
+                              "y": 0.70831996202468872,
+                              "z": 0.7083200216293335
+                            },
+                            "components": [],
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "RHand_IK",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.10760000348091125,
+                          "y": 0.046500001102685928,
+                          "z": -0.59789997339248657
+                        },
+                        "localRotation": {
+                          "x": -0.0508481040596962,
+                          "y": -0.048650868237018585,
+                          "z": -0.68963444232940674,
+                          "w": 0.7207302451133728
+                        },
+                        "localScale": {
+                          "x": 0.7083200216293335,
+                          "y": 0.7083200216293335,
+                          "z": 0.7083200216293335
+                        },
+                        "components": [],
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "ServerColliders",
+                    "layer": {
+                      "index": 15,
+                      "name": "Vehicle World"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": -0.00419999286532402,
+                      "z": 0.528499960899353
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 0.7083200216293335,
+                      "y": 0.7083200216293335,
+                      "z": 0.7083200216293335
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "Base (1)",
+                        "layer": {
+                          "index": 15,
+                          "name": "Vehicle World"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.0006961822509765625,
+                          "y": 0.13169622421264648,
+                          "z": -0.51724672317504883
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "Base (1)",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": 0.0,
+                              "y": -0.067361176013946533,
+                              "z": 0.25772619247436523
+                            },
+                            "size": {
+                              "x": 0.20999999344348907,
+                              "y": 0.5947222113609314,
+                              "z": 2.216221809387207
+                            },
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal Low Friction",
+                              "instanceID": 610878
+                            }
+                          }
+                        ],
+                        "children": []
+                      },
+                      {
+                        "name": "Base (2)",
+                        "layer": {
+                          "index": 15,
+                          "name": "Vehicle World"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.0010000000474974513,
+                          "y": 0.13169622421264648,
+                          "z": 0.62099999189376831
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": -0.7071070671081543,
+                          "z": 0.0,
+                          "w": 0.70710653066635132
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "Base (2)",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": -0.072488665580749512,
+                              "y": -0.067361205816268921,
+                              "z": 0.0
+                            },
+                            "size": {
+                              "x": 0.25,
+                              "y": 0.59472227096557617,
+                              "z": 2.630000114440918
+                            },
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal Low Friction",
+                              "instanceID": 610878
+                            }
+                          }
+                        ],
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "PreventBuildings",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "preventbuilding_1",
+                        "layer": {
+                          "index": 29,
+                          "name": "Prevent Building"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.00049311982002109289,
+                          "y": 0.089083075523376465,
+                          "z": 0.16212373971939087
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 0.7083200216293335,
+                          "y": 0.7083200216293335,
+                          "z": 0.7083200216293335
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "preventbuilding_1",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": 0.0,
+                              "y": -0.0099999997764825821,
+                              "z": 0.15711867809295654
+                            },
+                            "size": {
+                              "x": 0.20999999344348907,
+                              "y": 0.23999997973442078,
+                              "z": 2.416677713394165
+                            },
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Wood",
+                              "instanceID": 609850
+                            }
+                          }
+                        ],
+                        "children": []
+                      },
+                      {
+                        "name": "preventbuilding_2",
+                        "layer": {
+                          "index": 29,
+                          "name": "Prevent Building"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.0007083200616762042,
+                          "y": 0.089083075523376465,
+                          "z": 0.96836668252944946
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": -0.7071070671081543,
+                          "z": 0.0,
+                          "w": 0.70710653066635132
+                        },
+                        "localScale": {
+                          "x": 0.7083200216293335,
+                          "y": 0.7083200216293335,
+                          "z": 0.7083200216293335
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "preventbuilding_2",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": -0.0724886953830719,
+                              "y": -0.0099999997764825821,
+                              "z": -3.5527136788005009E-15
+                            },
+                            "size": {
+                              "x": 0.25,
+                              "y": 0.23999999463558197,
+                              "z": 2.630000114440918
+                            },
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          }
+                        ],
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "DetailedColliders",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": -0.00419999286532402,
+                      "z": 0.528499960899353
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 0.7083200216293335,
+                      "y": 0.7083200216293335,
+                      "z": 0.7083200216293335
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "Base (1)",
+                        "layer": {
+                          "index": 13,
+                          "name": "Vehicle Detailed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.0006961822509765625,
+                          "y": 0.13169622421264648,
+                          "z": -0.51724672317504883
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "Base (1)",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": 0.0,
+                              "y": -0.0099999997764825821,
+                              "z": 0.25753632187843323
+                            },
+                            "size": {
+                              "x": 0.20999999344348907,
+                              "y": 0.23999999463558197,
+                              "z": 2.2158427238464355
+                            },
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Wood",
+                              "instanceID": 609850
+                            }
+                          }
+                        ],
+                        "children": []
+                      },
+                      {
+                        "name": "Base (2)",
+                        "layer": {
+                          "index": 13,
+                          "name": "Vehicle Detailed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.0010000000474974513,
+                          "y": 0.13169622421264648,
+                          "z": 0.62099999189376831
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": -0.7071070671081543,
+                          "z": 0.0,
+                          "w": 0.70710653066635132
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "Base (2)",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": -0.0724886953830719,
+                              "y": -0.0099999997764825821,
+                              "z": -3.5527136788005009E-15
+                            },
+                            "size": {
+                              "x": 0.25,
+                              "y": 0.23999999463558197,
+                              "z": 2.630000114440918
+                            },
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          }
+                        ],
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "eyePos",
+                    "layer": {
+                      "index": 8,
+                      "name": "Deployed"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.23899999260902405,
+                      "z": -0.62000000476837158
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  },
+                  {
+                    "name": "Eyes",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.27487814426422119,
+                      "z": -0.81234985589981079
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 0.7083200216293335,
+                      "y": 0.7083200216293335,
+                      "z": 0.7083200216293335
+                    },
+                    "components": [],
+                    "children": []
+                  },
+                  {
+                    "name": "Muzzle",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.18579994142055511,
+                      "z": 1.1215000152587891
+                    },
+                    "localRotation": {
+                      "x": -0.010559028945863247,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 0.999944269657135
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  },
+                  {
+                    "name": "Ammo",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.17288003861904144,
+                      "z": 0.528499960899353
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 0.7083200216293335,
+                      "y": 0.7083200216293335,
+                      "z": 0.7083200216293335
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "w_ballista_fork",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": false,
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": -1.0,
+                          "w": 2.0861622829215776E-07
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.CapsuleCollider",
+                            "$name": "w_ballista_fork",
+                            "colliderType": "Capsule",
+                            "center": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": -0.20033204555511475
+                            },
+                            "radius": 0.019999999552965164,
+                            "height": 1.7642490863800049,
+                            "direction": 2,
+                            "isTrigger": false,
+                            "enabled": false,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          }
+                        ],
+                        "children": [
+                          {
+                            "name": "GameObject",
+                            "layer": {
+                              "index": 0,
+                              "name": "Default"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": false,
+                            "localPosition": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.6743999719619751
+                            },
+                            "localRotation": {
+                              "x": 0.23064312338829041,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 0.9730384349822998
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [
+                              {
+                                "$type": "UnityEngine.CapsuleCollider",
+                                "$name": "GameObject",
+                                "colliderType": "Capsule",
+                                "center": {
+                                  "x": 0.0,
+                                  "y": 4.0882186524981989E-10,
+                                  "z": 0.034939978271722794
+                                },
+                                "radius": 0.0099999997764825821,
+                                "height": 0.097114123404026031,
+                                "direction": 2,
+                                "isTrigger": false,
+                                "enabled": true,
+                                "physicMaterial": {
+                                  "$ref": "PhysicsMaterial",
+                                  "name": "Wood",
+                                  "instanceID": 609850
+                                }
+                              },
+                              {
+                                "$type": "UnityEngine.BoxCollider",
+                                "$name": "GameObject",
+                                "colliderType": "Box",
+                                "center": {
+                                  "x": 0.0,
+                                  "y": 0.001814841409213841,
+                                  "z": 0.11286754161119461
+                                },
+                                "size": {
+                                  "x": 0.20000000298023224,
+                                  "y": 0.0075766276568174362,
+                                  "z": 0.090038761496543884
+                                },
+                                "isTrigger": false,
+                                "enabled": true,
+                                "physicMaterial": {
+                                  "$ref": "PhysicsMaterial",
+                                  "name": "Metal",
+                                  "instanceID": 609842
+                                }
+                              }
+                            ],
+                            "children": []
+                          },
+                          {
+                            "name": "GameObject (1)",
+                            "layer": {
+                              "index": 0,
+                              "name": "Default"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": false,
+                            "localPosition": {
+                              "x": 0.0,
+                              "y": -0.073600001633167267,
+                              "z": 0.84390002489089966
+                            },
+                            "localRotation": {
+                              "x": 0.0078591108322143555,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 0.99996912479400635
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [
+                              {
+                                "$type": "UnityEngine.BoxCollider",
+                                "$name": "GameObject (1)",
+                                "colliderType": "Box",
+                                "center": {
+                                  "x": 0.0,
+                                  "y": 0.002200018847361207,
+                                  "z": 0.091438844799995422
+                                },
+                                "size": {
+                                  "x": 0.20000000298023224,
+                                  "y": 0.019909651950001717,
+                                  "z": 0.17291651666164398
+                                },
+                                "isTrigger": false,
+                                "enabled": true,
+                                "physicMaterial": {
+                                  "$ref": "PhysicsMaterial",
+                                  "name": "Metal",
+                                  "instanceID": 609842
+                                }
+                              }
+                            ],
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "w_ballista_sledge",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": false,
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "w_ballista_sledge",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": -0.0034172609448432922,
+                              "y": 0.00095895305275917053,
+                              "z": 0.81405842304229736
+                            },
+                            "size": {
+                              "x": 0.25982397794723511,
+                              "y": 0.0779726579785347,
+                              "z": 0.076345443725585938
+                            },
+                            "isTrigger": false,
+                            "enabled": false,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          },
+                          {
+                            "$type": "UnityEngine.CapsuleCollider",
+                            "$name": "w_ballista_sledge",
+                            "colliderType": "Capsule",
+                            "center": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": -0.027204990386962891
+                            },
+                            "radius": 0.019999999552965164,
+                            "height": 2.116614818572998,
+                            "direction": 2,
+                            "isTrigger": false,
+                            "enabled": false,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          }
+                        ],
+                        "children": []
+                      },
+                      {
+                        "name": "w_ballista_spear",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": false,
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.CapsuleCollider",
+                            "$name": "w_ballista_spear",
+                            "colliderType": "Capsule",
+                            "center": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": -0.039808988571166992
+                            },
+                            "radius": 0.019999999552965164,
+                            "height": 2.0781793594360352,
+                            "direction": 2,
+                            "isTrigger": false,
+                            "enabled": false,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          },
+                          {
+                            "$type": "UnityEngine.CapsuleCollider",
+                            "$name": "w_ballista_spear",
+                            "colliderType": "Capsule",
+                            "center": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.73248744010925293
+                            },
+                            "radius": 0.059429526329040527,
+                            "height": 0.24795627593994141,
+                            "direction": 2,
+                            "isTrigger": false,
+                            "enabled": false,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          }
+                        ],
+                        "children": []
+                      },
+                      {
+                        "name": "w_ballista_incendiary",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": false,
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.CapsuleCollider",
+                            "$name": "w_ballista_incendiary",
+                            "colliderType": "Capsule",
+                            "center": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0023784637451171875
+                            },
+                            "radius": 0.019999999552965164,
+                            "height": 2.0429539680480957,
+                            "direction": 2,
+                            "isTrigger": false,
+                            "enabled": false,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          },
+                          {
+                            "$type": "UnityEngine.CapsuleCollider",
+                            "$name": "w_ballista_incendiary",
+                            "colliderType": "Capsule",
+                            "center": {
+                              "x": 0.0,
+                              "y": -0.00605638325214386,
+                              "z": 0.71751785278320313
+                            },
+                            "radius": 0.0439436137676239,
+                            "height": 0.29874801635742188,
+                            "direction": 2,
+                            "isTrigger": false,
+                            "enabled": false,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Cloth",
+                              "instanceID": 609830
+                            }
+                          },
+                          {
+                            "$type": "UnityEngine.CapsuleCollider",
+                            "$name": "w_ballista_incendiary",
+                            "colliderType": "Capsule",
+                            "center": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": -1.0369999408721924
+                            },
+                            "radius": 0.045000001788139343,
+                            "height": 0.0,
+                            "direction": 1,
+                            "isTrigger": false,
+                            "enabled": false,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          }
+                        ],
+                        "children": [
+                          {
+                            "name": "Flame Ammo Ballista",
+                            "layer": {
+                              "index": 0,
+                              "name": "Default"
+                            },
+                            "tag": "skin0",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.72699999809265137
+                            },
+                            "localRotation": {
+                              "x": 0.21643960475921631,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 0.976296067237854
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "MountAnchor",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": -0.08899998664855957,
+              "z": -0.88300001621246338
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "ServerPlayerCollider",
+                "layer": {
+                  "index": 15,
+                  "name": "Vehicle World"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.86400002241134644,
+                  "z": 0.11300003528594971
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$ref": "CapsuleCollider",
+                    "name": "ServerPlayerCollider",
+                    "instanceID": 1479684,
+                    "goName": "ServerPlayerCollider",
+                    "$alreadyDumpedElsewhereInThisFile": true
+                  }
+                ],
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "RightGroundCheck",
+            "layer": {
+              "index": 15,
+              "name": "Vehicle World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.5,
+              "y": -0.08899998664855957,
+              "z": -0.92200005054473877
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "LeftGroundCheck",
+            "layer": {
+              "index": 15,
+              "name": "Vehicle World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.5,
+              "y": -0.08899998664855957,
+              "z": -0.92200005054473877
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "BaseCollider",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 0.70831996202468872,
+              "y": 0.70831996202468872,
+              "z": 0.70831996202468872
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "BaseCollider",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.851406991481781,
+                  "z": -4.1022794903256E-05
+                },
+                "size": {
+                  "x": 0.23164074122905731,
+                  "y": 1.7179043292999268,
+                  "z": 0.248118057847023
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "LOS",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "RightSideCheck",
+                "layer": {
+                  "index": 15,
+                  "name": "Vehicle World"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.33399999141693115,
+                  "y": 1.3739999532699585,
+                  "z": -0.76399999856948853
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.70710676908493042,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "RightSideCheck2",
+                "layer": {
+                  "index": 15,
+                  "name": "Vehicle World"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.33399999141693115,
+                  "y": 0.382999986410141,
+                  "z": -0.76399999856948853
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.70710676908493042,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "LeftSideCheck",
+                "layer": {
+                  "index": 15,
+                  "name": "Vehicle World"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.33399999141693115,
+                  "y": 1.3739999532699585,
+                  "z": -0.76399999856948853
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": -0.70710676908493042,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "LeftSideCheck2",
+                "layer": {
+                  "index": 15,
+                  "name": "Vehicle World"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.33399999141693115,
+                  "y": 0.38300001621246338,
+                  "z": -0.76399999856948853
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": -0.70710676908493042,
+                  "z": 0.0,
+                  "w": 0.7071068286895752
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mounting",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "Dismount1",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.10199999809265137,
+              "z": -1.2238233089447021
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "Dismount2",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.938086986541748,
+              "y": 0.10199999809265137,
+              "z": -0.86400002241134644
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "Dismount3",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.96194398403167725,
+              "y": 0.10199999809265137,
+              "z": -0.92559224367141724
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "Dismount4",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.70099997520446777,
+              "z": -1.8563902378082275
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "Dismount5",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -1.2336119413375854,
+              "y": 0.70099997520446777,
+              "z": -1.5128812789916992
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "Dismount6",
+            "layer": {
+              "index": 13,
+              "name": "Vehicle Detailed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.2336119413375854,
+              "y": 0.70099997520446777,
+              "z": -1.5128812789916992
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Deployable": [
+      {
+        "$type": "Deployable",
+        "$name": "<destroyed native object>",
+        "prefabID": 1853547378,
+        "hierachyName": "ballistagun.static.entity",
+        "guidePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "guideMesh": null,
+        "guideMeshScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "overrideRotation": false,
+        "guideMeshOrientation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "guideMeshPositionOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "moveGuideTowardsCamera": true,
+        "guideLights": true,
+        "wantsInstanceData": false,
+        "copyInventoryFromItem": false,
+        "setSocketParent": false,
+        "toSlot": false,
+        "slot": {
+          "$enum": "BaseEntity+Slot",
+          "name": "Lock",
+          "value": 0
+        },
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "73662d89b0c574c378d86da6c8007e61",
+          "resourcePath": "assets/content/vehicles/siegeweapons/ballista/effects/ballista-deploy.prefab",
+          "resourceID": 69417532
+        },
+        "guideTargets": [],
+        "bounds": {
+          "center": {
+            "x": -3.6597251892089844E-05,
+            "y": 0.86400002241134644,
+            "z": -0.33692073822021484
+          },
+          "size": {
+            "x": 1.9311974048614502,
+            "y": 2.0,
+            "z": 2.5901584625244141
+          }
+        },
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/content/vehicles/siegeweapons/ballista/ballistagun.static.entity.prefab",
+        "instanceID": 1529958,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Construction": [
+      {
+        "$type": "Construction",
+        "$name": "<destroyed native object>",
+        "prefabID": 1853547378,
+        "hierachyName": "ballistagun.static.entity",
+        "info": {
+          "$type": "BaseEntity+Menu+Option",
+          "name": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "description": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "icon": null,
+          "order": 0,
+          "usableWhileWounded": false
+        },
+        "canBypassBuildingPermission": false,
+        "showBuildingBlockedPreview": true,
+        "canPlaceOnRoads": false,
+        "canRotateBeforePlacement": true,
+        "canRotateAfterPlacement": true,
+        "canBeDeployedInDeepSeaWater": false,
+        "checkVolumeOnRotate": true,
+        "checkVolumeOnUpgrade": false,
+        "canPlaceAtMaxDistance": false,
+        "placeOnWater": false,
+        "overridePlacementLayer": false,
+        "overridedPlacementLayer": 0,
+        "additionalPlacementLayer": 0,
+        "rotationAmount": {
+          "x": 0.0,
+          "y": 90.0,
+          "z": 0.0
+        },
+        "applyStartingRotation": {
+          "x": 0.0,
+          "y": 180.0,
+          "z": 0.0
+        },
+        "deployOffset": null,
+        "enforceLineOfSightCheckAgainstParentEntity": false,
+        "canSnap": false,
+        "forceY": false,
+        "forceYValue": 0.0,
+        "forceYToOceanLevel": false,
+        "OceanLevelYOffset": 0.0,
+        "holdToPlaceDuration": 0.0,
+        "canFloodFillSockets": false,
+        "alternativeLOSChecks": false,
+        "alternativeLOSPositions": [],
+        "canUseLastValidPosition": true,
+        "healthMultiplier": 1.0,
+        "costMultiplier": 1.0,
+        "maxplaceDistance": 4.0,
+        "minPlaceDistance": 1.0,
+        "guideMesh": null,
+        "guideMeshMaterial": [],
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "hideBuildingPlannerViewmodel": false,
+        "allSockets": [
+          {
+            "$type": "Socket_Free",
+            "$name": "<destroyed native object>",
+            "prefabID": 1853547378,
+            "hierachyName": "ballistagun.static.entity/sockets/free",
+            "idealPlacementNormal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "useTargetNormal": true,
+            "snapToTargetProvidedRotations": false,
+            "blendAimAngle": true,
+            "male": true,
+            "maleDummy": false,
+            "female": false,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": false,
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "selectSize": {
+              "x": 2.0,
+              "y": 0.10000000149011612,
+              "z": 2.0
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            },
+            "socketName": "ballistagun.static.entity/sockets/free",
+            "socketMods": [
+              {
+                "$type": "SocketMod_AngleCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1853547378,
+                "hierachyName": "ballistagun.static.entity/sockets/free/angle (1)",
+                "wantsAngle": true,
+                "worldNormal": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0
+                },
+                "withinDegrees": 30.0,
+                "usePlacementNormal": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/content/vehicles/siegeweapons/ballista/ballistagun.static.entity.prefab",
+                "instanceID": 1576134,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1853547378,
+                "hierachyName": "ballistagun.static.entity/sockets/free/inside",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.10728687047958374,
+                    "z": -0.12181632220745087
+                  },
+                  "size": {
+                    "x": 0.16473720967769623,
+                    "y": 0.15763422846794128,
+                    "z": 0.34363266825675964
+                  }
+                },
+                "layerMask": 2097152,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": -4.6566128730773926E-10,
+                  "z": -0.0039999997243285179
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0040000001899898052,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/content/vehicles/siegeweapons/ballista/ballistagun.static.entity.prefab",
+                "instanceID": 1506918,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1853547378,
+                "hierachyName": "ballistagun.static.entity/sockets/free/not-inside-crossbow",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.026267528533935547,
+                    "z": 0.030320737510919571
+                  },
+                  "size": {
+                    "x": 1.9361824989318848,
+                    "y": 0.40549325942993164,
+                    "z": 0.27676886320114136
+                  }
+                },
+                "layerMask": 1755513089,
+                "wantsInside": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "error_notenoughspace",
+                  "legacyEnglish": "Not enough space"
+                },
+                "worldPosition": {
+                  "x": 0.0070000002160668373,
+                  "y": 1.1719999313354492,
+                  "z": 1.0129997730255127
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0070000002160668373,
+                  "y": -1.0130000114440918,
+                  "z": 1.1720000505447388
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/content/vehicles/siegeweapons/ballista/ballistagun.static.entity.prefab",
+                "instanceID": 1527388,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1853547378,
+                "hierachyName": "ballistagun.static.entity/sockets/free/not-inside-crossbow (1)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.72593849897384644,
+                    "z": 0.030320733785629272
+                  },
+                  "size": {
+                    "x": 0.72228991985321045,
+                    "y": 1.771065354347229,
+                    "z": 0.27676886320114136
+                  }
+                },
+                "layerMask": 1755513089,
+                "wantsInside": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "error_notenoughspace",
+                  "legacyEnglish": "Not enough space"
+                },
+                "worldPosition": {
+                  "x": 0.0070000002160668373,
+                  "y": 1.1719999313354492,
+                  "z": 1.0129997730255127
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0070000002160668373,
+                  "y": -1.0130000114440918,
+                  "z": 1.1720000505447388
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/content/vehicles/siegeweapons/ballista/ballistagun.static.entity.prefab",
+                "instanceID": 1576664,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 1853547378,
+                "hierachyName": "ballistagun.static.entity/sockets/free/not-inside (1)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.016352236270904541,
+                    "z": 0.052876614034175873
+                  },
+                  "size": {
+                    "x": 0.51000416278839111,
+                    "y": 0.42532384395599365,
+                    "z": 0.50201833248138428
+                  }
+                },
+                "layerMask": 1755447553,
+                "wantsInside": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "error_notenoughspace",
+                  "legacyEnglish": "Not enough space"
+                },
+                "worldPosition": {
+                  "x": 0.0070000002160668373,
+                  "y": 0.22599995136260986,
+                  "z": -0.23600001633167267
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0070000002160668373,
+                  "y": 0.23600000143051147,
+                  "z": 0.22599999606609344
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/content/vehicles/siegeweapons/ballista/ballistagun.static.entity.prefab",
+                "instanceID": 1552478,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_InWater",
+                "$name": "<destroyed native object>",
+                "prefabID": 1853547378,
+                "hierachyName": "ballistagun.static.entity/sockets/free/notInWater ",
+                "wantsInWater": false,
+                "excludeArtificialWater": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.57999992370605469,
+                  "z": -5.9604644775390625E-08
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.57999998331069946
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/content/vehicles/siegeweapons/ballista/ballistagun.static.entity.prefab",
+                "instanceID": 1568826,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              }
+            ],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "worldRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": 0.99999994039535522,
+              "z": -1.1920928955078125E-07
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "fullName": "assets/content/vehicles/siegeweapons/ballista/ballistagun.static.entity.prefab",
+            "instanceID": 1577406,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          }
+        ],
+        "allProximities": [],
+        "defaultGrade": null,
+        "socketHandle": null,
+        "bounds": {
+          "center": {
+            "x": -3.6597251892089844E-05,
+            "y": 0.86400002241134644,
+            "z": -0.33692073822021484
+          },
+          "size": {
+            "x": 1.9311974048614502,
+            "y": 2.0,
+            "z": 2.5901584625244141
+          }
+        },
+        "isBuildingPrivilege": false,
+        "isSleepingBag": false,
+        "grades": [],
+        "deployable": {
+          "$ref": "Deployable",
+          "name": "<destroyed native object>",
+          "instanceID": 0,
+          "$error": "Object reference not set to an instance of an object.",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "placeholder": null,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/content/vehicles/siegeweapons/ballista/ballistagun.static.entity.prefab",
+        "instanceID": 1523264,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Socket_Base": [
+      {
+        "$ref": "Socket_Free",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "SocketMod": [
+      {
+        "$ref": "SocketMod_AngleCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_InWater",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "DeployVolume": [
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 1853547378,
+        "hierachyName": "ballistagun.static.entity/deploy",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.52047044038772583,
+            "z": -0.16827541589736938
+          },
+          "size": {
+            "x": 0.49110126495361328,
+            "y": 0.98127567768096924,
+            "z": 0.51403176784515381
+          }
+        },
+        "layers": 1789001985,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/content/vehicles/siegeweapons/ballista/ballistagun.static.entity.prefab",
+        "instanceID": 1506766,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 1853547378,
+        "hierachyName": "ballistagun.static.entity/deploy-exclude-shelves",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.0844164490699768,
+            "z": -0.042587995529174805
+          },
+          "size": {
+            "x": 0.49110126495361328,
+            "y": 0.10916769504547119,
+            "z": 0.62163472175598145
+          }
+        },
+        "layers": 1789001985,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "IncludeList",
+          "value": 1
+        },
+        "entityList": [
+          {
+            "$ref": "DecorDeployable",
+            "name": "halfheight_salvaged_bamboo_shelves",
+            "instanceID": 1046718,
+            "goName": "halfheight_salvaged_bamboo_shelves"
+          },
+          {
+            "$ref": "DecorDeployable",
+            "name": "wall_single_shallow_shelf",
+            "instanceID": 1046722,
+            "goName": "wall_single_shallow_shelf"
+          }
+        ],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": -0.11599999666213989,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": -0.11599999666213989,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/content/vehicles/siegeweapons/ballista/ballistagun.static.entity.prefab",
+        "instanceID": 1552736,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ]
+  }
+}

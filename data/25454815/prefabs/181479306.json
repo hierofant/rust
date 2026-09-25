@@ -1,0 +1,979 @@
+{
+  "prefabID": 181479306,
+  "path": "assets/content/vehicles/modularcar/subents/modular_car_radio.prefab",
+  "rootClassChain": [
+    "ModularCarRadio",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -0.00013212859630584717,
+      "y": 0.027889501303434372,
+      "z": -0.0075099170207977295
+    },
+    "size": {
+      "x": 0.34867614507675171,
+      "y": 0.06940111517906189,
+      "z": 0.18106389045715332
+    }
+  },
+  "hierarchy": {
+    "name": "modular_car_radio",
+    "layer": {
+      "index": 13,
+      "name": "Vehicle Detailed"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "ModularCarRadio",
+        "$name": "modular_car_radio",
+        "CarRadio": {
+          "$type": "BoomBox",
+          "$name": "modular_car_radio",
+          "ShoutcastStreamer": null,
+          "RadioIpDialog": {
+            "$ref": "GameObject",
+            "guid": "c16723a8127bd9540b3fe68140197885",
+            "resourcePath": "assets/prefabs/voiceaudio/boombox/ui.dialog.radio.prefab",
+            "resourceID": 4209359575
+          },
+          "AssignedRadioBy": 0,
+          "SoundSource": null,
+          "ConditionLossRate": 0.25,
+          "ValidCassettes": [],
+          "PlaySfx": {
+            "$ref": "SoundDefinition",
+            "name": "boombox-portable-start",
+            "instanceID": 479508
+          },
+          "StopSfx": {
+            "$ref": "SoundDefinition",
+            "name": "boombox-portable-stop",
+            "instanceID": 343460
+          },
+          "HurtCallback": null,
+          "_baseEntity": null
+        },
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "Immortal",
+          "comments": "",
+          "density": 100.0,
+          "amounts": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 3206051622
+        },
+        "startHealth": 1.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "car_radio.item",
+            "itemid": 721798950,
+            "shortname": "vehicle.car_radio"
+          },
+          "itemCount": 1,
+          "setConditionFromHealth": false,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": true,
+          "requireHammer": true,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": false,
+          "itemTarget": null,
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": false,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -0.00013212859630584717,
+            "y": 0.027889501303434372,
+            "z": -0.0075099170207977295
+          },
+          "size": {
+            "x": 0.34867614507675171,
+            "y": 0.06940111517906189,
+            "z": 0.18106389045715332
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 181479306,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Small",
+          "value": 0
+        },
+        "net": null
+      },
+      {
+        "$type": "UnityEngine.BoxCollider",
+        "$name": "modular_car_radio",
+        "colliderType": "Box",
+        "center": {
+          "x": -0.00013212859630584717,
+          "y": 0.027889501303434372,
+          "z": -0.0075099170207977295
+        },
+        "size": {
+          "x": 0.17000000178813934,
+          "y": 0.06940111517906189,
+          "z": 0.18106389045715332
+        },
+        "isTrigger": false,
+        "enabled": true,
+        "physicMaterial": {
+          "$ref": "PhysicsMaterial",
+          "name": "Metal",
+          "instanceID": 609842
+        }
+      },
+      {
+        "$ref": "BoomBox",
+        "name": "modular_car_radio",
+        "instanceID": 1574510,
+        "goName": "modular_car_radio",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "children": [
+      {
+        "name": "socket",
+        "layer": {
+          "index": 13,
+          "name": "Vehicle Detailed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 6.9849193096160889E-09,
+          "y": -0.0022365152835845947,
+          "z": 0.00091826880816370249
+        },
+        "localRotation": {
+          "x": 0.7071068286895752,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.7071068286895752
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 0.99999958276748657,
+          "z": 0.99999958276748657
+        },
+        "components": [],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Deployable": [
+      {
+        "$type": "Deployable",
+        "$name": "<destroyed native object>",
+        "prefabID": 181479306,
+        "hierachyName": "modular_car_radio",
+        "guidePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "guideMesh": null,
+        "guideMeshScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "overrideRotation": false,
+        "guideMeshOrientation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "guideMeshPositionOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "moveGuideTowardsCamera": true,
+        "guideLights": true,
+        "wantsInstanceData": false,
+        "copyInventoryFromItem": false,
+        "setSocketParent": true,
+        "toSlot": false,
+        "slot": {
+          "$enum": "BaseEntity+Slot",
+          "name": "Lock",
+          "value": 0
+        },
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "46d56c11f143b43e4a8edad80bf25f35",
+          "resourcePath": "assets/content/sound/deployable/small-device-deploy.prefab",
+          "resourceID": 3142585907
+        },
+        "guideTargets": [],
+        "bounds": {
+          "center": {
+            "x": -0.00013212859630584717,
+            "y": 0.027889501303434372,
+            "z": -0.0075099170207977295
+          },
+          "size": {
+            "x": 0.34867614507675171,
+            "y": 0.06940111517906189,
+            "z": 0.18106389045715332
+          }
+        },
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/content/vehicles/modularcar/subents/modular_car_radio.prefab",
+        "instanceID": 1507352,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Construction": [
+      {
+        "$type": "Construction",
+        "$name": "<destroyed native object>",
+        "prefabID": 181479306,
+        "hierachyName": "modular_car_radio",
+        "info": {
+          "$type": "BaseEntity+Menu+Option",
+          "name": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "description": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "icon": null,
+          "order": 0,
+          "usableWhileWounded": false
+        },
+        "canBypassBuildingPermission": false,
+        "showBuildingBlockedPreview": true,
+        "canPlaceOnRoads": true,
+        "canRotateBeforePlacement": false,
+        "canRotateAfterPlacement": false,
+        "canBeDeployedInDeepSeaWater": false,
+        "checkVolumeOnRotate": false,
+        "checkVolumeOnUpgrade": false,
+        "canPlaceAtMaxDistance": false,
+        "placeOnWater": false,
+        "overridePlacementLayer": false,
+        "overridedPlacementLayer": 0,
+        "additionalPlacementLayer": 0,
+        "rotationAmount": {
+          "x": 0.0,
+          "y": 90.0,
+          "z": 0.0
+        },
+        "applyStartingRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "deployOffset": null,
+        "enforceLineOfSightCheckAgainstParentEntity": false,
+        "canSnap": false,
+        "forceY": false,
+        "forceYValue": 0.0,
+        "forceYToOceanLevel": false,
+        "OceanLevelYOffset": 0.0,
+        "holdToPlaceDuration": 0.0,
+        "canFloodFillSockets": false,
+        "alternativeLOSChecks": false,
+        "alternativeLOSPositions": [],
+        "canUseLastValidPosition": true,
+        "healthMultiplier": 1.0,
+        "costMultiplier": 1.0,
+        "maxplaceDistance": 4.0,
+        "minPlaceDistance": 1.0,
+        "guideMesh": null,
+        "guideMeshMaterial": [],
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "hideBuildingPlannerViewmodel": false,
+        "allSockets": [
+          {
+            "$type": "Socket_Specific",
+            "$name": "<destroyed native object>",
+            "prefabID": 181479306,
+            "hierachyName": "modular_car_radio/socket",
+            "useFemaleRotation": true,
+            "targetSocketName": "car_radio",
+            "blockPlacementOnChildEntities": false,
+            "canRotate": false,
+            "male": true,
+            "maleDummy": false,
+            "female": false,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": false,
+            "position": {
+              "x": 6.9849193096160889E-09,
+              "y": -0.0022365152835845947,
+              "z": 0.00091826880816370249
+            },
+            "rotation": {
+              "x": 0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.7071068286895752
+            },
+            "selectSize": {
+              "x": 2.0,
+              "y": 0.10000000149011612,
+              "z": 2.0
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            },
+            "socketName": "modular_car_radio/socket",
+            "socketMods": [],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 6.9849193096160889E-09,
+              "y": -0.0022365152835845947,
+              "z": 0.00091826880816370249
+            },
+            "worldRotation": {
+              "x": 0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.7071068286895752
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": -1.0000001192092896,
+              "z": -1.1920928955078125E-07
+            },
+            "localPosition": {
+              "x": 6.9849193096160889E-09,
+              "y": -0.0022365152835845947,
+              "z": 0.00091826880816370249
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 0.99999958276748657,
+              "z": 0.99999958276748657
+            },
+            "localRotation": {
+              "x": 0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.7071068286895752
+            },
+            "fullName": "assets/content/vehicles/modularcar/subents/modular_car_radio.prefab",
+            "instanceID": 1555288,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          }
+        ],
+        "allProximities": [],
+        "defaultGrade": null,
+        "socketHandle": null,
+        "bounds": {
+          "center": {
+            "x": -0.00013212859630584717,
+            "y": 0.027889501303434372,
+            "z": -0.0075099170207977295
+          },
+          "size": {
+            "x": 0.34867614507675171,
+            "y": 0.06940111517906189,
+            "z": 0.18106389045715332
+          }
+        },
+        "isBuildingPrivilege": false,
+        "isSleepingBag": false,
+        "grades": [],
+        "deployable": {
+          "$ref": "Deployable",
+          "name": "<destroyed native object>",
+          "instanceID": 0,
+          "$error": "Object reference not set to an instance of an object.",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "placeholder": null,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/content/vehicles/modularcar/subents/modular_car_radio.prefab",
+        "instanceID": 1528784,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Socket_Base": [
+      {
+        "$ref": "Socket_Specific",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "DeployVolume": [
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 181479306,
+        "hierachyName": "modular_car_radio/socket/Deploy",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.029999999329447746
+          },
+          "size": {
+            "x": 0.31999999284744263,
+            "y": 0.15999999642372131,
+            "z": 0.10000000149011612
+          }
+        },
+        "layers": 8192,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "IncludeList",
+          "value": 1
+        },
+        "entityList": [
+          {
+            "$type": "ModularCarRadio",
+            "$name": "modular_car_radio",
+            "CarRadio": {
+              "$type": "BoomBox",
+              "$name": "modular_car_radio",
+              "ShoutcastStreamer": null,
+              "RadioIpDialog": {
+                "$ref": "GameObject",
+                "guid": "c16723a8127bd9540b3fe68140197885",
+                "resourcePath": "assets/prefabs/voiceaudio/boombox/ui.dialog.radio.prefab",
+                "resourceID": 4209359575
+              },
+              "AssignedRadioBy": 0,
+              "SoundSource": null,
+              "ConditionLossRate": 0.25,
+              "ValidCassettes": [],
+              "PlaySfx": {
+                "$ref": "SoundDefinition",
+                "name": "boombox-portable-start",
+                "instanceID": 479508
+              },
+              "StopSfx": {
+                "$ref": "SoundDefinition",
+                "name": "boombox-portable-stop",
+                "instanceID": 343460
+              },
+              "HurtCallback": null,
+              "_baseEntity": null
+            },
+            "spawnDeployableCorpseOnDeath": false,
+            "deployableCorpsePrefab": {
+              "$ref": "GameObject",
+              "guid": "",
+              "resourcePath": null,
+              "resourceID": 0
+            },
+            "ItemOwnership": {
+              "$type": "ItemOwnershipShare",
+              "username": null,
+              "reason": null,
+              "amount": 0
+            },
+            "lastDamage": {
+              "$enum": "Rust.DamageType",
+              "name": "Generic",
+              "value": 0
+            },
+            "lastAttacker": null,
+            "lastDealtDamageTo": null,
+            "ResetLifeStateOnSpawn": true,
+            "propDirection": null,
+            "unHostileTime": 0.0,
+            "lastNoiseTime": 0.0,
+            "skeletonProperties": null,
+            "baseProtection": {
+              "$type": "ProtectionProperties",
+              "$name": "Immortal",
+              "comments": "",
+              "density": 100.0,
+              "amounts": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "FilenameStringId": 3206051622
+            },
+            "startHealth": 1.0,
+            "pickup": {
+              "$type": "BaseCombatEntity+Pickup",
+              "enabled": true,
+              "itemTarget": {
+                "$ref": "ItemDefinition",
+                "name": "car_radio.item",
+                "itemid": 721798950,
+                "shortname": "vehicle.car_radio"
+              },
+              "itemCount": 1,
+              "setConditionFromHealth": false,
+              "subtractCondition": 0.0,
+              "requireBuildingPrivilege": true,
+              "requireHammer": true,
+              "requireEmptyInv": false,
+              "overridePickupTime": 0.0
+            },
+            "repair": {
+              "$type": "BaseCombatEntity+Repair",
+              "enabled": false,
+              "itemTarget": null,
+              "ignoreForRepair": null,
+              "repairEffect": {
+                "$ref": "GameObject",
+                "guid": "",
+                "resourcePath": null,
+                "resourceID": 0
+              },
+              "repairFullEffect": {
+                "$ref": "GameObject",
+                "guid": "",
+                "resourcePath": null,
+                "resourceID": 0
+              },
+              "repairFailedEffect": {
+                "$ref": "GameObject",
+                "guid": "",
+                "resourcePath": null,
+                "resourceID": 0
+              }
+            },
+            "ShowHealthInfo": false,
+            "showHealthInfoThreshold": {
+              "$enum": "BaseCombatEntity+ShowHealthThreshold",
+              "name": "ThreeQuarters",
+              "value": 25
+            },
+            "lifestate": {
+              "$enum": "BaseCombatEntity+LifeState",
+              "name": "Alive",
+              "value": 0
+            },
+            "sendsHitNotification": false,
+            "sendsMeleeHitNotification": true,
+            "markAttackerHostile": true,
+            "maxHealthOverride": 0.0,
+            "_health": 0.0,
+            "_maxHealth": 100.0,
+            "faction": {
+              "$enum": "BaseCombatEntity+Faction",
+              "name": "Default",
+              "value": 0
+            },
+            "lastAttackedTime": "-Infinity",
+            "lastDealtDamageTime": "-Infinity",
+            "lastNotifyFrame": 0,
+            "links": [],
+            "creatorEntity": null,
+            "ticksSinceStopped": 0,
+            "isCallingUpdateNetworkGroup": false,
+            "bounds": {
+              "center": {
+                "x": -0.00013212859630584717,
+                "y": 0.027889501303434372,
+                "z": -0.0075099170207977295
+              },
+              "size": {
+                "x": 0.34867614507675171,
+                "y": 0.06940111517906189,
+                "z": 0.18106389045715332
+              }
+            },
+            "impactEffect": {
+              "$ref": "GameObject",
+              "guid": "",
+              "resourcePath": null,
+              "resourceID": 0
+            },
+            "enableSaving": true,
+            "syncPosition": false,
+            "model": null,
+            "flags": {
+              "$enum": "BaseEntity+Flags",
+              "name": "0",
+              "value": 0,
+              "flagNames": []
+            },
+            "parentBone": 0,
+            "skinID": 0,
+            "attachmentID": 0,
+            "HasBrain": false,
+            "_name": null,
+            "networkEntityScale": false,
+            "_spawnable": null,
+            "postNetworkUpdateComponents": [],
+            "_limitedNetworking": false,
+            "parentEntity": {
+              "$type": "EntityRef"
+            },
+            "children": [],
+            "canTriggerParent": true,
+            "creationFrame": 0,
+            "isSpawned": false,
+            "_NetworkCache": null,
+            "prefabID": 181479306,
+            "globalBroadcast": false,
+            "globalNetworkBehavior": {
+              "$enum": "GlobalNetworkBehavior",
+              "name": "Default",
+              "value": 0
+            },
+            "globalBuildingBlock": false,
+            "networkRange": {
+              "$enum": "EntityNetworkRange",
+              "name": "Small",
+              "value": 0
+            },
+            "net": null
+          }
+        ],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 6.9849193096160889E-09,
+          "y": -0.0022365152835845947,
+          "z": 0.00091826880816370249
+        },
+        "worldRotation": {
+          "x": 0.7071068286895752,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.7071068286895752
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": -1.0000001192092896,
+          "z": -1.1920928955078125E-07
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/content/vehicles/modularcar/subents/modular_car_radio.prefab",
+        "instanceID": 1521926,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ]
+  }
+}

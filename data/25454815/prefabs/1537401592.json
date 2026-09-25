@@ -1,0 +1,929 @@
+{
+  "prefabID": 1537401592,
+  "path": "assets/prefabs/weapons/compound bow/compound_bow.entity.prefab",
+  "rootClassChain": [
+    "CompoundBowWeapon",
+    "BowWeapon",
+    "ArrowWeapon",
+    "BaseProjectile",
+    "AttackEntity",
+    "HeldEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -0.11179500818252563,
+      "y": 0.024943232536315918,
+      "z": 0.081590011715888977
+    },
+    "size": {
+      "x": 0.31488931179046631,
+      "y": 1.1046066284179688,
+      "z": 0.59789830446243286
+    }
+  },
+  "hierarchy": {
+    "name": "compound_bow.entity",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "CompoundBowWeapon",
+        "$name": "compound_bow.entity",
+        "stringHoldDurationMax": 3.0,
+        "stringBonusDamage": 1.0,
+        "stringBonusDistance": 1.0,
+        "stringBonusVelocity": 1.0,
+        "movementPenaltyRampUpTime": 0.25,
+        "conditionLossPerSecondHeld": 0.5,
+        "conditionLossHeldDelay": 3.0,
+        "chargeUpSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "compound-bow-charge-up",
+          "instanceID": 215492
+        },
+        "stringHeldSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "compound-bow-held-stress-loop",
+          "instanceID": 486506
+        },
+        "drawFinishSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "compound-bow-charge-up-complete",
+          "instanceID": 353384
+        },
+        "arrowRoot": {
+          "$ref": "GameObject",
+          "name": "Bow_Root_bone",
+          "instanceID": 1229286
+        },
+        "extraArrowRenderers": [
+          null
+        ],
+        "NoiseRadius": 5.0,
+        "damageScale": 1.0,
+        "distanceScale": 1.0,
+        "farDamageScale": -1.0,
+        "farDistanceScale": -1.0,
+        "projectileVelocityScale": 1.0,
+        "automatic": false,
+        "usableByTurret": true,
+        "turretDamageScale": 0.699999988079071,
+        "largeTurretWeapon": true,
+        "turretReloadDurationOverride": 4.5,
+        "maxAttackEffectDistance": 400.0,
+        "attackFX": {
+          "$ref": "GameObject",
+          "guid": "8f427ccdcbf56436e9e98942d216645a",
+          "resourcePath": "assets/prefabs/weapons/compound bow/effects/attack.prefab",
+          "resourceID": 1220754571
+        },
+        "silencedAttack": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "muzzleBrakeAttack": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "fireModeSound": null,
+        "MuzzlePoint": [],
+        "reloadTime": 1.0,
+        "canUnloadAmmo": true,
+        "primaryMagazine": {
+          "$type": "BaseProjectile+Magazine",
+          "definition": {
+            "$type": "BaseProjectile+Magazine+Definition",
+            "builtInSize": 1,
+            "ammoTypes": {
+              "$enum": "Rust.AmmoTypes",
+              "name": "BOW_ARROW",
+              "value": 8,
+              "flagNames": [
+                "BOW_ARROW"
+              ]
+            }
+          },
+          "capacity": 0,
+          "contents": 0,
+          "ammoType": {
+            "$ref": "ItemDefinition",
+            "name": "arrow_wooden.item",
+            "itemid": -1234735557,
+            "shortname": "arrow.wooden"
+          },
+          "allowPlayerReloading": true,
+          "allowAmmoSwitching": true
+        },
+        "fractionalReload": false,
+        "reloadStartDuration": 0.0,
+        "reloadFractionDuration": 0.0,
+        "reloadEndDuration": 0.0,
+        "alternateDryFireRate": 0.0,
+        "sendReloadSignalFromServer": false,
+        "aimSway": 5.0,
+        "aimSwaySpeed": 2.0,
+        "recoil": {
+          "$ref": "RecoilProperties",
+          "name": "crossbowRecoil",
+          "instanceID": 49246
+        },
+        "aimconeCurve": {
+          "$type": "UnityEngine.AnimationCurve"
+        },
+        "aimCone": 0.20000000298023224,
+        "hipAimCone": 0.20000000298023224,
+        "aimconePenaltyPerShot": 0.0,
+        "aimConePenaltyMax": 0.0,
+        "aimconePenaltyRecoverTime": 0.10000000149011612,
+        "aimconePenaltyRecoverDelay": 0.10000000149011612,
+        "stancePenaltyScale": 0.0,
+        "hasADS": true,
+        "noAimingWhileCycling": false,
+        "manualCycle": false,
+        "CrosshairSettings": {
+          "$enum": "BaseProjectile+WeaponCrosshairSettings",
+          "name": "Standard",
+          "value": 0
+        },
+        "aiming": false,
+        "isBurstWeapon": false,
+        "canChangeFireModes": true,
+        "defaultOn": true,
+        "internalBurstRecoilScale": 0.800000011920929,
+        "internalBurstFireRateScale": 0.800000011920929,
+        "internalBurstAimConeScale": 0.800000011920929,
+        "resetDuration": 0.30000001192092896,
+        "numShotsFired": 0,
+        "deployDelay": 1.0,
+        "repeatDelay": 1.25,
+        "animationDelay": 0.60000002384185791,
+        "effectiveRange": 1.0,
+        "npcDamageScale": 1.0,
+        "attackLengthMin": -1.0,
+        "attackLengthMax": -1.0,
+        "attackSpacing": 0.0,
+        "aiAimSwayOffset": 0.0,
+        "aiAimCone": 0.0,
+        "aiOnlyInRange": false,
+        "CloseRangeAddition": 0.0,
+        "MediumRangeAddition": 0.0,
+        "LongRangeAddition": 0.0,
+        "CanUseAtMediumRange": true,
+        "CanUseAtLongRange": true,
+        "reloadSounds": [],
+        "thirdPersonMeleeSound": null,
+        "recoilCompDelayOverride": 0.0,
+        "wantsRecoilComp": false,
+        "showCrosshairOnTutorial": false,
+        "noHeadshots": false,
+        "nextAttackTime": {
+          "$type": "EncryptedValue`1[[System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+        },
+        "worldModelAnimator": null,
+        "thirdPersonDeploySound": {
+          "$ref": "SoundDefinition",
+          "name": "compound-bow-deploy",
+          "instanceID": 371568
+        },
+        "thirdPersonAimSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-up",
+          "instanceID": 24732
+        },
+        "thirdPersonAimEndSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-down",
+          "instanceID": 24854
+        },
+        "hideViewmodel": false,
+        "handBone": "l_prop",
+        "HoldAnimationOverride": {
+          "$ref": "AnimatorOverrideController",
+          "name": "HoldType.Compoundbow",
+          "instanceID": 1022392
+        },
+        "holdInfo": {
+          "$type": "HeldEntity+HoldInfo",
+          "UseCustomSpineOffset": true,
+          "CustomSpineOffset": {
+            "x": 4.74399995803833,
+            "y": -57.055999755859375,
+            "z": -101.33899688720703
+          },
+          "ShieldBoneArmRotationAdditive": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "isBuildingTool": false,
+        "canBeUsedWithShield": false,
+        "ForwardSignalsFromPlayer": false,
+        "forcedOwner": null,
+        "useOwnerForward": true,
+        "CanSetLightsOn": false,
+        "holsterInfo": {
+          "$type": "HeldEntity+HolsterInfo",
+          "slot": {
+            "$enum": "HeldEntity+HolsterInfo+HolsterSlot",
+            "name": "BACK",
+            "value": 0
+          },
+          "backpackSlot": {
+            "$enum": "HeldEntity+HolsterInfo+BackpackSlot",
+            "name": "LEFT",
+            "value": 0
+          },
+          "displayWhenHolstered": true,
+          "holsterBone": "spine3",
+          "holsterOffset": {
+            "x": -0.15999999642372131,
+            "y": -0.18999999761581421,
+            "z": -0.23000000417232513
+          },
+          "holsterRotationOffset": {
+            "x": 185.0,
+            "y": -222.0,
+            "z": 3.2999999523162842
+          },
+          "backpackHolsterOffset": {
+            "x": 0.0,
+            "y": -0.10000000149011612,
+            "z": 0.0099999997764825821
+          },
+          "backpackHolsterRotationOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -31.819999694824219
+          }
+        },
+        "HeldCameraMode": {
+          "$enum": "BasePlayer+CameraMode",
+          "name": "FirstPerson",
+          "value": 0
+        },
+        "hostileScore": 5.0,
+        "FirstPersonArmOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonArmRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonRotationStrength": 1.0,
+        "AttachmentAnchor": [
+          []
+        ],
+        "holsterVisible": false,
+        "genericVisible": false,
+        "ownerItemUID": {
+          "$type": "ItemId",
+          "Value": 0
+        },
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -0.11179500818252563,
+            "y": 0.024943232536315918,
+            "z": 0.081590011715888977
+          },
+          "size": {
+            "x": 0.31488931179046631,
+            "y": 1.1046066284179688,
+            "z": 0.59789830446243286
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "w_compoundbow_rigged",
+          "collision": null,
+          "rootBone": [
+            [
+              [
+                [
+                  [],
+                  [
+                    [
+                      [
+                        {
+                          "$truncated": true,
+                          "type": "UnityEngine.Transform",
+                          "reason": "max-depth"
+                        }
+                      ]
+                    ]
+                  ]
+                ]
+              ],
+              {
+                "$ref": "Transform",
+                "name": "TurretMount",
+                "instanceID": 1328122,
+                "goName": "TurretMount",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              {
+                "$ref": "Transform",
+                "name": "Charm",
+                "instanceID": 1391926,
+                "goName": "Charm",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ]
+          ],
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "w_compoundbow_rigged",
+              "instanceID": 1423194,
+              "goName": "w_compoundbow_rigged",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Bow_Root_bone",
+              "instanceID": 1423200,
+              "goName": "Bow_Root_bone",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "joint4",
+              "instanceID": 1423196,
+              "goName": "joint4",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Arrow_bone",
+              "instanceID": 1423202,
+              "goName": "Arrow_bone",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "joint2",
+              "instanceID": 1423198,
+              "goName": "joint2",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "w_wooden_arrow",
+              "instanceID": 1378116,
+              "goName": "w_wooden_arrow",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "fire_arrowhead",
+              "instanceID": 1296260,
+              "goName": "fire_arrowhead",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "ParticleEffects",
+              "instanceID": 1325582,
+              "goName": "ParticleEffects",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [],
+            {
+              "$ref": "Transform",
+              "name": "TurretMount",
+              "instanceID": 1328122,
+              "goName": "TurretMount",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Charm",
+              "instanceID": 1391926,
+              "goName": "Charm",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "v_CharmAnchor",
+              "instanceID": 1433916,
+              "goName": "v_CharmAnchor",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "w_compoundbow_rigged",
+            "Bow_Root_bone",
+            "joint4",
+            "Arrow_bone",
+            "joint2",
+            "w_wooden_arrow",
+            "fire_arrowhead",
+            "ParticleEffects",
+            "fire_local",
+            "TurretMount",
+            "Charm",
+            "v_CharmAnchor"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 1537401592,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Small",
+          "value": 0
+        },
+        "net": null
+      }
+    ],
+    "children": [
+      {
+        "name": "w_compoundbow_rigged",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": -1.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.1000000238418579,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "Model",
+            "name": "w_compoundbow_rigged",
+            "instanceID": 1553662,
+            "goName": "w_compoundbow_rigged",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": [
+          {
+            "name": "Bow_Root_bone",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "joint4",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.40407672524452209,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.7071068286895752,
+                  "w": 0.7071068286895752
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "Arrow_bone",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": -0.19869887828826904,
+                      "z": -0.23495101928710938
+                    },
+                    "localRotation": {
+                      "x": 2.9528329015314446E-23,
+                      "y": 0.7071068286895752,
+                      "z": -2.9528329015314446E-23,
+                      "w": 0.7071068286895752
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "joint2",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -0.35565429925918579,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": -0.7071068286895752,
+                          "z": 0.0,
+                          "w": 0.7071068286895752
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": []
+                      },
+                      {
+                        "name": "w_wooden_arrow",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -0.1988999992609024,
+                          "y": 0.0430000014603138,
+                          "z": -0.0027000000700354576
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 1.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        },
+                        "localScale": {
+                          "x": 0.44315001368522644,
+                          "y": 0.44315001368522644,
+                          "z": 0.44315001368522644
+                        },
+                        "components": [],
+                        "children": [
+                          {
+                            "name": "fire_arrowhead",
+                            "layer": {
+                              "index": 0,
+                              "name": "Default"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": false,
+                            "localPosition": {
+                              "x": -0.34700000286102295,
+                              "y": -0.0020000000949949026,
+                              "z": 0.0020000000949949026
+                            },
+                            "localRotation": {
+                              "x": 0.37395289540290833,
+                              "y": -0.60013270378112793,
+                              "z": 0.37395289540290833,
+                              "w": -0.60013270378112793
+                            },
+                            "localScale": {
+                              "x": 2.0571138858795166,
+                              "y": 2.0571138858795166,
+                              "z": 2.0571138858795166
+                            },
+                            "components": [],
+                            "children": [
+                              {
+                                "name": "ParticleEffects",
+                                "layer": {
+                                  "index": 0,
+                                  "name": "Default"
+                                },
+                                "tag": "Untagged",
+                                "customTags": [],
+                                "activeSelf": true,
+                                "localPosition": {
+                                  "x": -0.0015687438426539302,
+                                  "y": 0.00075321638723835349,
+                                  "z": 0.55070436000823975
+                                },
+                                "localRotation": {
+                                  "x": -0.68878251314163208,
+                                  "y": 0.15993347764015198,
+                                  "z": 0.68878251314163208,
+                                  "w": 0.15993346273899078
+                                },
+                                "localScale": {
+                                  "x": 0.025156784802675247,
+                                  "y": 0.0251567754894495,
+                                  "z": 0.02515680156648159
+                                },
+                                "components": [],
+                                "children": [
+                                  {
+                                    "name": "fire_local",
+                                    "layer": {
+                                      "index": 0,
+                                      "name": "Default"
+                                    },
+                                    "tag": "skin0",
+                                    "customTags": [],
+                                    "activeSelf": true,
+                                    "localPosition": {
+                                      "x": 0.0,
+                                      "y": 0.0,
+                                      "z": 0.0
+                                    },
+                                    "localRotation": {
+                                      "x": 0.0,
+                                      "y": 0.0,
+                                      "z": 0.0,
+                                      "w": 1.0
+                                    },
+                                    "localScale": {
+                                      "x": 1.0,
+                                      "y": 1.0,
+                                      "z": 1.0
+                                    },
+                                    "components": [
+                                      {
+                                        "$type": "ParticleDisableOnParentDestroy",
+                                        "$name": "fire_local",
+                                        "destroyAfterSeconds": 1.0
+                                      }
+                                    ],
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "TurretMount",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.19470000267028809,
+                  "y": 0.049199998378753662,
+                  "z": 0.019300000742077827
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "Charm",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.26951000094413757,
+                  "y": -0.017090000212192535,
+                  "z": 0.077859997749328613
+                },
+                "localRotation": {
+                  "x": 0.49185743927955627,
+                  "y": 0.48750507831573486,
+                  "z": -0.51988673210144043,
+                  "w": 0.50013285875320435
+                },
+                "localScale": {
+                  "x": 0.75,
+                  "y": 0.75,
+                  "z": 0.75
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "v_CharmAnchor",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": false,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "ViewModelRenderer",
+                        "$name": "v_CharmAnchor",
+                        "cachedTextureRefs": [
+                          null,
+                          null,
+                          null,
+                          null
+                        ],
+                        "opaqueEvents": [
+                          {
+                            "$type": "ViewModelDrawEvent",
+                            "viewModelRenderer": {
+                              "$cycle": true,
+                              "type": "ViewModelRenderer"
+                            },
+                            "renderer": null,
+                            "skipDepthPrePass": false,
+                            "material": null,
+                            "subMesh": 0,
+                            "pass": 2,
+                            "needsFilteredRefraction": false
+                          }
+                        ],
+                        "transparentEvents": [],
+                        "prevModelMatrix": [
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0
+                        ]
+                      }
+                    ],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Socket_Base": []
+  }
+}

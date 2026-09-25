@@ -1,0 +1,1329 @@
+{
+  "prefabID": 160486304,
+  "path": "assets/content/structures/harbor/cranes/harbor_crane_dynamic_pickup.prefab",
+  "rootClassChain": [
+    "HarborCraneContainerPickup",
+    "HarborCrane",
+    "HarborProximityEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -0.44009137153625488,
+      "y": 17.691194534301758,
+      "z": 9.4570722579956055
+    },
+    "size": {
+      "x": 6.950528621673584,
+      "y": 35.382389068603516,
+      "z": 29.744857788085938
+    }
+  },
+  "hierarchy": {
+    "name": "harbor_crane_dynamic_pickup",
+    "layer": {
+      "index": 27,
+      "name": "Vehicle Large"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "HarborCraneContainerPickup",
+        "$name": "harbor_crane_dynamic_pickup",
+        "ServerTowerGrab": [],
+        "LockTime": 5.0,
+        "MaxMoveDistance": 31.0,
+        "PickedUpObjectRotationSpeed": 30.0,
+        "ContainerPrefab": {
+          "$ref": "GameObject",
+          "guid": "4bac76d6941632e408f392a07d70820b",
+          "resourcePath": "assets/content/props/shipping_containers/harbor_dynamic_container.prefab",
+          "resourceID": 3022061359
+        },
+        "MaxContainerStackSize": 3,
+        "DebugContainerSpawns": false,
+        "DebugContainerDestinations": false,
+        "CraneGrab": [],
+        "ArmRoot": [
+          [
+            [
+              [],
+              []
+            ],
+            []
+          ],
+          [
+            []
+          ]
+        ],
+        "ArmSupportLower": [],
+        "ArmSupportUpper": {
+          "$ref": "Transform",
+          "name": "crane_tower_hydraulic_cylinder_top",
+          "instanceID": 1367850,
+          "goName": "crane_tower_hydraulic_cylinder_top",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "LineRenderers": [
+          null,
+          null
+        ],
+        "SupportChildDeployables": false,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -0.44009137153625488,
+            "y": 17.691194534301758,
+            "z": 9.4570722579956055
+          },
+          "size": {
+            "x": 6.950528621673584,
+            "y": 35.382389068603516,
+            "z": 29.744857788085938
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": true,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 160486304,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$type": "UnityEngine.Rigidbody",
+        "$name": "harbor_crane_dynamic_pickup"
+      }
+    ],
+    "children": [
+      {
+        "name": "TowerRotate",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "TowerGrab",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 15.585000038146973,
+              "z": 25.739999771118164
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "crane_tower",
+        "layer": {
+          "index": 27,
+          "name": "Vehicle Large"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": -0.707106351852417,
+          "z": 0.0,
+          "w": 0.7071073055267334
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "crane_tower",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "crane_tower_a_COL",
+              "meshId": "crane_tower_a_COL_16c8f669"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Metal",
+              "instanceID": 609842
+            }
+          }
+        ],
+        "children": [
+          {
+            "name": "crane_tower_arm_hook",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 25.740024566650391,
+              "y": 34.242935180664063,
+              "z": 2.86102294921875E-05
+            },
+            "localRotation": {
+              "x": 5.3290698405743936E-14,
+              "y": -6.258487132981827E-07,
+              "z": -9.2859110623066954E-08,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.MeshCollider",
+                "$name": "crane_tower_arm_hook",
+                "colliderType": "Mesh",
+                "convex": false,
+                "sharedMesh": {
+                  "$ref": "Mesh",
+                  "name": "crane_tower_arm_hook_COL",
+                  "meshId": "crane_tower_arm_hook_COL_5bf07882"
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "ArmLook",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 2.2870004177093506,
+              "y": 14.530179977416992,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": -0.27059793472290039,
+              "y": 0.65328097343444824,
+              "z": 0.27059733867645264,
+              "w": 0.65328246355056763
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "crane_tower_arm",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.4999997615814209,
+                  "y": -0.49999985098838806,
+                  "z": -0.49999973177909851,
+                  "w": 0.50000065565109253
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.MeshCollider",
+                    "$name": "crane_tower_arm",
+                    "colliderType": "Mesh",
+                    "convex": false,
+                    "sharedMesh": {
+                      "$ref": "Mesh",
+                      "name": "crane_tower_arm_COL",
+                      "meshId": "crane_tower_arm_COL_3a0496dc"
+                    },
+                    "isTrigger": false,
+                    "enabled": true,
+                    "physicMaterial": {
+                      "$ref": "PhysicsMaterial",
+                      "name": "Metal",
+                      "instanceID": 609842
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "Arm Parent Triggers",
+                    "layer": {
+                      "index": 18,
+                      "name": "Trigger"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.33000001311302185,
+                      "y": 0.28999999165534973,
+                      "z": -0.11999999731779099
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "Parent Trigger",
+                        "layer": {
+                          "index": 18,
+                          "name": "Trigger"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -1.0599993467330933,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 1.2300759300032382E-09,
+                          "y": -8.2386799604705629E-09,
+                          "z": -5.9604637669963267E-08,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "Parent Trigger",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": 0.0,
+                              "y": 14.800000190734863,
+                              "z": 0.0
+                            },
+                            "size": {
+                              "x": 2.2599999904632568,
+                              "y": 29.299999237060547,
+                              "z": 1.25
+                            },
+                            "isTrigger": true,
+                            "enabled": true
+                          },
+                          {
+                            "$type": "TriggerParent",
+                            "$name": "Parent Trigger",
+                            "StableIndex": -1,
+                            "doClippingCheck": false,
+                            "associatedMountable": null,
+                            "parentMountedPlayers": false,
+                            "parentSleepers": true,
+                            "parentSwimmers": false,
+                            "ParentNPCPlayers": false,
+                            "SkipNPCChecks": false,
+                            "overrideOtherTriggers": false,
+                            "checkForObjUnderFeet": false,
+                            "doExpensivePlayerClippingChecks": false,
+                            "TriggerMovementMask": {
+                              "$enum": "BaseEntity+Axis",
+                              "name": "XYZ",
+                              "value": 7,
+                              "flagNames": [
+                                "X",
+                                "Y",
+                                "XY",
+                                "Z",
+                                "XZ",
+                                "YZ",
+                                "XYZ"
+                              ]
+                            },
+                            "EntityMovementMask": {
+                              "$enum": "BaseEntity+Axis",
+                              "name": "XYZ",
+                              "value": 7,
+                              "flagNames": [
+                                "X",
+                                "Y",
+                                "XY",
+                                "Z",
+                                "XZ",
+                                "YZ",
+                                "XYZ"
+                              ]
+                            },
+                            "interestLayers": 131072,
+                            "contents": null,
+                            "entityContents": null,
+                            "OnEntityEnterTrigger": null,
+                            "OnEntityLeaveTrigger": null
+                          }
+                        ],
+                        "children": []
+                      },
+                      {
+                        "name": "Parent Trigger (1)",
+                        "layer": {
+                          "index": 18,
+                          "name": "Trigger"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -1.1100000143051147,
+                          "y": 28.479999542236328,
+                          "z": 0.10999999940395355
+                        },
+                        "localRotation": {
+                          "x": 1.2300759300032382E-09,
+                          "y": -8.2386799604705629E-09,
+                          "z": -5.9604637669963267E-08,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "Parent Trigger (1)",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0
+                            },
+                            "size": {
+                              "x": 2.2599999904632568,
+                              "y": 1.1000000238418579,
+                              "z": 2.880000114440918
+                            },
+                            "isTrigger": true,
+                            "enabled": true
+                          },
+                          {
+                            "$type": "TriggerParent",
+                            "$name": "Parent Trigger (1)",
+                            "StableIndex": -1,
+                            "doClippingCheck": false,
+                            "associatedMountable": null,
+                            "parentMountedPlayers": false,
+                            "parentSleepers": true,
+                            "parentSwimmers": false,
+                            "ParentNPCPlayers": false,
+                            "SkipNPCChecks": false,
+                            "overrideOtherTriggers": false,
+                            "checkForObjUnderFeet": false,
+                            "doExpensivePlayerClippingChecks": false,
+                            "TriggerMovementMask": {
+                              "$enum": "BaseEntity+Axis",
+                              "name": "XYZ",
+                              "value": 7,
+                              "flagNames": [
+                                "X",
+                                "Y",
+                                "XY",
+                                "Z",
+                                "XZ",
+                                "YZ",
+                                "XYZ"
+                              ]
+                            },
+                            "EntityMovementMask": {
+                              "$enum": "BaseEntity+Axis",
+                              "name": "XYZ",
+                              "value": 7,
+                              "flagNames": [
+                                "X",
+                                "Y",
+                                "XY",
+                                "Z",
+                                "XZ",
+                                "YZ",
+                                "XYZ"
+                              ]
+                            },
+                            "interestLayers": 131072,
+                            "contents": null,
+                            "entityContents": null,
+                            "OnEntityEnterTrigger": null,
+                            "OnEntityLeaveTrigger": null
+                          }
+                        ],
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "WalkCollider",
+                    "layer": {
+                      "index": 28,
+                      "name": "Prevent Movement"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.12999999523162842,
+                      "y": 14.010000228881836,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 1.4901157641133977E-08,
+                      "y": 1.4901157641133977E-08,
+                      "z": -0.0025605254340916872,
+                      "w": 0.99999678134918213
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.BoxCollider",
+                        "$name": "WalkCollider",
+                        "colliderType": "Box",
+                        "center": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "size": {
+                          "x": 0.15999999642372131,
+                          "y": 27.0,
+                          "z": 1.1000000238418579
+                        },
+                        "isTrigger": false,
+                        "enabled": true
+                      }
+                    ],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "crane_tower_hydraulic_cylinder_top",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": -1.3431029319763184,
+                  "z": 0.68928039073944092
+                },
+                "localRotation": {
+                  "x": 0.32650581002235413,
+                  "y": -0.62721151113510132,
+                  "z": -0.32650488615036011,
+                  "w": 0.62721145153045654
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "crane_tower_hydraulic_cylinder_top",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": -0.70710629224777222,
+                      "y": -7.9365726435298711E-08,
+                      "z": -3.8331060636664915E-07,
+                      "w": 0.7071073055267334
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.MeshCollider",
+                        "$name": "crane_tower_hydraulic_cylinder_top",
+                        "colliderType": "Mesh",
+                        "convex": false,
+                        "sharedMesh": {
+                          "$ref": "Mesh",
+                          "name": "crane_tower_hydraulic_cylinder_top_COL",
+                          "meshId": "crane_tower_hydraulic_cylinder_top_COL_b0ba416c"
+                        },
+                        "isTrigger": false,
+                        "enabled": true,
+                        "physicMaterial": {
+                          "$ref": "PhysicsMaterial",
+                          "name": "Metal",
+                          "instanceID": 609842
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "crane_tower_hydraulic_cylinder_bottom",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 2.5000016689300537,
+              "y": 7.1255989074707031,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 5.9604637669963267E-08,
+              "y": -6.258487132981827E-07,
+              "z": -0.087155863642692566,
+              "w": 0.99619472026824951
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.MeshCollider",
+                "$name": "crane_tower_hydraulic_cylinder_bottom",
+                "colliderType": "Mesh",
+                "convex": false,
+                "sharedMesh": {
+                  "$ref": "Mesh",
+                  "name": "crane_tower_hydraulic_cylinder_bottom_COL",
+                  "meshId": "crane_tower_hydraulic_cylinder_bottom_COL_13bc0884"
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "ParentVolume",
+            "layer": {
+              "index": 18,
+              "name": "Trigger"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.72000044584274292,
+              "y": 7.3099994659423828,
+              "z": 0.69999986886978149
+            },
+            "localRotation": {
+              "x": 5.6843412084544437E-14,
+              "y": -6.258487132981827E-07,
+              "z": -8.1460349576900626E-08,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "ParentVolume",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "size": {
+                  "x": 9.25,
+                  "y": 8.6400003433227539,
+                  "z": 6.4800000190734863
+                },
+                "isTrigger": true,
+                "enabled": true
+              },
+              {
+                "$type": "TriggerParent",
+                "$name": "ParentVolume",
+                "StableIndex": -1,
+                "doClippingCheck": false,
+                "associatedMountable": null,
+                "parentMountedPlayers": false,
+                "parentSleepers": true,
+                "parentSwimmers": false,
+                "ParentNPCPlayers": false,
+                "SkipNPCChecks": false,
+                "overrideOtherTriggers": false,
+                "checkForObjUnderFeet": false,
+                "doExpensivePlayerClippingChecks": false,
+                "TriggerMovementMask": {
+                  "$enum": "BaseEntity+Axis",
+                  "name": "XYZ",
+                  "value": 7,
+                  "flagNames": [
+                    "X",
+                    "Y",
+                    "XY",
+                    "Z",
+                    "XZ",
+                    "YZ",
+                    "XYZ"
+                  ]
+                },
+                "EntityMovementMask": {
+                  "$enum": "BaseEntity+Axis",
+                  "name": "XYZ",
+                  "value": 7,
+                  "flagNames": [
+                    "X",
+                    "Y",
+                    "XY",
+                    "Z",
+                    "XZ",
+                    "YZ",
+                    "XYZ"
+                  ]
+                },
+                "interestLayers": 131072,
+                "contents": null,
+                "entityContents": null,
+                "OnEntityEnterTrigger": null,
+                "OnEntityLeaveTrigger": null
+              }
+            ],
+            "children": [
+              {
+                "name": "Volume",
+                "layer": {
+                  "index": 18,
+                  "name": "Trigger"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 1.8899999856948853,
+                  "y": 0.0,
+                  "z": -0.43000000715255737
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Volume",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": -0.19325591623783112,
+                      "y": 7.3959989547729492,
+                      "z": -0.26246261596679688
+                    },
+                    "size": {
+                      "x": 2.0875473022460938,
+                      "y": 15.791997909545898,
+                      "z": 2.3673171997070313
+                    },
+                    "isTrigger": true,
+                    "enabled": true
+                  },
+                  {
+                    "$type": "TriggerParent",
+                    "$name": "Volume",
+                    "StableIndex": -1,
+                    "doClippingCheck": false,
+                    "associatedMountable": null,
+                    "parentMountedPlayers": false,
+                    "parentSleepers": true,
+                    "parentSwimmers": false,
+                    "ParentNPCPlayers": false,
+                    "SkipNPCChecks": false,
+                    "overrideOtherTriggers": false,
+                    "checkForObjUnderFeet": false,
+                    "doExpensivePlayerClippingChecks": false,
+                    "TriggerMovementMask": {
+                      "$enum": "BaseEntity+Axis",
+                      "name": "XYZ",
+                      "value": 7,
+                      "flagNames": [
+                        "X",
+                        "Y",
+                        "XY",
+                        "Z",
+                        "XZ",
+                        "YZ",
+                        "XYZ"
+                      ]
+                    },
+                    "EntityMovementMask": {
+                      "$enum": "BaseEntity+Axis",
+                      "name": "XYZ",
+                      "value": 7,
+                      "flagNames": [
+                        "X",
+                        "Y",
+                        "XY",
+                        "Z",
+                        "XZ",
+                        "YZ",
+                        "XYZ"
+                      ]
+                    },
+                    "interestLayers": 131072,
+                    "contents": null,
+                    "entityContents": null,
+                    "OnEntityEnterTrigger": null,
+                    "OnEntityLeaveTrigger": null
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Volume (1)",
+                "layer": {
+                  "index": 18,
+                  "name": "Trigger"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 1.8899999856948853,
+                  "y": 15.449999809265137,
+                  "z": -0.43000000715255737
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Volume (1)",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.53104710578918457,
+                      "y": 2.7459301948547363,
+                      "z": -0.27177432179450989
+                    },
+                    "size": {
+                      "x": 3.5361533164978027,
+                      "y": 6.4918603897094727,
+                      "z": 2.85894775390625
+                    },
+                    "isTrigger": true,
+                    "enabled": true
+                  },
+                  {
+                    "$type": "TriggerParent",
+                    "$name": "Volume (1)",
+                    "StableIndex": -1,
+                    "doClippingCheck": false,
+                    "associatedMountable": null,
+                    "parentMountedPlayers": false,
+                    "parentSleepers": true,
+                    "parentSwimmers": false,
+                    "ParentNPCPlayers": false,
+                    "SkipNPCChecks": false,
+                    "overrideOtherTriggers": false,
+                    "checkForObjUnderFeet": false,
+                    "doExpensivePlayerClippingChecks": false,
+                    "TriggerMovementMask": {
+                      "$enum": "BaseEntity+Axis",
+                      "name": "XYZ",
+                      "value": 7,
+                      "flagNames": [
+                        "X",
+                        "Y",
+                        "XY",
+                        "Z",
+                        "XZ",
+                        "YZ",
+                        "XYZ"
+                      ]
+                    },
+                    "EntityMovementMask": {
+                      "$enum": "BaseEntity+Axis",
+                      "name": "XYZ",
+                      "value": 7,
+                      "flagNames": [
+                        "X",
+                        "Y",
+                        "XY",
+                        "Z",
+                        "XZ",
+                        "YZ",
+                        "XYZ"
+                      ]
+                    },
+                    "interestLayers": 131072,
+                    "contents": null,
+                    "entityContents": null,
+                    "OnEntityEnterTrigger": null,
+                    "OnEntityLeaveTrigger": null
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "Volume (2)",
+                "layer": {
+                  "index": 18,
+                  "name": "Trigger"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 2.1400001049041748,
+                  "y": 8.5,
+                  "z": -2.5099999904632568
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "UnityEngine.BoxCollider",
+                    "$name": "Volume (2)",
+                    "colliderType": "Box",
+                    "center": {
+                      "x": 0.44350910186767578,
+                      "y": 1.9581160545349121,
+                      "z": -0.24419406056404114
+                    },
+                    "size": {
+                      "x": 3.7112293243408203,
+                      "y": 4.9162321090698242,
+                      "z": 2.3981132507324219
+                    },
+                    "isTrigger": true,
+                    "enabled": true
+                  },
+                  {
+                    "$type": "TriggerParent",
+                    "$name": "Volume (2)",
+                    "StableIndex": -1,
+                    "doClippingCheck": false,
+                    "associatedMountable": null,
+                    "parentMountedPlayers": false,
+                    "parentSleepers": true,
+                    "parentSwimmers": false,
+                    "ParentNPCPlayers": false,
+                    "SkipNPCChecks": false,
+                    "overrideOtherTriggers": false,
+                    "checkForObjUnderFeet": false,
+                    "doExpensivePlayerClippingChecks": false,
+                    "TriggerMovementMask": {
+                      "$enum": "BaseEntity+Axis",
+                      "name": "XYZ",
+                      "value": 7,
+                      "flagNames": [
+                        "X",
+                        "Y",
+                        "XY",
+                        "Z",
+                        "XZ",
+                        "YZ",
+                        "XYZ"
+                      ]
+                    },
+                    "EntityMovementMask": {
+                      "$enum": "BaseEntity+Axis",
+                      "name": "XYZ",
+                      "value": 7,
+                      "flagNames": [
+                        "X",
+                        "Y",
+                        "XY",
+                        "Z",
+                        "XZ",
+                        "YZ",
+                        "XYZ"
+                      ]
+                    },
+                    "interestLayers": 131072,
+                    "contents": null,
+                    "entityContents": null,
+                    "OnEntityEnterTrigger": null,
+                    "OnEntityLeaveTrigger": null
+                  }
+                ],
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Ramp",
+            "layer": {
+              "index": 28,
+              "name": "Prevent Movement"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -4.7780022621154785,
+              "y": 3.1910009384155273,
+              "z": 1.7339944839477539
+            },
+            "localRotation": {
+              "x": -0.34992614388465881,
+              "y": -6.8545335807357333E-07,
+              "z": -3.27825517842939E-07,
+              "w": 0.93677735328674316
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "Ramp",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "size": {
+                  "x": 1.0,
+                  "y": 0.18999999761581421,
+                  "z": 1.8300000429153442
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "Ramp (1)",
+            "layer": {
+              "index": 28,
+              "name": "Prevent Movement"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -2.1950035095214844,
+              "y": 5.2030010223388672,
+              "z": 3.1319987773895264
+            },
+            "localRotation": {
+              "x": -0.24743644893169403,
+              "y": 0.66239964962005615,
+              "z": 0.24743470549583435,
+              "w": 0.66240328550338745
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "Ramp (1)",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "size": {
+                  "x": 1.0,
+                  "y": 0.18999999761581421,
+                  "z": 4.46999979019165
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "Ladder Volume",
+            "layer": {
+              "index": 18,
+              "name": "Trigger"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.0470020771026611,
+              "y": 7.4300003051757813,
+              "z": -0.37399923801422119
+            },
+            "localRotation": {
+              "x": 5.6843412084544437E-14,
+              "y": -6.258487132981827E-07,
+              "z": -8.1460349576900626E-08,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "Ladder Volume",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.068853564560413361,
+                  "y": 3.4932336807250977,
+                  "z": -0.37716197967529297
+                },
+                "size": {
+                  "x": 0.55845069885253906,
+                  "y": 7.9864673614501953,
+                  "z": 0.24567604064941406
+                },
+                "isTrigger": true,
+                "enabled": true
+              },
+              {
+                "$type": "TriggerLadder",
+                "$name": "Ladder Volume",
+                "Type": {
+                  "$enum": "TriggerLadder+LadderType",
+                  "name": "Rungs",
+                  "value": 0
+                },
+                "ForceLookAt": false,
+                "RequireJumpToMount": false,
+                "ClimbFootstepSound": null,
+                "interestLayers": 131072,
+                "contents": null,
+                "entityContents": null,
+                "OnEntityEnterTrigger": null,
+                "OnEntityLeaveTrigger": null
+              }
+            ],
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Socket_Base": []
+  }
+}

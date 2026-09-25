@@ -1,0 +1,2773 @@
+{
+  "prefabID": 428217161,
+  "path": "assets/prefabs/deployable/modular car lift/electrical.modularcarlift.deployed.prefab",
+  "rootClassChain": [
+    "ModularCarGarage",
+    "ContainerIOEntity",
+    "IOEntity",
+    "DecayEntity",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.0,
+      "y": 1.3500000238418579,
+      "z": -0.44999998807907104
+    },
+    "size": {
+      "x": 7.0,
+      "y": 2.7000000476837158,
+      "z": 3.2000000476837158
+    }
+  },
+  "hierarchy": {
+    "name": "electrical.modularcarlift.deployed",
+    "layer": {
+      "index": 8,
+      "name": "Deployed"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "ModularCarGarage",
+        "$name": "electrical.modularcarlift.deployed",
+        "lockedOccupant": null,
+        "lootingPlayers": [],
+        "magnetSnap": null,
+        "vehicleLift": [
+          [
+            [],
+            []
+          ],
+          [
+            [],
+            []
+          ],
+          [],
+          [],
+          []
+        ],
+        "vehicleLiftAnim": [
+          {
+            "$type": "UnityEngine.AnimationState"
+          }
+        ],
+        "animName": "LiftUp",
+        "occupantTrigger": {
+          "$type": "VehicleLiftOccupantTrigger",
+          "$name": "OccupantZone",
+          "checkNonModularCarVehicles": false,
+          "interestLayers": 32768,
+          "contents": null,
+          "entityContents": null,
+          "OnEntityEnterTrigger": null,
+          "OnEntityLeaveTrigger": null
+        },
+        "liftMoveTime": 1.0,
+        "poweredLight": null,
+        "inUseLight": null,
+        "vehicleLiftPos": {
+          "$ref": "Transform",
+          "name": "LiftVehiclePos",
+          "instanceID": 1398978,
+          "goName": "LiftVehiclePos",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "recycleEfficiency": 0.5,
+        "recycleDropPos": {
+          "$ref": "Transform",
+          "name": "RecycleDropPosition",
+          "instanceID": 1388930,
+          "goName": "RecycleDropPosition",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "needsElectricity": true,
+        "liftStartSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "modular-car-lift-start",
+          "instanceID": 407872
+        },
+        "liftStopSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "modular-car-lift-stop",
+          "instanceID": 245306
+        },
+        "liftStopDownSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "modular-car-lift-stop-down",
+          "instanceID": 399484
+        },
+        "liftLoopSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "modular-car-lift-loop",
+          "instanceID": 344596
+        },
+        "addRemoveLockEffect": {
+          "$ref": "GameObject",
+          "guid": "8c51f810bbff4bc4b856e66fd6ed5f24",
+          "resourcePath": "assets/prefabs/deployable/modular car lift/effects/modular-car-lift-addremovelock.prefab",
+          "resourceID": 597670884
+        },
+        "changeLockCodeEffect": {
+          "$ref": "GameObject",
+          "guid": "ab9e360c7d19a924f989254f66478551",
+          "resourcePath": "assets/prefabs/deployable/modular car lift/effects/modular-car-lift-changelockcode.prefab",
+          "resourceID": 3880494059
+        },
+        "repairEffect": {
+          "$ref": "GameObject",
+          "guid": "e2ef485f2ead82d4b8f50316111abb81",
+          "resourcePath": "assets/prefabs/deployable/modular car lift/effects/modular-car-lift-repair.prefab",
+          "resourceID": 3989019690
+        },
+        "playerTrigger": {
+          "$type": "TriggerBase",
+          "$name": "NoPlayerZone",
+          "interestLayers": 131072,
+          "contents": null,
+          "entityContents": null,
+          "OnEntityEnterTrigger": null,
+          "OnEntityLeaveTrigger": null
+        },
+        "chassisBuildOptions": [
+          {
+            "$type": "ModularCarGarage+ChassisBuildOption",
+            "prefab": {
+              "$ref": "GameObject",
+              "guid": "a9a5577850e8ba648a4d57e2609699a3",
+              "resourcePath": "assets/content/vehicles/modularcar/car_chassis_2module.entity.prefab",
+              "resourceID": 3386615946
+            },
+            "itemDef": {
+              "$ref": "ItemDefinition",
+              "name": "2module_chassis.item",
+              "itemid": -44066600,
+              "shortname": "vehicle.chassis.2mod"
+            }
+          },
+          {
+            "$type": "ModularCarGarage+ChassisBuildOption",
+            "prefab": {
+              "$ref": "GameObject",
+              "guid": "68137b73f3bfdf246bdde6dce77de465",
+              "resourcePath": "assets/content/vehicles/modularcar/car_chassis_3module.entity.prefab",
+              "resourceID": 4140947108
+            },
+            "itemDef": {
+              "$ref": "ItemDefinition",
+              "name": "3module_chassis.item",
+              "itemid": -44066823,
+              "shortname": "vehicle.chassis.3mod"
+            }
+          },
+          {
+            "$type": "ModularCarGarage+ChassisBuildOption",
+            "prefab": {
+              "$ref": "GameObject",
+              "guid": "68137b73f3bfdf246bdde6dce77de465",
+              "resourcePath": "assets/content/vehicles/modularcar/car_chassis_3module.entity.prefab",
+              "resourceID": 4140947108
+            },
+            "itemDef": {
+              "$ref": "ItemDefinition",
+              "name": "4module_chassis.item",
+              "itemid": -44066790,
+              "shortname": "vehicle.chassis.4mod"
+            }
+          }
+        ],
+        "lockResourceCost": {
+          "$type": "ItemAmount",
+          "itemDef": {
+            "$ref": "ItemDefinition",
+            "name": "metal_fragments.item",
+            "itemid": 69511070,
+            "shortname": "metal.fragments"
+          },
+          "amount": 75.0,
+          "startAmount": 75.0,
+          "ignoreInTutorial": false,
+          "isBP": false
+        },
+        "downPos": {
+          "x": 1.5163376331329346,
+          "y": 0.079337850213050842,
+          "z": 2.384185791015625E-07
+        },
+        "onlyAllowedItem": null,
+        "allowedContents": {
+          "$enum": "ItemContainer+ContentsType",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "maxStackSize": 0,
+        "numSlots": 0,
+        "lootPanelName": "vehicleediting",
+        "panelTitle": {
+          "$type": "Translate+Phrase",
+          "token": "loot",
+          "legacyEnglish": "Loot"
+        },
+        "needsBuildingPrivilegeToUse": false,
+        "requireAuthIfNotLocked": false,
+        "isLootable": false,
+        "isMonitorable": false,
+        "dropsLoot": false,
+        "dropLootDestroyPercent": 0.0,
+        "dropFloats": false,
+        "onlyOneUser": true,
+        "supportsChildDeployables": false,
+        "allowSorting": false,
+        "isLockable": false,
+        "openSound": {
+          "$ref": "SoundDefinition",
+          "name": "modular-car-lift-open",
+          "instanceID": 208690
+        },
+        "closeSound": {
+          "$ref": "SoundDefinition",
+          "name": "modular-car-lift-close",
+          "instanceID": 244708
+        },
+        "debugOrigin": [
+          [],
+          [
+            [
+              [
+                [
+                  [],
+                  [
+                    []
+                  ],
+                  {
+                    "$ref": "Transform",
+                    "name": "Top",
+                    "instanceID": 1432358,
+                    "goName": "Top",
+                    "$alreadyDumpedElsewhereInThisFile": true
+                  }
+                ],
+                [
+                  []
+                ]
+              ]
+            ]
+          ],
+          [
+            []
+          ],
+          [],
+          [],
+          [
+            []
+          ]
+        ],
+        "sourceItem": {
+          "$ref": "ItemDefinition",
+          "name": "electrical.modularcarlift.item",
+          "itemid": 1696050067,
+          "shortname": "modularcarlift"
+        },
+        "lastResetIndex": 0,
+        "inputs": [
+          {
+            "$type": "IOEntity+IOSlot",
+            "niceName": "Power In",
+            "type": {
+              "$enum": "IOEntity+IOType",
+              "name": "Electric",
+              "value": 0
+            },
+            "connectedTo": {
+              "$type": "IOEntity+IORef",
+              "entityRef": {
+                "$type": "EntityRef"
+              },
+              "ioEnt": null
+            },
+            "connectedToSlot": 0,
+            "importance": {
+              "$enum": "IOHandlePriority",
+              "name": "Normal",
+              "value": 0
+            },
+            "ArrowOffset": 0.0,
+            "linePoints": [],
+            "lineAnchors": null,
+            "slackLevels": [],
+            "worldSpaceLineEndRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "originRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "line": null,
+            "handlePosition": {
+              "x": 0.0,
+              "y": 0.067500002682209015,
+              "z": -2.0199999809265137
+            },
+            "handleDirection": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -1.0
+            },
+            "rootConnectionsOnly": false,
+            "mainPowerSlot": true,
+            "wireColour": {
+              "$enum": "WireTool+WireColour",
+              "name": "Gray",
+              "value": 0
+            },
+            "lineThickness": 0.0
+          }
+        ],
+        "outputs": [],
+        "ioType": {
+          "$enum": "IOEntity+IOType",
+          "name": "Electric",
+          "value": 0
+        },
+        "cachedOutputsUsed": 0,
+        "lastPassthroughEnergy": -1,
+        "lastEnergy": 0,
+        "currentEnergy": 0,
+        "lastUpdateTime": 0.0,
+        "lastUpdateBlockedFrame": 0,
+        "ensureOutputsUpdated": false,
+        "canBeDemolished": false,
+        "debrisPrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "debrisRotationOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "DebrisPositions": [],
+        "buildingID": 0,
+        "timePlaced": 0.0,
+        "decayTimer": 0.0,
+        "upkeepTimer": 0.0,
+        "upkeep": null,
+        "decay": null,
+        "decayPoints": null,
+        "lastDecayTick": 0.0,
+        "decayVariance": 1.0,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "DeployableMetal",
+          "comments": "",
+          "density": 3.0,
+          "amounts": [
+            0.89999997615814209,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.949999988079071,
+            0.0,
+            0.0,
+            0.0,
+            0.99000000953674316,
+            0.99000000953674316,
+            0.99000000953674316,
+            0.0,
+            1.0,
+            1.0,
+            0.99000000953674316,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 3999396024
+        },
+        "startHealth": 250.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "electrical.modularcarlift.item",
+            "itemid": 1696050067,
+            "shortname": "modularcarlift"
+          },
+          "itemCount": 1,
+          "setConditionFromHealth": false,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": true,
+          "requireHammer": true,
+          "requireEmptyInv": true,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "electrical.modularcarlift.item",
+            "itemid": 1696050067,
+            "shortname": "modularcarlift"
+          },
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": false,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 1.3500000238418579,
+            "z": -0.44999998807907104
+          },
+          "size": {
+            "x": 7.0,
+            "y": 2.7000000476837158,
+            "z": 3.2000000476837158
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 428217161,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$type": "GroundWatch",
+        "$name": "electrical.modularcarlift.deployed",
+        "groundPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "layers": 27328512,
+        "radius": 0.10000000149011612,
+        "needBuildingBlock": false,
+        "needOnlyOneAreaCheckValid": false,
+        "whitelist": [],
+        "fails": 0,
+        "_baseEntity": null
+      },
+      {
+        "$type": "DestroyOnGroundMissing",
+        "$name": "electrical.modularcarlift.deployed"
+      }
+    ],
+    "children": [
+      {
+        "name": "MainButton",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Usable Primary",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 1.184999942779541,
+          "z": -1.7899999618530273
+        },
+        "localRotation": {
+          "x": 0.537299633026123,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.843391478061676
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "MainButton",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "size": {
+              "x": 0.44999998807907104,
+              "y": 0.44999998807907104,
+              "z": 0.10000000149011612
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Metal",
+              "instanceID": 609842
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "Vehicle_Lift_A_COL",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "Animation",
+            "name": "Vehicle_Lift_A_COL",
+            "instanceID": 1474166,
+            "goName": "Vehicle_Lift_A_COL",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": [
+          {
+            "name": "Root",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": -0.7071068286895752,
+              "z": 0.0,
+              "w": 0.7071068286895752
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "Root",
+                "colliderType": "Box",
+                "center": {
+                  "x": -1.8121128082275391,
+                  "y": 0.54512029886245728,
+                  "z": 0.003902435302734375
+                },
+                "size": {
+                  "x": 0.41418838500976563,
+                  "y": 1.0982648134231567,
+                  "z": 0.45323944091796875
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              },
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "Root",
+                "colliderType": "Box",
+                "center": {
+                  "x": -0.796722412109375,
+                  "y": 0.05869448184967041,
+                  "z": 0.000621795654296875
+                },
+                "size": {
+                  "x": 0.7479400634765625,
+                  "y": 0.11702179908752441,
+                  "z": 6.1525650024414063
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              },
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "Root",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.796722412109375,
+                  "y": 0.05869448184967041,
+                  "z": 0.000621795654296875
+                },
+                "size": {
+                  "x": 0.7479400634765625,
+                  "y": 0.11702179908752441,
+                  "z": 6.1525650024414063
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              }
+            ],
+            "children": [
+              {
+                "name": "joint2",
+                "layer": {
+                  "index": 8,
+                  "name": "Deployed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.125,
+                  "z": -1.6906901597976685
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "joint3",
+                    "layer": {
+                      "index": 8,
+                      "name": "Deployed"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": -0.082092337310314178,
+                      "z": 1.6906901597976685
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "joint4",
+                        "layer": {
+                          "index": 8,
+                          "name": "Deployed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": 0.049765288829803467,
+                          "z": -1.5305894613265991
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": []
+                      },
+                      {
+                        "name": "Piston_In",
+                        "layer": {
+                          "index": 8,
+                          "name": "Deployed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": 0.066248297691345215,
+                          "z": -0.55896961688995361
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": [
+                          {
+                            "name": "joint6",
+                            "layer": {
+                              "index": 8,
+                              "name": "Deployed"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": -0.405815988779068
+                            },
+                            "localRotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [],
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Top",
+                        "layer": {
+                          "index": 8,
+                          "name": "Deployed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": 0.036430187523365021,
+                          "z": -1.5163373947143555
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "Top",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": -0.800000011920929,
+                              "y": 0.088005006313323975,
+                              "z": 1.5090522766113281
+                            },
+                            "size": {
+                              "x": 0.6993478536605835,
+                              "y": 0.10009944438934326,
+                              "z": 5.0880203247070313
+                            },
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          },
+                          {
+                            "$type": "UnityEngine.BoxCollider",
+                            "$name": "Top",
+                            "colliderType": "Box",
+                            "center": {
+                              "x": 0.79963791370391846,
+                              "y": 0.0889769196510315,
+                              "z": 1.5090522766113281
+                            },
+                            "size": {
+                              "x": 0.699347734451294,
+                              "y": 0.1020432710647583,
+                              "z": 5.0880203247070313
+                            },
+                            "isTrigger": false,
+                            "enabled": true,
+                            "physicMaterial": {
+                              "$ref": "PhysicsMaterial",
+                              "name": "Metal",
+                              "instanceID": 609842
+                            }
+                          }
+                        ],
+                        "children": [
+                          {
+                            "name": "PanelA",
+                            "layer": {
+                              "index": 8,
+                              "name": "Deployed"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": 0.0,
+                              "y": 0.065047189593315125,
+                              "z": 4.0663371086120605
+                            },
+                            "localRotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [],
+                            "children": [
+                              {
+                                "name": "joint14",
+                                "layer": {
+                                  "index": 8,
+                                  "name": "Deployed"
+                                },
+                                "tag": "Untagged",
+                                "customTags": [],
+                                "activeSelf": true,
+                                "localPosition": {
+                                  "x": 0.0,
+                                  "y": -0.054791945964097977,
+                                  "z": 0.49417358636856079
+                                },
+                                "localRotation": {
+                                  "x": 0.0,
+                                  "y": 0.0,
+                                  "z": 0.0,
+                                  "w": 1.0
+                                },
+                                "localScale": {
+                                  "x": 1.0,
+                                  "y": 1.0,
+                                  "z": 1.0
+                                },
+                                "components": [],
+                                "children": []
+                              },
+                              {
+                                "name": "Collider",
+                                "layer": {
+                                  "index": 8,
+                                  "name": "Deployed"
+                                },
+                                "tag": "Untagged",
+                                "customTags": [],
+                                "activeSelf": true,
+                                "localPosition": {
+                                  "x": 0.0,
+                                  "y": 0.0,
+                                  "z": 0.0
+                                },
+                                "localRotation": {
+                                  "x": 0.087155781686306,
+                                  "y": 0.0,
+                                  "z": 0.0,
+                                  "w": 0.99619472026824951
+                                },
+                                "localScale": {
+                                  "x": 1.0,
+                                  "y": 1.0,
+                                  "z": 1.0
+                                },
+                                "components": [
+                                  {
+                                    "$type": "UnityEngine.BoxCollider",
+                                    "$name": "Collider",
+                                    "colliderType": "Box",
+                                    "center": {
+                                      "x": -0.800000011920929,
+                                      "y": -1.8864132300677738E-07,
+                                      "z": 0.34999999403953552
+                                    },
+                                    "size": {
+                                      "x": 0.69999992847442627,
+                                      "y": 0.085000000894069672,
+                                      "z": 1.2000000476837158
+                                    },
+                                    "isTrigger": false,
+                                    "enabled": true,
+                                    "physicMaterial": {
+                                      "$ref": "PhysicsMaterial",
+                                      "name": "Metal",
+                                      "instanceID": 609842
+                                    }
+                                  },
+                                  {
+                                    "$type": "UnityEngine.BoxCollider",
+                                    "$name": "Collider",
+                                    "colliderType": "Box",
+                                    "center": {
+                                      "x": 0.800000011920929,
+                                      "y": 0.0,
+                                      "z": 0.34999999403953552
+                                    },
+                                    "size": {
+                                      "x": 0.699999988079071,
+                                      "y": 0.085000000894069672,
+                                      "z": 1.2000000476837158
+                                    },
+                                    "isTrigger": false,
+                                    "enabled": true,
+                                    "physicMaterial": {
+                                      "$ref": "PhysicsMaterial",
+                                      "name": "Metal",
+                                      "instanceID": 609842
+                                    }
+                                  }
+                                ],
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "name": "PanelB",
+                            "layer": {
+                              "index": 8,
+                              "name": "Deployed"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": 0.0,
+                              "y": 0.065047189593315125,
+                              "z": -1.0336625576019287
+                            },
+                            "localRotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [],
+                            "children": [
+                              {
+                                "name": "joint13",
+                                "layer": {
+                                  "index": 8,
+                                  "name": "Deployed"
+                                },
+                                "tag": "Untagged",
+                                "customTags": [],
+                                "activeSelf": true,
+                                "localPosition": {
+                                  "x": 0.0,
+                                  "y": -0.054791945964097977,
+                                  "z": -0.49417358636856079
+                                },
+                                "localRotation": {
+                                  "x": 0.0,
+                                  "y": 0.0,
+                                  "z": 0.0,
+                                  "w": 1.0
+                                },
+                                "localScale": {
+                                  "x": 1.0,
+                                  "y": 1.0,
+                                  "z": 1.0
+                                },
+                                "components": [],
+                                "children": []
+                              },
+                              {
+                                "name": "Collider",
+                                "layer": {
+                                  "index": 21,
+                                  "name": "Construction"
+                                },
+                                "tag": "Untagged",
+                                "customTags": [],
+                                "activeSelf": true,
+                                "localPosition": {
+                                  "x": 0.0,
+                                  "y": 0.0,
+                                  "z": 0.0
+                                },
+                                "localRotation": {
+                                  "x": -0.087155781686306,
+                                  "y": 0.0,
+                                  "z": 0.0,
+                                  "w": 0.99619472026824951
+                                },
+                                "localScale": {
+                                  "x": 1.0,
+                                  "y": 1.0,
+                                  "z": 1.0
+                                },
+                                "components": [
+                                  {
+                                    "$type": "UnityEngine.BoxCollider",
+                                    "$name": "Collider",
+                                    "colliderType": "Box",
+                                    "center": {
+                                      "x": -0.800000011920929,
+                                      "y": 0.0,
+                                      "z": -0.34999999403953552
+                                    },
+                                    "size": {
+                                      "x": 0.699999988079071,
+                                      "y": 0.085000000894069672,
+                                      "z": 1.2000000476837158
+                                    },
+                                    "isTrigger": false,
+                                    "enabled": true,
+                                    "physicMaterial": {
+                                      "$ref": "PhysicsMaterial",
+                                      "name": "Metal",
+                                      "instanceID": 609842
+                                    }
+                                  },
+                                  {
+                                    "$type": "UnityEngine.BoxCollider",
+                                    "$name": "Collider",
+                                    "colliderType": "Box",
+                                    "center": {
+                                      "x": 0.800000011920929,
+                                      "y": -1.1126169141562059E-07,
+                                      "z": -0.34999999403953552
+                                    },
+                                    "size": {
+                                      "x": 0.69999992847442627,
+                                      "y": 0.085000000894069672,
+                                      "z": 1.2000000476837158
+                                    },
+                                    "isTrigger": false,
+                                    "enabled": true,
+                                    "physicMaterial": {
+                                      "$ref": "PhysicsMaterial",
+                                      "name": "Metal",
+                                      "instanceID": 609842
+                                    }
+                                  }
+                                ],
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "name": "LiftVehiclePos",
+                            "layer": {
+                              "index": 18,
+                              "name": "Trigger"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": 0.0,
+                              "y": 0.16899999976158142,
+                              "z": 1.5
+                            },
+                            "localRotation": {
+                              "x": 0.0,
+                              "y": -1.0,
+                              "z": 0.0,
+                              "w": 0.0
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [],
+                            "children": []
+                          },
+                          {
+                            "name": "RecycleDropPosition",
+                            "layer": {
+                              "index": 0,
+                              "name": "Default"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": 0.0,
+                              "y": -0.079337850213050842,
+                              "z": 1.5163373947143555
+                            },
+                            "localRotation": {
+                              "x": -0.18301266431808472,
+                              "y": -0.68301272392272949,
+                              "z": -0.18301266431808472,
+                              "w": 0.68301272392272949
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [],
+                            "children": []
+                          },
+                          {
+                            "name": "OccupantZone",
+                            "layer": {
+                              "index": 18,
+                              "name": "Trigger"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": 0.0,
+                              "y": 0.42066216468811035,
+                              "z": 1.5163373947143555
+                            },
+                            "localRotation": {
+                              "x": 0.0,
+                              "y": -1.0,
+                              "z": 0.0,
+                              "w": 0.0
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [
+                              {
+                                "$ref": "VehicleLiftOccupantTrigger",
+                                "name": "OccupantZone",
+                                "instanceID": 1527620,
+                                "goName": "OccupantZone",
+                                "$alreadyDumpedElsewhereInThisFile": true
+                              },
+                              {
+                                "$type": "UnityEngine.BoxCollider",
+                                "$name": "OccupantZone",
+                                "colliderType": "Box",
+                                "center": {
+                                  "x": 0.0,
+                                  "y": 0.25,
+                                  "z": 0.0
+                                },
+                                "size": {
+                                  "x": 1.75,
+                                  "y": 1.0,
+                                  "z": 1.0
+                                },
+                                "isTrigger": true,
+                                "enabled": true
+                              }
+                            ],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Piston_Out",
+                    "layer": {
+                      "index": 8,
+                      "name": "Deployed"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": -0.015844045206904411,
+                      "z": 0.15193185210227966
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "joint8",
+                        "layer": {
+                          "index": 8,
+                          "name": "Deployed"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.28725269436836243
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "preventBuildingMain",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "IgnoreWireCheck",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "preventBuildingMain",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 1.3500000238418579,
+              "z": 0.0
+            },
+            "size": {
+              "x": 7.0,
+              "y": 2.7000000476837158,
+              "z": 2.3250000476837158
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": [
+          {
+            "name": "preventBuildingControls",
+            "layer": {
+              "index": 29,
+              "name": "Prevent Building"
+            },
+            "tag": "IgnoreWireCheck",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "preventBuildingControls",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.64999997615814209,
+                  "z": -1.5249999761581421
+                },
+                "size": {
+                  "x": 0.44999998807907104,
+                  "y": 1.2999999523162842,
+                  "z": 1.0
+                },
+                "isTrigger": false,
+                "enabled": true
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "NoPlayerZone",
+        "layer": {
+          "index": 18,
+          "name": "Trigger"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "NoPlayerZone",
+            "colliderType": "Box",
+            "center": {
+              "x": -3.7487531016954043E-15,
+              "y": 1.3836886882781982,
+              "z": 3.9117509551640436E-14
+            },
+            "size": {
+              "x": 7.0,
+              "y": 2.7673773765563965,
+              "z": 2.3250000476837158
+            },
+            "isTrigger": true,
+            "enabled": true
+          },
+          {
+            "$ref": "TriggerBase",
+            "name": "NoPlayerZone",
+            "instanceID": 1574968,
+            "goName": "NoPlayerZone",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "deployvolumeMain",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "sockets",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "free",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Decay": [
+      {
+        "$type": "DeployableDecay",
+        "$name": "<destroyed native object>",
+        "prefabID": 428217161,
+        "hierachyName": "electrical.modularcarlift.deployed",
+        "decayDelay": 12.0,
+        "decayDuration": 16.0,
+        "overrideHealRate": false,
+        "decayTickOverride": 0.0,
+        "decayIndoors": false,
+        "healRate": 1.0,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/modular car lift/electrical.modularcarlift.deployed.prefab",
+        "instanceID": 1577258,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Construction": [
+      {
+        "$type": "Construction",
+        "$name": "<destroyed native object>",
+        "prefabID": 428217161,
+        "hierachyName": "electrical.modularcarlift.deployed",
+        "info": {
+          "$type": "BaseEntity+Menu+Option",
+          "name": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "description": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "icon": null,
+          "order": 0,
+          "usableWhileWounded": false
+        },
+        "canBypassBuildingPermission": false,
+        "showBuildingBlockedPreview": true,
+        "canPlaceOnRoads": false,
+        "canRotateBeforePlacement": true,
+        "canRotateAfterPlacement": true,
+        "canBeDeployedInDeepSeaWater": false,
+        "checkVolumeOnRotate": true,
+        "checkVolumeOnUpgrade": false,
+        "canPlaceAtMaxDistance": false,
+        "placeOnWater": false,
+        "overridePlacementLayer": false,
+        "overridedPlacementLayer": 0,
+        "additionalPlacementLayer": 0,
+        "rotationAmount": {
+          "x": 0.0,
+          "y": 90.0,
+          "z": 0.0
+        },
+        "applyStartingRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "deployOffset": null,
+        "enforceLineOfSightCheckAgainstParentEntity": false,
+        "canSnap": false,
+        "forceY": false,
+        "forceYValue": 0.0,
+        "forceYToOceanLevel": false,
+        "OceanLevelYOffset": 0.0,
+        "holdToPlaceDuration": 0.0,
+        "canFloodFillSockets": false,
+        "alternativeLOSChecks": false,
+        "alternativeLOSPositions": [],
+        "canUseLastValidPosition": true,
+        "healthMultiplier": 1.0,
+        "costMultiplier": 1.0,
+        "maxplaceDistance": 6.0,
+        "minPlaceDistance": 1.0,
+        "guideMesh": null,
+        "guideMeshMaterial": [],
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "hideBuildingPlannerViewmodel": false,
+        "allSockets": [
+          {
+            "$type": "Socket_Free",
+            "$name": "<destroyed native object>",
+            "prefabID": 428217161,
+            "hierachyName": "electrical.modularcarlift.deployed/sockets/free",
+            "idealPlacementNormal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "useTargetNormal": true,
+            "snapToTargetProvidedRotations": false,
+            "blendAimAngle": true,
+            "male": true,
+            "maleDummy": false,
+            "female": false,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": false,
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": -0.70710670948028564,
+              "z": -0.7071068286895752,
+              "w": 0.0
+            },
+            "selectSize": {
+              "x": 2.0,
+              "y": 0.10000000149011612,
+              "z": 2.0
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            },
+            "socketName": "electrical.modularcarlift.deployed/sockets/free",
+            "socketMods": [
+              {
+                "$type": "SocketMod_AngleCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 428217161,
+                "hierachyName": "electrical.modularcarlift.deployed/sockets/free/angle",
+                "wantsAngle": true,
+                "worldNormal": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0
+                },
+                "withinDegrees": 45.0,
+                "usePlacementNormal": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": -0.70710670948028564,
+                  "z": -0.7071068286895752,
+                  "w": 0.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": 1.7881393432617188E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/modular car lift/electrical.modularcarlift.deployed.prefab",
+                "instanceID": 1568008,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_InWater",
+                "$name": "<destroyed native object>",
+                "prefabID": 428217161,
+                "hierachyName": "electrical.modularcarlift.deployed/sockets/free/notinWater",
+                "wantsInWater": false,
+                "excludeArtificialWater": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": -0.70710670948028564,
+                  "z": -0.7071068286895752,
+                  "w": 0.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": 1.7881393432617188E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/modular car lift/electrical.modularcarlift.deployed.prefab",
+                "instanceID": 1542336,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 428217161,
+                "hierachyName": "electrical.modularcarlift.deployed/sockets/free/inside",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 10485761,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 2.5,
+                  "y": 1.1920928955078125E-07,
+                  "z": -1.1499998569488525
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": -0.70710670948028564,
+                  "z": -0.7071068286895752,
+                  "w": 0.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": 1.7881393432617188E-07
+                },
+                "localPosition": {
+                  "x": -2.5,
+                  "y": -1.1499999761581421,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/modular car lift/electrical.modularcarlift.deployed.prefab",
+                "instanceID": 1557016,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 428217161,
+                "hierachyName": "electrical.modularcarlift.deployed/sockets/free/inside (1)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 10485761,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 2.5,
+                  "y": -1.1920928955078125E-07,
+                  "z": 1.1499998569488525
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": -0.70710670948028564,
+                  "z": -0.7071068286895752,
+                  "w": 0.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": 1.7881393432617188E-07
+                },
+                "localPosition": {
+                  "x": -2.5,
+                  "y": 1.1499999761581421,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/modular car lift/electrical.modularcarlift.deployed.prefab",
+                "instanceID": 1555410,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 428217161,
+                "hierachyName": "electrical.modularcarlift.deployed/sockets/free/inside (2)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 10485761,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -2.5,
+                  "y": 1.1920928955078125E-07,
+                  "z": -1.1499998569488525
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": -0.70710670948028564,
+                  "z": -0.7071068286895752,
+                  "w": 0.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": 1.7881393432617188E-07
+                },
+                "localPosition": {
+                  "x": 2.5,
+                  "y": -1.1499999761581421,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/modular car lift/electrical.modularcarlift.deployed.prefab",
+                "instanceID": 1578724,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 428217161,
+                "hierachyName": "electrical.modularcarlift.deployed/sockets/free/inside (3)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 10485761,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -2.5,
+                  "y": -1.1920928955078125E-07,
+                  "z": 1.1499998569488525
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": -0.70710670948028564,
+                  "z": -0.7071068286895752,
+                  "w": 0.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": 1.7881393432617188E-07
+                },
+                "localPosition": {
+                  "x": 2.5,
+                  "y": 1.1499999761581421,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/modular car lift/electrical.modularcarlift.deployed.prefab",
+                "instanceID": 1527722,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 428217161,
+                "hierachyName": "electrical.modularcarlift.deployed/sockets/free/inside (4)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.10000000149011612,
+                    "y": 0.10000000149011612,
+                    "z": 0.10000000149011612
+                  }
+                },
+                "layerMask": 10485761,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 2.384185791015625E-07,
+                  "z": -2.0289998054504395
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": -0.70710670948028564,
+                  "z": -0.7071068286895752,
+                  "w": 0.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": 1.7881393432617188E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": -2.0290000438690186,
+                  "z": 0.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/modular car lift/electrical.modularcarlift.deployed.prefab",
+                "instanceID": 1535708,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              }
+            ],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "worldRotation": {
+              "x": 0.0,
+              "y": -0.70710670948028564,
+              "z": -0.7071068286895752,
+              "w": 0.0
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": 0.99999994039535522,
+              "z": 1.7881393432617188E-07
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": -0.7071068286895752,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.70710670948028564
+            },
+            "fullName": "assets/prefabs/deployable/modular car lift/electrical.modularcarlift.deployed.prefab",
+            "instanceID": 1569408,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          }
+        ],
+        "allProximities": [],
+        "defaultGrade": null,
+        "socketHandle": null,
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 1.3500000238418579,
+            "z": -0.44999998807907104
+          },
+          "size": {
+            "x": 7.0,
+            "y": 2.7000000476837158,
+            "z": 3.2000000476837158
+          }
+        },
+        "isBuildingPrivilege": false,
+        "isSleepingBag": false,
+        "grades": [],
+        "deployable": {
+          "$type": "Deployable",
+          "$name": "<destroyed native object>",
+          "prefabID": 428217161,
+          "hierachyName": "electrical.modularcarlift.deployed",
+          "guidePrefab": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "guideMesh": null,
+          "guideMeshScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "overrideRotation": false,
+          "guideMeshOrientation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "guideMeshPositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "moveGuideTowardsCamera": true,
+          "guideLights": true,
+          "wantsInstanceData": false,
+          "copyInventoryFromItem": false,
+          "setSocketParent": false,
+          "toSlot": false,
+          "slot": {
+            "$enum": "BaseEntity+Slot",
+            "name": "Lock",
+            "value": 0
+          },
+          "placeEffect": {
+            "$ref": "GameObject",
+            "guid": "2e8fa7b46aa5047e1a4482ebabf45178",
+            "resourcePath": "assets/prefabs/deployable/modular car lift/effects/modular-car-lift-deploy.prefab",
+            "resourceID": 2623494141
+          },
+          "guideTargets": [],
+          "bounds": {
+            "center": {
+              "x": 0.0,
+              "y": 1.3500000238418579,
+              "z": -0.44999998807907104
+            },
+            "size": {
+              "x": 7.0,
+              "y": 2.7000000476837158,
+              "z": 3.2000000476837158
+            }
+          },
+          "worldPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "worldRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "worldForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "localScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "localRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "fullName": "assets/prefabs/deployable/modular car lift/electrical.modularcarlift.deployed.prefab",
+          "instanceID": 1579054,
+          "prefabAttribute": {
+            "$ref": "Library",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "gameManager": {
+            "$ref": "GameManager",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "isServer": true
+        },
+        "placeholder": null,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/modular car lift/electrical.modularcarlift.deployed.prefab",
+        "instanceID": 1570234,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Deployable": [
+      {
+        "$ref": "Deployable",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "DeployVolume": [
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 428217161,
+        "hierachyName": "electrical.modularcarlift.deployed/deployvolumeMain",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 1.375,
+            "z": 0.0
+          },
+          "size": {
+            "x": 7.0,
+            "y": 2.6500000953674316,
+            "z": 2.3250000476837158
+          }
+        },
+        "layers": 539164672,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/modular car lift/electrical.modularcarlift.deployed.prefab",
+        "instanceID": 1552370,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 428217161,
+        "hierachyName": "electrical.modularcarlift.deployed/deployvolumeMain/deployvolumeControls",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.675000011920929,
+            "z": -1.5249999761581421
+          },
+          "size": {
+            "x": 0.44999998807907104,
+            "y": 1.25,
+            "z": 1.0
+          }
+        },
+        "layers": 539164672,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/modular car lift/electrical.modularcarlift.deployed.prefab",
+        "instanceID": 1546220,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Socket_Base": [
+      {
+        "$ref": "Socket_Free",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "SocketMod": [
+      {
+        "$ref": "SocketMod_AngleCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_InWater",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ]
+  }
+}

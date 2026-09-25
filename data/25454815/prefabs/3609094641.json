@@ -1,0 +1,65 @@
+{
+  "prefabID": 3609094641,
+  "path": "assets/bundled/prefabs/world/event_helicopter.prefab",
+  "rootClassChain": [
+    "UnityEngine.GameObject",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "hierarchy": {
+    "name": "event_helicopter",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "components": [
+      {
+        "$type": "EventSchedule",
+        "$name": "event_helicopter",
+        "minimumHoursBetween": 36.0,
+        "maxmumHoursBetween": 54.0,
+        "Key": "patrol_heli"
+      },
+      {
+        "$type": "TriggeredEventPrefab",
+        "$name": "event_helicopter",
+        "targetPrefab": {
+          "$ref": "GameObject",
+          "guid": "bcf740ee013b5bd448513c69d99f35d2",
+          "resourcePath": "assets/prefabs/npc/patrol helicopter/patrolhelicopter.prefab",
+          "resourceID": 3029415845
+        },
+        "shouldBroadcastSpawn": true,
+        "notificationType": {
+          "$enum": "WorldNotificationConfig+NotificationType",
+          "name": "PatrolHelicopterInbound",
+          "value": 9
+        },
+        "spawnedEntity": null
+      }
+    ],
+    "children": []
+  },
+  "prefabAttributes": {
+    "PrefabWeight": []
+  }
+}

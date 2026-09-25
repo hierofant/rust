@@ -1,0 +1,2244 @@
+{
+  "prefabID": 802190701,
+  "path": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+  "rootClassChain": [
+    "JunkPile",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -0.28980112075805664,
+      "y": 0.83872890472412109,
+      "z": 0.18992042541503906
+    },
+    "size": {
+      "x": 11.804848670959473,
+      "y": 2.7620172500610352,
+      "z": 11.922568321228027
+    }
+  },
+  "hierarchy": {
+    "name": "junkpile_c",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "Spawnable",
+        "$name": "junkpile_c",
+        "Population": null,
+        "ForceSpawnOnly": false,
+        "ForceSpawnInfoMessage": "",
+        "CanSpawnInSafeZone": true
+      },
+      {
+        "$type": "JunkPile",
+        "$name": "junkpile_c",
+        "sinkEffect": {
+          "$ref": "GameObject",
+          "guid": "c4b1b20ffef54974081e6390d1ea0de9",
+          "resourcePath": "assets/prefabs/misc/junkpile/effects/despawn.prefab",
+          "resourceID": 2052091278
+        },
+        "spawngroups": [
+          {
+            "$type": "SpawnGroup",
+            "$name": "CrateSpawner",
+            "Tier": {
+              "$enum": "MonumentTier",
+              "name": "-1",
+              "value": -1
+            },
+            "prefabs": [
+              {
+                "$type": "SpawnGroup+SpawnEntry",
+                "prefab": {
+                  "$ref": "GameObject",
+                  "guid": "df6f33b691a244149a297c53237fe822",
+                  "resourcePath": "assets/bundled/prefabs/radtown/crate_normal_2.prefab",
+                  "resourceID": 1546200557
+                },
+                "weight": 100,
+                "mobile": false
+              },
+              {
+                "$type": "SpawnGroup+SpawnEntry",
+                "prefab": {
+                  "$ref": "GameObject",
+                  "guid": "630d792555a9c7e4aaf2f7853fc3756b",
+                  "resourcePath": "assets/bundled/prefabs/radtown/foodbox.prefab",
+                  "resourceID": 2896170989
+                },
+                "weight": 25,
+                "mobile": false
+              },
+              {
+                "$type": "SpawnGroup+SpawnEntry",
+                "prefab": {
+                  "$ref": "GameObject",
+                  "guid": "aed5e831d4b88f04083ad590dbaf46fb",
+                  "resourcePath": "assets/bundled/prefabs/radtown/oil_barrel.prefab",
+                  "resourceID": 3438187947
+                },
+                "weight": 10,
+                "mobile": false
+              },
+              {
+                "$type": "SpawnGroup+SpawnEntry",
+                "prefab": {
+                  "$ref": "GameObject",
+                  "guid": "a467b5d4507a832499efe8e21129984a",
+                  "resourcePath": "assets/bundled/prefabs/radtown/crate_tools.prefab",
+                  "resourceID": 1892026534
+                },
+                "weight": 25,
+                "mobile": false
+              }
+            ],
+            "maxPopulation": 1,
+            "numToSpawnPerTickMin": 1,
+            "numToSpawnPerTickMax": 1,
+            "respawnDelayMin": "Infinity",
+            "respawnDelayMax": "Infinity",
+            "wantsInitialSpawn": true,
+            "temporary": true,
+            "forceInitialSpawn": false,
+            "preventDuplicates": false,
+            "isSpawnerActive": true,
+            "shouldBlockSpawnedEntitySaving": true,
+            "resetBehavior": {
+              "$enum": "SpawnGroupResetBehavior",
+              "name": "Default",
+              "value": 0
+            },
+            "setFreeIfMovedBeyond": null,
+            "category": "junkpile",
+            "Monument": null,
+            "fillOnSpawn": false,
+            "spawnPoints": null,
+            "spawnInstances": [],
+            "spawnClock": {
+              "$type": "LocalClock",
+              "events": []
+            }
+          },
+          {
+            "$type": "SpawnGroup",
+            "$name": "BarrelSpawner",
+            "Tier": {
+              "$enum": "MonumentTier",
+              "name": "-1",
+              "value": -1
+            },
+            "prefabs": [
+              {
+                "$type": "SpawnGroup+SpawnEntry",
+                "prefab": {
+                  "$ref": "GameObject",
+                  "guid": "3810e57f4d0ad0548908762963c8825a",
+                  "resourcePath": "assets/bundled/prefabs/radtown/loot_barrel_1.prefab",
+                  "resourceID": 3364121927
+                },
+                "weight": 45,
+                "mobile": false
+              },
+              {
+                "$type": "SpawnGroup+SpawnEntry",
+                "prefab": {
+                  "$ref": "GameObject",
+                  "guid": "8e37d3a3f2aa452449db874e54f2876a",
+                  "resourcePath": "assets/bundled/prefabs/radtown/loot_barrel_2.prefab",
+                  "resourceID": 3269883781
+                },
+                "weight": 45,
+                "mobile": false
+              },
+              {
+                "$type": "SpawnGroup+SpawnEntry",
+                "prefab": {
+                  "$ref": "GameObject",
+                  "guid": "aed5e831d4b88f04083ad590dbaf46fb",
+                  "resourcePath": "assets/bundled/prefabs/radtown/oil_barrel.prefab",
+                  "resourceID": 3438187947
+                },
+                "weight": 10,
+                "mobile": false
+              }
+            ],
+            "maxPopulation": 3,
+            "numToSpawnPerTickMin": 1,
+            "numToSpawnPerTickMax": 3,
+            "respawnDelayMin": "Infinity",
+            "respawnDelayMax": "Infinity",
+            "wantsInitialSpawn": true,
+            "temporary": true,
+            "forceInitialSpawn": false,
+            "preventDuplicates": false,
+            "isSpawnerActive": true,
+            "shouldBlockSpawnedEntitySaving": true,
+            "resetBehavior": {
+              "$enum": "SpawnGroupResetBehavior",
+              "name": "Default",
+              "value": 0
+            },
+            "setFreeIfMovedBeyond": null,
+            "category": "junkpile",
+            "Monument": null,
+            "fillOnSpawn": false,
+            "spawnPoints": null,
+            "spawnInstances": [],
+            "spawnClock": {
+              "$type": "LocalClock",
+              "events": []
+            }
+          }
+        ],
+        "NPCSpawn": null,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -0.28980112075805664,
+            "y": 0.83872890472412109,
+            "z": 0.18992042541503906
+          },
+          "size": {
+            "x": 11.804848670959473,
+            "y": 2.7620172500610352,
+            "z": 11.922568321228027
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": false,
+        "syncPosition": false,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 802190701,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      }
+    ],
+    "children": [
+      {
+        "name": "large_industrial_prop_a",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.080999374389648438,
+          "y": -0.097000002861022949,
+          "z": 0.36899948120117188
+        },
+        "localRotation": {
+          "x": -0.012536922469735146,
+          "y": 0.19742953777313232,
+          "z": 0.048388261348009109,
+          "w": 0.97904187440872192
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "large_industrial_prop_a",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "large_industrial_prop_a_COL",
+              "meshId": "large_industrial_prop_a_COL_1a1e5187"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Metal",
+              "instanceID": 609842
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "CrateSpawner",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Client Cull",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "SpawnGroup",
+            "name": "CrateSpawner",
+            "instanceID": 1509386,
+            "goName": "CrateSpawner",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": [
+          {
+            "name": "SpawnPoint",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.96700000762939453,
+              "y": 0.29800000786781311,
+              "z": -1.5889999866485596
+            },
+            "localRotation": {
+              "x": -0.067273177206516266,
+              "y": -0.48328441381454468,
+              "z": 0.074772946536540985,
+              "w": 0.869666337966919
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "GenericSpawnPoint",
+                "$name": "SpawnPoint",
+                "dropToGround": false,
+                "randomRot": false,
+                "randomRotSnapDegrees": 1.0,
+                "spawnEffect": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "OnObjectSpawnedEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "OnObjectRetiredEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "spawnPointType": {
+                  "$enum": "BaseSpawnPoint+SpawnPointType",
+                  "name": "Normal",
+                  "value": 0
+                },
+                "playerCheckMargin": 2.0
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "BarrelSpawner",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Client Cull",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "SpawnGroup",
+            "name": "BarrelSpawner",
+            "instanceID": 1509886,
+            "goName": "BarrelSpawner",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": [
+          {
+            "name": "SpawnPoint",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.1480000019073486,
+              "y": 0.0,
+              "z": -1.6690000295639038
+            },
+            "localRotation": {
+              "x": -0.033174619078636169,
+              "y": 0.023128736764192581,
+              "z": -0.030836779624223709,
+              "w": 0.99870598316192627
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "GenericSpawnPoint",
+                "$name": "SpawnPoint",
+                "dropToGround": true,
+                "randomRot": false,
+                "randomRotSnapDegrees": 1.0,
+                "spawnEffect": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "OnObjectSpawnedEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "OnObjectRetiredEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "spawnPointType": {
+                  "$enum": "BaseSpawnPoint+SpawnPointType",
+                  "name": "Normal",
+                  "value": 0
+                },
+                "playerCheckMargin": 2.0
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "SpawnPoint (1)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.47200000286102295,
+              "y": 0.12099999934434891,
+              "z": 2.1640000343322754
+            },
+            "localRotation": {
+              "x": 0.10933230072259903,
+              "y": 0.11046146601438522,
+              "z": -0.035127822309732437,
+              "w": 0.987223744392395
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "GenericSpawnPoint",
+                "$name": "SpawnPoint (1)",
+                "dropToGround": true,
+                "randomRot": false,
+                "randomRotSnapDegrees": 1.0,
+                "spawnEffect": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "OnObjectSpawnedEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "OnObjectRetiredEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "spawnPointType": {
+                  "$enum": "BaseSpawnPoint+SpawnPointType",
+                  "name": "Normal",
+                  "value": 0
+                },
+                "playerCheckMargin": 2.0
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "SpawnPoint (2)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -2.2160000801086426,
+              "y": 0.26800000667572021,
+              "z": 0.0689999982714653
+            },
+            "localRotation": {
+              "x": 0.070596933364868164,
+              "y": -0.30805325508117676,
+              "z": 0.0054300148040056229,
+              "w": 0.94873064756393433
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "GenericSpawnPoint",
+                "$name": "SpawnPoint (2)",
+                "dropToGround": true,
+                "randomRot": false,
+                "randomRotSnapDegrees": 1.0,
+                "spawnEffect": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "OnObjectSpawnedEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "OnObjectRetiredEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "spawnPointType": {
+                  "$enum": "BaseSpawnPoint+SpawnPointType",
+                  "name": "Normal",
+                  "value": 0
+                },
+                "playerCheckMargin": 2.0
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "prevent_building (5)",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.SphereCollider",
+            "$name": "prevent_building (5)",
+            "colliderType": "Sphere",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "radius": 5.0,
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "TerrainAnchor",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "aiobstacle",
+        "layer": {
+          "index": 21,
+          "name": "Construction"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.15000000596046448,
+          "y": 0.0,
+          "z": 0.61000001430511475
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.19581425189971924,
+          "z": 0.0,
+          "w": 0.98064100742340088
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.AI.NavMeshObstacle",
+            "$name": "aiobstacle"
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "junk_pile_b",
+        "layer": {
+          "index": 16,
+          "name": "World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.7369999885559082,
+          "y": -0.046000000089406967,
+          "z": 0.74299997091293335
+        },
+        "localRotation": {
+          "x": 0.0099870702251791954,
+          "y": -0.97819489240646362,
+          "z": -0.0021178803872317076,
+          "w": 0.20743821561336517
+        },
+        "localScale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.5
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "junk_pile_b",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "junk_pile_b_COL",
+              "meshId": "junk_pile_b_COL_cfd2fcca"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Dirt",
+              "instanceID": 609834
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "junk_pile_b",
+        "layer": {
+          "index": 16,
+          "name": "World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -0.75400000810623169,
+          "y": -0.13600000739097595,
+          "z": -0.88300001621246338
+        },
+        "localRotation": {
+          "x": 0.022667046636343002,
+          "y": -0.97481417655944824,
+          "z": 0.024047255516052246,
+          "w": 0.22055664658546448
+        },
+        "localScale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.5
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "junk_pile_b",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "junk_pile_b_COL",
+              "meshId": "junk_pile_b_COL_cfd2fcca"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Dirt",
+              "instanceID": 609834
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "junkpile_base",
+        "layer": {
+          "index": 16,
+          "name": "World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -0.04000091552734375,
+          "y": -0.41100001335144043,
+          "z": 0.34999847412109375
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.1107280254364014,
+          "y": 1.11072838306427,
+          "z": 1.11072838306427
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "junkpile_base",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "junkpile_base_COL",
+              "meshId": "junkpile_base_COL_b4440bd0"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Grass",
+              "instanceID": 1012144
+            }
+          },
+          {
+            "$type": "AddToHeightMap",
+            "$name": "junkpile_base",
+            "DestroyGameObject": false
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "shrub_dense",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "BiomeVisuals",
+            "$name": "shrub_dense",
+            "Arid": null,
+            "Temperate": null,
+            "Tundra": null,
+            "Arctic": null,
+            "OverrideBiome": false,
+            "ToOverride": {
+              "$enum": "TerrainBiome+Enum",
+              "name": "0",
+              "value": 0,
+              "flagNames": []
+            },
+            "EnvironmentVolumeOverrides": []
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "shrub_sparse",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "BiomeVisuals",
+            "$name": "shrub_sparse",
+            "Arid": null,
+            "Temperate": null,
+            "Tundra": null,
+            "Arctic": null,
+            "OverrideBiome": false,
+            "ToOverride": {
+              "$enum": "TerrainBiome+Enum",
+              "name": "0",
+              "value": 0,
+              "flagNames": []
+            },
+            "EnvironmentVolumeOverrides": []
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "cracks_grass_j",
+        "layer": {
+          "index": 16,
+          "name": "World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.1100006103515625,
+          "y": 0.17000000178813934,
+          "z": 0.92599868774414063
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": -0.53958165645599365,
+          "z": 0.0,
+          "w": 0.84193331003189087
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "BiomeVisuals",
+            "$name": "cracks_grass_j",
+            "Arid": null,
+            "Temperate": null,
+            "Tundra": null,
+            "Arctic": null,
+            "OverrideBiome": false,
+            "ToOverride": {
+              "$enum": "TerrainBiome+Enum",
+              "name": "Arctic",
+              "value": 8,
+              "flagNames": [
+                "Arctic"
+              ]
+            },
+            "EnvironmentVolumeOverrides": [
+              {
+                "$type": "BiomeVisuals+EnvironmentVolumeOverride",
+                "Environment": {
+                  "$enum": "EnvironmentType",
+                  "name": "Underground, Building, Elevator, TrainTunnels, UnderwaterLab, BuildingDark, BuildingVeryDark, NoSunlight",
+                  "value": 1899,
+                  "flagNames": [
+                    "Underground",
+                    "Building",
+                    "Elevator",
+                    "TrainTunnels",
+                    "UnderwaterLab",
+                    "BuildingDark",
+                    "BuildingVeryDark",
+                    "NoSunlight"
+                  ]
+                },
+                "Biome": {
+                  "$enum": "TerrainBiome+Enum",
+                  "name": "Temperate",
+                  "value": 2,
+                  "flagNames": [
+                    "Temperate"
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "bush_sparse",
+        "layer": {
+          "index": 16,
+          "name": "World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.82399749755859375,
+          "y": 0.15299999713897705,
+          "z": -0.57500076293945313
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": -0.39801472425460815,
+          "z": 0.0,
+          "w": 0.91737908124923706
+        },
+        "localScale": {
+          "x": 1.5000002384185791,
+          "y": 1.5,
+          "z": 1.5000002384185791
+        },
+        "components": [
+          {
+            "$type": "BiomeVisuals",
+            "$name": "bush_sparse",
+            "Arid": null,
+            "Temperate": null,
+            "Tundra": null,
+            "Arctic": null,
+            "OverrideBiome": false,
+            "ToOverride": {
+              "$enum": "TerrainBiome+Enum",
+              "name": "0",
+              "value": 0,
+              "flagNames": []
+            },
+            "EnvironmentVolumeOverrides": []
+          }
+        ],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "TerrainAnchor": [
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 802190701,
+        "hierachyName": "junkpile_c/TerrainAnchor/(121.0, 95.3)",
+        "Extents": 1.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -4.0,
+          "y": 0.0,
+          "z": -2.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -4.0,
+          "y": 0.0,
+          "z": -2.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+        "instanceID": 1517924,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 802190701,
+        "hierachyName": "junkpile_c/TerrainAnchor/(121.0, 97.3)",
+        "Extents": 1.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -4.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -4.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+        "instanceID": 1515808,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 802190701,
+        "hierachyName": "junkpile_c/TerrainAnchor/(121.0, 99.3)",
+        "Extents": 1.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -4.0,
+          "y": 0.0,
+          "z": 2.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -4.0,
+          "y": 0.0,
+          "z": 2.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+        "instanceID": 1517026,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 802190701,
+        "hierachyName": "junkpile_c/TerrainAnchor/(123.0, 93.3)",
+        "Extents": 1.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -2.0,
+          "y": 0.0,
+          "z": -4.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -2.0,
+          "y": 0.0,
+          "z": -4.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+        "instanceID": 1516512,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 802190701,
+        "hierachyName": "junkpile_c/TerrainAnchor/(123.0, 95.3)",
+        "Extents": 1.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -2.0,
+          "y": 0.0,
+          "z": -2.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -2.0,
+          "y": 0.0,
+          "z": -2.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+        "instanceID": 1514220,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 802190701,
+        "hierachyName": "junkpile_c/TerrainAnchor/(123.0, 97.3)",
+        "Extents": 1.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -2.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -2.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+        "instanceID": 1514256,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 802190701,
+        "hierachyName": "junkpile_c/TerrainAnchor/(123.0, 99.3)",
+        "Extents": 1.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -2.0,
+          "y": 0.0,
+          "z": 2.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -2.0,
+          "y": 0.0,
+          "z": 2.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+        "instanceID": 1512518,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 802190701,
+        "hierachyName": "junkpile_c/TerrainAnchor/(123.0, 101.3)",
+        "Extents": 1.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": -2.0,
+          "y": 0.0,
+          "z": 4.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": -2.0,
+          "y": 0.0,
+          "z": 4.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+        "instanceID": 1513984,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 802190701,
+        "hierachyName": "junkpile_c/TerrainAnchor/(125.0, 93.3)",
+        "Extents": 1.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -4.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -4.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+        "instanceID": 1512278,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 802190701,
+        "hierachyName": "junkpile_c/TerrainAnchor/(125.0, 95.3)",
+        "Extents": 1.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -2.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -2.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+        "instanceID": 1514574,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 802190701,
+        "hierachyName": "junkpile_c/TerrainAnchor/(125.0, 97.3)",
+        "Extents": 1.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+        "instanceID": 1514710,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 802190701,
+        "hierachyName": "junkpile_c/TerrainAnchor/(125.0, 99.3)",
+        "Extents": 1.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 2.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 2.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+        "instanceID": 1512532,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 802190701,
+        "hierachyName": "junkpile_c/TerrainAnchor/(125.0, 101.3)",
+        "Extents": 1.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 4.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 4.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+        "instanceID": 1512246,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 802190701,
+        "hierachyName": "junkpile_c/TerrainAnchor/(127.0, 93.3)",
+        "Extents": 1.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 2.0,
+          "y": 0.0,
+          "z": -4.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 2.0,
+          "y": 0.0,
+          "z": -4.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+        "instanceID": 1517832,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 802190701,
+        "hierachyName": "junkpile_c/TerrainAnchor/(127.0, 95.3)",
+        "Extents": 1.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 2.0,
+          "y": 0.0,
+          "z": -2.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 2.0,
+          "y": 0.0,
+          "z": -2.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+        "instanceID": 1515922,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 802190701,
+        "hierachyName": "junkpile_c/TerrainAnchor/(127.0, 97.3)",
+        "Extents": 1.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 2.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 2.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+        "instanceID": 1511626,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 802190701,
+        "hierachyName": "junkpile_c/TerrainAnchor/(127.0, 99.3)",
+        "Extents": 1.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 2.0,
+          "y": 0.0,
+          "z": 2.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 2.0,
+          "y": 0.0,
+          "z": 2.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+        "instanceID": 1511814,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 802190701,
+        "hierachyName": "junkpile_c/TerrainAnchor/(127.0, 101.3)",
+        "Extents": 1.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 2.0,
+          "y": 0.0,
+          "z": 4.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 2.0,
+          "y": 0.0,
+          "z": 4.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+        "instanceID": 1514694,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 802190701,
+        "hierachyName": "junkpile_c/TerrainAnchor/(129.0, 95.3)",
+        "Extents": 1.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 4.0,
+          "y": 0.0,
+          "z": -2.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 4.0,
+          "y": 0.0,
+          "z": -2.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+        "instanceID": 1515908,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 802190701,
+        "hierachyName": "junkpile_c/TerrainAnchor/(129.0, 97.3)",
+        "Extents": 1.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 4.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 4.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+        "instanceID": 1513502,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      },
+      {
+        "$type": "TerrainAnchor",
+        "$name": "<destroyed native object>",
+        "prefabID": 802190701,
+        "hierachyName": "junkpile_c/TerrainAnchor/(129.0, 99.3)",
+        "Extents": 1.0,
+        "Offset": -0.5,
+        "Radius": 0.0,
+        "SlopeScale": 0.0,
+        "worldPosition": {
+          "x": 4.0,
+          "y": 0.0,
+          "z": 2.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 4.0,
+          "y": 0.0,
+          "z": 2.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/misc/junkpile/junkpile_c.prefab",
+        "instanceID": 1518026,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "PrefabWeight": [],
+    "DecorComponent": [],
+    "TerrainFilter": [],
+    "WaterCheck": [],
+    "TerrainCheck": [],
+    "EnvironmentVolumeCheck": [],
+    "BoundsCheck": [],
+    "Socket_Base": []
+  }
+}

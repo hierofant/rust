@@ -1,0 +1,459 @@
+{
+  "prefabID": 1587077350,
+  "path": "assets/prefabs/weapons/pickaxe/pickaxe.entity.prefab",
+  "rootClassChain": [
+    "BaseMelee",
+    "AttackEntity",
+    "HeldEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -0.00029951333999633789,
+      "y": 0.032650977373123169,
+      "z": 4.2840838432312012E-08
+    },
+    "size": {
+      "x": 0.51643627882003784,
+      "y": 0.51553487777709961,
+      "z": 0.061131048947572708
+    }
+  },
+  "hierarchy": {
+    "name": "pickaxe.entity",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "BaseMelee",
+        "$name": "pickaxe.entity",
+        "canThrowAsProjectile": true,
+        "canThrowAsEntity": false,
+        "canAiHearIt": false,
+        "canScareAiWhenAimed": false,
+        "onlyThrowAsProjectile": false,
+        "ThrowFullStack": true,
+        "damageProperties": {
+          "$ref": "DamageProperties",
+          "name": "Damage.Melee",
+          "instanceID": 200564
+        },
+        "damageTypes": [
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Stab",
+              "value": 15
+            },
+            "amount": 20.0
+          },
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Slash",
+              "value": 10
+            },
+            "amount": 10.0
+          }
+        ],
+        "deployableDamageOverrides": [],
+        "maxDistance": 1.5,
+        "attackRadius": 0.30000001192092896,
+        "isAutomatic": true,
+        "blockSprintOnAttack": true,
+        "canUntieCrates": false,
+        "longResourceForgiveness": true,
+        "PlayerAnimSystem": null,
+        "strikeFX": {
+          "$ref": "GameObject",
+          "guid": "ee65f507bacef4ff9a39738ae15d8e96",
+          "resourcePath": "assets/prefabs/weapons/pickaxe/effects/strike-soft.prefab",
+          "resourceID": 1826095423
+        },
+        "useStandardHitEffects": true,
+        "aiStrikeDelay": 0.20000000298023224,
+        "swingEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "materialStrikeFX": [
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "generic",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "4259d21c07a0d62489466da6a489dadc",
+              "resourcePath": "assets/prefabs/weapons/pickaxe/effects/strike.prefab",
+              "resourceID": 3324303387
+            }
+          },
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "metal",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "4259d21c07a0d62489466da6a489dadc",
+              "resourcePath": "assets/prefabs/weapons/pickaxe/effects/strike.prefab",
+              "resourceID": 3324303387
+            }
+          },
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "metalore",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "4259d21c07a0d62489466da6a489dadc",
+              "resourcePath": "assets/prefabs/weapons/pickaxe/effects/strike.prefab",
+              "resourceID": 3324303387
+            }
+          },
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "rock",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "4259d21c07a0d62489466da6a489dadc",
+              "resourcePath": "assets/prefabs/weapons/pickaxe/effects/strike.prefab",
+              "resourceID": 3324303387
+            }
+          },
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "concrete",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "4259d21c07a0d62489466da6a489dadc",
+              "resourcePath": "assets/prefabs/weapons/pickaxe/effects/strike.prefab",
+              "resourceID": 3324303387
+            }
+          },
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "wood",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "0e37135a103f04b7486387c7a9e84ce4",
+              "resourcePath": "assets/prefabs/weapons/pickaxe/effects/strike-muted.prefab",
+              "resourceID": 1789077955
+            }
+          }
+        ],
+        "heartStress": 0.5,
+        "gathering": {
+          "$type": "ResourceDispenser+GatherProperties",
+          "Tree": {
+            "$type": "ResourceDispenser+GatherPropertyEntry",
+            "gatherDamage": 0.0,
+            "destroyFraction": 0.0,
+            "conditionLost": 0.0
+          },
+          "Ore": {
+            "$type": "ResourceDispenser+GatherPropertyEntry",
+            "gatherDamage": 30.0,
+            "destroyFraction": 0.0,
+            "conditionLost": 1.0
+          },
+          "Flesh": {
+            "$type": "ResourceDispenser+GatherPropertyEntry",
+            "gatherDamage": 5.0,
+            "destroyFraction": 0.60000002384185791,
+            "conditionLost": 1.0
+          },
+          "ProduceHeadItem": false
+        },
+        "deployDelay": 1.0,
+        "repeatDelay": 1.5,
+        "animationDelay": 0.0,
+        "effectiveRange": 1.0,
+        "npcDamageScale": 1.0,
+        "attackLengthMin": -1.0,
+        "attackLengthMax": -1.0,
+        "attackSpacing": 0.0,
+        "aiAimSwayOffset": 0.0,
+        "aiAimCone": 0.0,
+        "aiOnlyInRange": false,
+        "CloseRangeAddition": 0.0,
+        "MediumRangeAddition": 0.0,
+        "LongRangeAddition": 0.0,
+        "CanUseAtMediumRange": true,
+        "CanUseAtLongRange": true,
+        "reloadSounds": [],
+        "thirdPersonMeleeSound": {
+          "$ref": "SoundDefinition",
+          "name": "pickaxe-attack-3p",
+          "instanceID": 34262
+        },
+        "recoilCompDelayOverride": 0.0,
+        "wantsRecoilComp": false,
+        "showCrosshairOnTutorial": false,
+        "noHeadshots": false,
+        "nextAttackTime": {
+          "$type": "EncryptedValue`1[[System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+        },
+        "worldModelAnimator": null,
+        "thirdPersonDeploySound": {
+          "$ref": "SoundDefinition",
+          "name": "pickaxe-deploy-3p",
+          "instanceID": 28458
+        },
+        "thirdPersonAimSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-up",
+          "instanceID": 24732
+        },
+        "thirdPersonAimEndSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-down",
+          "instanceID": 24854
+        },
+        "hideViewmodel": false,
+        "handBone": "r_prop",
+        "HoldAnimationOverride": {
+          "$ref": "AnimatorOverrideController",
+          "name": "HoldType.Pickaxe",
+          "instanceID": 1022444
+        },
+        "holdInfo": {
+          "$type": "HeldEntity+HoldInfo",
+          "UseCustomSpineOffset": false,
+          "CustomSpineOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ShieldBoneArmRotationAdditive": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "isBuildingTool": false,
+        "canBeUsedWithShield": false,
+        "ForwardSignalsFromPlayer": false,
+        "forcedOwner": null,
+        "useOwnerForward": true,
+        "CanSetLightsOn": false,
+        "holsterInfo": {
+          "$type": "HeldEntity+HolsterInfo",
+          "slot": {
+            "$enum": "HeldEntity+HolsterInfo+HolsterSlot",
+            "name": "BACK",
+            "value": 0
+          },
+          "backpackSlot": {
+            "$enum": "HeldEntity+HolsterInfo+BackpackSlot",
+            "name": "RIGHT",
+            "value": 1
+          },
+          "displayWhenHolstered": true,
+          "holsterBone": "spine3",
+          "holsterOffset": {
+            "x": -0.070000000298023224,
+            "y": -0.15999999642372131,
+            "z": -0.039999999105930328
+          },
+          "holsterRotationOffset": {
+            "x": -88.0,
+            "y": 238.0,
+            "z": 0.0
+          },
+          "backpackHolsterOffset": {
+            "x": -0.20999999344348907,
+            "y": -0.090000003576278687,
+            "z": -0.40999999642372131
+          },
+          "backpackHolsterRotationOffset": {
+            "x": 12.859999656677246,
+            "y": 92.169998168945313,
+            "z": -128.60000610351563
+          }
+        },
+        "HeldCameraMode": {
+          "$enum": "BasePlayer+CameraMode",
+          "name": "FirstPerson",
+          "value": 0
+        },
+        "hostileScore": 4.0,
+        "FirstPersonArmOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonArmRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonRotationStrength": 1.0,
+        "AttachmentAnchor": null,
+        "holsterVisible": false,
+        "genericVisible": false,
+        "ownerItemUID": {
+          "$type": "ItemId",
+          "Value": 0
+        },
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -0.00029951333999633789,
+            "y": 0.032650977373123169,
+            "z": 4.2840838432312012E-08
+          },
+          "size": {
+            "x": 0.51643627882003784,
+            "y": 0.51553487777709961,
+            "z": 0.061131048947572708
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "w_pickaxe",
+          "collision": null,
+          "rootBone": [],
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "w_pickaxe",
+              "instanceID": 1265942,
+              "goName": "w_pickaxe",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "w_pickaxe"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 1587077350,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Small",
+          "value": 0
+        },
+        "net": null
+      },
+      {
+        "$type": "OneActiveSibling",
+        "$name": "pickaxe.entity"
+      }
+    ],
+    "children": [
+      {
+        "name": "w_pickaxe",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "Model",
+            "name": "w_pickaxe",
+            "instanceID": 1545932,
+            "goName": "w_pickaxe",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Socket_Base": []
+  }
+}

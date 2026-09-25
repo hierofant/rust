@@ -1,0 +1,3879 @@
+{
+  "prefabID": 761048428,
+  "path": "assets/prefabs/deployable/dartboard/dartboard.deployed.prefab",
+  "rootClassChain": [
+    "DartsGameBoard",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.10000000149011612
+    },
+    "size": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 0.20000000298023224
+    }
+  },
+  "hierarchy": {
+    "name": "dartboard.deployed",
+    "layer": {
+      "index": 21,
+      "name": "Construction"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "DartsGameBoard",
+        "$name": "dartboard.deployed",
+        "ReticlePrefab": {
+          "$ref": "GameObject",
+          "guid": "76dd186b70349ab4fae54cb9528efbe6",
+          "resourcePath": "assets/prefabs/deployable/dartboard/ui/dartsgame.reticle.prefab",
+          "resourceID": 3111211609
+        },
+        "DartPrefab": {
+          "$ref": "GameObject",
+          "guid": "29cd9d63388918a49a30563bc691a35d",
+          "resourcePath": "assets/prefabs/deployable/dartboard/dartsgame.dart.prefab",
+          "resourceID": 898248986
+        },
+        "UIPrefab": {
+          "$ref": "GameObject",
+          "guid": "e8c16ed3b518a79419c168ceb972a80b",
+          "resourcePath": "assets/prefabs/deployable/dartboard/ui/dartsgame.ui.prefab",
+          "resourceID": 3143510068
+        },
+        "scoreDisplayUIs": [
+          null,
+          null
+        ],
+        "winEffect": {
+          "$ref": "GameObject",
+          "guid": "b70c06da9124bc5458e8c1fa68b2f824",
+          "resourcePath": "assets/prefabs/deployable/dartboard/effects/dart_win_boom.prefab",
+          "resourceID": 4196335528
+        },
+        "bullseyeEffect": null,
+        "bullseyeEffectSound": null,
+        "center": [],
+        "simulatedThrowPoint": [],
+        "radius": 0.18400000035762787,
+        "bandSize": 0.014999999664723873,
+        "tripleBandRadiusOffset": -0.0099999997764825821,
+        "bullseyeRadius": 0.0046000001020729542,
+        "bullRadius": 0.0099999997764825821,
+        "angleOffset": -1.0,
+        "showGizmos": false,
+        "accuracyCurve": {
+          "$type": "UnityEngine.AnimationCurve"
+        },
+        "Leaderboard": null,
+        "GameController": null,
+        "Reticle": null,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "DeployableWood",
+          "comments": "",
+          "density": 2.0,
+          "amounts": [
+            0.89999997615814209,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.89999997615814209,
+            0.5,
+            0.5,
+            0.0,
+            1.0,
+            1.0,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.5,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 3789131351
+        },
+        "startHealth": 100.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "dartboard.item",
+            "itemid": -872679147,
+            "shortname": "dartboard"
+          },
+          "itemCount": 1,
+          "setConditionFromHealth": false,
+          "subtractCondition": 0.0,
+          "requireBuildingPrivilege": true,
+          "requireHammer": true,
+          "requireEmptyInv": false,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "dartboard.item",
+            "itemid": -872679147,
+            "shortname": "dartboard"
+          },
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": true,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.10000000149011612
+          },
+          "size": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 0.20000000298023224
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "dartboard.deployed",
+          "collision": null,
+          "rootBone": [
+            [
+              [
+                [],
+                []
+              ]
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            {
+              "$ref": "Transform",
+              "name": "DeadCenter",
+              "instanceID": 1420092,
+              "goName": "DeadCenter",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            [
+              []
+            ],
+            [
+              []
+            ],
+            [
+              [],
+              [],
+              [
+                [],
+                [],
+                [],
+                []
+              ],
+              [],
+              [],
+              [],
+              [],
+              [
+                [
+                  []
+                ],
+                []
+              ],
+              [
+                [
+                  [
+                    []
+                  ],
+                  []
+                ],
+                [
+                  [
+                    []
+                  ],
+                  []
+                ]
+              ]
+            ],
+            {
+              "$ref": "Transform",
+              "name": "SimulatedThrowPoint",
+              "instanceID": 1402666,
+              "goName": "SimulatedThrowPoint",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            []
+          ],
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "dartboard.deployed",
+              "instanceID": 1278834,
+              "goName": "dartboard.deployed",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "sockets",
+              "instanceID": 1293176,
+              "goName": "sockets",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "free",
+              "instanceID": 1280584,
+              "goName": "free",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "inside",
+              "instanceID": 1292364,
+              "goName": "inside",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "broad checks",
+              "instanceID": 1283772,
+              "goName": "broad checks",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "deploy",
+              "instanceID": 1275734,
+              "goName": "deploy",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "<destroyed native object>",
+              "instanceID": 0,
+              "$error": "Object reference not set to an instance of an object."
+            },
+            {
+              "$ref": "Transform",
+              "name": "preventbuilding",
+              "instanceID": 1287906,
+              "goName": "preventbuilding",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "collision",
+              "instanceID": 1335420,
+              "goName": "collision",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "sideboardcollision",
+              "instanceID": 1425914,
+              "goName": "sideboardcollision",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "sideboardcollision (1)",
+              "instanceID": 1381952,
+              "goName": "sideboardcollision (1)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "DeadCenter",
+              "instanceID": 1420092,
+              "goName": "DeadCenter",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "RadiusTester",
+              "instanceID": 1392372,
+              "goName": "RadiusTester",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "BandSizeTester",
+              "instanceID": 1327952,
+              "goName": "BandSizeTester",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "DartBoard",
+              "instanceID": 1308234,
+              "goName": "DartBoard",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "DartBoard_postit_note",
+              "instanceID": 1373762,
+              "goName": "DartBoard_postit_note",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "dartboard.mountable",
+              "instanceID": 1380642,
+              "goName": "dartboard.mountable",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "MountPos",
+              "instanceID": 1380558,
+              "goName": "MountPos",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "DismountPos",
+              "instanceID": 1380640,
+              "goName": "DismountPos",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "dismountPoints",
+              "instanceID": 1380654,
+              "goName": "dismountPoints",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Dismount",
+              "instanceID": 1380638,
+              "goName": "Dismount",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Dismount (2)",
+              "instanceID": 1380560,
+              "goName": "Dismount (2)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Dismount (3)",
+              "instanceID": 1380650,
+              "goName": "Dismount (3)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Dismount (4)",
+              "instanceID": 1333946,
+              "goName": "Dismount (4)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "eyePos",
+              "instanceID": 1380648,
+              "goName": "eyePos",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "eyeCenter",
+              "instanceID": 1396252,
+              "goName": "eyeCenter",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "collision",
+              "instanceID": 1313636,
+              "goName": "collision",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Cube",
+              "instanceID": 1300474,
+              "goName": "Cube",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "dartsgame.dart",
+              "instanceID": 1331860,
+              "goName": "dartsgame.dart",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "dartboard_dart",
+              "instanceID": 1419282,
+              "goName": "dartboard_dart",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "projectile",
+              "instanceID": 1321364,
+              "goName": "projectile",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "TipOfTheDart",
+              "instanceID": 1336720,
+              "goName": "TipOfTheDart",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "OffHandDartProp",
+              "instanceID": 1420084,
+              "goName": "OffHandDartProp",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "dartsgame.dart",
+              "instanceID": 1307880,
+              "goName": "dartsgame.dart",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "dartboard_dart",
+              "instanceID": 1376994,
+              "goName": "dartboard_dart",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "projectile",
+              "instanceID": 1364142,
+              "goName": "projectile",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "TipOfTheDart",
+              "instanceID": 1312162,
+              "goName": "TipOfTheDart",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "dartsgame.dart (1)",
+              "instanceID": 1330656,
+              "goName": "dartsgame.dart (1)",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "dartboard_dart",
+              "instanceID": 1390816,
+              "goName": "dartboard_dart",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "projectile",
+              "instanceID": 1340688,
+              "goName": "projectile",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "TipOfTheDart",
+              "instanceID": 1325398,
+              "goName": "TipOfTheDart",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "SimulatedThrowPoint",
+              "instanceID": 1402666,
+              "goName": "SimulatedThrowPoint",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Mat",
+              "instanceID": 1426774,
+              "goName": "Mat",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "dartboard.deployed",
+            "sockets",
+            "free",
+            "inside",
+            "check (4)",
+            "check (7)",
+            "check (9)",
+            "check (8)",
+            "broad checks",
+            "check (1)",
+            "check (2)",
+            "notInWater",
+            "handle",
+            "deploy",
+            "volume",
+            "preventbuilding",
+            "collision",
+            "sideboardcollision",
+            "sideboardcollision (1)",
+            "DeadCenter",
+            "RadiusTester",
+            "BandSizeTester",
+            "DartBoard",
+            "DartBoard_postit_note",
+            "dartboard.mountable",
+            "MountPos",
+            "DismountPos",
+            "dismountPoints",
+            "Dismount",
+            "Dismount (2)",
+            "Dismount (3)",
+            "Dismount (4)",
+            "eyePos",
+            "eyeCenter",
+            "collision",
+            "Cube",
+            "dartsgame.dart",
+            "dartboard_dart",
+            "projectile",
+            "TipOfTheDart",
+            "OffHandDartProp",
+            "dartsgame.dart",
+            "dartboard_dart",
+            "projectile",
+            "TipOfTheDart",
+            "dartsgame.dart (1)",
+            "dartboard_dart",
+            "projectile",
+            "TipOfTheDart",
+            "SimulatedThrowPoint",
+            "Mat"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 761048428,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Small",
+          "value": 0
+        },
+        "net": null
+      },
+      {
+        "$ref": "Model",
+        "name": "dartboard.deployed",
+        "instanceID": 1517792,
+        "goName": "dartboard.deployed",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$type": "GroundWatch",
+        "$name": "dartboard.deployed",
+        "groundPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "layers": 161546240,
+        "radius": 0.10000000149011612,
+        "needBuildingBlock": true,
+        "needOnlyOneAreaCheckValid": false,
+        "whitelist": [],
+        "fails": 0,
+        "_baseEntity": null
+      },
+      {
+        "$type": "DestroyOnGroundMissing",
+        "$name": "dartboard.deployed"
+      }
+    ],
+    "children": [
+      {
+        "name": "sockets",
+        "layer": {
+          "index": 22,
+          "name": "Construction Socket"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "free",
+            "layer": {
+              "index": 22,
+              "name": "Construction Socket"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.020899999886751175
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "inside",
+                "layer": {
+                  "index": 22,
+                  "name": "Construction Socket"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "broad checks",
+                "layer": {
+                  "index": 22,
+                  "name": "Construction Socket"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "deploy",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "preventbuilding",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "preventbuilding",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.10000000149011612
+            },
+            "size": {
+              "x": 1.4800000190734863,
+              "y": 1.0,
+              "z": 0.20000000298023224
+            },
+            "isTrigger": false,
+            "enabled": true
+          },
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "preventbuilding",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": -0.36000001430511475,
+              "z": 1.3899999856948853
+            },
+            "size": {
+              "x": 1.0,
+              "y": 1.75,
+              "z": 2.4100000858306885
+            },
+            "isTrigger": false,
+            "enabled": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "collision",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Usable Primary",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.02500000037252903
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "collision",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.002548515796661377,
+              "y": -0.00956350564956665,
+              "z": 0.052492003887891769
+            },
+            "size": {
+              "x": 0.70375001430511475,
+              "y": 0.86929261684417725,
+              "z": 0.10498400777578354
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          },
+          {
+            "$type": "ColliderInfo",
+            "$name": "collision",
+            "flags": {
+              "$enum": "ColliderInfo+Flags",
+              "name": "Usable, Shootable, Melee",
+              "value": 7,
+              "flagNames": [
+                "Usable",
+                "Shootable",
+                "Melee"
+              ]
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "sideboardcollision",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.5820000171661377,
+          "y": 0.0,
+          "z": 0.0949999988079071
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": -0.17364825308322906,
+          "z": 0.0,
+          "w": 0.98480778932571411
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "sideboardcollision",
+            "colliderType": "Box",
+            "center": {
+              "x": -0.020246582105755806,
+              "y": -0.0030969977378845215,
+              "z": 0.015365204773843288
+            },
+            "size": {
+              "x": 0.3685973584651947,
+              "y": 0.85688602924346924,
+              "z": 0.046470537781715393
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "sideboardcollision (1)",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -0.56000000238418579,
+          "y": 0.0,
+          "z": 0.086999997496604919
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.1736481636762619,
+          "z": 0.0,
+          "w": 0.98480778932571411
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "sideboardcollision (1)",
+            "colliderType": "Box",
+            "center": {
+              "x": -0.020246582105755806,
+              "y": -0.0030969977378845215,
+              "z": 0.015365204773843288
+            },
+            "size": {
+              "x": 0.3685973584651947,
+              "y": 0.85688602924346924,
+              "z": 0.046470537781715393
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "DeadCenter",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.125
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.5
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "RadiusTester",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.40889999270439148,
+          "y": 0.0,
+          "z": 0.11445001512765884
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.5
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "BandSizeTester",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.017699986696243286,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "DartBoard",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -0.0030000000260770321,
+          "y": 0.0030000000260770321,
+          "z": 0.019999999552965164
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "DartBoard_postit_note",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "dartboard.mountable",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": -1.5,
+          "z": 2.4230000972747803
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "DartsGameMountable",
+            "$name": "dartboard.mountable",
+            "DartsViewModel": {
+              "$type": "ViewModel",
+              "$name": "dartboard.mountable",
+              "viewModelPrefab": {
+                "$ref": "GameObject",
+                "guid": "1b06464913e9f8342bf517d47b15daa6",
+                "resourcePath": "assets/prefabs/deployable/dartboard/dartboard.viewmodel.prefab",
+                "resourceID": 3629316940
+              }
+            },
+            "animationSubSystem": {
+              "$type": "DartsGameAnimationSubSystem",
+              "$name": "dartboard.mountable",
+              "ChildController": {
+                "$ref": "RuntimeAnimatorController",
+                "name": "3p_darts_childcontroller",
+                "instanceID": 1020340
+              },
+              "Weight": 1.0,
+              "SubSystemName": "DartsGame",
+              "Mask": null,
+              "FadeInTime": 0.25,
+              "FadeOutTime": 0.25,
+              "DisableDuringGestures": false,
+              "DisableSpineIK": true,
+              "Priority": {
+                "$enum": "AnimationSubSystem+PriorityLevels",
+                "name": "High",
+                "value": 2
+              }
+            },
+            "DartHeldProp": {
+              "$ref": "Transform",
+              "name": "dartsgame.dart",
+              "instanceID": 1331860,
+              "goName": "dartsgame.dart",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            "DartOffhandProp": {
+              "$ref": "Transform",
+              "name": "OffHandDartProp",
+              "instanceID": 1420084,
+              "goName": "OffHandDartProp",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            "DartPropRenderers": [
+              {
+                "$type": "UnityEngine.MeshRenderer",
+                "$name": "projectile",
+                "sharedMaterials": [
+                  null
+                ],
+                "enabled": true
+              },
+              {
+                "$type": "UnityEngine.MeshRenderer",
+                "$name": "projectile",
+                "sharedMaterials": [
+                  null
+                ],
+                "enabled": true
+              },
+              {
+                "$type": "UnityEngine.MeshRenderer",
+                "$name": "projectile",
+                "sharedMaterials": [
+                  null
+                ],
+                "enabled": true
+              }
+            ],
+            "OffhandDarts": [
+              {
+                "$ref": "Transform",
+                "name": "dartsgame.dart",
+                "instanceID": 1307880,
+                "goName": "dartsgame.dart",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              {
+                "$ref": "Transform",
+                "name": "dartsgame.dart (1)",
+                "instanceID": 1330656,
+                "goName": "dartsgame.dart (1)",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "hideDartPropForSeconds": 1.0,
+            "player1Colour": {
+              "r": 0.239215686917305,
+              "g": 0.56470590829849243,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "player2Colour": {
+              "r": 1.0,
+              "g": 0.94509804248809814,
+              "b": 0.239215686917305,
+              "a": 1.0
+            },
+            "mountSyncType": {
+              "$enum": "BaseMountable+MountSyncType",
+              "name": "RepositionPerFrame",
+              "value": 0
+            },
+            "eyePositionOverride": {
+              "$ref": "Transform",
+              "name": "eyePos",
+              "instanceID": 1380648,
+              "goName": "eyePos",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            "eyeCenterOverride": {
+              "$ref": "Transform",
+              "name": "eyeCenter",
+              "instanceID": 1396252,
+              "goName": "eyeCenter",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            "overrideEyesRotation": false,
+            "pitchClamp": {
+              "x": -10.0,
+              "y": 10.0
+            },
+            "yawClamp": {
+              "x": -10.0,
+              "y": 10.0
+            },
+            "canWieldItems": false,
+            "relativeViewAngles": true,
+            "disableLegsWhenMounted": false,
+            "disableBreastCensorshipWhenMounted": false,
+            "AllowForceMountWhenRestrained": false,
+            "mountChaining": true,
+            "mountAnchor": {
+              "$ref": "Transform",
+              "name": "MountPos",
+              "instanceID": 1380558,
+              "goName": "MountPos",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            "mountLOSVertOffset": 0.5,
+            "mountedAnimationSpeed": 0.0,
+            "mountPose": {
+              "$enum": "PlayerModel+MountPoses",
+              "name": "Standing",
+              "value": 128
+            },
+            "animateVehicleAim360": false,
+            "maxMountDistance": 1.5,
+            "dismountPositions": [
+              {
+                "$ref": "Transform",
+                "name": "Dismount",
+                "instanceID": 1380638,
+                "goName": "Dismount",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              {
+                "$ref": "Transform",
+                "name": "Dismount (2)",
+                "instanceID": 1380560,
+                "goName": "Dismount (2)",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              {
+                "$ref": "Transform",
+                "name": "Dismount (3)",
+                "instanceID": 1380650,
+                "goName": "Dismount (3)",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              {
+                "$ref": "Transform",
+                "name": "Dismount (4)",
+                "instanceID": 1333946,
+                "goName": "Dismount (4)",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "checkPlayerLosOnMount": false,
+            "disableMeshCullingForPlayers": false,
+            "allowHeadLook": false,
+            "ignoreVehicleParent": false,
+            "legacyDismount": false,
+            "wearWhileMounted": null,
+            "modifiesPlayerCollider": false,
+            "customPlayerCollider": {
+              "$type": "BasePlayer+CapsuleColliderInfo",
+              "height": 0.0,
+              "radius": 0.0,
+              "center": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "clippingCheckRadius": 0.40000000596046448,
+            "clippingAndVisChecks": false,
+            "clippingChecksLocation": {
+              "$enum": "BaseMountable+ClippingCheckLocation",
+              "name": "HeadOnly",
+              "value": 0
+            },
+            "mountSoundDef": {
+              "$ref": "SoundDefinition",
+              "name": "dartboard-mount",
+              "instanceID": 368782
+            },
+            "swapSoundDef": {
+              "$ref": "SoundDefinition",
+              "name": "dartboard-dismount",
+              "instanceID": 186662
+            },
+            "dismountSoundDef": null,
+            "allowFootstepEffects": false,
+            "dismountHoldType": {
+              "$enum": "BaseMountable+DismountConvarType",
+              "name": "Misc",
+              "value": 0
+            },
+            "mountTimeStatType": {
+              "$enum": "BaseMountable+MountStatType",
+              "name": "None",
+              "value": 0
+            },
+            "allowedGestures": {
+              "$enum": "BaseMountable+MountGestureType",
+              "name": "None",
+              "value": 0
+            },
+            "canDrinkWhileMounted": false,
+            "allowSleeperMounting": false,
+            "shouldShowHudHealth": true,
+            "blockLooting": false,
+            "animateClothInLocalSpace": true,
+            "protectsFromAnimals": false,
+            "MountedCameraMode": {
+              "$enum": "BasePlayer+CameraMode",
+              "name": "FirstPerson",
+              "value": 0
+            },
+            "rigidBody": null,
+            "wantsBoundaryRepelCheck": false,
+            "isMobile": false,
+            "SideLeanAmount": 0.20000000298023224,
+            "_mounted": null,
+            "spawnDeployableCorpseOnDeath": false,
+            "deployableCorpsePrefab": {
+              "$ref": "GameObject",
+              "guid": "",
+              "resourcePath": null,
+              "resourceID": 0
+            },
+            "ItemOwnership": {
+              "$type": "ItemOwnershipShare",
+              "username": null,
+              "reason": null,
+              "amount": 0
+            },
+            "lastDamage": {
+              "$enum": "Rust.DamageType",
+              "name": "Generic",
+              "value": 0
+            },
+            "lastAttacker": null,
+            "lastDealtDamageTo": null,
+            "ResetLifeStateOnSpawn": true,
+            "propDirection": null,
+            "unHostileTime": 0.0,
+            "lastNoiseTime": 0.0,
+            "skeletonProperties": null,
+            "baseProtection": {
+              "$type": "ProtectionProperties",
+              "$name": "Immortal",
+              "comments": "",
+              "density": 100.0,
+              "amounts": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "FilenameStringId": 3206051622
+            },
+            "startHealth": 9999.0,
+            "pickup": {
+              "$type": "BaseCombatEntity+Pickup",
+              "enabled": false,
+              "itemTarget": null,
+              "itemCount": 0,
+              "setConditionFromHealth": false,
+              "subtractCondition": 0.0,
+              "requireBuildingPrivilege": false,
+              "requireHammer": false,
+              "requireEmptyInv": false,
+              "overridePickupTime": 0.0
+            },
+            "repair": {
+              "$type": "BaseCombatEntity+Repair",
+              "enabled": false,
+              "itemTarget": null,
+              "ignoreForRepair": null,
+              "repairEffect": {
+                "$ref": "GameObject",
+                "guid": "",
+                "resourcePath": null,
+                "resourceID": 0
+              },
+              "repairFullEffect": {
+                "$ref": "GameObject",
+                "guid": "",
+                "resourcePath": null,
+                "resourceID": 0
+              },
+              "repairFailedEffect": {
+                "$ref": "GameObject",
+                "guid": "",
+                "resourcePath": null,
+                "resourceID": 0
+              }
+            },
+            "ShowHealthInfo": false,
+            "showHealthInfoThreshold": {
+              "$enum": "BaseCombatEntity+ShowHealthThreshold",
+              "name": "ThreeQuarters",
+              "value": 25
+            },
+            "lifestate": {
+              "$enum": "BaseCombatEntity+LifeState",
+              "name": "Alive",
+              "value": 0
+            },
+            "sendsHitNotification": false,
+            "sendsMeleeHitNotification": true,
+            "markAttackerHostile": true,
+            "maxHealthOverride": 0.0,
+            "_health": 0.0,
+            "_maxHealth": 100.0,
+            "faction": {
+              "$enum": "BaseCombatEntity+Faction",
+              "name": "Default",
+              "value": 0
+            },
+            "lastAttackedTime": "-Infinity",
+            "lastDealtDamageTime": "-Infinity",
+            "lastNotifyFrame": 0,
+            "links": [],
+            "creatorEntity": null,
+            "ticksSinceStopped": 0,
+            "isCallingUpdateNetworkGroup": false,
+            "bounds": {
+              "center": {
+                "x": 0.0,
+                "y": 0.30000001192092896,
+                "z": -0.10000000149011612
+              },
+              "size": {
+                "x": 0.60000002384185791,
+                "y": 0.60000002384185791,
+                "z": 0.60000002384185791
+              }
+            },
+            "impactEffect": {
+              "$ref": "GameObject",
+              "guid": "",
+              "resourcePath": null,
+              "resourceID": 0
+            },
+            "enableSaving": true,
+            "syncPosition": false,
+            "model": null,
+            "flags": {
+              "$enum": "BaseEntity+Flags",
+              "name": "0",
+              "value": 0,
+              "flagNames": []
+            },
+            "parentBone": 0,
+            "skinID": 0,
+            "attachmentID": 0,
+            "HasBrain": false,
+            "_name": null,
+            "networkEntityScale": false,
+            "_spawnable": null,
+            "postNetworkUpdateComponents": [],
+            "_limitedNetworking": false,
+            "parentEntity": {
+              "$type": "EntityRef"
+            },
+            "children": [],
+            "canTriggerParent": true,
+            "creationFrame": 0,
+            "isSpawned": false,
+            "_NetworkCache": null,
+            "prefabID": 2234097594,
+            "globalBroadcast": false,
+            "globalNetworkBehavior": {
+              "$enum": "GlobalNetworkBehavior",
+              "name": "Default",
+              "value": 0
+            },
+            "globalBuildingBlock": false,
+            "networkRange": {
+              "$enum": "EntityNetworkRange",
+              "name": "Small",
+              "value": 0
+            },
+            "net": null
+          },
+          {
+            "$ref": "ViewModel",
+            "name": "dartboard.mountable",
+            "instanceID": 1533754,
+            "goName": "dartboard.mountable",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "DartsGameAnimationSubSystem",
+            "name": "dartboard.mountable",
+            "instanceID": 1532302,
+            "goName": "dartboard.mountable",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": [
+          {
+            "name": "MountPos",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.017500000074505806,
+              "z": 0.20000000298023224
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "DismountPos",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.05000000074505806,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "dismountPoints",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "Dismount",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.05000000074505806,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "Dismount (2)",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.05000000074505806,
+                  "z": -1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "Dismount (3)",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 1.0,
+                  "y": 0.05000000074505806,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "Dismount (4)",
+                "layer": {
+                  "index": 13,
+                  "name": "Vehicle Detailed"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -1.0,
+                  "y": 0.05000000074505806,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "eyePos",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 1.5,
+              "z": 0.20000000298023224
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "eyeCenter",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 1.5,
+              "z": 0.20000000298023224
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "collision",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Usable Primary",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -0.10000000149011612
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.BoxCollider",
+                "$name": "collision",
+                "colliderType": "Box",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.05000000074505806,
+                  "z": 0.0
+                },
+                "size": {
+                  "x": 0.5,
+                  "y": 0.10000000149011612,
+                  "z": 0.5
+                },
+                "isTrigger": false,
+                "enabled": true
+              },
+              {
+                "$type": "ColliderInfo",
+                "$name": "collision",
+                "flags": {
+                  "$enum": "ColliderInfo+Flags",
+                  "name": "Usable",
+                  "value": 1,
+                  "flagNames": [
+                    "Usable"
+                  ]
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "Cube",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": false,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.05000000074505806,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 0.5,
+              "y": 0.10000000149011612,
+              "z": 0.5
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.MeshFilter",
+                "$name": "Cube",
+                "sharedMesh": {
+                  "$ref": "Mesh",
+                  "name": "Cube",
+                  "meshId": "Cube_ee3886f0"
+                }
+              },
+              {
+                "$type": "UnityEngine.MeshRenderer",
+                "$name": "Cube",
+                "sharedMaterials": [
+                  null
+                ],
+                "enabled": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "dartsgame.dart",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.014199972152709961,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 1.0,
+              "y": -1.3266331366779127E-09,
+              "z": 3.8660110668331527E-09,
+              "w": 4.76837158203125E-07
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "Poolable",
+                "$name": "dartsgame.dart",
+                "restoreHierarchy": false,
+                "prefabID": 0,
+                "behaviours": [],
+                "rigidbodies": [],
+                "colliders": [],
+                "lodgroups": [],
+                "renderers": [],
+                "particles": [],
+                "behaviourStates": [],
+                "rigidbodyStates": [],
+                "colliderStates": [],
+                "lodgroupStates": [],
+                "rendererStates": [],
+                "childActiveStates": []
+              }
+            ],
+            "children": [
+              {
+                "name": "dartboard_dart",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "projectile",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "UnityEngine.MeshFilter",
+                        "$name": "projectile"
+                      },
+                      {
+                        "$ref": "MeshRenderer",
+                        "name": "projectile",
+                        "instanceID": 1441134,
+                        "goName": "projectile",
+                        "$alreadyDumpedElsewhereInThisFile": true
+                      },
+                      {
+                        "$type": "MeshLOD",
+                        "$name": "projectile",
+                        "States": [
+                          {
+                            "$type": "MeshLOD+State",
+                            "distance": 0.0,
+                            "mesh": null,
+                            "disableShadows": false
+                          },
+                          {
+                            "$type": "MeshLOD+State",
+                            "distance": 20.0,
+                            "mesh": null,
+                            "disableShadows": false
+                          },
+                          {
+                            "$type": "MeshLOD+State",
+                            "distance": 60.0,
+                            "mesh": null,
+                            "disableShadows": false
+                          }
+                        ],
+                        "DistanceMode": {
+                          "$enum": "LODDistanceMode",
+                          "name": "XYZ",
+                          "value": 0
+                        },
+                        "OccludeeParams": {
+                          "$type": "LODComponent+OccludeeParameters",
+                          "isDynamic": false,
+                          "dynamicUpdateInterval": 0.20000000298023224,
+                          "shadowRangeScale": 3.0,
+                          "showBounds": false,
+                          "forceVisible": false
+                        }
+                      }
+                    ],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "TipOfTheDart",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.045400001108646393
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "OffHandDartProp",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "dartsgame.dart",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0142000000923872,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 1.0,
+                  "y": -1.3266331366779127E-09,
+                  "z": 3.8660110668331527E-09,
+                  "w": 4.76837158203125E-07
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "Poolable",
+                    "$name": "dartsgame.dart",
+                    "restoreHierarchy": false,
+                    "prefabID": 0,
+                    "behaviours": [],
+                    "rigidbodies": [],
+                    "colliders": [],
+                    "lodgroups": [],
+                    "renderers": [],
+                    "particles": [],
+                    "behaviourStates": [],
+                    "rigidbodyStates": [],
+                    "colliderStates": [],
+                    "lodgroupStates": [],
+                    "rendererStates": [],
+                    "childActiveStates": []
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "dartboard_dart",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "projectile",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.MeshFilter",
+                            "$name": "projectile"
+                          },
+                          {
+                            "$ref": "MeshRenderer",
+                            "name": "projectile",
+                            "instanceID": 1441850,
+                            "goName": "projectile",
+                            "$alreadyDumpedElsewhereInThisFile": true
+                          },
+                          {
+                            "$type": "MeshLOD",
+                            "$name": "projectile",
+                            "States": [
+                              {
+                                "$type": "MeshLOD+State",
+                                "distance": 0.0,
+                                "mesh": null,
+                                "disableShadows": false
+                              },
+                              {
+                                "$type": "MeshLOD+State",
+                                "distance": 20.0,
+                                "mesh": null,
+                                "disableShadows": false
+                              },
+                              {
+                                "$type": "MeshLOD+State",
+                                "distance": 60.0,
+                                "mesh": null,
+                                "disableShadows": false
+                              }
+                            ],
+                            "DistanceMode": {
+                              "$enum": "LODDistanceMode",
+                              "name": "XYZ",
+                              "value": 0
+                            },
+                            "OccludeeParams": {
+                              "$type": "LODComponent+OccludeeParameters",
+                              "isDynamic": false,
+                              "dynamicUpdateInterval": 0.20000000298023224,
+                              "shadowRangeScale": 3.0,
+                              "showBounds": false,
+                              "forceVisible": false
+                            }
+                          }
+                        ],
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "TipOfTheDart",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.045400001108646393
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "dartsgame.dart (1)",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.01119999960064888,
+                  "y": 0.0,
+                  "z": 0.010300000198185444
+                },
+                "localRotation": {
+                  "x": 0.999617874622345,
+                  "y": -1.2066513122022116E-08,
+                  "z": 0.027645498514175415,
+                  "w": 4.6854370339133311E-07
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "Poolable",
+                    "$name": "dartsgame.dart (1)",
+                    "restoreHierarchy": false,
+                    "prefabID": 0,
+                    "behaviours": [],
+                    "rigidbodies": [],
+                    "colliders": [],
+                    "lodgroups": [],
+                    "renderers": [],
+                    "particles": [],
+                    "behaviourStates": [],
+                    "rigidbodyStates": [],
+                    "colliderStates": [],
+                    "lodgroupStates": [],
+                    "rendererStates": [],
+                    "childActiveStates": []
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "dartboard_dart",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "projectile",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UnityEngine.MeshFilter",
+                            "$name": "projectile"
+                          },
+                          {
+                            "$ref": "MeshRenderer",
+                            "name": "projectile",
+                            "instanceID": 1441660,
+                            "goName": "projectile",
+                            "$alreadyDumpedElsewhereInThisFile": true
+                          },
+                          {
+                            "$type": "MeshLOD",
+                            "$name": "projectile",
+                            "States": [
+                              {
+                                "$type": "MeshLOD+State",
+                                "distance": 0.0,
+                                "mesh": null,
+                                "disableShadows": false
+                              },
+                              {
+                                "$type": "MeshLOD+State",
+                                "distance": 20.0,
+                                "mesh": null,
+                                "disableShadows": false
+                              },
+                              {
+                                "$type": "MeshLOD+State",
+                                "distance": 60.0,
+                                "mesh": null,
+                                "disableShadows": false
+                              }
+                            ],
+                            "DistanceMode": {
+                              "$enum": "LODDistanceMode",
+                              "name": "XYZ",
+                              "value": 0
+                            },
+                            "OccludeeParams": {
+                              "$type": "LODComponent+OccludeeParameters",
+                              "isDynamic": false,
+                              "dynamicUpdateInterval": 0.20000000298023224,
+                              "shadowRangeScale": 3.0,
+                              "showBounds": false,
+                              "forceVisible": false
+                            }
+                          }
+                        ],
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "TipOfTheDart",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.045400001108646393
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "SimulatedThrowPoint",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 2.2999999523162842
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "Mat",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -0.0044999998062849045,
+          "y": -1.4919999837875366,
+          "z": 0.02199999988079071
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Deployable": [
+      {
+        "$type": "Deployable",
+        "$name": "<destroyed native object>",
+        "prefabID": 761048428,
+        "hierachyName": "dartboard.deployed",
+        "guidePrefab": {
+          "$ref": "GameObject",
+          "guid": "94362126c25e03a43899012bd19045ee",
+          "resourcePath": "assets/prefabs/deployable/dartboard/model/dartboardguideprefab.prefab",
+          "resourceID": 2420511586
+        },
+        "guideMesh": null,
+        "guideMeshScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "overrideRotation": true,
+        "guideMeshOrientation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "guideMeshPositionOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "moveGuideTowardsCamera": true,
+        "guideLights": true,
+        "wantsInstanceData": false,
+        "copyInventoryFromItem": false,
+        "setSocketParent": false,
+        "toSlot": false,
+        "slot": {
+          "$enum": "BaseEntity+Slot",
+          "name": "Lock",
+          "value": 0
+        },
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "f40264507d4e7435ca472f9a3787f749",
+          "resourcePath": "assets/prefabs/deployable/dartboard/effects/dartboard-deploy.prefab",
+          "resourceID": 1845542922
+        },
+        "guideTargets": [],
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.10000000149011612
+          },
+          "size": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 0.20000000298023224
+          }
+        },
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/dartboard/dartboard.deployed.prefab",
+        "instanceID": 1515730,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Construction": [
+      {
+        "$type": "Construction",
+        "$name": "<destroyed native object>",
+        "prefabID": 761048428,
+        "hierachyName": "dartboard.deployed",
+        "info": {
+          "$type": "BaseEntity+Menu+Option",
+          "name": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "description": {
+            "$type": "Translate+Phrase",
+            "token": "",
+            "legacyEnglish": ""
+          },
+          "icon": null,
+          "order": 0,
+          "usableWhileWounded": false
+        },
+        "canBypassBuildingPermission": false,
+        "showBuildingBlockedPreview": true,
+        "canPlaceOnRoads": false,
+        "canRotateBeforePlacement": false,
+        "canRotateAfterPlacement": false,
+        "canBeDeployedInDeepSeaWater": false,
+        "checkVolumeOnRotate": false,
+        "checkVolumeOnUpgrade": false,
+        "canPlaceAtMaxDistance": false,
+        "placeOnWater": false,
+        "overridePlacementLayer": false,
+        "overridedPlacementLayer": 0,
+        "additionalPlacementLayer": 0,
+        "rotationAmount": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "applyStartingRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "deployOffset": null,
+        "enforceLineOfSightCheckAgainstParentEntity": false,
+        "canSnap": false,
+        "forceY": false,
+        "forceYValue": 0.0,
+        "forceYToOceanLevel": false,
+        "OceanLevelYOffset": 0.0,
+        "holdToPlaceDuration": 0.0,
+        "canFloodFillSockets": false,
+        "alternativeLOSChecks": false,
+        "alternativeLOSPositions": [],
+        "canUseLastValidPosition": true,
+        "healthMultiplier": 1.0,
+        "costMultiplier": 1.0,
+        "maxplaceDistance": 4.0,
+        "minPlaceDistance": 1.0,
+        "guideMesh": null,
+        "guideMeshMaterial": [],
+        "placeEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "hideBuildingPlannerViewmodel": true,
+        "allSockets": [
+          {
+            "$type": "Socket_Free",
+            "$name": "<destroyed native object>",
+            "prefabID": 761048428,
+            "hierachyName": "dartboard.deployed/sockets/free",
+            "idealPlacementNormal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "useTargetNormal": true,
+            "snapToTargetProvidedRotations": false,
+            "blendAimAngle": false,
+            "male": true,
+            "maleDummy": false,
+            "female": false,
+            "femaleDummy": false,
+            "femaleNoStability": false,
+            "monogamous": false,
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.020899999886751175
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "selectSize": {
+              "x": 2.0,
+              "y": 0.10000000149011612,
+              "z": 2.0
+            },
+            "selectCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            },
+            "socketName": "dartboard.deployed/sockets/free",
+            "socketMods": [
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 761048428,
+                "hierachyName": "dartboard.deployed/sockets/free/inside/check (4)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.079999998211860657
+                  }
+                },
+                "layerMask": 136314880,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": -0.0071000009775161743
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": -0.028000000864267349
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/dartboard/dartboard.deployed.prefab",
+                "instanceID": 1556898,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 761048428,
+                "hierachyName": "dartboard.deployed/sockets/free/inside/check (7)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.039999999105930328,
+                    "y": 0.019999999552965164,
+                    "z": 2.5999999046325684
+                  }
+                },
+                "layerMask": 136314880,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": -0.37599998712539673,
+                  "y": -1.5,
+                  "z": 1.5119000673294067
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                },
+                "localPosition": {
+                  "x": -0.37599998712539673,
+                  "y": -1.5,
+                  "z": 1.4910000562667847
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/dartboard/dartboard.deployed.prefab",
+                "instanceID": 1539262,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 761048428,
+                "hierachyName": "dartboard.deployed/sockets/free/inside/check (9)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.039999999105930328,
+                    "y": 0.019999999552965164,
+                    "z": 2.5999999046325684
+                  }
+                },
+                "layerMask": 136314880,
+                "wantsInside": true,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.36599999666213989,
+                  "y": -1.5,
+                  "z": 1.5119000673294067
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                },
+                "localPosition": {
+                  "x": 0.36599999666213989,
+                  "y": -1.5,
+                  "z": 1.4910000562667847
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/dartboard/dartboard.deployed.prefab",
+                "instanceID": 1531342,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 761048428,
+                "hierachyName": "dartboard.deployed/sockets/free/inside/check (8)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 0.62000000476837158,
+                    "y": 0.20000000298023224,
+                    "z": 0.56000000238418579
+                  }
+                },
+                "layerMask": 136314880,
+                "wantsInside": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0020000000949949026,
+                  "y": -1.3899999856948853,
+                  "z": 2.5109000205993652
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                },
+                "localPosition": {
+                  "x": 0.0020000000949949026,
+                  "y": -1.3899999856948853,
+                  "z": 2.4900000095367432
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/dartboard/dartboard.deployed.prefab",
+                "instanceID": 1570712,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 761048428,
+                "hierachyName": "dartboard.deployed/sockets/free/broad checks/check (1)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 1.5,
+                    "y": 0.87999999523162842,
+                    "z": 0.20000000298023224
+                  }
+                },
+                "layerMask": 1352859905,
+                "wantsInside": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.1898999959230423
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.16899999976158142
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/dartboard/dartboard.deployed.prefab",
+                "instanceID": 1576722,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_AreaCheck",
+                "$name": "<destroyed native object>",
+                "prefabID": 761048428,
+                "hierachyName": "dartboard.deployed/sockets/free/broad checks/check (2)",
+                "bounds": {
+                  "center": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "size": {
+                    "x": 1.4600000381469727,
+                    "y": 1.7999999523162842,
+                    "z": 2.5999999046325684
+                  }
+                },
+                "layerMask": 1352728833,
+                "wantsInside": false,
+                "ignoreAntiLargeVehicleCheck": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": -0.53700000047683716,
+                  "z": 1.5009000301361084
+                },
+                "worldRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": -0.53700000047683716,
+                  "z": 1.4800000190734863
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "fullName": "assets/prefabs/deployable/dartboard/dartboard.deployed.prefab",
+                "instanceID": 1561778,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              },
+              {
+                "$type": "SocketMod_InWater",
+                "$name": "<destroyed native object>",
+                "prefabID": 761048428,
+                "hierachyName": "dartboard.deployed/sockets/free/broad checks/notInWater",
+                "wantsInWater": false,
+                "excludeArtificialWater": false,
+                "baseSocket": {
+                  "$cycle": true,
+                  "type": "Socket_Free"
+                },
+                "FailedPhrase": {
+                  "$type": "Translate+Phrase",
+                  "token": "",
+                  "legacyEnglish": ""
+                },
+                "worldPosition": {
+                  "x": 0.0,
+                  "y": -0.72000002861022949,
+                  "z": 0.52090001106262207
+                },
+                "worldRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "worldForward": {
+                  "x": 0.0,
+                  "y": 0.99999994039535522,
+                  "z": -1.1920928955078125E-07
+                },
+                "localPosition": {
+                  "x": 0.0,
+                  "y": -0.72000002861022949,
+                  "z": 0.5
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "localRotation": {
+                  "x": -0.7071068286895752,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.70710670948028564
+                },
+                "fullName": "assets/prefabs/deployable/dartboard/dartboard.deployed.prefab",
+                "instanceID": 1564064,
+                "prefabAttribute": {
+                  "$ref": "Library",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "gameManager": {
+                  "$ref": "GameManager",
+                  "note": "global registry singleton, omitted (not per-object data)"
+                },
+                "isServer": true
+              }
+            ],
+            "checkOccupiedSockets": [],
+            "worldPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.020899999886751175
+            },
+            "worldRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "worldForward": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.020899999886751175
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "fullName": "assets/prefabs/deployable/dartboard/dartboard.deployed.prefab",
+            "instanceID": 1511954,
+            "prefabAttribute": {
+              "$ref": "Library",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "gameManager": {
+              "$ref": "GameManager",
+              "note": "global registry singleton, omitted (not per-object data)"
+            },
+            "isServer": true
+          }
+        ],
+        "allProximities": [],
+        "defaultGrade": null,
+        "socketHandle": {
+          "$type": "SocketHandle",
+          "$name": "<destroyed native object>",
+          "prefabID": 761048428,
+          "hierachyName": "dartboard.deployed/sockets/handle",
+          "worldPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "worldRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "worldForward": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "localScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "localRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "fullName": "assets/prefabs/deployable/dartboard/dartboard.deployed.prefab",
+          "instanceID": 1514948,
+          "prefabAttribute": {
+            "$ref": "Library",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "gameManager": {
+            "$ref": "GameManager",
+            "note": "global registry singleton, omitted (not per-object data)"
+          },
+          "isServer": true
+        },
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.10000000149011612
+          },
+          "size": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 0.20000000298023224
+          }
+        },
+        "isBuildingPrivilege": false,
+        "isSleepingBag": false,
+        "grades": [],
+        "deployable": {
+          "$ref": "Deployable",
+          "name": "<destroyed native object>",
+          "instanceID": 0,
+          "$error": "Object reference not set to an instance of an object.",
+          "$alreadyDumpedElsewhereInThisFile": true
+        },
+        "placeholder": null,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/dartboard/dartboard.deployed.prefab",
+        "instanceID": 1515948,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Decay": [
+      {
+        "$type": "DeployableDecay",
+        "$name": "<destroyed native object>",
+        "prefabID": 761048428,
+        "hierachyName": "dartboard.deployed",
+        "decayDelay": 8.0,
+        "decayDuration": 8.0,
+        "overrideHealRate": false,
+        "decayTickOverride": 0.0,
+        "decayIndoors": false,
+        "healRate": 1.0,
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/dartboard/dartboard.deployed.prefab",
+        "instanceID": 1513668,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ],
+    "Socket_Base": [
+      {
+        "$ref": "Socket_Free",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "SocketMod": [
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_AreaCheck",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$ref": "SocketMod_InWater",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "SocketHandle": [
+      {
+        "$ref": "SocketHandle",
+        "name": "<destroyed native object>",
+        "instanceID": 0,
+        "$error": "Object reference not set to an instance of an object.",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "DeployVolume": [
+      {
+        "$type": "DeployVolumeOBB",
+        "$name": "<destroyed native object>",
+        "prefabID": 761048428,
+        "hierachyName": "dartboard.deployed/deploy/volume",
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": -0.5,
+            "z": 1.4249999523162842
+          },
+          "size": {
+            "x": 1.5,
+            "y": 2.0,
+            "z": 2.7999999523162842
+          }
+        },
+        "layers": 536870912,
+        "ignore": {
+          "$enum": "ColliderInfo+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "entityMode": {
+          "$enum": "DeployVolume+EntityMode",
+          "name": "ExcludeList",
+          "value": 0
+        },
+        "entityList": [],
+        "entityGroups": [],
+        "worldPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "worldRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "worldForward": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "fullName": "assets/prefabs/deployable/dartboard/dartboard.deployed.prefab",
+        "instanceID": 1513006,
+        "prefabAttribute": {
+          "$ref": "Library",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "gameManager": {
+          "$ref": "GameManager",
+          "note": "global registry singleton, omitted (not per-object data)"
+        },
+        "isServer": true
+      }
+    ]
+  }
+}

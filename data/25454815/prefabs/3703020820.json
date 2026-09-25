@@ -1,0 +1,538 @@
+{
+  "prefabID": 3703020820,
+  "path": "assets/prefabs/weapons/metal_shield/metalshield.entity.prefab",
+  "rootClassChain": [
+    "Shield",
+    "HeldEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.00099998712539672852,
+      "y": -0.20399999618530273,
+      "z": -0.010991513729095459
+    },
+    "size": {
+      "x": 0.7260621190071106,
+      "y": 1.7096776962280273,
+      "z": 0.31956672668457031
+    }
+  },
+  "hierarchy": {
+    "name": "metalshield.entity",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "Shield",
+        "$name": "metalshield.entity",
+        "DeployDelay": 1.0,
+        "ShieldOnBackToggleCooldown": 3.0,
+        "ShieldStowAimDelay": 0.75,
+        "Protection": {
+          "$type": "ProtectionProperties",
+          "$name": "ShieldMetal",
+          "comments": "",
+          "density": 3.0,
+          "amounts": [
+            0.89999997615814209,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.949999988079071,
+            0.0,
+            0.0,
+            0.0,
+            0.64999997615814209,
+            0.64999997615814209,
+            0.64999997615814209,
+            0.0,
+            1.0,
+            0.800000011920929,
+            0.64999997615814209,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.89999997615814209,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 3440610792
+        },
+        "DamageMitigationFactor": 0.949999988079071,
+        "ShieldCollider": {
+          "$type": "UnityEngine.MeshCollider",
+          "$name": "Collider",
+          "colliderType": "Mesh",
+          "convex": true,
+          "sharedMesh": {
+            "$ref": "Mesh",
+            "name": "Sphere",
+            "meshId": "Sphere_222f8a9e"
+          },
+          "isTrigger": false,
+          "enabled": false,
+          "physicMaterial": {
+            "$ref": "PhysicsMaterial",
+            "name": "Metal",
+            "instanceID": 609842
+          }
+        },
+        "sideShieldCollider": {
+          "$type": "UnityEngine.BoxCollider",
+          "$name": "SideCollider",
+          "colliderType": "Box",
+          "center": {
+            "x": -0.010997265577316284,
+            "y": 0.2213205099105835,
+            "z": 0.15931369364261627
+          },
+          "size": {
+            "x": 0.54800540208816528,
+            "y": 0.85153651237487793,
+            "z": 0.07652166485786438
+          },
+          "isTrigger": false,
+          "enabled": false,
+          "physicMaterial": {
+            "$ref": "PhysicsMaterial",
+            "name": "Metal",
+            "instanceID": 609842
+          }
+        },
+        "MaxBlockTime": 12.0,
+        "MinBlockTime": 1.5,
+        "damageToLoseOneSecond": 75.0,
+        "chargeDelay": 1.5,
+        "MeleeLocalPlayerImpactFxPrefab": {
+          "$ref": "GameObject",
+          "guid": "9a92268cfa296244f8329a77c88aa73b",
+          "resourcePath": "assets/prefabs/weapons/metal_shield/effects/melee_local_screenshake.prefab",
+          "resourceID": 2349239537
+        },
+        "RangedLocalPlayerImpactFxPrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ShieldAnimSystem": null,
+        "worldModelAnimator": null,
+        "thirdPersonDeploySound": {
+          "$ref": "SoundDefinition",
+          "name": "metal-shield-deploy",
+          "instanceID": 406332
+        },
+        "thirdPersonAimSound": null,
+        "thirdPersonAimEndSound": null,
+        "hideViewmodel": false,
+        "handBone": "l_prop",
+        "HoldAnimationOverride": null,
+        "holdInfo": {
+          "$type": "HeldEntity+HoldInfo",
+          "UseCustomSpineOffset": false,
+          "CustomSpineOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ShieldBoneArmRotationAdditive": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "isBuildingTool": false,
+        "canBeUsedWithShield": false,
+        "ForwardSignalsFromPlayer": false,
+        "forcedOwner": null,
+        "useOwnerForward": true,
+        "CanSetLightsOn": false,
+        "holsterInfo": {
+          "$type": "HeldEntity+HolsterInfo",
+          "slot": {
+            "$enum": "HeldEntity+HolsterInfo+HolsterSlot",
+            "name": "BACK_SHIELD",
+            "value": 3
+          },
+          "backpackSlot": {
+            "$enum": "HeldEntity+HolsterInfo+BackpackSlot",
+            "name": "LEFT",
+            "value": 0
+          },
+          "displayWhenHolstered": true,
+          "holsterBone": "spine3",
+          "holsterOffset": {
+            "x": 0.0,
+            "y": -0.17599999904632568,
+            "z": 0.0
+          },
+          "holsterRotationOffset": {
+            "x": 85.9000015258789,
+            "y": 0.0,
+            "z": 90.0
+          },
+          "backpackHolsterOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "backpackHolsterRotationOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "HeldCameraMode": {
+          "$enum": "BasePlayer+CameraMode",
+          "name": "FirstPerson",
+          "value": 0
+        },
+        "hostileScore": 0.0,
+        "FirstPersonArmOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonArmRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonRotationStrength": 1.0,
+        "AttachmentAnchor": null,
+        "holsterVisible": false,
+        "genericVisible": false,
+        "ownerItemUID": {
+          "$type": "ItemId",
+          "Value": 0
+        },
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.00099998712539672852,
+            "y": -0.20399999618530273,
+            "z": -0.010991513729095459
+          },
+          "size": {
+            "x": 0.7260621190071106,
+            "y": 1.7096776962280273,
+            "z": 0.31956672668457031
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "0a1cba381f499417296b2955bdb4f23a",
+          "resourcePath": "assets/prefabs/weapons/metal_shield/effects/metal-shield-impact.prefab",
+          "resourceID": 3543802895
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "metalshield.entity",
+          "collision": null,
+          "rootBone": [
+            [],
+            []
+          ],
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "metalshield.entity",
+              "instanceID": 1439488,
+              "goName": "metalshield.entity",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Collider",
+              "instanceID": 1406342,
+              "goName": "Collider",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "SideCollider",
+              "instanceID": 1403926,
+              "goName": "SideCollider",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "metalshield.entity",
+            "Collider",
+            "SideCollider"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 3703020820,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Small",
+          "value": 0
+        },
+        "net": null
+      },
+      {
+        "$type": "EntityFlag_Toggle",
+        "$name": "metalshield.entity",
+        "runClientside": true,
+        "runServerside": true,
+        "flag": {
+          "$enum": "BaseEntity+Flags",
+          "name": "Reserved4",
+          "value": 1024,
+          "flagNames": [
+            "Reserved4"
+          ]
+        },
+        "flagCheck": {
+          "$enum": "EntityFlag_Toggle+FlagCheck",
+          "name": "All",
+          "value": 0
+        },
+        "notFlag": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "onFlagEnabled": {
+          "$type": "UnityEngine.Events.UnityEvent",
+          "m_PersistentCalls": {
+            "$type": "UnityEngine.Events.PersistentCallGroup",
+            "m_Calls": []
+          }
+        },
+        "onFlagDisabled": {
+          "$type": "UnityEngine.Events.UnityEvent",
+          "m_PersistentCalls": {
+            "$type": "UnityEngine.Events.PersistentCallGroup",
+            "m_Calls": [
+              {
+                "$type": "UnityEngine.Events.PersistentCall",
+                "m_Target": {
+                  "$ref": "MeshCollider",
+                  "name": "Collider",
+                  "instanceID": 1447718,
+                  "goName": "Collider",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                "m_TargetAssemblyTypeName": "UnityEngine.Collider, UnityEngine",
+                "m_MethodName": "set_enabled",
+                "m_Mode": {
+                  "$enum": "UnityEngine.Events.PersistentListenerMode",
+                  "name": "Bool",
+                  "value": 6
+                },
+                "m_Arguments": {
+                  "$type": "UnityEngine.Events.ArgumentCache",
+                  "m_ObjectArgument": null,
+                  "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                  "m_IntArgument": 0,
+                  "m_FloatArgument": 0.0,
+                  "m_StringArgument": "",
+                  "m_BoolArgument": false
+                },
+                "m_CallState": {
+                  "$enum": "UnityEngine.Events.UnityEventCallState",
+                  "name": "RuntimeOnly",
+                  "value": 2
+                }
+              },
+              {
+                "$type": "UnityEngine.Events.PersistentCall",
+                "m_Target": {
+                  "$ref": "BoxCollider",
+                  "name": "SideCollider",
+                  "instanceID": 1467664,
+                  "goName": "SideCollider",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                "m_TargetAssemblyTypeName": "UnityEngine.Collider, UnityEngine",
+                "m_MethodName": "set_enabled",
+                "m_Mode": {
+                  "$enum": "UnityEngine.Events.PersistentListenerMode",
+                  "name": "Bool",
+                  "value": 6
+                },
+                "m_Arguments": {
+                  "$type": "UnityEngine.Events.ArgumentCache",
+                  "m_ObjectArgument": null,
+                  "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                  "m_IntArgument": 0,
+                  "m_FloatArgument": 0.0,
+                  "m_StringArgument": "",
+                  "m_BoolArgument": false
+                },
+                "m_CallState": {
+                  "$enum": "UnityEngine.Events.UnityEventCallState",
+                  "name": "RuntimeOnly",
+                  "value": 2
+                }
+              }
+            ]
+          }
+        },
+        "_baseEntity": null
+      },
+      {
+        "$ref": "Model",
+        "name": "metalshield.entity",
+        "instanceID": 1545664,
+        "goName": "metalshield.entity",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "children": [
+      {
+        "name": "Collider",
+        "layer": {
+          "index": 20,
+          "name": "Physics Projectile"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0010000000474974513,
+          "y": -0.20399999618530273,
+          "z": -0.12999999523162842
+        },
+        "localRotation": {
+          "x": -1.0430810704065152E-07,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.5,
+          "y": 1.0,
+          "z": 3.0
+        },
+        "components": [
+          {
+            "$ref": "MeshCollider",
+            "name": "Collider",
+            "instanceID": 1447718,
+            "goName": "Collider",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "SideCollider",
+        "layer": {
+          "index": 20,
+          "name": "Physics Projectile"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0010000000474974513,
+          "y": -0.20399999618530273,
+          "z": -0.12999999523162842
+        },
+        "localRotation": {
+          "x": -1.0430810704065152E-07,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "BoxCollider",
+            "name": "SideCollider",
+            "instanceID": 1467664,
+            "goName": "SideCollider",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Socket_Base": []
+  }
+}

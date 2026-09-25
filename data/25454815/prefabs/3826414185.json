@@ -1,0 +1,425 @@
+{
+  "prefabID": 3826414185,
+  "path": "assets/prefabs/weapons/salvaged_axe/axe_salvaged.entity.prefab",
+  "rootClassChain": [
+    "BaseMelee",
+    "AttackEntity",
+    "HeldEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.0,
+      "y": 0.23000000417232513,
+      "z": 0.0
+    },
+    "size": {
+      "x": 0.1725335419178009,
+      "y": 0.47999998927116394,
+      "z": 0.059999998658895493
+    }
+  },
+  "hierarchy": {
+    "name": "axe_salvaged.entity",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "BaseMelee",
+        "$name": "axe_salvaged.entity",
+        "canThrowAsProjectile": true,
+        "canThrowAsEntity": false,
+        "canAiHearIt": false,
+        "canScareAiWhenAimed": false,
+        "onlyThrowAsProjectile": false,
+        "ThrowFullStack": true,
+        "damageProperties": {
+          "$ref": "DamageProperties",
+          "name": "Damage.Melee",
+          "instanceID": 200564
+        },
+        "damageTypes": [
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Slash",
+              "value": 10
+            },
+            "amount": 35.0
+          },
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Stab",
+              "value": 15
+            },
+            "amount": 5.0
+          }
+        ],
+        "deployableDamageOverrides": [],
+        "maxDistance": 1.5,
+        "attackRadius": 0.30000001192092896,
+        "isAutomatic": true,
+        "blockSprintOnAttack": true,
+        "canUntieCrates": false,
+        "longResourceForgiveness": false,
+        "PlayerAnimSystem": null,
+        "strikeFX": {
+          "$ref": "GameObject",
+          "guid": "7f0c5f7202b9240b591867a0d24c0c84",
+          "resourcePath": "assets/prefabs/weapons/salvaged_axe/effects/strike-soft.prefab",
+          "resourceID": 1756792739
+        },
+        "useStandardHitEffects": true,
+        "aiStrikeDelay": 0.20000000298023224,
+        "swingEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "materialStrikeFX": [
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "generic",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "6518d21fb311cf947a15630457bfdd9c",
+              "resourcePath": "assets/prefabs/weapons/salvaged_axe/effects/strike.prefab",
+              "resourceID": 3217251181
+            }
+          },
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "metal",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "6518d21fb311cf947a15630457bfdd9c",
+              "resourcePath": "assets/prefabs/weapons/salvaged_axe/effects/strike.prefab",
+              "resourceID": 3217251181
+            }
+          },
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "metalore",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "6518d21fb311cf947a15630457bfdd9c",
+              "resourcePath": "assets/prefabs/weapons/salvaged_axe/effects/strike.prefab",
+              "resourceID": 3217251181
+            }
+          },
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "rock",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "6518d21fb311cf947a15630457bfdd9c",
+              "resourcePath": "assets/prefabs/weapons/salvaged_axe/effects/strike.prefab",
+              "resourceID": 3217251181
+            }
+          },
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "concrete",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "6518d21fb311cf947a15630457bfdd9c",
+              "resourcePath": "assets/prefabs/weapons/salvaged_axe/effects/strike.prefab",
+              "resourceID": 3217251181
+            }
+          },
+          {
+            "$type": "BaseMelee+MaterialFX",
+            "materialName": "wood",
+            "fx": {
+              "$ref": "GameObject",
+              "guid": "9021d5533ddd344debf3a9569dfd7b68",
+              "resourcePath": "assets/prefabs/weapons/salvaged_axe/effects/strike-muted.prefab",
+              "resourceID": 657618626
+            }
+          }
+        ],
+        "heartStress": 0.5,
+        "gathering": {
+          "$type": "ResourceDispenser+GatherProperties",
+          "Tree": {
+            "$type": "ResourceDispenser+GatherPropertyEntry",
+            "gatherDamage": 50.0,
+            "destroyFraction": 0.0,
+            "conditionLost": 0.33340001106262207
+          },
+          "Ore": {
+            "$type": "ResourceDispenser+GatherPropertyEntry",
+            "gatherDamage": 0.0,
+            "destroyFraction": 0.0,
+            "conditionLost": 0.0
+          },
+          "Flesh": {
+            "$type": "ResourceDispenser+GatherPropertyEntry",
+            "gatherDamage": 15.0,
+            "destroyFraction": 0.0,
+            "conditionLost": 1.0
+          },
+          "ProduceHeadItem": false
+        },
+        "deployDelay": 1.0,
+        "repeatDelay": 1.25,
+        "animationDelay": 0.0,
+        "effectiveRange": 1.0,
+        "npcDamageScale": 1.0,
+        "attackLengthMin": -1.0,
+        "attackLengthMax": -1.0,
+        "attackSpacing": 0.0,
+        "aiAimSwayOffset": 0.0,
+        "aiAimCone": 0.0,
+        "aiOnlyInRange": false,
+        "CloseRangeAddition": 0.0,
+        "MediumRangeAddition": 0.0,
+        "LongRangeAddition": 0.0,
+        "CanUseAtMediumRange": true,
+        "CanUseAtLongRange": true,
+        "reloadSounds": [],
+        "thirdPersonMeleeSound": {
+          "$ref": "SoundDefinition",
+          "name": "salvaged-axe-attack-3p",
+          "instanceID": 34202
+        },
+        "recoilCompDelayOverride": 0.0,
+        "wantsRecoilComp": false,
+        "showCrosshairOnTutorial": false,
+        "noHeadshots": false,
+        "nextAttackTime": {
+          "$type": "EncryptedValue`1[[System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+        },
+        "worldModelAnimator": null,
+        "thirdPersonDeploySound": {
+          "$ref": "SoundDefinition",
+          "name": "salvaged-axe-deploy-3p",
+          "instanceID": 28616
+        },
+        "thirdPersonAimSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-up",
+          "instanceID": 24732
+        },
+        "thirdPersonAimEndSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-down",
+          "instanceID": 24854
+        },
+        "hideViewmodel": false,
+        "handBone": "r_prop",
+        "HoldAnimationOverride": {
+          "$ref": "AnimatorOverrideController",
+          "name": "HoldType.Salvaged_Axe",
+          "instanceID": 1022458
+        },
+        "holdInfo": {
+          "$type": "HeldEntity+HoldInfo",
+          "UseCustomSpineOffset": false,
+          "CustomSpineOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ShieldBoneArmRotationAdditive": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "isBuildingTool": false,
+        "canBeUsedWithShield": false,
+        "ForwardSignalsFromPlayer": false,
+        "forcedOwner": null,
+        "useOwnerForward": true,
+        "CanSetLightsOn": false,
+        "holsterInfo": {
+          "$type": "HeldEntity+HolsterInfo",
+          "slot": {
+            "$enum": "HeldEntity+HolsterInfo+HolsterSlot",
+            "name": "BACK",
+            "value": 0
+          },
+          "backpackSlot": {
+            "$enum": "HeldEntity+HolsterInfo+BackpackSlot",
+            "name": "RIGHT",
+            "value": 1
+          },
+          "displayWhenHolstered": true,
+          "holsterBone": "spine3",
+          "holsterOffset": {
+            "x": 0.15999999642372131,
+            "y": -0.15000000596046448,
+            "z": 0.15000000596046448
+          },
+          "holsterRotationOffset": {
+            "x": 94.0,
+            "y": -130.0,
+            "z": 0.0
+          },
+          "backpackHolsterOffset": {
+            "x": 0.039999999105930328,
+            "y": -0.079999998211860657,
+            "z": -0.38999998569488525
+          },
+          "backpackHolsterRotationOffset": {
+            "x": 171.0,
+            "y": 86.0,
+            "z": 418.0
+          }
+        },
+        "HeldCameraMode": {
+          "$enum": "BasePlayer+CameraMode",
+          "name": "FirstPerson",
+          "value": 0
+        },
+        "hostileScore": 4.0,
+        "FirstPersonArmOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonArmRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonRotationStrength": 1.0,
+        "AttachmentAnchor": null,
+        "holsterVisible": false,
+        "genericVisible": false,
+        "ownerItemUID": {
+          "$type": "ItemId",
+          "Value": 0
+        },
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.23000000417232513,
+            "z": 0.0
+          },
+          "size": {
+            "x": 0.1725335419178009,
+            "y": 0.47999998927116394,
+            "z": 0.059999998658895493
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "axe_salvaged.entity",
+          "collision": null,
+          "rootBone": [],
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "axe_salvaged.entity",
+              "instanceID": 1260228,
+              "goName": "axe_salvaged.entity",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "axe_salvaged.entity"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 3826414185,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Small",
+          "value": 0
+        },
+        "net": null
+      },
+      {
+        "$ref": "Model",
+        "name": "axe_salvaged.entity",
+        "instanceID": 1532344,
+        "goName": "axe_salvaged.entity",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "children": []
+  },
+  "prefabAttributes": {
+    "Socket_Base": []
+  }
+}

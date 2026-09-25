@@ -1,0 +1,285 @@
+{
+  "prefabID": 1199568476,
+  "path": "assets/prefabs/deployable/boatbuilding/cannon/cannonball.prefab",
+  "rootClassChain": [
+    "TimedExplosive",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.0017752684652805328,
+      "y": 0.032835956662893295,
+      "z": -0.29009449481964111
+    },
+    "size": {
+      "x": 0.12265422940254211,
+      "y": 0.12221269309520721,
+      "z": 0.64825773239135742
+    }
+  },
+  "hierarchy": {
+    "name": "cannonball",
+    "layer": {
+      "index": 20,
+      "name": "Physics Projectile"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "TimedExplosive",
+        "$name": "cannonball",
+        "timerAmountMin": 8.0,
+        "timerAmountMax": 10.0,
+        "minExplosionRadius": 0.5,
+        "explosionRadius": 3.0,
+        "explodeOnContact": false,
+        "canStick": false,
+        "forceRunClippingChecks": false,
+        "onlyDamageParent": false,
+        "IgnoreAI": false,
+        "BlindAI": false,
+        "aiBlindDuration": 2.5,
+        "aiBlindRange": 4.0,
+        "explosionOffsetMode": {
+          "$enum": "TimedExplosive+ExplosionEffectOffsetMode",
+          "name": "Local",
+          "value": 0
+        },
+        "explosionEffectOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -0.75
+        },
+        "explosionMatchesNormal": true,
+        "explosionUsesForward": false,
+        "explosionMatchesOrientation": false,
+        "explosionMatchesVelocity": false,
+        "explosionMatchesInverseVelocity": false,
+        "explosionEffect": {
+          "$ref": "GameObject",
+          "guid": "e10851157729045b0baacb2d50110217",
+          "resourcePath": "assets/prefabs/deployable/boatbuilding/cannon/effects/cannonball_explosion.prefab",
+          "resourceID": 2284784967
+        },
+        "underwaterExplosionEffect": {
+          "$ref": "GameObject",
+          "guid": "63d11a5699f6ee247aa89fc85f6153fc",
+          "resourcePath": "assets/content/effects/explosions/underwater/explosion_underwater_large.prefab",
+          "resourceID": 2593130125
+        },
+        "stickEffect": {
+          "$ref": "GameObject",
+          "guid": "5ee498ac602364d2dbd9efc3ecdbeb80",
+          "resourcePath": "assets/prefabs/tools/c4/effects/c4_stick.prefab",
+          "resourceID": 2722086713
+        },
+        "bounceEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "watersurfaceExplosionEffect": {
+          "$ref": "GameObject",
+          "guid": "08d5d3efc5c054265a55e73a2c8df2ec",
+          "resourcePath": "assets/prefabs/deployable/boatbuilding/cannon/effects/cannonball_explosion_water_surface.prefab",
+          "resourceID": 869281
+        },
+        "underwaterExplosionDepth": 1.0,
+        "watersurfaceExplosionDepth": {
+          "$type": "MinMax",
+          "x": 0.5,
+          "y": 10.0
+        },
+        "waterCausesExplosion": false,
+        "vibrationLevel": 1,
+        "damageTypes": [
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "AntiVehicle",
+              "value": 22
+            },
+            "amount": 50.0
+          },
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Bullet",
+              "value": 9
+            },
+            "amount": 100.0
+          },
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Blunt",
+              "value": 11
+            },
+            "amount": 100.0
+          },
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Cannon",
+              "value": 27
+            },
+            "amount": 50.0
+          }
+        ],
+        "playerDamage": [
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Explosion",
+              "value": 16
+            },
+            "amount": 25.0
+          },
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Bullet",
+              "value": 9
+            },
+            "amount": 100.0
+          }
+        ],
+        "splashWallpaperThroughWalls": true,
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "wasDroneDropped": false,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.0017752684652805328,
+            "y": 0.032835956662893295,
+            "z": -0.29009449481964111
+          },
+          "size": {
+            "x": 0.12265422940254211,
+            "y": 0.12221269309520721,
+            "z": 0.64825773239135742
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": false,
+        "syncPosition": true,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 1199568476,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$type": "ServerProjectile",
+        "$name": "cannonball",
+        "initialVelocity": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "drag": 0.40000000596046448,
+        "gravityModifier": 2.0,
+        "speed": 55.0,
+        "scanRange": 0.0,
+        "swimScale": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "swimSpeed": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "radius": 0.0,
+        "IgnoreAI": false,
+        "runSpawnHitChecks": true,
+        "ignoreEntity": null,
+        "impacted": false,
+        "swimRandom": 0.0,
+        "_baseEntity": null
+      }
+    ],
+    "children": []
+  },
+  "prefabAttributes": {}
+}

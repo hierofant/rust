@@ -1,0 +1,1397 @@
+{
+  "prefabID": 2383539408,
+  "path": "assets/prefabs/voiceaudio/telephone/ui/phonedialler.prefab",
+  "rootClassChain": [
+    "UnityEngine.GameObject",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "hierarchy": {
+    "name": "phonedialler",
+    "layer": {
+      "index": 5,
+      "name": "UI"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 320.0,
+      "y": 240.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "components": [
+      {
+        "$type": "PhoneDialler",
+        "$name": "phonedialler",
+        "DialingRoot": {
+          "$ref": "GameObject",
+          "name": "DiallingRoot",
+          "instanceID": 1217396
+        },
+        "CallInProcessRoot": {
+          "$ref": "GameObject",
+          "name": "InProgressRoot",
+          "instanceID": 1128316
+        },
+        "IncomingCallRoot": null,
+        "ThisPhoneNumber": null,
+        "PhoneNameInput": null,
+        "textDisplay": null,
+        "CallTimeText": null,
+        "DefaultDialViewButton": null,
+        "IncomingCallNumber": [
+          null,
+          null
+        ],
+        "NumberDialRoot": {
+          "$ref": "GameObject",
+          "name": "DialView",
+          "instanceID": 1207636
+        },
+        "PromptVoicemailRoot": null,
+        "ContactsButton": null,
+        "FailText": null,
+        "CursorController": null,
+        "KeyboardController": {
+          "$type": "NeedsKeyboard",
+          "$name": "phonedialler",
+          "onNoKeysDown": {
+            "$type": "UnityEngine.Events.UnityEvent",
+            "m_PersistentCalls": {
+              "$type": "UnityEngine.Events.PersistentCallGroup",
+              "m_Calls": []
+            }
+          },
+          "ShowEscapeUI": false,
+          "blockUnspecifiedInput": true,
+          "AllowedBinds": {
+            "$enum": "NeedsKeyboard+BypassOption",
+            "name": "Voice",
+            "value": 1,
+            "flagNames": [
+              "Voice"
+            ]
+          }
+        },
+        "WrongNumberPhrase": {
+          "$type": "Translate+Phrase",
+          "token": "wrongnumber",
+          "legacyEnglish": ""
+        },
+        "NetworkBusy": {
+          "$type": "Translate+Phrase",
+          "token": "networkbusy",
+          "legacyEnglish": ""
+        },
+        "Engaged": {
+          "$type": "Translate+Phrase",
+          "token": "engaged",
+          "legacyEnglish": ""
+        },
+        "DirectoryEntryPrefab": {
+          "$ref": "GameObject",
+          "guid": "7dcb76666db664845835659e1d35425a",
+          "resourcePath": "assets/prefabs/voiceaudio/telephone/ui/phonedirectoryentry.prefab",
+          "resourceID": 3514951147
+        },
+        "DirectoryRoot": [
+          []
+        ],
+        "NoDirectoryRoot": null,
+        "DirectoryPageUp": null,
+        "DirectoryPageDown": null,
+        "ContactsRoot": [
+          []
+        ],
+        "ContactsNameInput": null,
+        "ContactsNumberInput": null,
+        "NoContactsRoot": null,
+        "AddContactButton": null,
+        "DialToneSfx": {
+          "$ref": "SoundDefinition",
+          "name": "telephone-dial-tone-loop",
+          "instanceID": 73794
+        },
+        "NumberButtons": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "AnsweringMachine": {
+          "$type": "Translate+Phrase",
+          "token": "answeringmachine",
+          "legacyEnglish": ""
+        },
+        "Voicemail": {
+          "$type": "VoicemailDialog",
+          "$name": "VoicemailDialog",
+          "RecordingRoot": null,
+          "RecordingProgress": null,
+          "BrowsingRoot": {
+            "$ref": "GameObject",
+            "name": "BrowsingRoot",
+            "instanceID": 1120426
+          },
+          "ParentDialler": {
+            "$cycle": true,
+            "type": "PhoneDialler"
+          },
+          "VoicemailEntry": {
+            "$ref": "GameObject",
+            "guid": "3ea731626fe344f4886c59645bb36fc7",
+            "resourcePath": "assets/prefabs/voiceaudio/telephone/ui/voicemailentry.prefab",
+            "resourceID": 4123491113
+          },
+          "VoicemailEntriesRoot": [
+            [],
+            [],
+            [],
+            []
+          ],
+          "NoVoicemailRoot": null,
+          "NoCassetteRoot": null
+        },
+        "VoicemailRoot": null,
+        "hideNametags": false,
+        "openSoundDef": null,
+        "closeSoundDef": null
+      },
+      {
+        "$ref": "NeedsKeyboard",
+        "name": "phonedialler",
+        "instanceID": 1560578,
+        "goName": "phonedialler",
+        "$alreadyDumpedElsewhereInThisFile": true
+      },
+      {
+        "$type": "UIEscapeCapture",
+        "$name": "phonedialler",
+        "onEscape": {
+          "$type": "UnityEngine.Events.UnityEvent",
+          "m_PersistentCalls": {
+            "$type": "UnityEngine.Events.PersistentCallGroup",
+            "m_Calls": [
+              {
+                "$type": "UnityEngine.Events.PersistentCall",
+                "m_Target": {
+                  "$ref": "PhoneDialler",
+                  "name": "phonedialler",
+                  "instanceID": 1560576,
+                  "goName": "phonedialler",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                "m_TargetAssemblyTypeName": "",
+                "m_MethodName": "CloseDialog",
+                "m_Mode": {
+                  "$enum": "UnityEngine.Events.PersistentListenerMode",
+                  "name": "Void",
+                  "value": 1
+                },
+                "m_Arguments": {
+                  "$type": "UnityEngine.Events.ArgumentCache",
+                  "m_ObjectArgument": null,
+                  "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                  "m_IntArgument": 0,
+                  "m_FloatArgument": 0.0,
+                  "m_StringArgument": "",
+                  "m_BoolArgument": false
+                },
+                "m_CallState": {
+                  "$enum": "UnityEngine.Events.UnityEventCallState",
+                  "name": "RuntimeOnly",
+                  "value": 2
+                }
+              }
+            ]
+          }
+        },
+        "blockOtherCallbacks": true,
+        "insertAtTop": true
+      }
+    ],
+    "children": [
+      {
+        "name": "DiallingRoot",
+        "layer": {
+          "index": 5,
+          "name": "UI"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "DialingPanel",
+            "layer": {
+              "index": 5,
+              "name": "UI"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": -60.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "DialView",
+                "layer": {
+                  "index": 5,
+                  "name": "UI"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": false,
+                "localPosition": {
+                  "x": 306.0,
+                  "y": 287.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "Numbers",
+                    "layer": {
+                      "index": 5,
+                      "name": "UI"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": -429.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "Grid",
+                        "layer": {
+                          "index": 5,
+                          "name": "UI"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": 126.0,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": [
+                          {
+                            "name": "7",
+                            "layer": {
+                              "index": 5,
+                              "name": "UI"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": -64.0,
+                              "y": 96.0,
+                              "z": 0.0
+                            },
+                            "localRotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [
+                              {
+                                "$type": "UISoundPlayer",
+                                "$name": "7"
+                              }
+                            ],
+                            "children": []
+                          },
+                          {
+                            "name": "8",
+                            "layer": {
+                              "index": 5,
+                              "name": "UI"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": 0.0,
+                              "y": 96.0,
+                              "z": 0.0
+                            },
+                            "localRotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [
+                              {
+                                "$type": "UISoundPlayer",
+                                "$name": "8"
+                              }
+                            ],
+                            "children": []
+                          },
+                          {
+                            "name": "9",
+                            "layer": {
+                              "index": 5,
+                              "name": "UI"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": 64.0,
+                              "y": 96.0,
+                              "z": 0.0
+                            },
+                            "localRotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [
+                              {
+                                "$type": "UISoundPlayer",
+                                "$name": "9"
+                              }
+                            ],
+                            "children": []
+                          },
+                          {
+                            "name": "4",
+                            "layer": {
+                              "index": 5,
+                              "name": "UI"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": -64.0,
+                              "y": 32.0,
+                              "z": 0.0
+                            },
+                            "localRotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [
+                              {
+                                "$type": "UISoundPlayer",
+                                "$name": "4"
+                              }
+                            ],
+                            "children": []
+                          },
+                          {
+                            "name": "5",
+                            "layer": {
+                              "index": 5,
+                              "name": "UI"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": 0.0,
+                              "y": 32.0,
+                              "z": 0.0
+                            },
+                            "localRotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [
+                              {
+                                "$type": "UISoundPlayer",
+                                "$name": "5"
+                              }
+                            ],
+                            "children": []
+                          },
+                          {
+                            "name": "6",
+                            "layer": {
+                              "index": 5,
+                              "name": "UI"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": 64.0,
+                              "y": 32.0,
+                              "z": 0.0
+                            },
+                            "localRotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [
+                              {
+                                "$type": "UISoundPlayer",
+                                "$name": "6"
+                              }
+                            ],
+                            "children": []
+                          },
+                          {
+                            "name": "1",
+                            "layer": {
+                              "index": 5,
+                              "name": "UI"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": -64.0,
+                              "y": -32.0,
+                              "z": 0.0
+                            },
+                            "localRotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [
+                              {
+                                "$type": "UISoundPlayer",
+                                "$name": "1"
+                              }
+                            ],
+                            "children": []
+                          },
+                          {
+                            "name": "2",
+                            "layer": {
+                              "index": 5,
+                              "name": "UI"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": 0.0,
+                              "y": -32.0,
+                              "z": 0.0
+                            },
+                            "localRotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [
+                              {
+                                "$type": "UISoundPlayer",
+                                "$name": "2"
+                              }
+                            ],
+                            "children": []
+                          },
+                          {
+                            "name": "3",
+                            "layer": {
+                              "index": 5,
+                              "name": "UI"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": true,
+                            "localPosition": {
+                              "x": 64.0,
+                              "y": -32.0,
+                              "z": 0.0
+                            },
+                            "localRotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [
+                              {
+                                "$type": "UISoundPlayer",
+                                "$name": "3"
+                              }
+                            ],
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "0",
+                        "layer": {
+                          "index": 5,
+                          "name": "UI"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -94.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UISoundPlayer",
+                            "$name": "0"
+                          }
+                        ],
+                        "children": []
+                      },
+                      {
+                        "name": "C",
+                        "layer": {
+                          "index": 5,
+                          "name": "UI"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 94.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "UISoundPlayer",
+                            "$name": "C"
+                          }
+                        ],
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "DialButton",
+                    "layer": {
+                      "index": 5,
+                      "name": "UI"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": -510.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "UISoundPlayer",
+                        "$name": "DialButton"
+                      }
+                    ],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "DirectoryView",
+                "layer": {
+                  "index": 5,
+                  "name": "UI"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": false,
+                "localPosition": {
+                  "x": 306.0,
+                  "y": 287.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "ScrollView",
+                    "layer": {
+                      "index": 5,
+                      "name": "UI"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": -294.99993896484375,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "Content",
+                        "layer": {
+                          "index": 5,
+                          "name": "UI"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": 295.00006103515625,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": [
+                          {
+                            "name": "PhoneDirectoryEntry",
+                            "layer": {
+                              "index": 5,
+                              "name": "UI"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": false,
+                            "localPosition": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0
+                            },
+                            "localRotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [
+                              {
+                                "$type": "PhoneDirectoryEntry",
+                                "$name": "PhoneDirectoryEntry",
+                                "PhoneNumber": null,
+                                "PhoneName": null,
+                                "DeleteIcon": null,
+                                "CensorIcon": null
+                              }
+                            ],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "ContactsView",
+                "layer": {
+                  "index": 5,
+                  "name": "UI"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": false,
+                "localPosition": {
+                  "x": 306.0,
+                  "y": -28.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "ScrollView",
+                    "layer": {
+                      "index": 5,
+                      "name": "UI"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 49.999969482421875,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "Content",
+                        "layer": {
+                          "index": 5,
+                          "name": "UI"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": 264.99996948242188,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": [
+                          {
+                            "name": "PhoneDirectoryEntry",
+                            "layer": {
+                              "index": 5,
+                              "name": "UI"
+                            },
+                            "tag": "Untagged",
+                            "customTags": [],
+                            "activeSelf": false,
+                            "localPosition": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0
+                            },
+                            "localRotation": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 1.0
+                            },
+                            "localScale": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "components": [
+                              {
+                                "$type": "PhoneDirectoryEntry",
+                                "$name": "PhoneDirectoryEntry",
+                                "PhoneNumber": null,
+                                "PhoneName": null,
+                                "DeleteIcon": null,
+                                "CensorIcon": null
+                              }
+                            ],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "InProgressRoot",
+        "layer": {
+          "index": 5,
+          "name": "UI"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": false,
+        "localPosition": {
+          "x": 0.0,
+          "y": -570.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "GameUI.Hud.LocalVoiceChat",
+            "layer": {
+              "index": 5,
+              "name": "UI"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 785.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UI_LocalVoice",
+                "$name": "GameUI.Hud.LocalVoiceChat",
+                "voiceCanvas": null,
+                "levelImage": null,
+                "canvas": null
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "VoicemailDialog",
+        "layer": {
+          "index": 5,
+          "name": "UI"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": false,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "VoicemailDialog",
+            "name": "VoicemailDialog",
+            "instanceID": 1529088,
+            "goName": "VoicemailDialog",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": [
+          {
+            "name": "BrowsingRoot",
+            "layer": {
+              "index": 5,
+              "name": "UI"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": -60.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "VoicemailScroller",
+                "layer": {
+                  "index": 5,
+                  "name": "UI"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": -50.410003662109375,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "VoicemailContainer",
+                    "layer": {
+                      "index": 5,
+                      "name": "UI"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -12.0,
+                      "y": 74.000396728515625,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "VoicemailEntry",
+                        "layer": {
+                          "index": 5,
+                          "name": "UI"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": false,
+                        "localPosition": {
+                          "x": -264.0,
+                          "y": -15.0,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "VoicemailEntry",
+                            "$name": "VoicemailEntry",
+                            "PlayingRoot": null,
+                            "DisplayName": null,
+                            "PlayIcon": null,
+                            "ProgressSlider": null
+                          }
+                        ],
+                        "children": []
+                      },
+                      {
+                        "name": "VoicemailEntry (1)",
+                        "layer": {
+                          "index": 5,
+                          "name": "UI"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": false,
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": -48.0,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "VoicemailEntry",
+                            "$name": "VoicemailEntry (1)",
+                            "PlayingRoot": null,
+                            "DisplayName": null,
+                            "PlayIcon": null,
+                            "ProgressSlider": null
+                          }
+                        ],
+                        "children": []
+                      },
+                      {
+                        "name": "VoicemailEntry (2)",
+                        "layer": {
+                          "index": 5,
+                          "name": "UI"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": false,
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": -81.0,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "VoicemailEntry",
+                            "$name": "VoicemailEntry (2)",
+                            "PlayingRoot": null,
+                            "DisplayName": null,
+                            "PlayIcon": null,
+                            "ProgressSlider": null
+                          }
+                        ],
+                        "children": []
+                      },
+                      {
+                        "name": "VoicemailEntry (3)",
+                        "layer": {
+                          "index": 5,
+                          "name": "UI"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": false,
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": -114.0,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [
+                          {
+                            "$type": "VoicemailEntry",
+                            "$name": "VoicemailEntry (3)",
+                            "PlayingRoot": null,
+                            "DisplayName": null,
+                            "PlayIcon": null,
+                            "ProgressSlider": null
+                          }
+                        ],
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "GameUI.Hud.LocalVoiceChat",
+            "layer": {
+              "index": 5,
+              "name": "UI"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 560.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UI_LocalVoice",
+                "$name": "GameUI.Hud.LocalVoiceChat",
+                "voiceCanvas": null,
+                "levelImage": null,
+                "canvas": null
+              }
+            ],
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {}
+}

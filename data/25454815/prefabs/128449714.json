@@ -1,0 +1,2372 @@
+{
+  "prefabID": 128449714,
+  "path": "assets/bundled/prefabs/static/bbq.static.prefab",
+  "rootClassChain": [
+    "BaseOven",
+    "StorageContainer",
+    "DecayEntity",
+    "BaseCombatEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.0,
+      "y": 0.60000002384185791,
+      "z": 0.0
+    },
+    "size": {
+      "x": 1.0,
+      "y": 1.2000000476837158,
+      "z": 1.2000000476837158
+    }
+  },
+  "hierarchy": {
+    "name": "bbq.static",
+    "layer": {
+      "index": 8,
+      "name": "Deployed"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "BaseOven",
+        "$name": "bbq.static",
+        "visualFood": true,
+        "sizzlingSoundDef": {
+          "$ref": "SoundDefinition",
+          "name": "visual-cooking-meat-sizzle-loop-01",
+          "instanceID": 214792
+        },
+        "temperature": {
+          "$enum": "BaseOven+TemperatureType",
+          "name": "Cooking",
+          "value": 2
+        },
+        "switchOnMenu": {
+          "$type": "BaseEntity+Menu+Option",
+          "name": {
+            "$type": "Translate+Phrase",
+            "token": "light_campfire",
+            "legacyEnglish": "Light Campfire"
+          },
+          "description": {
+            "$type": "Translate+Phrase",
+            "token": "light_campfire_desc",
+            "legacyEnglish": "Set the campfire on fire. This will cook any food within."
+          },
+          "icon": {
+            "$ref": "Sprite",
+            "name": "light_campfire",
+            "instanceID": 610174
+          },
+          "order": 0,
+          "usableWhileWounded": false
+        },
+        "switchOffMenu": {
+          "$type": "BaseEntity+Menu+Option",
+          "name": {
+            "$type": "Translate+Phrase",
+            "token": "extinguish_campfire",
+            "legacyEnglish": "Extinguish Campfire"
+          },
+          "description": {
+            "$type": "Translate+Phrase",
+            "token": "extinguish_campfire_desc",
+            "legacyEnglish": "Put the fire out. Food will stop cooking."
+          },
+          "icon": {
+            "$ref": "Sprite",
+            "name": "extinguish",
+            "instanceID": 609854
+          },
+          "order": 0,
+          "usableWhileWounded": false
+        },
+        "startupContents": [],
+        "allowByproductCreation": true,
+        "fuelType": {
+          "$ref": "ItemDefinition",
+          "name": "wood.item",
+          "itemid": -151838493,
+          "shortname": "wood"
+        },
+        "hasFireDeploySlot": false,
+        "hasOpenFlame": false,
+        "disabledBySplash": true,
+        "smeltSpeed": 8,
+        "fuelSlots": 1,
+        "inputSlots": 3,
+        "outputSlots": 4,
+        "IndustrialMode": {
+          "$enum": "BaseOven+IndustrialSlotMode",
+          "name": "Furnace",
+          "value": 0
+        },
+        "_activeCookingSlot": -1,
+        "_inputSlotIndex": 0,
+        "_outputSlotIndex": 0,
+        "inventorySlots": 12,
+        "dropsLoot": true,
+        "dropLootDestroyPercent": 0.0,
+        "dropFloats": false,
+        "isLootable": true,
+        "isLockable": false,
+        "isMonitorable": false,
+        "panelName": "bbq",
+        "panelTitle": {
+          "$type": "Translate+Phrase",
+          "token": "loot",
+          "legacyEnglish": "Loot"
+        },
+        "allowedContents": {
+          "$enum": "ItemContainer+ContentsType",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "allowedItem": null,
+        "allowedItem2": null,
+        "allowedItems": [],
+        "blockedItems": [],
+        "maxStackSize": 0,
+        "needsBuildingPrivilegeToUse": false,
+        "requireAuthIfNotLocked": false,
+        "allowSorting": false,
+        "mustBeMountedToUse": false,
+        "openSound": {
+          "$ref": "SoundDefinition",
+          "name": "camper-bbq-open",
+          "instanceID": 370996
+        },
+        "closeSound": {
+          "$ref": "SoundDefinition",
+          "name": "camper-bbq-close",
+          "instanceID": 337936
+        },
+        "dropPosition": {
+          "x": 0.34000000357627869,
+          "y": 1.0700000524520874,
+          "z": 0.0
+        },
+        "dropVelocity": {
+          "x": 0.93000000715255737,
+          "y": 0.61000001430511475,
+          "z": 0.0
+        },
+        "onlyAcceptCategory": {
+          "$enum": "ItemCategory",
+          "name": "All",
+          "value": 11
+        },
+        "onlyOneUser": false,
+        "_inventory": null,
+        "isTransferringIndustrialItem": false,
+        "canBeDemolished": false,
+        "debrisPrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "debrisRotationOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "DebrisPositions": [],
+        "buildingID": 0,
+        "timePlaced": 0.0,
+        "decayTimer": 0.0,
+        "upkeepTimer": 0.0,
+        "upkeep": null,
+        "decay": null,
+        "decayPoints": null,
+        "lastDecayTick": 0.0,
+        "decayVariance": 1.0,
+        "spawnDeployableCorpseOnDeath": false,
+        "deployableCorpsePrefab": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "ItemOwnership": {
+          "$type": "ItemOwnershipShare",
+          "username": null,
+          "reason": null,
+          "amount": 0
+        },
+        "lastDamage": {
+          "$enum": "Rust.DamageType",
+          "name": "Generic",
+          "value": 0
+        },
+        "lastAttacker": null,
+        "lastDealtDamageTo": null,
+        "ResetLifeStateOnSpawn": true,
+        "propDirection": null,
+        "unHostileTime": 0.0,
+        "lastNoiseTime": 0.0,
+        "skeletonProperties": null,
+        "baseProtection": {
+          "$type": "ProtectionProperties",
+          "$name": "Immortal",
+          "comments": "",
+          "density": 100.0,
+          "amounts": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "FilenameStringId": 3206051622
+        },
+        "startHealth": 200.0,
+        "pickup": {
+          "$type": "BaseCombatEntity+Pickup",
+          "enabled": false,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "BBQ.item",
+            "itemid": 1099314009,
+            "shortname": "bbq"
+          },
+          "itemCount": 1,
+          "setConditionFromHealth": true,
+          "subtractCondition": 0.5,
+          "requireBuildingPrivilege": true,
+          "requireHammer": true,
+          "requireEmptyInv": true,
+          "overridePickupTime": 0.0
+        },
+        "repair": {
+          "$type": "BaseCombatEntity+Repair",
+          "enabled": true,
+          "itemTarget": {
+            "$ref": "ItemDefinition",
+            "name": "BBQ.item",
+            "itemid": 1099314009,
+            "shortname": "bbq"
+          },
+          "ignoreForRepair": null,
+          "repairEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFullEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          },
+          "repairFailedEffect": {
+            "$ref": "GameObject",
+            "guid": "",
+            "resourcePath": null,
+            "resourceID": 0
+          }
+        },
+        "ShowHealthInfo": true,
+        "showHealthInfoThreshold": {
+          "$enum": "BaseCombatEntity+ShowHealthThreshold",
+          "name": "ThreeQuarters",
+          "value": 25
+        },
+        "lifestate": {
+          "$enum": "BaseCombatEntity+LifeState",
+          "name": "Alive",
+          "value": 0
+        },
+        "sendsHitNotification": false,
+        "sendsMeleeHitNotification": true,
+        "markAttackerHostile": false,
+        "maxHealthOverride": 0.0,
+        "_health": 0.0,
+        "_maxHealth": 100.0,
+        "faction": {
+          "$enum": "BaseCombatEntity+Faction",
+          "name": "Default",
+          "value": 0
+        },
+        "lastAttackedTime": "-Infinity",
+        "lastDealtDamageTime": "-Infinity",
+        "lastNotifyFrame": 0,
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.60000002384185791,
+            "z": 0.0
+          },
+          "size": {
+            "x": 1.0,
+            "y": 1.2000000476837158,
+            "z": 1.2000000476837158
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 128449714,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      },
+      {
+        "$type": "EntityFlag_Toggle",
+        "$name": "bbq.static",
+        "runClientside": false,
+        "runServerside": true,
+        "flag": {
+          "$enum": "BaseEntity+Flags",
+          "name": "On",
+          "value": 2,
+          "flagNames": [
+            "On"
+          ]
+        },
+        "flagCheck": {
+          "$enum": "EntityFlag_Toggle+FlagCheck",
+          "name": "All",
+          "value": 0
+        },
+        "notFlag": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "onFlagEnabled": {
+          "$type": "UnityEngine.Events.UnityEvent",
+          "m_PersistentCalls": {
+            "$type": "UnityEngine.Events.PersistentCallGroup",
+            "m_Calls": [
+              {
+                "$type": "UnityEngine.Events.PersistentCall",
+                "m_Target": {
+                  "$ref": "GameObject",
+                  "name": "ServerEffects",
+                  "instanceID": 1147072
+                },
+                "m_TargetAssemblyTypeName": "",
+                "m_MethodName": "SetActive",
+                "m_Mode": {
+                  "$enum": "UnityEngine.Events.PersistentListenerMode",
+                  "name": "Bool",
+                  "value": 6
+                },
+                "m_Arguments": {
+                  "$type": "UnityEngine.Events.ArgumentCache",
+                  "m_ObjectArgument": null,
+                  "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                  "m_IntArgument": 0,
+                  "m_FloatArgument": 0.0,
+                  "m_StringArgument": "",
+                  "m_BoolArgument": true
+                },
+                "m_CallState": {
+                  "$enum": "UnityEngine.Events.UnityEventCallState",
+                  "name": "RuntimeOnly",
+                  "value": 2
+                }
+              }
+            ]
+          }
+        },
+        "onFlagDisabled": {
+          "$type": "UnityEngine.Events.UnityEvent",
+          "m_PersistentCalls": {
+            "$type": "UnityEngine.Events.PersistentCallGroup",
+            "m_Calls": [
+              {
+                "$type": "UnityEngine.Events.PersistentCall",
+                "m_Target": {
+                  "$ref": "GameObject",
+                  "name": "ServerEffects",
+                  "instanceID": 1147072
+                },
+                "m_TargetAssemblyTypeName": "",
+                "m_MethodName": "SetActive",
+                "m_Mode": {
+                  "$enum": "UnityEngine.Events.PersistentListenerMode",
+                  "name": "Bool",
+                  "value": 6
+                },
+                "m_Arguments": {
+                  "$type": "UnityEngine.Events.ArgumentCache",
+                  "m_ObjectArgument": null,
+                  "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                  "m_IntArgument": 0,
+                  "m_FloatArgument": 0.0,
+                  "m_StringArgument": "",
+                  "m_BoolArgument": false
+                },
+                "m_CallState": {
+                  "$enum": "UnityEngine.Events.UnityEventCallState",
+                  "name": "RuntimeOnly",
+                  "value": 2
+                }
+              }
+            ]
+          }
+        },
+        "_baseEntity": null
+      },
+      {
+        "$type": "EntityFlag_Toggle",
+        "$name": "bbq.static",
+        "runClientside": true,
+        "runServerside": true,
+        "flag": {
+          "$enum": "BaseEntity+Flags",
+          "name": "On",
+          "value": 2,
+          "flagNames": [
+            "On"
+          ]
+        },
+        "flagCheck": {
+          "$enum": "EntityFlag_Toggle+FlagCheck",
+          "name": "All",
+          "value": 0
+        },
+        "notFlag": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "onFlagEnabled": {
+          "$type": "UnityEngine.Events.UnityEvent",
+          "m_PersistentCalls": {
+            "$type": "UnityEngine.Events.PersistentCallGroup",
+            "m_Calls": [
+              {
+                "$type": "UnityEngine.Events.PersistentCall",
+                "m_Target": {
+                  "$ref": "GameObject",
+                  "name": "LidOpen",
+                  "instanceID": 1132162
+                },
+                "m_TargetAssemblyTypeName": "",
+                "m_MethodName": "SetActive",
+                "m_Mode": {
+                  "$enum": "UnityEngine.Events.PersistentListenerMode",
+                  "name": "Bool",
+                  "value": 6
+                },
+                "m_Arguments": {
+                  "$type": "UnityEngine.Events.ArgumentCache",
+                  "m_ObjectArgument": null,
+                  "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                  "m_IntArgument": 0,
+                  "m_FloatArgument": 0.0,
+                  "m_StringArgument": "",
+                  "m_BoolArgument": true
+                },
+                "m_CallState": {
+                  "$enum": "UnityEngine.Events.UnityEventCallState",
+                  "name": "RuntimeOnly",
+                  "value": 2
+                }
+              },
+              {
+                "$type": "UnityEngine.Events.PersistentCall",
+                "m_Target": {
+                  "$ref": "GameObject",
+                  "name": "LidClosed",
+                  "instanceID": 1112138
+                },
+                "m_TargetAssemblyTypeName": "",
+                "m_MethodName": "SetActive",
+                "m_Mode": {
+                  "$enum": "UnityEngine.Events.PersistentListenerMode",
+                  "name": "Bool",
+                  "value": 6
+                },
+                "m_Arguments": {
+                  "$type": "UnityEngine.Events.ArgumentCache",
+                  "m_ObjectArgument": null,
+                  "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                  "m_IntArgument": 0,
+                  "m_FloatArgument": 0.0,
+                  "m_StringArgument": "",
+                  "m_BoolArgument": false
+                },
+                "m_CallState": {
+                  "$enum": "UnityEngine.Events.UnityEventCallState",
+                  "name": "RuntimeOnly",
+                  "value": 2
+                }
+              }
+            ]
+          }
+        },
+        "onFlagDisabled": {
+          "$type": "UnityEngine.Events.UnityEvent",
+          "m_PersistentCalls": {
+            "$type": "UnityEngine.Events.PersistentCallGroup",
+            "m_Calls": [
+              {
+                "$type": "UnityEngine.Events.PersistentCall",
+                "m_Target": {
+                  "$ref": "GameObject",
+                  "name": "LidOpen",
+                  "instanceID": 1132162
+                },
+                "m_TargetAssemblyTypeName": "",
+                "m_MethodName": "SetActive",
+                "m_Mode": {
+                  "$enum": "UnityEngine.Events.PersistentListenerMode",
+                  "name": "Bool",
+                  "value": 6
+                },
+                "m_Arguments": {
+                  "$type": "UnityEngine.Events.ArgumentCache",
+                  "m_ObjectArgument": null,
+                  "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                  "m_IntArgument": 0,
+                  "m_FloatArgument": 0.0,
+                  "m_StringArgument": "",
+                  "m_BoolArgument": false
+                },
+                "m_CallState": {
+                  "$enum": "UnityEngine.Events.UnityEventCallState",
+                  "name": "RuntimeOnly",
+                  "value": 2
+                }
+              },
+              {
+                "$type": "UnityEngine.Events.PersistentCall",
+                "m_Target": {
+                  "$ref": "GameObject",
+                  "name": "LidClosed",
+                  "instanceID": 1112138
+                },
+                "m_TargetAssemblyTypeName": "",
+                "m_MethodName": "SetActive",
+                "m_Mode": {
+                  "$enum": "UnityEngine.Events.PersistentListenerMode",
+                  "name": "Bool",
+                  "value": 6
+                },
+                "m_Arguments": {
+                  "$type": "UnityEngine.Events.ArgumentCache",
+                  "m_ObjectArgument": null,
+                  "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                  "m_IntArgument": 0,
+                  "m_FloatArgument": 0.0,
+                  "m_StringArgument": "",
+                  "m_BoolArgument": true
+                },
+                "m_CallState": {
+                  "$enum": "UnityEngine.Events.UnityEventCallState",
+                  "name": "RuntimeOnly",
+                  "value": 2
+                }
+              }
+            ]
+          }
+        },
+        "_baseEntity": null
+      }
+    ],
+    "children": [
+      {
+        "name": "BBQ_rigged",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "ROOT_BONE",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.084463015198707581,
+              "y": 0.28979593515396118,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 6.1232342629258393E-17,
+              "y": 1.0,
+              "z": -6.1232342629258393E-17,
+              "w": -6.1232342629258393E-17
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "joint2",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.23650595545768738,
+                  "y": -1.0658140798173486E-16,
+                  "z": -2.8963626578148307E-17
+                },
+                "localRotation": {
+                  "x": 6.1232342629258393E-17,
+                  "y": 1.0,
+                  "z": -6.1232342629258393E-17,
+                  "w": -6.1232342629258393E-17
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "LID",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.44429782032966614,
+                      "y": 0.55046957731246948,
+                      "z": -1.0882157189920607E-16
+                    },
+                    "localRotation": {
+                      "x": -0.57050204277038574,
+                      "y": 0.821296215057373,
+                      "z": -8.5223061935133854E-17,
+                      "w": -1.5356715605526591E-17
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "joint4",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -0.29152432084083557,
+                          "y": -1.2434497928741312E-16,
+                          "z": -1.3805065900142424E-32
+                        },
+                        "localRotation": {
+                          "x": -0.57050204277038574,
+                          "y": 0.821296215057373,
+                          "z": -8.5223061935133854E-17,
+                          "w": -1.5356715605526591E-17
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "stick",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.10626368224620819,
+                      "y": 0.49605593085289,
+                      "z": -0.42855644226074219
+                    },
+                    "localRotation": {
+                      "x": 5.4459364612617051E-17,
+                      "y": -1.0968944979789671E-16,
+                      "z": -0.44469451904296875,
+                      "w": 0.89568233489990234
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": [
+                      {
+                        "name": "joint6",
+                        "layer": {
+                          "index": 0,
+                          "name": "Default"
+                        },
+                        "tag": "Untagged",
+                        "customTags": [],
+                        "activeSelf": true,
+                        "localPosition": {
+                          "x": -0.522130012512207,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "localRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.44469451904296875,
+                          "w": 0.89568233489990234
+                        },
+                        "localScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "components": [],
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ClientEffects",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "PFX",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "ParticleSystemContainer",
+                "$name": "PFX",
+                "precached": false,
+                "includeLights": false,
+                "particleGroups": [],
+                "lights": [],
+                "lightExs": []
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "Lights",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": []
+          },
+          {
+            "name": "VisualFood",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "0_Chicken",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.037999998778104782,
+                  "y": 0.82899999618530273,
+                  "z": -0.22200000286102295
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.52702957391738892,
+                  "z": 0.0,
+                  "w": 0.84984695911407471
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "1_Chicken",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.013000000268220901,
+                  "y": 0.82899999618530273,
+                  "z": 0.0070000002160668373
+                },
+                "localRotation": {
+                  "x": -0.88434594869613647,
+                  "y": 3.6264566460886272E-07,
+                  "z": -0.46683213114738464,
+                  "w": 4.9224689746552031E-07
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "2_Chicken",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.10700000077486038,
+                  "y": 0.82899999618530273,
+                  "z": 0.28700000047683716
+                },
+                "localRotation": {
+                  "x": 0.23508235812187195,
+                  "y": 5.6629659184181946E-07,
+                  "z": -0.97197550535202026,
+                  "w": -2.3049325648116792E-07
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "0_Pig",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0860000029206276,
+                  "y": 0.84359997510910034,
+                  "z": -0.2750999927520752
+                },
+                "localRotation": {
+                  "x": -0.0371740348637104,
+                  "y": 0.56846743822097778,
+                  "z": 0.020547211170196533,
+                  "w": 0.82160860300064087
+                },
+                "localScale": {
+                  "x": 0.83886432647705078,
+                  "y": 0.83886432647705078,
+                  "z": 0.83886432647705078
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "1_Pig",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.070000000298023224,
+                  "y": 0.86599999666213989,
+                  "z": 0.010999999940395355
+                },
+                "localRotation": {
+                  "x": -0.88594084978103638,
+                  "y": 0.051456224173307419,
+                  "z": -0.45819962024688721,
+                  "w": -0.050142355263233185
+                },
+                "localScale": {
+                  "x": 0.88277333974838257,
+                  "y": 0.88277328014373779,
+                  "z": 0.88277333974838257
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "2_Pig",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.11330000311136246,
+                  "y": 0.87239998579025269,
+                  "z": 0.28600001335144043
+                },
+                "localRotation": {
+                  "x": 0.22396220266819,
+                  "y": 0.12585332989692688,
+                  "z": -0.9648902416229248,
+                  "w": -0.054669681936502457
+                },
+                "localScale": {
+                  "x": 0.827246904373169,
+                  "y": 0.827246904373169,
+                  "z": 0.827246904373169
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "0_Bear",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.12486380338668823,
+                  "y": 0.8096693754196167,
+                  "z": -0.24883492290973663
+                },
+                "localRotation": {
+                  "x": -0.92178618907928467,
+                  "y": -0.027822131291031837,
+                  "z": 0.38536497950553894,
+                  "w": -0.03209371492266655
+                },
+                "localScale": {
+                  "x": 0.84974002838134766,
+                  "y": 0.84974002838134766,
+                  "z": 0.84974002838134766
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "1_Bear",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.057999998331069946,
+                  "y": 0.826371431350708,
+                  "z": 0.014000000432133675
+                },
+                "localRotation": {
+                  "x": -0.88624036312103271,
+                  "y": 0.0030427617020905018,
+                  "z": -0.46312722563743591,
+                  "w": 0.0090497415512800217
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "2_Bear",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.089000001549720764,
+                  "y": 0.831309974193573,
+                  "z": 0.28499999642372131
+                },
+                "localRotation": {
+                  "x": 0.25460022687911987,
+                  "y": -0.077083475887775421,
+                  "z": -0.96229308843612671,
+                  "w": 0.056823894381523132
+                },
+                "localScale": {
+                  "x": 0.876259982585907,
+                  "y": 0.876259982585907,
+                  "z": 0.876259982585907
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "0_Horse",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.10300000011920929,
+                  "y": 0.86100000143051147,
+                  "z": -0.24500000476837158
+                },
+                "localRotation": {
+                  "x": 0.086941748857498169,
+                  "y": -0.48854944109916687,
+                  "z": 0.14088347554206848,
+                  "w": -0.85668683052062988
+                },
+                "localScale": {
+                  "x": 0.89477628469467163,
+                  "y": 0.89477628469467163,
+                  "z": 0.89477634429931641
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "1_Horse",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.050999999046325684,
+                  "y": 0.87699997425079346,
+                  "z": 0.041000001132488251
+                },
+                "localRotation": {
+                  "x": -0.017867958173155785,
+                  "y": 0.54127639532089233,
+                  "z": 0.069502659142017365,
+                  "w": -0.83777683973312378
+                },
+                "localScale": {
+                  "x": 0.96242207288742065,
+                  "y": 0.96242207288742065,
+                  "z": 0.96242207288742065
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "2_Horse",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0966000035405159,
+                  "y": 0.86040002107620239,
+                  "z": 0.26240000128746033
+                },
+                "localRotation": {
+                  "x": 0.048884142190217972,
+                  "y": -0.958245038986206,
+                  "z": 0.11677087098360062,
+                  "w": -0.25640073418617249
+                },
+                "localScale": {
+                  "x": 0.88323664665222168,
+                  "y": 0.88323664665222168,
+                  "z": 0.88323664665222168
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "0_Deer",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.1046999990940094,
+                  "y": 0.847100019454956,
+                  "z": -0.23720000684261322
+                },
+                "localRotation": {
+                  "x": 0.005547668319195509,
+                  "y": -0.522495448589325,
+                  "z": -0.017064183950424194,
+                  "w": -0.85245329141616821
+                },
+                "localScale": {
+                  "x": 0.72205817699432373,
+                  "y": 0.72205817699432373,
+                  "z": 0.72205823659896851
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "1_Deer",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.064000003039836884,
+                  "y": 0.83099997043609619,
+                  "z": 0.029999999329447746
+                },
+                "localRotation": {
+                  "x": 0.017486853525042534,
+                  "y": 0.46509933471679688,
+                  "z": -0.030445287004113197,
+                  "w": -0.884562075138092
+                },
+                "localScale": {
+                  "x": 0.68376737833023071,
+                  "y": 0.68376737833023071,
+                  "z": 0.68376737833023071
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "2_Deer",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.096799999475479126,
+                  "y": 0.85339999198913574,
+                  "z": 0.26420000195503235
+                },
+                "localRotation": {
+                  "x": 0.96202188730239868,
+                  "y": 0.055946864187717438,
+                  "z": 0.25479432940483093,
+                  "w": 0.080396577715873718
+                },
+                "localScale": {
+                  "x": 0.65245723724365234,
+                  "y": 0.65245723724365234,
+                  "z": 0.65245723724365234
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "0_Human",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.030899999663233757,
+                  "y": 0.84780001640319824,
+                  "z": -0.258899986743927
+                },
+                "localRotation": {
+                  "x": -0.42249947786331177,
+                  "y": -0.30745139718055725,
+                  "z": -0.66137832403182983,
+                  "w": -0.53809541463851929
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "1_Human",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 9.9999997473787516E-05,
+                  "y": 0.85809999704360962,
+                  "z": 0.0082000000402331352
+                },
+                "localRotation": {
+                  "x": -0.20861163735389709,
+                  "y": 0.46757590770721436,
+                  "z": 0.15520860254764557,
+                  "w": -0.84484577178955078
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "2_Human",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.081699997186660767,
+                  "y": 0.85329997539520264,
+                  "z": 0.289900004863739
+                },
+                "localRotation": {
+                  "x": 0.73054307699203491,
+                  "y": 0.62293416261672974,
+                  "z": 0.16677182912826538,
+                  "w": 0.22460430860519409
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "0_Wolf",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.10509999841451645,
+                  "y": 0.821399986743927,
+                  "z": -0.23649999499320984
+                },
+                "localRotation": {
+                  "x": 0.026491358876228333,
+                  "y": -0.3897833526134491,
+                  "z": 0.010332698002457619,
+                  "w": -0.92046749591827393
+                },
+                "localScale": {
+                  "x": 0.72205817699432373,
+                  "y": 0.72205817699432373,
+                  "z": 0.72205823659896851
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "1_Wolf",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.064000003039836884,
+                  "y": 0.8246999979019165,
+                  "z": 0.030099999159574509
+                },
+                "localRotation": {
+                  "x": 0.0058608977124094963,
+                  "y": 0.34932774305343628,
+                  "z": -0.0060825278051197529,
+                  "w": -0.9369625449180603
+                },
+                "localScale": {
+                  "x": 0.68376737833023071,
+                  "y": 0.68376737833023071,
+                  "z": 0.68376737833023071
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "2_Wolf",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.098499998450279236,
+                  "y": 0.82829999923706055,
+                  "z": 0.26890000700950623
+                },
+                "localRotation": {
+                  "x": 0.96191209554672241,
+                  "y": 0.057804398238658905,
+                  "z": 0.25463864207267761,
+                  "w": 0.080888442695140839
+                },
+                "localScale": {
+                  "x": 0.65245723724365234,
+                  "y": 0.65245723724365234,
+                  "z": 0.65245723724365234
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "0_Fish",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.10740000009536743,
+                  "y": 0.7929999828338623,
+                  "z": -0.23720000684261322
+                },
+                "localRotation": {
+                  "x": -0.00397506495937705,
+                  "y": -0.19389258325099945,
+                  "z": -0.04183163121342659,
+                  "w": -0.980122447013855
+                },
+                "localScale": {
+                  "x": 1.15910005569458,
+                  "y": 1.15910005569458,
+                  "z": 1.15910005569458
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "1_Fish",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.06379999965429306,
+                  "y": 0.796500027179718,
+                  "z": 0.030500000342726707
+                },
+                "localRotation": {
+                  "x": -0.0039825690910220146,
+                  "y": 0.34935423731803894,
+                  "z": 0.020315669476985931,
+                  "w": -0.93676203489303589
+                },
+                "localScale": {
+                  "x": 1.15910005569458,
+                  "y": 1.15910005569458,
+                  "z": 1.15910005569458
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "2_Fish",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.098499998450279236,
+                  "y": 0.82829999923706055,
+                  "z": 0.26890000700950623
+                },
+                "localRotation": {
+                  "x": 0.38723582029342651,
+                  "y": -0.0049802940338850021,
+                  "z": 0.92176878452301025,
+                  "w": 0.019131794571876526
+                },
+                "localScale": {
+                  "x": 1.15910005569458,
+                  "y": 1.15910005569458,
+                  "z": 1.15910005569458
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "0_BigCat",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.12486380338668823,
+                  "y": 0.89600002765655518,
+                  "z": -0.24883492290973663
+                },
+                "localRotation": {
+                  "x": -0.95448970794677734,
+                  "y": -0.024616634473204613,
+                  "z": 0.29520395398139954,
+                  "w": -0.034613586962223053
+                },
+                "localScale": {
+                  "x": 0.84974002838134766,
+                  "y": 0.84974002838134766,
+                  "z": 0.84974002838134766
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "1_BigCat",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.057999998331069946,
+                  "y": 0.90700000524520874,
+                  "z": 0.014000000432133675
+                },
+                "localRotation": {
+                  "x": -0.88624036312103271,
+                  "y": 0.0030427617020905018,
+                  "z": -0.46312722563743591,
+                  "w": 0.0090497415512800217
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "2_BigCat",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.089000001549720764,
+                  "y": 0.89529997110366821,
+                  "z": 0.30640000104904175
+                },
+                "localRotation": {
+                  "x": -0.00866668950766325,
+                  "y": -0.059333037585020065,
+                  "z": -0.99536633491516113,
+                  "w": 0.075169272720813751
+                },
+                "localScale": {
+                  "x": 0.876259982585907,
+                  "y": 0.876259982585907,
+                  "z": 0.876259982585907
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "0_Snake",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.069499999284744263,
+                  "y": 0.83190000057220459,
+                  "z": -0.24130000174045563
+                },
+                "localRotation": {
+                  "x": -0.96670526266098022,
+                  "y": -0.014778062701225281,
+                  "z": -0.25234293937683105,
+                  "w": -0.03982071578502655
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "1_Snake",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.027400000020861626,
+                  "y": 0.84499996900558472,
+                  "z": 0.039999999105930328
+                },
+                "localRotation": {
+                  "x": -0.82187294960021973,
+                  "y": 0.0018954741535708308,
+                  "z": -0.56959086656570435,
+                  "w": 0.0093575473874807358
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "2_Snake",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.089000001549720764,
+                  "y": 0.83329993486404419,
+                  "z": 0.30640000104904175
+                },
+                "localRotation": {
+                  "x": -0.31925129890441895,
+                  "y": 0.017895087599754333,
+                  "z": -0.94731223583221436,
+                  "w": -0.018916720524430275
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "0_Crocodile",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.054000001400709152,
+                  "y": 0.82400000095367432,
+                  "z": -0.28099998831748962
+                },
+                "localRotation": {
+                  "x": -0.95653408765792847,
+                  "y": -0.012935420498251915,
+                  "z": -0.28825202584266663,
+                  "w": -0.042262285947799683
+                },
+                "localScale": {
+                  "x": 0.90276998281478882,
+                  "y": 0.90276998281478882,
+                  "z": 0.90276998281478882
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "1_Crocodile",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.063625559210777283,
+                  "y": 0.83825743198394775,
+                  "z": -0.0077751320786774158
+                },
+                "localRotation": {
+                  "x": -0.80001497268676758,
+                  "y": 0.00120789953507483,
+                  "z": -0.59993201494216919,
+                  "w": 0.0075019760988652706
+                },
+                "localScale": {
+                  "x": 0.90276998281478882,
+                  "y": 0.90276998281478882,
+                  "z": 0.90276998281478882
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "2_Crocodile",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.061000000685453415,
+                  "y": 0.82569998502731323,
+                  "z": 0.27860000729560852
+                },
+                "localRotation": {
+                  "x": -0.28355985879898071,
+                  "y": 0.017174294218420982,
+                  "z": -0.95860093832015991,
+                  "w": -0.019573455676436424
+                },
+                "localScale": {
+                  "x": 0.90276998281478882,
+                  "y": 0.90276998281478882,
+                  "z": 0.90276998281478882
+                },
+                "components": [],
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ServerEffects",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "heatSource",
+            "layer": {
+              "index": 18,
+              "name": "Trigger"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.83800005912780762,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.SphereCollider",
+                "$name": "heatSource",
+                "colliderType": "Sphere",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "radius": 2.5,
+                "isTrigger": true,
+                "enabled": true
+              },
+              {
+                "$type": "TriggerTemperature",
+                "$name": "heatSource",
+                "Temperature": 45.0,
+                "triggerSize": 2.5,
+                "minSize": 0.0,
+                "sunlightBlocker": false,
+                "sunlightBlockAmount": 0.0,
+                "blockMinHour": 8.5,
+                "blockMaxHour": 18.5,
+                "interestLayers": 131072,
+                "contents": null,
+                "entityContents": null,
+                "OnEntityEnterTrigger": null,
+                "OnEntityLeaveTrigger": null
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "comfortSource",
+            "layer": {
+              "index": 18,
+              "name": "Trigger"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.83800005912780762,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.SphereCollider",
+                "$name": "comfortSource",
+                "colliderType": "Sphere",
+                "center": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "radius": 4.0,
+                "isTrigger": true,
+                "enabled": true
+              },
+              {
+                "$type": "TriggerComfort",
+                "$name": "comfortSource",
+                "triggerSize": 4.0,
+                "baseComfort": 0.5,
+                "minComfortRange": 2.0,
+                "applyToHorses": false,
+                "interestLayers": 131072,
+                "contents": null,
+                "entityContents": null,
+                "OnEntityEnterTrigger": null,
+                "OnEntityLeaveTrigger": null
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Collision",
+        "layer": {
+          "index": 8,
+          "name": "Deployed"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "Collision",
+            "colliderType": "Mesh",
+            "convex": true,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "BBQ_COL",
+              "meshId": "BBQ_COL_1952dac7"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Metal",
+              "instanceID": 609842
+            }
+          },
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "Collision",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0029240250587463379,
+              "y": 0.71420001983642578,
+              "z": 0.0014109611511230469
+            },
+            "size": {
+              "x": 0.62027502059936523,
+              "y": 0.06526494026184082,
+              "z": 1.0423274040222168
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Metal",
+              "instanceID": 609842
+            }
+          },
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "Collision",
+            "colliderType": "Box",
+            "center": {
+              "x": -0.2821311354637146,
+              "y": 0.37371283769607544,
+              "z": -0.48729705810546875
+            },
+            "size": {
+              "x": 0.063502073287963867,
+              "y": 0.74888861179351807,
+              "z": 0.053004980087280273
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Metal",
+              "instanceID": 609842
+            }
+          },
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "Collision",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.28213110566139221,
+              "y": 0.37371283769607544,
+              "z": -0.48729705810546875
+            },
+            "size": {
+              "x": 0.063502073287963867,
+              "y": 0.74888861179351807,
+              "z": 0.053004980087280273
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Metal",
+              "instanceID": 609842
+            }
+          },
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "Collision",
+            "colliderType": "Box",
+            "center": {
+              "x": -0.2821311354637146,
+              "y": 0.37371283769607544,
+              "z": 0.48729708790779114
+            },
+            "size": {
+              "x": 0.063502073287963867,
+              "y": 0.74888861179351807,
+              "z": 0.053004980087280273
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Metal",
+              "instanceID": 609842
+            }
+          },
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "Collision",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.28213110566139221,
+              "y": 0.37371283769607544,
+              "z": 0.48729708790779114
+            },
+            "size": {
+              "x": 0.063502073287963867,
+              "y": 0.74888861179351807,
+              "z": 0.053004980087280273
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Metal",
+              "instanceID": 609842
+            }
+          }
+        ],
+        "children": [
+          {
+            "name": "LidOpen",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Not Player Usable",
+            "customTags": [],
+            "activeSelf": false,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.MeshCollider",
+                "$name": "LidOpen",
+                "colliderType": "Mesh",
+                "convex": true,
+                "sharedMesh": {
+                  "$ref": "Mesh",
+                  "name": "BBQLID_COL",
+                  "meshId": "BBQLID_COL_5c144204"
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "LidClosed",
+            "layer": {
+              "index": 8,
+              "name": "Deployed"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.97399997711181641,
+              "y": 0.28200000524520874,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -0.57357639074325562,
+              "w": 0.8191521167755127
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.MeshCollider",
+                "$name": "LidClosed",
+                "colliderType": "Mesh",
+                "convex": true,
+                "sharedMesh": {
+                  "$ref": "Mesh",
+                  "name": "BBQLID_COL",
+                  "meshId": "BBQLID_COL_5c144204"
+                },
+                "isTrigger": false,
+                "enabled": true,
+                "physicMaterial": {
+                  "$ref": "PhysicsMaterial",
+                  "name": "Metal",
+                  "instanceID": 609842
+                }
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "preventBuilding",
+        "layer": {
+          "index": 29,
+          "name": "Prevent Building"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.8880000114440918,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.BoxCollider",
+            "$name": "preventBuilding",
+            "colliderType": "Box",
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "size": {
+              "x": 0.699999988079071,
+              "y": 0.64999997615814209,
+              "z": 1.0
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          }
+        ],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Socket_Base": [],
+    "DirectionProperties": [],
+    "Decay": [],
+    "DecayPoint": [],
+    "Upkeep": []
+  }
+}
