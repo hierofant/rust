@@ -1,0 +1,599 @@
+{
+  "prefabID": 1802634117,
+  "path": "assets/prefabs/weapons/chainsaw/chainsaw.entity.prefab",
+  "rootClassChain": [
+    "Chainsaw",
+    "BaseMelee",
+    "AttackEntity",
+    "HeldEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -0.097988829016685486,
+      "y": -0.025672905147075653,
+      "z": -0.084479421377182
+    },
+    "size": {
+      "x": 0.19597765803337097,
+      "y": 0.15671375393867493,
+      "z": 0.44421082735061646
+    }
+  },
+  "hierarchy": {
+    "name": "chainsaw.entity",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "Chainsaw",
+        "$name": "chainsaw.entity",
+        "attackFadeInTime": 0.20000000298023224,
+        "attackFadeInDelay": 0.10000000149011612,
+        "attackFadeOutTime": 0.10000000149011612,
+        "idleFadeInTimeFromOff": 0.10000000149011612,
+        "idleFadeInTimeFromAttack": 0.30000001192092896,
+        "idleFadeInDelay": 0.10000000149011612,
+        "idleFadeOutTime": 0.10000000149011612,
+        "chainsawAudioAdvanced": null,
+        "fuelPerSec": 0.25,
+        "maxAmmo": 50,
+        "ammo": 0,
+        "fuelType": {
+          "$ref": "ItemDefinition",
+          "name": "fuel.lowgrade.item",
+          "itemid": -946369541,
+          "shortname": "lowgradefuel"
+        },
+        "reloadDuration": 4.5,
+        "engineStartChance": 1.0,
+        "chainRenderers": [
+          null,
+          null,
+          null
+        ],
+        "useMaterialScrollingUVs": true,
+        "idleLoop": null,
+        "attackLoopAir": null,
+        "revUp": null,
+        "revDown": null,
+        "offSound": null,
+        "canThrowAsProjectile": false,
+        "canThrowAsEntity": false,
+        "canAiHearIt": false,
+        "canScareAiWhenAimed": false,
+        "onlyThrowAsProjectile": false,
+        "ThrowFullStack": true,
+        "damageProperties": {
+          "$ref": "DamageProperties",
+          "name": "Damage.Melee",
+          "instanceID": 200564
+        },
+        "damageTypes": [
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Slash",
+              "value": 10
+            },
+            "amount": 12.0
+          }
+        ],
+        "deployableDamageOverrides": [],
+        "maxDistance": 1.5,
+        "attackRadius": 0.40000000596046448,
+        "isAutomatic": true,
+        "blockSprintOnAttack": false,
+        "canUntieCrates": false,
+        "longResourceForgiveness": false,
+        "PlayerAnimSystem": null,
+        "strikeFX": {
+          "$ref": "GameObject",
+          "guid": "7f0c5f7202b9240b591867a0d24c0c84",
+          "resourcePath": "assets/prefabs/weapons/salvaged_axe/effects/strike-soft.prefab",
+          "resourceID": 1756792739
+        },
+        "useStandardHitEffects": false,
+        "aiStrikeDelay": 0.20000000298023224,
+        "swingEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "materialStrikeFX": [],
+        "heartStress": 0.5,
+        "gathering": {
+          "$type": "ResourceDispenser+GatherProperties",
+          "Tree": {
+            "$type": "ResourceDispenser+GatherPropertyEntry",
+            "gatherDamage": 30.0,
+            "destroyFraction": 0.0,
+            "conditionLost": 0.05000000074505806
+          },
+          "Ore": {
+            "$type": "ResourceDispenser+GatherPropertyEntry",
+            "gatherDamage": 0.0,
+            "destroyFraction": 0.5,
+            "conditionLost": 0.33399999141693115
+          },
+          "Flesh": {
+            "$type": "ResourceDispenser+GatherPropertyEntry",
+            "gatherDamage": 2.0,
+            "destroyFraction": 0.25,
+            "conditionLost": 0.0
+          },
+          "ProduceHeadItem": false
+        },
+        "deployDelay": 1.0,
+        "repeatDelay": 0.20000000298023224,
+        "animationDelay": 0.0,
+        "effectiveRange": 1.5,
+        "npcDamageScale": 0.40000000596046448,
+        "attackLengthMin": -1.0,
+        "attackLengthMax": -1.0,
+        "attackSpacing": 0.20000000298023224,
+        "aiAimSwayOffset": 0.0,
+        "aiAimCone": 0.0,
+        "aiOnlyInRange": false,
+        "CloseRangeAddition": 0.0,
+        "MediumRangeAddition": 0.0,
+        "LongRangeAddition": 0.0,
+        "CanUseAtMediumRange": false,
+        "CanUseAtLongRange": false,
+        "reloadSounds": [],
+        "thirdPersonMeleeSound": {
+          "$ref": "SoundDefinition",
+          "name": "bone-club-attack-3p",
+          "instanceID": 34258
+        },
+        "recoilCompDelayOverride": 0.0,
+        "wantsRecoilComp": false,
+        "showCrosshairOnTutorial": false,
+        "noHeadshots": false,
+        "nextAttackTime": {
+          "$type": "EncryptedValue`1[[System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+        },
+        "worldModelAnimator": null,
+        "thirdPersonDeploySound": {
+          "$ref": "SoundDefinition",
+          "name": "flamethrower-deploy-3p",
+          "instanceID": 28462
+        },
+        "thirdPersonAimSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-up",
+          "instanceID": 24732
+        },
+        "thirdPersonAimEndSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-down",
+          "instanceID": 24854
+        },
+        "hideViewmodel": false,
+        "handBone": "r_prop",
+        "HoldAnimationOverride": {
+          "$ref": "AnimatorOverrideController",
+          "name": "HoldType.Chainsaw",
+          "instanceID": 1022390
+        },
+        "holdInfo": {
+          "$type": "HeldEntity+HoldInfo",
+          "UseCustomSpineOffset": false,
+          "CustomSpineOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ShieldBoneArmRotationAdditive": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "isBuildingTool": false,
+        "canBeUsedWithShield": false,
+        "ForwardSignalsFromPlayer": false,
+        "forcedOwner": null,
+        "useOwnerForward": true,
+        "CanSetLightsOn": false,
+        "holsterInfo": {
+          "$type": "HeldEntity+HolsterInfo",
+          "slot": {
+            "$enum": "HeldEntity+HolsterInfo+HolsterSlot",
+            "name": "BACK",
+            "value": 0
+          },
+          "backpackSlot": {
+            "$enum": "HeldEntity+HolsterInfo+BackpackSlot",
+            "name": "RIGHT",
+            "value": 1
+          },
+          "displayWhenHolstered": true,
+          "holsterBone": "spine3",
+          "holsterOffset": {
+            "x": 0.0,
+            "y": -0.23000000417232513,
+            "z": -0.11999999731779099
+          },
+          "holsterRotationOffset": {
+            "x": 2.0,
+            "y": -115.19999694824219,
+            "z": 174.89999389648438
+          },
+          "backpackHolsterOffset": {
+            "x": -0.17000000178813934,
+            "y": -0.12999999523162842,
+            "z": -0.5
+          },
+          "backpackHolsterRotationOffset": {
+            "x": 90.0999984741211,
+            "y": -173.69999694824219,
+            "z": 60.970001220703125
+          }
+        },
+        "HeldCameraMode": {
+          "$enum": "BasePlayer+CameraMode",
+          "name": "FirstPerson",
+          "value": 0
+        },
+        "hostileScore": 5.0,
+        "FirstPersonArmOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonArmRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonRotationStrength": 1.0,
+        "AttachmentAnchor": [
+          []
+        ],
+        "holsterVisible": false,
+        "genericVisible": false,
+        "ownerItemUID": {
+          "$type": "ItemId",
+          "Value": 0
+        },
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -0.097988829016685486,
+            "y": -0.025672905147075653,
+            "z": -0.084479421377182
+          },
+          "size": {
+            "x": 0.19597765803337097,
+            "y": 0.15671375393867493,
+            "z": 0.44421082735061646
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "chainsaw.entity",
+          "collision": null,
+          "rootBone": [
+            [
+              {
+                "$ref": "Transform",
+                "name": "Charm",
+                "instanceID": 1361000,
+                "goName": "Charm",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ]
+          ],
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "chainsaw.entity",
+              "instanceID": 1287578,
+              "goName": "chainsaw.entity",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Chainsaw_wm",
+              "instanceID": 1291540,
+              "goName": "Chainsaw_wm",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Charm",
+              "instanceID": 1361000,
+              "goName": "Charm",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "v_CharmAnchor",
+              "instanceID": 1319134,
+              "goName": "v_CharmAnchor",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "chainsaw.entity",
+            "Chainsaw_wm",
+            "Charm",
+            "v_CharmAnchor"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 1802634117,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Small",
+          "value": 0
+        },
+        "net": null
+      },
+      {
+        "$ref": "Model",
+        "name": "chainsaw.entity",
+        "instanceID": 1518052,
+        "goName": "chainsaw.entity",
+        "$alreadyDumpedElsewhereInThisFile": true
+      }
+    ],
+    "children": [
+      {
+        "name": "Chainsaw_wm",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 0.60500001907348633,
+          "y": 0.60500001907348633,
+          "z": 0.60500001907348633
+        },
+        "components": [
+          {
+            "$type": "Model",
+            "$name": "Chainsaw_wm",
+            "collision": null,
+            "rootBone": {
+              "$ref": "Transform",
+              "name": "Chainsaw_wm",
+              "instanceID": 1291540,
+              "goName": "Chainsaw_wm",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            "headBone": null,
+            "eyeBone": null,
+            "animator": null,
+            "skeleton": null,
+            "boneTransforms": [
+              {
+                "$ref": "Transform",
+                "name": "Chainsaw_wm",
+                "instanceID": 1291540,
+                "goName": "Chainsaw_wm",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              {
+                "$ref": "Transform",
+                "name": "Charm",
+                "instanceID": 1361000,
+                "goName": "Charm",
+                "$alreadyDumpedElsewhereInThisFile": true
+              },
+              {
+                "$ref": "Transform",
+                "name": "v_CharmAnchor",
+                "instanceID": 1319134,
+                "goName": "v_CharmAnchor",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "boneNames": [
+              "Chainsaw_wm",
+              "Charm",
+              "v_CharmAnchor"
+            ]
+          }
+        ],
+        "children": [
+          {
+            "name": "Charm",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.12880000472068787,
+              "y": 0.17710000276565552,
+              "z": 0.12729999423027039
+            },
+            "localRotation": {
+              "x": -0.0561448410153389,
+              "y": -0.00904083251953125,
+              "z": -0.014606788754463196,
+              "w": -0.99827486276626587
+            },
+            "localScale": {
+              "x": 0.75,
+              "y": 0.75,
+              "z": 0.75
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "v_CharmAnchor",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": false,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "ViewModelRenderer",
+                    "$name": "v_CharmAnchor",
+                    "cachedTextureRefs": [
+                      null,
+                      null,
+                      null,
+                      null
+                    ],
+                    "opaqueEvents": [
+                      {
+                        "$type": "ViewModelDrawEvent",
+                        "viewModelRenderer": {
+                          "$cycle": true,
+                          "type": "ViewModelRenderer"
+                        },
+                        "renderer": null,
+                        "skipDepthPrePass": false,
+                        "material": null,
+                        "subMesh": 0,
+                        "pass": 2,
+                        "needsFilteredRefraction": false
+                      }
+                    ],
+                    "transparentEvents": [],
+                    "prevModelMatrix": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ]
+                  }
+                ],
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Socket_Base": []
+  }
+}

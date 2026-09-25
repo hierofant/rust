@@ -1,0 +1,1483 @@
+{
+  "prefabID": 2692544615,
+  "path": "assets/prefabs/misc/tunneldwelling/tunnel_dwelling_c.prefab",
+  "rootClassChain": [
+    "NPCDwelling",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.0,
+      "y": 1.5,
+      "z": 0.0
+    },
+    "size": {
+      "x": 4.75,
+      "y": 3.0,
+      "z": 4.75
+    }
+  },
+  "hierarchy": {
+    "name": "tunnel_dwelling_c",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "OnlyVisibleUnderground",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "NPCDwelling",
+        "$name": "tunnel_dwelling_c",
+        "npcSpawner": {
+          "$type": "NPCSpawner",
+          "$name": "NPCSpawner",
+          "AdditionalLOSBlockingLayer": 0,
+          "monumentNavMesh": null,
+          "shouldFillOnSpawn": false,
+          "VirtualInfoZone": null,
+          "Path": null,
+          "AStarGraph": null,
+          "UseStatModifiers": false,
+          "SenseRange": 30.0,
+          "CheckLOS": true,
+          "TargetLostRange": 50.0,
+          "AttackRangeMultiplier": 1.0,
+          "ListenRange": 10.0,
+          "CanUseHealingItemsChance": 0.0,
+          "Loadouts": [],
+          "attachToParent": null,
+          "Tier": {
+            "$enum": "MonumentTier",
+            "name": "-1",
+            "value": -1
+          },
+          "prefabs": [
+            {
+              "$type": "SpawnGroup+SpawnEntry",
+              "prefab": {
+                "$ref": "GameObject",
+                "guid": "15eaf9701d1537f4ab8898a2a326fc9b",
+                "resourcePath": "assets/rust.ai/agents/npcplayer/humannpc/tunneldweller/npc_tunneldweller.prefab",
+                "resourceID": 732025282
+              },
+              "weight": 1,
+              "mobile": true
+            }
+          ],
+          "maxPopulation": 2,
+          "numToSpawnPerTickMin": 1,
+          "numToSpawnPerTickMax": 2,
+          "respawnDelayMin": "Infinity",
+          "respawnDelayMax": "Infinity",
+          "wantsInitialSpawn": true,
+          "temporary": true,
+          "forceInitialSpawn": false,
+          "preventDuplicates": false,
+          "isSpawnerActive": true,
+          "shouldBlockSpawnedEntitySaving": true,
+          "resetBehavior": {
+            "$enum": "SpawnGroupResetBehavior",
+            "name": "Default",
+            "value": 0
+          },
+          "setFreeIfMovedBeyond": null,
+          "category": "",
+          "Monument": null,
+          "fillOnSpawn": false,
+          "spawnPoints": null,
+          "spawnInstances": [],
+          "spawnClock": {
+            "$type": "LocalClock",
+            "events": []
+          }
+        },
+        "NPCSpawnChance": 1.0,
+        "spawnGroups": [
+          {
+            "$type": "SpawnGroup",
+            "$name": "CrateSpawner",
+            "Tier": {
+              "$enum": "MonumentTier",
+              "name": "-1",
+              "value": -1
+            },
+            "prefabs": [
+              {
+                "$type": "SpawnGroup+SpawnEntry",
+                "prefab": {
+                  "$ref": "GameObject",
+                  "guid": "df6f33b691a244149a297c53237fe822",
+                  "resourcePath": "assets/bundled/prefabs/radtown/crate_normal_2.prefab",
+                  "resourceID": 1546200557
+                },
+                "weight": 45,
+                "mobile": false
+              },
+              {
+                "$type": "SpawnGroup+SpawnEntry",
+                "prefab": {
+                  "$ref": "GameObject",
+                  "guid": "a467b5d4507a832499efe8e21129984a",
+                  "resourcePath": "assets/bundled/prefabs/radtown/crate_tools.prefab",
+                  "resourceID": 1892026534
+                },
+                "weight": 45,
+                "mobile": false
+              },
+              {
+                "$type": "SpawnGroup+SpawnEntry",
+                "prefab": {
+                  "$ref": "GameObject",
+                  "guid": "6481ec6d3c03c0f4aa326b7cb64168f9",
+                  "resourcePath": "assets/bundled/prefabs/radtown/crate_normal.prefab",
+                  "resourceID": 2857304752
+                },
+                "weight": 10,
+                "mobile": false
+              }
+            ],
+            "maxPopulation": 1,
+            "numToSpawnPerTickMin": 1,
+            "numToSpawnPerTickMax": 1,
+            "respawnDelayMin": "Infinity",
+            "respawnDelayMax": "Infinity",
+            "wantsInitialSpawn": true,
+            "temporary": true,
+            "forceInitialSpawn": false,
+            "preventDuplicates": false,
+            "isSpawnerActive": true,
+            "shouldBlockSpawnedEntitySaving": true,
+            "resetBehavior": {
+              "$enum": "SpawnGroupResetBehavior",
+              "name": "Default",
+              "value": 0
+            },
+            "setFreeIfMovedBeyond": null,
+            "category": "",
+            "Monument": null,
+            "fillOnSpawn": false,
+            "spawnPoints": null,
+            "spawnInstances": [],
+            "spawnClock": {
+              "$type": "LocalClock",
+              "events": []
+            }
+          }
+        ],
+        "movePoints": [
+          {
+            "$type": "AIMovePoint",
+            "$name": "MovePoint (1)",
+            "distances": [],
+            "distancesToCover": [],
+            "radius": 0.60000002384185791,
+            "WaitTime": 0.0,
+            "LookAtPoints": []
+          },
+          {
+            "$type": "AIMovePoint",
+            "$name": "MovePoint (2)",
+            "distances": [],
+            "distancesToCover": [],
+            "radius": 0.60000002384185791,
+            "WaitTime": 0.0,
+            "LookAtPoints": []
+          },
+          {
+            "$type": "AIMovePoint",
+            "$name": "MovePoint (3)",
+            "distances": [],
+            "distancesToCover": [],
+            "radius": 0.60000002384185791,
+            "WaitTime": 0.0,
+            "LookAtPoints": []
+          },
+          {
+            "$type": "AIMovePoint",
+            "$name": "MovePoint (4)",
+            "distances": [],
+            "distancesToCover": [],
+            "radius": 0.60000002384185791,
+            "WaitTime": 0.0,
+            "LookAtPoints": []
+          }
+        ],
+        "coverPoints": [
+          {
+            "$type": "AICoverPoint",
+            "$name": "Cover (1)",
+            "coverDot": 0.800000011920929
+          },
+          {
+            "$type": "AICoverPoint",
+            "$name": "Cover (2)",
+            "coverDot": 0.800000011920929
+          },
+          {
+            "$type": "AICoverPoint",
+            "$name": "Cover (3)",
+            "coverDot": 0.800000011920929
+          },
+          {
+            "$type": "AICoverPoint",
+            "$name": "Cover (5)",
+            "coverDot": 0.800000011920929
+          },
+          {
+            "$type": "AICoverPoint",
+            "$name": "Cover (6)",
+            "coverDot": 0.800000011920929
+          },
+          {
+            "$type": "AICoverPoint",
+            "$name": "Cover (7)",
+            "coverDot": 0.800000011920929
+          },
+          {
+            "$type": "AICoverPoint",
+            "$name": "Cover (9)",
+            "coverDot": 0.800000011920929
+          },
+          {
+            "$type": "AICoverPoint",
+            "$name": "Cover (10)",
+            "coverDot": 0.800000011920929
+          }
+        ],
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 1.5,
+            "z": 0.0
+          },
+          "size": {
+            "x": 4.75,
+            "y": 3.0,
+            "z": 4.75
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": false,
+        "syncPosition": false,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 2692544615,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Medium",
+          "value": 1
+        },
+        "net": null
+      }
+    ],
+    "children": [
+      {
+        "name": "NPCSpawner",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.12900000810623169,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "NPCSpawner",
+            "name": "NPCSpawner",
+            "instanceID": 1528342,
+            "goName": "NPCSpawner",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": [
+          {
+            "name": "spawn",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0430000014603138,
+              "y": -0.1289999932050705,
+              "z": -1.0659999847412109
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "GenericSpawnPoint",
+                "$name": "spawn",
+                "dropToGround": true,
+                "randomRot": false,
+                "randomRotSnapDegrees": 1.0,
+                "spawnEffect": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "OnObjectSpawnedEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "OnObjectRetiredEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "spawnPointType": {
+                  "$enum": "BaseSpawnPoint+SpawnPointType",
+                  "name": "Normal",
+                  "value": 0
+                },
+                "playerCheckMargin": 2.0
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "spawn",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.22300000488758087,
+              "y": -0.1289999932050705,
+              "z": 1.2109999656677246
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "GenericSpawnPoint",
+                "$name": "spawn",
+                "dropToGround": true,
+                "randomRot": false,
+                "randomRotSnapDegrees": 1.0,
+                "spawnEffect": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "OnObjectSpawnedEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "OnObjectRetiredEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "spawnPointType": {
+                  "$enum": "BaseSpawnPoint+SpawnPointType",
+                  "name": "Normal",
+                  "value": 0
+                },
+                "playerCheckMargin": 2.0
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "AI",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -0.32916277647018433,
+          "y": 0.0,
+          "z": 0.14596176147460938
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "MovePoint (1)",
+            "layer": {
+              "index": 16,
+              "name": "World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.56000000238418579,
+              "y": 0.0,
+              "z": 1.1399999856948853
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "AIMovePoint",
+                "name": "MovePoint (1)",
+                "instanceID": 1559956,
+                "goName": "MovePoint (1)",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "MovePoint (2)",
+            "layer": {
+              "index": 16,
+              "name": "World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.14000000059604645,
+              "y": 0.0,
+              "z": -1.5199999809265137
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "AIMovePoint",
+                "name": "MovePoint (2)",
+                "instanceID": 1535832,
+                "goName": "MovePoint (2)",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "MovePoint (3)",
+            "layer": {
+              "index": 16,
+              "name": "World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.6599999666213989,
+              "y": 0.0,
+              "z": -0.50599998235702515
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "AIMovePoint",
+                "name": "MovePoint (3)",
+                "instanceID": 1556838,
+                "goName": "MovePoint (3)",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "MovePoint (4)",
+            "layer": {
+              "index": 16,
+              "name": "World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -1.1200000047683716,
+              "y": 0.0,
+              "z": -1.5499999523162842
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "AIMovePoint",
+                "name": "MovePoint (4)",
+                "instanceID": 1540824,
+                "goName": "MovePoint (4)",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "Cover (1)",
+            "layer": {
+              "index": 16,
+              "name": "World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 2.134000301361084,
+              "y": 0.0,
+              "z": -1.1239998340606689
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "AICoverPoint",
+                "name": "Cover (1)",
+                "instanceID": 1519334,
+                "goName": "Cover (1)",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "Cover (2)",
+            "layer": {
+              "index": 16,
+              "name": "World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.2510000467300415,
+              "y": 0.0,
+              "z": -2.0639998912811279
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.7071068286895752,
+              "z": 0.0,
+              "w": 0.7071068286895752
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "AICoverPoint",
+                "name": "Cover (2)",
+                "instanceID": 1572066,
+                "goName": "Cover (2)",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "Cover (3)",
+            "layer": {
+              "index": 16,
+              "name": "World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 2.1170001029968262,
+              "y": 0.0,
+              "z": -2.9379997253417969
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "AICoverPoint",
+                "name": "Cover (3)",
+                "instanceID": 1576480,
+                "goName": "Cover (3)",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "Cover (5)",
+            "layer": {
+              "index": 16,
+              "name": "World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 2.2279999256134033,
+              "y": 0.0,
+              "z": 1.9529998302459717
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "AICoverPoint",
+                "name": "Cover (5)",
+                "instanceID": 1565556,
+                "goName": "Cover (5)",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "Cover (6)",
+            "layer": {
+              "index": 16,
+              "name": "World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.2909998893737793,
+              "y": 0.0,
+              "z": 1.0329999923706055
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.7071068286895752,
+              "z": 0.0,
+              "w": 0.7071068286895752
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "AICoverPoint",
+                "name": "Cover (6)",
+                "instanceID": 1543416,
+                "goName": "Cover (6)",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "Cover (7)",
+            "layer": {
+              "index": 16,
+              "name": "World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 2.1869997978210449,
+              "y": 0.0,
+              "z": 0.15699994564056396
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "AICoverPoint",
+                "name": "Cover (7)",
+                "instanceID": 1571544,
+                "goName": "Cover (7)",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "Cover (9)",
+            "layer": {
+              "index": 16,
+              "name": "World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.017999976873397827,
+              "y": 0.0,
+              "z": 1.5720000267028809
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": -0.7071068286895752,
+              "z": 0.0,
+              "w": 0.7071068286895752
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "AICoverPoint",
+                "name": "Cover (9)",
+                "instanceID": 1531830,
+                "goName": "Cover (9)",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "Cover (10)",
+            "layer": {
+              "index": 16,
+              "name": "World"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.92000001668930054,
+              "y": 0.0,
+              "z": 2.624000072479248
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$ref": "AICoverPoint",
+                "name": "Cover (10)",
+                "instanceID": 1557106,
+                "goName": "Cover (10)",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "Obstacle (1)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -1.2489999532699585,
+              "y": 0.777999997138977,
+              "z": 0.7630000114440918
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.AI.NavMeshObstacle",
+                "$name": "Obstacle (1)"
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "Obstacle (2)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 2.1679999828338623,
+              "y": 0.51200002431869507,
+              "z": -1.9570000171661377
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.AI.NavMeshObstacle",
+                "$name": "Obstacle (2)"
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "Obstacle (3)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 2.1659998893737793,
+              "y": 0.50800001621246338,
+              "z": 1.0379999876022339
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "UnityEngine.AI.NavMeshObstacle",
+                "$name": "Obstacle (3)"
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "pallet_boxes_a (3)",
+        "layer": {
+          "index": 16,
+          "name": "World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -1.5390000343322754,
+          "y": 0.0,
+          "z": 1.5789999961853027
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "pallet_boxes_a (3)",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "pallet_boxes_a_COL",
+              "meshId": "pallet_boxes_a_COL_3a6179f0"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Generic",
+              "instanceID": 609836
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "wooden_crate_a (2)",
+        "layer": {
+          "index": 16,
+          "name": "World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 1.8190001249313354,
+          "y": 0.0,
+          "z": -1.84499990940094
+        },
+        "localRotation": {
+          "x": 8.1460342471473268E-08,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "wooden_crate_a (2)",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "wooden_crate_a_COL",
+              "meshId": "wooden_crate_a_COL_d1ceead6"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          },
+          {
+            "$type": "Rust.Ai.Gen2.RustNavmeshModifierVolume",
+            "$name": "wooden_crate_a (2)"
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "pallet_stacks_c (2)",
+        "layer": {
+          "index": 16,
+          "name": "World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -1.565000057220459,
+          "y": 0.0,
+          "z": 0.22699999809265137
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "pallet_stacks_c (2)",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "pallet_stacks_c_COL",
+              "meshId": "pallet_stacks_c_COL_cb3807c4"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Generic",
+              "instanceID": 609836
+            }
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "wooden_crate_a (3)",
+        "layer": {
+          "index": 16,
+          "name": "World"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 1.8549998998641968,
+          "y": 0.0,
+          "z": 1.1990000009536743
+        },
+        "localRotation": {
+          "x": 5.7601170055932016E-08,
+          "y": 0.70710676908493042,
+          "z": 5.76011558450773E-08,
+          "w": 0.7071068286895752
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "UnityEngine.MeshCollider",
+            "$name": "wooden_crate_a (3)",
+            "colliderType": "Mesh",
+            "convex": false,
+            "sharedMesh": {
+              "$ref": "Mesh",
+              "name": "wooden_crate_a_COL",
+              "meshId": "wooden_crate_a_COL_d1ceead6"
+            },
+            "isTrigger": false,
+            "enabled": true,
+            "physicMaterial": {
+              "$ref": "PhysicsMaterial",
+              "name": "Wood",
+              "instanceID": 609850
+            }
+          },
+          {
+            "$type": "Rust.Ai.Gen2.RustNavmeshModifierVolume",
+            "$name": "wooden_crate_a (3)"
+          }
+        ],
+        "children": []
+      },
+      {
+        "name": "CrateSpawner",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Client Cull",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "SpawnGroup",
+            "name": "CrateSpawner",
+            "instanceID": 1532102,
+            "goName": "CrateSpawner",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": [
+          {
+            "name": "SpawnPoint",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -1.5329999923706055,
+              "y": 0.082999996840953827,
+              "z": 0.34700000286102295
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": -0.15077412128448486,
+              "z": 0.0,
+              "w": 0.98856830596923828
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "GenericSpawnPoint",
+                "$name": "SpawnPoint",
+                "dropToGround": false,
+                "randomRot": false,
+                "randomRotSnapDegrees": 1.0,
+                "spawnEffect": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "OnObjectSpawnedEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "OnObjectRetiredEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "spawnPointType": {
+                  "$enum": "BaseSpawnPoint+SpawnPointType",
+                  "name": "Normal",
+                  "value": 0
+                },
+                "playerCheckMargin": 2.0
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "SpawnPoint (1)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -1.4839999675750732,
+              "y": 1.4819999933242798,
+              "z": 1.5839999914169312
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": -0.15077412128448486,
+              "z": 0.0,
+              "w": 0.98856830596923828
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "GenericSpawnPoint",
+                "$name": "SpawnPoint (1)",
+                "dropToGround": false,
+                "randomRot": false,
+                "randomRotSnapDegrees": 1.0,
+                "spawnEffect": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "OnObjectSpawnedEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "OnObjectRetiredEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "spawnPointType": {
+                  "$enum": "BaseSpawnPoint+SpawnPointType",
+                  "name": "Normal",
+                  "value": 0
+                },
+                "playerCheckMargin": 2.0
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "SpawnPoint (2)",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 1.8839999437332153,
+              "y": 0.98100000619888306,
+              "z": 1.1480000019073486
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": -0.15077412128448486,
+              "z": 0.0,
+              "w": 0.98856830596923828
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "GenericSpawnPoint",
+                "$name": "SpawnPoint (2)",
+                "dropToGround": false,
+                "randomRot": false,
+                "randomRotSnapDegrees": 1.0,
+                "spawnEffect": {
+                  "$ref": "GameObject",
+                  "guid": "",
+                  "resourcePath": null,
+                  "resourceID": 0
+                },
+                "OnObjectSpawnedEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "OnObjectRetiredEvent": {
+                  "$type": "UnityEngine.Events.UnityEvent",
+                  "m_PersistentCalls": {
+                    "$type": "UnityEngine.Events.PersistentCallGroup",
+                    "m_Calls": []
+                  }
+                },
+                "spawnPointType": {
+                  "$enum": "BaseSpawnPoint+SpawnPointType",
+                  "name": "Normal",
+                  "value": 0
+                },
+                "playerCheckMargin": 2.0
+              }
+            ],
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Socket_Base": []
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "prefabID": 2009456779,
+  "path": "assets/prefabs/weapons/bolt rifle/effects/attack.prefab",
+  "rootClassChain": [
+    "UnityEngine.GameObject",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "hierarchy": {
+    "name": "attack",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "EffectParentToWeaponBone",
+        "$name": "attack",
+        "boneName": "muzzle",
+        "singleFrame": false
+      },
+      {
+        "$type": "EffectAudioPerspectiveSwitcher",
+        "$name": "attack",
+        "parentToWeaponComponent": null
+      },
+      {
+        "$type": "ParticleSystemPostIK",
+        "$name": "attack"
+      }
+    ],
+    "children": [
+      {
+        "name": "muzzle_flash_rifle",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "HideIfAiming",
+            "$name": "muzzle_flash_rifle",
+            "systems": [
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        ],
+        "children": [
+          {
+            "name": "muzzleflash_lightex",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0024999999441206455,
+              "y": 0.0099999997764825821,
+              "z": 0.12999999523162842
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "TimedRemoval",
+                "$name": "muzzleflash_lightex",
+                "objectToDestroy": {
+                  "$ref": "GameObject",
+                  "name": "muzzleflash_lightex",
+                  "instanceID": 1117916
+                },
+                "removeDelay": 0.10000000149011612
+              }
+            ],
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {}
+}

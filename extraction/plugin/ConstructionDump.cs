@@ -404,18 +404,40 @@ namespace Oxide.Plugins
                 else if (uo is GameObject go)
                 {
                     var be = go.GetComponent<BaseEntity>();
-                    if (be != null) o["prefabID"] = be.prefabID;
+                    if (be != null)
+                    {
+                        // The game compares by prefabID, so a bare GameObject name is useless -
+                        // always resolve the actual spawnable path too.
+                        o["prefabID"] = be.prefabID;
+                        o["resourcePath"] = StringPool.Get(be.prefabID);
+                    }
                     o["instanceID"] = go.GetInstanceID();
+                }
+                else if (uo is PrefabAttribute pa)
+                {
+                    // Confirmed empirically (foundation.prefab's Twig ConstructionGrade, which is
+                    // reachable both via Construction.grades[0] and Construction.defaultGrade):
+                    // for a baked PrefabAttribute whose native GameObject has since been destroyed,
+                    // comp.GetInstanceID() does NOT throw - it silently returns 0, a useless value -
+                    // and the very next line (comp.gameObject) then throws NullReferenceException,
+                    // which is what previously produced the "$error" alongside "instanceID: 0".
+                    // PrefabAttribute caches instanceID/hierachyName/prefabID as plain managed fields
+                    // at bake time (PreProcess), before any native destruction, so use those instead
+                    // of touching native-backed members at all for this type.
+                    o["instanceID"] = pa.instanceID;
+                    o["prefabID"] = pa.prefabID;
+                    o["path"] = StringPool.Get(pa.prefabID);
+                    o["hierachyName"] = pa.hierachyName;
                 }
                 else if (uo is Component comp)
                 {
                     o["instanceID"] = comp.GetInstanceID();
-                    o["goName"] = comp.gameObject != null ? SafeUnityName(comp.gameObject) : null;
-                    if (comp is PrefabAttribute pa)
+                    try { o["goName"] = comp.gameObject != null ? SafeUnityName(comp.gameObject) : null; }
+                    catch (Exception ex) { o["goNameError"] = ex.Message; }
+                    if (comp is BaseEntity be2)
                     {
-                        o["prefabID"] = pa.prefabID;
-                        o["path"] = StringPool.Get(pa.prefabID);
-                        o["hierachyName"] = pa.hierachyName;
+                        o["prefabID"] = be2.prefabID;
+                        o["resourcePath"] = StringPool.Get(be2.prefabID);
                     }
                 }
                 else
@@ -541,7 +563,26 @@ namespace Oxide.Plugins
                 try
                 {
                     var ctx = new DumpCtx { RootGameObject = def.gameObject, CurrentPrefabId = 0 };
-                    arr.Add(Serialize(def, ctx, 0, isRoot: true));
+                    var itemJson = (JObject)Serialize(def, ctx, 0, isRoot: true);
+
+                    // ItemModDeployable is a separate MonoBehaviour on the item's GameObject, not
+                    // an ItemMod, so it never shows up inside the itemMods field above.
+                    var deployable = def.GetComponent<ItemModDeployable>();
+                    itemJson["itemModDeployable"] = deployable != null
+                        ? Serialize(deployable, ctx, 0, isRoot: true)
+                        : JValue.CreateNull();
+
+                    var extra = new JArray();
+                    foreach (Component c in def.GetComponentsInChildren<Component>(true))
+                    {
+                        if (c == null || c is Transform || c is ItemMod || c is ItemModDeployable) continue;
+                        if (ReferenceEquals(c, def)) continue;
+                        try { extra.Add(Serialize(c, ctx, 0, isRoot: true)); }
+                        catch (Exception ex) { Failures.Add($"item {def.shortname} extraComponent {c.GetType().FullName}: {ex.Message}"); }
+                    }
+                    itemJson["extraComponents"] = extra;
+
+                    arr.Add(itemJson);
                 }
                 catch (Exception ex)
                 {

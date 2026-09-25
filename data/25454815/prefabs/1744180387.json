@@ -1,0 +1,337 @@
+{
+  "prefabID": 1744180387,
+  "path": "assets/prefabs/weapons/salvaged_hammer/hammer_salvaged.entity.prefab",
+  "rootClassChain": [
+    "BaseMelee",
+    "AttackEntity",
+    "HeldEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": -0.0074882358312606812,
+      "y": -6.7055225372314453E-08,
+      "z": -0.24369326233863831
+    },
+    "size": {
+      "x": 0.24371197819709778,
+      "y": 0.1388418972492218,
+      "z": 0.50426739454269409
+    }
+  },
+  "hierarchy": {
+    "name": "hammer_salvaged.entity",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "BaseMelee",
+        "$name": "hammer_salvaged.entity",
+        "canThrowAsProjectile": true,
+        "canThrowAsEntity": false,
+        "canAiHearIt": false,
+        "canScareAiWhenAimed": false,
+        "onlyThrowAsProjectile": false,
+        "ThrowFullStack": true,
+        "damageProperties": {
+          "$ref": "DamageProperties",
+          "name": "Damage.Melee",
+          "instanceID": 200564
+        },
+        "damageTypes": [
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Blunt",
+              "value": 11
+            },
+            "amount": 40.0
+          }
+        ],
+        "deployableDamageOverrides": [
+          {
+            "$type": "Rust.DamageTypeEntry",
+            "type": {
+              "$enum": "Rust.DamageType",
+              "name": "Blunt",
+              "value": 11
+            },
+            "amount": 60.0
+          }
+        ],
+        "maxDistance": 1.5,
+        "attackRadius": 0.30000001192092896,
+        "isAutomatic": true,
+        "blockSprintOnAttack": true,
+        "canUntieCrates": false,
+        "longResourceForgiveness": false,
+        "PlayerAnimSystem": null,
+        "strikeFX": {
+          "$ref": "GameObject",
+          "guid": "00028623a04cede489b6cbc374c7a14e",
+          "resourcePath": "assets/prefabs/weapons/salvaged_hammer/effects/strike.prefab",
+          "resourceID": 1969560719
+        },
+        "useStandardHitEffects": true,
+        "aiStrikeDelay": 0.20000000298023224,
+        "swingEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "materialStrikeFX": [],
+        "heartStress": 0.5,
+        "gathering": {
+          "$type": "ResourceDispenser+GatherProperties",
+          "Tree": {
+            "$type": "ResourceDispenser+GatherPropertyEntry",
+            "gatherDamage": 20.0,
+            "destroyFraction": 0.20000000298023224,
+            "conditionLost": 0.5
+          },
+          "Ore": {
+            "$type": "ResourceDispenser+GatherPropertyEntry",
+            "gatherDamage": 20.0,
+            "destroyFraction": 0.20000000298023224,
+            "conditionLost": 0.5
+          },
+          "Flesh": {
+            "$type": "ResourceDispenser+GatherPropertyEntry",
+            "gatherDamage": 10.0,
+            "destroyFraction": 0.60000002384185791,
+            "conditionLost": 0.5
+          },
+          "ProduceHeadItem": false
+        },
+        "deployDelay": 1.0,
+        "repeatDelay": 1.0,
+        "animationDelay": 0.0,
+        "effectiveRange": 1.0,
+        "npcDamageScale": 1.0,
+        "attackLengthMin": -1.0,
+        "attackLengthMax": -1.0,
+        "attackSpacing": 0.0,
+        "aiAimSwayOffset": 0.0,
+        "aiAimCone": 0.0,
+        "aiOnlyInRange": false,
+        "CloseRangeAddition": 0.0,
+        "MediumRangeAddition": 0.0,
+        "LongRangeAddition": 0.0,
+        "CanUseAtMediumRange": true,
+        "CanUseAtLongRange": true,
+        "reloadSounds": [],
+        "thirdPersonMeleeSound": {
+          "$ref": "SoundDefinition",
+          "name": "salvaged-hammer-attack-3p",
+          "instanceID": 34178
+        },
+        "recoilCompDelayOverride": 0.0,
+        "wantsRecoilComp": false,
+        "showCrosshairOnTutorial": false,
+        "noHeadshots": false,
+        "nextAttackTime": {
+          "$type": "EncryptedValue`1[[System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+        },
+        "worldModelAnimator": null,
+        "thirdPersonDeploySound": {
+          "$ref": "SoundDefinition",
+          "name": "salvaged-hammer-deploy-3p",
+          "instanceID": 28566
+        },
+        "thirdPersonAimSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-up",
+          "instanceID": 24732
+        },
+        "thirdPersonAimEndSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-down",
+          "instanceID": 24854
+        },
+        "hideViewmodel": false,
+        "handBone": "r_prop",
+        "HoldAnimationOverride": {
+          "$ref": "AnimatorOverrideController",
+          "name": "HoldType.Salvaged_Hammer",
+          "instanceID": 1022460
+        },
+        "holdInfo": {
+          "$type": "HeldEntity+HoldInfo",
+          "UseCustomSpineOffset": false,
+          "CustomSpineOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ShieldBoneArmRotationAdditive": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "isBuildingTool": false,
+        "canBeUsedWithShield": false,
+        "ForwardSignalsFromPlayer": false,
+        "forcedOwner": null,
+        "useOwnerForward": true,
+        "CanSetLightsOn": false,
+        "holsterInfo": {
+          "$type": "HeldEntity+HolsterInfo",
+          "slot": {
+            "$enum": "HeldEntity+HolsterInfo+HolsterSlot",
+            "name": "BACK",
+            "value": 0
+          },
+          "backpackSlot": {
+            "$enum": "HeldEntity+HolsterInfo+BackpackSlot",
+            "name": "RIGHT",
+            "value": 1
+          },
+          "displayWhenHolstered": true,
+          "holsterBone": "spine3",
+          "holsterOffset": {
+            "x": -0.25,
+            "y": -0.20000000298023224,
+            "z": -0.17000000178813934
+          },
+          "holsterRotationOffset": {
+            "x": 4.5999999046325684,
+            "y": -120.0,
+            "z": 9.0
+          },
+          "backpackHolsterOffset": {
+            "x": -0.37000000476837158,
+            "y": -0.12999999523162842,
+            "z": -0.40000000596046448
+          },
+          "backpackHolsterRotationOffset": {
+            "x": 185.07000732421875,
+            "y": 3.9000000953674316,
+            "z": 230.0
+          }
+        },
+        "HeldCameraMode": {
+          "$enum": "BasePlayer+CameraMode",
+          "name": "FirstPerson",
+          "value": 0
+        },
+        "hostileScore": 4.0,
+        "FirstPersonArmOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonArmRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonRotationStrength": 1.0,
+        "AttachmentAnchor": null,
+        "holsterVisible": false,
+        "genericVisible": false,
+        "ownerItemUID": {
+          "$type": "ItemId",
+          "Value": 0
+        },
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": -0.0074882358312606812,
+            "y": -6.7055225372314453E-08,
+            "z": -0.24369326233863831
+          },
+          "size": {
+            "x": 0.24371197819709778,
+            "y": 0.1388418972492218,
+            "z": 0.50426739454269409
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 1744180387,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Small",
+          "value": 0
+        },
+        "net": null
+      }
+    ],
+    "children": []
+  },
+  "prefabAttributes": {
+    "Socket_Base": []
+  }
+}

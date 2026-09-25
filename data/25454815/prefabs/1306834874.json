@@ -1,0 +1,189 @@
+{
+  "prefabID": 1306834874,
+  "path": "assets/prefabs/weapons/smg/effects/attack_silenced.prefab",
+  "rootClassChain": [
+    "UnityEngine.GameObject",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "hierarchy": {
+    "name": "attack_silenced",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "EffectParentToWeaponBone",
+        "$name": "attack_silenced",
+        "boneName": "muzzle_offset_silencer",
+        "singleFrame": false
+      },
+      {
+        "$type": "EffectAudioPerspectiveSwitcher",
+        "$name": "attack_silenced",
+        "parentToWeaponComponent": null
+      },
+      {
+        "$type": "EffectSilencerSelect",
+        "$name": "attack_silenced",
+        "MilitaryEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "OilFilterEffect": {
+          "$ref": "GameObject",
+          "guid": "af60e53cdb4177241a13087eca174c15",
+          "resourcePath": "assets/prefabs/weapons/smg/effects/attack_silenced_oilfilter.prefab",
+          "resourceID": 1450170272
+        },
+        "SodaCanEffect": {
+          "$ref": "GameObject",
+          "guid": "261d0e4ec0fa4e34ba4d67a0cdfd8b9c",
+          "resourcePath": "assets/prefabs/weapons/smg/effects/attack_silenced_sodacan.prefab",
+          "resourceID": 137849655
+        }
+      },
+      {
+        "$type": "ParticleSystemPostIK",
+        "$name": "attack_silenced"
+      }
+    ],
+    "children": [
+      {
+        "name": "muzzle_flash_smg_silenced",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$type": "HideIfAiming",
+            "$name": "muzzle_flash_smg_silenced",
+            "systems": [
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        ],
+        "children": [
+          {
+            "name": "muzzleflash_billboard",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.019999999552965164
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "ParticleSystemPostIK",
+                "$name": "muzzleflash_billboard"
+              }
+            ],
+            "children": []
+          },
+          {
+            "name": "muzzleflash_lightex",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": false,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.15000000596046448
+            },
+            "localRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [
+              {
+                "$type": "TimedRemoval",
+                "$name": "muzzleflash_lightex",
+                "objectToDestroy": {
+                  "$ref": "GameObject",
+                  "name": "muzzleflash_lightex",
+                  "instanceID": 1188040
+                },
+                "removeDelay": 0.10000000149011612
+              }
+            ],
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {}
+}

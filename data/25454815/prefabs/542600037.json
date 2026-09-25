@@ -1,0 +1,612 @@
+{
+  "prefabID": 542600037,
+  "path": "assets/prefabs/weapons/homingmissilelauncher/homing_missile_launcher.entity.prefab",
+  "rootClassChain": [
+    "LockOnLauncher",
+    "BaseLauncher",
+    "BaseProjectile",
+    "AttackEntity",
+    "HeldEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.00504438579082489,
+      "y": 0.10343977063894272,
+      "z": -0.17024713754653931
+    },
+    "size": {
+      "x": 0.29209259152412415,
+      "y": 0.39646762609481812,
+      "z": 1.0466849803924561
+    }
+  },
+  "hierarchy": {
+    "name": "homing_missile_launcher.entity",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "LockOnLauncher",
+        "$name": "homing_missile_launcher.entity",
+        "lockRange": 350.0,
+        "lockConeDot": 0.98000001907348633,
+        "timeToLock": 2.0999999046325684,
+        "currentLockTime": 0.0,
+        "timeToLoseLock": 1.0,
+        "camUIDialogPrefab": {
+          "$ref": "GameObject",
+          "guid": "a1fc9093c2f406a4d8c2aa5a6b1f2e87",
+          "resourcePath": "assets/prefabs/weapons/homingmissilelauncher/ui.dialog.homingmissilelauncher.prefab",
+          "resourceID": 1751126561
+        },
+        "initialSpeedMultiplier": 0.25,
+        "NoiseRadius": 100.0,
+        "damageScale": 1.0,
+        "distanceScale": 1.0,
+        "farDamageScale": -1.0,
+        "farDistanceScale": -1.0,
+        "projectileVelocityScale": 1.0,
+        "automatic": false,
+        "usableByTurret": false,
+        "turretDamageScale": 0.34999999403953552,
+        "largeTurretWeapon": false,
+        "turretReloadDurationOverride": -1.0,
+        "maxAttackEffectDistance": 400.0,
+        "attackFX": {
+          "$ref": "GameObject",
+          "guid": "fe91f7415b8fa5d44a31f11223d183bb",
+          "resourcePath": "assets/prefabs/weapons/homingmissilelauncher/effects/attack.prefab",
+          "resourceID": 3819112790
+        },
+        "silencedAttack": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "muzzleBrakeAttack": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "fireModeSound": null,
+        "MuzzlePoint": null,
+        "reloadTime": 5.9200000762939453,
+        "canUnloadAmmo": true,
+        "primaryMagazine": {
+          "$type": "BaseProjectile+Magazine",
+          "definition": {
+            "$type": "BaseProjectile+Magazine+Definition",
+            "builtInSize": 1,
+            "ammoTypes": {
+              "$enum": "Rust.AmmoTypes",
+              "name": "MISSILE_SEEKING",
+              "value": 4096,
+              "flagNames": [
+                "MISSILE_SEEKING"
+              ]
+            }
+          },
+          "capacity": 1,
+          "contents": 0,
+          "ammoType": {
+            "$ref": "ItemDefinition",
+            "name": "ammo_rocket_seeker.item",
+            "itemid": 1296788329,
+            "shortname": "ammo.rocket.seeker"
+          },
+          "allowPlayerReloading": true,
+          "allowAmmoSwitching": true
+        },
+        "fractionalReload": false,
+        "reloadStartDuration": 0.0,
+        "reloadFractionDuration": 0.0,
+        "reloadEndDuration": 0.0,
+        "alternateDryFireRate": 0.0,
+        "sendReloadSignalFromServer": false,
+        "aimSway": 2.0,
+        "aimSwaySpeed": 2.0,
+        "recoil": {
+          "$ref": "RecoilProperties",
+          "name": "HomingLauncherRecoil",
+          "instanceID": 489252
+        },
+        "aimconeCurve": {
+          "$type": "UnityEngine.AnimationCurve"
+        },
+        "aimCone": 2.25,
+        "hipAimCone": 1.7999999523162842,
+        "aimconePenaltyPerShot": 0.0,
+        "aimConePenaltyMax": 0.0,
+        "aimconePenaltyRecoverTime": 0.10000000149011612,
+        "aimconePenaltyRecoverDelay": 0.10000000149011612,
+        "stancePenaltyScale": 1.0,
+        "hasADS": true,
+        "noAimingWhileCycling": false,
+        "manualCycle": false,
+        "CrosshairSettings": {
+          "$enum": "BaseProjectile+WeaponCrosshairSettings",
+          "name": "Standard",
+          "value": 0
+        },
+        "aiming": false,
+        "isBurstWeapon": false,
+        "canChangeFireModes": false,
+        "defaultOn": false,
+        "internalBurstRecoilScale": 0.800000011920929,
+        "internalBurstFireRateScale": 0.800000011920929,
+        "internalBurstAimConeScale": 0.800000011920929,
+        "resetDuration": 0.30000001192092896,
+        "numShotsFired": 0,
+        "deployDelay": 1.0,
+        "repeatDelay": 2.0,
+        "animationDelay": 0.0,
+        "effectiveRange": 1.0,
+        "npcDamageScale": 1.0,
+        "attackLengthMin": -1.0,
+        "attackLengthMax": -1.0,
+        "attackSpacing": 0.0,
+        "aiAimSwayOffset": 0.0,
+        "aiAimCone": 10.0,
+        "aiOnlyInRange": false,
+        "CloseRangeAddition": 0.0,
+        "MediumRangeAddition": 0.0,
+        "LongRangeAddition": 0.0,
+        "CanUseAtMediumRange": true,
+        "CanUseAtLongRange": true,
+        "reloadSounds": [
+          {
+            "$ref": "SoundDefinition",
+            "name": "rocket-launcher-reload-start",
+            "instanceID": 24758
+          },
+          {
+            "$ref": "SoundDefinition",
+            "name": "rocket-launcher-reload-open-hatch",
+            "instanceID": 24736
+          },
+          {
+            "$ref": "SoundDefinition",
+            "name": "rocket-launcher-reload-insert-rocket",
+            "instanceID": 24782
+          },
+          {
+            "$ref": "SoundDefinition",
+            "name": "rocket-launcher-reload-close-hatch",
+            "instanceID": 24796
+          },
+          {
+            "$ref": "SoundDefinition",
+            "name": "rocket-launcher-reload-finish",
+            "instanceID": 24794
+          }
+        ],
+        "thirdPersonMeleeSound": null,
+        "recoilCompDelayOverride": 0.0,
+        "wantsRecoilComp": false,
+        "showCrosshairOnTutorial": false,
+        "noHeadshots": false,
+        "nextAttackTime": {
+          "$type": "EncryptedValue`1[[System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+        },
+        "worldModelAnimator": null,
+        "thirdPersonDeploySound": {
+          "$ref": "SoundDefinition",
+          "name": "rocketlauncher_deploy-3p",
+          "instanceID": 28504
+        },
+        "thirdPersonAimSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-up",
+          "instanceID": 24732
+        },
+        "thirdPersonAimEndSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-down",
+          "instanceID": 24854
+        },
+        "hideViewmodel": false,
+        "handBone": "l_prop",
+        "HoldAnimationOverride": {
+          "$ref": "AnimatorOverrideController",
+          "name": "HoldType.HomingMissileLauncher",
+          "instanceID": 1022416
+        },
+        "holdInfo": {
+          "$type": "HeldEntity+HoldInfo",
+          "UseCustomSpineOffset": false,
+          "CustomSpineOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ShieldBoneArmRotationAdditive": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "isBuildingTool": false,
+        "canBeUsedWithShield": false,
+        "ForwardSignalsFromPlayer": false,
+        "forcedOwner": null,
+        "useOwnerForward": true,
+        "CanSetLightsOn": false,
+        "holsterInfo": {
+          "$type": "HeldEntity+HolsterInfo",
+          "slot": {
+            "$enum": "HeldEntity+HolsterInfo+HolsterSlot",
+            "name": "BACK",
+            "value": 0
+          },
+          "backpackSlot": {
+            "$enum": "HeldEntity+HolsterInfo+BackpackSlot",
+            "name": "LEFT",
+            "value": 0
+          },
+          "displayWhenHolstered": true,
+          "holsterBone": "spine3",
+          "holsterOffset": {
+            "x": -0.10000000149011612,
+            "y": -0.2199999988079071,
+            "z": -0.019999999552965164
+          },
+          "holsterRotationOffset": {
+            "x": 3.2000000476837158,
+            "y": -112.0,
+            "z": -270.0
+          },
+          "backpackHolsterOffset": {
+            "x": -0.41999998688697815,
+            "y": -0.079999998211860657,
+            "z": 0.05000000074505806
+          },
+          "backpackHolsterRotationOffset": {
+            "x": -251.99000549316406,
+            "y": 0.0,
+            "z": -121.25
+          }
+        },
+        "HeldCameraMode": {
+          "$enum": "BasePlayer+CameraMode",
+          "name": "FirstPerson",
+          "value": 0
+        },
+        "hostileScore": 20.0,
+        "FirstPersonArmOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonArmRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonRotationStrength": 1.0,
+        "AttachmentAnchor": [
+          []
+        ],
+        "holsterVisible": false,
+        "genericVisible": false,
+        "ownerItemUID": {
+          "$type": "ItemId",
+          "Value": 0
+        },
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.00504438579082489,
+            "y": 0.10343977063894272,
+            "z": -0.17024713754653931
+          },
+          "size": {
+            "x": 0.29209259152412415,
+            "y": 0.39646762609481812,
+            "z": 1.0466849803924561
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": null,
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 542600037,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Small",
+          "value": 0
+        },
+        "net": null
+      }
+    ],
+    "children": [
+      {
+        "name": "w_HomingMissileLauncher",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": [
+          {
+            "name": "Charm",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": -0.13470999896526337,
+              "y": 0.16728000342845917,
+              "z": 0.045239999890327454
+            },
+            "localRotation": {
+              "x": 0.01926828920841217,
+              "y": -0.70870691537857056,
+              "z": 0.014440670609474182,
+              "w": 0.70509195327758789
+            },
+            "localScale": {
+              "x": 0.75,
+              "y": 0.75,
+              "z": 0.75
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "v_CharmAnchor",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": false,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [
+                  {
+                    "$type": "ViewModelRenderer",
+                    "$name": "v_CharmAnchor",
+                    "cachedTextureRefs": [
+                      null,
+                      null,
+                      null,
+                      null
+                    ],
+                    "opaqueEvents": [
+                      {
+                        "$type": "ViewModelDrawEvent",
+                        "viewModelRenderer": {
+                          "$cycle": true,
+                          "type": "ViewModelRenderer"
+                        },
+                        "renderer": null,
+                        "skipDepthPrePass": false,
+                        "material": null,
+                        "subMesh": 0,
+                        "pass": 2,
+                        "needsFilteredRefraction": false
+                      }
+                    ],
+                    "transparentEvents": [],
+                    "prevModelMatrix": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ]
+                  }
+                ],
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Audio",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "ParticleRoot",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.282867431640625,
+          "y": 0.22361087799072266,
+          "z": -0.67160797119140625
+        },
+        "localRotation": {
+          "x": -0.39220148324966431,
+          "y": -0.42571535706520081,
+          "z": -0.66455525159835815,
+          "w": 0.47255769371986389
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      },
+      {
+        "name": "GameObject",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": -0.4062042236328125,
+          "y": 0.21745839715003967,
+          "z": -1.4944686889648438
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [],
+        "children": []
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Socket_Base": []
+  }
+}

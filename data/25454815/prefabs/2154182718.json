@@ -1,0 +1,1136 @@
+{
+  "prefabID": 2154182718,
+  "path": "assets/prefabs/weapons/high caliber revolver/hc_revolver.entity.prefab",
+  "rootClassChain": [
+    "BaseProjectile",
+    "AttackEntity",
+    "HeldEntity",
+    "BaseEntity",
+    "BaseNetworkable",
+    "BaseMonoBehaviour",
+    "FacepunchBehaviour",
+    "UnityEngine.MonoBehaviour",
+    "UnityEngine.Behaviour",
+    "UnityEngine.Component",
+    "UnityEngine.Object",
+    "System.Object"
+  ],
+  "entityBounds": {
+    "center": {
+      "x": 0.0,
+      "y": 0.0099999997764825821,
+      "z": 0.10000000149011612
+    },
+    "size": {
+      "x": 0.035999998450279236,
+      "y": 0.11999999731779099,
+      "z": 0.31999999284744263
+    }
+  },
+  "hierarchy": {
+    "name": "hc_revolver.entity",
+    "layer": {
+      "index": 0,
+      "name": "Default"
+    },
+    "tag": "Untagged",
+    "customTags": [],
+    "activeSelf": false,
+    "localPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "localRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "localScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "components": [
+      {
+        "$type": "BaseProjectile",
+        "$name": "hc_revolver.entity",
+        "NoiseRadius": 100.0,
+        "damageScale": 1.2999999523162842,
+        "distanceScale": 1.5,
+        "farDamageScale": -1.0,
+        "farDistanceScale": -1.0,
+        "projectileVelocityScale": 1.3500000238418579,
+        "automatic": false,
+        "usableByTurret": true,
+        "turretDamageScale": 0.5,
+        "largeTurretWeapon": false,
+        "turretReloadDurationOverride": -1.0,
+        "maxAttackEffectDistance": 400.0,
+        "attackFX": {
+          "$ref": "GameObject",
+          "guid": "5ed2a3bf1718cc0439f3d26b8da93434",
+          "resourcePath": "assets/prefabs/weapons/high caliber revolver/effects/attack.prefab",
+          "resourceID": 2911296029
+        },
+        "silencedAttack": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "muzzleBrakeAttack": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "fireModeSound": null,
+        "MuzzlePoint": [],
+        "reloadTime": 3.5,
+        "canUnloadAmmo": true,
+        "primaryMagazine": {
+          "$type": "BaseProjectile+Magazine",
+          "definition": {
+            "$type": "BaseProjectile+Magazine+Definition",
+            "builtInSize": 6,
+            "ammoTypes": {
+              "$enum": "Rust.AmmoTypes",
+              "name": "RIFLE_556MM",
+              "value": 2,
+              "flagNames": [
+                "RIFLE_556MM"
+              ]
+            }
+          },
+          "capacity": 0,
+          "contents": 6,
+          "ammoType": {
+            "$ref": "ItemDefinition",
+            "name": "ammo_rifle.item",
+            "itemid": -1211166256,
+            "shortname": "ammo.rifle"
+          },
+          "allowPlayerReloading": true,
+          "allowAmmoSwitching": true
+        },
+        "fractionalReload": false,
+        "reloadStartDuration": 0.0,
+        "reloadFractionDuration": 0.0,
+        "reloadEndDuration": 0.0,
+        "alternateDryFireRate": 0.20000000298023224,
+        "sendReloadSignalFromServer": false,
+        "aimSway": 1.0,
+        "aimSwaySpeed": 1.0,
+        "recoil": {
+          "$ref": "RecoilProperties",
+          "name": "hcrrecoil",
+          "instanceID": 89620
+        },
+        "aimconeCurve": {
+          "$type": "UnityEngine.AnimationCurve"
+        },
+        "aimCone": 0.5,
+        "hipAimCone": 1.7999999523162842,
+        "aimconePenaltyPerShot": 1.0,
+        "aimConePenaltyMax": 3.0,
+        "aimconePenaltyRecoverTime": 0.30000001192092896,
+        "aimconePenaltyRecoverDelay": 0.30000001192092896,
+        "stancePenaltyScale": 1.0,
+        "hasADS": true,
+        "noAimingWhileCycling": false,
+        "manualCycle": false,
+        "CrosshairSettings": {
+          "$enum": "BaseProjectile+WeaponCrosshairSettings",
+          "name": "Standard",
+          "value": 0
+        },
+        "aiming": false,
+        "isBurstWeapon": false,
+        "canChangeFireModes": true,
+        "defaultOn": true,
+        "internalBurstRecoilScale": 0.800000011920929,
+        "internalBurstFireRateScale": 0.800000011920929,
+        "internalBurstAimConeScale": 0.800000011920929,
+        "resetDuration": 0.30000001192092896,
+        "numShotsFired": 0,
+        "deployDelay": 0.5,
+        "repeatDelay": 0.699999988079071,
+        "animationDelay": 0.0,
+        "effectiveRange": 1.0,
+        "npcDamageScale": 1.0,
+        "attackLengthMin": -1.0,
+        "attackLengthMax": -1.0,
+        "attackSpacing": 0.0,
+        "aiAimSwayOffset": 0.0,
+        "aiAimCone": 2.0,
+        "aiOnlyInRange": false,
+        "CloseRangeAddition": 0.0,
+        "MediumRangeAddition": 0.0,
+        "LongRangeAddition": 0.0,
+        "CanUseAtMediumRange": true,
+        "CanUseAtLongRange": true,
+        "reloadSounds": [
+          {
+            "$ref": "SoundDefinition",
+            "name": "hc-revolver-reload-start",
+            "instanceID": 511616
+          },
+          {
+            "$ref": "SoundDefinition",
+            "name": "hc-revolver-reload-eject-bullets",
+            "instanceID": 121134
+          },
+          {
+            "$ref": "SoundDefinition",
+            "name": "hc-revolver-reload-grab-speedloader",
+            "instanceID": 513094
+          },
+          {
+            "$ref": "SoundDefinition",
+            "name": "hc-revolver-reload-insert-speedloader",
+            "instanceID": 484576
+          },
+          {
+            "$ref": "SoundDefinition",
+            "name": "hc-revolver-reload-finish",
+            "instanceID": 225584
+          },
+          {
+            "$ref": "SoundDefinition",
+            "name": "hc-revolver-cock",
+            "instanceID": 93512
+          },
+          {
+            "$ref": "SoundDefinition",
+            "name": "hc-revolver-deploy",
+            "instanceID": 227472
+          }
+        ],
+        "thirdPersonMeleeSound": null,
+        "recoilCompDelayOverride": 0.0,
+        "wantsRecoilComp": false,
+        "showCrosshairOnTutorial": false,
+        "noHeadshots": false,
+        "nextAttackTime": {
+          "$type": "EncryptedValue`1[[System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+        },
+        "worldModelAnimator": null,
+        "thirdPersonDeploySound": {
+          "$ref": "SoundDefinition",
+          "name": "hc-revolver-deploy",
+          "instanceID": 227472
+        },
+        "thirdPersonAimSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-up",
+          "instanceID": 24732
+        },
+        "thirdPersonAimEndSound": {
+          "$ref": "SoundDefinition",
+          "name": "ironsights-down",
+          "instanceID": 24854
+        },
+        "hideViewmodel": false,
+        "handBone": "r_prop",
+        "HoldAnimationOverride": {
+          "$ref": "AnimatorOverrideController",
+          "name": "HoldType.hc_revolver",
+          "instanceID": 1022414
+        },
+        "holdInfo": {
+          "$type": "HeldEntity+HoldInfo",
+          "UseCustomSpineOffset": true,
+          "CustomSpineOffset": {
+            "x": 4.74399995803833,
+            "y": -57.055999755859375,
+            "z": -101.33899688720703
+          },
+          "ShieldBoneArmRotationAdditive": {
+            "x": 4.0,
+            "y": -25.0,
+            "z": 0.0
+          }
+        },
+        "isBuildingTool": false,
+        "canBeUsedWithShield": true,
+        "ForwardSignalsFromPlayer": false,
+        "forcedOwner": null,
+        "useOwnerForward": true,
+        "CanSetLightsOn": false,
+        "holsterInfo": {
+          "$type": "HeldEntity+HolsterInfo",
+          "slot": {
+            "$enum": "HeldEntity+HolsterInfo+HolsterSlot",
+            "name": "RIGHT_THIGH",
+            "value": 1
+          },
+          "backpackSlot": {
+            "$enum": "HeldEntity+HolsterInfo+BackpackSlot",
+            "name": "LEFT",
+            "value": 0
+          },
+          "displayWhenHolstered": true,
+          "holsterBone": "r_hip",
+          "holsterOffset": {
+            "x": -0.029999999329447746,
+            "y": 0.019999999552965164,
+            "z": -0.10000000149011612
+          },
+          "holsterRotationOffset": {
+            "x": 0.0,
+            "y": 90.0,
+            "z": 5.5999999046325684
+          },
+          "backpackHolsterOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "backpackHolsterRotationOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "HeldCameraMode": {
+          "$enum": "BasePlayer+CameraMode",
+          "name": "FirstPerson",
+          "value": 0
+        },
+        "hostileScore": 7.0,
+        "FirstPersonArmOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonArmRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "FirstPersonRotationStrength": 1.0,
+        "AttachmentAnchor": [
+          []
+        ],
+        "holsterVisible": false,
+        "genericVisible": false,
+        "ownerItemUID": {
+          "$type": "ItemId",
+          "Value": 0
+        },
+        "links": [],
+        "creatorEntity": null,
+        "ticksSinceStopped": 0,
+        "isCallingUpdateNetworkGroup": false,
+        "bounds": {
+          "center": {
+            "x": 0.0,
+            "y": 0.0099999997764825821,
+            "z": 0.10000000149011612
+          },
+          "size": {
+            "x": 0.035999998450279236,
+            "y": 0.11999999731779099,
+            "z": 0.31999999284744263
+          }
+        },
+        "impactEffect": {
+          "$ref": "GameObject",
+          "guid": "",
+          "resourcePath": null,
+          "resourceID": 0
+        },
+        "enableSaving": true,
+        "syncPosition": false,
+        "model": {
+          "$type": "Model",
+          "$name": "w_hc_revolver_rig",
+          "collision": null,
+          "rootBone": [
+            [
+              [
+                [],
+                [],
+                {
+                  "$ref": "Transform",
+                  "name": "muzzle",
+                  "instanceID": 1266356,
+                  "goName": "muzzle",
+                  "$alreadyDumpedElsewhereInThisFile": true
+                },
+                [],
+                [],
+                []
+              ],
+              [],
+              [],
+              [],
+              {
+                "$ref": "Transform",
+                "name": "Charm",
+                "instanceID": 1344558,
+                "goName": "Charm",
+                "$alreadyDumpedElsewhereInThisFile": true
+              }
+            ]
+          ],
+          "headBone": null,
+          "eyeBone": null,
+          "animator": null,
+          "skeleton": null,
+          "boneTransforms": [
+            {
+              "$ref": "Transform",
+              "name": "w_hc_revolver_rig",
+              "instanceID": 1300904,
+              "goName": "w_hc_revolver_rig",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "weapon_root",
+              "instanceID": 1432200,
+              "goName": "weapon_root",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "break_pivot",
+              "instanceID": 1396092,
+              "goName": "break_pivot",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "clip",
+              "instanceID": 1297146,
+              "goName": "clip",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "cylinder",
+              "instanceID": 1411294,
+              "goName": "cylinder",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "muzzle",
+              "instanceID": 1266356,
+              "goName": "muzzle",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "flashlight.attachment",
+              "instanceID": 1269422,
+              "goName": "flashlight.attachment",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "barrel",
+              "instanceID": 1265926,
+              "goName": "barrel",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "scope.attachment",
+              "instanceID": 1268782,
+              "goName": "scope.attachment",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "hammer",
+              "instanceID": 1397208,
+              "goName": "hammer",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "spring",
+              "instanceID": 1374422,
+              "goName": "spring",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "trigger",
+              "instanceID": 1391092,
+              "goName": "trigger",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "Charm",
+              "instanceID": 1344558,
+              "goName": "Charm",
+              "$alreadyDumpedElsewhereInThisFile": true
+            },
+            {
+              "$ref": "Transform",
+              "name": "v_CharmAnchor",
+              "instanceID": 1303002,
+              "goName": "v_CharmAnchor",
+              "$alreadyDumpedElsewhereInThisFile": true
+            }
+          ],
+          "boneNames": [
+            "w_hc_revolver_rig",
+            "weapon_root",
+            "break_pivot",
+            "clip",
+            "cylinder",
+            "muzzle",
+            "flashlight.attachment",
+            "barrel",
+            "scope.attachment",
+            "hammer",
+            "spring",
+            "trigger",
+            "Charm",
+            "v_CharmAnchor"
+          ]
+        },
+        "flags": {
+          "$enum": "BaseEntity+Flags",
+          "name": "0",
+          "value": 0,
+          "flagNames": []
+        },
+        "parentBone": 0,
+        "skinID": 0,
+        "attachmentID": 0,
+        "HasBrain": false,
+        "_name": null,
+        "networkEntityScale": false,
+        "_spawnable": null,
+        "postNetworkUpdateComponents": [],
+        "_limitedNetworking": false,
+        "parentEntity": {
+          "$type": "EntityRef"
+        },
+        "children": [],
+        "canTriggerParent": true,
+        "creationFrame": 0,
+        "isSpawned": false,
+        "_NetworkCache": null,
+        "prefabID": 2154182718,
+        "globalBroadcast": false,
+        "globalNetworkBehavior": {
+          "$enum": "GlobalNetworkBehavior",
+          "name": "Default",
+          "value": 0
+        },
+        "globalBuildingBlock": false,
+        "networkRange": {
+          "$enum": "EntityNetworkRange",
+          "name": "Small",
+          "value": 0
+        },
+        "net": null
+      },
+      {
+        "$type": "Model",
+        "$name": "hc_revolver.entity",
+        "collision": null,
+        "rootBone": [
+          {
+            "$ref": "Transform",
+            "name": "w_hc_revolver_rig",
+            "instanceID": 1300904,
+            "goName": "w_hc_revolver_rig",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "headBone": null,
+        "eyeBone": null,
+        "animator": null,
+        "skeleton": null,
+        "boneTransforms": [
+          {
+            "$ref": "Transform",
+            "name": "hc_revolver.entity",
+            "instanceID": 1265146,
+            "goName": "hc_revolver.entity",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "w_hc_revolver_rig",
+            "instanceID": 1300904,
+            "goName": "w_hc_revolver_rig",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "weapon_root",
+            "instanceID": 1432200,
+            "goName": "weapon_root",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "break_pivot",
+            "instanceID": 1396092,
+            "goName": "break_pivot",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "clip",
+            "instanceID": 1297146,
+            "goName": "clip",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "cylinder",
+            "instanceID": 1411294,
+            "goName": "cylinder",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "muzzle",
+            "instanceID": 1266356,
+            "goName": "muzzle",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "flashlight.attachment",
+            "instanceID": 1269422,
+            "goName": "flashlight.attachment",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "barrel",
+            "instanceID": 1265926,
+            "goName": "barrel",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "scope.attachment",
+            "instanceID": 1268782,
+            "goName": "scope.attachment",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "hammer",
+            "instanceID": 1397208,
+            "goName": "hammer",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "spring",
+            "instanceID": 1374422,
+            "goName": "spring",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "trigger",
+            "instanceID": 1391092,
+            "goName": "trigger",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "Charm",
+            "instanceID": 1344558,
+            "goName": "Charm",
+            "$alreadyDumpedElsewhereInThisFile": true
+          },
+          {
+            "$ref": "Transform",
+            "name": "v_CharmAnchor",
+            "instanceID": 1303002,
+            "goName": "v_CharmAnchor",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "boneNames": [
+          "hc_revolver.entity",
+          "w_hc_revolver_rig",
+          "weapon_root",
+          "break_pivot",
+          "clip",
+          "cylinder",
+          "muzzle",
+          "flashlight.attachment",
+          "barrel",
+          "scope.attachment",
+          "hammer",
+          "spring",
+          "trigger",
+          "Charm",
+          "v_CharmAnchor"
+        ]
+      }
+    ],
+    "children": [
+      {
+        "name": "w_hc_revolver_rig",
+        "layer": {
+          "index": 0,
+          "name": "Default"
+        },
+        "tag": "Untagged",
+        "customTags": [],
+        "activeSelf": true,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "components": [
+          {
+            "$ref": "Model",
+            "name": "w_hc_revolver_rig",
+            "instanceID": 1523276,
+            "goName": "w_hc_revolver_rig",
+            "$alreadyDumpedElsewhereInThisFile": true
+          }
+        ],
+        "children": [
+          {
+            "name": "weapon_root",
+            "layer": {
+              "index": 0,
+              "name": "Default"
+            },
+            "tag": "Untagged",
+            "customTags": [],
+            "activeSelf": true,
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localRotation": {
+              "x": 1.9973708731413353E-07,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "components": [],
+            "children": [
+              {
+                "name": "break_pivot",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.00510824378579855,
+                  "z": 0.14172188937664032
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "clip",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.064958028495311737,
+                      "z": -0.096638068556785583
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  },
+                  {
+                    "name": "cylinder",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -2.6381468387626228E-07,
+                      "y": 0.029836110770702362,
+                      "z": -0.045379210263490677
+                    },
+                    "localRotation": {
+                      "x": -1.9858616440160404E-07,
+                      "y": -1.8667982715214748E-08,
+                      "z": -0.091752089560031891,
+                      "w": 0.99578189849853516
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  },
+                  {
+                    "name": "muzzle",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.046199999749660492,
+                      "z": 0.12460000067949295
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  },
+                  {
+                    "name": "flashlight.attachment",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": -0.00030000001424923539,
+                      "y": 0.011300000362098217,
+                      "z": 0.08329000324010849
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  },
+                  {
+                    "name": "barrel",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.0030000000260770321,
+                      "y": 0.045400001108646393,
+                      "z": 0.1234000027179718
+                    },
+                    "localRotation": {
+                      "x": 0.50382030010223389,
+                      "y": -0.49601176381111145,
+                      "z": 0.49052467942237854,
+                      "w": 0.509433925151825
+                    },
+                    "localScale": {
+                      "x": 1.1489781141281128,
+                      "y": 1.1489807367324829,
+                      "z": 1.148977518081665
+                    },
+                    "components": [],
+                    "children": []
+                  },
+                  {
+                    "name": "scope.attachment",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": true,
+                    "localPosition": {
+                      "x": 0.00039999998989515007,
+                      "y": 0.062600001692771912,
+                      "z": -0.024800000712275505
+                    },
+                    "localRotation": {
+                      "x": -0.001755288103595376,
+                      "y": 1.8626467035431915E-09,
+                      "z": 8.3819022833608869E-09,
+                      "w": 0.99999850988388062
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "hammer",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.026847412809729576,
+                  "z": 0.025018990039825439
+                },
+                "localRotation": {
+                  "x": -0.10253586620092392,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.99472934007644653
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "spring",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.054662220180034637,
+                  "z": -0.0084786023944616318
+                },
+                "localRotation": {
+                  "x": 0.30627185106277466,
+                  "y": 0.00091688398970291018,
+                  "z": 0.013233335688710213,
+                  "w": 0.95185166597366333
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "trigger",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0073917387053370476,
+                  "z": 0.018859919160604477
+                },
+                "localRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "localScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "components": [],
+                "children": []
+              },
+              {
+                "name": "Charm",
+                "layer": {
+                  "index": 0,
+                  "name": "Default"
+                },
+                "tag": "Untagged",
+                "customTags": [],
+                "activeSelf": true,
+                "localPosition": {
+                  "x": -0.0078299995511770248,
+                  "y": 0.003329999977722764,
+                  "z": 0.12499000132083893
+                },
+                "localRotation": {
+                  "x": 0.0099784210324287415,
+                  "y": -0.705245852470398,
+                  "z": 0.013937762938439846,
+                  "w": 0.70875567197799683
+                },
+                "localScale": {
+                  "x": 0.75,
+                  "y": 0.75,
+                  "z": 0.75
+                },
+                "components": [],
+                "children": [
+                  {
+                    "name": "v_CharmAnchor",
+                    "layer": {
+                      "index": 0,
+                      "name": "Default"
+                    },
+                    "tag": "Untagged",
+                    "customTags": [],
+                    "activeSelf": false,
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "localScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "components": [
+                      {
+                        "$type": "ViewModelRenderer",
+                        "$name": "v_CharmAnchor",
+                        "cachedTextureRefs": [
+                          null,
+                          null,
+                          null,
+                          null
+                        ],
+                        "opaqueEvents": [
+                          {
+                            "$type": "ViewModelDrawEvent",
+                            "viewModelRenderer": {
+                              "$cycle": true,
+                              "type": "ViewModelRenderer"
+                            },
+                            "renderer": null,
+                            "skipDepthPrePass": false,
+                            "material": null,
+                            "subMesh": 0,
+                            "pass": 2,
+                            "needsFilteredRefraction": false
+                          }
+                        ],
+                        "transparentEvents": [],
+                        "prevModelMatrix": [
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0
+                        ]
+                      }
+                    ],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "prefabAttributes": {
+    "Socket_Base": []
+  }
+}
