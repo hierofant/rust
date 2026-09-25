@@ -126,6 +126,23 @@ itemid, shortname, displayName (англ.), category, все флаги, `steamD
 - `layers.json`: плюс все числовые маски-литералы, которые встречаются в коде стройки — их я разберу сам,
   но нужны имена всех 32 слоёв.
 
+### 2.4. Доработки дампера после первого прогона (обязательно)
+
+1. **`items.json`: нет `ItemModDeployable`.** Это не `ItemMod`, а отдельный `MonoBehaviour` на GameObject'е
+   предмета, поэтому в `itemMods` его нет. Добавь каждому предмету поле `itemModDeployable` — сериализацию
+   `def.GetComponent<ItemModDeployable>()` (как минимум `entityPrefab` с `resourcePath`/`resourceID`, все остальные поля тоже).
+   Заодно выгрузи в `extraComponents` все прочие компоненты с GameObject'а предмета, которых нет в `itemMods`.
+2. **`$ref` с `$alreadyDumpedElsewhereInThisFile` должен нести `instanceID`.** Сейчас у таких ссылок `instanceID: 0`,
+   потому что чтение `.name` падает раньше. `GetInstanceID()` в Unity берётся из managed-кэша и работает даже для
+   уничтоженного native-объекта — вызывай его до и независимо от `.name`. Тогда любую ссылку можно разрешить
+   по `instanceID` у развёрнутого объекта.
+3. **Ссылки на `BaseEntity` (например `DeployVolume.entityList`) должны нести `prefabID` и `resourcePath`
+   этого префаба**, а не только имя GameObject'а: игра сравнивает именно `prefabID`.
+4. **Поправь `REPORT.md`:** «пустой слот 0» в `Construction.grades` не уничтожен. Это твиг-грейд, он развёрнут
+   в поле `defaultGrade` того же файла, а в `grades[0]` лежит ссылка на него с тем же багом из п. 2.
+
+После правок перезапусти `builddump` и замени `data/25454815/` целиком.
+
 ## Этап 3. Эталонные постройки (golden tests) → `data/<buildid>/golden/`
 
 Добавь в плагин команду `basedump <radius>` для админа: выгружает все entity в радиусе от игрока
