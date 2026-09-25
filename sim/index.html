@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#1c1f23">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="./manifest.webmanifest">
+<title>Rust Build Sim</title>
+</head>
+<body>
+<canvas id="view"></canvas>
+<div id="crosshair"></div>
+<div id="info"></div>
+<div id="toast"></div>
+<div id="loading">Loading prefab data…</div>
+
+<div id="topbar">
+  <button id="item" class="pill"><span class="label">Item</span> <span id="item-name">…</span></button>
+  <div class="spacer"></div>
+  <button id="btn-undo" class="icon" title="Undo (Z)">↶</button>
+  <button id="btn-layers" class="icon" title="Collision layers (L)">▦</button>
+  <button id="btn-vol" class="icon" title="Deploy volumes (V)">◫</button>
+  <button id="btn-fly" class="icon" title="Fly (F)">✈</button>
+  <button id="btn-menu" class="icon" title="Menu">⋮</button>
+</div>
+
+<div id="menu">
+  <label>Look sensitivity <input id="m-sens" type="range" min="0.08" max="0.8" step="0.02"></label>
+  <button id="m-full">Fullscreen</button>
+  <button id="m-export">Export base (.json)</button>
+  <label class="file">Import base<input id="m-import" type="file" accept="application/json,.json"></label>
+  <button id="m-clear" class="danger">Clear everything</button>
+  <div class="hint">Desktop: WASD, mouse, click = place, R rotate, E hammer, X remove, 1-5 grade, Q items, F fly, Z undo, V volumes, L layers.</div>
+</div>
+
+<div id="grades">
+  <button class="grade" data-grade="0">Twig</button>
+  <button class="grade" data-grade="1">Wood</button>
+  <button class="grade" data-grade="2">Stone</button>
+  <button class="grade" data-grade="3">Metal</button>
+  <button class="grade" data-grade="4">HQM</button>
+  <span id="grade-skin"></span>
+</div>
+
+<div id="flybtns">
+  <button id="btn-up" class="icon big">▲</button>
+  <button id="btn-down" class="icon big">▼</button>
+</div>
+<button id="btn-jump" class="icon big">⤒</button>
+
+<div id="actions">
+  <button id="btn-remove" class="round small danger">✕</button>
+  <button id="btn-mode" class="round small">🔨</button>
+  <button id="btn-rotate" class="round small">⟳</button>
+  <button id="btn-primary" class="round primary">PLACE</button>
+</div>
+
+<div id="picker" class="sheet">
+  <div class="sheet-head"><input id="picker-search" placeholder="Search items…" autocomplete="off"><button id="picker-close" class="icon">✕</button></div>
+  <div id="picker-list"></div>
+</div>
+<div id="skins" class="sheet small">
+  <div class="sheet-head"><b>Grade skin</b><button id="skins-close" class="icon">✕</button></div>
+  <div id="skins-list"></div>
+</div>
+
+<script type="module" src="./src/main.ts"></script>
+</body>
+</html>

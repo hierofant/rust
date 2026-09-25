@@ -123,6 +123,32 @@ export class OBB {
     return { point: ray.at(t), distance: t };
   }
 
+  /**
+   * Robust ray/box intersection (not in the game: Rust's Trace treats rays exactly parallel
+   * to a slab as inside it). Used by client-side aiming only.
+   */
+  raycast(ray: Ray, maxDistance = Infinity): RaycastHit | null {
+    const o = this.inverseTransform(ray.origin);
+    const d = this.inverseVector(ray.direction);
+    const e = this.extents;
+    let tmin = -Infinity, tmax = Infinity;
+    for (const [oo, dd, ee] of [[o.x, d.x, e.x], [o.y, d.y, e.y], [o.z, d.z, e.z]]) {
+      if (Math.abs(dd) < 1e-12) {
+        if (oo < -ee || oo > ee) return null;
+        continue;
+      }
+      let t1 = (-ee - oo) / dd, t2 = (ee - oo) / dd;
+      if (t1 > t2) [t1, t2] = [t2, t1];
+      tmin = Math.max(tmin, t1);
+      tmax = Math.min(tmax, t2);
+      if (tmin > tmax) return null;
+    }
+    if (tmax < 0) return null;
+    const t = Math.max(0, tmin);
+    if (t > maxDistance) return null;
+    return { point: ray.at(t), distance: t };
+  }
+
   closestPoint(target: Vector3): Vector3 {
     let inX = false, inY = false, inZ = false;
     let result = this.position;
