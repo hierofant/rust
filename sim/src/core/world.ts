@@ -1,6 +1,8 @@
 // Entity container + server-side lifecycle: entity links (BaseEntity.LinkToNeighbours),
 // stability (StabilityEntity.cs) and the work queues ServerBuildingManager.Cycle runs.
 import { INT_MAX, SimEntity, Support, type EntityLink, type PrefabDef } from './entity';
+import { OBB } from './obb';
+import { Collider, PhysicsWorld, QueryTriggerInteraction } from './physics';
 import { ConstructionSocket, StabilitySocket, type SocketBase } from './sockets';
 import { Bounds, Pose, Vector3, clamp01 } from './unity';
 import { ObjectWorkQueue } from './workqueue';
@@ -37,6 +39,7 @@ export class World {
   config: StabilityConfig;
   listeners: ((e: WorldEvent) => void)[] = [];
 
+  readonly physics = new PhysicsWorld();
   readonly stabilityCheckQueue: ObjectWorkQueue<SimEntity>;
   readonly updateSurroundingsQueue: ObjectWorkQueue<Bounds>;
 
@@ -61,13 +64,44 @@ export class World {
 
   // ---- queries -------------------------------------------------------------
 
-  /**
-   * Stand-in for Vis.Entities(position, radius): entities whose world bounds touch the sphere.
-   * The game queries colliders; bounds are a superset for building pieces.
-   */
+  /** Vis.Entities(position, radius, list, layerMask, triggerInteraction): entities owning overlapping colliders. */
+  visEntities(center: Vector3, radius: number, layerMask = -1, qti = QueryTriggerInteraction.Collide): SimEntity[] {
+    const out: SimEntity[] = [];
+    const seen = new Set<SimEntity>();
+    for (const c of this.physics.overlapSphere(center, radius, layerMask, qti)) {
+      const e = c.entity;
+      if (e && !e.destroyed && !seen.has(e)) {
+        seen.add(e);
+        out.push(e);
+      }
+    }
+    return out;
+  }
+
+  /** Vis.Entities(OBB, ...) */
+  visEntitiesOBB(obb: OBB, layerMask = -1, qti = QueryTriggerInteraction.Collide): SimEntity[] {
+    const out: SimEntity[] = [];
+    const seen = new Set<SimEntity>();
+    for (const c of this.physics.overlapOBB(obb, layerMask, qti)) {
+      const e = c.entity;
+      if (e && !e.destroyed && !seen.has(e)) {
+        seen.add(e);
+        out.push(e);
+      }
+    }
+    return out;
+  }
+
   entitiesInSphere(center: Vector3, radius: number): SimEntity[] {
-    const r2 = radius * radius;
-    return this.entities.filter((e) => !e.destroyed && e.worldSpaceBounds().closestPoint(center).sub(center).sqrMagnitude <= r2);
+    return this.visEntities(center, radius);
+  }
+
+  /** Adds the entity's colliders to the physics world. Prefabs without collider data get a bounds box. */
+  protected addColliders(e: SimEntity) {
+    const p = e.prefab as PrefabDef & { colliders?: unknown };
+    if (p.colliders === undefined) {
+      this.physics.add(new Collider({ kind: 'box', obb: e.worldSpaceBounds() }, 21, e));
+    }
   }
 
   // ---- lifecycle -----------------------------------------------------------
@@ -75,22 +109,34 @@ export class World {
   spawn(prefab: PrefabDef, pose: Pose, parent: SimEntity | null = null): SimEntity {
     const e = new SimEntity(prefab, pose);
     e.parent = parent;
+    this.beforeServerInit(e);
     this.entities.push(e);
+    this.addColliders(e);
+    this.onSpawned(e);
     // StabilityEntity.ServerInit
     if (e.isStability) this.updateStability(e);
     this.emit({ type: 'spawn', entity: e });
     return e;
   }
 
+  /** Hook to set entity state (grade, ...) before it spawns. */
+  protected beforeServerInit(_e: SimEntity) {}
+
+  /** Hook for subclasses (skins, buildings) after colliders exist and before stability runs. */
+  protected onSpawned(_e: SimEntity) {}
+  protected onKilled(_e: SimEntity) {}
+
   kill(e: SimEntity, reason: 'stability' | 'manual' = 'manual') {
     if (e.destroyed) return;
     e.destroyed = true;
+    this.onKilled(e);
     // DoServerDestroy -> UpdateSurroundingEntities
     if (e.isStability) this.updateSurroundingsQueue.add(e.worldSpaceBounds().toBounds());
     // DestroyShared -> FreeEntityLinks
     for (const l of e.links) l.clear();
     e.links = [];
     e.linkedToNeighbours = false;
+    this.physics.removeEntity(e);
     this.entities = this.entities.filter((x) => x !== e);
     this.emit({ type: 'kill', entity: e, reason });
   }

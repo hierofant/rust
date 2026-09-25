@@ -45,8 +45,8 @@ function raw(id: number): J | null {
 // Generic cleaning of serializer output
 
 const DROP = new Set([
-  '$name', 'prefabAttribute', 'gameManager', 'fullName', 'instanceID', 'worldForward', 'localScale',
-  'isServer', 'isClient', 'prefabID', '$alreadyDumpedElsewhereInThisFile', 'baseSocket', 'construction',
+  '$name', 'prefabAttribute', 'gameManager', 'fullName', 'worldForward', 'localScale',
+  'isServer', 'isClient', '$alreadyDumpedElsewhereInThisFile', 'baseSocket', 'construction',
   'guideMesh', 'guideMeshMaterial', 'placeEffect', 'info', 'upgradeMenu', 'icon',
 ]);
 
@@ -76,7 +76,7 @@ function clean(o: J): J {
     if (o.$ref === 'ItemDefinition') return { item: o.shortname, itemid: o.itemid };
     if (o.$ref === 'Mesh') return { mesh: o.meshId };
     if ('goName' in o) return resolveEntityRef(o);
-    return { $ref: o.$ref, name: o.name };
+    return { $ref: o.$ref, name: o.name, instanceID: o.instanceID || undefined };
   }
   const out: J = {};
   for (const [k, v] of Object.entries(o)) {
@@ -137,7 +137,7 @@ function collectColliders(rootNode: J) {
         layer: node.layer.index,
         tag: node.tag,
         customTags: node.customTags ?? [],
-        flags: info ? clean(info.flags) : 0,
+        flags: info ? clean(info.flags) : null,
         active,
         enabled: c.enabled,
         isTrigger: c.isTrigger,
@@ -232,6 +232,7 @@ function compilePrefab(id: number): J {
     const c: J = clean({ ...cons, allSockets: undefined, grades: undefined, defaultGrade: undefined, allProximities: undefined, deployable: undefined, placeholder: undefined, socketHandle: undefined });
     delete c.allSockets; delete c.grades; delete c.defaultGrade; delete c.allProximities; delete c.deployable; delete c.placeholder; delete c.socketHandle;
     c.name = cons.info?.name?.legacyEnglish ?? null;
+    c.nameToken = cons.info?.name?.token ?? null;
     const sockets = resolveSocketList(cons.allSockets ?? [], idx);
     c.sockets = sockets.map((s: J) => {
       const cs = clean({ ...s, checkOccupiedSockets: undefined });
@@ -262,6 +263,7 @@ function compilePrefab(id: number): J {
     out.construction = c;
   }
   out.volumes = (pa.DeployVolume ?? []).map(clean).filter((v: J) => v && !v.$ref);
+  out.attractionPoints = (pa.AttractionPoint ?? []).map(clean).filter((v: J) => v && !v.$ref);
   out.conditionals = (pa.ConditionalModel ?? [])
     .filter((m: J) => !m.$ref)
     .map((m: J) => {

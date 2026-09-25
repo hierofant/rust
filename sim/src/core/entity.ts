@@ -60,11 +60,22 @@ let nextId = 1;
 
 export class SimEntity {
   readonly id = nextId++;
+  /** net.ID.Value — feeds ModelConditionTest_Variant. */
+  netId = this.id;
   parent: SimEntity | null = null;
   destroyed = false;
 
   links: EntityLink[] = [];
   linkedToNeighbours = false;
+
+  // BuildingBlock
+  grade = 0;
+  skinID = 0;
+  /** Prefab ID of the spawned grade skin (ConstructionSkin), if any. */
+  skinPrefab: number | null = null;
+  /** ConditionalModel state bits of the current skin. */
+  modelState: boolean[] = [];
+  health = 0;
 
   // StabilityEntity
   grounded: boolean;

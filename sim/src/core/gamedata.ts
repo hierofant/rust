@@ -13,6 +13,7 @@ import {
   SocketTerrain,
   StabilitySocket,
 } from './sockets';
+import { createSocketMods } from './socketMods';
 import { Bounds, Quaternion, Vector3 } from './unity';
 
 type J = any;
@@ -26,7 +27,8 @@ export interface ColliderJson {
   layer: number;
   tag: string;
   customTags: string[];
-  flags: number;
+  /** ColliderInfo.flags, null when the GameObject has no ColliderInfo. */
+  flags: number | null;
   active: boolean;
   enabled: boolean;
   isTrigger: boolean;
@@ -86,6 +88,7 @@ export interface LoadedPrefab extends PrefabDef {
   colliders: ColliderJson[];
   volumes: J[];
   conditionals: J[];
+  attractionPoints: J[];
   construction: ConstructionDef | null;
   isBuildingBlock: boolean;
 }
@@ -134,8 +137,8 @@ export function createSocket(j: J): SocketBase {
     else if (k === 'checkOccupiedSockets') target[k] = v ?? [];
     else target[k] = v;
   }
-  // Socket mods are attached by the placement module (socketMods.ts) from j.socketMods.
-  (s as unknown as { rawMods: J[] }).rawMods = j.socketMods ?? [];
+  s.rawMods = j.socketMods ?? [];
+  s.socketMods = createSocketMods(s, j.socketMods ?? []);
   return s;
 }
 
@@ -223,6 +226,7 @@ function loadPrefab(p: J): LoadedPrefab {
     colliders: p.colliders,
     volumes: p.volumes,
     conditionals: p.conditionals,
+    attractionPoints: p.attractionPoints ?? [],
     construction,
     isBuildingBlock: classes.includes('BuildingBlock'),
   };

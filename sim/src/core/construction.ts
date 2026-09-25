@@ -27,6 +27,9 @@ export interface Placement {
   shouldParent: boolean;
   parentPassed: boolean;
   isHoldingShift: boolean;
+  /** Placement.transform (target entity's transform) */
   transform: Pose | null;
+  /** GameObjectEx.ToBaseEntity(place.transform) */
+  parentEntity: SimEntity | null;
   ignoredEntity: SimEntity | null;
 }

@@ -1,15 +1,13 @@
-import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import type { Target } from '../src/core/construction';
-import { GameData } from '../src/core/gamedata';
+import { BuildServer } from '../src/core/server';
+import { loadData } from './helpers';
 import type { SimEntity } from '../src/core/entity';
 import { noPhysics } from '../src/core/physics';
 import type { SocketBase } from '../src/core/sockets';
 import { Pose, Quaternion, Ray, Vector3 } from '../src/core/unity';
-import { World } from '../src/core/world';
 
-const data = new GameData(JSON.parse(readFileSync(join(__dirname, '../public/data/game.json'), 'utf8')));
+const data = loadData();
 const P = {
   foundation: data.get('building core/foundation/foundation'),
   wall: data.get('building core/wall/wall'),
@@ -23,7 +21,7 @@ function socketOf(e: SimEntity, name: string): SocketBase {
 }
 
 /** Places `prefab` on `female` socket of `entity` the way UpdatePlacement does (first male socket that fits). */
-function placeOn(world: World, prefab: typeof P.wall, entity: SimEntity, female: string): SimEntity {
+function placeOn(world: BuildServer, prefab: typeof P.wall, entity: SimEntity, female: string): SimEntity {
   const socket = socketOf(entity, female);
   const eye = entity.pose.point(socket.position).add(new Vector3(0, 1.5, -3));
   const aim = entity.pose.point(socket.position);
@@ -36,7 +34,7 @@ function placeOn(world: World, prefab: typeof P.wall, entity: SimEntity, female:
   for (const male of prefab.sockets) {
     if (!male.male || male.maleDummy || !male.testTarget(target)) continue;
     const pl = male.doPlacement(target, ctx);
-    if (pl) return world.spawn(prefab, new Pose(pl.position, pl.rotation));
+    if (pl) return world.spawnPlaced(prefab, new Pose(pl.position, pl.rotation));
   }
   throw new Error(`cannot place ${prefab.path} on ${female}`);
 }
@@ -50,8 +48,8 @@ describe('real prefab data', () => {
   });
 
   it('wall snaps onto a foundation edge and links', () => {
-    const w = new World();
-    const f = w.spawn(P.foundation, new Pose());
+    const w = new BuildServer(data);
+    const f = w.spawnPlaced(P.foundation, new Pose());
     const wall = placeOn(w, P.wall, f, 'wall-female/1');
     w.settle();
     // wall-female/1 sits at z = -1.5 on the foundation top
@@ -63,8 +61,8 @@ describe('real prefab data', () => {
   });
 
   it('walls stacked on walls lose 30% per level', () => {
-    const w = new World();
-    const f = w.spawn(P.foundation, new Pose());
+    const w = new BuildServer(data);
+    const f = w.spawnPlaced(P.foundation, new Pose());
     const w1 = placeOn(w, P.wall, f, 'wall-female/1');
     const w2 = placeOn(w, P.wall, w1, 'wall/sockets/wall-female');
     w.settle();
@@ -73,8 +71,8 @@ describe('real prefab data', () => {
   });
 
   it('floor on four walls around a foundation', () => {
-    const w = new World();
-    const f = w.spawn(P.foundation, new Pose());
+    const w = new BuildServer(data);
+    const f = w.spawnPlaced(P.foundation, new Pose());
     const walls = [1, 2, 3, 4].map((i) => placeOn(w, P.wall, f, `wall-female/${i}`));
     w.settle();
     // floor-female/1 is the outer side of the wall, /2 the inner one.

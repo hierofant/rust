@@ -4,7 +4,7 @@
 import { OBB } from './obb';
 import { Bounds, Pose, Quaternion, Vector3 } from './unity';
 import type { Placement, Target } from './construction';
-import type { SocketMod } from './socketMods';
+import type { ModServer, SocketMod } from './socketMods';
 import type { PhysicsQueries } from './physics';
 
 export interface OccupiedSocketCheck {
@@ -34,6 +34,8 @@ export abstract class SocketBase implements AttributeTransform {
   selectCenter = new Vector3(0, 0, 1);
   socketName = '';
   socketMods: SocketMod[] = [];
+  /** Dumped socket mod data; instantiated by createSocketMods (socketMods.ts). */
+  rawMods: unknown[] = [];
   checkOccupiedSockets: OccupiedSocketCheck[] = [];
 
   worldPosition = Vector3.zero;
@@ -85,6 +87,7 @@ export abstract class SocketBase implements AttributeTransform {
       if (placement.shouldParent && !sawAreaCheck && mod.kind === 'SocketMod_AreaCheck') sawAreaCheck = true;
       if (!mod.doCheck(placement, ctx)) {
         ctx.lastPlacementError = mod.errorMessage();
+        ctx.failedMod = mod;
         return false;
       }
     }
@@ -100,6 +103,8 @@ export abstract class SocketBase implements AttributeTransform {
 export interface PlacementContext {
   lastPlacementError: string;
   world: PhysicsQueries;
+  server?: ModServer;
+  failedMod?: SocketMod;
 }
 
 export function newPlacement(target: Target): Placement {
@@ -111,6 +116,7 @@ export function newPlacement(target: Target): Placement {
     parentPassed: false,
     isHoldingShift: target.isHoldingShift,
     transform: target.entity ? target.entity.pose : null,
+    parentEntity: target.entity,
     ignoredEntity: null,
   };
 }
