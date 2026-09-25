@@ -1,0 +1,11 @@
+namespace Rust;
+
+public enum Era
+{
+	None = 0,
+	Any = 1,
+	Primitive = 10,
+	Medieval = 20,
+	Frontier = 30,
+	Modern = 1000
+}

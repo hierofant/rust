@@ -1,0 +1,16 @@
+using UnityEngine;
+
+namespace Facepunch;
+
+public static class Instantiate
+{
+	public static GameObject GameObject(GameObject go, Transform parent = null)
+	{
+		return Object.Instantiate(go, parent);
+	}
+
+	public static GameObject GameObject(GameObject go, Vector3 pos, Quaternion rot)
+	{
+		return Object.Instantiate(go, pos, rot);
+	}
+}

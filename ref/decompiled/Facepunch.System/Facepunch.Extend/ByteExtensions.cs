@@ -1,0 +1,24 @@
+using System.Runtime.CompilerServices;
+
+namespace Facepunch.Extend;
+
+public static class ByteExtensions
+{
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	public unsafe static T ReadUnsafe<T>(this byte[] buffer, int iOffset = 0) where T : unmanaged
+	{
+		fixed (byte* ptr = buffer)
+		{
+			return *(T*)(ptr + iOffset);
+		}
+	}
+
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	public unsafe static void WriteUnsafe<T>(this byte[] buffer, in T value, int iOffset = 0) where T : unmanaged
+	{
+		fixed (byte* ptr = buffer)
+		{
+			*(T*)(ptr + iOffset) = value;
+		}
+	}
+}

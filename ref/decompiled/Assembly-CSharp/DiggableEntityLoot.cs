@@ -1,0 +1,77 @@
+using System;
+using System.Collections.Generic;
+using ConVar;
+using Rust;
+using UnityEngine;
+
+[CreateAssetMenu(menuName = "Rust/DiggableLoot Spawn")]
+public class DiggableEntityLoot : ScriptableObject
+{
+	[Serializable]
+	public struct ItemEntry
+	{
+		public ItemDefinition Item;
+
+		public int Weight;
+
+		public int Min;
+
+		public int Max;
+
+		public ulong Skin;
+
+		public float? Condition;
+
+		public ItemOwnershipShare? Owner;
+
+		public ulong? UID;
+	}
+
+	public List<ItemEntry> Items = new List<ItemEntry>();
+
+	private List<ItemEntry> allowedItems;
+
+	private Era cachedEra;
+
+	[InspectorFlags]
+	public TerrainBiome.Enum Biomes = (TerrainBiome.Enum)(-1);
+
+	[InspectorFlags]
+	public TerrainTopology.Enum Topology = (TerrainTopology.Enum)(-1);
+
+	public IList<ItemEntry> GetItems()
+	{
+		if (cachedEra != ConVar.Server.Era)
+		{
+			allowedItems = null;
+			cachedEra = ConVar.Server.Era;
+		}
+		if (allowedItems == null)
+		{
+			allowedItems = new List<ItemEntry>();
+			foreach (ItemEntry item in Items)
+			{
+				if (item.Item.IsAllowed(EraRestriction.MetalDetector))
+				{
+					allowedItems.Add(item);
+				}
+			}
+		}
+		return allowedItems;
+	}
+
+	public bool VerifyLootListForWorldPosition(Vector3 worldPos)
+	{
+		int num = (TerrainMeta.BiomeMap ? TerrainMeta.BiomeMap.GetBiomeMaxType(worldPos) : 2);
+		int num2 = ((!TerrainMeta.TopologyMap) ? 1 : TerrainMeta.TopologyMap.GetTopology(worldPos));
+		if (((uint)num & (uint)Biomes) == 0)
+		{
+			return false;
+		}
+		if (((uint)num2 & (uint)Topology) == 0)
+		{
+			return false;
+		}
+		return true;
+	}
+}

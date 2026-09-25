@@ -1,0 +1,14 @@
+using System.Collections.Generic;
+
+namespace Facepunch.Extend;
+
+public static class QueueEx
+{
+	public static void EnqueueRange<T>(this Queue<T> queue, IEnumerable<T> items)
+	{
+		foreach (T item in items)
+		{
+			queue.Enqueue(item);
+		}
+	}
+}

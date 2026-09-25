@@ -1,0 +1,274 @@
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using JetBrains.Annotations;
+using Newtonsoft.Json;
+using Steamworks;
+using UnityEngine;
+using UnityEngine.Serialization;
+
+public static class Translate
+{
+	[Serializable]
+	public class Phrase
+	{
+		[LocalizationToken]
+		public string token;
+
+		private string _english;
+
+		[SerializeField]
+		[HideInInspector]
+		[FormerlySerializedAs("english")]
+		[UsedImplicitly]
+		private string legacyEnglish;
+
+		private static readonly Memoized<Phrase, string> ImplicitPhraseCache = new Memoized<Phrase, string>((string s) => new Phrase("", s));
+
+		public string english
+		{
+			get
+			{
+				if (string.IsNullOrEmpty(token))
+				{
+					return _english;
+				}
+				return Get(token, _english, forceEnglish: true);
+			}
+			set
+			{
+				_english = value;
+			}
+		}
+
+		public virtual string translated
+		{
+			get
+			{
+				if (string.IsNullOrEmpty(token))
+				{
+					return english;
+				}
+				return Get(token, _english);
+			}
+		}
+
+		public bool IsValid()
+		{
+			if (string.IsNullOrEmpty(token))
+			{
+				return !string.IsNullOrEmpty(english);
+			}
+			return true;
+		}
+
+		public bool IsEmpty()
+		{
+			if (!string.IsNullOrEmpty(english))
+			{
+				return english == "#" + token;
+			}
+			return true;
+		}
+
+		public Phrase(string t = "", string eng = "")
+		{
+			token = t;
+			_english = eng;
+		}
+
+		public static implicit operator Phrase(string b)
+		{
+			return ImplicitPhraseCache.Get(b ?? string.Empty);
+		}
+
+		public string GetRawEnglish()
+		{
+			return _english;
+		}
+	}
+
+	public static string engineJsonPath = "Assets/Localization/en/engine.json";
+
+	public static string generatedJsonPath = "Assets/Localization/en/engine-generated.json";
+
+	public static Dictionary<string, string> englishBaseStrings = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+
+	private static Dictionary<string, Dictionary<string, string>> allServerTranslations = null;
+
+	private static List<string> allServerLanguages = new List<string>
+	{
+		"af", "ar", "ca", "cs", "da", "de", "el", "en", "en-PT", "es-ES",
+		"fi", "fr", "he", "hu", "it", "ja", "ko", "nl", "no", "pl",
+		"pt-BR", "pt-PT", "ro", "ru", "sr", "sv-SE", "tr", "uk", "vi", "zh-CN",
+		"zh-TW"
+	};
+
+	private static string language = CultureInfo.InstalledUICulture.TwoLetterISOLanguageName;
+
+	[ClientVar(ClientAdmin = true)]
+	public static string overrideCulture;
+
+	public static void InitServerTranslations()
+	{
+		if (allServerTranslations != null)
+		{
+			return;
+		}
+		allServerTranslations = new Dictionary<string, Dictionary<string, string>>();
+		foreach (string allServerLanguage in allServerLanguages)
+		{
+			Dictionary<string, string> dictionary = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+			AddLanguageFile("Assets/Localization/" + allServerLanguage + "/engine.json", dictionary);
+			AddLanguageFile("Assets/Localization/" + allServerLanguage + "/phrases.json", dictionary);
+			allServerTranslations.Add(allServerLanguage, dictionary);
+		}
+	}
+
+	public static string GetServerTranslation(string token, string lang)
+	{
+		InitServerTranslations();
+		if (allServerTranslations.TryGetValue(ValidateServerLanguage(lang), out var value) && value.TryGetValue(token, out var value2))
+		{
+			return value2;
+		}
+		return string.Empty;
+	}
+
+	public static string ValidateServerLanguage(string lang)
+	{
+		if (allServerLanguages.Contains(lang))
+		{
+			return lang;
+		}
+		return "en";
+	}
+
+	public static void Init()
+	{
+		if (FileSystem.Backend != null)
+		{
+			CacheEnglishStrings();
+		}
+	}
+
+	public static string Get(string key, string def = null, bool forceEnglish = false)
+	{
+		if (string.IsNullOrEmpty(key))
+		{
+			return null;
+		}
+		if (englishBaseStrings == null || englishBaseStrings.Count == 0)
+		{
+			Init();
+		}
+		if (englishBaseStrings != null && englishBaseStrings.TryGetValue(key, out var value))
+		{
+			return value;
+		}
+		return def ?? ("#" + key);
+	}
+
+	public static Phrase GetPhrase(string token)
+	{
+		if (string.IsNullOrEmpty(token))
+		{
+			return null;
+		}
+		if (englishBaseStrings == null || englishBaseStrings.Count == 0)
+		{
+			Init();
+		}
+		if (englishBaseStrings != null && englishBaseStrings.TryGetValue(token, out var value))
+		{
+			return new Phrase(token, value);
+		}
+		return null;
+	}
+
+	public static void AddLanguageFile(string fileName, Dictionary<string, string> dict)
+	{
+		TextAsset textAsset = FileSystem.Load<TextAsset>(fileName);
+		if (textAsset == null)
+		{
+			return;
+		}
+		Dictionary<string, string>? dictionary = JsonConvert.DeserializeObject<Dictionary<string, string>>(textAsset.text);
+		if (dictionary == null)
+		{
+			Debug.LogError("Error loading translation file: " + fileName);
+		}
+		foreach (KeyValuePair<string, string> item in dictionary)
+		{
+			if (!dict.ContainsKey(item.Key))
+			{
+				string value = item.Value.Replace("\\n", "\n").Trim();
+				dict.Add(item.Key, value);
+			}
+		}
+	}
+
+	private static void CacheEnglishStrings()
+	{
+		englishBaseStrings = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+		AddLanguageFile(engineJsonPath, englishBaseStrings);
+		AddLanguageFile(generatedJsonPath, englishBaseStrings);
+	}
+
+	public static string GetLanguage()
+	{
+		return language;
+	}
+
+	public static bool CurrentLanguageIsRTL()
+	{
+		if (!(GetLanguage() == "ar"))
+		{
+			return GetLanguage() == "he";
+		}
+		return true;
+	}
+
+	[ClientVar]
+	public static void printCultureInfo(ConsoleSystem.Arg arg)
+	{
+		CultureInfo currentCulture = GetCurrentCulture();
+		string text = "";
+		if (!string.IsNullOrEmpty(overrideCulture))
+		{
+			text = text + "Override Culture: " + overrideCulture + "\n\n";
+		}
+		text = text + "Installed UI Culture: " + currentCulture.Name + " (" + currentCulture.DisplayName + ")\n";
+		try
+		{
+			RegionInfo regionInfo = new RegionInfo(currentCulture.Name);
+			NumberFormatInfo numberFormat = currentCulture.NumberFormat;
+			text = text + "Region: " + regionInfo.TwoLetterISORegionName + " (" + regionInfo.DisplayName + ")\nCurrency: " + regionInfo.ISOCurrencySymbol + " (" + regionInfo.CurrencySymbol + ")\nDecimal: '" + numberFormat.NumberDecimalSeparator + "'\nGroup: '" + numberFormat.NumberGroupSeparator + "'\nCurrency Format: " + 1234.56.ToString("C", numberFormat) + "\nNumber Format: " + 1234.56.ToString("N", numberFormat) + "\nSteam Currency: '" + SteamInventory.Currency + "'";
+		}
+		catch
+		{
+			text += "(No region info available)";
+		}
+		arg.ReplyWith(text);
+	}
+
+	public static CultureInfo GetCurrentCulture()
+	{
+		CultureInfo result = CultureInfo.InvariantCulture;
+		if (!string.IsNullOrEmpty(overrideCulture))
+		{
+			try
+			{
+				result = new CultureInfo(overrideCulture);
+			}
+			catch
+			{
+			}
+		}
+		else
+		{
+			result = CultureInfo.InstalledUICulture;
+		}
+		return result;
+	}
+}

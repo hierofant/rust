@@ -1,0 +1,8 @@
+namespace Rust.Localization;
+
+public interface ILocalize
+{
+	string LanguageToken { get; }
+
+	string LanguageEnglish { get; }
+}

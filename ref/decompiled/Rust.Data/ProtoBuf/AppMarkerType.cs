@@ -1,0 +1,15 @@
+namespace ProtoBuf;
+
+public enum AppMarkerType
+{
+	Undefined,
+	Player,
+	Explosion,
+	VendingMachine,
+	CH47,
+	CargoShip,
+	Crate,
+	GenericRadius,
+	PatrolHelicopter,
+	TravellingVendor
+}

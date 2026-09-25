@@ -1,0 +1,22280 @@
+using System;
+using System.IO;
+using Facepunch;
+using SilentOrbit.ProtocolBuffers;
+
+namespace ProtoBuf;
+
+public class Entity : IDisposable, Pool.IPooled, IProto<Entity>, IProto
+{
+	public bool ShouldPool = true;
+
+	private bool _disposed;
+
+	[NonSerialized]
+	public BaseNetworkable baseNetworkable;
+
+	[NonSerialized]
+	public BaseEntity baseEntity;
+
+	[NonSerialized]
+	public BasePlayer basePlayer;
+
+	[NonSerialized]
+	public WorldItem worldItem;
+
+	[NonSerialized]
+	public BaseResource resource;
+
+	[NonSerialized]
+	public BuildingBlock buildingBlock;
+
+	[NonSerialized]
+	public Environment environment;
+
+	[NonSerialized]
+	public Corpse corpse;
+
+	[NonSerialized]
+	public ParentInfo parent;
+
+	[NonSerialized]
+	public KeyLock keyLock;
+
+	[NonSerialized]
+	public CodeLock codeLock;
+
+	[NonSerialized]
+	public EntitySlots entitySlots;
+
+	[NonSerialized]
+	public BuildingPrivilege buildingPrivilege;
+
+	[NonSerialized]
+	public StorageBox storageBox;
+
+	[NonSerialized]
+	public HeldEntity heldEntity;
+
+	[NonSerialized]
+	public BaseProjectile baseProjectile;
+
+	[NonSerialized]
+	public BaseNPC baseNPC;
+
+	[NonSerialized]
+	public LootContainer lootContainer;
+
+	[NonSerialized]
+	public GenericSpawner genericSpawner;
+
+	[NonSerialized]
+	public SleepingBag sleepingBag;
+
+	[NonSerialized]
+	public LootableCorpse lootableCorpse;
+
+	[NonSerialized]
+	public Sign sign;
+
+	[NonSerialized]
+	public BaseCombat baseCombat;
+
+	[NonSerialized]
+	public MapEntity mapEntity;
+
+	[NonSerialized]
+	public ResearchTable researchTable;
+
+	[NonSerialized]
+	public DudExplosive dudExplosive;
+
+	[NonSerialized]
+	public MiningQuarry miningQuarry;
+
+	[NonSerialized]
+	public BaseVehicle baseVehicle;
+
+	[NonSerialized]
+	public Helicopter helicopter;
+
+	[NonSerialized]
+	public Landmine landmine;
+
+	[NonSerialized]
+	public AutoTurret autoturret;
+
+	[NonSerialized]
+	public SphereEntity sphereEntity;
+
+	[NonSerialized]
+	public StabilityEntity stabilityEntity;
+
+	[NonSerialized]
+	public OwnerInfo ownerInfo;
+
+	[NonSerialized]
+	public DecayEntity decayEntity;
+
+	[NonSerialized]
+	public Spawnable spawnable;
+
+	[NonSerialized]
+	public ServerGib servergib;
+
+	[NonSerialized]
+	public VendingMachine vendingMachine;
+
+	[NonSerialized]
+	public SpinnerWheel spinnerWheel;
+
+	[NonSerialized]
+	public Lift lift;
+
+	[NonSerialized]
+	public BradleyAPC bradley;
+
+	[NonSerialized]
+	public WaterWell waterwell;
+
+	[NonSerialized]
+	public Motorboat motorBoat;
+
+	[NonSerialized]
+	public IOEntity ioEntity;
+
+	[NonSerialized]
+	public PuzzleReset puzzleReset;
+
+	[NonSerialized]
+	public RelationshipManager relationshipManager;
+
+	[NonSerialized]
+	public HotAirBalloon hotAirBalloon;
+
+	[NonSerialized]
+	public SAMSite samSite;
+
+	[NonSerialized]
+	public EggHunt eggHunt;
+
+	[NonSerialized]
+	public ArcadeMachine arcadeMachine;
+
+	[NonSerialized]
+	public Minicopter miniCopter;
+
+	[NonSerialized]
+	public Horse horse;
+
+	[NonSerialized]
+	public SmartAlarm smartAlarm;
+
+	[NonSerialized]
+	public LightString lightString;
+
+	[NonSerialized]
+	public LightDeployer lightDeployer;
+
+	[NonSerialized]
+	public RCEntity rcEntity;
+
+	[NonSerialized]
+	public ComputerStation computerStation;
+
+	[NonSerialized]
+	public GrowableEntity growableEntity;
+
+	[NonSerialized]
+	public Composter composter;
+
+	[NonSerialized]
+	public ModularVehicle modularVehicle;
+
+	[NonSerialized]
+	public ModularCar modularCar;
+
+	[NonSerialized]
+	public SimpleUID simpleUID;
+
+	[NonSerialized]
+	public VehicleLift vehicleLift;
+
+	[NonSerialized]
+	public EngineStorage engineStorage;
+
+	[NonSerialized]
+	public VehicleVendor vehicleVendor;
+
+	[NonSerialized]
+	public WaterPool WaterPool;
+
+	[NonSerialized]
+	public Photo photo;
+
+	[NonSerialized]
+	public PhotoFrame photoFrame;
+
+	[NonSerialized]
+	public VehicleModule vehicleModule;
+
+	[NonSerialized]
+	public MixingTable mixingTable;
+
+	[NonSerialized]
+	public ShopKeeper shopKeeper;
+
+	[NonSerialized]
+	public Elevator elevator;
+
+	[NonSerialized]
+	public SkullTrophy skullTrophy;
+
+	[NonSerialized]
+	public Cassette cassette;
+
+	[NonSerialized]
+	public Telephone telephone;
+
+	[NonSerialized]
+	public BoomBox boomBox;
+
+	[NonSerialized]
+	public NeonSign neonSign;
+
+	[NonSerialized]
+	public SubEntityList subEntityList;
+
+	[NonSerialized]
+	public MarketTerminal marketTerminal;
+
+	[NonSerialized]
+	public DeliveryDrone deliveryDrone;
+
+	[NonSerialized]
+	public ReclaimTerminal reclaimTerminal;
+
+	[NonSerialized]
+	public SlotMachine slotMachine;
+
+	[NonSerialized]
+	public TrainEngine trainEngine;
+
+	[NonSerialized]
+	public CardGame cardGame;
+
+	[NonSerialized]
+	public Crane crane;
+
+	[NonSerialized]
+	public ConnectedSpeaker connectedSpeaker;
+
+	[NonSerialized]
+	public AudioEntity audioEntity;
+
+	[NonSerialized]
+	public MicrophoneStand microphoneStand;
+
+	[NonSerialized]
+	public Submarine submarine;
+
+	[NonSerialized]
+	public SleepingBagCamper sleepingBagCamper;
+
+	[NonSerialized]
+	public CamperModule camperModule;
+
+	[NonSerialized]
+	public PaintableSign paintableSign;
+
+	[NonSerialized]
+	public Whitelist whitelist;
+
+	[NonSerialized]
+	public FrankensteinTable FrankensteinTable;
+
+	[NonSerialized]
+	public MLRS mlrs;
+
+	[NonSerialized]
+	public ReclaimManager reclaimManager;
+
+	[NonSerialized]
+	public GameMode gameMode;
+
+	[NonSerialized]
+	public Snowmobile snowmobile;
+
+	[NonSerialized]
+	public bool createdThisFrame;
+
+	[NonSerialized]
+	public PatternFirework patternFirework;
+
+	[NonSerialized]
+	public CargoPlane cargoPlane;
+
+	[NonSerialized]
+	public PaintedItem paintedItem;
+
+	[NonSerialized]
+	public ClanManager clanManager;
+
+	[NonSerialized]
+	public Spray spray;
+
+	[NonSerialized]
+	public BaseTrain baseTrain;
+
+	[NonSerialized]
+	public Zipline zipline;
+
+	[NonSerialized]
+	public ZiplineMountable ziplineMountable;
+
+	[NonSerialized]
+	public ZiplineArrivalPoint ZiplineArrival;
+
+	[NonSerialized]
+	public SprayLine sprayLine;
+
+	[NonSerialized]
+	public CoalingTower coalingTower;
+
+	[NonSerialized]
+	public SimpleInt simpleInt;
+
+	[NonSerialized]
+	public BaseOven baseOven;
+
+	[NonSerialized]
+	public BrainComponent brainComponent;
+
+	[NonSerialized]
+	public ProceduralDungeon proceduralDungeon;
+
+	[NonSerialized]
+	public IndustrialConveyor industrialConveyor;
+
+	[NonSerialized]
+	public IndustrialCrafter industrialCrafter;
+
+	[NonSerialized]
+	public Drone drone;
+
+	[NonSerialized]
+	public TimedExplosive explosive;
+
+	[NonSerialized]
+	public SimpleUInt simpleUint;
+
+	[NonSerialized]
+	public WeaponRack weaponRack;
+
+	[NonSerialized]
+	public AttackHeli attackHeli;
+
+	[NonSerialized]
+	public AttackHeliTurret attackHeliTurret;
+
+	[NonSerialized]
+	public AttackHeliRockets attackHeliRockets;
+
+	[NonSerialized]
+	public BaseBoat baseBoat;
+
+	[NonSerialized]
+	public Ragdoll ragdoll;
+
+	[NonSerialized]
+	public DieselEngine dieselEngine;
+
+	[NonSerialized]
+	public AssociatedFiles associatedFiles;
+
+	[NonSerialized]
+	public NexusFerry nexusFerry;
+
+	[NonSerialized]
+	public NexusIsland nexusIsland;
+
+	[NonSerialized]
+	public NexusDockTerminal nexusDockTerminal;
+
+	[NonSerialized]
+	public RockingChair rockingChair;
+
+	[NonSerialized]
+	public HeadData headData;
+
+	[NonSerialized]
+	public WantedPoster wantedPoster;
+
+	[NonSerialized]
+	public WaypointRace waypointRace;
+
+	[NonSerialized]
+	public LegacyShelter legacyShelter;
+
+	[NonSerialized]
+	public MetalDetectorSource metalDetectorSource;
+
+	[NonSerialized]
+	public TutorialIsland tutorialIsland;
+
+	[NonSerialized]
+	public CinematicEntity cinematicEntity;
+
+	[NonSerialized]
+	public BuildingPrivilegeRetro buildingPrivilegeRetro;
+
+	[NonSerialized]
+	public HarborCrane harborCrane;
+
+	[NonSerialized]
+	public CargoShip cargoShip;
+
+	[NonSerialized]
+	public CargoShipContainer cargoShipContainer;
+
+	[NonSerialized]
+	public MissionMapMarker missionMapMarker;
+
+	[NonSerialized]
+	public Bike bike;
+
+	[NonSerialized]
+	public DiverPropulsionVehicle diverPropulsionVehicle;
+
+	[NonSerialized]
+	public TravellingVendor travellingVendor;
+
+	[NonSerialized]
+	public VendingDynamicPricing vendingDynamicPricing;
+
+	[NonSerialized]
+	public TinCanAlarm tinCanAlarm;
+
+	[NonSerialized]
+	public DigitalClock digitalClock;
+
+	[NonSerialized]
+	public ElevatorLift elevatorLift;
+
+	[NonSerialized]
+	public NPCVendingMachine npcVendingMachine;
+
+	[NonSerialized]
+	public Mailbox mailbox;
+
+	[NonSerialized]
+	public GunWeaponMod projectileWeaponMod;
+
+	[NonSerialized]
+	public BaseSculpture baseSculpture;
+
+	[NonSerialized]
+	public VendingMachineStats vendingMachineStats;
+
+	[NonSerialized]
+	public Catapult catapult;
+
+	[NonSerialized]
+	public SiegeTower siegeTower;
+
+	[NonSerialized]
+	public Ballista ballista;
+
+	[NonSerialized]
+	public BallistaGun ballistaGun;
+
+	[NonSerialized]
+	public BatteringRam batteringRam;
+
+	[NonSerialized]
+	public TemporaryRagdoll temporaryRagdoll;
+
+	[NonSerialized]
+	public ConstructableEntity constructableEntity;
+
+	[NonSerialized]
+	public ChickenCoop chickenCoop;
+
+	[NonSerialized]
+	public FarmableAnimal farmableAnimal;
+
+	[NonSerialized]
+	public ItemOwnershipAmount ownership;
+
+	[NonSerialized]
+	public Beehive beehive;
+
+	[NonSerialized]
+	public BeeMasterSwarm beeMasterSwarm;
+
+	[NonSerialized]
+	public ContainerCorpseData containerCorpse;
+
+	[NonSerialized]
+	public NPCTargetState npcTargetState;
+
+	[NonSerialized]
+	public VineMountable vineMountable;
+
+	[NonSerialized]
+	public VineTree vineTree;
+
+	[NonSerialized]
+	public TreeRespawn treeRespawn;
+
+	[NonSerialized]
+	public WallpaperTool wallpaperTool;
+
+	[NonSerialized]
+	public CommandBlock commandBlock;
+
+	[NonSerialized]
+	public StaticRespawnAreaData staticRespawn;
+
+	[NonSerialized]
+	public BuriedItems buriedItemStorage;
+
+	[NonSerialized]
+	public Mannequin mannequin;
+
+	[NonSerialized]
+	public BaseMelee baseMelee;
+
+	[NonSerialized]
+	public Door door;
+
+	[NonSerialized]
+	public DeepSeaPortal deepSeaPortal;
+
+	[NonSerialized]
+	public BaseMountable baseMountable;
+
+	[NonSerialized]
+	public SmallEngine smallEngine;
+
+	[NonSerialized]
+	public PlayerBoat playerBoat;
+
+	[NonSerialized]
+	public SteeringWheel steeringWheel;
+
+	[NonSerialized]
+	public DeepSeaManager deepSeaManager;
+
+	[NonSerialized]
+	public ScientistBoatOilrigManager scientistBoatOilrigManager;
+
+	[NonSerialized]
+	public StorageAdaptor storageAdaptor;
+
+	[NonSerialized]
+	public HelicopterFlares helicopterFlares;
+
+	[NonSerialized]
+	public WipeLaptop wipeLaptop;
+
+	[NonSerialized]
+	public MountedWeapon mountedWeapon;
+
+	[NonSerialized]
+	public BoatBuildingBlock boatBuildingBlock;
+
+	[NonSerialized]
+	public BoatBuildingStation boatBuildingStation;
+
+	[NonSerialized]
+	public DisplayingBoxStorage displayingBoxStorage;
+
+	[NonSerialized]
+	public Workbench workbench;
+
+	[NonSerialized]
+	public ApartmentLock apartmentLock;
+
+	[NonSerialized]
+	public RentableShop rentableShop;
+
+	[NonSerialized]
+	public ApartmentRoom apartmentRoom;
+
+	[NonSerialized]
+	public ApartmentBuilding apartmentBuilding;
+
+	[NonSerialized]
+	public ApartmentUpkeepTerminal apartmentUpkeep;
+
+	[NonSerialized]
+	public MortarData mortar;
+
+	[NonSerialized]
+	public ApartmentDoor apartmentDoor;
+
+	[NonSerialized]
+	public ApartmentMailbox apartmentMailbox;
+
+	[NonSerialized]
+	public Pooltable Pooltable;
+
+	[NonSerialized]
+	public DartsGame dartsGame;
+
+	[NonSerialized]
+	public DartsGameLeaderboard dartsGameLeaderboard;
+
+	[NonSerialized]
+	public SatelliteControlComputer satelliteControlComputer;
+
+	[NonSerialized]
+	public SatelliteCrash satelliteCrash;
+
+	[NonSerialized]
+	public SatelliteCrashRemains satelliteCrashRemains;
+
+	[NonSerialized]
+	public ElectricGenerator electricGenerator;
+
+	[NonSerialized]
+	public PowergridManager powergridManager;
+
+	[NonSerialized]
+	public OilSwitchBroadcast oilswitchBroadcast;
+
+	[NonSerialized]
+	public Sprinkler sprinkler;
+
+	[NonSerialized]
+	public HackableLockedCrate hackableLockedCrate;
+
+	[NonSerialized]
+	public LockedByEntCrate lockedByEntCrate;
+
+	[NonSerialized]
+	public TerritoryZones territoryZones;
+
+	[NonSerialized]
+	public MonumentBlocker monumentBlocker;
+
+	public static void ResetToPool(Entity instance)
+	{
+		if (instance.ShouldPool)
+		{
+			if (instance.baseNetworkable != null)
+			{
+				instance.baseNetworkable.ResetToPool();
+				instance.baseNetworkable = null;
+			}
+			if (instance.baseEntity != null)
+			{
+				instance.baseEntity.ResetToPool();
+				instance.baseEntity = null;
+			}
+			if (instance.basePlayer != null)
+			{
+				instance.basePlayer.ResetToPool();
+				instance.basePlayer = null;
+			}
+			if (instance.worldItem != null)
+			{
+				instance.worldItem.ResetToPool();
+				instance.worldItem = null;
+			}
+			if (instance.resource != null)
+			{
+				instance.resource.ResetToPool();
+				instance.resource = null;
+			}
+			if (instance.buildingBlock != null)
+			{
+				instance.buildingBlock.ResetToPool();
+				instance.buildingBlock = null;
+			}
+			if (instance.environment != null)
+			{
+				instance.environment.ResetToPool();
+				instance.environment = null;
+			}
+			if (instance.corpse != null)
+			{
+				instance.corpse.ResetToPool();
+				instance.corpse = null;
+			}
+			if (instance.parent != null)
+			{
+				instance.parent.ResetToPool();
+				instance.parent = null;
+			}
+			if (instance.keyLock != null)
+			{
+				instance.keyLock.ResetToPool();
+				instance.keyLock = null;
+			}
+			if (instance.codeLock != null)
+			{
+				instance.codeLock.ResetToPool();
+				instance.codeLock = null;
+			}
+			if (instance.entitySlots != null)
+			{
+				instance.entitySlots.ResetToPool();
+				instance.entitySlots = null;
+			}
+			if (instance.buildingPrivilege != null)
+			{
+				instance.buildingPrivilege.ResetToPool();
+				instance.buildingPrivilege = null;
+			}
+			if (instance.storageBox != null)
+			{
+				instance.storageBox.ResetToPool();
+				instance.storageBox = null;
+			}
+			if (instance.heldEntity != null)
+			{
+				instance.heldEntity.ResetToPool();
+				instance.heldEntity = null;
+			}
+			if (instance.baseProjectile != null)
+			{
+				instance.baseProjectile.ResetToPool();
+				instance.baseProjectile = null;
+			}
+			if (instance.baseNPC != null)
+			{
+				instance.baseNPC.ResetToPool();
+				instance.baseNPC = null;
+			}
+			if (instance.lootContainer != null)
+			{
+				instance.lootContainer.ResetToPool();
+				instance.lootContainer = null;
+			}
+			if (instance.genericSpawner != null)
+			{
+				instance.genericSpawner.ResetToPool();
+				instance.genericSpawner = null;
+			}
+			if (instance.sleepingBag != null)
+			{
+				instance.sleepingBag.ResetToPool();
+				instance.sleepingBag = null;
+			}
+			if (instance.lootableCorpse != null)
+			{
+				instance.lootableCorpse.ResetToPool();
+				instance.lootableCorpse = null;
+			}
+			if (instance.sign != null)
+			{
+				instance.sign.ResetToPool();
+				instance.sign = null;
+			}
+			if (instance.baseCombat != null)
+			{
+				instance.baseCombat.ResetToPool();
+				instance.baseCombat = null;
+			}
+			if (instance.mapEntity != null)
+			{
+				instance.mapEntity.ResetToPool();
+				instance.mapEntity = null;
+			}
+			if (instance.researchTable != null)
+			{
+				instance.researchTable.ResetToPool();
+				instance.researchTable = null;
+			}
+			if (instance.dudExplosive != null)
+			{
+				instance.dudExplosive.ResetToPool();
+				instance.dudExplosive = null;
+			}
+			if (instance.miningQuarry != null)
+			{
+				instance.miningQuarry.ResetToPool();
+				instance.miningQuarry = null;
+			}
+			if (instance.baseVehicle != null)
+			{
+				instance.baseVehicle.ResetToPool();
+				instance.baseVehicle = null;
+			}
+			if (instance.helicopter != null)
+			{
+				instance.helicopter.ResetToPool();
+				instance.helicopter = null;
+			}
+			if (instance.landmine != null)
+			{
+				instance.landmine.ResetToPool();
+				instance.landmine = null;
+			}
+			if (instance.autoturret != null)
+			{
+				instance.autoturret.ResetToPool();
+				instance.autoturret = null;
+			}
+			if (instance.sphereEntity != null)
+			{
+				instance.sphereEntity.ResetToPool();
+				instance.sphereEntity = null;
+			}
+			if (instance.stabilityEntity != null)
+			{
+				instance.stabilityEntity.ResetToPool();
+				instance.stabilityEntity = null;
+			}
+			if (instance.ownerInfo != null)
+			{
+				instance.ownerInfo.ResetToPool();
+				instance.ownerInfo = null;
+			}
+			if (instance.decayEntity != null)
+			{
+				instance.decayEntity.ResetToPool();
+				instance.decayEntity = null;
+			}
+			if (instance.spawnable != null)
+			{
+				instance.spawnable.ResetToPool();
+				instance.spawnable = null;
+			}
+			if (instance.servergib != null)
+			{
+				instance.servergib.ResetToPool();
+				instance.servergib = null;
+			}
+			if (instance.vendingMachine != null)
+			{
+				instance.vendingMachine.ResetToPool();
+				instance.vendingMachine = null;
+			}
+			if (instance.spinnerWheel != null)
+			{
+				instance.spinnerWheel.ResetToPool();
+				instance.spinnerWheel = null;
+			}
+			if (instance.lift != null)
+			{
+				instance.lift.ResetToPool();
+				instance.lift = null;
+			}
+			if (instance.bradley != null)
+			{
+				instance.bradley.ResetToPool();
+				instance.bradley = null;
+			}
+			if (instance.waterwell != null)
+			{
+				instance.waterwell.ResetToPool();
+				instance.waterwell = null;
+			}
+			if (instance.motorBoat != null)
+			{
+				instance.motorBoat.ResetToPool();
+				instance.motorBoat = null;
+			}
+			if (instance.ioEntity != null)
+			{
+				instance.ioEntity.ResetToPool();
+				instance.ioEntity = null;
+			}
+			if (instance.puzzleReset != null)
+			{
+				instance.puzzleReset.ResetToPool();
+				instance.puzzleReset = null;
+			}
+			if (instance.relationshipManager != null)
+			{
+				instance.relationshipManager.ResetToPool();
+				instance.relationshipManager = null;
+			}
+			if (instance.hotAirBalloon != null)
+			{
+				instance.hotAirBalloon.ResetToPool();
+				instance.hotAirBalloon = null;
+			}
+			if (instance.samSite != null)
+			{
+				instance.samSite.ResetToPool();
+				instance.samSite = null;
+			}
+			if (instance.eggHunt != null)
+			{
+				instance.eggHunt.ResetToPool();
+				instance.eggHunt = null;
+			}
+			if (instance.arcadeMachine != null)
+			{
+				instance.arcadeMachine.ResetToPool();
+				instance.arcadeMachine = null;
+			}
+			if (instance.miniCopter != null)
+			{
+				instance.miniCopter.ResetToPool();
+				instance.miniCopter = null;
+			}
+			if (instance.horse != null)
+			{
+				instance.horse.ResetToPool();
+				instance.horse = null;
+			}
+			if (instance.smartAlarm != null)
+			{
+				instance.smartAlarm.ResetToPool();
+				instance.smartAlarm = null;
+			}
+			if (instance.lightString != null)
+			{
+				instance.lightString.ResetToPool();
+				instance.lightString = null;
+			}
+			if (instance.lightDeployer != null)
+			{
+				instance.lightDeployer.ResetToPool();
+				instance.lightDeployer = null;
+			}
+			if (instance.rcEntity != null)
+			{
+				instance.rcEntity.ResetToPool();
+				instance.rcEntity = null;
+			}
+			if (instance.computerStation != null)
+			{
+				instance.computerStation.ResetToPool();
+				instance.computerStation = null;
+			}
+			if (instance.growableEntity != null)
+			{
+				instance.growableEntity.ResetToPool();
+				instance.growableEntity = null;
+			}
+			if (instance.composter != null)
+			{
+				instance.composter.ResetToPool();
+				instance.composter = null;
+			}
+			if (instance.modularVehicle != null)
+			{
+				instance.modularVehicle.ResetToPool();
+				instance.modularVehicle = null;
+			}
+			if (instance.modularCar != null)
+			{
+				instance.modularCar.ResetToPool();
+				instance.modularCar = null;
+			}
+			if (instance.simpleUID != null)
+			{
+				instance.simpleUID.ResetToPool();
+				instance.simpleUID = null;
+			}
+			if (instance.vehicleLift != null)
+			{
+				instance.vehicleLift.ResetToPool();
+				instance.vehicleLift = null;
+			}
+			if (instance.engineStorage != null)
+			{
+				instance.engineStorage.ResetToPool();
+				instance.engineStorage = null;
+			}
+			if (instance.vehicleVendor != null)
+			{
+				instance.vehicleVendor.ResetToPool();
+				instance.vehicleVendor = null;
+			}
+			if (instance.WaterPool != null)
+			{
+				instance.WaterPool.ResetToPool();
+				instance.WaterPool = null;
+			}
+			if (instance.photo != null)
+			{
+				instance.photo.ResetToPool();
+				instance.photo = null;
+			}
+			if (instance.photoFrame != null)
+			{
+				instance.photoFrame.ResetToPool();
+				instance.photoFrame = null;
+			}
+			if (instance.vehicleModule != null)
+			{
+				instance.vehicleModule.ResetToPool();
+				instance.vehicleModule = null;
+			}
+			if (instance.mixingTable != null)
+			{
+				instance.mixingTable.ResetToPool();
+				instance.mixingTable = null;
+			}
+			if (instance.shopKeeper != null)
+			{
+				instance.shopKeeper.ResetToPool();
+				instance.shopKeeper = null;
+			}
+			if (instance.elevator != null)
+			{
+				instance.elevator.ResetToPool();
+				instance.elevator = null;
+			}
+			if (instance.skullTrophy != null)
+			{
+				instance.skullTrophy.ResetToPool();
+				instance.skullTrophy = null;
+			}
+			if (instance.cassette != null)
+			{
+				instance.cassette.ResetToPool();
+				instance.cassette = null;
+			}
+			if (instance.telephone != null)
+			{
+				instance.telephone.ResetToPool();
+				instance.telephone = null;
+			}
+			if (instance.boomBox != null)
+			{
+				instance.boomBox.ResetToPool();
+				instance.boomBox = null;
+			}
+			if (instance.neonSign != null)
+			{
+				instance.neonSign.ResetToPool();
+				instance.neonSign = null;
+			}
+			if (instance.subEntityList != null)
+			{
+				instance.subEntityList.ResetToPool();
+				instance.subEntityList = null;
+			}
+			if (instance.marketTerminal != null)
+			{
+				instance.marketTerminal.ResetToPool();
+				instance.marketTerminal = null;
+			}
+			if (instance.deliveryDrone != null)
+			{
+				instance.deliveryDrone.ResetToPool();
+				instance.deliveryDrone = null;
+			}
+			if (instance.reclaimTerminal != null)
+			{
+				instance.reclaimTerminal.ResetToPool();
+				instance.reclaimTerminal = null;
+			}
+			if (instance.slotMachine != null)
+			{
+				instance.slotMachine.ResetToPool();
+				instance.slotMachine = null;
+			}
+			if (instance.trainEngine != null)
+			{
+				instance.trainEngine.ResetToPool();
+				instance.trainEngine = null;
+			}
+			if (instance.cardGame != null)
+			{
+				instance.cardGame.ResetToPool();
+				instance.cardGame = null;
+			}
+			if (instance.crane != null)
+			{
+				instance.crane.ResetToPool();
+				instance.crane = null;
+			}
+			if (instance.connectedSpeaker != null)
+			{
+				instance.connectedSpeaker.ResetToPool();
+				instance.connectedSpeaker = null;
+			}
+			if (instance.audioEntity != null)
+			{
+				instance.audioEntity.ResetToPool();
+				instance.audioEntity = null;
+			}
+			if (instance.microphoneStand != null)
+			{
+				instance.microphoneStand.ResetToPool();
+				instance.microphoneStand = null;
+			}
+			if (instance.submarine != null)
+			{
+				instance.submarine.ResetToPool();
+				instance.submarine = null;
+			}
+			if (instance.sleepingBagCamper != null)
+			{
+				instance.sleepingBagCamper.ResetToPool();
+				instance.sleepingBagCamper = null;
+			}
+			if (instance.camperModule != null)
+			{
+				instance.camperModule.ResetToPool();
+				instance.camperModule = null;
+			}
+			if (instance.paintableSign != null)
+			{
+				instance.paintableSign.ResetToPool();
+				instance.paintableSign = null;
+			}
+			if (instance.whitelist != null)
+			{
+				instance.whitelist.ResetToPool();
+				instance.whitelist = null;
+			}
+			if (instance.FrankensteinTable != null)
+			{
+				instance.FrankensteinTable.ResetToPool();
+				instance.FrankensteinTable = null;
+			}
+			if (instance.mlrs != null)
+			{
+				instance.mlrs.ResetToPool();
+				instance.mlrs = null;
+			}
+			if (instance.reclaimManager != null)
+			{
+				instance.reclaimManager.ResetToPool();
+				instance.reclaimManager = null;
+			}
+			if (instance.gameMode != null)
+			{
+				instance.gameMode.ResetToPool();
+				instance.gameMode = null;
+			}
+			if (instance.snowmobile != null)
+			{
+				instance.snowmobile.ResetToPool();
+				instance.snowmobile = null;
+			}
+			instance.createdThisFrame = false;
+			if (instance.patternFirework != null)
+			{
+				instance.patternFirework.ResetToPool();
+				instance.patternFirework = null;
+			}
+			if (instance.cargoPlane != null)
+			{
+				instance.cargoPlane.ResetToPool();
+				instance.cargoPlane = null;
+			}
+			if (instance.paintedItem != null)
+			{
+				instance.paintedItem.ResetToPool();
+				instance.paintedItem = null;
+			}
+			if (instance.clanManager != null)
+			{
+				instance.clanManager.ResetToPool();
+				instance.clanManager = null;
+			}
+			if (instance.spray != null)
+			{
+				instance.spray.ResetToPool();
+				instance.spray = null;
+			}
+			if (instance.baseTrain != null)
+			{
+				instance.baseTrain.ResetToPool();
+				instance.baseTrain = null;
+			}
+			if (instance.zipline != null)
+			{
+				instance.zipline.ResetToPool();
+				instance.zipline = null;
+			}
+			if (instance.ziplineMountable != null)
+			{
+				instance.ziplineMountable.ResetToPool();
+				instance.ziplineMountable = null;
+			}
+			if (instance.ZiplineArrival != null)
+			{
+				instance.ZiplineArrival.ResetToPool();
+				instance.ZiplineArrival = null;
+			}
+			if (instance.sprayLine != null)
+			{
+				instance.sprayLine.ResetToPool();
+				instance.sprayLine = null;
+			}
+			if (instance.coalingTower != null)
+			{
+				instance.coalingTower.ResetToPool();
+				instance.coalingTower = null;
+			}
+			if (instance.simpleInt != null)
+			{
+				instance.simpleInt.ResetToPool();
+				instance.simpleInt = null;
+			}
+			if (instance.baseOven != null)
+			{
+				instance.baseOven.ResetToPool();
+				instance.baseOven = null;
+			}
+			if (instance.brainComponent != null)
+			{
+				instance.brainComponent.ResetToPool();
+				instance.brainComponent = null;
+			}
+			if (instance.proceduralDungeon != null)
+			{
+				instance.proceduralDungeon.ResetToPool();
+				instance.proceduralDungeon = null;
+			}
+			if (instance.industrialConveyor != null)
+			{
+				instance.industrialConveyor.ResetToPool();
+				instance.industrialConveyor = null;
+			}
+			if (instance.industrialCrafter != null)
+			{
+				instance.industrialCrafter.ResetToPool();
+				instance.industrialCrafter = null;
+			}
+			if (instance.drone != null)
+			{
+				instance.drone.ResetToPool();
+				instance.drone = null;
+			}
+			if (instance.explosive != null)
+			{
+				instance.explosive.ResetToPool();
+				instance.explosive = null;
+			}
+			if (instance.simpleUint != null)
+			{
+				instance.simpleUint.ResetToPool();
+				instance.simpleUint = null;
+			}
+			if (instance.weaponRack != null)
+			{
+				instance.weaponRack.ResetToPool();
+				instance.weaponRack = null;
+			}
+			if (instance.attackHeli != null)
+			{
+				instance.attackHeli.ResetToPool();
+				instance.attackHeli = null;
+			}
+			if (instance.attackHeliTurret != null)
+			{
+				instance.attackHeliTurret.ResetToPool();
+				instance.attackHeliTurret = null;
+			}
+			if (instance.attackHeliRockets != null)
+			{
+				instance.attackHeliRockets.ResetToPool();
+				instance.attackHeliRockets = null;
+			}
+			if (instance.baseBoat != null)
+			{
+				instance.baseBoat.ResetToPool();
+				instance.baseBoat = null;
+			}
+			if (instance.ragdoll != null)
+			{
+				instance.ragdoll.ResetToPool();
+				instance.ragdoll = null;
+			}
+			if (instance.dieselEngine != null)
+			{
+				instance.dieselEngine.ResetToPool();
+				instance.dieselEngine = null;
+			}
+			if (instance.associatedFiles != null)
+			{
+				instance.associatedFiles.ResetToPool();
+				instance.associatedFiles = null;
+			}
+			if (instance.nexusFerry != null)
+			{
+				instance.nexusFerry.ResetToPool();
+				instance.nexusFerry = null;
+			}
+			if (instance.nexusIsland != null)
+			{
+				instance.nexusIsland.ResetToPool();
+				instance.nexusIsland = null;
+			}
+			if (instance.nexusDockTerminal != null)
+			{
+				instance.nexusDockTerminal.ResetToPool();
+				instance.nexusDockTerminal = null;
+			}
+			if (instance.rockingChair != null)
+			{
+				instance.rockingChair.ResetToPool();
+				instance.rockingChair = null;
+			}
+			if (instance.headData != null)
+			{
+				instance.headData.ResetToPool();
+				instance.headData = null;
+			}
+			if (instance.wantedPoster != null)
+			{
+				instance.wantedPoster.ResetToPool();
+				instance.wantedPoster = null;
+			}
+			if (instance.waypointRace != null)
+			{
+				instance.waypointRace.ResetToPool();
+				instance.waypointRace = null;
+			}
+			if (instance.legacyShelter != null)
+			{
+				instance.legacyShelter.ResetToPool();
+				instance.legacyShelter = null;
+			}
+			if (instance.metalDetectorSource != null)
+			{
+				instance.metalDetectorSource.ResetToPool();
+				instance.metalDetectorSource = null;
+			}
+			if (instance.tutorialIsland != null)
+			{
+				instance.tutorialIsland.ResetToPool();
+				instance.tutorialIsland = null;
+			}
+			if (instance.cinematicEntity != null)
+			{
+				instance.cinematicEntity.ResetToPool();
+				instance.cinematicEntity = null;
+			}
+			if (instance.buildingPrivilegeRetro != null)
+			{
+				instance.buildingPrivilegeRetro.ResetToPool();
+				instance.buildingPrivilegeRetro = null;
+			}
+			if (instance.harborCrane != null)
+			{
+				instance.harborCrane.ResetToPool();
+				instance.harborCrane = null;
+			}
+			if (instance.cargoShip != null)
+			{
+				instance.cargoShip.ResetToPool();
+				instance.cargoShip = null;
+			}
+			if (instance.cargoShipContainer != null)
+			{
+				instance.cargoShipContainer.ResetToPool();
+				instance.cargoShipContainer = null;
+			}
+			if (instance.missionMapMarker != null)
+			{
+				instance.missionMapMarker.ResetToPool();
+				instance.missionMapMarker = null;
+			}
+			if (instance.bike != null)
+			{
+				instance.bike.ResetToPool();
+				instance.bike = null;
+			}
+			if (instance.diverPropulsionVehicle != null)
+			{
+				instance.diverPropulsionVehicle.ResetToPool();
+				instance.diverPropulsionVehicle = null;
+			}
+			if (instance.travellingVendor != null)
+			{
+				instance.travellingVendor.ResetToPool();
+				instance.travellingVendor = null;
+			}
+			if (instance.vendingDynamicPricing != null)
+			{
+				instance.vendingDynamicPricing.ResetToPool();
+				instance.vendingDynamicPricing = null;
+			}
+			if (instance.tinCanAlarm != null)
+			{
+				instance.tinCanAlarm.ResetToPool();
+				instance.tinCanAlarm = null;
+			}
+			if (instance.digitalClock != null)
+			{
+				instance.digitalClock.ResetToPool();
+				instance.digitalClock = null;
+			}
+			if (instance.elevatorLift != null)
+			{
+				instance.elevatorLift.ResetToPool();
+				instance.elevatorLift = null;
+			}
+			if (instance.npcVendingMachine != null)
+			{
+				instance.npcVendingMachine.ResetToPool();
+				instance.npcVendingMachine = null;
+			}
+			if (instance.mailbox != null)
+			{
+				instance.mailbox.ResetToPool();
+				instance.mailbox = null;
+			}
+			if (instance.projectileWeaponMod != null)
+			{
+				instance.projectileWeaponMod.ResetToPool();
+				instance.projectileWeaponMod = null;
+			}
+			if (instance.baseSculpture != null)
+			{
+				instance.baseSculpture.ResetToPool();
+				instance.baseSculpture = null;
+			}
+			if (instance.vendingMachineStats != null)
+			{
+				instance.vendingMachineStats.ResetToPool();
+				instance.vendingMachineStats = null;
+			}
+			if (instance.catapult != null)
+			{
+				instance.catapult.ResetToPool();
+				instance.catapult = null;
+			}
+			if (instance.siegeTower != null)
+			{
+				instance.siegeTower.ResetToPool();
+				instance.siegeTower = null;
+			}
+			if (instance.ballista != null)
+			{
+				instance.ballista.ResetToPool();
+				instance.ballista = null;
+			}
+			if (instance.ballistaGun != null)
+			{
+				instance.ballistaGun.ResetToPool();
+				instance.ballistaGun = null;
+			}
+			if (instance.batteringRam != null)
+			{
+				instance.batteringRam.ResetToPool();
+				instance.batteringRam = null;
+			}
+			if (instance.temporaryRagdoll != null)
+			{
+				instance.temporaryRagdoll.ResetToPool();
+				instance.temporaryRagdoll = null;
+			}
+			if (instance.constructableEntity != null)
+			{
+				instance.constructableEntity.ResetToPool();
+				instance.constructableEntity = null;
+			}
+			if (instance.chickenCoop != null)
+			{
+				instance.chickenCoop.ResetToPool();
+				instance.chickenCoop = null;
+			}
+			if (instance.farmableAnimal != null)
+			{
+				instance.farmableAnimal.ResetToPool();
+				instance.farmableAnimal = null;
+			}
+			if (instance.ownership != null)
+			{
+				instance.ownership.ResetToPool();
+				instance.ownership = null;
+			}
+			if (instance.beehive != null)
+			{
+				instance.beehive.ResetToPool();
+				instance.beehive = null;
+			}
+			if (instance.beeMasterSwarm != null)
+			{
+				instance.beeMasterSwarm.ResetToPool();
+				instance.beeMasterSwarm = null;
+			}
+			if (instance.containerCorpse != null)
+			{
+				instance.containerCorpse.ResetToPool();
+				instance.containerCorpse = null;
+			}
+			if (instance.npcTargetState != null)
+			{
+				instance.npcTargetState.ResetToPool();
+				instance.npcTargetState = null;
+			}
+			if (instance.vineMountable != null)
+			{
+				instance.vineMountable.ResetToPool();
+				instance.vineMountable = null;
+			}
+			if (instance.vineTree != null)
+			{
+				instance.vineTree.ResetToPool();
+				instance.vineTree = null;
+			}
+			if (instance.treeRespawn != null)
+			{
+				instance.treeRespawn.ResetToPool();
+				instance.treeRespawn = null;
+			}
+			if (instance.wallpaperTool != null)
+			{
+				instance.wallpaperTool.ResetToPool();
+				instance.wallpaperTool = null;
+			}
+			if (instance.commandBlock != null)
+			{
+				instance.commandBlock.ResetToPool();
+				instance.commandBlock = null;
+			}
+			if (instance.staticRespawn != null)
+			{
+				instance.staticRespawn.ResetToPool();
+				instance.staticRespawn = null;
+			}
+			if (instance.buriedItemStorage != null)
+			{
+				instance.buriedItemStorage.ResetToPool();
+				instance.buriedItemStorage = null;
+			}
+			if (instance.mannequin != null)
+			{
+				instance.mannequin.ResetToPool();
+				instance.mannequin = null;
+			}
+			if (instance.baseMelee != null)
+			{
+				instance.baseMelee.ResetToPool();
+				instance.baseMelee = null;
+			}
+			if (instance.door != null)
+			{
+				instance.door.ResetToPool();
+				instance.door = null;
+			}
+			if (instance.deepSeaPortal != null)
+			{
+				instance.deepSeaPortal.ResetToPool();
+				instance.deepSeaPortal = null;
+			}
+			if (instance.baseMountable != null)
+			{
+				instance.baseMountable.ResetToPool();
+				instance.baseMountable = null;
+			}
+			if (instance.smallEngine != null)
+			{
+				instance.smallEngine.ResetToPool();
+				instance.smallEngine = null;
+			}
+			if (instance.playerBoat != null)
+			{
+				instance.playerBoat.ResetToPool();
+				instance.playerBoat = null;
+			}
+			if (instance.steeringWheel != null)
+			{
+				instance.steeringWheel.ResetToPool();
+				instance.steeringWheel = null;
+			}
+			if (instance.deepSeaManager != null)
+			{
+				instance.deepSeaManager.ResetToPool();
+				instance.deepSeaManager = null;
+			}
+			if (instance.scientistBoatOilrigManager != null)
+			{
+				instance.scientistBoatOilrigManager.ResetToPool();
+				instance.scientistBoatOilrigManager = null;
+			}
+			if (instance.storageAdaptor != null)
+			{
+				instance.storageAdaptor.ResetToPool();
+				instance.storageAdaptor = null;
+			}
+			if (instance.helicopterFlares != null)
+			{
+				instance.helicopterFlares.ResetToPool();
+				instance.helicopterFlares = null;
+			}
+			if (instance.wipeLaptop != null)
+			{
+				instance.wipeLaptop.ResetToPool();
+				instance.wipeLaptop = null;
+			}
+			if (instance.mountedWeapon != null)
+			{
+				instance.mountedWeapon.ResetToPool();
+				instance.mountedWeapon = null;
+			}
+			if (instance.boatBuildingBlock != null)
+			{
+				instance.boatBuildingBlock.ResetToPool();
+				instance.boatBuildingBlock = null;
+			}
+			if (instance.boatBuildingStation != null)
+			{
+				instance.boatBuildingStation.ResetToPool();
+				instance.boatBuildingStation = null;
+			}
+			if (instance.displayingBoxStorage != null)
+			{
+				instance.displayingBoxStorage.ResetToPool();
+				instance.displayingBoxStorage = null;
+			}
+			if (instance.workbench != null)
+			{
+				instance.workbench.ResetToPool();
+				instance.workbench = null;
+			}
+			if (instance.apartmentLock != null)
+			{
+				instance.apartmentLock.ResetToPool();
+				instance.apartmentLock = null;
+			}
+			if (instance.rentableShop != null)
+			{
+				instance.rentableShop.ResetToPool();
+				instance.rentableShop = null;
+			}
+			if (instance.apartmentRoom != null)
+			{
+				instance.apartmentRoom.ResetToPool();
+				instance.apartmentRoom = null;
+			}
+			if (instance.apartmentBuilding != null)
+			{
+				instance.apartmentBuilding.ResetToPool();
+				instance.apartmentBuilding = null;
+			}
+			if (instance.apartmentUpkeep != null)
+			{
+				instance.apartmentUpkeep.ResetToPool();
+				instance.apartmentUpkeep = null;
+			}
+			if (instance.mortar != null)
+			{
+				instance.mortar.ResetToPool();
+				instance.mortar = null;
+			}
+			if (instance.apartmentDoor != null)
+			{
+				instance.apartmentDoor.ResetToPool();
+				instance.apartmentDoor = null;
+			}
+			if (instance.apartmentMailbox != null)
+			{
+				instance.apartmentMailbox.ResetToPool();
+				instance.apartmentMailbox = null;
+			}
+			if (instance.Pooltable != null)
+			{
+				instance.Pooltable.ResetToPool();
+				instance.Pooltable = null;
+			}
+			if (instance.dartsGame != null)
+			{
+				instance.dartsGame.ResetToPool();
+				instance.dartsGame = null;
+			}
+			if (instance.dartsGameLeaderboard != null)
+			{
+				instance.dartsGameLeaderboard.ResetToPool();
+				instance.dartsGameLeaderboard = null;
+			}
+			if (instance.satelliteControlComputer != null)
+			{
+				instance.satelliteControlComputer.ResetToPool();
+				instance.satelliteControlComputer = null;
+			}
+			if (instance.satelliteCrash != null)
+			{
+				instance.satelliteCrash.ResetToPool();
+				instance.satelliteCrash = null;
+			}
+			if (instance.satelliteCrashRemains != null)
+			{
+				instance.satelliteCrashRemains.ResetToPool();
+				instance.satelliteCrashRemains = null;
+			}
+			if (instance.electricGenerator != null)
+			{
+				instance.electricGenerator.ResetToPool();
+				instance.electricGenerator = null;
+			}
+			if (instance.powergridManager != null)
+			{
+				instance.powergridManager.ResetToPool();
+				instance.powergridManager = null;
+			}
+			if (instance.oilswitchBroadcast != null)
+			{
+				instance.oilswitchBroadcast.ResetToPool();
+				instance.oilswitchBroadcast = null;
+			}
+			if (instance.sprinkler != null)
+			{
+				instance.sprinkler.ResetToPool();
+				instance.sprinkler = null;
+			}
+			if (instance.hackableLockedCrate != null)
+			{
+				instance.hackableLockedCrate.ResetToPool();
+				instance.hackableLockedCrate = null;
+			}
+			if (instance.lockedByEntCrate != null)
+			{
+				instance.lockedByEntCrate.ResetToPool();
+				instance.lockedByEntCrate = null;
+			}
+			if (instance.territoryZones != null)
+			{
+				instance.territoryZones.ResetToPool();
+				instance.territoryZones = null;
+			}
+			if (instance.monumentBlocker != null)
+			{
+				instance.monumentBlocker.ResetToPool();
+				instance.monumentBlocker = null;
+			}
+			Pool.Free(ref instance);
+		}
+	}
+
+	public void ResetToPool()
+	{
+		ResetToPool(this);
+	}
+
+	public virtual void Dispose()
+	{
+		if (!ShouldPool)
+		{
+			throw new Exception("Trying to dispose Entity with ShouldPool set to false!");
+		}
+		if (!_disposed)
+		{
+			ResetToPool();
+			_disposed = true;
+		}
+	}
+
+	public virtual void EnterPool()
+	{
+		_disposed = true;
+	}
+
+	public virtual void LeavePool()
+	{
+		_disposed = false;
+	}
+
+	public void CopyTo(Entity instance)
+	{
+		if (baseNetworkable != null)
+		{
+			if (instance.baseNetworkable == null)
+			{
+				instance.baseNetworkable = baseNetworkable.Copy();
+			}
+			else
+			{
+				baseNetworkable.CopyTo(instance.baseNetworkable);
+			}
+		}
+		else
+		{
+			instance.baseNetworkable = null;
+		}
+		if (baseEntity != null)
+		{
+			if (instance.baseEntity == null)
+			{
+				instance.baseEntity = baseEntity.Copy();
+			}
+			else
+			{
+				baseEntity.CopyTo(instance.baseEntity);
+			}
+		}
+		else
+		{
+			instance.baseEntity = null;
+		}
+		if (basePlayer != null)
+		{
+			if (instance.basePlayer == null)
+			{
+				instance.basePlayer = basePlayer.Copy();
+			}
+			else
+			{
+				basePlayer.CopyTo(instance.basePlayer);
+			}
+		}
+		else
+		{
+			instance.basePlayer = null;
+		}
+		if (worldItem != null)
+		{
+			if (instance.worldItem == null)
+			{
+				instance.worldItem = worldItem.Copy();
+			}
+			else
+			{
+				worldItem.CopyTo(instance.worldItem);
+			}
+		}
+		else
+		{
+			instance.worldItem = null;
+		}
+		if (resource != null)
+		{
+			if (instance.resource == null)
+			{
+				instance.resource = resource.Copy();
+			}
+			else
+			{
+				resource.CopyTo(instance.resource);
+			}
+		}
+		else
+		{
+			instance.resource = null;
+		}
+		if (buildingBlock != null)
+		{
+			if (instance.buildingBlock == null)
+			{
+				instance.buildingBlock = buildingBlock.Copy();
+			}
+			else
+			{
+				buildingBlock.CopyTo(instance.buildingBlock);
+			}
+		}
+		else
+		{
+			instance.buildingBlock = null;
+		}
+		if (environment != null)
+		{
+			if (instance.environment == null)
+			{
+				instance.environment = environment.Copy();
+			}
+			else
+			{
+				environment.CopyTo(instance.environment);
+			}
+		}
+		else
+		{
+			instance.environment = null;
+		}
+		if (corpse != null)
+		{
+			if (instance.corpse == null)
+			{
+				instance.corpse = corpse.Copy();
+			}
+			else
+			{
+				corpse.CopyTo(instance.corpse);
+			}
+		}
+		else
+		{
+			instance.corpse = null;
+		}
+		if (parent != null)
+		{
+			if (instance.parent == null)
+			{
+				instance.parent = parent.Copy();
+			}
+			else
+			{
+				parent.CopyTo(instance.parent);
+			}
+		}
+		else
+		{
+			instance.parent = null;
+		}
+		if (keyLock != null)
+		{
+			if (instance.keyLock == null)
+			{
+				instance.keyLock = keyLock.Copy();
+			}
+			else
+			{
+				keyLock.CopyTo(instance.keyLock);
+			}
+		}
+		else
+		{
+			instance.keyLock = null;
+		}
+		if (codeLock != null)
+		{
+			if (instance.codeLock == null)
+			{
+				instance.codeLock = codeLock.Copy();
+			}
+			else
+			{
+				codeLock.CopyTo(instance.codeLock);
+			}
+		}
+		else
+		{
+			instance.codeLock = null;
+		}
+		if (entitySlots != null)
+		{
+			if (instance.entitySlots == null)
+			{
+				instance.entitySlots = entitySlots.Copy();
+			}
+			else
+			{
+				entitySlots.CopyTo(instance.entitySlots);
+			}
+		}
+		else
+		{
+			instance.entitySlots = null;
+		}
+		if (buildingPrivilege != null)
+		{
+			if (instance.buildingPrivilege == null)
+			{
+				instance.buildingPrivilege = buildingPrivilege.Copy();
+			}
+			else
+			{
+				buildingPrivilege.CopyTo(instance.buildingPrivilege);
+			}
+		}
+		else
+		{
+			instance.buildingPrivilege = null;
+		}
+		if (storageBox != null)
+		{
+			if (instance.storageBox == null)
+			{
+				instance.storageBox = storageBox.Copy();
+			}
+			else
+			{
+				storageBox.CopyTo(instance.storageBox);
+			}
+		}
+		else
+		{
+			instance.storageBox = null;
+		}
+		if (heldEntity != null)
+		{
+			if (instance.heldEntity == null)
+			{
+				instance.heldEntity = heldEntity.Copy();
+			}
+			else
+			{
+				heldEntity.CopyTo(instance.heldEntity);
+			}
+		}
+		else
+		{
+			instance.heldEntity = null;
+		}
+		if (baseProjectile != null)
+		{
+			if (instance.baseProjectile == null)
+			{
+				instance.baseProjectile = baseProjectile.Copy();
+			}
+			else
+			{
+				baseProjectile.CopyTo(instance.baseProjectile);
+			}
+		}
+		else
+		{
+			instance.baseProjectile = null;
+		}
+		if (baseNPC != null)
+		{
+			if (instance.baseNPC == null)
+			{
+				instance.baseNPC = baseNPC.Copy();
+			}
+			else
+			{
+				baseNPC.CopyTo(instance.baseNPC);
+			}
+		}
+		else
+		{
+			instance.baseNPC = null;
+		}
+		if (lootContainer != null)
+		{
+			if (instance.lootContainer == null)
+			{
+				instance.lootContainer = lootContainer.Copy();
+			}
+			else
+			{
+				lootContainer.CopyTo(instance.lootContainer);
+			}
+		}
+		else
+		{
+			instance.lootContainer = null;
+		}
+		if (genericSpawner != null)
+		{
+			if (instance.genericSpawner == null)
+			{
+				instance.genericSpawner = genericSpawner.Copy();
+			}
+			else
+			{
+				genericSpawner.CopyTo(instance.genericSpawner);
+			}
+		}
+		else
+		{
+			instance.genericSpawner = null;
+		}
+		if (sleepingBag != null)
+		{
+			if (instance.sleepingBag == null)
+			{
+				instance.sleepingBag = sleepingBag.Copy();
+			}
+			else
+			{
+				sleepingBag.CopyTo(instance.sleepingBag);
+			}
+		}
+		else
+		{
+			instance.sleepingBag = null;
+		}
+		if (lootableCorpse != null)
+		{
+			if (instance.lootableCorpse == null)
+			{
+				instance.lootableCorpse = lootableCorpse.Copy();
+			}
+			else
+			{
+				lootableCorpse.CopyTo(instance.lootableCorpse);
+			}
+		}
+		else
+		{
+			instance.lootableCorpse = null;
+		}
+		if (sign != null)
+		{
+			if (instance.sign == null)
+			{
+				instance.sign = sign.Copy();
+			}
+			else
+			{
+				sign.CopyTo(instance.sign);
+			}
+		}
+		else
+		{
+			instance.sign = null;
+		}
+		if (baseCombat != null)
+		{
+			if (instance.baseCombat == null)
+			{
+				instance.baseCombat = baseCombat.Copy();
+			}
+			else
+			{
+				baseCombat.CopyTo(instance.baseCombat);
+			}
+		}
+		else
+		{
+			instance.baseCombat = null;
+		}
+		if (mapEntity != null)
+		{
+			if (instance.mapEntity == null)
+			{
+				instance.mapEntity = mapEntity.Copy();
+			}
+			else
+			{
+				mapEntity.CopyTo(instance.mapEntity);
+			}
+		}
+		else
+		{
+			instance.mapEntity = null;
+		}
+		if (researchTable != null)
+		{
+			if (instance.researchTable == null)
+			{
+				instance.researchTable = researchTable.Copy();
+			}
+			else
+			{
+				researchTable.CopyTo(instance.researchTable);
+			}
+		}
+		else
+		{
+			instance.researchTable = null;
+		}
+		if (dudExplosive != null)
+		{
+			if (instance.dudExplosive == null)
+			{
+				instance.dudExplosive = dudExplosive.Copy();
+			}
+			else
+			{
+				dudExplosive.CopyTo(instance.dudExplosive);
+			}
+		}
+		else
+		{
+			instance.dudExplosive = null;
+		}
+		if (miningQuarry != null)
+		{
+			if (instance.miningQuarry == null)
+			{
+				instance.miningQuarry = miningQuarry.Copy();
+			}
+			else
+			{
+				miningQuarry.CopyTo(instance.miningQuarry);
+			}
+		}
+		else
+		{
+			instance.miningQuarry = null;
+		}
+		if (baseVehicle != null)
+		{
+			if (instance.baseVehicle == null)
+			{
+				instance.baseVehicle = baseVehicle.Copy();
+			}
+			else
+			{
+				baseVehicle.CopyTo(instance.baseVehicle);
+			}
+		}
+		else
+		{
+			instance.baseVehicle = null;
+		}
+		if (helicopter != null)
+		{
+			if (instance.helicopter == null)
+			{
+				instance.helicopter = helicopter.Copy();
+			}
+			else
+			{
+				helicopter.CopyTo(instance.helicopter);
+			}
+		}
+		else
+		{
+			instance.helicopter = null;
+		}
+		if (landmine != null)
+		{
+			if (instance.landmine == null)
+			{
+				instance.landmine = landmine.Copy();
+			}
+			else
+			{
+				landmine.CopyTo(instance.landmine);
+			}
+		}
+		else
+		{
+			instance.landmine = null;
+		}
+		if (autoturret != null)
+		{
+			if (instance.autoturret == null)
+			{
+				instance.autoturret = autoturret.Copy();
+			}
+			else
+			{
+				autoturret.CopyTo(instance.autoturret);
+			}
+		}
+		else
+		{
+			instance.autoturret = null;
+		}
+		if (sphereEntity != null)
+		{
+			if (instance.sphereEntity == null)
+			{
+				instance.sphereEntity = sphereEntity.Copy();
+			}
+			else
+			{
+				sphereEntity.CopyTo(instance.sphereEntity);
+			}
+		}
+		else
+		{
+			instance.sphereEntity = null;
+		}
+		if (stabilityEntity != null)
+		{
+			if (instance.stabilityEntity == null)
+			{
+				instance.stabilityEntity = stabilityEntity.Copy();
+			}
+			else
+			{
+				stabilityEntity.CopyTo(instance.stabilityEntity);
+			}
+		}
+		else
+		{
+			instance.stabilityEntity = null;
+		}
+		if (ownerInfo != null)
+		{
+			if (instance.ownerInfo == null)
+			{
+				instance.ownerInfo = ownerInfo.Copy();
+			}
+			else
+			{
+				ownerInfo.CopyTo(instance.ownerInfo);
+			}
+		}
+		else
+		{
+			instance.ownerInfo = null;
+		}
+		if (decayEntity != null)
+		{
+			if (instance.decayEntity == null)
+			{
+				instance.decayEntity = decayEntity.Copy();
+			}
+			else
+			{
+				decayEntity.CopyTo(instance.decayEntity);
+			}
+		}
+		else
+		{
+			instance.decayEntity = null;
+		}
+		if (spawnable != null)
+		{
+			if (instance.spawnable == null)
+			{
+				instance.spawnable = spawnable.Copy();
+			}
+			else
+			{
+				spawnable.CopyTo(instance.spawnable);
+			}
+		}
+		else
+		{
+			instance.spawnable = null;
+		}
+		if (servergib != null)
+		{
+			if (instance.servergib == null)
+			{
+				instance.servergib = servergib.Copy();
+			}
+			else
+			{
+				servergib.CopyTo(instance.servergib);
+			}
+		}
+		else
+		{
+			instance.servergib = null;
+		}
+		if (vendingMachine != null)
+		{
+			if (instance.vendingMachine == null)
+			{
+				instance.vendingMachine = vendingMachine.Copy();
+			}
+			else
+			{
+				vendingMachine.CopyTo(instance.vendingMachine);
+			}
+		}
+		else
+		{
+			instance.vendingMachine = null;
+		}
+		if (spinnerWheel != null)
+		{
+			if (instance.spinnerWheel == null)
+			{
+				instance.spinnerWheel = spinnerWheel.Copy();
+			}
+			else
+			{
+				spinnerWheel.CopyTo(instance.spinnerWheel);
+			}
+		}
+		else
+		{
+			instance.spinnerWheel = null;
+		}
+		if (lift != null)
+		{
+			if (instance.lift == null)
+			{
+				instance.lift = lift.Copy();
+			}
+			else
+			{
+				lift.CopyTo(instance.lift);
+			}
+		}
+		else
+		{
+			instance.lift = null;
+		}
+		if (bradley != null)
+		{
+			if (instance.bradley == null)
+			{
+				instance.bradley = bradley.Copy();
+			}
+			else
+			{
+				bradley.CopyTo(instance.bradley);
+			}
+		}
+		else
+		{
+			instance.bradley = null;
+		}
+		if (waterwell != null)
+		{
+			if (instance.waterwell == null)
+			{
+				instance.waterwell = waterwell.Copy();
+			}
+			else
+			{
+				waterwell.CopyTo(instance.waterwell);
+			}
+		}
+		else
+		{
+			instance.waterwell = null;
+		}
+		if (motorBoat != null)
+		{
+			if (instance.motorBoat == null)
+			{
+				instance.motorBoat = motorBoat.Copy();
+			}
+			else
+			{
+				motorBoat.CopyTo(instance.motorBoat);
+			}
+		}
+		else
+		{
+			instance.motorBoat = null;
+		}
+		if (ioEntity != null)
+		{
+			if (instance.ioEntity == null)
+			{
+				instance.ioEntity = ioEntity.Copy();
+			}
+			else
+			{
+				ioEntity.CopyTo(instance.ioEntity);
+			}
+		}
+		else
+		{
+			instance.ioEntity = null;
+		}
+		if (puzzleReset != null)
+		{
+			if (instance.puzzleReset == null)
+			{
+				instance.puzzleReset = puzzleReset.Copy();
+			}
+			else
+			{
+				puzzleReset.CopyTo(instance.puzzleReset);
+			}
+		}
+		else
+		{
+			instance.puzzleReset = null;
+		}
+		if (relationshipManager != null)
+		{
+			if (instance.relationshipManager == null)
+			{
+				instance.relationshipManager = relationshipManager.Copy();
+			}
+			else
+			{
+				relationshipManager.CopyTo(instance.relationshipManager);
+			}
+		}
+		else
+		{
+			instance.relationshipManager = null;
+		}
+		if (hotAirBalloon != null)
+		{
+			if (instance.hotAirBalloon == null)
+			{
+				instance.hotAirBalloon = hotAirBalloon.Copy();
+			}
+			else
+			{
+				hotAirBalloon.CopyTo(instance.hotAirBalloon);
+			}
+		}
+		else
+		{
+			instance.hotAirBalloon = null;
+		}
+		if (samSite != null)
+		{
+			if (instance.samSite == null)
+			{
+				instance.samSite = samSite.Copy();
+			}
+			else
+			{
+				samSite.CopyTo(instance.samSite);
+			}
+		}
+		else
+		{
+			instance.samSite = null;
+		}
+		if (eggHunt != null)
+		{
+			if (instance.eggHunt == null)
+			{
+				instance.eggHunt = eggHunt.Copy();
+			}
+			else
+			{
+				eggHunt.CopyTo(instance.eggHunt);
+			}
+		}
+		else
+		{
+			instance.eggHunt = null;
+		}
+		if (arcadeMachine != null)
+		{
+			if (instance.arcadeMachine == null)
+			{
+				instance.arcadeMachine = arcadeMachine.Copy();
+			}
+			else
+			{
+				arcadeMachine.CopyTo(instance.arcadeMachine);
+			}
+		}
+		else
+		{
+			instance.arcadeMachine = null;
+		}
+		if (miniCopter != null)
+		{
+			if (instance.miniCopter == null)
+			{
+				instance.miniCopter = miniCopter.Copy();
+			}
+			else
+			{
+				miniCopter.CopyTo(instance.miniCopter);
+			}
+		}
+		else
+		{
+			instance.miniCopter = null;
+		}
+		if (horse != null)
+		{
+			if (instance.horse == null)
+			{
+				instance.horse = horse.Copy();
+			}
+			else
+			{
+				horse.CopyTo(instance.horse);
+			}
+		}
+		else
+		{
+			instance.horse = null;
+		}
+		if (smartAlarm != null)
+		{
+			if (instance.smartAlarm == null)
+			{
+				instance.smartAlarm = smartAlarm.Copy();
+			}
+			else
+			{
+				smartAlarm.CopyTo(instance.smartAlarm);
+			}
+		}
+		else
+		{
+			instance.smartAlarm = null;
+		}
+		if (lightString != null)
+		{
+			if (instance.lightString == null)
+			{
+				instance.lightString = lightString.Copy();
+			}
+			else
+			{
+				lightString.CopyTo(instance.lightString);
+			}
+		}
+		else
+		{
+			instance.lightString = null;
+		}
+		if (lightDeployer != null)
+		{
+			if (instance.lightDeployer == null)
+			{
+				instance.lightDeployer = lightDeployer.Copy();
+			}
+			else
+			{
+				lightDeployer.CopyTo(instance.lightDeployer);
+			}
+		}
+		else
+		{
+			instance.lightDeployer = null;
+		}
+		if (rcEntity != null)
+		{
+			if (instance.rcEntity == null)
+			{
+				instance.rcEntity = rcEntity.Copy();
+			}
+			else
+			{
+				rcEntity.CopyTo(instance.rcEntity);
+			}
+		}
+		else
+		{
+			instance.rcEntity = null;
+		}
+		if (computerStation != null)
+		{
+			if (instance.computerStation == null)
+			{
+				instance.computerStation = computerStation.Copy();
+			}
+			else
+			{
+				computerStation.CopyTo(instance.computerStation);
+			}
+		}
+		else
+		{
+			instance.computerStation = null;
+		}
+		if (growableEntity != null)
+		{
+			if (instance.growableEntity == null)
+			{
+				instance.growableEntity = growableEntity.Copy();
+			}
+			else
+			{
+				growableEntity.CopyTo(instance.growableEntity);
+			}
+		}
+		else
+		{
+			instance.growableEntity = null;
+		}
+		if (composter != null)
+		{
+			if (instance.composter == null)
+			{
+				instance.composter = composter.Copy();
+			}
+			else
+			{
+				composter.CopyTo(instance.composter);
+			}
+		}
+		else
+		{
+			instance.composter = null;
+		}
+		if (modularVehicle != null)
+		{
+			if (instance.modularVehicle == null)
+			{
+				instance.modularVehicle = modularVehicle.Copy();
+			}
+			else
+			{
+				modularVehicle.CopyTo(instance.modularVehicle);
+			}
+		}
+		else
+		{
+			instance.modularVehicle = null;
+		}
+		if (modularCar != null)
+		{
+			if (instance.modularCar == null)
+			{
+				instance.modularCar = modularCar.Copy();
+			}
+			else
+			{
+				modularCar.CopyTo(instance.modularCar);
+			}
+		}
+		else
+		{
+			instance.modularCar = null;
+		}
+		if (simpleUID != null)
+		{
+			if (instance.simpleUID == null)
+			{
+				instance.simpleUID = simpleUID.Copy();
+			}
+			else
+			{
+				simpleUID.CopyTo(instance.simpleUID);
+			}
+		}
+		else
+		{
+			instance.simpleUID = null;
+		}
+		if (vehicleLift != null)
+		{
+			if (instance.vehicleLift == null)
+			{
+				instance.vehicleLift = vehicleLift.Copy();
+			}
+			else
+			{
+				vehicleLift.CopyTo(instance.vehicleLift);
+			}
+		}
+		else
+		{
+			instance.vehicleLift = null;
+		}
+		if (engineStorage != null)
+		{
+			if (instance.engineStorage == null)
+			{
+				instance.engineStorage = engineStorage.Copy();
+			}
+			else
+			{
+				engineStorage.CopyTo(instance.engineStorage);
+			}
+		}
+		else
+		{
+			instance.engineStorage = null;
+		}
+		if (vehicleVendor != null)
+		{
+			if (instance.vehicleVendor == null)
+			{
+				instance.vehicleVendor = vehicleVendor.Copy();
+			}
+			else
+			{
+				vehicleVendor.CopyTo(instance.vehicleVendor);
+			}
+		}
+		else
+		{
+			instance.vehicleVendor = null;
+		}
+		if (WaterPool != null)
+		{
+			if (instance.WaterPool == null)
+			{
+				instance.WaterPool = WaterPool.Copy();
+			}
+			else
+			{
+				WaterPool.CopyTo(instance.WaterPool);
+			}
+		}
+		else
+		{
+			instance.WaterPool = null;
+		}
+		if (photo != null)
+		{
+			if (instance.photo == null)
+			{
+				instance.photo = photo.Copy();
+			}
+			else
+			{
+				photo.CopyTo(instance.photo);
+			}
+		}
+		else
+		{
+			instance.photo = null;
+		}
+		if (photoFrame != null)
+		{
+			if (instance.photoFrame == null)
+			{
+				instance.photoFrame = photoFrame.Copy();
+			}
+			else
+			{
+				photoFrame.CopyTo(instance.photoFrame);
+			}
+		}
+		else
+		{
+			instance.photoFrame = null;
+		}
+		if (vehicleModule != null)
+		{
+			if (instance.vehicleModule == null)
+			{
+				instance.vehicleModule = vehicleModule.Copy();
+			}
+			else
+			{
+				vehicleModule.CopyTo(instance.vehicleModule);
+			}
+		}
+		else
+		{
+			instance.vehicleModule = null;
+		}
+		if (mixingTable != null)
+		{
+			if (instance.mixingTable == null)
+			{
+				instance.mixingTable = mixingTable.Copy();
+			}
+			else
+			{
+				mixingTable.CopyTo(instance.mixingTable);
+			}
+		}
+		else
+		{
+			instance.mixingTable = null;
+		}
+		if (shopKeeper != null)
+		{
+			if (instance.shopKeeper == null)
+			{
+				instance.shopKeeper = shopKeeper.Copy();
+			}
+			else
+			{
+				shopKeeper.CopyTo(instance.shopKeeper);
+			}
+		}
+		else
+		{
+			instance.shopKeeper = null;
+		}
+		if (elevator != null)
+		{
+			if (instance.elevator == null)
+			{
+				instance.elevator = elevator.Copy();
+			}
+			else
+			{
+				elevator.CopyTo(instance.elevator);
+			}
+		}
+		else
+		{
+			instance.elevator = null;
+		}
+		if (skullTrophy != null)
+		{
+			if (instance.skullTrophy == null)
+			{
+				instance.skullTrophy = skullTrophy.Copy();
+			}
+			else
+			{
+				skullTrophy.CopyTo(instance.skullTrophy);
+			}
+		}
+		else
+		{
+			instance.skullTrophy = null;
+		}
+		if (cassette != null)
+		{
+			if (instance.cassette == null)
+			{
+				instance.cassette = cassette.Copy();
+			}
+			else
+			{
+				cassette.CopyTo(instance.cassette);
+			}
+		}
+		else
+		{
+			instance.cassette = null;
+		}
+		if (telephone != null)
+		{
+			if (instance.telephone == null)
+			{
+				instance.telephone = telephone.Copy();
+			}
+			else
+			{
+				telephone.CopyTo(instance.telephone);
+			}
+		}
+		else
+		{
+			instance.telephone = null;
+		}
+		if (boomBox != null)
+		{
+			if (instance.boomBox == null)
+			{
+				instance.boomBox = boomBox.Copy();
+			}
+			else
+			{
+				boomBox.CopyTo(instance.boomBox);
+			}
+		}
+		else
+		{
+			instance.boomBox = null;
+		}
+		if (neonSign != null)
+		{
+			if (instance.neonSign == null)
+			{
+				instance.neonSign = neonSign.Copy();
+			}
+			else
+			{
+				neonSign.CopyTo(instance.neonSign);
+			}
+		}
+		else
+		{
+			instance.neonSign = null;
+		}
+		if (subEntityList != null)
+		{
+			if (instance.subEntityList == null)
+			{
+				instance.subEntityList = subEntityList.Copy();
+			}
+			else
+			{
+				subEntityList.CopyTo(instance.subEntityList);
+			}
+		}
+		else
+		{
+			instance.subEntityList = null;
+		}
+		if (marketTerminal != null)
+		{
+			if (instance.marketTerminal == null)
+			{
+				instance.marketTerminal = marketTerminal.Copy();
+			}
+			else
+			{
+				marketTerminal.CopyTo(instance.marketTerminal);
+			}
+		}
+		else
+		{
+			instance.marketTerminal = null;
+		}
+		if (deliveryDrone != null)
+		{
+			if (instance.deliveryDrone == null)
+			{
+				instance.deliveryDrone = deliveryDrone.Copy();
+			}
+			else
+			{
+				deliveryDrone.CopyTo(instance.deliveryDrone);
+			}
+		}
+		else
+		{
+			instance.deliveryDrone = null;
+		}
+		if (reclaimTerminal != null)
+		{
+			if (instance.reclaimTerminal == null)
+			{
+				instance.reclaimTerminal = reclaimTerminal.Copy();
+			}
+			else
+			{
+				reclaimTerminal.CopyTo(instance.reclaimTerminal);
+			}
+		}
+		else
+		{
+			instance.reclaimTerminal = null;
+		}
+		if (slotMachine != null)
+		{
+			if (instance.slotMachine == null)
+			{
+				instance.slotMachine = slotMachine.Copy();
+			}
+			else
+			{
+				slotMachine.CopyTo(instance.slotMachine);
+			}
+		}
+		else
+		{
+			instance.slotMachine = null;
+		}
+		if (trainEngine != null)
+		{
+			if (instance.trainEngine == null)
+			{
+				instance.trainEngine = trainEngine.Copy();
+			}
+			else
+			{
+				trainEngine.CopyTo(instance.trainEngine);
+			}
+		}
+		else
+		{
+			instance.trainEngine = null;
+		}
+		if (cardGame != null)
+		{
+			if (instance.cardGame == null)
+			{
+				instance.cardGame = cardGame.Copy();
+			}
+			else
+			{
+				cardGame.CopyTo(instance.cardGame);
+			}
+		}
+		else
+		{
+			instance.cardGame = null;
+		}
+		if (crane != null)
+		{
+			if (instance.crane == null)
+			{
+				instance.crane = crane.Copy();
+			}
+			else
+			{
+				crane.CopyTo(instance.crane);
+			}
+		}
+		else
+		{
+			instance.crane = null;
+		}
+		if (connectedSpeaker != null)
+		{
+			if (instance.connectedSpeaker == null)
+			{
+				instance.connectedSpeaker = connectedSpeaker.Copy();
+			}
+			else
+			{
+				connectedSpeaker.CopyTo(instance.connectedSpeaker);
+			}
+		}
+		else
+		{
+			instance.connectedSpeaker = null;
+		}
+		if (audioEntity != null)
+		{
+			if (instance.audioEntity == null)
+			{
+				instance.audioEntity = audioEntity.Copy();
+			}
+			else
+			{
+				audioEntity.CopyTo(instance.audioEntity);
+			}
+		}
+		else
+		{
+			instance.audioEntity = null;
+		}
+		if (microphoneStand != null)
+		{
+			if (instance.microphoneStand == null)
+			{
+				instance.microphoneStand = microphoneStand.Copy();
+			}
+			else
+			{
+				microphoneStand.CopyTo(instance.microphoneStand);
+			}
+		}
+		else
+		{
+			instance.microphoneStand = null;
+		}
+		if (submarine != null)
+		{
+			if (instance.submarine == null)
+			{
+				instance.submarine = submarine.Copy();
+			}
+			else
+			{
+				submarine.CopyTo(instance.submarine);
+			}
+		}
+		else
+		{
+			instance.submarine = null;
+		}
+		if (sleepingBagCamper != null)
+		{
+			if (instance.sleepingBagCamper == null)
+			{
+				instance.sleepingBagCamper = sleepingBagCamper.Copy();
+			}
+			else
+			{
+				sleepingBagCamper.CopyTo(instance.sleepingBagCamper);
+			}
+		}
+		else
+		{
+			instance.sleepingBagCamper = null;
+		}
+		if (camperModule != null)
+		{
+			if (instance.camperModule == null)
+			{
+				instance.camperModule = camperModule.Copy();
+			}
+			else
+			{
+				camperModule.CopyTo(instance.camperModule);
+			}
+		}
+		else
+		{
+			instance.camperModule = null;
+		}
+		if (paintableSign != null)
+		{
+			if (instance.paintableSign == null)
+			{
+				instance.paintableSign = paintableSign.Copy();
+			}
+			else
+			{
+				paintableSign.CopyTo(instance.paintableSign);
+			}
+		}
+		else
+		{
+			instance.paintableSign = null;
+		}
+		if (whitelist != null)
+		{
+			if (instance.whitelist == null)
+			{
+				instance.whitelist = whitelist.Copy();
+			}
+			else
+			{
+				whitelist.CopyTo(instance.whitelist);
+			}
+		}
+		else
+		{
+			instance.whitelist = null;
+		}
+		if (FrankensteinTable != null)
+		{
+			if (instance.FrankensteinTable == null)
+			{
+				instance.FrankensteinTable = FrankensteinTable.Copy();
+			}
+			else
+			{
+				FrankensteinTable.CopyTo(instance.FrankensteinTable);
+			}
+		}
+		else
+		{
+			instance.FrankensteinTable = null;
+		}
+		if (mlrs != null)
+		{
+			if (instance.mlrs == null)
+			{
+				instance.mlrs = mlrs.Copy();
+			}
+			else
+			{
+				mlrs.CopyTo(instance.mlrs);
+			}
+		}
+		else
+		{
+			instance.mlrs = null;
+		}
+		if (reclaimManager != null)
+		{
+			if (instance.reclaimManager == null)
+			{
+				instance.reclaimManager = reclaimManager.Copy();
+			}
+			else
+			{
+				reclaimManager.CopyTo(instance.reclaimManager);
+			}
+		}
+		else
+		{
+			instance.reclaimManager = null;
+		}
+		if (gameMode != null)
+		{
+			if (instance.gameMode == null)
+			{
+				instance.gameMode = gameMode.Copy();
+			}
+			else
+			{
+				gameMode.CopyTo(instance.gameMode);
+			}
+		}
+		else
+		{
+			instance.gameMode = null;
+		}
+		if (snowmobile != null)
+		{
+			if (instance.snowmobile == null)
+			{
+				instance.snowmobile = snowmobile.Copy();
+			}
+			else
+			{
+				snowmobile.CopyTo(instance.snowmobile);
+			}
+		}
+		else
+		{
+			instance.snowmobile = null;
+		}
+		instance.createdThisFrame = createdThisFrame;
+		if (patternFirework != null)
+		{
+			if (instance.patternFirework == null)
+			{
+				instance.patternFirework = patternFirework.Copy();
+			}
+			else
+			{
+				patternFirework.CopyTo(instance.patternFirework);
+			}
+		}
+		else
+		{
+			instance.patternFirework = null;
+		}
+		if (cargoPlane != null)
+		{
+			if (instance.cargoPlane == null)
+			{
+				instance.cargoPlane = cargoPlane.Copy();
+			}
+			else
+			{
+				cargoPlane.CopyTo(instance.cargoPlane);
+			}
+		}
+		else
+		{
+			instance.cargoPlane = null;
+		}
+		if (paintedItem != null)
+		{
+			if (instance.paintedItem == null)
+			{
+				instance.paintedItem = paintedItem.Copy();
+			}
+			else
+			{
+				paintedItem.CopyTo(instance.paintedItem);
+			}
+		}
+		else
+		{
+			instance.paintedItem = null;
+		}
+		if (clanManager != null)
+		{
+			if (instance.clanManager == null)
+			{
+				instance.clanManager = clanManager.Copy();
+			}
+			else
+			{
+				clanManager.CopyTo(instance.clanManager);
+			}
+		}
+		else
+		{
+			instance.clanManager = null;
+		}
+		if (spray != null)
+		{
+			if (instance.spray == null)
+			{
+				instance.spray = spray.Copy();
+			}
+			else
+			{
+				spray.CopyTo(instance.spray);
+			}
+		}
+		else
+		{
+			instance.spray = null;
+		}
+		if (baseTrain != null)
+		{
+			if (instance.baseTrain == null)
+			{
+				instance.baseTrain = baseTrain.Copy();
+			}
+			else
+			{
+				baseTrain.CopyTo(instance.baseTrain);
+			}
+		}
+		else
+		{
+			instance.baseTrain = null;
+		}
+		if (zipline != null)
+		{
+			if (instance.zipline == null)
+			{
+				instance.zipline = zipline.Copy();
+			}
+			else
+			{
+				zipline.CopyTo(instance.zipline);
+			}
+		}
+		else
+		{
+			instance.zipline = null;
+		}
+		if (ziplineMountable != null)
+		{
+			if (instance.ziplineMountable == null)
+			{
+				instance.ziplineMountable = ziplineMountable.Copy();
+			}
+			else
+			{
+				ziplineMountable.CopyTo(instance.ziplineMountable);
+			}
+		}
+		else
+		{
+			instance.ziplineMountable = null;
+		}
+		if (ZiplineArrival != null)
+		{
+			if (instance.ZiplineArrival == null)
+			{
+				instance.ZiplineArrival = ZiplineArrival.Copy();
+			}
+			else
+			{
+				ZiplineArrival.CopyTo(instance.ZiplineArrival);
+			}
+		}
+		else
+		{
+			instance.ZiplineArrival = null;
+		}
+		if (sprayLine != null)
+		{
+			if (instance.sprayLine == null)
+			{
+				instance.sprayLine = sprayLine.Copy();
+			}
+			else
+			{
+				sprayLine.CopyTo(instance.sprayLine);
+			}
+		}
+		else
+		{
+			instance.sprayLine = null;
+		}
+		if (coalingTower != null)
+		{
+			if (instance.coalingTower == null)
+			{
+				instance.coalingTower = coalingTower.Copy();
+			}
+			else
+			{
+				coalingTower.CopyTo(instance.coalingTower);
+			}
+		}
+		else
+		{
+			instance.coalingTower = null;
+		}
+		if (simpleInt != null)
+		{
+			if (instance.simpleInt == null)
+			{
+				instance.simpleInt = simpleInt.Copy();
+			}
+			else
+			{
+				simpleInt.CopyTo(instance.simpleInt);
+			}
+		}
+		else
+		{
+			instance.simpleInt = null;
+		}
+		if (baseOven != null)
+		{
+			if (instance.baseOven == null)
+			{
+				instance.baseOven = baseOven.Copy();
+			}
+			else
+			{
+				baseOven.CopyTo(instance.baseOven);
+			}
+		}
+		else
+		{
+			instance.baseOven = null;
+		}
+		if (brainComponent != null)
+		{
+			if (instance.brainComponent == null)
+			{
+				instance.brainComponent = brainComponent.Copy();
+			}
+			else
+			{
+				brainComponent.CopyTo(instance.brainComponent);
+			}
+		}
+		else
+		{
+			instance.brainComponent = null;
+		}
+		if (proceduralDungeon != null)
+		{
+			if (instance.proceduralDungeon == null)
+			{
+				instance.proceduralDungeon = proceduralDungeon.Copy();
+			}
+			else
+			{
+				proceduralDungeon.CopyTo(instance.proceduralDungeon);
+			}
+		}
+		else
+		{
+			instance.proceduralDungeon = null;
+		}
+		if (industrialConveyor != null)
+		{
+			if (instance.industrialConveyor == null)
+			{
+				instance.industrialConveyor = industrialConveyor.Copy();
+			}
+			else
+			{
+				industrialConveyor.CopyTo(instance.industrialConveyor);
+			}
+		}
+		else
+		{
+			instance.industrialConveyor = null;
+		}
+		if (industrialCrafter != null)
+		{
+			if (instance.industrialCrafter == null)
+			{
+				instance.industrialCrafter = industrialCrafter.Copy();
+			}
+			else
+			{
+				industrialCrafter.CopyTo(instance.industrialCrafter);
+			}
+		}
+		else
+		{
+			instance.industrialCrafter = null;
+		}
+		if (drone != null)
+		{
+			if (instance.drone == null)
+			{
+				instance.drone = drone.Copy();
+			}
+			else
+			{
+				drone.CopyTo(instance.drone);
+			}
+		}
+		else
+		{
+			instance.drone = null;
+		}
+		if (explosive != null)
+		{
+			if (instance.explosive == null)
+			{
+				instance.explosive = explosive.Copy();
+			}
+			else
+			{
+				explosive.CopyTo(instance.explosive);
+			}
+		}
+		else
+		{
+			instance.explosive = null;
+		}
+		if (simpleUint != null)
+		{
+			if (instance.simpleUint == null)
+			{
+				instance.simpleUint = simpleUint.Copy();
+			}
+			else
+			{
+				simpleUint.CopyTo(instance.simpleUint);
+			}
+		}
+		else
+		{
+			instance.simpleUint = null;
+		}
+		if (weaponRack != null)
+		{
+			if (instance.weaponRack == null)
+			{
+				instance.weaponRack = weaponRack.Copy();
+			}
+			else
+			{
+				weaponRack.CopyTo(instance.weaponRack);
+			}
+		}
+		else
+		{
+			instance.weaponRack = null;
+		}
+		if (attackHeli != null)
+		{
+			if (instance.attackHeli == null)
+			{
+				instance.attackHeli = attackHeli.Copy();
+			}
+			else
+			{
+				attackHeli.CopyTo(instance.attackHeli);
+			}
+		}
+		else
+		{
+			instance.attackHeli = null;
+		}
+		if (attackHeliTurret != null)
+		{
+			if (instance.attackHeliTurret == null)
+			{
+				instance.attackHeliTurret = attackHeliTurret.Copy();
+			}
+			else
+			{
+				attackHeliTurret.CopyTo(instance.attackHeliTurret);
+			}
+		}
+		else
+		{
+			instance.attackHeliTurret = null;
+		}
+		if (attackHeliRockets != null)
+		{
+			if (instance.attackHeliRockets == null)
+			{
+				instance.attackHeliRockets = attackHeliRockets.Copy();
+			}
+			else
+			{
+				attackHeliRockets.CopyTo(instance.attackHeliRockets);
+			}
+		}
+		else
+		{
+			instance.attackHeliRockets = null;
+		}
+		if (baseBoat != null)
+		{
+			if (instance.baseBoat == null)
+			{
+				instance.baseBoat = baseBoat.Copy();
+			}
+			else
+			{
+				baseBoat.CopyTo(instance.baseBoat);
+			}
+		}
+		else
+		{
+			instance.baseBoat = null;
+		}
+		if (ragdoll != null)
+		{
+			if (instance.ragdoll == null)
+			{
+				instance.ragdoll = ragdoll.Copy();
+			}
+			else
+			{
+				ragdoll.CopyTo(instance.ragdoll);
+			}
+		}
+		else
+		{
+			instance.ragdoll = null;
+		}
+		if (dieselEngine != null)
+		{
+			if (instance.dieselEngine == null)
+			{
+				instance.dieselEngine = dieselEngine.Copy();
+			}
+			else
+			{
+				dieselEngine.CopyTo(instance.dieselEngine);
+			}
+		}
+		else
+		{
+			instance.dieselEngine = null;
+		}
+		if (associatedFiles != null)
+		{
+			if (instance.associatedFiles == null)
+			{
+				instance.associatedFiles = associatedFiles.Copy();
+			}
+			else
+			{
+				associatedFiles.CopyTo(instance.associatedFiles);
+			}
+		}
+		else
+		{
+			instance.associatedFiles = null;
+		}
+		if (nexusFerry != null)
+		{
+			if (instance.nexusFerry == null)
+			{
+				instance.nexusFerry = nexusFerry.Copy();
+			}
+			else
+			{
+				nexusFerry.CopyTo(instance.nexusFerry);
+			}
+		}
+		else
+		{
+			instance.nexusFerry = null;
+		}
+		if (nexusIsland != null)
+		{
+			if (instance.nexusIsland == null)
+			{
+				instance.nexusIsland = nexusIsland.Copy();
+			}
+			else
+			{
+				nexusIsland.CopyTo(instance.nexusIsland);
+			}
+		}
+		else
+		{
+			instance.nexusIsland = null;
+		}
+		if (nexusDockTerminal != null)
+		{
+			if (instance.nexusDockTerminal == null)
+			{
+				instance.nexusDockTerminal = nexusDockTerminal.Copy();
+			}
+			else
+			{
+				nexusDockTerminal.CopyTo(instance.nexusDockTerminal);
+			}
+		}
+		else
+		{
+			instance.nexusDockTerminal = null;
+		}
+		if (rockingChair != null)
+		{
+			if (instance.rockingChair == null)
+			{
+				instance.rockingChair = rockingChair.Copy();
+			}
+			else
+			{
+				rockingChair.CopyTo(instance.rockingChair);
+			}
+		}
+		else
+		{
+			instance.rockingChair = null;
+		}
+		if (headData != null)
+		{
+			if (instance.headData == null)
+			{
+				instance.headData = headData.Copy();
+			}
+			else
+			{
+				headData.CopyTo(instance.headData);
+			}
+		}
+		else
+		{
+			instance.headData = null;
+		}
+		if (wantedPoster != null)
+		{
+			if (instance.wantedPoster == null)
+			{
+				instance.wantedPoster = wantedPoster.Copy();
+			}
+			else
+			{
+				wantedPoster.CopyTo(instance.wantedPoster);
+			}
+		}
+		else
+		{
+			instance.wantedPoster = null;
+		}
+		if (waypointRace != null)
+		{
+			if (instance.waypointRace == null)
+			{
+				instance.waypointRace = waypointRace.Copy();
+			}
+			else
+			{
+				waypointRace.CopyTo(instance.waypointRace);
+			}
+		}
+		else
+		{
+			instance.waypointRace = null;
+		}
+		if (legacyShelter != null)
+		{
+			if (instance.legacyShelter == null)
+			{
+				instance.legacyShelter = legacyShelter.Copy();
+			}
+			else
+			{
+				legacyShelter.CopyTo(instance.legacyShelter);
+			}
+		}
+		else
+		{
+			instance.legacyShelter = null;
+		}
+		if (metalDetectorSource != null)
+		{
+			if (instance.metalDetectorSource == null)
+			{
+				instance.metalDetectorSource = metalDetectorSource.Copy();
+			}
+			else
+			{
+				metalDetectorSource.CopyTo(instance.metalDetectorSource);
+			}
+		}
+		else
+		{
+			instance.metalDetectorSource = null;
+		}
+		if (tutorialIsland != null)
+		{
+			if (instance.tutorialIsland == null)
+			{
+				instance.tutorialIsland = tutorialIsland.Copy();
+			}
+			else
+			{
+				tutorialIsland.CopyTo(instance.tutorialIsland);
+			}
+		}
+		else
+		{
+			instance.tutorialIsland = null;
+		}
+		if (cinematicEntity != null)
+		{
+			if (instance.cinematicEntity == null)
+			{
+				instance.cinematicEntity = cinematicEntity.Copy();
+			}
+			else
+			{
+				cinematicEntity.CopyTo(instance.cinematicEntity);
+			}
+		}
+		else
+		{
+			instance.cinematicEntity = null;
+		}
+		if (buildingPrivilegeRetro != null)
+		{
+			if (instance.buildingPrivilegeRetro == null)
+			{
+				instance.buildingPrivilegeRetro = buildingPrivilegeRetro.Copy();
+			}
+			else
+			{
+				buildingPrivilegeRetro.CopyTo(instance.buildingPrivilegeRetro);
+			}
+		}
+		else
+		{
+			instance.buildingPrivilegeRetro = null;
+		}
+		if (harborCrane != null)
+		{
+			if (instance.harborCrane == null)
+			{
+				instance.harborCrane = harborCrane.Copy();
+			}
+			else
+			{
+				harborCrane.CopyTo(instance.harborCrane);
+			}
+		}
+		else
+		{
+			instance.harborCrane = null;
+		}
+		if (cargoShip != null)
+		{
+			if (instance.cargoShip == null)
+			{
+				instance.cargoShip = cargoShip.Copy();
+			}
+			else
+			{
+				cargoShip.CopyTo(instance.cargoShip);
+			}
+		}
+		else
+		{
+			instance.cargoShip = null;
+		}
+		if (cargoShipContainer != null)
+		{
+			if (instance.cargoShipContainer == null)
+			{
+				instance.cargoShipContainer = cargoShipContainer.Copy();
+			}
+			else
+			{
+				cargoShipContainer.CopyTo(instance.cargoShipContainer);
+			}
+		}
+		else
+		{
+			instance.cargoShipContainer = null;
+		}
+		if (missionMapMarker != null)
+		{
+			if (instance.missionMapMarker == null)
+			{
+				instance.missionMapMarker = missionMapMarker.Copy();
+			}
+			else
+			{
+				missionMapMarker.CopyTo(instance.missionMapMarker);
+			}
+		}
+		else
+		{
+			instance.missionMapMarker = null;
+		}
+		if (bike != null)
+		{
+			if (instance.bike == null)
+			{
+				instance.bike = bike.Copy();
+			}
+			else
+			{
+				bike.CopyTo(instance.bike);
+			}
+		}
+		else
+		{
+			instance.bike = null;
+		}
+		if (diverPropulsionVehicle != null)
+		{
+			if (instance.diverPropulsionVehicle == null)
+			{
+				instance.diverPropulsionVehicle = diverPropulsionVehicle.Copy();
+			}
+			else
+			{
+				diverPropulsionVehicle.CopyTo(instance.diverPropulsionVehicle);
+			}
+		}
+		else
+		{
+			instance.diverPropulsionVehicle = null;
+		}
+		if (travellingVendor != null)
+		{
+			if (instance.travellingVendor == null)
+			{
+				instance.travellingVendor = travellingVendor.Copy();
+			}
+			else
+			{
+				travellingVendor.CopyTo(instance.travellingVendor);
+			}
+		}
+		else
+		{
+			instance.travellingVendor = null;
+		}
+		if (vendingDynamicPricing != null)
+		{
+			if (instance.vendingDynamicPricing == null)
+			{
+				instance.vendingDynamicPricing = vendingDynamicPricing.Copy();
+			}
+			else
+			{
+				vendingDynamicPricing.CopyTo(instance.vendingDynamicPricing);
+			}
+		}
+		else
+		{
+			instance.vendingDynamicPricing = null;
+		}
+		if (tinCanAlarm != null)
+		{
+			if (instance.tinCanAlarm == null)
+			{
+				instance.tinCanAlarm = tinCanAlarm.Copy();
+			}
+			else
+			{
+				tinCanAlarm.CopyTo(instance.tinCanAlarm);
+			}
+		}
+		else
+		{
+			instance.tinCanAlarm = null;
+		}
+		if (digitalClock != null)
+		{
+			if (instance.digitalClock == null)
+			{
+				instance.digitalClock = digitalClock.Copy();
+			}
+			else
+			{
+				digitalClock.CopyTo(instance.digitalClock);
+			}
+		}
+		else
+		{
+			instance.digitalClock = null;
+		}
+		if (elevatorLift != null)
+		{
+			if (instance.elevatorLift == null)
+			{
+				instance.elevatorLift = elevatorLift.Copy();
+			}
+			else
+			{
+				elevatorLift.CopyTo(instance.elevatorLift);
+			}
+		}
+		else
+		{
+			instance.elevatorLift = null;
+		}
+		if (npcVendingMachine != null)
+		{
+			if (instance.npcVendingMachine == null)
+			{
+				instance.npcVendingMachine = npcVendingMachine.Copy();
+			}
+			else
+			{
+				npcVendingMachine.CopyTo(instance.npcVendingMachine);
+			}
+		}
+		else
+		{
+			instance.npcVendingMachine = null;
+		}
+		if (mailbox != null)
+		{
+			if (instance.mailbox == null)
+			{
+				instance.mailbox = mailbox.Copy();
+			}
+			else
+			{
+				mailbox.CopyTo(instance.mailbox);
+			}
+		}
+		else
+		{
+			instance.mailbox = null;
+		}
+		if (projectileWeaponMod != null)
+		{
+			if (instance.projectileWeaponMod == null)
+			{
+				instance.projectileWeaponMod = projectileWeaponMod.Copy();
+			}
+			else
+			{
+				projectileWeaponMod.CopyTo(instance.projectileWeaponMod);
+			}
+		}
+		else
+		{
+			instance.projectileWeaponMod = null;
+		}
+		if (baseSculpture != null)
+		{
+			if (instance.baseSculpture == null)
+			{
+				instance.baseSculpture = baseSculpture.Copy();
+			}
+			else
+			{
+				baseSculpture.CopyTo(instance.baseSculpture);
+			}
+		}
+		else
+		{
+			instance.baseSculpture = null;
+		}
+		if (vendingMachineStats != null)
+		{
+			if (instance.vendingMachineStats == null)
+			{
+				instance.vendingMachineStats = vendingMachineStats.Copy();
+			}
+			else
+			{
+				vendingMachineStats.CopyTo(instance.vendingMachineStats);
+			}
+		}
+		else
+		{
+			instance.vendingMachineStats = null;
+		}
+		if (catapult != null)
+		{
+			if (instance.catapult == null)
+			{
+				instance.catapult = catapult.Copy();
+			}
+			else
+			{
+				catapult.CopyTo(instance.catapult);
+			}
+		}
+		else
+		{
+			instance.catapult = null;
+		}
+		if (siegeTower != null)
+		{
+			if (instance.siegeTower == null)
+			{
+				instance.siegeTower = siegeTower.Copy();
+			}
+			else
+			{
+				siegeTower.CopyTo(instance.siegeTower);
+			}
+		}
+		else
+		{
+			instance.siegeTower = null;
+		}
+		if (ballista != null)
+		{
+			if (instance.ballista == null)
+			{
+				instance.ballista = ballista.Copy();
+			}
+			else
+			{
+				ballista.CopyTo(instance.ballista);
+			}
+		}
+		else
+		{
+			instance.ballista = null;
+		}
+		if (ballistaGun != null)
+		{
+			if (instance.ballistaGun == null)
+			{
+				instance.ballistaGun = ballistaGun.Copy();
+			}
+			else
+			{
+				ballistaGun.CopyTo(instance.ballistaGun);
+			}
+		}
+		else
+		{
+			instance.ballistaGun = null;
+		}
+		if (batteringRam != null)
+		{
+			if (instance.batteringRam == null)
+			{
+				instance.batteringRam = batteringRam.Copy();
+			}
+			else
+			{
+				batteringRam.CopyTo(instance.batteringRam);
+			}
+		}
+		else
+		{
+			instance.batteringRam = null;
+		}
+		if (temporaryRagdoll != null)
+		{
+			if (instance.temporaryRagdoll == null)
+			{
+				instance.temporaryRagdoll = temporaryRagdoll.Copy();
+			}
+			else
+			{
+				temporaryRagdoll.CopyTo(instance.temporaryRagdoll);
+			}
+		}
+		else
+		{
+			instance.temporaryRagdoll = null;
+		}
+		if (constructableEntity != null)
+		{
+			if (instance.constructableEntity == null)
+			{
+				instance.constructableEntity = constructableEntity.Copy();
+			}
+			else
+			{
+				constructableEntity.CopyTo(instance.constructableEntity);
+			}
+		}
+		else
+		{
+			instance.constructableEntity = null;
+		}
+		if (chickenCoop != null)
+		{
+			if (instance.chickenCoop == null)
+			{
+				instance.chickenCoop = chickenCoop.Copy();
+			}
+			else
+			{
+				chickenCoop.CopyTo(instance.chickenCoop);
+			}
+		}
+		else
+		{
+			instance.chickenCoop = null;
+		}
+		if (farmableAnimal != null)
+		{
+			if (instance.farmableAnimal == null)
+			{
+				instance.farmableAnimal = farmableAnimal.Copy();
+			}
+			else
+			{
+				farmableAnimal.CopyTo(instance.farmableAnimal);
+			}
+		}
+		else
+		{
+			instance.farmableAnimal = null;
+		}
+		if (ownership != null)
+		{
+			if (instance.ownership == null)
+			{
+				instance.ownership = ownership.Copy();
+			}
+			else
+			{
+				ownership.CopyTo(instance.ownership);
+			}
+		}
+		else
+		{
+			instance.ownership = null;
+		}
+		if (beehive != null)
+		{
+			if (instance.beehive == null)
+			{
+				instance.beehive = beehive.Copy();
+			}
+			else
+			{
+				beehive.CopyTo(instance.beehive);
+			}
+		}
+		else
+		{
+			instance.beehive = null;
+		}
+		if (beeMasterSwarm != null)
+		{
+			if (instance.beeMasterSwarm == null)
+			{
+				instance.beeMasterSwarm = beeMasterSwarm.Copy();
+			}
+			else
+			{
+				beeMasterSwarm.CopyTo(instance.beeMasterSwarm);
+			}
+		}
+		else
+		{
+			instance.beeMasterSwarm = null;
+		}
+		if (containerCorpse != null)
+		{
+			if (instance.containerCorpse == null)
+			{
+				instance.containerCorpse = containerCorpse.Copy();
+			}
+			else
+			{
+				containerCorpse.CopyTo(instance.containerCorpse);
+			}
+		}
+		else
+		{
+			instance.containerCorpse = null;
+		}
+		if (npcTargetState != null)
+		{
+			if (instance.npcTargetState == null)
+			{
+				instance.npcTargetState = npcTargetState.Copy();
+			}
+			else
+			{
+				npcTargetState.CopyTo(instance.npcTargetState);
+			}
+		}
+		else
+		{
+			instance.npcTargetState = null;
+		}
+		if (vineMountable != null)
+		{
+			if (instance.vineMountable == null)
+			{
+				instance.vineMountable = vineMountable.Copy();
+			}
+			else
+			{
+				vineMountable.CopyTo(instance.vineMountable);
+			}
+		}
+		else
+		{
+			instance.vineMountable = null;
+		}
+		if (vineTree != null)
+		{
+			if (instance.vineTree == null)
+			{
+				instance.vineTree = vineTree.Copy();
+			}
+			else
+			{
+				vineTree.CopyTo(instance.vineTree);
+			}
+		}
+		else
+		{
+			instance.vineTree = null;
+		}
+		if (treeRespawn != null)
+		{
+			if (instance.treeRespawn == null)
+			{
+				instance.treeRespawn = treeRespawn.Copy();
+			}
+			else
+			{
+				treeRespawn.CopyTo(instance.treeRespawn);
+			}
+		}
+		else
+		{
+			instance.treeRespawn = null;
+		}
+		if (wallpaperTool != null)
+		{
+			if (instance.wallpaperTool == null)
+			{
+				instance.wallpaperTool = wallpaperTool.Copy();
+			}
+			else
+			{
+				wallpaperTool.CopyTo(instance.wallpaperTool);
+			}
+		}
+		else
+		{
+			instance.wallpaperTool = null;
+		}
+		if (commandBlock != null)
+		{
+			if (instance.commandBlock == null)
+			{
+				instance.commandBlock = commandBlock.Copy();
+			}
+			else
+			{
+				commandBlock.CopyTo(instance.commandBlock);
+			}
+		}
+		else
+		{
+			instance.commandBlock = null;
+		}
+		if (staticRespawn != null)
+		{
+			if (instance.staticRespawn == null)
+			{
+				instance.staticRespawn = staticRespawn.Copy();
+			}
+			else
+			{
+				staticRespawn.CopyTo(instance.staticRespawn);
+			}
+		}
+		else
+		{
+			instance.staticRespawn = null;
+		}
+		if (buriedItemStorage != null)
+		{
+			if (instance.buriedItemStorage == null)
+			{
+				instance.buriedItemStorage = buriedItemStorage.Copy();
+			}
+			else
+			{
+				buriedItemStorage.CopyTo(instance.buriedItemStorage);
+			}
+		}
+		else
+		{
+			instance.buriedItemStorage = null;
+		}
+		if (mannequin != null)
+		{
+			if (instance.mannequin == null)
+			{
+				instance.mannequin = mannequin.Copy();
+			}
+			else
+			{
+				mannequin.CopyTo(instance.mannequin);
+			}
+		}
+		else
+		{
+			instance.mannequin = null;
+		}
+		if (baseMelee != null)
+		{
+			if (instance.baseMelee == null)
+			{
+				instance.baseMelee = baseMelee.Copy();
+			}
+			else
+			{
+				baseMelee.CopyTo(instance.baseMelee);
+			}
+		}
+		else
+		{
+			instance.baseMelee = null;
+		}
+		if (door != null)
+		{
+			if (instance.door == null)
+			{
+				instance.door = door.Copy();
+			}
+			else
+			{
+				door.CopyTo(instance.door);
+			}
+		}
+		else
+		{
+			instance.door = null;
+		}
+		if (deepSeaPortal != null)
+		{
+			if (instance.deepSeaPortal == null)
+			{
+				instance.deepSeaPortal = deepSeaPortal.Copy();
+			}
+			else
+			{
+				deepSeaPortal.CopyTo(instance.deepSeaPortal);
+			}
+		}
+		else
+		{
+			instance.deepSeaPortal = null;
+		}
+		if (baseMountable != null)
+		{
+			if (instance.baseMountable == null)
+			{
+				instance.baseMountable = baseMountable.Copy();
+			}
+			else
+			{
+				baseMountable.CopyTo(instance.baseMountable);
+			}
+		}
+		else
+		{
+			instance.baseMountable = null;
+		}
+		if (smallEngine != null)
+		{
+			if (instance.smallEngine == null)
+			{
+				instance.smallEngine = smallEngine.Copy();
+			}
+			else
+			{
+				smallEngine.CopyTo(instance.smallEngine);
+			}
+		}
+		else
+		{
+			instance.smallEngine = null;
+		}
+		if (playerBoat != null)
+		{
+			if (instance.playerBoat == null)
+			{
+				instance.playerBoat = playerBoat.Copy();
+			}
+			else
+			{
+				playerBoat.CopyTo(instance.playerBoat);
+			}
+		}
+		else
+		{
+			instance.playerBoat = null;
+		}
+		if (steeringWheel != null)
+		{
+			if (instance.steeringWheel == null)
+			{
+				instance.steeringWheel = steeringWheel.Copy();
+			}
+			else
+			{
+				steeringWheel.CopyTo(instance.steeringWheel);
+			}
+		}
+		else
+		{
+			instance.steeringWheel = null;
+		}
+		if (deepSeaManager != null)
+		{
+			if (instance.deepSeaManager == null)
+			{
+				instance.deepSeaManager = deepSeaManager.Copy();
+			}
+			else
+			{
+				deepSeaManager.CopyTo(instance.deepSeaManager);
+			}
+		}
+		else
+		{
+			instance.deepSeaManager = null;
+		}
+		if (scientistBoatOilrigManager != null)
+		{
+			if (instance.scientistBoatOilrigManager == null)
+			{
+				instance.scientistBoatOilrigManager = scientistBoatOilrigManager.Copy();
+			}
+			else
+			{
+				scientistBoatOilrigManager.CopyTo(instance.scientistBoatOilrigManager);
+			}
+		}
+		else
+		{
+			instance.scientistBoatOilrigManager = null;
+		}
+		if (storageAdaptor != null)
+		{
+			if (instance.storageAdaptor == null)
+			{
+				instance.storageAdaptor = storageAdaptor.Copy();
+			}
+			else
+			{
+				storageAdaptor.CopyTo(instance.storageAdaptor);
+			}
+		}
+		else
+		{
+			instance.storageAdaptor = null;
+		}
+		if (helicopterFlares != null)
+		{
+			if (instance.helicopterFlares == null)
+			{
+				instance.helicopterFlares = helicopterFlares.Copy();
+			}
+			else
+			{
+				helicopterFlares.CopyTo(instance.helicopterFlares);
+			}
+		}
+		else
+		{
+			instance.helicopterFlares = null;
+		}
+		if (wipeLaptop != null)
+		{
+			if (instance.wipeLaptop == null)
+			{
+				instance.wipeLaptop = wipeLaptop.Copy();
+			}
+			else
+			{
+				wipeLaptop.CopyTo(instance.wipeLaptop);
+			}
+		}
+		else
+		{
+			instance.wipeLaptop = null;
+		}
+		if (mountedWeapon != null)
+		{
+			if (instance.mountedWeapon == null)
+			{
+				instance.mountedWeapon = mountedWeapon.Copy();
+			}
+			else
+			{
+				mountedWeapon.CopyTo(instance.mountedWeapon);
+			}
+		}
+		else
+		{
+			instance.mountedWeapon = null;
+		}
+		if (boatBuildingBlock != null)
+		{
+			if (instance.boatBuildingBlock == null)
+			{
+				instance.boatBuildingBlock = boatBuildingBlock.Copy();
+			}
+			else
+			{
+				boatBuildingBlock.CopyTo(instance.boatBuildingBlock);
+			}
+		}
+		else
+		{
+			instance.boatBuildingBlock = null;
+		}
+		if (boatBuildingStation != null)
+		{
+			if (instance.boatBuildingStation == null)
+			{
+				instance.boatBuildingStation = boatBuildingStation.Copy();
+			}
+			else
+			{
+				boatBuildingStation.CopyTo(instance.boatBuildingStation);
+			}
+		}
+		else
+		{
+			instance.boatBuildingStation = null;
+		}
+		if (displayingBoxStorage != null)
+		{
+			if (instance.displayingBoxStorage == null)
+			{
+				instance.displayingBoxStorage = displayingBoxStorage.Copy();
+			}
+			else
+			{
+				displayingBoxStorage.CopyTo(instance.displayingBoxStorage);
+			}
+		}
+		else
+		{
+			instance.displayingBoxStorage = null;
+		}
+		if (workbench != null)
+		{
+			if (instance.workbench == null)
+			{
+				instance.workbench = workbench.Copy();
+			}
+			else
+			{
+				workbench.CopyTo(instance.workbench);
+			}
+		}
+		else
+		{
+			instance.workbench = null;
+		}
+		if (apartmentLock != null)
+		{
+			if (instance.apartmentLock == null)
+			{
+				instance.apartmentLock = apartmentLock.Copy();
+			}
+			else
+			{
+				apartmentLock.CopyTo(instance.apartmentLock);
+			}
+		}
+		else
+		{
+			instance.apartmentLock = null;
+		}
+		if (rentableShop != null)
+		{
+			if (instance.rentableShop == null)
+			{
+				instance.rentableShop = rentableShop.Copy();
+			}
+			else
+			{
+				rentableShop.CopyTo(instance.rentableShop);
+			}
+		}
+		else
+		{
+			instance.rentableShop = null;
+		}
+		if (apartmentRoom != null)
+		{
+			if (instance.apartmentRoom == null)
+			{
+				instance.apartmentRoom = apartmentRoom.Copy();
+			}
+			else
+			{
+				apartmentRoom.CopyTo(instance.apartmentRoom);
+			}
+		}
+		else
+		{
+			instance.apartmentRoom = null;
+		}
+		if (apartmentBuilding != null)
+		{
+			if (instance.apartmentBuilding == null)
+			{
+				instance.apartmentBuilding = apartmentBuilding.Copy();
+			}
+			else
+			{
+				apartmentBuilding.CopyTo(instance.apartmentBuilding);
+			}
+		}
+		else
+		{
+			instance.apartmentBuilding = null;
+		}
+		if (apartmentUpkeep != null)
+		{
+			if (instance.apartmentUpkeep == null)
+			{
+				instance.apartmentUpkeep = apartmentUpkeep.Copy();
+			}
+			else
+			{
+				apartmentUpkeep.CopyTo(instance.apartmentUpkeep);
+			}
+		}
+		else
+		{
+			instance.apartmentUpkeep = null;
+		}
+		if (mortar != null)
+		{
+			if (instance.mortar == null)
+			{
+				instance.mortar = mortar.Copy();
+			}
+			else
+			{
+				mortar.CopyTo(instance.mortar);
+			}
+		}
+		else
+		{
+			instance.mortar = null;
+		}
+		if (apartmentDoor != null)
+		{
+			if (instance.apartmentDoor == null)
+			{
+				instance.apartmentDoor = apartmentDoor.Copy();
+			}
+			else
+			{
+				apartmentDoor.CopyTo(instance.apartmentDoor);
+			}
+		}
+		else
+		{
+			instance.apartmentDoor = null;
+		}
+		if (apartmentMailbox != null)
+		{
+			if (instance.apartmentMailbox == null)
+			{
+				instance.apartmentMailbox = apartmentMailbox.Copy();
+			}
+			else
+			{
+				apartmentMailbox.CopyTo(instance.apartmentMailbox);
+			}
+		}
+		else
+		{
+			instance.apartmentMailbox = null;
+		}
+		if (Pooltable != null)
+		{
+			if (instance.Pooltable == null)
+			{
+				instance.Pooltable = Pooltable.Copy();
+			}
+			else
+			{
+				Pooltable.CopyTo(instance.Pooltable);
+			}
+		}
+		else
+		{
+			instance.Pooltable = null;
+		}
+		if (dartsGame != null)
+		{
+			if (instance.dartsGame == null)
+			{
+				instance.dartsGame = dartsGame.Copy();
+			}
+			else
+			{
+				dartsGame.CopyTo(instance.dartsGame);
+			}
+		}
+		else
+		{
+			instance.dartsGame = null;
+		}
+		if (dartsGameLeaderboard != null)
+		{
+			if (instance.dartsGameLeaderboard == null)
+			{
+				instance.dartsGameLeaderboard = dartsGameLeaderboard.Copy();
+			}
+			else
+			{
+				dartsGameLeaderboard.CopyTo(instance.dartsGameLeaderboard);
+			}
+		}
+		else
+		{
+			instance.dartsGameLeaderboard = null;
+		}
+		if (satelliteControlComputer != null)
+		{
+			if (instance.satelliteControlComputer == null)
+			{
+				instance.satelliteControlComputer = satelliteControlComputer.Copy();
+			}
+			else
+			{
+				satelliteControlComputer.CopyTo(instance.satelliteControlComputer);
+			}
+		}
+		else
+		{
+			instance.satelliteControlComputer = null;
+		}
+		if (satelliteCrash != null)
+		{
+			if (instance.satelliteCrash == null)
+			{
+				instance.satelliteCrash = satelliteCrash.Copy();
+			}
+			else
+			{
+				satelliteCrash.CopyTo(instance.satelliteCrash);
+			}
+		}
+		else
+		{
+			instance.satelliteCrash = null;
+		}
+		if (satelliteCrashRemains != null)
+		{
+			if (instance.satelliteCrashRemains == null)
+			{
+				instance.satelliteCrashRemains = satelliteCrashRemains.Copy();
+			}
+			else
+			{
+				satelliteCrashRemains.CopyTo(instance.satelliteCrashRemains);
+			}
+		}
+		else
+		{
+			instance.satelliteCrashRemains = null;
+		}
+		if (electricGenerator != null)
+		{
+			if (instance.electricGenerator == null)
+			{
+				instance.electricGenerator = electricGenerator.Copy();
+			}
+			else
+			{
+				electricGenerator.CopyTo(instance.electricGenerator);
+			}
+		}
+		else
+		{
+			instance.electricGenerator = null;
+		}
+		if (powergridManager != null)
+		{
+			if (instance.powergridManager == null)
+			{
+				instance.powergridManager = powergridManager.Copy();
+			}
+			else
+			{
+				powergridManager.CopyTo(instance.powergridManager);
+			}
+		}
+		else
+		{
+			instance.powergridManager = null;
+		}
+		if (oilswitchBroadcast != null)
+		{
+			if (instance.oilswitchBroadcast == null)
+			{
+				instance.oilswitchBroadcast = oilswitchBroadcast.Copy();
+			}
+			else
+			{
+				oilswitchBroadcast.CopyTo(instance.oilswitchBroadcast);
+			}
+		}
+		else
+		{
+			instance.oilswitchBroadcast = null;
+		}
+		if (sprinkler != null)
+		{
+			if (instance.sprinkler == null)
+			{
+				instance.sprinkler = sprinkler.Copy();
+			}
+			else
+			{
+				sprinkler.CopyTo(instance.sprinkler);
+			}
+		}
+		else
+		{
+			instance.sprinkler = null;
+		}
+		if (hackableLockedCrate != null)
+		{
+			if (instance.hackableLockedCrate == null)
+			{
+				instance.hackableLockedCrate = hackableLockedCrate.Copy();
+			}
+			else
+			{
+				hackableLockedCrate.CopyTo(instance.hackableLockedCrate);
+			}
+		}
+		else
+		{
+			instance.hackableLockedCrate = null;
+		}
+		if (lockedByEntCrate != null)
+		{
+			if (instance.lockedByEntCrate == null)
+			{
+				instance.lockedByEntCrate = lockedByEntCrate.Copy();
+			}
+			else
+			{
+				lockedByEntCrate.CopyTo(instance.lockedByEntCrate);
+			}
+		}
+		else
+		{
+			instance.lockedByEntCrate = null;
+		}
+		if (territoryZones != null)
+		{
+			if (instance.territoryZones == null)
+			{
+				instance.territoryZones = territoryZones.Copy();
+			}
+			else
+			{
+				territoryZones.CopyTo(instance.territoryZones);
+			}
+		}
+		else
+		{
+			instance.territoryZones = null;
+		}
+		if (monumentBlocker != null)
+		{
+			if (instance.monumentBlocker == null)
+			{
+				instance.monumentBlocker = monumentBlocker.Copy();
+			}
+			else
+			{
+				monumentBlocker.CopyTo(instance.monumentBlocker);
+			}
+		}
+		else
+		{
+			instance.monumentBlocker = null;
+		}
+	}
+
+	public Entity Copy()
+	{
+		Entity entity = Pool.Get<Entity>();
+		CopyTo(entity);
+		return entity;
+	}
+
+	public static Entity Deserialize(BufferStream stream)
+	{
+		Entity entity = Pool.Get<Entity>();
+		Deserialize(stream, entity, isDelta: false);
+		return entity;
+	}
+
+	public static Entity DeserializeLengthDelimited(BufferStream stream)
+	{
+		Entity entity = Pool.Get<Entity>();
+		DeserializeLengthDelimited(stream, entity, isDelta: false);
+		return entity;
+	}
+
+	public static Entity DeserializeLength(BufferStream stream, int length)
+	{
+		Entity entity = Pool.Get<Entity>();
+		DeserializeLength(stream, length, entity, isDelta: false);
+		return entity;
+	}
+
+	public static Entity Deserialize(byte[] buffer)
+	{
+		Entity entity = Pool.Get<Entity>();
+		using BufferStream stream = Pool.Get<BufferStream>().Initialize(buffer);
+		Deserialize(stream, entity, isDelta: false);
+		return entity;
+	}
+
+	public void FromProto(BufferStream stream, bool isDelta = false)
+	{
+		Deserialize(stream, this, isDelta);
+	}
+
+	public virtual void WriteToStream(BufferStream stream)
+	{
+		Serialize(stream, this);
+	}
+
+	public virtual void WriteToStreamDelta(BufferStream stream, Entity previous)
+	{
+		if (previous == null)
+		{
+			Serialize(stream, this);
+		}
+		else
+		{
+			SerializeDelta(stream, this, previous);
+		}
+	}
+
+	public virtual void ReadFromStream(BufferStream stream, bool isDelta = false)
+	{
+		Deserialize(stream, this, isDelta);
+	}
+
+	public virtual void ReadFromStream(BufferStream stream, int size, bool isDelta = false)
+	{
+		DeserializeLength(stream, size, this, isDelta);
+	}
+
+	public static Entity Deserialize(BufferStream stream, Entity instance, bool isDelta)
+	{
+		uint lastFieldId = 0u;
+		while (true)
+		{
+			int num = stream.ReadByte();
+			if (num == -1 || num == 0)
+			{
+				break;
+			}
+			stream.ConsumeFieldOperation("ProtoBuf.Entity");
+			switch (num)
+			{
+			case 10:
+				stream.ValidateFieldOrder(ref lastFieldId, 1u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.baseNetworkable == null)
+				{
+					instance.baseNetworkable = BaseNetworkable.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					BaseNetworkable.DeserializeLengthDelimited(stream, instance.baseNetworkable, isDelta);
+				}
+				continue;
+			case 18:
+				stream.ValidateFieldOrder(ref lastFieldId, 2u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.baseEntity == null)
+				{
+					instance.baseEntity = BaseEntity.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					BaseEntity.DeserializeLengthDelimited(stream, instance.baseEntity, isDelta);
+				}
+				continue;
+			case 26:
+				stream.ValidateFieldOrder(ref lastFieldId, 3u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.basePlayer == null)
+				{
+					instance.basePlayer = BasePlayer.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					BasePlayer.DeserializeLengthDelimited(stream, instance.basePlayer, isDelta);
+				}
+				continue;
+			case 34:
+				stream.ValidateFieldOrder(ref lastFieldId, 4u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.worldItem == null)
+				{
+					instance.worldItem = WorldItem.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					WorldItem.DeserializeLengthDelimited(stream, instance.worldItem, isDelta);
+				}
+				continue;
+			case 42:
+				stream.ValidateFieldOrder(ref lastFieldId, 5u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.resource == null)
+				{
+					instance.resource = BaseResource.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					BaseResource.DeserializeLengthDelimited(stream, instance.resource, isDelta);
+				}
+				continue;
+			case 50:
+				stream.ValidateFieldOrder(ref lastFieldId, 6u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.buildingBlock == null)
+				{
+					instance.buildingBlock = BuildingBlock.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					BuildingBlock.DeserializeLengthDelimited(stream, instance.buildingBlock, isDelta);
+				}
+				continue;
+			case 58:
+				stream.ValidateFieldOrder(ref lastFieldId, 7u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.environment == null)
+				{
+					instance.environment = Environment.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					Environment.DeserializeLengthDelimited(stream, instance.environment, isDelta);
+				}
+				continue;
+			case 66:
+				stream.ValidateFieldOrder(ref lastFieldId, 8u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.corpse == null)
+				{
+					instance.corpse = Corpse.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					Corpse.DeserializeLengthDelimited(stream, instance.corpse, isDelta);
+				}
+				continue;
+			case 82:
+				stream.ValidateFieldOrder(ref lastFieldId, 10u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.parent == null)
+				{
+					instance.parent = ParentInfo.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					ParentInfo.DeserializeLengthDelimited(stream, instance.parent, isDelta);
+				}
+				continue;
+			case 90:
+				stream.ValidateFieldOrder(ref lastFieldId, 11u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.keyLock == null)
+				{
+					instance.keyLock = KeyLock.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					KeyLock.DeserializeLengthDelimited(stream, instance.keyLock, isDelta);
+				}
+				continue;
+			case 98:
+				stream.ValidateFieldOrder(ref lastFieldId, 12u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.codeLock == null)
+				{
+					instance.codeLock = CodeLock.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					CodeLock.DeserializeLengthDelimited(stream, instance.codeLock, isDelta);
+				}
+				continue;
+			case 106:
+				stream.ValidateFieldOrder(ref lastFieldId, 13u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.entitySlots == null)
+				{
+					instance.entitySlots = EntitySlots.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					EntitySlots.DeserializeLengthDelimited(stream, instance.entitySlots, isDelta);
+				}
+				continue;
+			case 114:
+				stream.ValidateFieldOrder(ref lastFieldId, 14u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.buildingPrivilege == null)
+				{
+					instance.buildingPrivilege = BuildingPrivilege.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					BuildingPrivilege.DeserializeLengthDelimited(stream, instance.buildingPrivilege, isDelta);
+				}
+				continue;
+			case 122:
+				stream.ValidateFieldOrder(ref lastFieldId, 15u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.storageBox == null)
+				{
+					instance.storageBox = StorageBox.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					StorageBox.DeserializeLengthDelimited(stream, instance.storageBox, isDelta);
+				}
+				continue;
+			}
+			Key key = ProtocolParser.ReadKey((byte)num, stream);
+			switch (key.Field)
+			{
+			case 1u:
+				stream.ValidateFieldOrder(ref lastFieldId, 1u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 2u:
+				stream.ValidateFieldOrder(ref lastFieldId, 2u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 3u:
+				stream.ValidateFieldOrder(ref lastFieldId, 3u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 4u:
+				stream.ValidateFieldOrder(ref lastFieldId, 4u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 5u:
+				stream.ValidateFieldOrder(ref lastFieldId, 5u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 6u:
+				stream.ValidateFieldOrder(ref lastFieldId, 6u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 7u:
+				stream.ValidateFieldOrder(ref lastFieldId, 7u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 8u:
+				stream.ValidateFieldOrder(ref lastFieldId, 8u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 10u:
+				stream.ValidateFieldOrder(ref lastFieldId, 10u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 11u:
+				stream.ValidateFieldOrder(ref lastFieldId, 11u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 12u:
+				stream.ValidateFieldOrder(ref lastFieldId, 12u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 13u:
+				stream.ValidateFieldOrder(ref lastFieldId, 13u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 14u:
+				stream.ValidateFieldOrder(ref lastFieldId, 14u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 15u:
+				stream.ValidateFieldOrder(ref lastFieldId, 15u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 16u:
+				stream.ValidateFieldOrder(ref lastFieldId, 16u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.heldEntity == null)
+					{
+						instance.heldEntity = HeldEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						HeldEntity.DeserializeLengthDelimited(stream, instance.heldEntity, isDelta);
+					}
+				}
+				break;
+			case 17u:
+				stream.ValidateFieldOrder(ref lastFieldId, 17u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseProjectile == null)
+					{
+						instance.baseProjectile = BaseProjectile.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseProjectile.DeserializeLengthDelimited(stream, instance.baseProjectile, isDelta);
+					}
+				}
+				break;
+			case 18u:
+				stream.ValidateFieldOrder(ref lastFieldId, 18u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseNPC == null)
+					{
+						instance.baseNPC = BaseNPC.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseNPC.DeserializeLengthDelimited(stream, instance.baseNPC, isDelta);
+					}
+				}
+				break;
+			case 19u:
+				stream.ValidateFieldOrder(ref lastFieldId, 19u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.lootContainer == null)
+					{
+						instance.lootContainer = LootContainer.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						LootContainer.DeserializeLengthDelimited(stream, instance.lootContainer, isDelta);
+					}
+				}
+				break;
+			case 20u:
+				stream.ValidateFieldOrder(ref lastFieldId, 20u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.genericSpawner == null)
+					{
+						instance.genericSpawner = GenericSpawner.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						GenericSpawner.DeserializeLengthDelimited(stream, instance.genericSpawner, isDelta);
+					}
+				}
+				break;
+			case 21u:
+				stream.ValidateFieldOrder(ref lastFieldId, 21u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.sleepingBag == null)
+					{
+						instance.sleepingBag = SleepingBag.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SleepingBag.DeserializeLengthDelimited(stream, instance.sleepingBag, isDelta);
+					}
+				}
+				break;
+			case 22u:
+				stream.ValidateFieldOrder(ref lastFieldId, 22u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.lootableCorpse == null)
+					{
+						instance.lootableCorpse = LootableCorpse.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						LootableCorpse.DeserializeLengthDelimited(stream, instance.lootableCorpse, isDelta);
+					}
+				}
+				break;
+			case 23u:
+				stream.ValidateFieldOrder(ref lastFieldId, 23u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.sign == null)
+					{
+						instance.sign = Sign.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Sign.DeserializeLengthDelimited(stream, instance.sign, isDelta);
+					}
+				}
+				break;
+			case 24u:
+				stream.ValidateFieldOrder(ref lastFieldId, 24u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseCombat == null)
+					{
+						instance.baseCombat = BaseCombat.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseCombat.DeserializeLengthDelimited(stream, instance.baseCombat, isDelta);
+					}
+				}
+				break;
+			case 25u:
+				stream.ValidateFieldOrder(ref lastFieldId, 25u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.mapEntity == null)
+					{
+						instance.mapEntity = MapEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MapEntity.DeserializeLengthDelimited(stream, instance.mapEntity, isDelta);
+					}
+				}
+				break;
+			case 26u:
+				stream.ValidateFieldOrder(ref lastFieldId, 26u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.researchTable == null)
+					{
+						instance.researchTable = ResearchTable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ResearchTable.DeserializeLengthDelimited(stream, instance.researchTable, isDelta);
+					}
+				}
+				break;
+			case 27u:
+				stream.ValidateFieldOrder(ref lastFieldId, 27u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.dudExplosive == null)
+					{
+						instance.dudExplosive = DudExplosive.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DudExplosive.DeserializeLengthDelimited(stream, instance.dudExplosive, isDelta);
+					}
+				}
+				break;
+			case 28u:
+				stream.ValidateFieldOrder(ref lastFieldId, 28u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.miningQuarry == null)
+					{
+						instance.miningQuarry = MiningQuarry.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MiningQuarry.DeserializeLengthDelimited(stream, instance.miningQuarry, isDelta);
+					}
+				}
+				break;
+			case 29u:
+				stream.ValidateFieldOrder(ref lastFieldId, 29u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseVehicle == null)
+					{
+						instance.baseVehicle = BaseVehicle.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseVehicle.DeserializeLengthDelimited(stream, instance.baseVehicle, isDelta);
+					}
+				}
+				break;
+			case 30u:
+				stream.ValidateFieldOrder(ref lastFieldId, 30u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.helicopter == null)
+					{
+						instance.helicopter = Helicopter.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Helicopter.DeserializeLengthDelimited(stream, instance.helicopter, isDelta);
+					}
+				}
+				break;
+			case 31u:
+				stream.ValidateFieldOrder(ref lastFieldId, 31u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.landmine == null)
+					{
+						instance.landmine = Landmine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Landmine.DeserializeLengthDelimited(stream, instance.landmine, isDelta);
+					}
+				}
+				break;
+			case 32u:
+				stream.ValidateFieldOrder(ref lastFieldId, 32u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.autoturret == null)
+					{
+						instance.autoturret = AutoTurret.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						AutoTurret.DeserializeLengthDelimited(stream, instance.autoturret, isDelta);
+					}
+				}
+				break;
+			case 33u:
+				stream.ValidateFieldOrder(ref lastFieldId, 33u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.sphereEntity == null)
+					{
+						instance.sphereEntity = SphereEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SphereEntity.DeserializeLengthDelimited(stream, instance.sphereEntity, isDelta);
+					}
+				}
+				break;
+			case 34u:
+				stream.ValidateFieldOrder(ref lastFieldId, 34u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.stabilityEntity == null)
+					{
+						instance.stabilityEntity = StabilityEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						StabilityEntity.DeserializeLengthDelimited(stream, instance.stabilityEntity, isDelta);
+					}
+				}
+				break;
+			case 35u:
+				stream.ValidateFieldOrder(ref lastFieldId, 35u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ownerInfo == null)
+					{
+						instance.ownerInfo = OwnerInfo.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						OwnerInfo.DeserializeLengthDelimited(stream, instance.ownerInfo, isDelta);
+					}
+				}
+				break;
+			case 36u:
+				stream.ValidateFieldOrder(ref lastFieldId, 36u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.decayEntity == null)
+					{
+						instance.decayEntity = DecayEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DecayEntity.DeserializeLengthDelimited(stream, instance.decayEntity, isDelta);
+					}
+				}
+				break;
+			case 37u:
+				stream.ValidateFieldOrder(ref lastFieldId, 37u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.spawnable == null)
+					{
+						instance.spawnable = Spawnable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Spawnable.DeserializeLengthDelimited(stream, instance.spawnable, isDelta);
+					}
+				}
+				break;
+			case 38u:
+				stream.ValidateFieldOrder(ref lastFieldId, 38u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.servergib == null)
+					{
+						instance.servergib = ServerGib.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ServerGib.DeserializeLengthDelimited(stream, instance.servergib, isDelta);
+					}
+				}
+				break;
+			case 39u:
+				stream.ValidateFieldOrder(ref lastFieldId, 39u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vendingMachine == null)
+					{
+						instance.vendingMachine = VendingMachine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VendingMachine.DeserializeLengthDelimited(stream, instance.vendingMachine, isDelta);
+					}
+				}
+				break;
+			case 40u:
+				stream.ValidateFieldOrder(ref lastFieldId, 40u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.spinnerWheel == null)
+					{
+						instance.spinnerWheel = SpinnerWheel.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SpinnerWheel.DeserializeLengthDelimited(stream, instance.spinnerWheel, isDelta);
+					}
+				}
+				break;
+			case 41u:
+				stream.ValidateFieldOrder(ref lastFieldId, 41u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.lift == null)
+					{
+						instance.lift = Lift.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Lift.DeserializeLengthDelimited(stream, instance.lift, isDelta);
+					}
+				}
+				break;
+			case 42u:
+				stream.ValidateFieldOrder(ref lastFieldId, 42u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.bradley == null)
+					{
+						instance.bradley = BradleyAPC.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BradleyAPC.DeserializeLengthDelimited(stream, instance.bradley, isDelta);
+					}
+				}
+				break;
+			case 43u:
+				stream.ValidateFieldOrder(ref lastFieldId, 43u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.waterwell == null)
+					{
+						instance.waterwell = WaterWell.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						WaterWell.DeserializeLengthDelimited(stream, instance.waterwell, isDelta);
+					}
+				}
+				break;
+			case 44u:
+				stream.ValidateFieldOrder(ref lastFieldId, 44u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.motorBoat == null)
+					{
+						instance.motorBoat = Motorboat.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Motorboat.DeserializeLengthDelimited(stream, instance.motorBoat, isDelta);
+					}
+				}
+				break;
+			case 45u:
+				stream.ValidateFieldOrder(ref lastFieldId, 45u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ioEntity == null)
+					{
+						instance.ioEntity = IOEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						IOEntity.DeserializeLengthDelimited(stream, instance.ioEntity, isDelta);
+					}
+				}
+				break;
+			case 46u:
+				stream.ValidateFieldOrder(ref lastFieldId, 46u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.puzzleReset == null)
+					{
+						instance.puzzleReset = PuzzleReset.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						PuzzleReset.DeserializeLengthDelimited(stream, instance.puzzleReset, isDelta);
+					}
+				}
+				break;
+			case 47u:
+				stream.ValidateFieldOrder(ref lastFieldId, 47u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.relationshipManager == null)
+					{
+						instance.relationshipManager = RelationshipManager.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						RelationshipManager.DeserializeLengthDelimited(stream, instance.relationshipManager, isDelta);
+					}
+				}
+				break;
+			case 48u:
+				stream.ValidateFieldOrder(ref lastFieldId, 48u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.hotAirBalloon == null)
+					{
+						instance.hotAirBalloon = HotAirBalloon.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						HotAirBalloon.DeserializeLengthDelimited(stream, instance.hotAirBalloon, isDelta);
+					}
+				}
+				break;
+			case 49u:
+				stream.ValidateFieldOrder(ref lastFieldId, 49u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.samSite == null)
+					{
+						instance.samSite = SAMSite.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SAMSite.DeserializeLengthDelimited(stream, instance.samSite, isDelta);
+					}
+				}
+				break;
+			case 50u:
+				stream.ValidateFieldOrder(ref lastFieldId, 50u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.eggHunt == null)
+					{
+						instance.eggHunt = EggHunt.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						EggHunt.DeserializeLengthDelimited(stream, instance.eggHunt, isDelta);
+					}
+				}
+				break;
+			case 51u:
+				stream.ValidateFieldOrder(ref lastFieldId, 51u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.arcadeMachine == null)
+					{
+						instance.arcadeMachine = ArcadeMachine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ArcadeMachine.DeserializeLengthDelimited(stream, instance.arcadeMachine, isDelta);
+					}
+				}
+				break;
+			case 52u:
+				stream.ValidateFieldOrder(ref lastFieldId, 52u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.miniCopter == null)
+					{
+						instance.miniCopter = Minicopter.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Minicopter.DeserializeLengthDelimited(stream, instance.miniCopter, isDelta);
+					}
+				}
+				break;
+			case 53u:
+				stream.ValidateFieldOrder(ref lastFieldId, 53u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.horse == null)
+					{
+						instance.horse = Horse.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Horse.DeserializeLengthDelimited(stream, instance.horse, isDelta);
+					}
+				}
+				break;
+			case 54u:
+				stream.ValidateFieldOrder(ref lastFieldId, 54u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.smartAlarm == null)
+					{
+						instance.smartAlarm = SmartAlarm.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SmartAlarm.DeserializeLengthDelimited(stream, instance.smartAlarm, isDelta);
+					}
+				}
+				break;
+			case 55u:
+				stream.ValidateFieldOrder(ref lastFieldId, 55u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.lightString == null)
+					{
+						instance.lightString = LightString.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						LightString.DeserializeLengthDelimited(stream, instance.lightString, isDelta);
+					}
+				}
+				break;
+			case 56u:
+				stream.ValidateFieldOrder(ref lastFieldId, 56u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.lightDeployer == null)
+					{
+						instance.lightDeployer = LightDeployer.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						LightDeployer.DeserializeLengthDelimited(stream, instance.lightDeployer, isDelta);
+					}
+				}
+				break;
+			case 57u:
+				stream.ValidateFieldOrder(ref lastFieldId, 57u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.rcEntity == null)
+					{
+						instance.rcEntity = RCEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						RCEntity.DeserializeLengthDelimited(stream, instance.rcEntity, isDelta);
+					}
+				}
+				break;
+			case 58u:
+				stream.ValidateFieldOrder(ref lastFieldId, 58u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.computerStation == null)
+					{
+						instance.computerStation = ComputerStation.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ComputerStation.DeserializeLengthDelimited(stream, instance.computerStation, isDelta);
+					}
+				}
+				break;
+			case 59u:
+				stream.ValidateFieldOrder(ref lastFieldId, 59u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.growableEntity == null)
+					{
+						instance.growableEntity = GrowableEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						GrowableEntity.DeserializeLengthDelimited(stream, instance.growableEntity, isDelta);
+					}
+				}
+				break;
+			case 60u:
+				stream.ValidateFieldOrder(ref lastFieldId, 60u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.composter == null)
+					{
+						instance.composter = Composter.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Composter.DeserializeLengthDelimited(stream, instance.composter, isDelta);
+					}
+				}
+				break;
+			case 61u:
+				stream.ValidateFieldOrder(ref lastFieldId, 61u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.modularVehicle == null)
+					{
+						instance.modularVehicle = ModularVehicle.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ModularVehicle.DeserializeLengthDelimited(stream, instance.modularVehicle, isDelta);
+					}
+				}
+				break;
+			case 62u:
+				stream.ValidateFieldOrder(ref lastFieldId, 62u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.modularCar == null)
+					{
+						instance.modularCar = ModularCar.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ModularCar.DeserializeLengthDelimited(stream, instance.modularCar, isDelta);
+					}
+				}
+				break;
+			case 63u:
+				stream.ValidateFieldOrder(ref lastFieldId, 63u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.simpleUID == null)
+					{
+						instance.simpleUID = SimpleUID.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SimpleUID.DeserializeLengthDelimited(stream, instance.simpleUID, isDelta);
+					}
+				}
+				break;
+			case 64u:
+				stream.ValidateFieldOrder(ref lastFieldId, 64u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vehicleLift == null)
+					{
+						instance.vehicleLift = VehicleLift.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VehicleLift.DeserializeLengthDelimited(stream, instance.vehicleLift, isDelta);
+					}
+				}
+				break;
+			case 65u:
+				stream.ValidateFieldOrder(ref lastFieldId, 65u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.engineStorage == null)
+					{
+						instance.engineStorage = EngineStorage.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						EngineStorage.DeserializeLengthDelimited(stream, instance.engineStorage, isDelta);
+					}
+				}
+				break;
+			case 66u:
+				stream.ValidateFieldOrder(ref lastFieldId, 66u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vehicleVendor == null)
+					{
+						instance.vehicleVendor = VehicleVendor.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VehicleVendor.DeserializeLengthDelimited(stream, instance.vehicleVendor, isDelta);
+					}
+				}
+				break;
+			case 67u:
+				stream.ValidateFieldOrder(ref lastFieldId, 67u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.WaterPool == null)
+					{
+						instance.WaterPool = WaterPool.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						WaterPool.DeserializeLengthDelimited(stream, instance.WaterPool, isDelta);
+					}
+				}
+				break;
+			case 68u:
+				stream.ValidateFieldOrder(ref lastFieldId, 68u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.photo == null)
+					{
+						instance.photo = Photo.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Photo.DeserializeLengthDelimited(stream, instance.photo, isDelta);
+					}
+				}
+				break;
+			case 69u:
+				stream.ValidateFieldOrder(ref lastFieldId, 69u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.photoFrame == null)
+					{
+						instance.photoFrame = PhotoFrame.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						PhotoFrame.DeserializeLengthDelimited(stream, instance.photoFrame, isDelta);
+					}
+				}
+				break;
+			case 70u:
+				stream.ValidateFieldOrder(ref lastFieldId, 70u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vehicleModule == null)
+					{
+						instance.vehicleModule = VehicleModule.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VehicleModule.DeserializeLengthDelimited(stream, instance.vehicleModule, isDelta);
+					}
+				}
+				break;
+			case 71u:
+				stream.ValidateFieldOrder(ref lastFieldId, 71u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.mixingTable == null)
+					{
+						instance.mixingTable = MixingTable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MixingTable.DeserializeLengthDelimited(stream, instance.mixingTable, isDelta);
+					}
+				}
+				break;
+			case 72u:
+				stream.ValidateFieldOrder(ref lastFieldId, 72u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.shopKeeper == null)
+					{
+						instance.shopKeeper = ShopKeeper.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ShopKeeper.DeserializeLengthDelimited(stream, instance.shopKeeper, isDelta);
+					}
+				}
+				break;
+			case 73u:
+				stream.ValidateFieldOrder(ref lastFieldId, 73u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.elevator == null)
+					{
+						instance.elevator = Elevator.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Elevator.DeserializeLengthDelimited(stream, instance.elevator, isDelta);
+					}
+				}
+				break;
+			case 74u:
+				stream.ValidateFieldOrder(ref lastFieldId, 74u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.skullTrophy == null)
+					{
+						instance.skullTrophy = SkullTrophy.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SkullTrophy.DeserializeLengthDelimited(stream, instance.skullTrophy, isDelta);
+					}
+				}
+				break;
+			case 75u:
+				stream.ValidateFieldOrder(ref lastFieldId, 75u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.cassette == null)
+					{
+						instance.cassette = Cassette.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Cassette.DeserializeLengthDelimited(stream, instance.cassette, isDelta);
+					}
+				}
+				break;
+			case 76u:
+				stream.ValidateFieldOrder(ref lastFieldId, 76u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.telephone == null)
+					{
+						instance.telephone = Telephone.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Telephone.DeserializeLengthDelimited(stream, instance.telephone, isDelta);
+					}
+				}
+				break;
+			case 77u:
+				stream.ValidateFieldOrder(ref lastFieldId, 77u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.boomBox == null)
+					{
+						instance.boomBox = BoomBox.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BoomBox.DeserializeLengthDelimited(stream, instance.boomBox, isDelta);
+					}
+				}
+				break;
+			case 78u:
+				stream.ValidateFieldOrder(ref lastFieldId, 78u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.neonSign == null)
+					{
+						instance.neonSign = NeonSign.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						NeonSign.DeserializeLengthDelimited(stream, instance.neonSign, isDelta);
+					}
+				}
+				break;
+			case 79u:
+				stream.ValidateFieldOrder(ref lastFieldId, 79u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.subEntityList == null)
+					{
+						instance.subEntityList = SubEntityList.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SubEntityList.DeserializeLengthDelimited(stream, instance.subEntityList, isDelta);
+					}
+				}
+				break;
+			case 80u:
+				stream.ValidateFieldOrder(ref lastFieldId, 80u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.marketTerminal == null)
+					{
+						instance.marketTerminal = MarketTerminal.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MarketTerminal.DeserializeLengthDelimited(stream, instance.marketTerminal, isDelta);
+					}
+				}
+				break;
+			case 81u:
+				stream.ValidateFieldOrder(ref lastFieldId, 81u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.deliveryDrone == null)
+					{
+						instance.deliveryDrone = DeliveryDrone.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DeliveryDrone.DeserializeLengthDelimited(stream, instance.deliveryDrone, isDelta);
+					}
+				}
+				break;
+			case 82u:
+				stream.ValidateFieldOrder(ref lastFieldId, 82u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.reclaimTerminal == null)
+					{
+						instance.reclaimTerminal = ReclaimTerminal.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ReclaimTerminal.DeserializeLengthDelimited(stream, instance.reclaimTerminal, isDelta);
+					}
+				}
+				break;
+			case 83u:
+				stream.ValidateFieldOrder(ref lastFieldId, 83u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.slotMachine == null)
+					{
+						instance.slotMachine = SlotMachine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SlotMachine.DeserializeLengthDelimited(stream, instance.slotMachine, isDelta);
+					}
+				}
+				break;
+			case 84u:
+				stream.ValidateFieldOrder(ref lastFieldId, 84u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.trainEngine == null)
+					{
+						instance.trainEngine = TrainEngine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TrainEngine.DeserializeLengthDelimited(stream, instance.trainEngine, isDelta);
+					}
+				}
+				break;
+			case 85u:
+				stream.ValidateFieldOrder(ref lastFieldId, 85u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.cardGame == null)
+					{
+						instance.cardGame = CardGame.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CardGame.DeserializeLengthDelimited(stream, instance.cardGame, isDelta);
+					}
+				}
+				break;
+			case 86u:
+				stream.ValidateFieldOrder(ref lastFieldId, 86u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.crane == null)
+					{
+						instance.crane = Crane.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Crane.DeserializeLengthDelimited(stream, instance.crane, isDelta);
+					}
+				}
+				break;
+			case 87u:
+				stream.ValidateFieldOrder(ref lastFieldId, 87u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.connectedSpeaker == null)
+					{
+						instance.connectedSpeaker = ConnectedSpeaker.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ConnectedSpeaker.DeserializeLengthDelimited(stream, instance.connectedSpeaker, isDelta);
+					}
+				}
+				break;
+			case 88u:
+				stream.ValidateFieldOrder(ref lastFieldId, 88u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.audioEntity == null)
+					{
+						instance.audioEntity = AudioEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						AudioEntity.DeserializeLengthDelimited(stream, instance.audioEntity, isDelta);
+					}
+				}
+				break;
+			case 89u:
+				stream.ValidateFieldOrder(ref lastFieldId, 89u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.microphoneStand == null)
+					{
+						instance.microphoneStand = MicrophoneStand.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MicrophoneStand.DeserializeLengthDelimited(stream, instance.microphoneStand, isDelta);
+					}
+				}
+				break;
+			case 90u:
+				stream.ValidateFieldOrder(ref lastFieldId, 90u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.submarine == null)
+					{
+						instance.submarine = Submarine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Submarine.DeserializeLengthDelimited(stream, instance.submarine, isDelta);
+					}
+				}
+				break;
+			case 91u:
+				stream.ValidateFieldOrder(ref lastFieldId, 91u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.sleepingBagCamper == null)
+					{
+						instance.sleepingBagCamper = SleepingBagCamper.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SleepingBagCamper.DeserializeLengthDelimited(stream, instance.sleepingBagCamper, isDelta);
+					}
+				}
+				break;
+			case 92u:
+				stream.ValidateFieldOrder(ref lastFieldId, 92u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.camperModule == null)
+					{
+						instance.camperModule = CamperModule.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CamperModule.DeserializeLengthDelimited(stream, instance.camperModule, isDelta);
+					}
+				}
+				break;
+			case 93u:
+				stream.ValidateFieldOrder(ref lastFieldId, 93u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.paintableSign == null)
+					{
+						instance.paintableSign = PaintableSign.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						PaintableSign.DeserializeLengthDelimited(stream, instance.paintableSign, isDelta);
+					}
+				}
+				break;
+			case 94u:
+				stream.ValidateFieldOrder(ref lastFieldId, 94u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.whitelist == null)
+					{
+						instance.whitelist = Whitelist.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Whitelist.DeserializeLengthDelimited(stream, instance.whitelist, isDelta);
+					}
+				}
+				break;
+			case 95u:
+				stream.ValidateFieldOrder(ref lastFieldId, 95u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.FrankensteinTable == null)
+					{
+						instance.FrankensteinTable = FrankensteinTable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						FrankensteinTable.DeserializeLengthDelimited(stream, instance.FrankensteinTable, isDelta);
+					}
+				}
+				break;
+			case 96u:
+				stream.ValidateFieldOrder(ref lastFieldId, 96u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.mlrs == null)
+					{
+						instance.mlrs = MLRS.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MLRS.DeserializeLengthDelimited(stream, instance.mlrs, isDelta);
+					}
+				}
+				break;
+			case 97u:
+				stream.ValidateFieldOrder(ref lastFieldId, 97u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.reclaimManager == null)
+					{
+						instance.reclaimManager = ReclaimManager.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ReclaimManager.DeserializeLengthDelimited(stream, instance.reclaimManager, isDelta);
+					}
+				}
+				break;
+			case 98u:
+				stream.ValidateFieldOrder(ref lastFieldId, 98u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.gameMode == null)
+					{
+						instance.gameMode = GameMode.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						GameMode.DeserializeLengthDelimited(stream, instance.gameMode, isDelta);
+					}
+				}
+				break;
+			case 99u:
+				stream.ValidateFieldOrder(ref lastFieldId, 99u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.snowmobile == null)
+					{
+						instance.snowmobile = Snowmobile.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Snowmobile.DeserializeLengthDelimited(stream, instance.snowmobile, isDelta);
+					}
+				}
+				break;
+			case 100u:
+				stream.ValidateFieldOrder(ref lastFieldId, 100u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.Varint)
+				{
+					instance.createdThisFrame = ProtocolParser.ReadBool(stream);
+				}
+				break;
+			case 101u:
+				stream.ValidateFieldOrder(ref lastFieldId, 101u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.patternFirework == null)
+					{
+						instance.patternFirework = PatternFirework.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						PatternFirework.DeserializeLengthDelimited(stream, instance.patternFirework, isDelta);
+					}
+				}
+				break;
+			case 102u:
+				stream.ValidateFieldOrder(ref lastFieldId, 102u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.cargoPlane == null)
+					{
+						instance.cargoPlane = CargoPlane.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CargoPlane.DeserializeLengthDelimited(stream, instance.cargoPlane, isDelta);
+					}
+				}
+				break;
+			case 103u:
+				stream.ValidateFieldOrder(ref lastFieldId, 103u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.paintedItem == null)
+					{
+						instance.paintedItem = PaintedItem.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						PaintedItem.DeserializeLengthDelimited(stream, instance.paintedItem, isDelta);
+					}
+				}
+				break;
+			case 104u:
+				stream.ValidateFieldOrder(ref lastFieldId, 104u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.clanManager == null)
+					{
+						instance.clanManager = ClanManager.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ClanManager.DeserializeLengthDelimited(stream, instance.clanManager, isDelta);
+					}
+				}
+				break;
+			case 105u:
+				stream.ValidateFieldOrder(ref lastFieldId, 105u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.spray == null)
+					{
+						instance.spray = Spray.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Spray.DeserializeLengthDelimited(stream, instance.spray, isDelta);
+					}
+				}
+				break;
+			case 106u:
+				stream.ValidateFieldOrder(ref lastFieldId, 106u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseTrain == null)
+					{
+						instance.baseTrain = BaseTrain.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseTrain.DeserializeLengthDelimited(stream, instance.baseTrain, isDelta);
+					}
+				}
+				break;
+			case 107u:
+				stream.ValidateFieldOrder(ref lastFieldId, 107u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.zipline == null)
+					{
+						instance.zipline = Zipline.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Zipline.DeserializeLengthDelimited(stream, instance.zipline, isDelta);
+					}
+				}
+				break;
+			case 108u:
+				stream.ValidateFieldOrder(ref lastFieldId, 108u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ziplineMountable == null)
+					{
+						instance.ziplineMountable = ZiplineMountable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ZiplineMountable.DeserializeLengthDelimited(stream, instance.ziplineMountable, isDelta);
+					}
+				}
+				break;
+			case 109u:
+				stream.ValidateFieldOrder(ref lastFieldId, 109u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ZiplineArrival == null)
+					{
+						instance.ZiplineArrival = ZiplineArrivalPoint.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ZiplineArrivalPoint.DeserializeLengthDelimited(stream, instance.ZiplineArrival, isDelta);
+					}
+				}
+				break;
+			case 110u:
+				stream.ValidateFieldOrder(ref lastFieldId, 110u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.sprayLine == null)
+					{
+						instance.sprayLine = SprayLine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SprayLine.DeserializeLengthDelimited(stream, instance.sprayLine, isDelta);
+					}
+				}
+				break;
+			case 111u:
+				stream.ValidateFieldOrder(ref lastFieldId, 111u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.coalingTower == null)
+					{
+						instance.coalingTower = CoalingTower.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CoalingTower.DeserializeLengthDelimited(stream, instance.coalingTower, isDelta);
+					}
+				}
+				break;
+			case 112u:
+				stream.ValidateFieldOrder(ref lastFieldId, 112u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.simpleInt == null)
+					{
+						instance.simpleInt = SimpleInt.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SimpleInt.DeserializeLengthDelimited(stream, instance.simpleInt, isDelta);
+					}
+				}
+				break;
+			case 113u:
+				stream.ValidateFieldOrder(ref lastFieldId, 113u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseOven == null)
+					{
+						instance.baseOven = BaseOven.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseOven.DeserializeLengthDelimited(stream, instance.baseOven, isDelta);
+					}
+				}
+				break;
+			case 114u:
+				stream.ValidateFieldOrder(ref lastFieldId, 114u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.brainComponent == null)
+					{
+						instance.brainComponent = BrainComponent.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BrainComponent.DeserializeLengthDelimited(stream, instance.brainComponent, isDelta);
+					}
+				}
+				break;
+			case 115u:
+				stream.ValidateFieldOrder(ref lastFieldId, 115u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.proceduralDungeon == null)
+					{
+						instance.proceduralDungeon = ProceduralDungeon.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ProceduralDungeon.DeserializeLengthDelimited(stream, instance.proceduralDungeon, isDelta);
+					}
+				}
+				break;
+			case 116u:
+				stream.ValidateFieldOrder(ref lastFieldId, 116u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.industrialConveyor == null)
+					{
+						instance.industrialConveyor = IndustrialConveyor.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						IndustrialConveyor.DeserializeLengthDelimited(stream, instance.industrialConveyor, isDelta);
+					}
+				}
+				break;
+			case 117u:
+				stream.ValidateFieldOrder(ref lastFieldId, 117u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.industrialCrafter == null)
+					{
+						instance.industrialCrafter = IndustrialCrafter.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						IndustrialCrafter.DeserializeLengthDelimited(stream, instance.industrialCrafter, isDelta);
+					}
+				}
+				break;
+			case 118u:
+				stream.ValidateFieldOrder(ref lastFieldId, 118u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.drone == null)
+					{
+						instance.drone = Drone.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Drone.DeserializeLengthDelimited(stream, instance.drone, isDelta);
+					}
+				}
+				break;
+			case 119u:
+				stream.ValidateFieldOrder(ref lastFieldId, 119u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.explosive == null)
+					{
+						instance.explosive = TimedExplosive.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TimedExplosive.DeserializeLengthDelimited(stream, instance.explosive, isDelta);
+					}
+				}
+				break;
+			case 120u:
+				stream.ValidateFieldOrder(ref lastFieldId, 120u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.simpleUint == null)
+					{
+						instance.simpleUint = SimpleUInt.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SimpleUInt.DeserializeLengthDelimited(stream, instance.simpleUint, isDelta);
+					}
+				}
+				break;
+			case 121u:
+				stream.ValidateFieldOrder(ref lastFieldId, 121u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.weaponRack == null)
+					{
+						instance.weaponRack = WeaponRack.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						WeaponRack.DeserializeLengthDelimited(stream, instance.weaponRack, isDelta);
+					}
+				}
+				break;
+			case 122u:
+				stream.ValidateFieldOrder(ref lastFieldId, 122u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.attackHeli == null)
+					{
+						instance.attackHeli = AttackHeli.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						AttackHeli.DeserializeLengthDelimited(stream, instance.attackHeli, isDelta);
+					}
+				}
+				break;
+			case 123u:
+				stream.ValidateFieldOrder(ref lastFieldId, 123u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.attackHeliTurret == null)
+					{
+						instance.attackHeliTurret = AttackHeliTurret.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						AttackHeliTurret.DeserializeLengthDelimited(stream, instance.attackHeliTurret, isDelta);
+					}
+				}
+				break;
+			case 124u:
+				stream.ValidateFieldOrder(ref lastFieldId, 124u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.attackHeliRockets == null)
+					{
+						instance.attackHeliRockets = AttackHeliRockets.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						AttackHeliRockets.DeserializeLengthDelimited(stream, instance.attackHeliRockets, isDelta);
+					}
+				}
+				break;
+			case 125u:
+				stream.ValidateFieldOrder(ref lastFieldId, 125u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseBoat == null)
+					{
+						instance.baseBoat = BaseBoat.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseBoat.DeserializeLengthDelimited(stream, instance.baseBoat, isDelta);
+					}
+				}
+				break;
+			case 126u:
+				stream.ValidateFieldOrder(ref lastFieldId, 126u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ragdoll == null)
+					{
+						instance.ragdoll = Ragdoll.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Ragdoll.DeserializeLengthDelimited(stream, instance.ragdoll, isDelta);
+					}
+				}
+				break;
+			case 127u:
+				stream.ValidateFieldOrder(ref lastFieldId, 127u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.dieselEngine == null)
+					{
+						instance.dieselEngine = DieselEngine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DieselEngine.DeserializeLengthDelimited(stream, instance.dieselEngine, isDelta);
+					}
+				}
+				break;
+			case 150u:
+				stream.ValidateFieldOrder(ref lastFieldId, 150u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.associatedFiles == null)
+					{
+						instance.associatedFiles = AssociatedFiles.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						AssociatedFiles.DeserializeLengthDelimited(stream, instance.associatedFiles, isDelta);
+					}
+				}
+				break;
+			case 151u:
+				stream.ValidateFieldOrder(ref lastFieldId, 151u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.nexusFerry == null)
+					{
+						instance.nexusFerry = NexusFerry.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						NexusFerry.DeserializeLengthDelimited(stream, instance.nexusFerry, isDelta);
+					}
+				}
+				break;
+			case 152u:
+				stream.ValidateFieldOrder(ref lastFieldId, 152u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.nexusIsland == null)
+					{
+						instance.nexusIsland = NexusIsland.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						NexusIsland.DeserializeLengthDelimited(stream, instance.nexusIsland, isDelta);
+					}
+				}
+				break;
+			case 153u:
+				stream.ValidateFieldOrder(ref lastFieldId, 153u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.nexusDockTerminal == null)
+					{
+						instance.nexusDockTerminal = NexusDockTerminal.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						NexusDockTerminal.DeserializeLengthDelimited(stream, instance.nexusDockTerminal, isDelta);
+					}
+				}
+				break;
+			case 154u:
+				stream.ValidateFieldOrder(ref lastFieldId, 154u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.rockingChair == null)
+					{
+						instance.rockingChair = RockingChair.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						RockingChair.DeserializeLengthDelimited(stream, instance.rockingChair, isDelta);
+					}
+				}
+				break;
+			case 155u:
+				stream.ValidateFieldOrder(ref lastFieldId, 155u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.headData == null)
+					{
+						instance.headData = HeadData.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						HeadData.DeserializeLengthDelimited(stream, instance.headData, isDelta);
+					}
+				}
+				break;
+			case 156u:
+				stream.ValidateFieldOrder(ref lastFieldId, 156u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.wantedPoster == null)
+					{
+						instance.wantedPoster = WantedPoster.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						WantedPoster.DeserializeLengthDelimited(stream, instance.wantedPoster, isDelta);
+					}
+				}
+				break;
+			case 158u:
+				stream.ValidateFieldOrder(ref lastFieldId, 158u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.waypointRace == null)
+					{
+						instance.waypointRace = WaypointRace.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						WaypointRace.DeserializeLengthDelimited(stream, instance.waypointRace, isDelta);
+					}
+				}
+				break;
+			case 159u:
+				stream.ValidateFieldOrder(ref lastFieldId, 159u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.legacyShelter == null)
+					{
+						instance.legacyShelter = LegacyShelter.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						LegacyShelter.DeserializeLengthDelimited(stream, instance.legacyShelter, isDelta);
+					}
+				}
+				break;
+			case 160u:
+				stream.ValidateFieldOrder(ref lastFieldId, 160u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.metalDetectorSource == null)
+					{
+						instance.metalDetectorSource = MetalDetectorSource.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MetalDetectorSource.DeserializeLengthDelimited(stream, instance.metalDetectorSource, isDelta);
+					}
+				}
+				break;
+			case 161u:
+				stream.ValidateFieldOrder(ref lastFieldId, 161u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.tutorialIsland == null)
+					{
+						instance.tutorialIsland = TutorialIsland.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TutorialIsland.DeserializeLengthDelimited(stream, instance.tutorialIsland, isDelta);
+					}
+				}
+				break;
+			case 162u:
+				stream.ValidateFieldOrder(ref lastFieldId, 162u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.cinematicEntity == null)
+					{
+						instance.cinematicEntity = CinematicEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CinematicEntity.DeserializeLengthDelimited(stream, instance.cinematicEntity, isDelta);
+					}
+				}
+				break;
+			case 163u:
+				stream.ValidateFieldOrder(ref lastFieldId, 163u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.buildingPrivilegeRetro == null)
+					{
+						instance.buildingPrivilegeRetro = BuildingPrivilegeRetro.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BuildingPrivilegeRetro.DeserializeLengthDelimited(stream, instance.buildingPrivilegeRetro, isDelta);
+					}
+				}
+				break;
+			case 164u:
+				stream.ValidateFieldOrder(ref lastFieldId, 164u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.harborCrane == null)
+					{
+						instance.harborCrane = HarborCrane.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						HarborCrane.DeserializeLengthDelimited(stream, instance.harborCrane, isDelta);
+					}
+				}
+				break;
+			case 165u:
+				stream.ValidateFieldOrder(ref lastFieldId, 165u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.cargoShip == null)
+					{
+						instance.cargoShip = CargoShip.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CargoShip.DeserializeLengthDelimited(stream, instance.cargoShip, isDelta);
+					}
+				}
+				break;
+			case 166u:
+				stream.ValidateFieldOrder(ref lastFieldId, 166u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.cargoShipContainer == null)
+					{
+						instance.cargoShipContainer = CargoShipContainer.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CargoShipContainer.DeserializeLengthDelimited(stream, instance.cargoShipContainer, isDelta);
+					}
+				}
+				break;
+			case 167u:
+				stream.ValidateFieldOrder(ref lastFieldId, 167u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.missionMapMarker == null)
+					{
+						instance.missionMapMarker = MissionMapMarker.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MissionMapMarker.DeserializeLengthDelimited(stream, instance.missionMapMarker, isDelta);
+					}
+				}
+				break;
+			case 168u:
+				stream.ValidateFieldOrder(ref lastFieldId, 168u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.bike == null)
+					{
+						instance.bike = Bike.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Bike.DeserializeLengthDelimited(stream, instance.bike, isDelta);
+					}
+				}
+				break;
+			case 169u:
+				stream.ValidateFieldOrder(ref lastFieldId, 169u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.diverPropulsionVehicle == null)
+					{
+						instance.diverPropulsionVehicle = DiverPropulsionVehicle.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DiverPropulsionVehicle.DeserializeLengthDelimited(stream, instance.diverPropulsionVehicle, isDelta);
+					}
+				}
+				break;
+			case 174u:
+				stream.ValidateFieldOrder(ref lastFieldId, 174u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.travellingVendor == null)
+					{
+						instance.travellingVendor = TravellingVendor.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TravellingVendor.DeserializeLengthDelimited(stream, instance.travellingVendor, isDelta);
+					}
+				}
+				break;
+			case 175u:
+				stream.ValidateFieldOrder(ref lastFieldId, 175u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vendingDynamicPricing == null)
+					{
+						instance.vendingDynamicPricing = VendingDynamicPricing.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VendingDynamicPricing.DeserializeLengthDelimited(stream, instance.vendingDynamicPricing, isDelta);
+					}
+				}
+				break;
+			case 176u:
+				stream.ValidateFieldOrder(ref lastFieldId, 176u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.tinCanAlarm == null)
+					{
+						instance.tinCanAlarm = TinCanAlarm.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TinCanAlarm.DeserializeLengthDelimited(stream, instance.tinCanAlarm, isDelta);
+					}
+				}
+				break;
+			case 177u:
+				stream.ValidateFieldOrder(ref lastFieldId, 177u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.digitalClock == null)
+					{
+						instance.digitalClock = DigitalClock.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DigitalClock.DeserializeLengthDelimited(stream, instance.digitalClock, isDelta);
+					}
+				}
+				break;
+			case 178u:
+				stream.ValidateFieldOrder(ref lastFieldId, 178u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.elevatorLift == null)
+					{
+						instance.elevatorLift = ElevatorLift.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ElevatorLift.DeserializeLengthDelimited(stream, instance.elevatorLift, isDelta);
+					}
+				}
+				break;
+			case 179u:
+				stream.ValidateFieldOrder(ref lastFieldId, 179u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.npcVendingMachine == null)
+					{
+						instance.npcVendingMachine = NPCVendingMachine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						NPCVendingMachine.DeserializeLengthDelimited(stream, instance.npcVendingMachine, isDelta);
+					}
+				}
+				break;
+			case 180u:
+				stream.ValidateFieldOrder(ref lastFieldId, 180u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.mailbox == null)
+					{
+						instance.mailbox = Mailbox.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Mailbox.DeserializeLengthDelimited(stream, instance.mailbox, isDelta);
+					}
+				}
+				break;
+			case 181u:
+				stream.ValidateFieldOrder(ref lastFieldId, 181u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.projectileWeaponMod == null)
+					{
+						instance.projectileWeaponMod = GunWeaponMod.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						GunWeaponMod.DeserializeLengthDelimited(stream, instance.projectileWeaponMod, isDelta);
+					}
+				}
+				break;
+			case 182u:
+				stream.ValidateFieldOrder(ref lastFieldId, 182u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseSculpture == null)
+					{
+						instance.baseSculpture = BaseSculpture.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseSculpture.DeserializeLengthDelimited(stream, instance.baseSculpture, isDelta);
+					}
+				}
+				break;
+			case 183u:
+				stream.ValidateFieldOrder(ref lastFieldId, 183u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vendingMachineStats == null)
+					{
+						instance.vendingMachineStats = VendingMachineStats.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VendingMachineStats.DeserializeLengthDelimited(stream, instance.vendingMachineStats, isDelta);
+					}
+				}
+				break;
+			case 184u:
+				stream.ValidateFieldOrder(ref lastFieldId, 184u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.catapult == null)
+					{
+						instance.catapult = Catapult.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Catapult.DeserializeLengthDelimited(stream, instance.catapult, isDelta);
+					}
+				}
+				break;
+			case 185u:
+				stream.ValidateFieldOrder(ref lastFieldId, 185u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.siegeTower == null)
+					{
+						instance.siegeTower = SiegeTower.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SiegeTower.DeserializeLengthDelimited(stream, instance.siegeTower, isDelta);
+					}
+				}
+				break;
+			case 186u:
+				stream.ValidateFieldOrder(ref lastFieldId, 186u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ballista == null)
+					{
+						instance.ballista = Ballista.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Ballista.DeserializeLengthDelimited(stream, instance.ballista, isDelta);
+					}
+				}
+				break;
+			case 187u:
+				stream.ValidateFieldOrder(ref lastFieldId, 187u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ballistaGun == null)
+					{
+						instance.ballistaGun = BallistaGun.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BallistaGun.DeserializeLengthDelimited(stream, instance.ballistaGun, isDelta);
+					}
+				}
+				break;
+			case 188u:
+				stream.ValidateFieldOrder(ref lastFieldId, 188u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.batteringRam == null)
+					{
+						instance.batteringRam = BatteringRam.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BatteringRam.DeserializeLengthDelimited(stream, instance.batteringRam, isDelta);
+					}
+				}
+				break;
+			case 189u:
+				stream.ValidateFieldOrder(ref lastFieldId, 189u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.temporaryRagdoll == null)
+					{
+						instance.temporaryRagdoll = TemporaryRagdoll.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TemporaryRagdoll.DeserializeLengthDelimited(stream, instance.temporaryRagdoll, isDelta);
+					}
+				}
+				break;
+			case 191u:
+				stream.ValidateFieldOrder(ref lastFieldId, 191u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.constructableEntity == null)
+					{
+						instance.constructableEntity = ConstructableEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ConstructableEntity.DeserializeLengthDelimited(stream, instance.constructableEntity, isDelta);
+					}
+				}
+				break;
+			case 192u:
+				stream.ValidateFieldOrder(ref lastFieldId, 192u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.chickenCoop == null)
+					{
+						instance.chickenCoop = ChickenCoop.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ChickenCoop.DeserializeLengthDelimited(stream, instance.chickenCoop, isDelta);
+					}
+				}
+				break;
+			case 193u:
+				stream.ValidateFieldOrder(ref lastFieldId, 193u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.farmableAnimal == null)
+					{
+						instance.farmableAnimal = FarmableAnimal.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						FarmableAnimal.DeserializeLengthDelimited(stream, instance.farmableAnimal, isDelta);
+					}
+				}
+				break;
+			case 194u:
+				stream.ValidateFieldOrder(ref lastFieldId, 194u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ownership == null)
+					{
+						instance.ownership = ItemOwnershipAmount.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ItemOwnershipAmount.DeserializeLengthDelimited(stream, instance.ownership, isDelta);
+					}
+				}
+				break;
+			case 195u:
+				stream.ValidateFieldOrder(ref lastFieldId, 195u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.beehive == null)
+					{
+						instance.beehive = Beehive.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Beehive.DeserializeLengthDelimited(stream, instance.beehive, isDelta);
+					}
+				}
+				break;
+			case 196u:
+				stream.ValidateFieldOrder(ref lastFieldId, 196u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.beeMasterSwarm == null)
+					{
+						instance.beeMasterSwarm = BeeMasterSwarm.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BeeMasterSwarm.DeserializeLengthDelimited(stream, instance.beeMasterSwarm, isDelta);
+					}
+				}
+				break;
+			case 197u:
+				stream.ValidateFieldOrder(ref lastFieldId, 197u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.containerCorpse == null)
+					{
+						instance.containerCorpse = ContainerCorpseData.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ContainerCorpseData.DeserializeLengthDelimited(stream, instance.containerCorpse, isDelta);
+					}
+				}
+				break;
+			case 198u:
+				stream.ValidateFieldOrder(ref lastFieldId, 198u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.npcTargetState == null)
+					{
+						instance.npcTargetState = NPCTargetState.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						NPCTargetState.DeserializeLengthDelimited(stream, instance.npcTargetState, isDelta);
+					}
+				}
+				break;
+			case 199u:
+				stream.ValidateFieldOrder(ref lastFieldId, 199u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vineMountable == null)
+					{
+						instance.vineMountable = VineMountable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VineMountable.DeserializeLengthDelimited(stream, instance.vineMountable, isDelta);
+					}
+				}
+				break;
+			case 200u:
+				stream.ValidateFieldOrder(ref lastFieldId, 200u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vineTree == null)
+					{
+						instance.vineTree = VineTree.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VineTree.DeserializeLengthDelimited(stream, instance.vineTree, isDelta);
+					}
+				}
+				break;
+			case 201u:
+				stream.ValidateFieldOrder(ref lastFieldId, 201u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.treeRespawn == null)
+					{
+						instance.treeRespawn = TreeRespawn.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TreeRespawn.DeserializeLengthDelimited(stream, instance.treeRespawn, isDelta);
+					}
+				}
+				break;
+			case 202u:
+				stream.ValidateFieldOrder(ref lastFieldId, 202u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.wallpaperTool == null)
+					{
+						instance.wallpaperTool = WallpaperTool.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						WallpaperTool.DeserializeLengthDelimited(stream, instance.wallpaperTool, isDelta);
+					}
+				}
+				break;
+			case 203u:
+				stream.ValidateFieldOrder(ref lastFieldId, 203u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.commandBlock == null)
+					{
+						instance.commandBlock = CommandBlock.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CommandBlock.DeserializeLengthDelimited(stream, instance.commandBlock, isDelta);
+					}
+				}
+				break;
+			case 204u:
+				stream.ValidateFieldOrder(ref lastFieldId, 204u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.staticRespawn == null)
+					{
+						instance.staticRespawn = StaticRespawnAreaData.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						StaticRespawnAreaData.DeserializeLengthDelimited(stream, instance.staticRespawn, isDelta);
+					}
+				}
+				break;
+			case 205u:
+				stream.ValidateFieldOrder(ref lastFieldId, 205u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.buriedItemStorage == null)
+					{
+						instance.buriedItemStorage = BuriedItems.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BuriedItems.DeserializeLengthDelimited(stream, instance.buriedItemStorage, isDelta);
+					}
+				}
+				break;
+			case 206u:
+				stream.ValidateFieldOrder(ref lastFieldId, 206u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.mannequin == null)
+					{
+						instance.mannequin = Mannequin.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Mannequin.DeserializeLengthDelimited(stream, instance.mannequin, isDelta);
+					}
+				}
+				break;
+			case 207u:
+				stream.ValidateFieldOrder(ref lastFieldId, 207u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseMelee == null)
+					{
+						instance.baseMelee = BaseMelee.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseMelee.DeserializeLengthDelimited(stream, instance.baseMelee, isDelta);
+					}
+				}
+				break;
+			case 208u:
+				stream.ValidateFieldOrder(ref lastFieldId, 208u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.door == null)
+					{
+						instance.door = Door.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Door.DeserializeLengthDelimited(stream, instance.door, isDelta);
+					}
+				}
+				break;
+			case 209u:
+				stream.ValidateFieldOrder(ref lastFieldId, 209u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.deepSeaPortal == null)
+					{
+						instance.deepSeaPortal = DeepSeaPortal.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DeepSeaPortal.DeserializeLengthDelimited(stream, instance.deepSeaPortal, isDelta);
+					}
+				}
+				break;
+			case 211u:
+				stream.ValidateFieldOrder(ref lastFieldId, 211u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseMountable == null)
+					{
+						instance.baseMountable = BaseMountable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseMountable.DeserializeLengthDelimited(stream, instance.baseMountable, isDelta);
+					}
+				}
+				break;
+			case 212u:
+				stream.ValidateFieldOrder(ref lastFieldId, 212u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.smallEngine == null)
+					{
+						instance.smallEngine = SmallEngine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SmallEngine.DeserializeLengthDelimited(stream, instance.smallEngine, isDelta);
+					}
+				}
+				break;
+			case 213u:
+				stream.ValidateFieldOrder(ref lastFieldId, 213u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.playerBoat == null)
+					{
+						instance.playerBoat = PlayerBoat.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						PlayerBoat.DeserializeLengthDelimited(stream, instance.playerBoat, isDelta);
+					}
+				}
+				break;
+			case 214u:
+				stream.ValidateFieldOrder(ref lastFieldId, 214u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.steeringWheel == null)
+					{
+						instance.steeringWheel = SteeringWheel.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SteeringWheel.DeserializeLengthDelimited(stream, instance.steeringWheel, isDelta);
+					}
+				}
+				break;
+			case 215u:
+				stream.ValidateFieldOrder(ref lastFieldId, 215u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.deepSeaManager == null)
+					{
+						instance.deepSeaManager = DeepSeaManager.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DeepSeaManager.DeserializeLengthDelimited(stream, instance.deepSeaManager, isDelta);
+					}
+				}
+				break;
+			case 216u:
+				stream.ValidateFieldOrder(ref lastFieldId, 216u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.scientistBoatOilrigManager == null)
+					{
+						instance.scientistBoatOilrigManager = ScientistBoatOilrigManager.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ScientistBoatOilrigManager.DeserializeLengthDelimited(stream, instance.scientistBoatOilrigManager, isDelta);
+					}
+				}
+				break;
+			case 217u:
+				stream.ValidateFieldOrder(ref lastFieldId, 217u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.storageAdaptor == null)
+					{
+						instance.storageAdaptor = StorageAdaptor.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						StorageAdaptor.DeserializeLengthDelimited(stream, instance.storageAdaptor, isDelta);
+					}
+				}
+				break;
+			case 218u:
+				stream.ValidateFieldOrder(ref lastFieldId, 218u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.helicopterFlares == null)
+					{
+						instance.helicopterFlares = HelicopterFlares.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						HelicopterFlares.DeserializeLengthDelimited(stream, instance.helicopterFlares, isDelta);
+					}
+				}
+				break;
+			case 219u:
+				stream.ValidateFieldOrder(ref lastFieldId, 219u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.wipeLaptop == null)
+					{
+						instance.wipeLaptop = WipeLaptop.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						WipeLaptop.DeserializeLengthDelimited(stream, instance.wipeLaptop, isDelta);
+					}
+				}
+				break;
+			case 220u:
+				stream.ValidateFieldOrder(ref lastFieldId, 220u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.mountedWeapon == null)
+					{
+						instance.mountedWeapon = MountedWeapon.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MountedWeapon.DeserializeLengthDelimited(stream, instance.mountedWeapon, isDelta);
+					}
+				}
+				break;
+			case 221u:
+				stream.ValidateFieldOrder(ref lastFieldId, 221u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.boatBuildingBlock == null)
+					{
+						instance.boatBuildingBlock = BoatBuildingBlock.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BoatBuildingBlock.DeserializeLengthDelimited(stream, instance.boatBuildingBlock, isDelta);
+					}
+				}
+				break;
+			case 222u:
+				stream.ValidateFieldOrder(ref lastFieldId, 222u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.boatBuildingStation == null)
+					{
+						instance.boatBuildingStation = BoatBuildingStation.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BoatBuildingStation.DeserializeLengthDelimited(stream, instance.boatBuildingStation, isDelta);
+					}
+				}
+				break;
+			case 223u:
+				stream.ValidateFieldOrder(ref lastFieldId, 223u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.displayingBoxStorage == null)
+					{
+						instance.displayingBoxStorage = DisplayingBoxStorage.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DisplayingBoxStorage.DeserializeLengthDelimited(stream, instance.displayingBoxStorage, isDelta);
+					}
+				}
+				break;
+			case 224u:
+				stream.ValidateFieldOrder(ref lastFieldId, 224u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.workbench == null)
+					{
+						instance.workbench = Workbench.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Workbench.DeserializeLengthDelimited(stream, instance.workbench, isDelta);
+					}
+				}
+				break;
+			case 225u:
+				stream.ValidateFieldOrder(ref lastFieldId, 225u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.apartmentLock == null)
+					{
+						instance.apartmentLock = ApartmentLock.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ApartmentLock.DeserializeLengthDelimited(stream, instance.apartmentLock, isDelta);
+					}
+				}
+				break;
+			case 226u:
+				stream.ValidateFieldOrder(ref lastFieldId, 226u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.rentableShop == null)
+					{
+						instance.rentableShop = RentableShop.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						RentableShop.DeserializeLengthDelimited(stream, instance.rentableShop, isDelta);
+					}
+				}
+				break;
+			case 227u:
+				stream.ValidateFieldOrder(ref lastFieldId, 227u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.apartmentRoom == null)
+					{
+						instance.apartmentRoom = ApartmentRoom.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ApartmentRoom.DeserializeLengthDelimited(stream, instance.apartmentRoom, isDelta);
+					}
+				}
+				break;
+			case 228u:
+				stream.ValidateFieldOrder(ref lastFieldId, 228u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.apartmentBuilding == null)
+					{
+						instance.apartmentBuilding = ApartmentBuilding.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ApartmentBuilding.DeserializeLengthDelimited(stream, instance.apartmentBuilding, isDelta);
+					}
+				}
+				break;
+			case 229u:
+				stream.ValidateFieldOrder(ref lastFieldId, 229u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.apartmentUpkeep == null)
+					{
+						instance.apartmentUpkeep = ApartmentUpkeepTerminal.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ApartmentUpkeepTerminal.DeserializeLengthDelimited(stream, instance.apartmentUpkeep, isDelta);
+					}
+				}
+				break;
+			case 230u:
+				stream.ValidateFieldOrder(ref lastFieldId, 230u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.mortar == null)
+					{
+						instance.mortar = MortarData.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MortarData.DeserializeLengthDelimited(stream, instance.mortar, isDelta);
+					}
+				}
+				break;
+			case 231u:
+				stream.ValidateFieldOrder(ref lastFieldId, 231u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.apartmentDoor == null)
+					{
+						instance.apartmentDoor = ApartmentDoor.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ApartmentDoor.DeserializeLengthDelimited(stream, instance.apartmentDoor, isDelta);
+					}
+				}
+				break;
+			case 232u:
+				stream.ValidateFieldOrder(ref lastFieldId, 232u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.apartmentMailbox == null)
+					{
+						instance.apartmentMailbox = ApartmentMailbox.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ApartmentMailbox.DeserializeLengthDelimited(stream, instance.apartmentMailbox, isDelta);
+					}
+				}
+				break;
+			case 235u:
+				stream.ValidateFieldOrder(ref lastFieldId, 235u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.Pooltable == null)
+					{
+						instance.Pooltable = Pooltable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Pooltable.DeserializeLengthDelimited(stream, instance.Pooltable, isDelta);
+					}
+				}
+				break;
+			case 236u:
+				stream.ValidateFieldOrder(ref lastFieldId, 236u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.dartsGame == null)
+					{
+						instance.dartsGame = DartsGame.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DartsGame.DeserializeLengthDelimited(stream, instance.dartsGame, isDelta);
+					}
+				}
+				break;
+			case 237u:
+				stream.ValidateFieldOrder(ref lastFieldId, 237u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.dartsGameLeaderboard == null)
+					{
+						instance.dartsGameLeaderboard = DartsGameLeaderboard.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DartsGameLeaderboard.DeserializeLengthDelimited(stream, instance.dartsGameLeaderboard, isDelta);
+					}
+				}
+				break;
+			case 238u:
+				stream.ValidateFieldOrder(ref lastFieldId, 238u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.satelliteControlComputer == null)
+					{
+						instance.satelliteControlComputer = SatelliteControlComputer.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SatelliteControlComputer.DeserializeLengthDelimited(stream, instance.satelliteControlComputer, isDelta);
+					}
+				}
+				break;
+			case 239u:
+				stream.ValidateFieldOrder(ref lastFieldId, 239u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.satelliteCrash == null)
+					{
+						instance.satelliteCrash = SatelliteCrash.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SatelliteCrash.DeserializeLengthDelimited(stream, instance.satelliteCrash, isDelta);
+					}
+				}
+				break;
+			case 240u:
+				stream.ValidateFieldOrder(ref lastFieldId, 240u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.satelliteCrashRemains == null)
+					{
+						instance.satelliteCrashRemains = SatelliteCrashRemains.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SatelliteCrashRemains.DeserializeLengthDelimited(stream, instance.satelliteCrashRemains, isDelta);
+					}
+				}
+				break;
+			case 241u:
+				stream.ValidateFieldOrder(ref lastFieldId, 241u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.electricGenerator == null)
+					{
+						instance.electricGenerator = ElectricGenerator.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ElectricGenerator.DeserializeLengthDelimited(stream, instance.electricGenerator, isDelta);
+					}
+				}
+				break;
+			case 242u:
+				stream.ValidateFieldOrder(ref lastFieldId, 242u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.powergridManager == null)
+					{
+						instance.powergridManager = PowergridManager.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						PowergridManager.DeserializeLengthDelimited(stream, instance.powergridManager, isDelta);
+					}
+				}
+				break;
+			case 243u:
+				stream.ValidateFieldOrder(ref lastFieldId, 243u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.oilswitchBroadcast == null)
+					{
+						instance.oilswitchBroadcast = OilSwitchBroadcast.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						OilSwitchBroadcast.DeserializeLengthDelimited(stream, instance.oilswitchBroadcast, isDelta);
+					}
+				}
+				break;
+			case 244u:
+				stream.ValidateFieldOrder(ref lastFieldId, 244u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.sprinkler == null)
+					{
+						instance.sprinkler = Sprinkler.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Sprinkler.DeserializeLengthDelimited(stream, instance.sprinkler, isDelta);
+					}
+				}
+				break;
+			case 245u:
+				stream.ValidateFieldOrder(ref lastFieldId, 245u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.hackableLockedCrate == null)
+					{
+						instance.hackableLockedCrate = HackableLockedCrate.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						HackableLockedCrate.DeserializeLengthDelimited(stream, instance.hackableLockedCrate, isDelta);
+					}
+				}
+				break;
+			case 246u:
+				stream.ValidateFieldOrder(ref lastFieldId, 246u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.lockedByEntCrate == null)
+					{
+						instance.lockedByEntCrate = LockedByEntCrate.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						LockedByEntCrate.DeserializeLengthDelimited(stream, instance.lockedByEntCrate, isDelta);
+					}
+				}
+				break;
+			case 247u:
+				stream.ValidateFieldOrder(ref lastFieldId, 247u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.territoryZones == null)
+					{
+						instance.territoryZones = TerritoryZones.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TerritoryZones.DeserializeLengthDelimited(stream, instance.territoryZones, isDelta);
+					}
+				}
+				break;
+			case 248u:
+				stream.ValidateFieldOrder(ref lastFieldId, 248u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.monumentBlocker == null)
+					{
+						instance.monumentBlocker = MonumentBlocker.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MonumentBlocker.DeserializeLengthDelimited(stream, instance.monumentBlocker, isDelta);
+					}
+				}
+				break;
+			default:
+				stream.ValidateFieldOrder(ref lastFieldId, key.Field, fieldIsRepeated: true, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			}
+		}
+		return instance;
+	}
+
+	public static Entity DeserializeLengthDelimited(BufferStream stream, Entity instance, bool isDelta)
+	{
+		long num = ProtocolParser.ReadUInt32(stream);
+		num += stream.Position;
+		uint lastFieldId = 0u;
+		while (true)
+		{
+			if (stream.Position >= num)
+			{
+				if (stream.Position == num)
+				{
+					break;
+				}
+				throw new ProtocolBufferException("Read past max limit");
+			}
+			int num2 = stream.ReadByte();
+			if (num2 == -1)
+			{
+				throw new EndOfStreamException();
+			}
+			stream.ConsumeFieldOperation("ProtoBuf.Entity");
+			switch (num2)
+			{
+			case 10:
+				stream.ValidateFieldOrder(ref lastFieldId, 1u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.baseNetworkable == null)
+				{
+					instance.baseNetworkable = BaseNetworkable.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					BaseNetworkable.DeserializeLengthDelimited(stream, instance.baseNetworkable, isDelta);
+				}
+				continue;
+			case 18:
+				stream.ValidateFieldOrder(ref lastFieldId, 2u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.baseEntity == null)
+				{
+					instance.baseEntity = BaseEntity.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					BaseEntity.DeserializeLengthDelimited(stream, instance.baseEntity, isDelta);
+				}
+				continue;
+			case 26:
+				stream.ValidateFieldOrder(ref lastFieldId, 3u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.basePlayer == null)
+				{
+					instance.basePlayer = BasePlayer.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					BasePlayer.DeserializeLengthDelimited(stream, instance.basePlayer, isDelta);
+				}
+				continue;
+			case 34:
+				stream.ValidateFieldOrder(ref lastFieldId, 4u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.worldItem == null)
+				{
+					instance.worldItem = WorldItem.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					WorldItem.DeserializeLengthDelimited(stream, instance.worldItem, isDelta);
+				}
+				continue;
+			case 42:
+				stream.ValidateFieldOrder(ref lastFieldId, 5u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.resource == null)
+				{
+					instance.resource = BaseResource.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					BaseResource.DeserializeLengthDelimited(stream, instance.resource, isDelta);
+				}
+				continue;
+			case 50:
+				stream.ValidateFieldOrder(ref lastFieldId, 6u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.buildingBlock == null)
+				{
+					instance.buildingBlock = BuildingBlock.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					BuildingBlock.DeserializeLengthDelimited(stream, instance.buildingBlock, isDelta);
+				}
+				continue;
+			case 58:
+				stream.ValidateFieldOrder(ref lastFieldId, 7u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.environment == null)
+				{
+					instance.environment = Environment.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					Environment.DeserializeLengthDelimited(stream, instance.environment, isDelta);
+				}
+				continue;
+			case 66:
+				stream.ValidateFieldOrder(ref lastFieldId, 8u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.corpse == null)
+				{
+					instance.corpse = Corpse.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					Corpse.DeserializeLengthDelimited(stream, instance.corpse, isDelta);
+				}
+				continue;
+			case 82:
+				stream.ValidateFieldOrder(ref lastFieldId, 10u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.parent == null)
+				{
+					instance.parent = ParentInfo.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					ParentInfo.DeserializeLengthDelimited(stream, instance.parent, isDelta);
+				}
+				continue;
+			case 90:
+				stream.ValidateFieldOrder(ref lastFieldId, 11u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.keyLock == null)
+				{
+					instance.keyLock = KeyLock.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					KeyLock.DeserializeLengthDelimited(stream, instance.keyLock, isDelta);
+				}
+				continue;
+			case 98:
+				stream.ValidateFieldOrder(ref lastFieldId, 12u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.codeLock == null)
+				{
+					instance.codeLock = CodeLock.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					CodeLock.DeserializeLengthDelimited(stream, instance.codeLock, isDelta);
+				}
+				continue;
+			case 106:
+				stream.ValidateFieldOrder(ref lastFieldId, 13u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.entitySlots == null)
+				{
+					instance.entitySlots = EntitySlots.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					EntitySlots.DeserializeLengthDelimited(stream, instance.entitySlots, isDelta);
+				}
+				continue;
+			case 114:
+				stream.ValidateFieldOrder(ref lastFieldId, 14u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.buildingPrivilege == null)
+				{
+					instance.buildingPrivilege = BuildingPrivilege.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					BuildingPrivilege.DeserializeLengthDelimited(stream, instance.buildingPrivilege, isDelta);
+				}
+				continue;
+			case 122:
+				stream.ValidateFieldOrder(ref lastFieldId, 15u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.storageBox == null)
+				{
+					instance.storageBox = StorageBox.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					StorageBox.DeserializeLengthDelimited(stream, instance.storageBox, isDelta);
+				}
+				continue;
+			}
+			Key key = ProtocolParser.ReadKey((byte)num2, stream);
+			switch (key.Field)
+			{
+			case 1u:
+				stream.ValidateFieldOrder(ref lastFieldId, 1u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 2u:
+				stream.ValidateFieldOrder(ref lastFieldId, 2u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 3u:
+				stream.ValidateFieldOrder(ref lastFieldId, 3u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 4u:
+				stream.ValidateFieldOrder(ref lastFieldId, 4u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 5u:
+				stream.ValidateFieldOrder(ref lastFieldId, 5u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 6u:
+				stream.ValidateFieldOrder(ref lastFieldId, 6u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 7u:
+				stream.ValidateFieldOrder(ref lastFieldId, 7u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 8u:
+				stream.ValidateFieldOrder(ref lastFieldId, 8u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 10u:
+				stream.ValidateFieldOrder(ref lastFieldId, 10u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 11u:
+				stream.ValidateFieldOrder(ref lastFieldId, 11u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 12u:
+				stream.ValidateFieldOrder(ref lastFieldId, 12u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 13u:
+				stream.ValidateFieldOrder(ref lastFieldId, 13u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 14u:
+				stream.ValidateFieldOrder(ref lastFieldId, 14u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 15u:
+				stream.ValidateFieldOrder(ref lastFieldId, 15u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 16u:
+				stream.ValidateFieldOrder(ref lastFieldId, 16u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.heldEntity == null)
+					{
+						instance.heldEntity = HeldEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						HeldEntity.DeserializeLengthDelimited(stream, instance.heldEntity, isDelta);
+					}
+				}
+				break;
+			case 17u:
+				stream.ValidateFieldOrder(ref lastFieldId, 17u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseProjectile == null)
+					{
+						instance.baseProjectile = BaseProjectile.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseProjectile.DeserializeLengthDelimited(stream, instance.baseProjectile, isDelta);
+					}
+				}
+				break;
+			case 18u:
+				stream.ValidateFieldOrder(ref lastFieldId, 18u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseNPC == null)
+					{
+						instance.baseNPC = BaseNPC.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseNPC.DeserializeLengthDelimited(stream, instance.baseNPC, isDelta);
+					}
+				}
+				break;
+			case 19u:
+				stream.ValidateFieldOrder(ref lastFieldId, 19u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.lootContainer == null)
+					{
+						instance.lootContainer = LootContainer.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						LootContainer.DeserializeLengthDelimited(stream, instance.lootContainer, isDelta);
+					}
+				}
+				break;
+			case 20u:
+				stream.ValidateFieldOrder(ref lastFieldId, 20u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.genericSpawner == null)
+					{
+						instance.genericSpawner = GenericSpawner.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						GenericSpawner.DeserializeLengthDelimited(stream, instance.genericSpawner, isDelta);
+					}
+				}
+				break;
+			case 21u:
+				stream.ValidateFieldOrder(ref lastFieldId, 21u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.sleepingBag == null)
+					{
+						instance.sleepingBag = SleepingBag.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SleepingBag.DeserializeLengthDelimited(stream, instance.sleepingBag, isDelta);
+					}
+				}
+				break;
+			case 22u:
+				stream.ValidateFieldOrder(ref lastFieldId, 22u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.lootableCorpse == null)
+					{
+						instance.lootableCorpse = LootableCorpse.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						LootableCorpse.DeserializeLengthDelimited(stream, instance.lootableCorpse, isDelta);
+					}
+				}
+				break;
+			case 23u:
+				stream.ValidateFieldOrder(ref lastFieldId, 23u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.sign == null)
+					{
+						instance.sign = Sign.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Sign.DeserializeLengthDelimited(stream, instance.sign, isDelta);
+					}
+				}
+				break;
+			case 24u:
+				stream.ValidateFieldOrder(ref lastFieldId, 24u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseCombat == null)
+					{
+						instance.baseCombat = BaseCombat.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseCombat.DeserializeLengthDelimited(stream, instance.baseCombat, isDelta);
+					}
+				}
+				break;
+			case 25u:
+				stream.ValidateFieldOrder(ref lastFieldId, 25u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.mapEntity == null)
+					{
+						instance.mapEntity = MapEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MapEntity.DeserializeLengthDelimited(stream, instance.mapEntity, isDelta);
+					}
+				}
+				break;
+			case 26u:
+				stream.ValidateFieldOrder(ref lastFieldId, 26u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.researchTable == null)
+					{
+						instance.researchTable = ResearchTable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ResearchTable.DeserializeLengthDelimited(stream, instance.researchTable, isDelta);
+					}
+				}
+				break;
+			case 27u:
+				stream.ValidateFieldOrder(ref lastFieldId, 27u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.dudExplosive == null)
+					{
+						instance.dudExplosive = DudExplosive.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DudExplosive.DeserializeLengthDelimited(stream, instance.dudExplosive, isDelta);
+					}
+				}
+				break;
+			case 28u:
+				stream.ValidateFieldOrder(ref lastFieldId, 28u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.miningQuarry == null)
+					{
+						instance.miningQuarry = MiningQuarry.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MiningQuarry.DeserializeLengthDelimited(stream, instance.miningQuarry, isDelta);
+					}
+				}
+				break;
+			case 29u:
+				stream.ValidateFieldOrder(ref lastFieldId, 29u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseVehicle == null)
+					{
+						instance.baseVehicle = BaseVehicle.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseVehicle.DeserializeLengthDelimited(stream, instance.baseVehicle, isDelta);
+					}
+				}
+				break;
+			case 30u:
+				stream.ValidateFieldOrder(ref lastFieldId, 30u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.helicopter == null)
+					{
+						instance.helicopter = Helicopter.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Helicopter.DeserializeLengthDelimited(stream, instance.helicopter, isDelta);
+					}
+				}
+				break;
+			case 31u:
+				stream.ValidateFieldOrder(ref lastFieldId, 31u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.landmine == null)
+					{
+						instance.landmine = Landmine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Landmine.DeserializeLengthDelimited(stream, instance.landmine, isDelta);
+					}
+				}
+				break;
+			case 32u:
+				stream.ValidateFieldOrder(ref lastFieldId, 32u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.autoturret == null)
+					{
+						instance.autoturret = AutoTurret.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						AutoTurret.DeserializeLengthDelimited(stream, instance.autoturret, isDelta);
+					}
+				}
+				break;
+			case 33u:
+				stream.ValidateFieldOrder(ref lastFieldId, 33u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.sphereEntity == null)
+					{
+						instance.sphereEntity = SphereEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SphereEntity.DeserializeLengthDelimited(stream, instance.sphereEntity, isDelta);
+					}
+				}
+				break;
+			case 34u:
+				stream.ValidateFieldOrder(ref lastFieldId, 34u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.stabilityEntity == null)
+					{
+						instance.stabilityEntity = StabilityEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						StabilityEntity.DeserializeLengthDelimited(stream, instance.stabilityEntity, isDelta);
+					}
+				}
+				break;
+			case 35u:
+				stream.ValidateFieldOrder(ref lastFieldId, 35u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ownerInfo == null)
+					{
+						instance.ownerInfo = OwnerInfo.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						OwnerInfo.DeserializeLengthDelimited(stream, instance.ownerInfo, isDelta);
+					}
+				}
+				break;
+			case 36u:
+				stream.ValidateFieldOrder(ref lastFieldId, 36u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.decayEntity == null)
+					{
+						instance.decayEntity = DecayEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DecayEntity.DeserializeLengthDelimited(stream, instance.decayEntity, isDelta);
+					}
+				}
+				break;
+			case 37u:
+				stream.ValidateFieldOrder(ref lastFieldId, 37u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.spawnable == null)
+					{
+						instance.spawnable = Spawnable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Spawnable.DeserializeLengthDelimited(stream, instance.spawnable, isDelta);
+					}
+				}
+				break;
+			case 38u:
+				stream.ValidateFieldOrder(ref lastFieldId, 38u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.servergib == null)
+					{
+						instance.servergib = ServerGib.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ServerGib.DeserializeLengthDelimited(stream, instance.servergib, isDelta);
+					}
+				}
+				break;
+			case 39u:
+				stream.ValidateFieldOrder(ref lastFieldId, 39u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vendingMachine == null)
+					{
+						instance.vendingMachine = VendingMachine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VendingMachine.DeserializeLengthDelimited(stream, instance.vendingMachine, isDelta);
+					}
+				}
+				break;
+			case 40u:
+				stream.ValidateFieldOrder(ref lastFieldId, 40u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.spinnerWheel == null)
+					{
+						instance.spinnerWheel = SpinnerWheel.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SpinnerWheel.DeserializeLengthDelimited(stream, instance.spinnerWheel, isDelta);
+					}
+				}
+				break;
+			case 41u:
+				stream.ValidateFieldOrder(ref lastFieldId, 41u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.lift == null)
+					{
+						instance.lift = Lift.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Lift.DeserializeLengthDelimited(stream, instance.lift, isDelta);
+					}
+				}
+				break;
+			case 42u:
+				stream.ValidateFieldOrder(ref lastFieldId, 42u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.bradley == null)
+					{
+						instance.bradley = BradleyAPC.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BradleyAPC.DeserializeLengthDelimited(stream, instance.bradley, isDelta);
+					}
+				}
+				break;
+			case 43u:
+				stream.ValidateFieldOrder(ref lastFieldId, 43u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.waterwell == null)
+					{
+						instance.waterwell = WaterWell.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						WaterWell.DeserializeLengthDelimited(stream, instance.waterwell, isDelta);
+					}
+				}
+				break;
+			case 44u:
+				stream.ValidateFieldOrder(ref lastFieldId, 44u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.motorBoat == null)
+					{
+						instance.motorBoat = Motorboat.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Motorboat.DeserializeLengthDelimited(stream, instance.motorBoat, isDelta);
+					}
+				}
+				break;
+			case 45u:
+				stream.ValidateFieldOrder(ref lastFieldId, 45u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ioEntity == null)
+					{
+						instance.ioEntity = IOEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						IOEntity.DeserializeLengthDelimited(stream, instance.ioEntity, isDelta);
+					}
+				}
+				break;
+			case 46u:
+				stream.ValidateFieldOrder(ref lastFieldId, 46u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.puzzleReset == null)
+					{
+						instance.puzzleReset = PuzzleReset.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						PuzzleReset.DeserializeLengthDelimited(stream, instance.puzzleReset, isDelta);
+					}
+				}
+				break;
+			case 47u:
+				stream.ValidateFieldOrder(ref lastFieldId, 47u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.relationshipManager == null)
+					{
+						instance.relationshipManager = RelationshipManager.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						RelationshipManager.DeserializeLengthDelimited(stream, instance.relationshipManager, isDelta);
+					}
+				}
+				break;
+			case 48u:
+				stream.ValidateFieldOrder(ref lastFieldId, 48u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.hotAirBalloon == null)
+					{
+						instance.hotAirBalloon = HotAirBalloon.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						HotAirBalloon.DeserializeLengthDelimited(stream, instance.hotAirBalloon, isDelta);
+					}
+				}
+				break;
+			case 49u:
+				stream.ValidateFieldOrder(ref lastFieldId, 49u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.samSite == null)
+					{
+						instance.samSite = SAMSite.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SAMSite.DeserializeLengthDelimited(stream, instance.samSite, isDelta);
+					}
+				}
+				break;
+			case 50u:
+				stream.ValidateFieldOrder(ref lastFieldId, 50u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.eggHunt == null)
+					{
+						instance.eggHunt = EggHunt.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						EggHunt.DeserializeLengthDelimited(stream, instance.eggHunt, isDelta);
+					}
+				}
+				break;
+			case 51u:
+				stream.ValidateFieldOrder(ref lastFieldId, 51u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.arcadeMachine == null)
+					{
+						instance.arcadeMachine = ArcadeMachine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ArcadeMachine.DeserializeLengthDelimited(stream, instance.arcadeMachine, isDelta);
+					}
+				}
+				break;
+			case 52u:
+				stream.ValidateFieldOrder(ref lastFieldId, 52u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.miniCopter == null)
+					{
+						instance.miniCopter = Minicopter.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Minicopter.DeserializeLengthDelimited(stream, instance.miniCopter, isDelta);
+					}
+				}
+				break;
+			case 53u:
+				stream.ValidateFieldOrder(ref lastFieldId, 53u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.horse == null)
+					{
+						instance.horse = Horse.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Horse.DeserializeLengthDelimited(stream, instance.horse, isDelta);
+					}
+				}
+				break;
+			case 54u:
+				stream.ValidateFieldOrder(ref lastFieldId, 54u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.smartAlarm == null)
+					{
+						instance.smartAlarm = SmartAlarm.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SmartAlarm.DeserializeLengthDelimited(stream, instance.smartAlarm, isDelta);
+					}
+				}
+				break;
+			case 55u:
+				stream.ValidateFieldOrder(ref lastFieldId, 55u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.lightString == null)
+					{
+						instance.lightString = LightString.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						LightString.DeserializeLengthDelimited(stream, instance.lightString, isDelta);
+					}
+				}
+				break;
+			case 56u:
+				stream.ValidateFieldOrder(ref lastFieldId, 56u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.lightDeployer == null)
+					{
+						instance.lightDeployer = LightDeployer.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						LightDeployer.DeserializeLengthDelimited(stream, instance.lightDeployer, isDelta);
+					}
+				}
+				break;
+			case 57u:
+				stream.ValidateFieldOrder(ref lastFieldId, 57u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.rcEntity == null)
+					{
+						instance.rcEntity = RCEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						RCEntity.DeserializeLengthDelimited(stream, instance.rcEntity, isDelta);
+					}
+				}
+				break;
+			case 58u:
+				stream.ValidateFieldOrder(ref lastFieldId, 58u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.computerStation == null)
+					{
+						instance.computerStation = ComputerStation.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ComputerStation.DeserializeLengthDelimited(stream, instance.computerStation, isDelta);
+					}
+				}
+				break;
+			case 59u:
+				stream.ValidateFieldOrder(ref lastFieldId, 59u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.growableEntity == null)
+					{
+						instance.growableEntity = GrowableEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						GrowableEntity.DeserializeLengthDelimited(stream, instance.growableEntity, isDelta);
+					}
+				}
+				break;
+			case 60u:
+				stream.ValidateFieldOrder(ref lastFieldId, 60u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.composter == null)
+					{
+						instance.composter = Composter.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Composter.DeserializeLengthDelimited(stream, instance.composter, isDelta);
+					}
+				}
+				break;
+			case 61u:
+				stream.ValidateFieldOrder(ref lastFieldId, 61u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.modularVehicle == null)
+					{
+						instance.modularVehicle = ModularVehicle.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ModularVehicle.DeserializeLengthDelimited(stream, instance.modularVehicle, isDelta);
+					}
+				}
+				break;
+			case 62u:
+				stream.ValidateFieldOrder(ref lastFieldId, 62u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.modularCar == null)
+					{
+						instance.modularCar = ModularCar.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ModularCar.DeserializeLengthDelimited(stream, instance.modularCar, isDelta);
+					}
+				}
+				break;
+			case 63u:
+				stream.ValidateFieldOrder(ref lastFieldId, 63u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.simpleUID == null)
+					{
+						instance.simpleUID = SimpleUID.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SimpleUID.DeserializeLengthDelimited(stream, instance.simpleUID, isDelta);
+					}
+				}
+				break;
+			case 64u:
+				stream.ValidateFieldOrder(ref lastFieldId, 64u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vehicleLift == null)
+					{
+						instance.vehicleLift = VehicleLift.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VehicleLift.DeserializeLengthDelimited(stream, instance.vehicleLift, isDelta);
+					}
+				}
+				break;
+			case 65u:
+				stream.ValidateFieldOrder(ref lastFieldId, 65u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.engineStorage == null)
+					{
+						instance.engineStorage = EngineStorage.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						EngineStorage.DeserializeLengthDelimited(stream, instance.engineStorage, isDelta);
+					}
+				}
+				break;
+			case 66u:
+				stream.ValidateFieldOrder(ref lastFieldId, 66u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vehicleVendor == null)
+					{
+						instance.vehicleVendor = VehicleVendor.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VehicleVendor.DeserializeLengthDelimited(stream, instance.vehicleVendor, isDelta);
+					}
+				}
+				break;
+			case 67u:
+				stream.ValidateFieldOrder(ref lastFieldId, 67u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.WaterPool == null)
+					{
+						instance.WaterPool = WaterPool.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						WaterPool.DeserializeLengthDelimited(stream, instance.WaterPool, isDelta);
+					}
+				}
+				break;
+			case 68u:
+				stream.ValidateFieldOrder(ref lastFieldId, 68u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.photo == null)
+					{
+						instance.photo = Photo.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Photo.DeserializeLengthDelimited(stream, instance.photo, isDelta);
+					}
+				}
+				break;
+			case 69u:
+				stream.ValidateFieldOrder(ref lastFieldId, 69u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.photoFrame == null)
+					{
+						instance.photoFrame = PhotoFrame.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						PhotoFrame.DeserializeLengthDelimited(stream, instance.photoFrame, isDelta);
+					}
+				}
+				break;
+			case 70u:
+				stream.ValidateFieldOrder(ref lastFieldId, 70u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vehicleModule == null)
+					{
+						instance.vehicleModule = VehicleModule.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VehicleModule.DeserializeLengthDelimited(stream, instance.vehicleModule, isDelta);
+					}
+				}
+				break;
+			case 71u:
+				stream.ValidateFieldOrder(ref lastFieldId, 71u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.mixingTable == null)
+					{
+						instance.mixingTable = MixingTable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MixingTable.DeserializeLengthDelimited(stream, instance.mixingTable, isDelta);
+					}
+				}
+				break;
+			case 72u:
+				stream.ValidateFieldOrder(ref lastFieldId, 72u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.shopKeeper == null)
+					{
+						instance.shopKeeper = ShopKeeper.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ShopKeeper.DeserializeLengthDelimited(stream, instance.shopKeeper, isDelta);
+					}
+				}
+				break;
+			case 73u:
+				stream.ValidateFieldOrder(ref lastFieldId, 73u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.elevator == null)
+					{
+						instance.elevator = Elevator.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Elevator.DeserializeLengthDelimited(stream, instance.elevator, isDelta);
+					}
+				}
+				break;
+			case 74u:
+				stream.ValidateFieldOrder(ref lastFieldId, 74u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.skullTrophy == null)
+					{
+						instance.skullTrophy = SkullTrophy.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SkullTrophy.DeserializeLengthDelimited(stream, instance.skullTrophy, isDelta);
+					}
+				}
+				break;
+			case 75u:
+				stream.ValidateFieldOrder(ref lastFieldId, 75u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.cassette == null)
+					{
+						instance.cassette = Cassette.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Cassette.DeserializeLengthDelimited(stream, instance.cassette, isDelta);
+					}
+				}
+				break;
+			case 76u:
+				stream.ValidateFieldOrder(ref lastFieldId, 76u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.telephone == null)
+					{
+						instance.telephone = Telephone.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Telephone.DeserializeLengthDelimited(stream, instance.telephone, isDelta);
+					}
+				}
+				break;
+			case 77u:
+				stream.ValidateFieldOrder(ref lastFieldId, 77u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.boomBox == null)
+					{
+						instance.boomBox = BoomBox.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BoomBox.DeserializeLengthDelimited(stream, instance.boomBox, isDelta);
+					}
+				}
+				break;
+			case 78u:
+				stream.ValidateFieldOrder(ref lastFieldId, 78u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.neonSign == null)
+					{
+						instance.neonSign = NeonSign.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						NeonSign.DeserializeLengthDelimited(stream, instance.neonSign, isDelta);
+					}
+				}
+				break;
+			case 79u:
+				stream.ValidateFieldOrder(ref lastFieldId, 79u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.subEntityList == null)
+					{
+						instance.subEntityList = SubEntityList.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SubEntityList.DeserializeLengthDelimited(stream, instance.subEntityList, isDelta);
+					}
+				}
+				break;
+			case 80u:
+				stream.ValidateFieldOrder(ref lastFieldId, 80u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.marketTerminal == null)
+					{
+						instance.marketTerminal = MarketTerminal.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MarketTerminal.DeserializeLengthDelimited(stream, instance.marketTerminal, isDelta);
+					}
+				}
+				break;
+			case 81u:
+				stream.ValidateFieldOrder(ref lastFieldId, 81u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.deliveryDrone == null)
+					{
+						instance.deliveryDrone = DeliveryDrone.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DeliveryDrone.DeserializeLengthDelimited(stream, instance.deliveryDrone, isDelta);
+					}
+				}
+				break;
+			case 82u:
+				stream.ValidateFieldOrder(ref lastFieldId, 82u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.reclaimTerminal == null)
+					{
+						instance.reclaimTerminal = ReclaimTerminal.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ReclaimTerminal.DeserializeLengthDelimited(stream, instance.reclaimTerminal, isDelta);
+					}
+				}
+				break;
+			case 83u:
+				stream.ValidateFieldOrder(ref lastFieldId, 83u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.slotMachine == null)
+					{
+						instance.slotMachine = SlotMachine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SlotMachine.DeserializeLengthDelimited(stream, instance.slotMachine, isDelta);
+					}
+				}
+				break;
+			case 84u:
+				stream.ValidateFieldOrder(ref lastFieldId, 84u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.trainEngine == null)
+					{
+						instance.trainEngine = TrainEngine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TrainEngine.DeserializeLengthDelimited(stream, instance.trainEngine, isDelta);
+					}
+				}
+				break;
+			case 85u:
+				stream.ValidateFieldOrder(ref lastFieldId, 85u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.cardGame == null)
+					{
+						instance.cardGame = CardGame.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CardGame.DeserializeLengthDelimited(stream, instance.cardGame, isDelta);
+					}
+				}
+				break;
+			case 86u:
+				stream.ValidateFieldOrder(ref lastFieldId, 86u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.crane == null)
+					{
+						instance.crane = Crane.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Crane.DeserializeLengthDelimited(stream, instance.crane, isDelta);
+					}
+				}
+				break;
+			case 87u:
+				stream.ValidateFieldOrder(ref lastFieldId, 87u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.connectedSpeaker == null)
+					{
+						instance.connectedSpeaker = ConnectedSpeaker.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ConnectedSpeaker.DeserializeLengthDelimited(stream, instance.connectedSpeaker, isDelta);
+					}
+				}
+				break;
+			case 88u:
+				stream.ValidateFieldOrder(ref lastFieldId, 88u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.audioEntity == null)
+					{
+						instance.audioEntity = AudioEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						AudioEntity.DeserializeLengthDelimited(stream, instance.audioEntity, isDelta);
+					}
+				}
+				break;
+			case 89u:
+				stream.ValidateFieldOrder(ref lastFieldId, 89u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.microphoneStand == null)
+					{
+						instance.microphoneStand = MicrophoneStand.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MicrophoneStand.DeserializeLengthDelimited(stream, instance.microphoneStand, isDelta);
+					}
+				}
+				break;
+			case 90u:
+				stream.ValidateFieldOrder(ref lastFieldId, 90u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.submarine == null)
+					{
+						instance.submarine = Submarine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Submarine.DeserializeLengthDelimited(stream, instance.submarine, isDelta);
+					}
+				}
+				break;
+			case 91u:
+				stream.ValidateFieldOrder(ref lastFieldId, 91u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.sleepingBagCamper == null)
+					{
+						instance.sleepingBagCamper = SleepingBagCamper.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SleepingBagCamper.DeserializeLengthDelimited(stream, instance.sleepingBagCamper, isDelta);
+					}
+				}
+				break;
+			case 92u:
+				stream.ValidateFieldOrder(ref lastFieldId, 92u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.camperModule == null)
+					{
+						instance.camperModule = CamperModule.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CamperModule.DeserializeLengthDelimited(stream, instance.camperModule, isDelta);
+					}
+				}
+				break;
+			case 93u:
+				stream.ValidateFieldOrder(ref lastFieldId, 93u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.paintableSign == null)
+					{
+						instance.paintableSign = PaintableSign.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						PaintableSign.DeserializeLengthDelimited(stream, instance.paintableSign, isDelta);
+					}
+				}
+				break;
+			case 94u:
+				stream.ValidateFieldOrder(ref lastFieldId, 94u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.whitelist == null)
+					{
+						instance.whitelist = Whitelist.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Whitelist.DeserializeLengthDelimited(stream, instance.whitelist, isDelta);
+					}
+				}
+				break;
+			case 95u:
+				stream.ValidateFieldOrder(ref lastFieldId, 95u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.FrankensteinTable == null)
+					{
+						instance.FrankensteinTable = FrankensteinTable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						FrankensteinTable.DeserializeLengthDelimited(stream, instance.FrankensteinTable, isDelta);
+					}
+				}
+				break;
+			case 96u:
+				stream.ValidateFieldOrder(ref lastFieldId, 96u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.mlrs == null)
+					{
+						instance.mlrs = MLRS.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MLRS.DeserializeLengthDelimited(stream, instance.mlrs, isDelta);
+					}
+				}
+				break;
+			case 97u:
+				stream.ValidateFieldOrder(ref lastFieldId, 97u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.reclaimManager == null)
+					{
+						instance.reclaimManager = ReclaimManager.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ReclaimManager.DeserializeLengthDelimited(stream, instance.reclaimManager, isDelta);
+					}
+				}
+				break;
+			case 98u:
+				stream.ValidateFieldOrder(ref lastFieldId, 98u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.gameMode == null)
+					{
+						instance.gameMode = GameMode.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						GameMode.DeserializeLengthDelimited(stream, instance.gameMode, isDelta);
+					}
+				}
+				break;
+			case 99u:
+				stream.ValidateFieldOrder(ref lastFieldId, 99u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.snowmobile == null)
+					{
+						instance.snowmobile = Snowmobile.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Snowmobile.DeserializeLengthDelimited(stream, instance.snowmobile, isDelta);
+					}
+				}
+				break;
+			case 100u:
+				stream.ValidateFieldOrder(ref lastFieldId, 100u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.Varint)
+				{
+					instance.createdThisFrame = ProtocolParser.ReadBool(stream);
+				}
+				break;
+			case 101u:
+				stream.ValidateFieldOrder(ref lastFieldId, 101u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.patternFirework == null)
+					{
+						instance.patternFirework = PatternFirework.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						PatternFirework.DeserializeLengthDelimited(stream, instance.patternFirework, isDelta);
+					}
+				}
+				break;
+			case 102u:
+				stream.ValidateFieldOrder(ref lastFieldId, 102u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.cargoPlane == null)
+					{
+						instance.cargoPlane = CargoPlane.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CargoPlane.DeserializeLengthDelimited(stream, instance.cargoPlane, isDelta);
+					}
+				}
+				break;
+			case 103u:
+				stream.ValidateFieldOrder(ref lastFieldId, 103u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.paintedItem == null)
+					{
+						instance.paintedItem = PaintedItem.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						PaintedItem.DeserializeLengthDelimited(stream, instance.paintedItem, isDelta);
+					}
+				}
+				break;
+			case 104u:
+				stream.ValidateFieldOrder(ref lastFieldId, 104u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.clanManager == null)
+					{
+						instance.clanManager = ClanManager.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ClanManager.DeserializeLengthDelimited(stream, instance.clanManager, isDelta);
+					}
+				}
+				break;
+			case 105u:
+				stream.ValidateFieldOrder(ref lastFieldId, 105u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.spray == null)
+					{
+						instance.spray = Spray.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Spray.DeserializeLengthDelimited(stream, instance.spray, isDelta);
+					}
+				}
+				break;
+			case 106u:
+				stream.ValidateFieldOrder(ref lastFieldId, 106u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseTrain == null)
+					{
+						instance.baseTrain = BaseTrain.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseTrain.DeserializeLengthDelimited(stream, instance.baseTrain, isDelta);
+					}
+				}
+				break;
+			case 107u:
+				stream.ValidateFieldOrder(ref lastFieldId, 107u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.zipline == null)
+					{
+						instance.zipline = Zipline.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Zipline.DeserializeLengthDelimited(stream, instance.zipline, isDelta);
+					}
+				}
+				break;
+			case 108u:
+				stream.ValidateFieldOrder(ref lastFieldId, 108u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ziplineMountable == null)
+					{
+						instance.ziplineMountable = ZiplineMountable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ZiplineMountable.DeserializeLengthDelimited(stream, instance.ziplineMountable, isDelta);
+					}
+				}
+				break;
+			case 109u:
+				stream.ValidateFieldOrder(ref lastFieldId, 109u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ZiplineArrival == null)
+					{
+						instance.ZiplineArrival = ZiplineArrivalPoint.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ZiplineArrivalPoint.DeserializeLengthDelimited(stream, instance.ZiplineArrival, isDelta);
+					}
+				}
+				break;
+			case 110u:
+				stream.ValidateFieldOrder(ref lastFieldId, 110u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.sprayLine == null)
+					{
+						instance.sprayLine = SprayLine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SprayLine.DeserializeLengthDelimited(stream, instance.sprayLine, isDelta);
+					}
+				}
+				break;
+			case 111u:
+				stream.ValidateFieldOrder(ref lastFieldId, 111u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.coalingTower == null)
+					{
+						instance.coalingTower = CoalingTower.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CoalingTower.DeserializeLengthDelimited(stream, instance.coalingTower, isDelta);
+					}
+				}
+				break;
+			case 112u:
+				stream.ValidateFieldOrder(ref lastFieldId, 112u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.simpleInt == null)
+					{
+						instance.simpleInt = SimpleInt.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SimpleInt.DeserializeLengthDelimited(stream, instance.simpleInt, isDelta);
+					}
+				}
+				break;
+			case 113u:
+				stream.ValidateFieldOrder(ref lastFieldId, 113u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseOven == null)
+					{
+						instance.baseOven = BaseOven.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseOven.DeserializeLengthDelimited(stream, instance.baseOven, isDelta);
+					}
+				}
+				break;
+			case 114u:
+				stream.ValidateFieldOrder(ref lastFieldId, 114u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.brainComponent == null)
+					{
+						instance.brainComponent = BrainComponent.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BrainComponent.DeserializeLengthDelimited(stream, instance.brainComponent, isDelta);
+					}
+				}
+				break;
+			case 115u:
+				stream.ValidateFieldOrder(ref lastFieldId, 115u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.proceduralDungeon == null)
+					{
+						instance.proceduralDungeon = ProceduralDungeon.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ProceduralDungeon.DeserializeLengthDelimited(stream, instance.proceduralDungeon, isDelta);
+					}
+				}
+				break;
+			case 116u:
+				stream.ValidateFieldOrder(ref lastFieldId, 116u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.industrialConveyor == null)
+					{
+						instance.industrialConveyor = IndustrialConveyor.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						IndustrialConveyor.DeserializeLengthDelimited(stream, instance.industrialConveyor, isDelta);
+					}
+				}
+				break;
+			case 117u:
+				stream.ValidateFieldOrder(ref lastFieldId, 117u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.industrialCrafter == null)
+					{
+						instance.industrialCrafter = IndustrialCrafter.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						IndustrialCrafter.DeserializeLengthDelimited(stream, instance.industrialCrafter, isDelta);
+					}
+				}
+				break;
+			case 118u:
+				stream.ValidateFieldOrder(ref lastFieldId, 118u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.drone == null)
+					{
+						instance.drone = Drone.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Drone.DeserializeLengthDelimited(stream, instance.drone, isDelta);
+					}
+				}
+				break;
+			case 119u:
+				stream.ValidateFieldOrder(ref lastFieldId, 119u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.explosive == null)
+					{
+						instance.explosive = TimedExplosive.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TimedExplosive.DeserializeLengthDelimited(stream, instance.explosive, isDelta);
+					}
+				}
+				break;
+			case 120u:
+				stream.ValidateFieldOrder(ref lastFieldId, 120u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.simpleUint == null)
+					{
+						instance.simpleUint = SimpleUInt.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SimpleUInt.DeserializeLengthDelimited(stream, instance.simpleUint, isDelta);
+					}
+				}
+				break;
+			case 121u:
+				stream.ValidateFieldOrder(ref lastFieldId, 121u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.weaponRack == null)
+					{
+						instance.weaponRack = WeaponRack.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						WeaponRack.DeserializeLengthDelimited(stream, instance.weaponRack, isDelta);
+					}
+				}
+				break;
+			case 122u:
+				stream.ValidateFieldOrder(ref lastFieldId, 122u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.attackHeli == null)
+					{
+						instance.attackHeli = AttackHeli.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						AttackHeli.DeserializeLengthDelimited(stream, instance.attackHeli, isDelta);
+					}
+				}
+				break;
+			case 123u:
+				stream.ValidateFieldOrder(ref lastFieldId, 123u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.attackHeliTurret == null)
+					{
+						instance.attackHeliTurret = AttackHeliTurret.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						AttackHeliTurret.DeserializeLengthDelimited(stream, instance.attackHeliTurret, isDelta);
+					}
+				}
+				break;
+			case 124u:
+				stream.ValidateFieldOrder(ref lastFieldId, 124u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.attackHeliRockets == null)
+					{
+						instance.attackHeliRockets = AttackHeliRockets.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						AttackHeliRockets.DeserializeLengthDelimited(stream, instance.attackHeliRockets, isDelta);
+					}
+				}
+				break;
+			case 125u:
+				stream.ValidateFieldOrder(ref lastFieldId, 125u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseBoat == null)
+					{
+						instance.baseBoat = BaseBoat.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseBoat.DeserializeLengthDelimited(stream, instance.baseBoat, isDelta);
+					}
+				}
+				break;
+			case 126u:
+				stream.ValidateFieldOrder(ref lastFieldId, 126u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ragdoll == null)
+					{
+						instance.ragdoll = Ragdoll.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Ragdoll.DeserializeLengthDelimited(stream, instance.ragdoll, isDelta);
+					}
+				}
+				break;
+			case 127u:
+				stream.ValidateFieldOrder(ref lastFieldId, 127u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.dieselEngine == null)
+					{
+						instance.dieselEngine = DieselEngine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DieselEngine.DeserializeLengthDelimited(stream, instance.dieselEngine, isDelta);
+					}
+				}
+				break;
+			case 150u:
+				stream.ValidateFieldOrder(ref lastFieldId, 150u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.associatedFiles == null)
+					{
+						instance.associatedFiles = AssociatedFiles.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						AssociatedFiles.DeserializeLengthDelimited(stream, instance.associatedFiles, isDelta);
+					}
+				}
+				break;
+			case 151u:
+				stream.ValidateFieldOrder(ref lastFieldId, 151u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.nexusFerry == null)
+					{
+						instance.nexusFerry = NexusFerry.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						NexusFerry.DeserializeLengthDelimited(stream, instance.nexusFerry, isDelta);
+					}
+				}
+				break;
+			case 152u:
+				stream.ValidateFieldOrder(ref lastFieldId, 152u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.nexusIsland == null)
+					{
+						instance.nexusIsland = NexusIsland.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						NexusIsland.DeserializeLengthDelimited(stream, instance.nexusIsland, isDelta);
+					}
+				}
+				break;
+			case 153u:
+				stream.ValidateFieldOrder(ref lastFieldId, 153u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.nexusDockTerminal == null)
+					{
+						instance.nexusDockTerminal = NexusDockTerminal.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						NexusDockTerminal.DeserializeLengthDelimited(stream, instance.nexusDockTerminal, isDelta);
+					}
+				}
+				break;
+			case 154u:
+				stream.ValidateFieldOrder(ref lastFieldId, 154u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.rockingChair == null)
+					{
+						instance.rockingChair = RockingChair.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						RockingChair.DeserializeLengthDelimited(stream, instance.rockingChair, isDelta);
+					}
+				}
+				break;
+			case 155u:
+				stream.ValidateFieldOrder(ref lastFieldId, 155u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.headData == null)
+					{
+						instance.headData = HeadData.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						HeadData.DeserializeLengthDelimited(stream, instance.headData, isDelta);
+					}
+				}
+				break;
+			case 156u:
+				stream.ValidateFieldOrder(ref lastFieldId, 156u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.wantedPoster == null)
+					{
+						instance.wantedPoster = WantedPoster.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						WantedPoster.DeserializeLengthDelimited(stream, instance.wantedPoster, isDelta);
+					}
+				}
+				break;
+			case 158u:
+				stream.ValidateFieldOrder(ref lastFieldId, 158u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.waypointRace == null)
+					{
+						instance.waypointRace = WaypointRace.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						WaypointRace.DeserializeLengthDelimited(stream, instance.waypointRace, isDelta);
+					}
+				}
+				break;
+			case 159u:
+				stream.ValidateFieldOrder(ref lastFieldId, 159u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.legacyShelter == null)
+					{
+						instance.legacyShelter = LegacyShelter.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						LegacyShelter.DeserializeLengthDelimited(stream, instance.legacyShelter, isDelta);
+					}
+				}
+				break;
+			case 160u:
+				stream.ValidateFieldOrder(ref lastFieldId, 160u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.metalDetectorSource == null)
+					{
+						instance.metalDetectorSource = MetalDetectorSource.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MetalDetectorSource.DeserializeLengthDelimited(stream, instance.metalDetectorSource, isDelta);
+					}
+				}
+				break;
+			case 161u:
+				stream.ValidateFieldOrder(ref lastFieldId, 161u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.tutorialIsland == null)
+					{
+						instance.tutorialIsland = TutorialIsland.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TutorialIsland.DeserializeLengthDelimited(stream, instance.tutorialIsland, isDelta);
+					}
+				}
+				break;
+			case 162u:
+				stream.ValidateFieldOrder(ref lastFieldId, 162u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.cinematicEntity == null)
+					{
+						instance.cinematicEntity = CinematicEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CinematicEntity.DeserializeLengthDelimited(stream, instance.cinematicEntity, isDelta);
+					}
+				}
+				break;
+			case 163u:
+				stream.ValidateFieldOrder(ref lastFieldId, 163u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.buildingPrivilegeRetro == null)
+					{
+						instance.buildingPrivilegeRetro = BuildingPrivilegeRetro.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BuildingPrivilegeRetro.DeserializeLengthDelimited(stream, instance.buildingPrivilegeRetro, isDelta);
+					}
+				}
+				break;
+			case 164u:
+				stream.ValidateFieldOrder(ref lastFieldId, 164u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.harborCrane == null)
+					{
+						instance.harborCrane = HarborCrane.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						HarborCrane.DeserializeLengthDelimited(stream, instance.harborCrane, isDelta);
+					}
+				}
+				break;
+			case 165u:
+				stream.ValidateFieldOrder(ref lastFieldId, 165u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.cargoShip == null)
+					{
+						instance.cargoShip = CargoShip.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CargoShip.DeserializeLengthDelimited(stream, instance.cargoShip, isDelta);
+					}
+				}
+				break;
+			case 166u:
+				stream.ValidateFieldOrder(ref lastFieldId, 166u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.cargoShipContainer == null)
+					{
+						instance.cargoShipContainer = CargoShipContainer.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CargoShipContainer.DeserializeLengthDelimited(stream, instance.cargoShipContainer, isDelta);
+					}
+				}
+				break;
+			case 167u:
+				stream.ValidateFieldOrder(ref lastFieldId, 167u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.missionMapMarker == null)
+					{
+						instance.missionMapMarker = MissionMapMarker.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MissionMapMarker.DeserializeLengthDelimited(stream, instance.missionMapMarker, isDelta);
+					}
+				}
+				break;
+			case 168u:
+				stream.ValidateFieldOrder(ref lastFieldId, 168u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.bike == null)
+					{
+						instance.bike = Bike.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Bike.DeserializeLengthDelimited(stream, instance.bike, isDelta);
+					}
+				}
+				break;
+			case 169u:
+				stream.ValidateFieldOrder(ref lastFieldId, 169u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.diverPropulsionVehicle == null)
+					{
+						instance.diverPropulsionVehicle = DiverPropulsionVehicle.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DiverPropulsionVehicle.DeserializeLengthDelimited(stream, instance.diverPropulsionVehicle, isDelta);
+					}
+				}
+				break;
+			case 174u:
+				stream.ValidateFieldOrder(ref lastFieldId, 174u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.travellingVendor == null)
+					{
+						instance.travellingVendor = TravellingVendor.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TravellingVendor.DeserializeLengthDelimited(stream, instance.travellingVendor, isDelta);
+					}
+				}
+				break;
+			case 175u:
+				stream.ValidateFieldOrder(ref lastFieldId, 175u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vendingDynamicPricing == null)
+					{
+						instance.vendingDynamicPricing = VendingDynamicPricing.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VendingDynamicPricing.DeserializeLengthDelimited(stream, instance.vendingDynamicPricing, isDelta);
+					}
+				}
+				break;
+			case 176u:
+				stream.ValidateFieldOrder(ref lastFieldId, 176u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.tinCanAlarm == null)
+					{
+						instance.tinCanAlarm = TinCanAlarm.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TinCanAlarm.DeserializeLengthDelimited(stream, instance.tinCanAlarm, isDelta);
+					}
+				}
+				break;
+			case 177u:
+				stream.ValidateFieldOrder(ref lastFieldId, 177u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.digitalClock == null)
+					{
+						instance.digitalClock = DigitalClock.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DigitalClock.DeserializeLengthDelimited(stream, instance.digitalClock, isDelta);
+					}
+				}
+				break;
+			case 178u:
+				stream.ValidateFieldOrder(ref lastFieldId, 178u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.elevatorLift == null)
+					{
+						instance.elevatorLift = ElevatorLift.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ElevatorLift.DeserializeLengthDelimited(stream, instance.elevatorLift, isDelta);
+					}
+				}
+				break;
+			case 179u:
+				stream.ValidateFieldOrder(ref lastFieldId, 179u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.npcVendingMachine == null)
+					{
+						instance.npcVendingMachine = NPCVendingMachine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						NPCVendingMachine.DeserializeLengthDelimited(stream, instance.npcVendingMachine, isDelta);
+					}
+				}
+				break;
+			case 180u:
+				stream.ValidateFieldOrder(ref lastFieldId, 180u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.mailbox == null)
+					{
+						instance.mailbox = Mailbox.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Mailbox.DeserializeLengthDelimited(stream, instance.mailbox, isDelta);
+					}
+				}
+				break;
+			case 181u:
+				stream.ValidateFieldOrder(ref lastFieldId, 181u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.projectileWeaponMod == null)
+					{
+						instance.projectileWeaponMod = GunWeaponMod.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						GunWeaponMod.DeserializeLengthDelimited(stream, instance.projectileWeaponMod, isDelta);
+					}
+				}
+				break;
+			case 182u:
+				stream.ValidateFieldOrder(ref lastFieldId, 182u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseSculpture == null)
+					{
+						instance.baseSculpture = BaseSculpture.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseSculpture.DeserializeLengthDelimited(stream, instance.baseSculpture, isDelta);
+					}
+				}
+				break;
+			case 183u:
+				stream.ValidateFieldOrder(ref lastFieldId, 183u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vendingMachineStats == null)
+					{
+						instance.vendingMachineStats = VendingMachineStats.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VendingMachineStats.DeserializeLengthDelimited(stream, instance.vendingMachineStats, isDelta);
+					}
+				}
+				break;
+			case 184u:
+				stream.ValidateFieldOrder(ref lastFieldId, 184u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.catapult == null)
+					{
+						instance.catapult = Catapult.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Catapult.DeserializeLengthDelimited(stream, instance.catapult, isDelta);
+					}
+				}
+				break;
+			case 185u:
+				stream.ValidateFieldOrder(ref lastFieldId, 185u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.siegeTower == null)
+					{
+						instance.siegeTower = SiegeTower.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SiegeTower.DeserializeLengthDelimited(stream, instance.siegeTower, isDelta);
+					}
+				}
+				break;
+			case 186u:
+				stream.ValidateFieldOrder(ref lastFieldId, 186u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ballista == null)
+					{
+						instance.ballista = Ballista.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Ballista.DeserializeLengthDelimited(stream, instance.ballista, isDelta);
+					}
+				}
+				break;
+			case 187u:
+				stream.ValidateFieldOrder(ref lastFieldId, 187u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ballistaGun == null)
+					{
+						instance.ballistaGun = BallistaGun.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BallistaGun.DeserializeLengthDelimited(stream, instance.ballistaGun, isDelta);
+					}
+				}
+				break;
+			case 188u:
+				stream.ValidateFieldOrder(ref lastFieldId, 188u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.batteringRam == null)
+					{
+						instance.batteringRam = BatteringRam.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BatteringRam.DeserializeLengthDelimited(stream, instance.batteringRam, isDelta);
+					}
+				}
+				break;
+			case 189u:
+				stream.ValidateFieldOrder(ref lastFieldId, 189u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.temporaryRagdoll == null)
+					{
+						instance.temporaryRagdoll = TemporaryRagdoll.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TemporaryRagdoll.DeserializeLengthDelimited(stream, instance.temporaryRagdoll, isDelta);
+					}
+				}
+				break;
+			case 191u:
+				stream.ValidateFieldOrder(ref lastFieldId, 191u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.constructableEntity == null)
+					{
+						instance.constructableEntity = ConstructableEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ConstructableEntity.DeserializeLengthDelimited(stream, instance.constructableEntity, isDelta);
+					}
+				}
+				break;
+			case 192u:
+				stream.ValidateFieldOrder(ref lastFieldId, 192u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.chickenCoop == null)
+					{
+						instance.chickenCoop = ChickenCoop.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ChickenCoop.DeserializeLengthDelimited(stream, instance.chickenCoop, isDelta);
+					}
+				}
+				break;
+			case 193u:
+				stream.ValidateFieldOrder(ref lastFieldId, 193u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.farmableAnimal == null)
+					{
+						instance.farmableAnimal = FarmableAnimal.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						FarmableAnimal.DeserializeLengthDelimited(stream, instance.farmableAnimal, isDelta);
+					}
+				}
+				break;
+			case 194u:
+				stream.ValidateFieldOrder(ref lastFieldId, 194u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ownership == null)
+					{
+						instance.ownership = ItemOwnershipAmount.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ItemOwnershipAmount.DeserializeLengthDelimited(stream, instance.ownership, isDelta);
+					}
+				}
+				break;
+			case 195u:
+				stream.ValidateFieldOrder(ref lastFieldId, 195u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.beehive == null)
+					{
+						instance.beehive = Beehive.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Beehive.DeserializeLengthDelimited(stream, instance.beehive, isDelta);
+					}
+				}
+				break;
+			case 196u:
+				stream.ValidateFieldOrder(ref lastFieldId, 196u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.beeMasterSwarm == null)
+					{
+						instance.beeMasterSwarm = BeeMasterSwarm.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BeeMasterSwarm.DeserializeLengthDelimited(stream, instance.beeMasterSwarm, isDelta);
+					}
+				}
+				break;
+			case 197u:
+				stream.ValidateFieldOrder(ref lastFieldId, 197u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.containerCorpse == null)
+					{
+						instance.containerCorpse = ContainerCorpseData.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ContainerCorpseData.DeserializeLengthDelimited(stream, instance.containerCorpse, isDelta);
+					}
+				}
+				break;
+			case 198u:
+				stream.ValidateFieldOrder(ref lastFieldId, 198u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.npcTargetState == null)
+					{
+						instance.npcTargetState = NPCTargetState.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						NPCTargetState.DeserializeLengthDelimited(stream, instance.npcTargetState, isDelta);
+					}
+				}
+				break;
+			case 199u:
+				stream.ValidateFieldOrder(ref lastFieldId, 199u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vineMountable == null)
+					{
+						instance.vineMountable = VineMountable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VineMountable.DeserializeLengthDelimited(stream, instance.vineMountable, isDelta);
+					}
+				}
+				break;
+			case 200u:
+				stream.ValidateFieldOrder(ref lastFieldId, 200u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vineTree == null)
+					{
+						instance.vineTree = VineTree.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VineTree.DeserializeLengthDelimited(stream, instance.vineTree, isDelta);
+					}
+				}
+				break;
+			case 201u:
+				stream.ValidateFieldOrder(ref lastFieldId, 201u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.treeRespawn == null)
+					{
+						instance.treeRespawn = TreeRespawn.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TreeRespawn.DeserializeLengthDelimited(stream, instance.treeRespawn, isDelta);
+					}
+				}
+				break;
+			case 202u:
+				stream.ValidateFieldOrder(ref lastFieldId, 202u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.wallpaperTool == null)
+					{
+						instance.wallpaperTool = WallpaperTool.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						WallpaperTool.DeserializeLengthDelimited(stream, instance.wallpaperTool, isDelta);
+					}
+				}
+				break;
+			case 203u:
+				stream.ValidateFieldOrder(ref lastFieldId, 203u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.commandBlock == null)
+					{
+						instance.commandBlock = CommandBlock.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CommandBlock.DeserializeLengthDelimited(stream, instance.commandBlock, isDelta);
+					}
+				}
+				break;
+			case 204u:
+				stream.ValidateFieldOrder(ref lastFieldId, 204u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.staticRespawn == null)
+					{
+						instance.staticRespawn = StaticRespawnAreaData.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						StaticRespawnAreaData.DeserializeLengthDelimited(stream, instance.staticRespawn, isDelta);
+					}
+				}
+				break;
+			case 205u:
+				stream.ValidateFieldOrder(ref lastFieldId, 205u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.buriedItemStorage == null)
+					{
+						instance.buriedItemStorage = BuriedItems.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BuriedItems.DeserializeLengthDelimited(stream, instance.buriedItemStorage, isDelta);
+					}
+				}
+				break;
+			case 206u:
+				stream.ValidateFieldOrder(ref lastFieldId, 206u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.mannequin == null)
+					{
+						instance.mannequin = Mannequin.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Mannequin.DeserializeLengthDelimited(stream, instance.mannequin, isDelta);
+					}
+				}
+				break;
+			case 207u:
+				stream.ValidateFieldOrder(ref lastFieldId, 207u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseMelee == null)
+					{
+						instance.baseMelee = BaseMelee.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseMelee.DeserializeLengthDelimited(stream, instance.baseMelee, isDelta);
+					}
+				}
+				break;
+			case 208u:
+				stream.ValidateFieldOrder(ref lastFieldId, 208u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.door == null)
+					{
+						instance.door = Door.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Door.DeserializeLengthDelimited(stream, instance.door, isDelta);
+					}
+				}
+				break;
+			case 209u:
+				stream.ValidateFieldOrder(ref lastFieldId, 209u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.deepSeaPortal == null)
+					{
+						instance.deepSeaPortal = DeepSeaPortal.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DeepSeaPortal.DeserializeLengthDelimited(stream, instance.deepSeaPortal, isDelta);
+					}
+				}
+				break;
+			case 211u:
+				stream.ValidateFieldOrder(ref lastFieldId, 211u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseMountable == null)
+					{
+						instance.baseMountable = BaseMountable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseMountable.DeserializeLengthDelimited(stream, instance.baseMountable, isDelta);
+					}
+				}
+				break;
+			case 212u:
+				stream.ValidateFieldOrder(ref lastFieldId, 212u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.smallEngine == null)
+					{
+						instance.smallEngine = SmallEngine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SmallEngine.DeserializeLengthDelimited(stream, instance.smallEngine, isDelta);
+					}
+				}
+				break;
+			case 213u:
+				stream.ValidateFieldOrder(ref lastFieldId, 213u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.playerBoat == null)
+					{
+						instance.playerBoat = PlayerBoat.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						PlayerBoat.DeserializeLengthDelimited(stream, instance.playerBoat, isDelta);
+					}
+				}
+				break;
+			case 214u:
+				stream.ValidateFieldOrder(ref lastFieldId, 214u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.steeringWheel == null)
+					{
+						instance.steeringWheel = SteeringWheel.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SteeringWheel.DeserializeLengthDelimited(stream, instance.steeringWheel, isDelta);
+					}
+				}
+				break;
+			case 215u:
+				stream.ValidateFieldOrder(ref lastFieldId, 215u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.deepSeaManager == null)
+					{
+						instance.deepSeaManager = DeepSeaManager.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DeepSeaManager.DeserializeLengthDelimited(stream, instance.deepSeaManager, isDelta);
+					}
+				}
+				break;
+			case 216u:
+				stream.ValidateFieldOrder(ref lastFieldId, 216u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.scientistBoatOilrigManager == null)
+					{
+						instance.scientistBoatOilrigManager = ScientistBoatOilrigManager.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ScientistBoatOilrigManager.DeserializeLengthDelimited(stream, instance.scientistBoatOilrigManager, isDelta);
+					}
+				}
+				break;
+			case 217u:
+				stream.ValidateFieldOrder(ref lastFieldId, 217u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.storageAdaptor == null)
+					{
+						instance.storageAdaptor = StorageAdaptor.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						StorageAdaptor.DeserializeLengthDelimited(stream, instance.storageAdaptor, isDelta);
+					}
+				}
+				break;
+			case 218u:
+				stream.ValidateFieldOrder(ref lastFieldId, 218u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.helicopterFlares == null)
+					{
+						instance.helicopterFlares = HelicopterFlares.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						HelicopterFlares.DeserializeLengthDelimited(stream, instance.helicopterFlares, isDelta);
+					}
+				}
+				break;
+			case 219u:
+				stream.ValidateFieldOrder(ref lastFieldId, 219u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.wipeLaptop == null)
+					{
+						instance.wipeLaptop = WipeLaptop.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						WipeLaptop.DeserializeLengthDelimited(stream, instance.wipeLaptop, isDelta);
+					}
+				}
+				break;
+			case 220u:
+				stream.ValidateFieldOrder(ref lastFieldId, 220u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.mountedWeapon == null)
+					{
+						instance.mountedWeapon = MountedWeapon.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MountedWeapon.DeserializeLengthDelimited(stream, instance.mountedWeapon, isDelta);
+					}
+				}
+				break;
+			case 221u:
+				stream.ValidateFieldOrder(ref lastFieldId, 221u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.boatBuildingBlock == null)
+					{
+						instance.boatBuildingBlock = BoatBuildingBlock.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BoatBuildingBlock.DeserializeLengthDelimited(stream, instance.boatBuildingBlock, isDelta);
+					}
+				}
+				break;
+			case 222u:
+				stream.ValidateFieldOrder(ref lastFieldId, 222u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.boatBuildingStation == null)
+					{
+						instance.boatBuildingStation = BoatBuildingStation.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BoatBuildingStation.DeserializeLengthDelimited(stream, instance.boatBuildingStation, isDelta);
+					}
+				}
+				break;
+			case 223u:
+				stream.ValidateFieldOrder(ref lastFieldId, 223u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.displayingBoxStorage == null)
+					{
+						instance.displayingBoxStorage = DisplayingBoxStorage.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DisplayingBoxStorage.DeserializeLengthDelimited(stream, instance.displayingBoxStorage, isDelta);
+					}
+				}
+				break;
+			case 224u:
+				stream.ValidateFieldOrder(ref lastFieldId, 224u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.workbench == null)
+					{
+						instance.workbench = Workbench.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Workbench.DeserializeLengthDelimited(stream, instance.workbench, isDelta);
+					}
+				}
+				break;
+			case 225u:
+				stream.ValidateFieldOrder(ref lastFieldId, 225u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.apartmentLock == null)
+					{
+						instance.apartmentLock = ApartmentLock.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ApartmentLock.DeserializeLengthDelimited(stream, instance.apartmentLock, isDelta);
+					}
+				}
+				break;
+			case 226u:
+				stream.ValidateFieldOrder(ref lastFieldId, 226u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.rentableShop == null)
+					{
+						instance.rentableShop = RentableShop.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						RentableShop.DeserializeLengthDelimited(stream, instance.rentableShop, isDelta);
+					}
+				}
+				break;
+			case 227u:
+				stream.ValidateFieldOrder(ref lastFieldId, 227u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.apartmentRoom == null)
+					{
+						instance.apartmentRoom = ApartmentRoom.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ApartmentRoom.DeserializeLengthDelimited(stream, instance.apartmentRoom, isDelta);
+					}
+				}
+				break;
+			case 228u:
+				stream.ValidateFieldOrder(ref lastFieldId, 228u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.apartmentBuilding == null)
+					{
+						instance.apartmentBuilding = ApartmentBuilding.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ApartmentBuilding.DeserializeLengthDelimited(stream, instance.apartmentBuilding, isDelta);
+					}
+				}
+				break;
+			case 229u:
+				stream.ValidateFieldOrder(ref lastFieldId, 229u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.apartmentUpkeep == null)
+					{
+						instance.apartmentUpkeep = ApartmentUpkeepTerminal.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ApartmentUpkeepTerminal.DeserializeLengthDelimited(stream, instance.apartmentUpkeep, isDelta);
+					}
+				}
+				break;
+			case 230u:
+				stream.ValidateFieldOrder(ref lastFieldId, 230u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.mortar == null)
+					{
+						instance.mortar = MortarData.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MortarData.DeserializeLengthDelimited(stream, instance.mortar, isDelta);
+					}
+				}
+				break;
+			case 231u:
+				stream.ValidateFieldOrder(ref lastFieldId, 231u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.apartmentDoor == null)
+					{
+						instance.apartmentDoor = ApartmentDoor.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ApartmentDoor.DeserializeLengthDelimited(stream, instance.apartmentDoor, isDelta);
+					}
+				}
+				break;
+			case 232u:
+				stream.ValidateFieldOrder(ref lastFieldId, 232u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.apartmentMailbox == null)
+					{
+						instance.apartmentMailbox = ApartmentMailbox.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ApartmentMailbox.DeserializeLengthDelimited(stream, instance.apartmentMailbox, isDelta);
+					}
+				}
+				break;
+			case 235u:
+				stream.ValidateFieldOrder(ref lastFieldId, 235u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.Pooltable == null)
+					{
+						instance.Pooltable = Pooltable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Pooltable.DeserializeLengthDelimited(stream, instance.Pooltable, isDelta);
+					}
+				}
+				break;
+			case 236u:
+				stream.ValidateFieldOrder(ref lastFieldId, 236u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.dartsGame == null)
+					{
+						instance.dartsGame = DartsGame.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DartsGame.DeserializeLengthDelimited(stream, instance.dartsGame, isDelta);
+					}
+				}
+				break;
+			case 237u:
+				stream.ValidateFieldOrder(ref lastFieldId, 237u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.dartsGameLeaderboard == null)
+					{
+						instance.dartsGameLeaderboard = DartsGameLeaderboard.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DartsGameLeaderboard.DeserializeLengthDelimited(stream, instance.dartsGameLeaderboard, isDelta);
+					}
+				}
+				break;
+			case 238u:
+				stream.ValidateFieldOrder(ref lastFieldId, 238u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.satelliteControlComputer == null)
+					{
+						instance.satelliteControlComputer = SatelliteControlComputer.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SatelliteControlComputer.DeserializeLengthDelimited(stream, instance.satelliteControlComputer, isDelta);
+					}
+				}
+				break;
+			case 239u:
+				stream.ValidateFieldOrder(ref lastFieldId, 239u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.satelliteCrash == null)
+					{
+						instance.satelliteCrash = SatelliteCrash.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SatelliteCrash.DeserializeLengthDelimited(stream, instance.satelliteCrash, isDelta);
+					}
+				}
+				break;
+			case 240u:
+				stream.ValidateFieldOrder(ref lastFieldId, 240u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.satelliteCrashRemains == null)
+					{
+						instance.satelliteCrashRemains = SatelliteCrashRemains.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SatelliteCrashRemains.DeserializeLengthDelimited(stream, instance.satelliteCrashRemains, isDelta);
+					}
+				}
+				break;
+			case 241u:
+				stream.ValidateFieldOrder(ref lastFieldId, 241u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.electricGenerator == null)
+					{
+						instance.electricGenerator = ElectricGenerator.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ElectricGenerator.DeserializeLengthDelimited(stream, instance.electricGenerator, isDelta);
+					}
+				}
+				break;
+			case 242u:
+				stream.ValidateFieldOrder(ref lastFieldId, 242u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.powergridManager == null)
+					{
+						instance.powergridManager = PowergridManager.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						PowergridManager.DeserializeLengthDelimited(stream, instance.powergridManager, isDelta);
+					}
+				}
+				break;
+			case 243u:
+				stream.ValidateFieldOrder(ref lastFieldId, 243u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.oilswitchBroadcast == null)
+					{
+						instance.oilswitchBroadcast = OilSwitchBroadcast.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						OilSwitchBroadcast.DeserializeLengthDelimited(stream, instance.oilswitchBroadcast, isDelta);
+					}
+				}
+				break;
+			case 244u:
+				stream.ValidateFieldOrder(ref lastFieldId, 244u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.sprinkler == null)
+					{
+						instance.sprinkler = Sprinkler.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Sprinkler.DeserializeLengthDelimited(stream, instance.sprinkler, isDelta);
+					}
+				}
+				break;
+			case 245u:
+				stream.ValidateFieldOrder(ref lastFieldId, 245u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.hackableLockedCrate == null)
+					{
+						instance.hackableLockedCrate = HackableLockedCrate.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						HackableLockedCrate.DeserializeLengthDelimited(stream, instance.hackableLockedCrate, isDelta);
+					}
+				}
+				break;
+			case 246u:
+				stream.ValidateFieldOrder(ref lastFieldId, 246u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.lockedByEntCrate == null)
+					{
+						instance.lockedByEntCrate = LockedByEntCrate.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						LockedByEntCrate.DeserializeLengthDelimited(stream, instance.lockedByEntCrate, isDelta);
+					}
+				}
+				break;
+			case 247u:
+				stream.ValidateFieldOrder(ref lastFieldId, 247u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.territoryZones == null)
+					{
+						instance.territoryZones = TerritoryZones.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TerritoryZones.DeserializeLengthDelimited(stream, instance.territoryZones, isDelta);
+					}
+				}
+				break;
+			case 248u:
+				stream.ValidateFieldOrder(ref lastFieldId, 248u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.monumentBlocker == null)
+					{
+						instance.monumentBlocker = MonumentBlocker.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MonumentBlocker.DeserializeLengthDelimited(stream, instance.monumentBlocker, isDelta);
+					}
+				}
+				break;
+			default:
+				stream.ValidateFieldOrder(ref lastFieldId, key.Field, fieldIsRepeated: true, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			}
+		}
+		return instance;
+	}
+
+	public static Entity DeserializeLength(BufferStream stream, int length, Entity instance, bool isDelta)
+	{
+		long num = stream.Position + length;
+		uint lastFieldId = 0u;
+		while (true)
+		{
+			if (stream.Position >= num)
+			{
+				if (stream.Position == num)
+				{
+					break;
+				}
+				throw new ProtocolBufferException("Read past max limit");
+			}
+			int num2 = stream.ReadByte();
+			if (num2 == -1)
+			{
+				throw new EndOfStreamException();
+			}
+			stream.ConsumeFieldOperation("ProtoBuf.Entity");
+			switch (num2)
+			{
+			case 10:
+				stream.ValidateFieldOrder(ref lastFieldId, 1u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.baseNetworkable == null)
+				{
+					instance.baseNetworkable = BaseNetworkable.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					BaseNetworkable.DeserializeLengthDelimited(stream, instance.baseNetworkable, isDelta);
+				}
+				continue;
+			case 18:
+				stream.ValidateFieldOrder(ref lastFieldId, 2u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.baseEntity == null)
+				{
+					instance.baseEntity = BaseEntity.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					BaseEntity.DeserializeLengthDelimited(stream, instance.baseEntity, isDelta);
+				}
+				continue;
+			case 26:
+				stream.ValidateFieldOrder(ref lastFieldId, 3u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.basePlayer == null)
+				{
+					instance.basePlayer = BasePlayer.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					BasePlayer.DeserializeLengthDelimited(stream, instance.basePlayer, isDelta);
+				}
+				continue;
+			case 34:
+				stream.ValidateFieldOrder(ref lastFieldId, 4u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.worldItem == null)
+				{
+					instance.worldItem = WorldItem.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					WorldItem.DeserializeLengthDelimited(stream, instance.worldItem, isDelta);
+				}
+				continue;
+			case 42:
+				stream.ValidateFieldOrder(ref lastFieldId, 5u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.resource == null)
+				{
+					instance.resource = BaseResource.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					BaseResource.DeserializeLengthDelimited(stream, instance.resource, isDelta);
+				}
+				continue;
+			case 50:
+				stream.ValidateFieldOrder(ref lastFieldId, 6u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.buildingBlock == null)
+				{
+					instance.buildingBlock = BuildingBlock.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					BuildingBlock.DeserializeLengthDelimited(stream, instance.buildingBlock, isDelta);
+				}
+				continue;
+			case 58:
+				stream.ValidateFieldOrder(ref lastFieldId, 7u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.environment == null)
+				{
+					instance.environment = Environment.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					Environment.DeserializeLengthDelimited(stream, instance.environment, isDelta);
+				}
+				continue;
+			case 66:
+				stream.ValidateFieldOrder(ref lastFieldId, 8u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.corpse == null)
+				{
+					instance.corpse = Corpse.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					Corpse.DeserializeLengthDelimited(stream, instance.corpse, isDelta);
+				}
+				continue;
+			case 82:
+				stream.ValidateFieldOrder(ref lastFieldId, 10u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.parent == null)
+				{
+					instance.parent = ParentInfo.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					ParentInfo.DeserializeLengthDelimited(stream, instance.parent, isDelta);
+				}
+				continue;
+			case 90:
+				stream.ValidateFieldOrder(ref lastFieldId, 11u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.keyLock == null)
+				{
+					instance.keyLock = KeyLock.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					KeyLock.DeserializeLengthDelimited(stream, instance.keyLock, isDelta);
+				}
+				continue;
+			case 98:
+				stream.ValidateFieldOrder(ref lastFieldId, 12u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.codeLock == null)
+				{
+					instance.codeLock = CodeLock.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					CodeLock.DeserializeLengthDelimited(stream, instance.codeLock, isDelta);
+				}
+				continue;
+			case 106:
+				stream.ValidateFieldOrder(ref lastFieldId, 13u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.entitySlots == null)
+				{
+					instance.entitySlots = EntitySlots.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					EntitySlots.DeserializeLengthDelimited(stream, instance.entitySlots, isDelta);
+				}
+				continue;
+			case 114:
+				stream.ValidateFieldOrder(ref lastFieldId, 14u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.buildingPrivilege == null)
+				{
+					instance.buildingPrivilege = BuildingPrivilege.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					BuildingPrivilege.DeserializeLengthDelimited(stream, instance.buildingPrivilege, isDelta);
+				}
+				continue;
+			case 122:
+				stream.ValidateFieldOrder(ref lastFieldId, 15u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (instance.storageBox == null)
+				{
+					instance.storageBox = StorageBox.DeserializeLengthDelimited(stream);
+				}
+				else
+				{
+					StorageBox.DeserializeLengthDelimited(stream, instance.storageBox, isDelta);
+				}
+				continue;
+			}
+			Key key = ProtocolParser.ReadKey((byte)num2, stream);
+			switch (key.Field)
+			{
+			case 1u:
+				stream.ValidateFieldOrder(ref lastFieldId, 1u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 2u:
+				stream.ValidateFieldOrder(ref lastFieldId, 2u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 3u:
+				stream.ValidateFieldOrder(ref lastFieldId, 3u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 4u:
+				stream.ValidateFieldOrder(ref lastFieldId, 4u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 5u:
+				stream.ValidateFieldOrder(ref lastFieldId, 5u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 6u:
+				stream.ValidateFieldOrder(ref lastFieldId, 6u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 7u:
+				stream.ValidateFieldOrder(ref lastFieldId, 7u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 8u:
+				stream.ValidateFieldOrder(ref lastFieldId, 8u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 10u:
+				stream.ValidateFieldOrder(ref lastFieldId, 10u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 11u:
+				stream.ValidateFieldOrder(ref lastFieldId, 11u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 12u:
+				stream.ValidateFieldOrder(ref lastFieldId, 12u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 13u:
+				stream.ValidateFieldOrder(ref lastFieldId, 13u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 14u:
+				stream.ValidateFieldOrder(ref lastFieldId, 14u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 15u:
+				stream.ValidateFieldOrder(ref lastFieldId, 15u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			case 16u:
+				stream.ValidateFieldOrder(ref lastFieldId, 16u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.heldEntity == null)
+					{
+						instance.heldEntity = HeldEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						HeldEntity.DeserializeLengthDelimited(stream, instance.heldEntity, isDelta);
+					}
+				}
+				break;
+			case 17u:
+				stream.ValidateFieldOrder(ref lastFieldId, 17u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseProjectile == null)
+					{
+						instance.baseProjectile = BaseProjectile.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseProjectile.DeserializeLengthDelimited(stream, instance.baseProjectile, isDelta);
+					}
+				}
+				break;
+			case 18u:
+				stream.ValidateFieldOrder(ref lastFieldId, 18u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseNPC == null)
+					{
+						instance.baseNPC = BaseNPC.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseNPC.DeserializeLengthDelimited(stream, instance.baseNPC, isDelta);
+					}
+				}
+				break;
+			case 19u:
+				stream.ValidateFieldOrder(ref lastFieldId, 19u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.lootContainer == null)
+					{
+						instance.lootContainer = LootContainer.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						LootContainer.DeserializeLengthDelimited(stream, instance.lootContainer, isDelta);
+					}
+				}
+				break;
+			case 20u:
+				stream.ValidateFieldOrder(ref lastFieldId, 20u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.genericSpawner == null)
+					{
+						instance.genericSpawner = GenericSpawner.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						GenericSpawner.DeserializeLengthDelimited(stream, instance.genericSpawner, isDelta);
+					}
+				}
+				break;
+			case 21u:
+				stream.ValidateFieldOrder(ref lastFieldId, 21u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.sleepingBag == null)
+					{
+						instance.sleepingBag = SleepingBag.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SleepingBag.DeserializeLengthDelimited(stream, instance.sleepingBag, isDelta);
+					}
+				}
+				break;
+			case 22u:
+				stream.ValidateFieldOrder(ref lastFieldId, 22u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.lootableCorpse == null)
+					{
+						instance.lootableCorpse = LootableCorpse.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						LootableCorpse.DeserializeLengthDelimited(stream, instance.lootableCorpse, isDelta);
+					}
+				}
+				break;
+			case 23u:
+				stream.ValidateFieldOrder(ref lastFieldId, 23u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.sign == null)
+					{
+						instance.sign = Sign.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Sign.DeserializeLengthDelimited(stream, instance.sign, isDelta);
+					}
+				}
+				break;
+			case 24u:
+				stream.ValidateFieldOrder(ref lastFieldId, 24u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseCombat == null)
+					{
+						instance.baseCombat = BaseCombat.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseCombat.DeserializeLengthDelimited(stream, instance.baseCombat, isDelta);
+					}
+				}
+				break;
+			case 25u:
+				stream.ValidateFieldOrder(ref lastFieldId, 25u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.mapEntity == null)
+					{
+						instance.mapEntity = MapEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MapEntity.DeserializeLengthDelimited(stream, instance.mapEntity, isDelta);
+					}
+				}
+				break;
+			case 26u:
+				stream.ValidateFieldOrder(ref lastFieldId, 26u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.researchTable == null)
+					{
+						instance.researchTable = ResearchTable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ResearchTable.DeserializeLengthDelimited(stream, instance.researchTable, isDelta);
+					}
+				}
+				break;
+			case 27u:
+				stream.ValidateFieldOrder(ref lastFieldId, 27u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.dudExplosive == null)
+					{
+						instance.dudExplosive = DudExplosive.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DudExplosive.DeserializeLengthDelimited(stream, instance.dudExplosive, isDelta);
+					}
+				}
+				break;
+			case 28u:
+				stream.ValidateFieldOrder(ref lastFieldId, 28u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.miningQuarry == null)
+					{
+						instance.miningQuarry = MiningQuarry.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MiningQuarry.DeserializeLengthDelimited(stream, instance.miningQuarry, isDelta);
+					}
+				}
+				break;
+			case 29u:
+				stream.ValidateFieldOrder(ref lastFieldId, 29u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseVehicle == null)
+					{
+						instance.baseVehicle = BaseVehicle.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseVehicle.DeserializeLengthDelimited(stream, instance.baseVehicle, isDelta);
+					}
+				}
+				break;
+			case 30u:
+				stream.ValidateFieldOrder(ref lastFieldId, 30u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.helicopter == null)
+					{
+						instance.helicopter = Helicopter.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Helicopter.DeserializeLengthDelimited(stream, instance.helicopter, isDelta);
+					}
+				}
+				break;
+			case 31u:
+				stream.ValidateFieldOrder(ref lastFieldId, 31u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.landmine == null)
+					{
+						instance.landmine = Landmine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Landmine.DeserializeLengthDelimited(stream, instance.landmine, isDelta);
+					}
+				}
+				break;
+			case 32u:
+				stream.ValidateFieldOrder(ref lastFieldId, 32u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.autoturret == null)
+					{
+						instance.autoturret = AutoTurret.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						AutoTurret.DeserializeLengthDelimited(stream, instance.autoturret, isDelta);
+					}
+				}
+				break;
+			case 33u:
+				stream.ValidateFieldOrder(ref lastFieldId, 33u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.sphereEntity == null)
+					{
+						instance.sphereEntity = SphereEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SphereEntity.DeserializeLengthDelimited(stream, instance.sphereEntity, isDelta);
+					}
+				}
+				break;
+			case 34u:
+				stream.ValidateFieldOrder(ref lastFieldId, 34u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.stabilityEntity == null)
+					{
+						instance.stabilityEntity = StabilityEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						StabilityEntity.DeserializeLengthDelimited(stream, instance.stabilityEntity, isDelta);
+					}
+				}
+				break;
+			case 35u:
+				stream.ValidateFieldOrder(ref lastFieldId, 35u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ownerInfo == null)
+					{
+						instance.ownerInfo = OwnerInfo.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						OwnerInfo.DeserializeLengthDelimited(stream, instance.ownerInfo, isDelta);
+					}
+				}
+				break;
+			case 36u:
+				stream.ValidateFieldOrder(ref lastFieldId, 36u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.decayEntity == null)
+					{
+						instance.decayEntity = DecayEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DecayEntity.DeserializeLengthDelimited(stream, instance.decayEntity, isDelta);
+					}
+				}
+				break;
+			case 37u:
+				stream.ValidateFieldOrder(ref lastFieldId, 37u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.spawnable == null)
+					{
+						instance.spawnable = Spawnable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Spawnable.DeserializeLengthDelimited(stream, instance.spawnable, isDelta);
+					}
+				}
+				break;
+			case 38u:
+				stream.ValidateFieldOrder(ref lastFieldId, 38u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.servergib == null)
+					{
+						instance.servergib = ServerGib.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ServerGib.DeserializeLengthDelimited(stream, instance.servergib, isDelta);
+					}
+				}
+				break;
+			case 39u:
+				stream.ValidateFieldOrder(ref lastFieldId, 39u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vendingMachine == null)
+					{
+						instance.vendingMachine = VendingMachine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VendingMachine.DeserializeLengthDelimited(stream, instance.vendingMachine, isDelta);
+					}
+				}
+				break;
+			case 40u:
+				stream.ValidateFieldOrder(ref lastFieldId, 40u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.spinnerWheel == null)
+					{
+						instance.spinnerWheel = SpinnerWheel.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SpinnerWheel.DeserializeLengthDelimited(stream, instance.spinnerWheel, isDelta);
+					}
+				}
+				break;
+			case 41u:
+				stream.ValidateFieldOrder(ref lastFieldId, 41u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.lift == null)
+					{
+						instance.lift = Lift.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Lift.DeserializeLengthDelimited(stream, instance.lift, isDelta);
+					}
+				}
+				break;
+			case 42u:
+				stream.ValidateFieldOrder(ref lastFieldId, 42u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.bradley == null)
+					{
+						instance.bradley = BradleyAPC.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BradleyAPC.DeserializeLengthDelimited(stream, instance.bradley, isDelta);
+					}
+				}
+				break;
+			case 43u:
+				stream.ValidateFieldOrder(ref lastFieldId, 43u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.waterwell == null)
+					{
+						instance.waterwell = WaterWell.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						WaterWell.DeserializeLengthDelimited(stream, instance.waterwell, isDelta);
+					}
+				}
+				break;
+			case 44u:
+				stream.ValidateFieldOrder(ref lastFieldId, 44u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.motorBoat == null)
+					{
+						instance.motorBoat = Motorboat.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Motorboat.DeserializeLengthDelimited(stream, instance.motorBoat, isDelta);
+					}
+				}
+				break;
+			case 45u:
+				stream.ValidateFieldOrder(ref lastFieldId, 45u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ioEntity == null)
+					{
+						instance.ioEntity = IOEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						IOEntity.DeserializeLengthDelimited(stream, instance.ioEntity, isDelta);
+					}
+				}
+				break;
+			case 46u:
+				stream.ValidateFieldOrder(ref lastFieldId, 46u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.puzzleReset == null)
+					{
+						instance.puzzleReset = PuzzleReset.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						PuzzleReset.DeserializeLengthDelimited(stream, instance.puzzleReset, isDelta);
+					}
+				}
+				break;
+			case 47u:
+				stream.ValidateFieldOrder(ref lastFieldId, 47u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.relationshipManager == null)
+					{
+						instance.relationshipManager = RelationshipManager.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						RelationshipManager.DeserializeLengthDelimited(stream, instance.relationshipManager, isDelta);
+					}
+				}
+				break;
+			case 48u:
+				stream.ValidateFieldOrder(ref lastFieldId, 48u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.hotAirBalloon == null)
+					{
+						instance.hotAirBalloon = HotAirBalloon.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						HotAirBalloon.DeserializeLengthDelimited(stream, instance.hotAirBalloon, isDelta);
+					}
+				}
+				break;
+			case 49u:
+				stream.ValidateFieldOrder(ref lastFieldId, 49u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.samSite == null)
+					{
+						instance.samSite = SAMSite.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SAMSite.DeserializeLengthDelimited(stream, instance.samSite, isDelta);
+					}
+				}
+				break;
+			case 50u:
+				stream.ValidateFieldOrder(ref lastFieldId, 50u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.eggHunt == null)
+					{
+						instance.eggHunt = EggHunt.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						EggHunt.DeserializeLengthDelimited(stream, instance.eggHunt, isDelta);
+					}
+				}
+				break;
+			case 51u:
+				stream.ValidateFieldOrder(ref lastFieldId, 51u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.arcadeMachine == null)
+					{
+						instance.arcadeMachine = ArcadeMachine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ArcadeMachine.DeserializeLengthDelimited(stream, instance.arcadeMachine, isDelta);
+					}
+				}
+				break;
+			case 52u:
+				stream.ValidateFieldOrder(ref lastFieldId, 52u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.miniCopter == null)
+					{
+						instance.miniCopter = Minicopter.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Minicopter.DeserializeLengthDelimited(stream, instance.miniCopter, isDelta);
+					}
+				}
+				break;
+			case 53u:
+				stream.ValidateFieldOrder(ref lastFieldId, 53u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.horse == null)
+					{
+						instance.horse = Horse.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Horse.DeserializeLengthDelimited(stream, instance.horse, isDelta);
+					}
+				}
+				break;
+			case 54u:
+				stream.ValidateFieldOrder(ref lastFieldId, 54u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.smartAlarm == null)
+					{
+						instance.smartAlarm = SmartAlarm.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SmartAlarm.DeserializeLengthDelimited(stream, instance.smartAlarm, isDelta);
+					}
+				}
+				break;
+			case 55u:
+				stream.ValidateFieldOrder(ref lastFieldId, 55u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.lightString == null)
+					{
+						instance.lightString = LightString.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						LightString.DeserializeLengthDelimited(stream, instance.lightString, isDelta);
+					}
+				}
+				break;
+			case 56u:
+				stream.ValidateFieldOrder(ref lastFieldId, 56u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.lightDeployer == null)
+					{
+						instance.lightDeployer = LightDeployer.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						LightDeployer.DeserializeLengthDelimited(stream, instance.lightDeployer, isDelta);
+					}
+				}
+				break;
+			case 57u:
+				stream.ValidateFieldOrder(ref lastFieldId, 57u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.rcEntity == null)
+					{
+						instance.rcEntity = RCEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						RCEntity.DeserializeLengthDelimited(stream, instance.rcEntity, isDelta);
+					}
+				}
+				break;
+			case 58u:
+				stream.ValidateFieldOrder(ref lastFieldId, 58u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.computerStation == null)
+					{
+						instance.computerStation = ComputerStation.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ComputerStation.DeserializeLengthDelimited(stream, instance.computerStation, isDelta);
+					}
+				}
+				break;
+			case 59u:
+				stream.ValidateFieldOrder(ref lastFieldId, 59u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.growableEntity == null)
+					{
+						instance.growableEntity = GrowableEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						GrowableEntity.DeserializeLengthDelimited(stream, instance.growableEntity, isDelta);
+					}
+				}
+				break;
+			case 60u:
+				stream.ValidateFieldOrder(ref lastFieldId, 60u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.composter == null)
+					{
+						instance.composter = Composter.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Composter.DeserializeLengthDelimited(stream, instance.composter, isDelta);
+					}
+				}
+				break;
+			case 61u:
+				stream.ValidateFieldOrder(ref lastFieldId, 61u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.modularVehicle == null)
+					{
+						instance.modularVehicle = ModularVehicle.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ModularVehicle.DeserializeLengthDelimited(stream, instance.modularVehicle, isDelta);
+					}
+				}
+				break;
+			case 62u:
+				stream.ValidateFieldOrder(ref lastFieldId, 62u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.modularCar == null)
+					{
+						instance.modularCar = ModularCar.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ModularCar.DeserializeLengthDelimited(stream, instance.modularCar, isDelta);
+					}
+				}
+				break;
+			case 63u:
+				stream.ValidateFieldOrder(ref lastFieldId, 63u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.simpleUID == null)
+					{
+						instance.simpleUID = SimpleUID.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SimpleUID.DeserializeLengthDelimited(stream, instance.simpleUID, isDelta);
+					}
+				}
+				break;
+			case 64u:
+				stream.ValidateFieldOrder(ref lastFieldId, 64u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vehicleLift == null)
+					{
+						instance.vehicleLift = VehicleLift.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VehicleLift.DeserializeLengthDelimited(stream, instance.vehicleLift, isDelta);
+					}
+				}
+				break;
+			case 65u:
+				stream.ValidateFieldOrder(ref lastFieldId, 65u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.engineStorage == null)
+					{
+						instance.engineStorage = EngineStorage.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						EngineStorage.DeserializeLengthDelimited(stream, instance.engineStorage, isDelta);
+					}
+				}
+				break;
+			case 66u:
+				stream.ValidateFieldOrder(ref lastFieldId, 66u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vehicleVendor == null)
+					{
+						instance.vehicleVendor = VehicleVendor.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VehicleVendor.DeserializeLengthDelimited(stream, instance.vehicleVendor, isDelta);
+					}
+				}
+				break;
+			case 67u:
+				stream.ValidateFieldOrder(ref lastFieldId, 67u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.WaterPool == null)
+					{
+						instance.WaterPool = WaterPool.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						WaterPool.DeserializeLengthDelimited(stream, instance.WaterPool, isDelta);
+					}
+				}
+				break;
+			case 68u:
+				stream.ValidateFieldOrder(ref lastFieldId, 68u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.photo == null)
+					{
+						instance.photo = Photo.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Photo.DeserializeLengthDelimited(stream, instance.photo, isDelta);
+					}
+				}
+				break;
+			case 69u:
+				stream.ValidateFieldOrder(ref lastFieldId, 69u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.photoFrame == null)
+					{
+						instance.photoFrame = PhotoFrame.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						PhotoFrame.DeserializeLengthDelimited(stream, instance.photoFrame, isDelta);
+					}
+				}
+				break;
+			case 70u:
+				stream.ValidateFieldOrder(ref lastFieldId, 70u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vehicleModule == null)
+					{
+						instance.vehicleModule = VehicleModule.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VehicleModule.DeserializeLengthDelimited(stream, instance.vehicleModule, isDelta);
+					}
+				}
+				break;
+			case 71u:
+				stream.ValidateFieldOrder(ref lastFieldId, 71u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.mixingTable == null)
+					{
+						instance.mixingTable = MixingTable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MixingTable.DeserializeLengthDelimited(stream, instance.mixingTable, isDelta);
+					}
+				}
+				break;
+			case 72u:
+				stream.ValidateFieldOrder(ref lastFieldId, 72u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.shopKeeper == null)
+					{
+						instance.shopKeeper = ShopKeeper.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ShopKeeper.DeserializeLengthDelimited(stream, instance.shopKeeper, isDelta);
+					}
+				}
+				break;
+			case 73u:
+				stream.ValidateFieldOrder(ref lastFieldId, 73u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.elevator == null)
+					{
+						instance.elevator = Elevator.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Elevator.DeserializeLengthDelimited(stream, instance.elevator, isDelta);
+					}
+				}
+				break;
+			case 74u:
+				stream.ValidateFieldOrder(ref lastFieldId, 74u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.skullTrophy == null)
+					{
+						instance.skullTrophy = SkullTrophy.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SkullTrophy.DeserializeLengthDelimited(stream, instance.skullTrophy, isDelta);
+					}
+				}
+				break;
+			case 75u:
+				stream.ValidateFieldOrder(ref lastFieldId, 75u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.cassette == null)
+					{
+						instance.cassette = Cassette.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Cassette.DeserializeLengthDelimited(stream, instance.cassette, isDelta);
+					}
+				}
+				break;
+			case 76u:
+				stream.ValidateFieldOrder(ref lastFieldId, 76u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.telephone == null)
+					{
+						instance.telephone = Telephone.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Telephone.DeserializeLengthDelimited(stream, instance.telephone, isDelta);
+					}
+				}
+				break;
+			case 77u:
+				stream.ValidateFieldOrder(ref lastFieldId, 77u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.boomBox == null)
+					{
+						instance.boomBox = BoomBox.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BoomBox.DeserializeLengthDelimited(stream, instance.boomBox, isDelta);
+					}
+				}
+				break;
+			case 78u:
+				stream.ValidateFieldOrder(ref lastFieldId, 78u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.neonSign == null)
+					{
+						instance.neonSign = NeonSign.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						NeonSign.DeserializeLengthDelimited(stream, instance.neonSign, isDelta);
+					}
+				}
+				break;
+			case 79u:
+				stream.ValidateFieldOrder(ref lastFieldId, 79u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.subEntityList == null)
+					{
+						instance.subEntityList = SubEntityList.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SubEntityList.DeserializeLengthDelimited(stream, instance.subEntityList, isDelta);
+					}
+				}
+				break;
+			case 80u:
+				stream.ValidateFieldOrder(ref lastFieldId, 80u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.marketTerminal == null)
+					{
+						instance.marketTerminal = MarketTerminal.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MarketTerminal.DeserializeLengthDelimited(stream, instance.marketTerminal, isDelta);
+					}
+				}
+				break;
+			case 81u:
+				stream.ValidateFieldOrder(ref lastFieldId, 81u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.deliveryDrone == null)
+					{
+						instance.deliveryDrone = DeliveryDrone.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DeliveryDrone.DeserializeLengthDelimited(stream, instance.deliveryDrone, isDelta);
+					}
+				}
+				break;
+			case 82u:
+				stream.ValidateFieldOrder(ref lastFieldId, 82u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.reclaimTerminal == null)
+					{
+						instance.reclaimTerminal = ReclaimTerminal.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ReclaimTerminal.DeserializeLengthDelimited(stream, instance.reclaimTerminal, isDelta);
+					}
+				}
+				break;
+			case 83u:
+				stream.ValidateFieldOrder(ref lastFieldId, 83u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.slotMachine == null)
+					{
+						instance.slotMachine = SlotMachine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SlotMachine.DeserializeLengthDelimited(stream, instance.slotMachine, isDelta);
+					}
+				}
+				break;
+			case 84u:
+				stream.ValidateFieldOrder(ref lastFieldId, 84u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.trainEngine == null)
+					{
+						instance.trainEngine = TrainEngine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TrainEngine.DeserializeLengthDelimited(stream, instance.trainEngine, isDelta);
+					}
+				}
+				break;
+			case 85u:
+				stream.ValidateFieldOrder(ref lastFieldId, 85u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.cardGame == null)
+					{
+						instance.cardGame = CardGame.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CardGame.DeserializeLengthDelimited(stream, instance.cardGame, isDelta);
+					}
+				}
+				break;
+			case 86u:
+				stream.ValidateFieldOrder(ref lastFieldId, 86u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.crane == null)
+					{
+						instance.crane = Crane.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Crane.DeserializeLengthDelimited(stream, instance.crane, isDelta);
+					}
+				}
+				break;
+			case 87u:
+				stream.ValidateFieldOrder(ref lastFieldId, 87u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.connectedSpeaker == null)
+					{
+						instance.connectedSpeaker = ConnectedSpeaker.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ConnectedSpeaker.DeserializeLengthDelimited(stream, instance.connectedSpeaker, isDelta);
+					}
+				}
+				break;
+			case 88u:
+				stream.ValidateFieldOrder(ref lastFieldId, 88u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.audioEntity == null)
+					{
+						instance.audioEntity = AudioEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						AudioEntity.DeserializeLengthDelimited(stream, instance.audioEntity, isDelta);
+					}
+				}
+				break;
+			case 89u:
+				stream.ValidateFieldOrder(ref lastFieldId, 89u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.microphoneStand == null)
+					{
+						instance.microphoneStand = MicrophoneStand.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MicrophoneStand.DeserializeLengthDelimited(stream, instance.microphoneStand, isDelta);
+					}
+				}
+				break;
+			case 90u:
+				stream.ValidateFieldOrder(ref lastFieldId, 90u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.submarine == null)
+					{
+						instance.submarine = Submarine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Submarine.DeserializeLengthDelimited(stream, instance.submarine, isDelta);
+					}
+				}
+				break;
+			case 91u:
+				stream.ValidateFieldOrder(ref lastFieldId, 91u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.sleepingBagCamper == null)
+					{
+						instance.sleepingBagCamper = SleepingBagCamper.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SleepingBagCamper.DeserializeLengthDelimited(stream, instance.sleepingBagCamper, isDelta);
+					}
+				}
+				break;
+			case 92u:
+				stream.ValidateFieldOrder(ref lastFieldId, 92u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.camperModule == null)
+					{
+						instance.camperModule = CamperModule.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CamperModule.DeserializeLengthDelimited(stream, instance.camperModule, isDelta);
+					}
+				}
+				break;
+			case 93u:
+				stream.ValidateFieldOrder(ref lastFieldId, 93u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.paintableSign == null)
+					{
+						instance.paintableSign = PaintableSign.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						PaintableSign.DeserializeLengthDelimited(stream, instance.paintableSign, isDelta);
+					}
+				}
+				break;
+			case 94u:
+				stream.ValidateFieldOrder(ref lastFieldId, 94u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.whitelist == null)
+					{
+						instance.whitelist = Whitelist.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Whitelist.DeserializeLengthDelimited(stream, instance.whitelist, isDelta);
+					}
+				}
+				break;
+			case 95u:
+				stream.ValidateFieldOrder(ref lastFieldId, 95u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.FrankensteinTable == null)
+					{
+						instance.FrankensteinTable = FrankensteinTable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						FrankensteinTable.DeserializeLengthDelimited(stream, instance.FrankensteinTable, isDelta);
+					}
+				}
+				break;
+			case 96u:
+				stream.ValidateFieldOrder(ref lastFieldId, 96u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.mlrs == null)
+					{
+						instance.mlrs = MLRS.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MLRS.DeserializeLengthDelimited(stream, instance.mlrs, isDelta);
+					}
+				}
+				break;
+			case 97u:
+				stream.ValidateFieldOrder(ref lastFieldId, 97u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.reclaimManager == null)
+					{
+						instance.reclaimManager = ReclaimManager.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ReclaimManager.DeserializeLengthDelimited(stream, instance.reclaimManager, isDelta);
+					}
+				}
+				break;
+			case 98u:
+				stream.ValidateFieldOrder(ref lastFieldId, 98u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.gameMode == null)
+					{
+						instance.gameMode = GameMode.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						GameMode.DeserializeLengthDelimited(stream, instance.gameMode, isDelta);
+					}
+				}
+				break;
+			case 99u:
+				stream.ValidateFieldOrder(ref lastFieldId, 99u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.snowmobile == null)
+					{
+						instance.snowmobile = Snowmobile.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Snowmobile.DeserializeLengthDelimited(stream, instance.snowmobile, isDelta);
+					}
+				}
+				break;
+			case 100u:
+				stream.ValidateFieldOrder(ref lastFieldId, 100u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.Varint)
+				{
+					instance.createdThisFrame = ProtocolParser.ReadBool(stream);
+				}
+				break;
+			case 101u:
+				stream.ValidateFieldOrder(ref lastFieldId, 101u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.patternFirework == null)
+					{
+						instance.patternFirework = PatternFirework.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						PatternFirework.DeserializeLengthDelimited(stream, instance.patternFirework, isDelta);
+					}
+				}
+				break;
+			case 102u:
+				stream.ValidateFieldOrder(ref lastFieldId, 102u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.cargoPlane == null)
+					{
+						instance.cargoPlane = CargoPlane.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CargoPlane.DeserializeLengthDelimited(stream, instance.cargoPlane, isDelta);
+					}
+				}
+				break;
+			case 103u:
+				stream.ValidateFieldOrder(ref lastFieldId, 103u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.paintedItem == null)
+					{
+						instance.paintedItem = PaintedItem.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						PaintedItem.DeserializeLengthDelimited(stream, instance.paintedItem, isDelta);
+					}
+				}
+				break;
+			case 104u:
+				stream.ValidateFieldOrder(ref lastFieldId, 104u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.clanManager == null)
+					{
+						instance.clanManager = ClanManager.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ClanManager.DeserializeLengthDelimited(stream, instance.clanManager, isDelta);
+					}
+				}
+				break;
+			case 105u:
+				stream.ValidateFieldOrder(ref lastFieldId, 105u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.spray == null)
+					{
+						instance.spray = Spray.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Spray.DeserializeLengthDelimited(stream, instance.spray, isDelta);
+					}
+				}
+				break;
+			case 106u:
+				stream.ValidateFieldOrder(ref lastFieldId, 106u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseTrain == null)
+					{
+						instance.baseTrain = BaseTrain.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseTrain.DeserializeLengthDelimited(stream, instance.baseTrain, isDelta);
+					}
+				}
+				break;
+			case 107u:
+				stream.ValidateFieldOrder(ref lastFieldId, 107u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.zipline == null)
+					{
+						instance.zipline = Zipline.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Zipline.DeserializeLengthDelimited(stream, instance.zipline, isDelta);
+					}
+				}
+				break;
+			case 108u:
+				stream.ValidateFieldOrder(ref lastFieldId, 108u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ziplineMountable == null)
+					{
+						instance.ziplineMountable = ZiplineMountable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ZiplineMountable.DeserializeLengthDelimited(stream, instance.ziplineMountable, isDelta);
+					}
+				}
+				break;
+			case 109u:
+				stream.ValidateFieldOrder(ref lastFieldId, 109u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ZiplineArrival == null)
+					{
+						instance.ZiplineArrival = ZiplineArrivalPoint.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ZiplineArrivalPoint.DeserializeLengthDelimited(stream, instance.ZiplineArrival, isDelta);
+					}
+				}
+				break;
+			case 110u:
+				stream.ValidateFieldOrder(ref lastFieldId, 110u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.sprayLine == null)
+					{
+						instance.sprayLine = SprayLine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SprayLine.DeserializeLengthDelimited(stream, instance.sprayLine, isDelta);
+					}
+				}
+				break;
+			case 111u:
+				stream.ValidateFieldOrder(ref lastFieldId, 111u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.coalingTower == null)
+					{
+						instance.coalingTower = CoalingTower.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CoalingTower.DeserializeLengthDelimited(stream, instance.coalingTower, isDelta);
+					}
+				}
+				break;
+			case 112u:
+				stream.ValidateFieldOrder(ref lastFieldId, 112u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.simpleInt == null)
+					{
+						instance.simpleInt = SimpleInt.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SimpleInt.DeserializeLengthDelimited(stream, instance.simpleInt, isDelta);
+					}
+				}
+				break;
+			case 113u:
+				stream.ValidateFieldOrder(ref lastFieldId, 113u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseOven == null)
+					{
+						instance.baseOven = BaseOven.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseOven.DeserializeLengthDelimited(stream, instance.baseOven, isDelta);
+					}
+				}
+				break;
+			case 114u:
+				stream.ValidateFieldOrder(ref lastFieldId, 114u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.brainComponent == null)
+					{
+						instance.brainComponent = BrainComponent.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BrainComponent.DeserializeLengthDelimited(stream, instance.brainComponent, isDelta);
+					}
+				}
+				break;
+			case 115u:
+				stream.ValidateFieldOrder(ref lastFieldId, 115u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.proceduralDungeon == null)
+					{
+						instance.proceduralDungeon = ProceduralDungeon.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ProceduralDungeon.DeserializeLengthDelimited(stream, instance.proceduralDungeon, isDelta);
+					}
+				}
+				break;
+			case 116u:
+				stream.ValidateFieldOrder(ref lastFieldId, 116u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.industrialConveyor == null)
+					{
+						instance.industrialConveyor = IndustrialConveyor.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						IndustrialConveyor.DeserializeLengthDelimited(stream, instance.industrialConveyor, isDelta);
+					}
+				}
+				break;
+			case 117u:
+				stream.ValidateFieldOrder(ref lastFieldId, 117u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.industrialCrafter == null)
+					{
+						instance.industrialCrafter = IndustrialCrafter.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						IndustrialCrafter.DeserializeLengthDelimited(stream, instance.industrialCrafter, isDelta);
+					}
+				}
+				break;
+			case 118u:
+				stream.ValidateFieldOrder(ref lastFieldId, 118u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.drone == null)
+					{
+						instance.drone = Drone.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Drone.DeserializeLengthDelimited(stream, instance.drone, isDelta);
+					}
+				}
+				break;
+			case 119u:
+				stream.ValidateFieldOrder(ref lastFieldId, 119u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.explosive == null)
+					{
+						instance.explosive = TimedExplosive.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TimedExplosive.DeserializeLengthDelimited(stream, instance.explosive, isDelta);
+					}
+				}
+				break;
+			case 120u:
+				stream.ValidateFieldOrder(ref lastFieldId, 120u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.simpleUint == null)
+					{
+						instance.simpleUint = SimpleUInt.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SimpleUInt.DeserializeLengthDelimited(stream, instance.simpleUint, isDelta);
+					}
+				}
+				break;
+			case 121u:
+				stream.ValidateFieldOrder(ref lastFieldId, 121u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.weaponRack == null)
+					{
+						instance.weaponRack = WeaponRack.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						WeaponRack.DeserializeLengthDelimited(stream, instance.weaponRack, isDelta);
+					}
+				}
+				break;
+			case 122u:
+				stream.ValidateFieldOrder(ref lastFieldId, 122u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.attackHeli == null)
+					{
+						instance.attackHeli = AttackHeli.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						AttackHeli.DeserializeLengthDelimited(stream, instance.attackHeli, isDelta);
+					}
+				}
+				break;
+			case 123u:
+				stream.ValidateFieldOrder(ref lastFieldId, 123u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.attackHeliTurret == null)
+					{
+						instance.attackHeliTurret = AttackHeliTurret.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						AttackHeliTurret.DeserializeLengthDelimited(stream, instance.attackHeliTurret, isDelta);
+					}
+				}
+				break;
+			case 124u:
+				stream.ValidateFieldOrder(ref lastFieldId, 124u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.attackHeliRockets == null)
+					{
+						instance.attackHeliRockets = AttackHeliRockets.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						AttackHeliRockets.DeserializeLengthDelimited(stream, instance.attackHeliRockets, isDelta);
+					}
+				}
+				break;
+			case 125u:
+				stream.ValidateFieldOrder(ref lastFieldId, 125u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseBoat == null)
+					{
+						instance.baseBoat = BaseBoat.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseBoat.DeserializeLengthDelimited(stream, instance.baseBoat, isDelta);
+					}
+				}
+				break;
+			case 126u:
+				stream.ValidateFieldOrder(ref lastFieldId, 126u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ragdoll == null)
+					{
+						instance.ragdoll = Ragdoll.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Ragdoll.DeserializeLengthDelimited(stream, instance.ragdoll, isDelta);
+					}
+				}
+				break;
+			case 127u:
+				stream.ValidateFieldOrder(ref lastFieldId, 127u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.dieselEngine == null)
+					{
+						instance.dieselEngine = DieselEngine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DieselEngine.DeserializeLengthDelimited(stream, instance.dieselEngine, isDelta);
+					}
+				}
+				break;
+			case 150u:
+				stream.ValidateFieldOrder(ref lastFieldId, 150u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.associatedFiles == null)
+					{
+						instance.associatedFiles = AssociatedFiles.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						AssociatedFiles.DeserializeLengthDelimited(stream, instance.associatedFiles, isDelta);
+					}
+				}
+				break;
+			case 151u:
+				stream.ValidateFieldOrder(ref lastFieldId, 151u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.nexusFerry == null)
+					{
+						instance.nexusFerry = NexusFerry.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						NexusFerry.DeserializeLengthDelimited(stream, instance.nexusFerry, isDelta);
+					}
+				}
+				break;
+			case 152u:
+				stream.ValidateFieldOrder(ref lastFieldId, 152u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.nexusIsland == null)
+					{
+						instance.nexusIsland = NexusIsland.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						NexusIsland.DeserializeLengthDelimited(stream, instance.nexusIsland, isDelta);
+					}
+				}
+				break;
+			case 153u:
+				stream.ValidateFieldOrder(ref lastFieldId, 153u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.nexusDockTerminal == null)
+					{
+						instance.nexusDockTerminal = NexusDockTerminal.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						NexusDockTerminal.DeserializeLengthDelimited(stream, instance.nexusDockTerminal, isDelta);
+					}
+				}
+				break;
+			case 154u:
+				stream.ValidateFieldOrder(ref lastFieldId, 154u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.rockingChair == null)
+					{
+						instance.rockingChair = RockingChair.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						RockingChair.DeserializeLengthDelimited(stream, instance.rockingChair, isDelta);
+					}
+				}
+				break;
+			case 155u:
+				stream.ValidateFieldOrder(ref lastFieldId, 155u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.headData == null)
+					{
+						instance.headData = HeadData.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						HeadData.DeserializeLengthDelimited(stream, instance.headData, isDelta);
+					}
+				}
+				break;
+			case 156u:
+				stream.ValidateFieldOrder(ref lastFieldId, 156u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.wantedPoster == null)
+					{
+						instance.wantedPoster = WantedPoster.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						WantedPoster.DeserializeLengthDelimited(stream, instance.wantedPoster, isDelta);
+					}
+				}
+				break;
+			case 158u:
+				stream.ValidateFieldOrder(ref lastFieldId, 158u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.waypointRace == null)
+					{
+						instance.waypointRace = WaypointRace.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						WaypointRace.DeserializeLengthDelimited(stream, instance.waypointRace, isDelta);
+					}
+				}
+				break;
+			case 159u:
+				stream.ValidateFieldOrder(ref lastFieldId, 159u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.legacyShelter == null)
+					{
+						instance.legacyShelter = LegacyShelter.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						LegacyShelter.DeserializeLengthDelimited(stream, instance.legacyShelter, isDelta);
+					}
+				}
+				break;
+			case 160u:
+				stream.ValidateFieldOrder(ref lastFieldId, 160u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.metalDetectorSource == null)
+					{
+						instance.metalDetectorSource = MetalDetectorSource.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MetalDetectorSource.DeserializeLengthDelimited(stream, instance.metalDetectorSource, isDelta);
+					}
+				}
+				break;
+			case 161u:
+				stream.ValidateFieldOrder(ref lastFieldId, 161u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.tutorialIsland == null)
+					{
+						instance.tutorialIsland = TutorialIsland.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TutorialIsland.DeserializeLengthDelimited(stream, instance.tutorialIsland, isDelta);
+					}
+				}
+				break;
+			case 162u:
+				stream.ValidateFieldOrder(ref lastFieldId, 162u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.cinematicEntity == null)
+					{
+						instance.cinematicEntity = CinematicEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CinematicEntity.DeserializeLengthDelimited(stream, instance.cinematicEntity, isDelta);
+					}
+				}
+				break;
+			case 163u:
+				stream.ValidateFieldOrder(ref lastFieldId, 163u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.buildingPrivilegeRetro == null)
+					{
+						instance.buildingPrivilegeRetro = BuildingPrivilegeRetro.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BuildingPrivilegeRetro.DeserializeLengthDelimited(stream, instance.buildingPrivilegeRetro, isDelta);
+					}
+				}
+				break;
+			case 164u:
+				stream.ValidateFieldOrder(ref lastFieldId, 164u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.harborCrane == null)
+					{
+						instance.harborCrane = HarborCrane.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						HarborCrane.DeserializeLengthDelimited(stream, instance.harborCrane, isDelta);
+					}
+				}
+				break;
+			case 165u:
+				stream.ValidateFieldOrder(ref lastFieldId, 165u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.cargoShip == null)
+					{
+						instance.cargoShip = CargoShip.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CargoShip.DeserializeLengthDelimited(stream, instance.cargoShip, isDelta);
+					}
+				}
+				break;
+			case 166u:
+				stream.ValidateFieldOrder(ref lastFieldId, 166u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.cargoShipContainer == null)
+					{
+						instance.cargoShipContainer = CargoShipContainer.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CargoShipContainer.DeserializeLengthDelimited(stream, instance.cargoShipContainer, isDelta);
+					}
+				}
+				break;
+			case 167u:
+				stream.ValidateFieldOrder(ref lastFieldId, 167u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.missionMapMarker == null)
+					{
+						instance.missionMapMarker = MissionMapMarker.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MissionMapMarker.DeserializeLengthDelimited(stream, instance.missionMapMarker, isDelta);
+					}
+				}
+				break;
+			case 168u:
+				stream.ValidateFieldOrder(ref lastFieldId, 168u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.bike == null)
+					{
+						instance.bike = Bike.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Bike.DeserializeLengthDelimited(stream, instance.bike, isDelta);
+					}
+				}
+				break;
+			case 169u:
+				stream.ValidateFieldOrder(ref lastFieldId, 169u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.diverPropulsionVehicle == null)
+					{
+						instance.diverPropulsionVehicle = DiverPropulsionVehicle.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DiverPropulsionVehicle.DeserializeLengthDelimited(stream, instance.diverPropulsionVehicle, isDelta);
+					}
+				}
+				break;
+			case 174u:
+				stream.ValidateFieldOrder(ref lastFieldId, 174u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.travellingVendor == null)
+					{
+						instance.travellingVendor = TravellingVendor.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TravellingVendor.DeserializeLengthDelimited(stream, instance.travellingVendor, isDelta);
+					}
+				}
+				break;
+			case 175u:
+				stream.ValidateFieldOrder(ref lastFieldId, 175u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vendingDynamicPricing == null)
+					{
+						instance.vendingDynamicPricing = VendingDynamicPricing.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VendingDynamicPricing.DeserializeLengthDelimited(stream, instance.vendingDynamicPricing, isDelta);
+					}
+				}
+				break;
+			case 176u:
+				stream.ValidateFieldOrder(ref lastFieldId, 176u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.tinCanAlarm == null)
+					{
+						instance.tinCanAlarm = TinCanAlarm.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TinCanAlarm.DeserializeLengthDelimited(stream, instance.tinCanAlarm, isDelta);
+					}
+				}
+				break;
+			case 177u:
+				stream.ValidateFieldOrder(ref lastFieldId, 177u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.digitalClock == null)
+					{
+						instance.digitalClock = DigitalClock.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DigitalClock.DeserializeLengthDelimited(stream, instance.digitalClock, isDelta);
+					}
+				}
+				break;
+			case 178u:
+				stream.ValidateFieldOrder(ref lastFieldId, 178u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.elevatorLift == null)
+					{
+						instance.elevatorLift = ElevatorLift.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ElevatorLift.DeserializeLengthDelimited(stream, instance.elevatorLift, isDelta);
+					}
+				}
+				break;
+			case 179u:
+				stream.ValidateFieldOrder(ref lastFieldId, 179u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.npcVendingMachine == null)
+					{
+						instance.npcVendingMachine = NPCVendingMachine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						NPCVendingMachine.DeserializeLengthDelimited(stream, instance.npcVendingMachine, isDelta);
+					}
+				}
+				break;
+			case 180u:
+				stream.ValidateFieldOrder(ref lastFieldId, 180u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.mailbox == null)
+					{
+						instance.mailbox = Mailbox.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Mailbox.DeserializeLengthDelimited(stream, instance.mailbox, isDelta);
+					}
+				}
+				break;
+			case 181u:
+				stream.ValidateFieldOrder(ref lastFieldId, 181u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.projectileWeaponMod == null)
+					{
+						instance.projectileWeaponMod = GunWeaponMod.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						GunWeaponMod.DeserializeLengthDelimited(stream, instance.projectileWeaponMod, isDelta);
+					}
+				}
+				break;
+			case 182u:
+				stream.ValidateFieldOrder(ref lastFieldId, 182u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseSculpture == null)
+					{
+						instance.baseSculpture = BaseSculpture.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseSculpture.DeserializeLengthDelimited(stream, instance.baseSculpture, isDelta);
+					}
+				}
+				break;
+			case 183u:
+				stream.ValidateFieldOrder(ref lastFieldId, 183u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vendingMachineStats == null)
+					{
+						instance.vendingMachineStats = VendingMachineStats.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VendingMachineStats.DeserializeLengthDelimited(stream, instance.vendingMachineStats, isDelta);
+					}
+				}
+				break;
+			case 184u:
+				stream.ValidateFieldOrder(ref lastFieldId, 184u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.catapult == null)
+					{
+						instance.catapult = Catapult.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Catapult.DeserializeLengthDelimited(stream, instance.catapult, isDelta);
+					}
+				}
+				break;
+			case 185u:
+				stream.ValidateFieldOrder(ref lastFieldId, 185u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.siegeTower == null)
+					{
+						instance.siegeTower = SiegeTower.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SiegeTower.DeserializeLengthDelimited(stream, instance.siegeTower, isDelta);
+					}
+				}
+				break;
+			case 186u:
+				stream.ValidateFieldOrder(ref lastFieldId, 186u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ballista == null)
+					{
+						instance.ballista = Ballista.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Ballista.DeserializeLengthDelimited(stream, instance.ballista, isDelta);
+					}
+				}
+				break;
+			case 187u:
+				stream.ValidateFieldOrder(ref lastFieldId, 187u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ballistaGun == null)
+					{
+						instance.ballistaGun = BallistaGun.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BallistaGun.DeserializeLengthDelimited(stream, instance.ballistaGun, isDelta);
+					}
+				}
+				break;
+			case 188u:
+				stream.ValidateFieldOrder(ref lastFieldId, 188u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.batteringRam == null)
+					{
+						instance.batteringRam = BatteringRam.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BatteringRam.DeserializeLengthDelimited(stream, instance.batteringRam, isDelta);
+					}
+				}
+				break;
+			case 189u:
+				stream.ValidateFieldOrder(ref lastFieldId, 189u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.temporaryRagdoll == null)
+					{
+						instance.temporaryRagdoll = TemporaryRagdoll.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TemporaryRagdoll.DeserializeLengthDelimited(stream, instance.temporaryRagdoll, isDelta);
+					}
+				}
+				break;
+			case 191u:
+				stream.ValidateFieldOrder(ref lastFieldId, 191u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.constructableEntity == null)
+					{
+						instance.constructableEntity = ConstructableEntity.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ConstructableEntity.DeserializeLengthDelimited(stream, instance.constructableEntity, isDelta);
+					}
+				}
+				break;
+			case 192u:
+				stream.ValidateFieldOrder(ref lastFieldId, 192u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.chickenCoop == null)
+					{
+						instance.chickenCoop = ChickenCoop.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ChickenCoop.DeserializeLengthDelimited(stream, instance.chickenCoop, isDelta);
+					}
+				}
+				break;
+			case 193u:
+				stream.ValidateFieldOrder(ref lastFieldId, 193u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.farmableAnimal == null)
+					{
+						instance.farmableAnimal = FarmableAnimal.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						FarmableAnimal.DeserializeLengthDelimited(stream, instance.farmableAnimal, isDelta);
+					}
+				}
+				break;
+			case 194u:
+				stream.ValidateFieldOrder(ref lastFieldId, 194u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.ownership == null)
+					{
+						instance.ownership = ItemOwnershipAmount.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ItemOwnershipAmount.DeserializeLengthDelimited(stream, instance.ownership, isDelta);
+					}
+				}
+				break;
+			case 195u:
+				stream.ValidateFieldOrder(ref lastFieldId, 195u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.beehive == null)
+					{
+						instance.beehive = Beehive.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Beehive.DeserializeLengthDelimited(stream, instance.beehive, isDelta);
+					}
+				}
+				break;
+			case 196u:
+				stream.ValidateFieldOrder(ref lastFieldId, 196u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.beeMasterSwarm == null)
+					{
+						instance.beeMasterSwarm = BeeMasterSwarm.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BeeMasterSwarm.DeserializeLengthDelimited(stream, instance.beeMasterSwarm, isDelta);
+					}
+				}
+				break;
+			case 197u:
+				stream.ValidateFieldOrder(ref lastFieldId, 197u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.containerCorpse == null)
+					{
+						instance.containerCorpse = ContainerCorpseData.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ContainerCorpseData.DeserializeLengthDelimited(stream, instance.containerCorpse, isDelta);
+					}
+				}
+				break;
+			case 198u:
+				stream.ValidateFieldOrder(ref lastFieldId, 198u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.npcTargetState == null)
+					{
+						instance.npcTargetState = NPCTargetState.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						NPCTargetState.DeserializeLengthDelimited(stream, instance.npcTargetState, isDelta);
+					}
+				}
+				break;
+			case 199u:
+				stream.ValidateFieldOrder(ref lastFieldId, 199u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vineMountable == null)
+					{
+						instance.vineMountable = VineMountable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VineMountable.DeserializeLengthDelimited(stream, instance.vineMountable, isDelta);
+					}
+				}
+				break;
+			case 200u:
+				stream.ValidateFieldOrder(ref lastFieldId, 200u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.vineTree == null)
+					{
+						instance.vineTree = VineTree.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						VineTree.DeserializeLengthDelimited(stream, instance.vineTree, isDelta);
+					}
+				}
+				break;
+			case 201u:
+				stream.ValidateFieldOrder(ref lastFieldId, 201u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.treeRespawn == null)
+					{
+						instance.treeRespawn = TreeRespawn.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TreeRespawn.DeserializeLengthDelimited(stream, instance.treeRespawn, isDelta);
+					}
+				}
+				break;
+			case 202u:
+				stream.ValidateFieldOrder(ref lastFieldId, 202u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.wallpaperTool == null)
+					{
+						instance.wallpaperTool = WallpaperTool.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						WallpaperTool.DeserializeLengthDelimited(stream, instance.wallpaperTool, isDelta);
+					}
+				}
+				break;
+			case 203u:
+				stream.ValidateFieldOrder(ref lastFieldId, 203u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.commandBlock == null)
+					{
+						instance.commandBlock = CommandBlock.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						CommandBlock.DeserializeLengthDelimited(stream, instance.commandBlock, isDelta);
+					}
+				}
+				break;
+			case 204u:
+				stream.ValidateFieldOrder(ref lastFieldId, 204u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.staticRespawn == null)
+					{
+						instance.staticRespawn = StaticRespawnAreaData.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						StaticRespawnAreaData.DeserializeLengthDelimited(stream, instance.staticRespawn, isDelta);
+					}
+				}
+				break;
+			case 205u:
+				stream.ValidateFieldOrder(ref lastFieldId, 205u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.buriedItemStorage == null)
+					{
+						instance.buriedItemStorage = BuriedItems.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BuriedItems.DeserializeLengthDelimited(stream, instance.buriedItemStorage, isDelta);
+					}
+				}
+				break;
+			case 206u:
+				stream.ValidateFieldOrder(ref lastFieldId, 206u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.mannequin == null)
+					{
+						instance.mannequin = Mannequin.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Mannequin.DeserializeLengthDelimited(stream, instance.mannequin, isDelta);
+					}
+				}
+				break;
+			case 207u:
+				stream.ValidateFieldOrder(ref lastFieldId, 207u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseMelee == null)
+					{
+						instance.baseMelee = BaseMelee.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseMelee.DeserializeLengthDelimited(stream, instance.baseMelee, isDelta);
+					}
+				}
+				break;
+			case 208u:
+				stream.ValidateFieldOrder(ref lastFieldId, 208u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.door == null)
+					{
+						instance.door = Door.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Door.DeserializeLengthDelimited(stream, instance.door, isDelta);
+					}
+				}
+				break;
+			case 209u:
+				stream.ValidateFieldOrder(ref lastFieldId, 209u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.deepSeaPortal == null)
+					{
+						instance.deepSeaPortal = DeepSeaPortal.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DeepSeaPortal.DeserializeLengthDelimited(stream, instance.deepSeaPortal, isDelta);
+					}
+				}
+				break;
+			case 211u:
+				stream.ValidateFieldOrder(ref lastFieldId, 211u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.baseMountable == null)
+					{
+						instance.baseMountable = BaseMountable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BaseMountable.DeserializeLengthDelimited(stream, instance.baseMountable, isDelta);
+					}
+				}
+				break;
+			case 212u:
+				stream.ValidateFieldOrder(ref lastFieldId, 212u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.smallEngine == null)
+					{
+						instance.smallEngine = SmallEngine.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SmallEngine.DeserializeLengthDelimited(stream, instance.smallEngine, isDelta);
+					}
+				}
+				break;
+			case 213u:
+				stream.ValidateFieldOrder(ref lastFieldId, 213u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.playerBoat == null)
+					{
+						instance.playerBoat = PlayerBoat.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						PlayerBoat.DeserializeLengthDelimited(stream, instance.playerBoat, isDelta);
+					}
+				}
+				break;
+			case 214u:
+				stream.ValidateFieldOrder(ref lastFieldId, 214u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.steeringWheel == null)
+					{
+						instance.steeringWheel = SteeringWheel.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SteeringWheel.DeserializeLengthDelimited(stream, instance.steeringWheel, isDelta);
+					}
+				}
+				break;
+			case 215u:
+				stream.ValidateFieldOrder(ref lastFieldId, 215u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.deepSeaManager == null)
+					{
+						instance.deepSeaManager = DeepSeaManager.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DeepSeaManager.DeserializeLengthDelimited(stream, instance.deepSeaManager, isDelta);
+					}
+				}
+				break;
+			case 216u:
+				stream.ValidateFieldOrder(ref lastFieldId, 216u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.scientistBoatOilrigManager == null)
+					{
+						instance.scientistBoatOilrigManager = ScientistBoatOilrigManager.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ScientistBoatOilrigManager.DeserializeLengthDelimited(stream, instance.scientistBoatOilrigManager, isDelta);
+					}
+				}
+				break;
+			case 217u:
+				stream.ValidateFieldOrder(ref lastFieldId, 217u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.storageAdaptor == null)
+					{
+						instance.storageAdaptor = StorageAdaptor.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						StorageAdaptor.DeserializeLengthDelimited(stream, instance.storageAdaptor, isDelta);
+					}
+				}
+				break;
+			case 218u:
+				stream.ValidateFieldOrder(ref lastFieldId, 218u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.helicopterFlares == null)
+					{
+						instance.helicopterFlares = HelicopterFlares.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						HelicopterFlares.DeserializeLengthDelimited(stream, instance.helicopterFlares, isDelta);
+					}
+				}
+				break;
+			case 219u:
+				stream.ValidateFieldOrder(ref lastFieldId, 219u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.wipeLaptop == null)
+					{
+						instance.wipeLaptop = WipeLaptop.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						WipeLaptop.DeserializeLengthDelimited(stream, instance.wipeLaptop, isDelta);
+					}
+				}
+				break;
+			case 220u:
+				stream.ValidateFieldOrder(ref lastFieldId, 220u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.mountedWeapon == null)
+					{
+						instance.mountedWeapon = MountedWeapon.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MountedWeapon.DeserializeLengthDelimited(stream, instance.mountedWeapon, isDelta);
+					}
+				}
+				break;
+			case 221u:
+				stream.ValidateFieldOrder(ref lastFieldId, 221u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.boatBuildingBlock == null)
+					{
+						instance.boatBuildingBlock = BoatBuildingBlock.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BoatBuildingBlock.DeserializeLengthDelimited(stream, instance.boatBuildingBlock, isDelta);
+					}
+				}
+				break;
+			case 222u:
+				stream.ValidateFieldOrder(ref lastFieldId, 222u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.boatBuildingStation == null)
+					{
+						instance.boatBuildingStation = BoatBuildingStation.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						BoatBuildingStation.DeserializeLengthDelimited(stream, instance.boatBuildingStation, isDelta);
+					}
+				}
+				break;
+			case 223u:
+				stream.ValidateFieldOrder(ref lastFieldId, 223u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.displayingBoxStorage == null)
+					{
+						instance.displayingBoxStorage = DisplayingBoxStorage.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DisplayingBoxStorage.DeserializeLengthDelimited(stream, instance.displayingBoxStorage, isDelta);
+					}
+				}
+				break;
+			case 224u:
+				stream.ValidateFieldOrder(ref lastFieldId, 224u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.workbench == null)
+					{
+						instance.workbench = Workbench.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Workbench.DeserializeLengthDelimited(stream, instance.workbench, isDelta);
+					}
+				}
+				break;
+			case 225u:
+				stream.ValidateFieldOrder(ref lastFieldId, 225u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.apartmentLock == null)
+					{
+						instance.apartmentLock = ApartmentLock.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ApartmentLock.DeserializeLengthDelimited(stream, instance.apartmentLock, isDelta);
+					}
+				}
+				break;
+			case 226u:
+				stream.ValidateFieldOrder(ref lastFieldId, 226u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.rentableShop == null)
+					{
+						instance.rentableShop = RentableShop.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						RentableShop.DeserializeLengthDelimited(stream, instance.rentableShop, isDelta);
+					}
+				}
+				break;
+			case 227u:
+				stream.ValidateFieldOrder(ref lastFieldId, 227u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.apartmentRoom == null)
+					{
+						instance.apartmentRoom = ApartmentRoom.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ApartmentRoom.DeserializeLengthDelimited(stream, instance.apartmentRoom, isDelta);
+					}
+				}
+				break;
+			case 228u:
+				stream.ValidateFieldOrder(ref lastFieldId, 228u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.apartmentBuilding == null)
+					{
+						instance.apartmentBuilding = ApartmentBuilding.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ApartmentBuilding.DeserializeLengthDelimited(stream, instance.apartmentBuilding, isDelta);
+					}
+				}
+				break;
+			case 229u:
+				stream.ValidateFieldOrder(ref lastFieldId, 229u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.apartmentUpkeep == null)
+					{
+						instance.apartmentUpkeep = ApartmentUpkeepTerminal.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ApartmentUpkeepTerminal.DeserializeLengthDelimited(stream, instance.apartmentUpkeep, isDelta);
+					}
+				}
+				break;
+			case 230u:
+				stream.ValidateFieldOrder(ref lastFieldId, 230u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.mortar == null)
+					{
+						instance.mortar = MortarData.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MortarData.DeserializeLengthDelimited(stream, instance.mortar, isDelta);
+					}
+				}
+				break;
+			case 231u:
+				stream.ValidateFieldOrder(ref lastFieldId, 231u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.apartmentDoor == null)
+					{
+						instance.apartmentDoor = ApartmentDoor.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ApartmentDoor.DeserializeLengthDelimited(stream, instance.apartmentDoor, isDelta);
+					}
+				}
+				break;
+			case 232u:
+				stream.ValidateFieldOrder(ref lastFieldId, 232u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.apartmentMailbox == null)
+					{
+						instance.apartmentMailbox = ApartmentMailbox.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ApartmentMailbox.DeserializeLengthDelimited(stream, instance.apartmentMailbox, isDelta);
+					}
+				}
+				break;
+			case 235u:
+				stream.ValidateFieldOrder(ref lastFieldId, 235u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.Pooltable == null)
+					{
+						instance.Pooltable = Pooltable.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Pooltable.DeserializeLengthDelimited(stream, instance.Pooltable, isDelta);
+					}
+				}
+				break;
+			case 236u:
+				stream.ValidateFieldOrder(ref lastFieldId, 236u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.dartsGame == null)
+					{
+						instance.dartsGame = DartsGame.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DartsGame.DeserializeLengthDelimited(stream, instance.dartsGame, isDelta);
+					}
+				}
+				break;
+			case 237u:
+				stream.ValidateFieldOrder(ref lastFieldId, 237u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.dartsGameLeaderboard == null)
+					{
+						instance.dartsGameLeaderboard = DartsGameLeaderboard.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						DartsGameLeaderboard.DeserializeLengthDelimited(stream, instance.dartsGameLeaderboard, isDelta);
+					}
+				}
+				break;
+			case 238u:
+				stream.ValidateFieldOrder(ref lastFieldId, 238u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.satelliteControlComputer == null)
+					{
+						instance.satelliteControlComputer = SatelliteControlComputer.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SatelliteControlComputer.DeserializeLengthDelimited(stream, instance.satelliteControlComputer, isDelta);
+					}
+				}
+				break;
+			case 239u:
+				stream.ValidateFieldOrder(ref lastFieldId, 239u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.satelliteCrash == null)
+					{
+						instance.satelliteCrash = SatelliteCrash.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SatelliteCrash.DeserializeLengthDelimited(stream, instance.satelliteCrash, isDelta);
+					}
+				}
+				break;
+			case 240u:
+				stream.ValidateFieldOrder(ref lastFieldId, 240u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.satelliteCrashRemains == null)
+					{
+						instance.satelliteCrashRemains = SatelliteCrashRemains.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						SatelliteCrashRemains.DeserializeLengthDelimited(stream, instance.satelliteCrashRemains, isDelta);
+					}
+				}
+				break;
+			case 241u:
+				stream.ValidateFieldOrder(ref lastFieldId, 241u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.electricGenerator == null)
+					{
+						instance.electricGenerator = ElectricGenerator.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						ElectricGenerator.DeserializeLengthDelimited(stream, instance.electricGenerator, isDelta);
+					}
+				}
+				break;
+			case 242u:
+				stream.ValidateFieldOrder(ref lastFieldId, 242u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.powergridManager == null)
+					{
+						instance.powergridManager = PowergridManager.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						PowergridManager.DeserializeLengthDelimited(stream, instance.powergridManager, isDelta);
+					}
+				}
+				break;
+			case 243u:
+				stream.ValidateFieldOrder(ref lastFieldId, 243u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.oilswitchBroadcast == null)
+					{
+						instance.oilswitchBroadcast = OilSwitchBroadcast.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						OilSwitchBroadcast.DeserializeLengthDelimited(stream, instance.oilswitchBroadcast, isDelta);
+					}
+				}
+				break;
+			case 244u:
+				stream.ValidateFieldOrder(ref lastFieldId, 244u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.sprinkler == null)
+					{
+						instance.sprinkler = Sprinkler.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						Sprinkler.DeserializeLengthDelimited(stream, instance.sprinkler, isDelta);
+					}
+				}
+				break;
+			case 245u:
+				stream.ValidateFieldOrder(ref lastFieldId, 245u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.hackableLockedCrate == null)
+					{
+						instance.hackableLockedCrate = HackableLockedCrate.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						HackableLockedCrate.DeserializeLengthDelimited(stream, instance.hackableLockedCrate, isDelta);
+					}
+				}
+				break;
+			case 246u:
+				stream.ValidateFieldOrder(ref lastFieldId, 246u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.lockedByEntCrate == null)
+					{
+						instance.lockedByEntCrate = LockedByEntCrate.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						LockedByEntCrate.DeserializeLengthDelimited(stream, instance.lockedByEntCrate, isDelta);
+					}
+				}
+				break;
+			case 247u:
+				stream.ValidateFieldOrder(ref lastFieldId, 247u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.territoryZones == null)
+					{
+						instance.territoryZones = TerritoryZones.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						TerritoryZones.DeserializeLengthDelimited(stream, instance.territoryZones, isDelta);
+					}
+				}
+				break;
+			case 248u:
+				stream.ValidateFieldOrder(ref lastFieldId, 248u, fieldIsRepeated: false, "ProtoBuf.Entity");
+				if (key.WireType == Wire.LengthDelimited)
+				{
+					if (instance.monumentBlocker == null)
+					{
+						instance.monumentBlocker = MonumentBlocker.DeserializeLengthDelimited(stream);
+					}
+					else
+					{
+						MonumentBlocker.DeserializeLengthDelimited(stream, instance.monumentBlocker, isDelta);
+					}
+				}
+				break;
+			default:
+				stream.ValidateFieldOrder(ref lastFieldId, key.Field, fieldIsRepeated: true, "ProtoBuf.Entity");
+				ProtocolParser.SkipKey(stream, key);
+				break;
+			}
+		}
+		return instance;
+	}
+
+	public static void SerializeDelta(BufferStream stream, Entity instance, Entity previous)
+	{
+		if (instance.baseNetworkable != null)
+		{
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range = stream.GetRange(1);
+			int position = stream.Position;
+			BaseNetworkable.SerializeDelta(stream, instance.baseNetworkable, previous.baseNetworkable);
+			int num = stream.Position - position;
+			if (num > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseNetworkable (ProtoBuf.BaseNetworkable)");
+			}
+			Span<byte> span = range.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num, span, 0);
+		}
+		if (instance.baseEntity != null)
+		{
+			stream.WriteByte(18);
+			BufferStream.RangeHandle range2 = stream.GetRange(5);
+			int position2 = stream.Position;
+			BaseEntity.SerializeDelta(stream, instance.baseEntity, previous.baseEntity);
+			int val = stream.Position - position2;
+			Span<byte> span2 = range2.GetSpan();
+			int num2 = ProtocolParser.WriteUInt32((uint)val, span2, 0);
+			if (num2 < 5)
+			{
+				span2[num2 - 1] |= 128;
+				while (num2 < 4)
+				{
+					span2[num2++] = 128;
+				}
+				span2[4] = 0;
+			}
+		}
+		if (instance.basePlayer != null)
+		{
+			stream.WriteByte(26);
+			BufferStream.RangeHandle range3 = stream.GetRange(5);
+			int position3 = stream.Position;
+			BasePlayer.SerializeDelta(stream, instance.basePlayer, previous.basePlayer);
+			int val2 = stream.Position - position3;
+			Span<byte> span3 = range3.GetSpan();
+			int num3 = ProtocolParser.WriteUInt32((uint)val2, span3, 0);
+			if (num3 < 5)
+			{
+				span3[num3 - 1] |= 128;
+				while (num3 < 4)
+				{
+					span3[num3++] = 128;
+				}
+				span3[4] = 0;
+			}
+		}
+		if (instance.worldItem != null)
+		{
+			stream.WriteByte(34);
+			BufferStream.RangeHandle range4 = stream.GetRange(5);
+			int position4 = stream.Position;
+			WorldItem.SerializeDelta(stream, instance.worldItem, previous.worldItem);
+			int val3 = stream.Position - position4;
+			Span<byte> span4 = range4.GetSpan();
+			int num4 = ProtocolParser.WriteUInt32((uint)val3, span4, 0);
+			if (num4 < 5)
+			{
+				span4[num4 - 1] |= 128;
+				while (num4 < 4)
+				{
+					span4[num4++] = 128;
+				}
+				span4[4] = 0;
+			}
+		}
+		if (instance.resource != null)
+		{
+			stream.WriteByte(42);
+			BufferStream.RangeHandle range5 = stream.GetRange(1);
+			int position5 = stream.Position;
+			BaseResource.SerializeDelta(stream, instance.resource, previous.resource);
+			int num5 = stream.Position - position5;
+			if (num5 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field resource (ProtoBuf.BaseResource)");
+			}
+			Span<byte> span5 = range5.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num5, span5, 0);
+		}
+		if (instance.buildingBlock != null)
+		{
+			stream.WriteByte(50);
+			BufferStream.RangeHandle range6 = stream.GetRange(1);
+			int position6 = stream.Position;
+			BuildingBlock.SerializeDelta(stream, instance.buildingBlock, previous.buildingBlock);
+			int num6 = stream.Position - position6;
+			if (num6 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field buildingBlock (ProtoBuf.BuildingBlock)");
+			}
+			Span<byte> span6 = range6.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num6, span6, 0);
+		}
+		if (instance.environment != null)
+		{
+			stream.WriteByte(58);
+			BufferStream.RangeHandle range7 = stream.GetRange(1);
+			int position7 = stream.Position;
+			Environment.SerializeDelta(stream, instance.environment, previous.environment);
+			int num7 = stream.Position - position7;
+			if (num7 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field environment (ProtoBuf.Environment)");
+			}
+			Span<byte> span7 = range7.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num7, span7, 0);
+		}
+		if (instance.corpse != null)
+		{
+			stream.WriteByte(66);
+			BufferStream.RangeHandle range8 = stream.GetRange(1);
+			int position8 = stream.Position;
+			Corpse.SerializeDelta(stream, instance.corpse, previous.corpse);
+			int num8 = stream.Position - position8;
+			if (num8 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field corpse (ProtoBuf.Corpse)");
+			}
+			Span<byte> span8 = range8.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num8, span8, 0);
+		}
+		if (instance.parent != null)
+		{
+			stream.WriteByte(82);
+			BufferStream.RangeHandle range9 = stream.GetRange(1);
+			int position9 = stream.Position;
+			ParentInfo.SerializeDelta(stream, instance.parent, previous.parent);
+			int num9 = stream.Position - position9;
+			if (num9 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field parent (ProtoBuf.ParentInfo)");
+			}
+			Span<byte> span9 = range9.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num9, span9, 0);
+		}
+		if (instance.keyLock != null)
+		{
+			stream.WriteByte(90);
+			BufferStream.RangeHandle range10 = stream.GetRange(1);
+			int position10 = stream.Position;
+			KeyLock.SerializeDelta(stream, instance.keyLock, previous.keyLock);
+			int num10 = stream.Position - position10;
+			if (num10 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field keyLock (ProtoBuf.KeyLock)");
+			}
+			Span<byte> span10 = range10.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num10, span10, 0);
+		}
+		if (instance.codeLock != null)
+		{
+			stream.WriteByte(98);
+			BufferStream.RangeHandle range11 = stream.GetRange(5);
+			int position11 = stream.Position;
+			CodeLock.SerializeDelta(stream, instance.codeLock, previous.codeLock);
+			int val4 = stream.Position - position11;
+			Span<byte> span11 = range11.GetSpan();
+			int num11 = ProtocolParser.WriteUInt32((uint)val4, span11, 0);
+			if (num11 < 5)
+			{
+				span11[num11 - 1] |= 128;
+				while (num11 < 4)
+				{
+					span11[num11++] = 128;
+				}
+				span11[4] = 0;
+			}
+		}
+		if (instance.entitySlots != null)
+		{
+			stream.WriteByte(106);
+			BufferStream.RangeHandle range12 = stream.GetRange(1);
+			int position12 = stream.Position;
+			EntitySlots.SerializeDelta(stream, instance.entitySlots, previous.entitySlots);
+			int num12 = stream.Position - position12;
+			if (num12 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field entitySlots (ProtoBuf.EntitySlots)");
+			}
+			Span<byte> span12 = range12.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num12, span12, 0);
+		}
+		if (instance.buildingPrivilege != null)
+		{
+			stream.WriteByte(114);
+			BufferStream.RangeHandle range13 = stream.GetRange(5);
+			int position13 = stream.Position;
+			BuildingPrivilege.SerializeDelta(stream, instance.buildingPrivilege, previous.buildingPrivilege);
+			int val5 = stream.Position - position13;
+			Span<byte> span13 = range13.GetSpan();
+			int num13 = ProtocolParser.WriteUInt32((uint)val5, span13, 0);
+			if (num13 < 5)
+			{
+				span13[num13 - 1] |= 128;
+				while (num13 < 4)
+				{
+					span13[num13++] = 128;
+				}
+				span13[4] = 0;
+			}
+		}
+		if (instance.storageBox != null)
+		{
+			stream.WriteByte(122);
+			BufferStream.RangeHandle range14 = stream.GetRange(5);
+			int position14 = stream.Position;
+			StorageBox.SerializeDelta(stream, instance.storageBox, previous.storageBox);
+			int val6 = stream.Position - position14;
+			Span<byte> span14 = range14.GetSpan();
+			int num14 = ProtocolParser.WriteUInt32((uint)val6, span14, 0);
+			if (num14 < 5)
+			{
+				span14[num14 - 1] |= 128;
+				while (num14 < 4)
+				{
+					span14[num14++] = 128;
+				}
+				span14[4] = 0;
+			}
+		}
+		if (instance.heldEntity != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range15 = stream.GetRange(1);
+			int position15 = stream.Position;
+			HeldEntity.SerializeDelta(stream, instance.heldEntity, previous.heldEntity);
+			int num15 = stream.Position - position15;
+			if (num15 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field heldEntity (ProtoBuf.HeldEntity)");
+			}
+			Span<byte> span15 = range15.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num15, span15, 0);
+		}
+		if (instance.baseProjectile != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range16 = stream.GetRange(1);
+			int position16 = stream.Position;
+			BaseProjectile.SerializeDelta(stream, instance.baseProjectile, previous.baseProjectile);
+			int num16 = stream.Position - position16;
+			if (num16 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseProjectile (ProtoBuf.BaseProjectile)");
+			}
+			Span<byte> span16 = range16.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num16, span16, 0);
+		}
+		if (instance.baseNPC != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range17 = stream.GetRange(1);
+			int position17 = stream.Position;
+			BaseNPC.SerializeDelta(stream, instance.baseNPC, previous.baseNPC);
+			int num17 = stream.Position - position17;
+			if (num17 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseNPC (ProtoBuf.BaseNPC)");
+			}
+			Span<byte> span17 = range17.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num17, span17, 0);
+		}
+		if (instance.lootContainer != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range18 = stream.GetRange(1);
+			int position18 = stream.Position;
+			LootContainer.SerializeDelta(stream, instance.lootContainer, previous.lootContainer);
+			int num18 = stream.Position - position18;
+			if (num18 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field lootContainer (ProtoBuf.LootContainer)");
+			}
+			Span<byte> span18 = range18.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num18, span18, 0);
+		}
+		if (instance.genericSpawner != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range19 = stream.GetRange(3);
+			int position19 = stream.Position;
+			GenericSpawner.SerializeDelta(stream, instance.genericSpawner, previous.genericSpawner);
+			int num19 = stream.Position - position19;
+			if (num19 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field genericSpawner (ProtoBuf.GenericSpawner)");
+			}
+			Span<byte> span19 = range19.GetSpan();
+			int num20 = ProtocolParser.WriteUInt32((uint)num19, span19, 0);
+			if (num20 < 3)
+			{
+				span19[num20 - 1] |= 128;
+				while (num20 < 2)
+				{
+					span19[num20++] = 128;
+				}
+				span19[2] = 0;
+			}
+		}
+		if (instance.sleepingBag != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range20 = stream.GetRange(5);
+			int position20 = stream.Position;
+			SleepingBag.SerializeDelta(stream, instance.sleepingBag, previous.sleepingBag);
+			int val7 = stream.Position - position20;
+			Span<byte> span20 = range20.GetSpan();
+			int num21 = ProtocolParser.WriteUInt32((uint)val7, span20, 0);
+			if (num21 < 5)
+			{
+				span20[num21 - 1] |= 128;
+				while (num21 < 4)
+				{
+					span20[num21++] = 128;
+				}
+				span20[4] = 0;
+			}
+		}
+		if (instance.lootableCorpse != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range21 = stream.GetRange(5);
+			int position21 = stream.Position;
+			LootableCorpse.SerializeDelta(stream, instance.lootableCorpse, previous.lootableCorpse);
+			int val8 = stream.Position - position21;
+			Span<byte> span21 = range21.GetSpan();
+			int num22 = ProtocolParser.WriteUInt32((uint)val8, span21, 0);
+			if (num22 < 5)
+			{
+				span21[num22 - 1] |= 128;
+				while (num22 < 4)
+				{
+					span21[num22++] = 128;
+				}
+				span21[4] = 0;
+			}
+		}
+		if (instance.sign != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range22 = stream.GetRange(3);
+			int position22 = stream.Position;
+			Sign.SerializeDelta(stream, instance.sign, previous.sign);
+			int num23 = stream.Position - position22;
+			if (num23 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field sign (ProtoBuf.Sign)");
+			}
+			Span<byte> span22 = range22.GetSpan();
+			int num24 = ProtocolParser.WriteUInt32((uint)num23, span22, 0);
+			if (num24 < 3)
+			{
+				span22[num24 - 1] |= 128;
+				while (num24 < 2)
+				{
+					span22[num24++] = 128;
+				}
+				span22[2] = 0;
+			}
+		}
+		if (instance.baseCombat != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range23 = stream.GetRange(1);
+			int position23 = stream.Position;
+			BaseCombat.SerializeDelta(stream, instance.baseCombat, previous.baseCombat);
+			int num25 = stream.Position - position23;
+			if (num25 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseCombat (ProtoBuf.BaseCombat)");
+			}
+			Span<byte> span23 = range23.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num25, span23, 0);
+		}
+		if (instance.mapEntity != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range24 = stream.GetRange(3);
+			int position24 = stream.Position;
+			MapEntity.SerializeDelta(stream, instance.mapEntity, previous.mapEntity);
+			int num26 = stream.Position - position24;
+			if (num26 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field mapEntity (ProtoBuf.MapEntity)");
+			}
+			Span<byte> span24 = range24.GetSpan();
+			int num27 = ProtocolParser.WriteUInt32((uint)num26, span24, 0);
+			if (num27 < 3)
+			{
+				span24[num27 - 1] |= 128;
+				while (num27 < 2)
+				{
+					span24[num27++] = 128;
+				}
+				span24[2] = 0;
+			}
+		}
+		if (instance.researchTable != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range25 = stream.GetRange(1);
+			int position25 = stream.Position;
+			ResearchTable.SerializeDelta(stream, instance.researchTable, previous.researchTable);
+			int num28 = stream.Position - position25;
+			if (num28 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field researchTable (ProtoBuf.ResearchTable)");
+			}
+			Span<byte> span25 = range25.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num28, span25, 0);
+		}
+		if (instance.dudExplosive != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range26 = stream.GetRange(1);
+			int position26 = stream.Position;
+			DudExplosive.SerializeDelta(stream, instance.dudExplosive, previous.dudExplosive);
+			int num29 = stream.Position - position26;
+			if (num29 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field dudExplosive (ProtoBuf.DudExplosive)");
+			}
+			Span<byte> span26 = range26.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num29, span26, 0);
+		}
+		if (instance.miningQuarry != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range27 = stream.GetRange(5);
+			int position27 = stream.Position;
+			MiningQuarry.SerializeDelta(stream, instance.miningQuarry, previous.miningQuarry);
+			int val9 = stream.Position - position27;
+			Span<byte> span27 = range27.GetSpan();
+			int num30 = ProtocolParser.WriteUInt32((uint)val9, span27, 0);
+			if (num30 < 5)
+			{
+				span27[num30 - 1] |= 128;
+				while (num30 < 4)
+				{
+					span27[num30++] = 128;
+				}
+				span27[4] = 0;
+			}
+		}
+		if (instance.baseVehicle != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range28 = stream.GetRange(3);
+			int position28 = stream.Position;
+			BaseVehicle.SerializeDelta(stream, instance.baseVehicle, previous.baseVehicle);
+			int num31 = stream.Position - position28;
+			if (num31 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseVehicle (ProtoBuf.BaseVehicle)");
+			}
+			Span<byte> span28 = range28.GetSpan();
+			int num32 = ProtocolParser.WriteUInt32((uint)num31, span28, 0);
+			if (num32 < 3)
+			{
+				span28[num32 - 1] |= 128;
+				while (num32 < 2)
+				{
+					span28[num32++] = 128;
+				}
+				span28[2] = 0;
+			}
+		}
+		if (instance.helicopter != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range29 = stream.GetRange(3);
+			int position29 = stream.Position;
+			Helicopter.SerializeDelta(stream, instance.helicopter, previous.helicopter);
+			int num33 = stream.Position - position29;
+			if (num33 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field helicopter (ProtoBuf.Helicopter)");
+			}
+			Span<byte> span29 = range29.GetSpan();
+			int num34 = ProtocolParser.WriteUInt32((uint)num33, span29, 0);
+			if (num34 < 3)
+			{
+				span29[num34 - 1] |= 128;
+				while (num34 < 2)
+				{
+					span29[num34++] = 128;
+				}
+				span29[2] = 0;
+			}
+		}
+		if (instance.landmine != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range30 = stream.GetRange(1);
+			int position30 = stream.Position;
+			Landmine.SerializeDelta(stream, instance.landmine, previous.landmine);
+			int num35 = stream.Position - position30;
+			if (num35 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field landmine (ProtoBuf.Landmine)");
+			}
+			Span<byte> span30 = range30.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num35, span30, 0);
+		}
+		if (instance.autoturret != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range31 = stream.GetRange(5);
+			int position31 = stream.Position;
+			AutoTurret.SerializeDelta(stream, instance.autoturret, previous.autoturret);
+			int val10 = stream.Position - position31;
+			Span<byte> span31 = range31.GetSpan();
+			int num36 = ProtocolParser.WriteUInt32((uint)val10, span31, 0);
+			if (num36 < 5)
+			{
+				span31[num36 - 1] |= 128;
+				while (num36 < 4)
+				{
+					span31[num36++] = 128;
+				}
+				span31[4] = 0;
+			}
+		}
+		if (instance.sphereEntity != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range32 = stream.GetRange(1);
+			int position32 = stream.Position;
+			SphereEntity.SerializeDelta(stream, instance.sphereEntity, previous.sphereEntity);
+			int num37 = stream.Position - position32;
+			if (num37 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field sphereEntity (ProtoBuf.SphereEntity)");
+			}
+			Span<byte> span32 = range32.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num37, span32, 0);
+		}
+		if (instance.stabilityEntity != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range33 = stream.GetRange(1);
+			int position33 = stream.Position;
+			StabilityEntity.SerializeDelta(stream, instance.stabilityEntity, previous.stabilityEntity);
+			int num38 = stream.Position - position33;
+			if (num38 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field stabilityEntity (ProtoBuf.StabilityEntity)");
+			}
+			Span<byte> span33 = range33.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num38, span33, 0);
+		}
+		if (instance.ownerInfo != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range34 = stream.GetRange(1);
+			int position34 = stream.Position;
+			OwnerInfo.SerializeDelta(stream, instance.ownerInfo, previous.ownerInfo);
+			int num39 = stream.Position - position34;
+			if (num39 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field ownerInfo (ProtoBuf.OwnerInfo)");
+			}
+			Span<byte> span34 = range34.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num39, span34, 0);
+		}
+		if (instance.decayEntity != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range35 = stream.GetRange(1);
+			int position35 = stream.Position;
+			DecayEntity.SerializeDelta(stream, instance.decayEntity, previous.decayEntity);
+			int num40 = stream.Position - position35;
+			if (num40 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field decayEntity (ProtoBuf.DecayEntity)");
+			}
+			Span<byte> span35 = range35.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num40, span35, 0);
+		}
+		if (instance.spawnable != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range36 = stream.GetRange(1);
+			int position36 = stream.Position;
+			Spawnable.SerializeDelta(stream, instance.spawnable, previous.spawnable);
+			int num41 = stream.Position - position36;
+			if (num41 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field spawnable (ProtoBuf.Spawnable)");
+			}
+			Span<byte> span36 = range36.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num41, span36, 0);
+		}
+		if (instance.servergib != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range37 = stream.GetRange(5);
+			int position37 = stream.Position;
+			ServerGib.SerializeDelta(stream, instance.servergib, previous.servergib);
+			int val11 = stream.Position - position37;
+			Span<byte> span37 = range37.GetSpan();
+			int num42 = ProtocolParser.WriteUInt32((uint)val11, span37, 0);
+			if (num42 < 5)
+			{
+				span37[num42 - 1] |= 128;
+				while (num42 < 4)
+				{
+					span37[num42++] = 128;
+				}
+				span37[4] = 0;
+			}
+		}
+		if (instance.vendingMachine != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range38 = stream.GetRange(5);
+			int position38 = stream.Position;
+			VendingMachine.SerializeDelta(stream, instance.vendingMachine, previous.vendingMachine);
+			int val12 = stream.Position - position38;
+			Span<byte> span38 = range38.GetSpan();
+			int num43 = ProtocolParser.WriteUInt32((uint)val12, span38, 0);
+			if (num43 < 5)
+			{
+				span38[num43 - 1] |= 128;
+				while (num43 < 4)
+				{
+					span38[num43++] = 128;
+				}
+				span38[4] = 0;
+			}
+		}
+		if (instance.spinnerWheel != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range39 = stream.GetRange(1);
+			int position39 = stream.Position;
+			SpinnerWheel.SerializeDelta(stream, instance.spinnerWheel, previous.spinnerWheel);
+			int num44 = stream.Position - position39;
+			if (num44 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field spinnerWheel (ProtoBuf.SpinnerWheel)");
+			}
+			Span<byte> span39 = range39.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num44, span39, 0);
+		}
+		if (instance.lift != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range40 = stream.GetRange(1);
+			int position40 = stream.Position;
+			Lift.SerializeDelta(stream, instance.lift, previous.lift);
+			int num45 = stream.Position - position40;
+			if (num45 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field lift (ProtoBuf.Lift)");
+			}
+			Span<byte> span40 = range40.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num45, span40, 0);
+		}
+		if (instance.bradley != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range41 = stream.GetRange(2);
+			int position41 = stream.Position;
+			BradleyAPC.SerializeDelta(stream, instance.bradley, previous.bradley);
+			int num46 = stream.Position - position41;
+			if (num46 > 16383)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field bradley (ProtoBuf.BradleyAPC)");
+			}
+			Span<byte> span41 = range41.GetSpan();
+			if (ProtocolParser.WriteUInt32((uint)num46, span41, 0) < 2)
+			{
+				span41[0] |= 128;
+				span41[1] = 0;
+			}
+		}
+		if (instance.waterwell != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range42 = stream.GetRange(1);
+			int position42 = stream.Position;
+			WaterWell.SerializeDelta(stream, instance.waterwell, previous.waterwell);
+			int num47 = stream.Position - position42;
+			if (num47 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field waterwell (ProtoBuf.WaterWell)");
+			}
+			Span<byte> span42 = range42.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num47, span42, 0);
+		}
+		if (instance.motorBoat != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range43 = stream.GetRange(1);
+			int position43 = stream.Position;
+			Motorboat.SerializeDelta(stream, instance.motorBoat, previous.motorBoat);
+			int num48 = stream.Position - position43;
+			if (num48 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field motorBoat (ProtoBuf.Motorboat)");
+			}
+			Span<byte> span43 = range43.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num48, span43, 0);
+		}
+		if (instance.ioEntity != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range44 = stream.GetRange(5);
+			int position44 = stream.Position;
+			IOEntity.SerializeDelta(stream, instance.ioEntity, previous.ioEntity);
+			int val13 = stream.Position - position44;
+			Span<byte> span44 = range44.GetSpan();
+			int num49 = ProtocolParser.WriteUInt32((uint)val13, span44, 0);
+			if (num49 < 5)
+			{
+				span44[num49 - 1] |= 128;
+				while (num49 < 4)
+				{
+					span44[num49++] = 128;
+				}
+				span44[4] = 0;
+			}
+		}
+		if (instance.puzzleReset != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range45 = stream.GetRange(5);
+			int position45 = stream.Position;
+			PuzzleReset.SerializeDelta(stream, instance.puzzleReset, previous.puzzleReset);
+			int val14 = stream.Position - position45;
+			Span<byte> span45 = range45.GetSpan();
+			int num50 = ProtocolParser.WriteUInt32((uint)val14, span45, 0);
+			if (num50 < 5)
+			{
+				span45[num50 - 1] |= 128;
+				while (num50 < 4)
+				{
+					span45[num50++] = 128;
+				}
+				span45[4] = 0;
+			}
+		}
+		if (instance.relationshipManager != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range46 = stream.GetRange(5);
+			int position46 = stream.Position;
+			RelationshipManager.SerializeDelta(stream, instance.relationshipManager, previous.relationshipManager);
+			int val15 = stream.Position - position46;
+			Span<byte> span46 = range46.GetSpan();
+			int num51 = ProtocolParser.WriteUInt32((uint)val15, span46, 0);
+			if (num51 < 5)
+			{
+				span46[num51 - 1] |= 128;
+				while (num51 < 4)
+				{
+					span46[num51++] = 128;
+				}
+				span46[4] = 0;
+			}
+		}
+		if (instance.hotAirBalloon != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range47 = stream.GetRange(1);
+			int position47 = stream.Position;
+			HotAirBalloon.SerializeDelta(stream, instance.hotAirBalloon, previous.hotAirBalloon);
+			int num52 = stream.Position - position47;
+			if (num52 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field hotAirBalloon (ProtoBuf.HotAirBalloon)");
+			}
+			Span<byte> span47 = range47.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num52, span47, 0);
+		}
+		if (instance.samSite != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range48 = stream.GetRange(1);
+			int position48 = stream.Position;
+			SAMSite.SerializeDelta(stream, instance.samSite, previous.samSite);
+			int num53 = stream.Position - position48;
+			if (num53 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field samSite (ProtoBuf.SAMSite)");
+			}
+			Span<byte> span48 = range48.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num53, span48, 0);
+		}
+		if (instance.eggHunt != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range49 = stream.GetRange(5);
+			int position49 = stream.Position;
+			EggHunt.SerializeDelta(stream, instance.eggHunt, previous.eggHunt);
+			int val16 = stream.Position - position49;
+			Span<byte> span49 = range49.GetSpan();
+			int num54 = ProtocolParser.WriteUInt32((uint)val16, span49, 0);
+			if (num54 < 5)
+			{
+				span49[num54 - 1] |= 128;
+				while (num54 < 4)
+				{
+					span49[num54++] = 128;
+				}
+				span49[4] = 0;
+			}
+		}
+		if (instance.arcadeMachine != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range50 = stream.GetRange(5);
+			int position50 = stream.Position;
+			ArcadeMachine.SerializeDelta(stream, instance.arcadeMachine, previous.arcadeMachine);
+			int val17 = stream.Position - position50;
+			Span<byte> span50 = range50.GetSpan();
+			int num55 = ProtocolParser.WriteUInt32((uint)val17, span50, 0);
+			if (num55 < 5)
+			{
+				span50[num55 - 1] |= 128;
+				while (num55 < 4)
+				{
+					span50[num55++] = 128;
+				}
+				span50[4] = 0;
+			}
+		}
+		if (instance.miniCopter != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range51 = stream.GetRange(1);
+			int position51 = stream.Position;
+			Minicopter.SerializeDelta(stream, instance.miniCopter, previous.miniCopter);
+			int num56 = stream.Position - position51;
+			if (num56 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field miniCopter (ProtoBuf.Minicopter)");
+			}
+			Span<byte> span51 = range51.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num56, span51, 0);
+		}
+		if (instance.horse != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range52 = stream.GetRange(5);
+			int position52 = stream.Position;
+			Horse.SerializeDelta(stream, instance.horse, previous.horse);
+			int val18 = stream.Position - position52;
+			Span<byte> span52 = range52.GetSpan();
+			int num57 = ProtocolParser.WriteUInt32((uint)val18, span52, 0);
+			if (num57 < 5)
+			{
+				span52[num57 - 1] |= 128;
+				while (num57 < 4)
+				{
+					span52[num57++] = 128;
+				}
+				span52[4] = 0;
+			}
+		}
+		if (instance.smartAlarm != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range53 = stream.GetRange(5);
+			int position53 = stream.Position;
+			SmartAlarm.SerializeDelta(stream, instance.smartAlarm, previous.smartAlarm);
+			int val19 = stream.Position - position53;
+			Span<byte> span53 = range53.GetSpan();
+			int num58 = ProtocolParser.WriteUInt32((uint)val19, span53, 0);
+			if (num58 < 5)
+			{
+				span53[num58 - 1] |= 128;
+				while (num58 < 4)
+				{
+					span53[num58++] = 128;
+				}
+				span53[4] = 0;
+			}
+		}
+		if (instance.lightString != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range54 = stream.GetRange(3);
+			int position54 = stream.Position;
+			LightString.SerializeDelta(stream, instance.lightString, previous.lightString);
+			int num59 = stream.Position - position54;
+			if (num59 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field lightString (ProtoBuf.LightString)");
+			}
+			Span<byte> span54 = range54.GetSpan();
+			int num60 = ProtocolParser.WriteUInt32((uint)num59, span54, 0);
+			if (num60 < 3)
+			{
+				span54[num60 - 1] |= 128;
+				while (num60 < 2)
+				{
+					span54[num60++] = 128;
+				}
+				span54[2] = 0;
+			}
+		}
+		if (instance.lightDeployer != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range55 = stream.GetRange(1);
+			int position55 = stream.Position;
+			LightDeployer.SerializeDelta(stream, instance.lightDeployer, previous.lightDeployer);
+			int num61 = stream.Position - position55;
+			if (num61 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field lightDeployer (ProtoBuf.LightDeployer)");
+			}
+			Span<byte> span55 = range55.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num61, span55, 0);
+		}
+		if (instance.rcEntity != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range56 = stream.GetRange(5);
+			int position56 = stream.Position;
+			RCEntity.SerializeDelta(stream, instance.rcEntity, previous.rcEntity);
+			int val20 = stream.Position - position56;
+			Span<byte> span56 = range56.GetSpan();
+			int num62 = ProtocolParser.WriteUInt32((uint)val20, span56, 0);
+			if (num62 < 5)
+			{
+				span56[num62 - 1] |= 128;
+				while (num62 < 4)
+				{
+					span56[num62++] = 128;
+				}
+				span56[4] = 0;
+			}
+		}
+		if (instance.computerStation != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range57 = stream.GetRange(5);
+			int position57 = stream.Position;
+			ComputerStation.SerializeDelta(stream, instance.computerStation, previous.computerStation);
+			int val21 = stream.Position - position57;
+			Span<byte> span57 = range57.GetSpan();
+			int num63 = ProtocolParser.WriteUInt32((uint)val21, span57, 0);
+			if (num63 < 5)
+			{
+				span57[num63 - 1] |= 128;
+				while (num63 < 4)
+				{
+					span57[num63++] = 128;
+				}
+				span57[4] = 0;
+			}
+		}
+		if (instance.growableEntity != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range58 = stream.GetRange(1);
+			int position58 = stream.Position;
+			GrowableEntity.SerializeDelta(stream, instance.growableEntity, previous.growableEntity);
+			int num64 = stream.Position - position58;
+			if (num64 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field growableEntity (ProtoBuf.GrowableEntity)");
+			}
+			Span<byte> span58 = range58.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num64, span58, 0);
+		}
+		if (instance.composter != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range59 = stream.GetRange(1);
+			int position59 = stream.Position;
+			Composter.SerializeDelta(stream, instance.composter, previous.composter);
+			int num65 = stream.Position - position59;
+			if (num65 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field composter (ProtoBuf.Composter)");
+			}
+			Span<byte> span59 = range59.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num65, span59, 0);
+		}
+		if (instance.modularVehicle != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range60 = stream.GetRange(1);
+			int position60 = stream.Position;
+			ModularVehicle.SerializeDelta(stream, instance.modularVehicle, previous.modularVehicle);
+			int num66 = stream.Position - position60;
+			if (num66 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field modularVehicle (ProtoBuf.ModularVehicle)");
+			}
+			Span<byte> span60 = range60.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num66, span60, 0);
+		}
+		if (instance.modularCar != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range61 = stream.GetRange(5);
+			int position61 = stream.Position;
+			ModularCar.SerializeDelta(stream, instance.modularCar, previous.modularCar);
+			int val22 = stream.Position - position61;
+			Span<byte> span61 = range61.GetSpan();
+			int num67 = ProtocolParser.WriteUInt32((uint)val22, span61, 0);
+			if (num67 < 5)
+			{
+				span61[num67 - 1] |= 128;
+				while (num67 < 4)
+				{
+					span61[num67++] = 128;
+				}
+				span61[4] = 0;
+			}
+		}
+		if (instance.simpleUID != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range62 = stream.GetRange(1);
+			int position62 = stream.Position;
+			SimpleUID.SerializeDelta(stream, instance.simpleUID, previous.simpleUID);
+			int num68 = stream.Position - position62;
+			if (num68 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field simpleUID (ProtoBuf.SimpleUID)");
+			}
+			Span<byte> span62 = range62.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num68, span62, 0);
+		}
+		if (instance.vehicleLift != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range63 = stream.GetRange(1);
+			int position63 = stream.Position;
+			VehicleLift.SerializeDelta(stream, instance.vehicleLift, previous.vehicleLift);
+			int num69 = stream.Position - position63;
+			if (num69 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field vehicleLift (ProtoBuf.VehicleLift)");
+			}
+			Span<byte> span63 = range63.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num69, span63, 0);
+		}
+		if (instance.engineStorage != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range64 = stream.GetRange(1);
+			int position64 = stream.Position;
+			EngineStorage.SerializeDelta(stream, instance.engineStorage, previous.engineStorage);
+			int num70 = stream.Position - position64;
+			if (num70 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field engineStorage (ProtoBuf.EngineStorage)");
+			}
+			Span<byte> span64 = range64.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num70, span64, 0);
+		}
+		if (instance.vehicleVendor != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range65 = stream.GetRange(5);
+			int position65 = stream.Position;
+			VehicleVendor.SerializeDelta(stream, instance.vehicleVendor, previous.vehicleVendor);
+			int val23 = stream.Position - position65;
+			Span<byte> span65 = range65.GetSpan();
+			int num71 = ProtocolParser.WriteUInt32((uint)val23, span65, 0);
+			if (num71 < 5)
+			{
+				span65[num71 - 1] |= 128;
+				while (num71 < 4)
+				{
+					span65[num71++] = 128;
+				}
+				span65[4] = 0;
+			}
+		}
+		if (instance.WaterPool != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range66 = stream.GetRange(1);
+			int position66 = stream.Position;
+			WaterPool.SerializeDelta(stream, instance.WaterPool, previous.WaterPool);
+			int num72 = stream.Position - position66;
+			if (num72 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field WaterPool (ProtoBuf.WaterPool)");
+			}
+			Span<byte> span66 = range66.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num72, span66, 0);
+		}
+		if (instance.photo != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range67 = stream.GetRange(1);
+			int position67 = stream.Position;
+			Photo.SerializeDelta(stream, instance.photo, previous.photo);
+			int num73 = stream.Position - position67;
+			if (num73 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field photo (ProtoBuf.Photo)");
+			}
+			Span<byte> span67 = range67.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num73, span67, 0);
+		}
+		if (instance.photoFrame != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range68 = stream.GetRange(3);
+			int position68 = stream.Position;
+			PhotoFrame.SerializeDelta(stream, instance.photoFrame, previous.photoFrame);
+			int num74 = stream.Position - position68;
+			if (num74 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field photoFrame (ProtoBuf.PhotoFrame)");
+			}
+			Span<byte> span68 = range68.GetSpan();
+			int num75 = ProtocolParser.WriteUInt32((uint)num74, span68, 0);
+			if (num75 < 3)
+			{
+				span68[num75 - 1] |= 128;
+				while (num75 < 2)
+				{
+					span68[num75++] = 128;
+				}
+				span68[2] = 0;
+			}
+		}
+		if (instance.vehicleModule != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range69 = stream.GetRange(1);
+			int position69 = stream.Position;
+			VehicleModule.SerializeDelta(stream, instance.vehicleModule, previous.vehicleModule);
+			int num76 = stream.Position - position69;
+			if (num76 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field vehicleModule (ProtoBuf.VehicleModule)");
+			}
+			Span<byte> span69 = range69.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num76, span69, 0);
+		}
+		if (instance.mixingTable != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range70 = stream.GetRange(1);
+			int position70 = stream.Position;
+			MixingTable.SerializeDelta(stream, instance.mixingTable, previous.mixingTable);
+			int num77 = stream.Position - position70;
+			if (num77 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field mixingTable (ProtoBuf.MixingTable)");
+			}
+			Span<byte> span70 = range70.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num77, span70, 0);
+		}
+		if (instance.shopKeeper != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range71 = stream.GetRange(1);
+			int position71 = stream.Position;
+			ShopKeeper.SerializeDelta(stream, instance.shopKeeper, previous.shopKeeper);
+			int num78 = stream.Position - position71;
+			if (num78 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field shopKeeper (ProtoBuf.ShopKeeper)");
+			}
+			Span<byte> span71 = range71.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num78, span71, 0);
+		}
+		if (instance.elevator != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range72 = stream.GetRange(3);
+			int position72 = stream.Position;
+			Elevator.SerializeDelta(stream, instance.elevator, previous.elevator);
+			int num79 = stream.Position - position72;
+			if (num79 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field elevator (ProtoBuf.Elevator)");
+			}
+			Span<byte> span72 = range72.GetSpan();
+			int num80 = ProtocolParser.WriteUInt32((uint)num79, span72, 0);
+			if (num80 < 3)
+			{
+				span72[num80 - 1] |= 128;
+				while (num80 < 2)
+				{
+					span72[num80++] = 128;
+				}
+				span72[2] = 0;
+			}
+		}
+		if (instance.skullTrophy != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range73 = stream.GetRange(5);
+			int position73 = stream.Position;
+			SkullTrophy.SerializeDelta(stream, instance.skullTrophy, previous.skullTrophy);
+			int val24 = stream.Position - position73;
+			Span<byte> span73 = range73.GetSpan();
+			int num81 = ProtocolParser.WriteUInt32((uint)val24, span73, 0);
+			if (num81 < 5)
+			{
+				span73[num81 - 1] |= 128;
+				while (num81 < 4)
+				{
+					span73[num81++] = 128;
+				}
+				span73[4] = 0;
+			}
+		}
+		if (instance.cassette != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range74 = stream.GetRange(1);
+			int position74 = stream.Position;
+			Cassette.SerializeDelta(stream, instance.cassette, previous.cassette);
+			int num82 = stream.Position - position74;
+			if (num82 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field cassette (ProtoBuf.Cassette)");
+			}
+			Span<byte> span74 = range74.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num82, span74, 0);
+		}
+		if (instance.telephone != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range75 = stream.GetRange(5);
+			int position75 = stream.Position;
+			Telephone.SerializeDelta(stream, instance.telephone, previous.telephone);
+			int val25 = stream.Position - position75;
+			Span<byte> span75 = range75.GetSpan();
+			int num83 = ProtocolParser.WriteUInt32((uint)val25, span75, 0);
+			if (num83 < 5)
+			{
+				span75[num83 - 1] |= 128;
+				while (num83 < 4)
+				{
+					span75[num83++] = 128;
+				}
+				span75[4] = 0;
+			}
+		}
+		if (instance.boomBox != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range76 = stream.GetRange(5);
+			int position76 = stream.Position;
+			BoomBox.SerializeDelta(stream, instance.boomBox, previous.boomBox);
+			int val26 = stream.Position - position76;
+			Span<byte> span76 = range76.GetSpan();
+			int num84 = ProtocolParser.WriteUInt32((uint)val26, span76, 0);
+			if (num84 < 5)
+			{
+				span76[num84 - 1] |= 128;
+				while (num84 < 4)
+				{
+					span76[num84++] = 128;
+				}
+				span76[4] = 0;
+			}
+		}
+		if (instance.neonSign != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range77 = stream.GetRange(3);
+			int position77 = stream.Position;
+			NeonSign.SerializeDelta(stream, instance.neonSign, previous.neonSign);
+			int num85 = stream.Position - position77;
+			if (num85 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field neonSign (ProtoBuf.NeonSign)");
+			}
+			Span<byte> span77 = range77.GetSpan();
+			int num86 = ProtocolParser.WriteUInt32((uint)num85, span77, 0);
+			if (num86 < 3)
+			{
+				span77[num86 - 1] |= 128;
+				while (num86 < 2)
+				{
+					span77[num86++] = 128;
+				}
+				span77[2] = 0;
+			}
+		}
+		if (instance.subEntityList != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range78 = stream.GetRange(3);
+			int position78 = stream.Position;
+			SubEntityList.SerializeDelta(stream, instance.subEntityList, previous.subEntityList);
+			int num87 = stream.Position - position78;
+			if (num87 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field subEntityList (ProtoBuf.SubEntityList)");
+			}
+			Span<byte> span78 = range78.GetSpan();
+			int num88 = ProtocolParser.WriteUInt32((uint)num87, span78, 0);
+			if (num88 < 3)
+			{
+				span78[num88 - 1] |= 128;
+				while (num88 < 2)
+				{
+					span78[num88++] = 128;
+				}
+				span78[2] = 0;
+			}
+		}
+		if (instance.marketTerminal != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range79 = stream.GetRange(5);
+			int position79 = stream.Position;
+			MarketTerminal.SerializeDelta(stream, instance.marketTerminal, previous.marketTerminal);
+			int val27 = stream.Position - position79;
+			Span<byte> span79 = range79.GetSpan();
+			int num89 = ProtocolParser.WriteUInt32((uint)val27, span79, 0);
+			if (num89 < 5)
+			{
+				span79[num89 - 1] |= 128;
+				while (num89 < 4)
+				{
+					span79[num89++] = 128;
+				}
+				span79[4] = 0;
+			}
+		}
+		if (instance.deliveryDrone != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range80 = stream.GetRange(1);
+			int position80 = stream.Position;
+			DeliveryDrone.SerializeDelta(stream, instance.deliveryDrone, previous.deliveryDrone);
+			int num90 = stream.Position - position80;
+			if (num90 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field deliveryDrone (ProtoBuf.DeliveryDrone)");
+			}
+			Span<byte> span80 = range80.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num90, span80, 0);
+		}
+		if (instance.reclaimTerminal != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range81 = stream.GetRange(1);
+			int position81 = stream.Position;
+			ReclaimTerminal.SerializeDelta(stream, instance.reclaimTerminal, previous.reclaimTerminal);
+			int num91 = stream.Position - position81;
+			if (num91 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field reclaimTerminal (ProtoBuf.ReclaimTerminal)");
+			}
+			Span<byte> span81 = range81.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num91, span81, 0);
+		}
+		if (instance.slotMachine != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range82 = stream.GetRange(1);
+			int position82 = stream.Position;
+			SlotMachine.SerializeDelta(stream, instance.slotMachine, previous.slotMachine);
+			int num92 = stream.Position - position82;
+			if (num92 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field slotMachine (ProtoBuf.SlotMachine)");
+			}
+			Span<byte> span82 = range82.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num92, span82, 0);
+		}
+		if (instance.trainEngine != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range83 = stream.GetRange(1);
+			int position83 = stream.Position;
+			TrainEngine.SerializeDelta(stream, instance.trainEngine, previous.trainEngine);
+			int num93 = stream.Position - position83;
+			if (num93 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field trainEngine (ProtoBuf.TrainEngine)");
+			}
+			Span<byte> span83 = range83.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num93, span83, 0);
+		}
+		if (instance.cardGame != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range84 = stream.GetRange(5);
+			int position84 = stream.Position;
+			CardGame.SerializeDelta(stream, instance.cardGame, previous.cardGame);
+			int num94 = stream.Position - position84;
+			if (num94 > 34359738367L)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field cardGame (ProtoBuf.CardGame)");
+			}
+			Span<byte> span84 = range84.GetSpan();
+			int num95 = ProtocolParser.WriteUInt32((uint)num94, span84, 0);
+			if (num95 < 5)
+			{
+				span84[num95 - 1] |= 128;
+				while (num95 < 4)
+				{
+					span84[num95++] = 128;
+				}
+				span84[4] = 0;
+			}
+		}
+		if (instance.crane != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range85 = stream.GetRange(1);
+			int position85 = stream.Position;
+			Crane.SerializeDelta(stream, instance.crane, previous.crane);
+			int num96 = stream.Position - position85;
+			if (num96 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field crane (ProtoBuf.Crane)");
+			}
+			Span<byte> span85 = range85.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num96, span85, 0);
+		}
+		if (instance.connectedSpeaker != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range86 = stream.GetRange(1);
+			int position86 = stream.Position;
+			ConnectedSpeaker.SerializeDelta(stream, instance.connectedSpeaker, previous.connectedSpeaker);
+			int num97 = stream.Position - position86;
+			if (num97 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field connectedSpeaker (ProtoBuf.ConnectedSpeaker)");
+			}
+			Span<byte> span86 = range86.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num97, span86, 0);
+		}
+		if (instance.audioEntity != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range87 = stream.GetRange(1);
+			int position87 = stream.Position;
+			AudioEntity.SerializeDelta(stream, instance.audioEntity, previous.audioEntity);
+			int num98 = stream.Position - position87;
+			if (num98 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field audioEntity (ProtoBuf.AudioEntity)");
+			}
+			Span<byte> span87 = range87.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num98, span87, 0);
+		}
+		if (instance.microphoneStand != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range88 = stream.GetRange(1);
+			int position88 = stream.Position;
+			MicrophoneStand.SerializeDelta(stream, instance.microphoneStand, previous.microphoneStand);
+			int num99 = stream.Position - position88;
+			if (num99 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field microphoneStand (ProtoBuf.MicrophoneStand)");
+			}
+			Span<byte> span88 = range88.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num99, span88, 0);
+		}
+		if (instance.submarine != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range89 = stream.GetRange(1);
+			int position89 = stream.Position;
+			Submarine.SerializeDelta(stream, instance.submarine, previous.submarine);
+			int num100 = stream.Position - position89;
+			if (num100 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field submarine (ProtoBuf.Submarine)");
+			}
+			Span<byte> span89 = range89.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num100, span89, 0);
+		}
+		if (instance.sleepingBagCamper != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range90 = stream.GetRange(1);
+			int position90 = stream.Position;
+			SleepingBagCamper.SerializeDelta(stream, instance.sleepingBagCamper, previous.sleepingBagCamper);
+			int num101 = stream.Position - position90;
+			if (num101 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field sleepingBagCamper (ProtoBuf.SleepingBagCamper)");
+			}
+			Span<byte> span90 = range90.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num101, span90, 0);
+		}
+		if (instance.camperModule != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range91 = stream.GetRange(1);
+			int position91 = stream.Position;
+			CamperModule.SerializeDelta(stream, instance.camperModule, previous.camperModule);
+			int num102 = stream.Position - position91;
+			if (num102 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field camperModule (ProtoBuf.CamperModule)");
+			}
+			Span<byte> span91 = range91.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num102, span91, 0);
+		}
+		if (instance.paintableSign != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range92 = stream.GetRange(3);
+			int position92 = stream.Position;
+			PaintableSign.SerializeDelta(stream, instance.paintableSign, previous.paintableSign);
+			int num103 = stream.Position - position92;
+			if (num103 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field paintableSign (ProtoBuf.PaintableSign)");
+			}
+			Span<byte> span92 = range92.GetSpan();
+			int num104 = ProtocolParser.WriteUInt32((uint)num103, span92, 0);
+			if (num104 < 3)
+			{
+				span92[num104 - 1] |= 128;
+				while (num104 < 2)
+				{
+					span92[num104++] = 128;
+				}
+				span92[2] = 0;
+			}
+		}
+		if (instance.whitelist != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range93 = stream.GetRange(3);
+			int position93 = stream.Position;
+			Whitelist.SerializeDelta(stream, instance.whitelist, previous.whitelist);
+			int num105 = stream.Position - position93;
+			if (num105 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field whitelist (ProtoBuf.Whitelist)");
+			}
+			Span<byte> span93 = range93.GetSpan();
+			int num106 = ProtocolParser.WriteUInt32((uint)num105, span93, 0);
+			if (num106 < 3)
+			{
+				span93[num106 - 1] |= 128;
+				while (num106 < 2)
+				{
+					span93[num106++] = 128;
+				}
+				span93[2] = 0;
+			}
+		}
+		if (instance.FrankensteinTable != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range94 = stream.GetRange(3);
+			int position94 = stream.Position;
+			FrankensteinTable.SerializeDelta(stream, instance.FrankensteinTable, previous.FrankensteinTable);
+			int num107 = stream.Position - position94;
+			if (num107 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field FrankensteinTable (ProtoBuf.FrankensteinTable)");
+			}
+			Span<byte> span94 = range94.GetSpan();
+			int num108 = ProtocolParser.WriteUInt32((uint)num107, span94, 0);
+			if (num108 < 3)
+			{
+				span94[num108 - 1] |= 128;
+				while (num108 < 2)
+				{
+					span94[num108++] = 128;
+				}
+				span94[2] = 0;
+			}
+		}
+		if (instance.mlrs != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range95 = stream.GetRange(1);
+			int position95 = stream.Position;
+			MLRS.SerializeDelta(stream, instance.mlrs, previous.mlrs);
+			int num109 = stream.Position - position95;
+			if (num109 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field mlrs (ProtoBuf.MLRS)");
+			}
+			Span<byte> span95 = range95.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num109, span95, 0);
+		}
+		if (instance.reclaimManager != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range96 = stream.GetRange(5);
+			int position96 = stream.Position;
+			ReclaimManager.SerializeDelta(stream, instance.reclaimManager, previous.reclaimManager);
+			int val28 = stream.Position - position96;
+			Span<byte> span96 = range96.GetSpan();
+			int num110 = ProtocolParser.WriteUInt32((uint)val28, span96, 0);
+			if (num110 < 5)
+			{
+				span96[num110 - 1] |= 128;
+				while (num110 < 4)
+				{
+					span96[num110++] = 128;
+				}
+				span96[4] = 0;
+			}
+		}
+		if (instance.gameMode != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range97 = stream.GetRange(5);
+			int position97 = stream.Position;
+			GameMode.SerializeDelta(stream, instance.gameMode, previous.gameMode);
+			int val29 = stream.Position - position97;
+			Span<byte> span97 = range97.GetSpan();
+			int num111 = ProtocolParser.WriteUInt32((uint)val29, span97, 0);
+			if (num111 < 5)
+			{
+				span97[num111 - 1] |= 128;
+				while (num111 < 4)
+				{
+					span97[num111++] = 128;
+				}
+				span97[4] = 0;
+			}
+		}
+		if (instance.snowmobile != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range98 = stream.GetRange(1);
+			int position98 = stream.Position;
+			Snowmobile.SerializeDelta(stream, instance.snowmobile, previous.snowmobile);
+			int num112 = stream.Position - position98;
+			if (num112 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field snowmobile (ProtoBuf.Snowmobile)");
+			}
+			Span<byte> span98 = range98.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num112, span98, 0);
+		}
+		stream.WriteByte(160);
+		stream.WriteByte(6);
+		ProtocolParser.WriteBool(stream, instance.createdThisFrame);
+		if (instance.patternFirework != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range99 = stream.GetRange(3);
+			int position99 = stream.Position;
+			PatternFirework.SerializeDelta(stream, instance.patternFirework, previous.patternFirework);
+			int num113 = stream.Position - position99;
+			if (num113 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field patternFirework (ProtoBuf.PatternFirework)");
+			}
+			Span<byte> span99 = range99.GetSpan();
+			int num114 = ProtocolParser.WriteUInt32((uint)num113, span99, 0);
+			if (num114 < 3)
+			{
+				span99[num114 - 1] |= 128;
+				while (num114 < 2)
+				{
+					span99[num114++] = 128;
+				}
+				span99[2] = 0;
+			}
+		}
+		if (instance.cargoPlane != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range100 = stream.GetRange(1);
+			int position100 = stream.Position;
+			CargoPlane.SerializeDelta(stream, instance.cargoPlane, previous.cargoPlane);
+			int num115 = stream.Position - position100;
+			if (num115 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field cargoPlane (ProtoBuf.CargoPlane)");
+			}
+			Span<byte> span100 = range100.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num115, span100, 0);
+		}
+		if (instance.paintedItem != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range101 = stream.GetRange(1);
+			int position101 = stream.Position;
+			PaintedItem.SerializeDelta(stream, instance.paintedItem, previous.paintedItem);
+			int num116 = stream.Position - position101;
+			if (num116 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field paintedItem (ProtoBuf.PaintedItem)");
+			}
+			Span<byte> span101 = range101.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num116, span101, 0);
+		}
+		if (instance.clanManager != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range102 = stream.GetRange(5);
+			int position102 = stream.Position;
+			ClanManager.SerializeDelta(stream, instance.clanManager, previous.clanManager);
+			int val30 = stream.Position - position102;
+			Span<byte> span102 = range102.GetSpan();
+			int num117 = ProtocolParser.WriteUInt32((uint)val30, span102, 0);
+			if (num117 < 5)
+			{
+				span102[num117 - 1] |= 128;
+				while (num117 < 4)
+				{
+					span102[num117++] = 128;
+				}
+				span102[4] = 0;
+			}
+		}
+		if (instance.spray != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range103 = stream.GetRange(1);
+			int position103 = stream.Position;
+			Spray.SerializeDelta(stream, instance.spray, previous.spray);
+			int num118 = stream.Position - position103;
+			if (num118 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field spray (ProtoBuf.Spray)");
+			}
+			Span<byte> span103 = range103.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num118, span103, 0);
+		}
+		if (instance.baseTrain != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range104 = stream.GetRange(1);
+			int position104 = stream.Position;
+			BaseTrain.SerializeDelta(stream, instance.baseTrain, previous.baseTrain);
+			int num119 = stream.Position - position104;
+			if (num119 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseTrain (ProtoBuf.BaseTrain)");
+			}
+			Span<byte> span104 = range104.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num119, span104, 0);
+		}
+		if (instance.zipline != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range105 = stream.GetRange(3);
+			int position105 = stream.Position;
+			Zipline.SerializeDelta(stream, instance.zipline, previous.zipline);
+			int num120 = stream.Position - position105;
+			if (num120 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field zipline (ProtoBuf.Zipline)");
+			}
+			Span<byte> span105 = range105.GetSpan();
+			int num121 = ProtocolParser.WriteUInt32((uint)num120, span105, 0);
+			if (num121 < 3)
+			{
+				span105[num121 - 1] |= 128;
+				while (num121 < 2)
+				{
+					span105[num121++] = 128;
+				}
+				span105[2] = 0;
+			}
+		}
+		if (instance.ziplineMountable != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range106 = stream.GetRange(3);
+			int position106 = stream.Position;
+			ZiplineMountable.SerializeDelta(stream, instance.ziplineMountable, previous.ziplineMountable);
+			int num122 = stream.Position - position106;
+			if (num122 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field ziplineMountable (ProtoBuf.ZiplineMountable)");
+			}
+			Span<byte> span106 = range106.GetSpan();
+			int num123 = ProtocolParser.WriteUInt32((uint)num122, span106, 0);
+			if (num123 < 3)
+			{
+				span106[num123 - 1] |= 128;
+				while (num123 < 2)
+				{
+					span106[num123++] = 128;
+				}
+				span106[2] = 0;
+			}
+		}
+		if (instance.ZiplineArrival != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range107 = stream.GetRange(3);
+			int position107 = stream.Position;
+			ZiplineArrivalPoint.SerializeDelta(stream, instance.ZiplineArrival, previous.ZiplineArrival);
+			int num124 = stream.Position - position107;
+			if (num124 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field ZiplineArrival (ProtoBuf.ZiplineArrivalPoint)");
+			}
+			Span<byte> span107 = range107.GetSpan();
+			int num125 = ProtocolParser.WriteUInt32((uint)num124, span107, 0);
+			if (num125 < 3)
+			{
+				span107[num125 - 1] |= 128;
+				while (num125 < 2)
+				{
+					span107[num125++] = 128;
+				}
+				span107[2] = 0;
+			}
+		}
+		if (instance.sprayLine != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range108 = stream.GetRange(3);
+			int position108 = stream.Position;
+			SprayLine.SerializeDelta(stream, instance.sprayLine, previous.sprayLine);
+			int num126 = stream.Position - position108;
+			if (num126 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field sprayLine (ProtoBuf.SprayLine)");
+			}
+			Span<byte> span108 = range108.GetSpan();
+			int num127 = ProtocolParser.WriteUInt32((uint)num126, span108, 0);
+			if (num127 < 3)
+			{
+				span108[num127 - 1] |= 128;
+				while (num127 < 2)
+				{
+					span108[num127++] = 128;
+				}
+				span108[2] = 0;
+			}
+		}
+		if (instance.coalingTower != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range109 = stream.GetRange(1);
+			int position109 = stream.Position;
+			CoalingTower.SerializeDelta(stream, instance.coalingTower, previous.coalingTower);
+			int num128 = stream.Position - position109;
+			if (num128 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field coalingTower (ProtoBuf.CoalingTower)");
+			}
+			Span<byte> span109 = range109.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num128, span109, 0);
+		}
+		if (instance.simpleInt != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range110 = stream.GetRange(1);
+			int position110 = stream.Position;
+			SimpleInt.SerializeDelta(stream, instance.simpleInt, previous.simpleInt);
+			int num129 = stream.Position - position110;
+			if (num129 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field simpleInt (ProtoBuf.SimpleInt)");
+			}
+			Span<byte> span110 = range110.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num129, span110, 0);
+		}
+		if (instance.baseOven != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range111 = stream.GetRange(3);
+			int position111 = stream.Position;
+			BaseOven.SerializeDelta(stream, instance.baseOven, previous.baseOven);
+			int num130 = stream.Position - position111;
+			if (num130 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseOven (ProtoBuf.BaseOven)");
+			}
+			Span<byte> span111 = range111.GetSpan();
+			int num131 = ProtocolParser.WriteUInt32((uint)num130, span111, 0);
+			if (num131 < 3)
+			{
+				span111[num131 - 1] |= 128;
+				while (num131 < 2)
+				{
+					span111[num131++] = 128;
+				}
+				span111[2] = 0;
+			}
+		}
+		if (instance.brainComponent != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range112 = stream.GetRange(1);
+			int position112 = stream.Position;
+			BrainComponent.SerializeDelta(stream, instance.brainComponent, previous.brainComponent);
+			int num132 = stream.Position - position112;
+			if (num132 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field brainComponent (ProtoBuf.BrainComponent)");
+			}
+			Span<byte> span112 = range112.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num132, span112, 0);
+		}
+		if (instance.proceduralDungeon != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range113 = stream.GetRange(1);
+			int position113 = stream.Position;
+			ProceduralDungeon.SerializeDelta(stream, instance.proceduralDungeon, previous.proceduralDungeon);
+			int num133 = stream.Position - position113;
+			if (num133 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field proceduralDungeon (ProtoBuf.ProceduralDungeon)");
+			}
+			Span<byte> span113 = range113.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num133, span113, 0);
+		}
+		if (instance.industrialConveyor != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range114 = stream.GetRange(3);
+			int position114 = stream.Position;
+			IndustrialConveyor.SerializeDelta(stream, instance.industrialConveyor, previous.industrialConveyor);
+			int num134 = stream.Position - position114;
+			if (num134 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field industrialConveyor (ProtoBuf.IndustrialConveyor)");
+			}
+			Span<byte> span114 = range114.GetSpan();
+			int num135 = ProtocolParser.WriteUInt32((uint)num134, span114, 0);
+			if (num135 < 3)
+			{
+				span114[num135 - 1] |= 128;
+				while (num135 < 2)
+				{
+					span114[num135++] = 128;
+				}
+				span114[2] = 0;
+			}
+		}
+		if (instance.industrialCrafter != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range115 = stream.GetRange(1);
+			int position115 = stream.Position;
+			IndustrialCrafter.SerializeDelta(stream, instance.industrialCrafter, previous.industrialCrafter);
+			int num136 = stream.Position - position115;
+			if (num136 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field industrialCrafter (ProtoBuf.IndustrialCrafter)");
+			}
+			Span<byte> span115 = range115.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num136, span115, 0);
+		}
+		if (instance.drone != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range116 = stream.GetRange(1);
+			int position116 = stream.Position;
+			Drone.SerializeDelta(stream, instance.drone, previous.drone);
+			int num137 = stream.Position - position116;
+			if (num137 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field drone (ProtoBuf.Drone)");
+			}
+			Span<byte> span116 = range116.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num137, span116, 0);
+		}
+		if (instance.explosive != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range117 = stream.GetRange(1);
+			int position117 = stream.Position;
+			TimedExplosive.SerializeDelta(stream, instance.explosive, previous.explosive);
+			int num138 = stream.Position - position117;
+			if (num138 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field explosive (ProtoBuf.TimedExplosive)");
+			}
+			Span<byte> span117 = range117.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num138, span117, 0);
+		}
+		if (instance.simpleUint != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range118 = stream.GetRange(1);
+			int position118 = stream.Position;
+			SimpleUInt.SerializeDelta(stream, instance.simpleUint, previous.simpleUint);
+			int num139 = stream.Position - position118;
+			if (num139 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field simpleUint (ProtoBuf.SimpleUInt)");
+			}
+			Span<byte> span118 = range118.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num139, span118, 0);
+		}
+		if (instance.weaponRack != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range119 = stream.GetRange(3);
+			int position119 = stream.Position;
+			WeaponRack.SerializeDelta(stream, instance.weaponRack, previous.weaponRack);
+			int num140 = stream.Position - position119;
+			if (num140 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field weaponRack (ProtoBuf.WeaponRack)");
+			}
+			Span<byte> span119 = range119.GetSpan();
+			int num141 = ProtocolParser.WriteUInt32((uint)num140, span119, 0);
+			if (num141 < 3)
+			{
+				span119[num141 - 1] |= 128;
+				while (num141 < 2)
+				{
+					span119[num141++] = 128;
+				}
+				span119[2] = 0;
+			}
+		}
+		if (instance.attackHeli != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range120 = stream.GetRange(1);
+			int position120 = stream.Position;
+			AttackHeli.SerializeDelta(stream, instance.attackHeli, previous.attackHeli);
+			int num142 = stream.Position - position120;
+			if (num142 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field attackHeli (ProtoBuf.AttackHeli)");
+			}
+			Span<byte> span120 = range120.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num142, span120, 0);
+		}
+		if (instance.attackHeliTurret != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range121 = stream.GetRange(1);
+			int position121 = stream.Position;
+			AttackHeliTurret.SerializeDelta(stream, instance.attackHeliTurret, previous.attackHeliTurret);
+			int num143 = stream.Position - position121;
+			if (num143 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field attackHeliTurret (ProtoBuf.AttackHeliTurret)");
+			}
+			Span<byte> span121 = range121.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num143, span121, 0);
+		}
+		if (instance.attackHeliRockets != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range122 = stream.GetRange(1);
+			int position122 = stream.Position;
+			AttackHeliRockets.SerializeDelta(stream, instance.attackHeliRockets, previous.attackHeliRockets);
+			int num144 = stream.Position - position122;
+			if (num144 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field attackHeliRockets (ProtoBuf.AttackHeliRockets)");
+			}
+			Span<byte> span122 = range122.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num144, span122, 0);
+		}
+		if (instance.baseBoat != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range123 = stream.GetRange(1);
+			int position123 = stream.Position;
+			BaseBoat.SerializeDelta(stream, instance.baseBoat, previous.baseBoat);
+			int num145 = stream.Position - position123;
+			if (num145 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseBoat (ProtoBuf.BaseBoat)");
+			}
+			Span<byte> span123 = range123.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num145, span123, 0);
+		}
+		if (instance.ragdoll != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range124 = stream.GetRange(3);
+			int position124 = stream.Position;
+			Ragdoll.SerializeDelta(stream, instance.ragdoll, previous.ragdoll);
+			int num146 = stream.Position - position124;
+			if (num146 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field ragdoll (ProtoBuf.Ragdoll)");
+			}
+			Span<byte> span124 = range124.GetSpan();
+			int num147 = ProtocolParser.WriteUInt32((uint)num146, span124, 0);
+			if (num147 < 3)
+			{
+				span124[num147 - 1] |= 128;
+				while (num147 < 2)
+				{
+					span124[num147++] = 128;
+				}
+				span124[2] = 0;
+			}
+		}
+		if (instance.dieselEngine != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range125 = stream.GetRange(1);
+			int position125 = stream.Position;
+			DieselEngine.SerializeDelta(stream, instance.dieselEngine, previous.dieselEngine);
+			int num148 = stream.Position - position125;
+			if (num148 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field dieselEngine (ProtoBuf.DieselEngine)");
+			}
+			Span<byte> span125 = range125.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num148, span125, 0);
+		}
+		if (instance.associatedFiles != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(9);
+			BufferStream.RangeHandle range126 = stream.GetRange(5);
+			int position126 = stream.Position;
+			AssociatedFiles.SerializeDelta(stream, instance.associatedFiles, previous.associatedFiles);
+			int val31 = stream.Position - position126;
+			Span<byte> span126 = range126.GetSpan();
+			int num149 = ProtocolParser.WriteUInt32((uint)val31, span126, 0);
+			if (num149 < 5)
+			{
+				span126[num149 - 1] |= 128;
+				while (num149 < 4)
+				{
+					span126[num149++] = 128;
+				}
+				span126[4] = 0;
+			}
+		}
+		if (instance.nexusFerry != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(9);
+			BufferStream.RangeHandle range127 = stream.GetRange(5);
+			int position127 = stream.Position;
+			NexusFerry.SerializeDelta(stream, instance.nexusFerry, previous.nexusFerry);
+			int val32 = stream.Position - position127;
+			Span<byte> span127 = range127.GetSpan();
+			int num150 = ProtocolParser.WriteUInt32((uint)val32, span127, 0);
+			if (num150 < 5)
+			{
+				span127[num150 - 1] |= 128;
+				while (num150 < 4)
+				{
+					span127[num150++] = 128;
+				}
+				span127[4] = 0;
+			}
+		}
+		if (instance.nexusIsland != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(9);
+			BufferStream.RangeHandle range128 = stream.GetRange(5);
+			int position128 = stream.Position;
+			NexusIsland.SerializeDelta(stream, instance.nexusIsland, previous.nexusIsland);
+			int val33 = stream.Position - position128;
+			Span<byte> span128 = range128.GetSpan();
+			int num151 = ProtocolParser.WriteUInt32((uint)val33, span128, 0);
+			if (num151 < 5)
+			{
+				span128[num151 - 1] |= 128;
+				while (num151 < 4)
+				{
+					span128[num151++] = 128;
+				}
+				span128[4] = 0;
+			}
+		}
+		if (instance.nexusDockTerminal != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(9);
+			BufferStream.RangeHandle range129 = stream.GetRange(3);
+			int position129 = stream.Position;
+			NexusDockTerminal.SerializeDelta(stream, instance.nexusDockTerminal, previous.nexusDockTerminal);
+			int num152 = stream.Position - position129;
+			if (num152 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field nexusDockTerminal (ProtoBuf.NexusDockTerminal)");
+			}
+			Span<byte> span129 = range129.GetSpan();
+			int num153 = ProtocolParser.WriteUInt32((uint)num152, span129, 0);
+			if (num153 < 3)
+			{
+				span129[num153 - 1] |= 128;
+				while (num153 < 2)
+				{
+					span129[num153++] = 128;
+				}
+				span129[2] = 0;
+			}
+		}
+		if (instance.rockingChair != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(9);
+			BufferStream.RangeHandle range130 = stream.GetRange(1);
+			int position130 = stream.Position;
+			RockingChair.SerializeDelta(stream, instance.rockingChair, previous.rockingChair);
+			int num154 = stream.Position - position130;
+			if (num154 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field rockingChair (ProtoBuf.RockingChair)");
+			}
+			Span<byte> span130 = range130.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num154, span130, 0);
+		}
+		if (instance.headData != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(9);
+			BufferStream.RangeHandle range131 = stream.GetRange(5);
+			int position131 = stream.Position;
+			HeadData.SerializeDelta(stream, instance.headData, previous.headData);
+			int val34 = stream.Position - position131;
+			Span<byte> span131 = range131.GetSpan();
+			int num155 = ProtocolParser.WriteUInt32((uint)val34, span131, 0);
+			if (num155 < 5)
+			{
+				span131[num155 - 1] |= 128;
+				while (num155 < 4)
+				{
+					span131[num155++] = 128;
+				}
+				span131[4] = 0;
+			}
+		}
+		if (instance.wantedPoster != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(9);
+			BufferStream.RangeHandle range132 = stream.GetRange(5);
+			int position132 = stream.Position;
+			WantedPoster.SerializeDelta(stream, instance.wantedPoster, previous.wantedPoster);
+			int val35 = stream.Position - position132;
+			Span<byte> span132 = range132.GetSpan();
+			int num156 = ProtocolParser.WriteUInt32((uint)val35, span132, 0);
+			if (num156 < 5)
+			{
+				span132[num156 - 1] |= 128;
+				while (num156 < 4)
+				{
+					span132[num156++] = 128;
+				}
+				span132[4] = 0;
+			}
+		}
+		if (instance.waypointRace != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(9);
+			BufferStream.RangeHandle range133 = stream.GetRange(3);
+			int position133 = stream.Position;
+			WaypointRace.SerializeDelta(stream, instance.waypointRace, previous.waypointRace);
+			int num157 = stream.Position - position133;
+			if (num157 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field waypointRace (ProtoBuf.WaypointRace)");
+			}
+			Span<byte> span133 = range133.GetSpan();
+			int num158 = ProtocolParser.WriteUInt32((uint)num157, span133, 0);
+			if (num158 < 3)
+			{
+				span133[num158 - 1] |= 128;
+				while (num158 < 2)
+				{
+					span133[num158++] = 128;
+				}
+				span133[2] = 0;
+			}
+		}
+		if (instance.legacyShelter != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(9);
+			BufferStream.RangeHandle range134 = stream.GetRange(1);
+			int position134 = stream.Position;
+			LegacyShelter.SerializeDelta(stream, instance.legacyShelter, previous.legacyShelter);
+			int num159 = stream.Position - position134;
+			if (num159 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field legacyShelter (ProtoBuf.LegacyShelter)");
+			}
+			Span<byte> span134 = range134.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num159, span134, 0);
+		}
+		if (instance.metalDetectorSource != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range135 = stream.GetRange(3);
+			int position135 = stream.Position;
+			MetalDetectorSource.SerializeDelta(stream, instance.metalDetectorSource, previous.metalDetectorSource);
+			int num160 = stream.Position - position135;
+			if (num160 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field metalDetectorSource (ProtoBuf.MetalDetectorSource)");
+			}
+			Span<byte> span135 = range135.GetSpan();
+			int num161 = ProtocolParser.WriteUInt32((uint)num160, span135, 0);
+			if (num161 < 3)
+			{
+				span135[num161 - 1] |= 128;
+				while (num161 < 2)
+				{
+					span135[num161++] = 128;
+				}
+				span135[2] = 0;
+			}
+		}
+		if (instance.tutorialIsland != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range136 = stream.GetRange(1);
+			int position136 = stream.Position;
+			TutorialIsland.SerializeDelta(stream, instance.tutorialIsland, previous.tutorialIsland);
+			int num162 = stream.Position - position136;
+			if (num162 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field tutorialIsland (ProtoBuf.TutorialIsland)");
+			}
+			Span<byte> span136 = range136.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num162, span136, 0);
+		}
+		if (instance.cinematicEntity != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range137 = stream.GetRange(1);
+			int position137 = stream.Position;
+			CinematicEntity.SerializeDelta(stream, instance.cinematicEntity, previous.cinematicEntity);
+			int num163 = stream.Position - position137;
+			if (num163 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field cinematicEntity (ProtoBuf.CinematicEntity)");
+			}
+			Span<byte> span137 = range137.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num163, span137, 0);
+		}
+		if (instance.buildingPrivilegeRetro != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range138 = stream.GetRange(3);
+			int position138 = stream.Position;
+			BuildingPrivilegeRetro.SerializeDelta(stream, instance.buildingPrivilegeRetro, previous.buildingPrivilegeRetro);
+			int num164 = stream.Position - position138;
+			if (num164 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field buildingPrivilegeRetro (ProtoBuf.BuildingPrivilegeRetro)");
+			}
+			Span<byte> span138 = range138.GetSpan();
+			int num165 = ProtocolParser.WriteUInt32((uint)num164, span138, 0);
+			if (num165 < 3)
+			{
+				span138[num165 - 1] |= 128;
+				while (num165 < 2)
+				{
+					span138[num165++] = 128;
+				}
+				span138[2] = 0;
+			}
+		}
+		if (instance.harborCrane != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range139 = stream.GetRange(3);
+			int position139 = stream.Position;
+			HarborCrane.SerializeDelta(stream, instance.harborCrane, previous.harborCrane);
+			int num166 = stream.Position - position139;
+			if (num166 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field harborCrane (ProtoBuf.HarborCrane)");
+			}
+			Span<byte> span139 = range139.GetSpan();
+			int num167 = ProtocolParser.WriteUInt32((uint)num166, span139, 0);
+			if (num167 < 3)
+			{
+				span139[num167 - 1] |= 128;
+				while (num167 < 2)
+				{
+					span139[num167++] = 128;
+				}
+				span139[2] = 0;
+			}
+		}
+		if (instance.cargoShip != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range140 = stream.GetRange(3);
+			int position140 = stream.Position;
+			CargoShip.SerializeDelta(stream, instance.cargoShip, previous.cargoShip);
+			int num168 = stream.Position - position140;
+			if (num168 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field cargoShip (ProtoBuf.CargoShip)");
+			}
+			Span<byte> span140 = range140.GetSpan();
+			int num169 = ProtocolParser.WriteUInt32((uint)num168, span140, 0);
+			if (num169 < 3)
+			{
+				span140[num169 - 1] |= 128;
+				while (num169 < 2)
+				{
+					span140[num169++] = 128;
+				}
+				span140[2] = 0;
+			}
+		}
+		if (instance.cargoShipContainer != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range141 = stream.GetRange(1);
+			int position141 = stream.Position;
+			CargoShipContainer.SerializeDelta(stream, instance.cargoShipContainer, previous.cargoShipContainer);
+			int num170 = stream.Position - position141;
+			if (num170 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field cargoShipContainer (ProtoBuf.CargoShipContainer)");
+			}
+			Span<byte> span141 = range141.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num170, span141, 0);
+		}
+		if (instance.missionMapMarker != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range142 = stream.GetRange(5);
+			int position142 = stream.Position;
+			MissionMapMarker.SerializeDelta(stream, instance.missionMapMarker, previous.missionMapMarker);
+			int val36 = stream.Position - position142;
+			Span<byte> span142 = range142.GetSpan();
+			int num171 = ProtocolParser.WriteUInt32((uint)val36, span142, 0);
+			if (num171 < 5)
+			{
+				span142[num171 - 1] |= 128;
+				while (num171 < 4)
+				{
+					span142[num171++] = 128;
+				}
+				span142[4] = 0;
+			}
+		}
+		if (instance.bike != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range143 = stream.GetRange(1);
+			int position143 = stream.Position;
+			Bike.SerializeDelta(stream, instance.bike, previous.bike);
+			int num172 = stream.Position - position143;
+			if (num172 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field bike (ProtoBuf.Bike)");
+			}
+			Span<byte> span143 = range143.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num172, span143, 0);
+		}
+		if (instance.diverPropulsionVehicle != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range144 = stream.GetRange(1);
+			int position144 = stream.Position;
+			DiverPropulsionVehicle.SerializeDelta(stream, instance.diverPropulsionVehicle, previous.diverPropulsionVehicle);
+			int num173 = stream.Position - position144;
+			if (num173 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field diverPropulsionVehicle (ProtoBuf.DiverPropulsionVehicle)");
+			}
+			Span<byte> span144 = range144.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num173, span144, 0);
+		}
+		if (instance.travellingVendor != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range145 = stream.GetRange(1);
+			int position145 = stream.Position;
+			TravellingVendor.SerializeDelta(stream, instance.travellingVendor, previous.travellingVendor);
+			int num174 = stream.Position - position145;
+			if (num174 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field travellingVendor (ProtoBuf.TravellingVendor)");
+			}
+			Span<byte> span145 = range145.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num174, span145, 0);
+		}
+		if (instance.vendingDynamicPricing != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range146 = stream.GetRange(3);
+			int position146 = stream.Position;
+			VendingDynamicPricing.SerializeDelta(stream, instance.vendingDynamicPricing, previous.vendingDynamicPricing);
+			int num175 = stream.Position - position146;
+			if (num175 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field vendingDynamicPricing (ProtoBuf.VendingDynamicPricing)");
+			}
+			Span<byte> span146 = range146.GetSpan();
+			int num176 = ProtocolParser.WriteUInt32((uint)num175, span146, 0);
+			if (num176 < 3)
+			{
+				span146[num176 - 1] |= 128;
+				while (num176 < 2)
+				{
+					span146[num176++] = 128;
+				}
+				span146[2] = 0;
+			}
+		}
+		if (instance.tinCanAlarm != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range147 = stream.GetRange(1);
+			int position147 = stream.Position;
+			TinCanAlarm.SerializeDelta(stream, instance.tinCanAlarm, previous.tinCanAlarm);
+			int num177 = stream.Position - position147;
+			if (num177 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field tinCanAlarm (ProtoBuf.TinCanAlarm)");
+			}
+			Span<byte> span147 = range147.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num177, span147, 0);
+		}
+		if (instance.digitalClock != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range148 = stream.GetRange(3);
+			int position148 = stream.Position;
+			DigitalClock.SerializeDelta(stream, instance.digitalClock, previous.digitalClock);
+			int num178 = stream.Position - position148;
+			if (num178 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field digitalClock (ProtoBuf.DigitalClock)");
+			}
+			Span<byte> span148 = range148.GetSpan();
+			int num179 = ProtocolParser.WriteUInt32((uint)num178, span148, 0);
+			if (num179 < 3)
+			{
+				span148[num179 - 1] |= 128;
+				while (num179 < 2)
+				{
+					span148[num179++] = 128;
+				}
+				span148[2] = 0;
+			}
+		}
+		if (instance.elevatorLift != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range149 = stream.GetRange(1);
+			int position149 = stream.Position;
+			ElevatorLift.SerializeDelta(stream, instance.elevatorLift, previous.elevatorLift);
+			int num180 = stream.Position - position149;
+			if (num180 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field elevatorLift (ProtoBuf.ElevatorLift)");
+			}
+			Span<byte> span149 = range149.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num180, span149, 0);
+		}
+		if (instance.npcVendingMachine != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range150 = stream.GetRange(1);
+			int position150 = stream.Position;
+			NPCVendingMachine.SerializeDelta(stream, instance.npcVendingMachine, previous.npcVendingMachine);
+			int num181 = stream.Position - position150;
+			if (num181 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field npcVendingMachine (ProtoBuf.NPCVendingMachine)");
+			}
+			Span<byte> span150 = range150.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num181, span150, 0);
+		}
+		if (instance.mailbox != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range151 = stream.GetRange(5);
+			int position151 = stream.Position;
+			Mailbox.SerializeDelta(stream, instance.mailbox, previous.mailbox);
+			int val37 = stream.Position - position151;
+			Span<byte> span151 = range151.GetSpan();
+			int num182 = ProtocolParser.WriteUInt32((uint)val37, span151, 0);
+			if (num182 < 5)
+			{
+				span151[num182 - 1] |= 128;
+				while (num182 < 4)
+				{
+					span151[num182++] = 128;
+				}
+				span151[4] = 0;
+			}
+		}
+		if (instance.projectileWeaponMod != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range152 = stream.GetRange(1);
+			int position152 = stream.Position;
+			GunWeaponMod.SerializeDelta(stream, instance.projectileWeaponMod, previous.projectileWeaponMod);
+			int num183 = stream.Position - position152;
+			if (num183 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field projectileWeaponMod (ProtoBuf.GunWeaponMod)");
+			}
+			Span<byte> span152 = range152.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num183, span152, 0);
+		}
+		if (instance.baseSculpture != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range153 = stream.GetRange(1);
+			int position153 = stream.Position;
+			BaseSculpture.SerializeDelta(stream, instance.baseSculpture, previous.baseSculpture);
+			int num184 = stream.Position - position153;
+			if (num184 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseSculpture (ProtoBuf.BaseSculpture)");
+			}
+			Span<byte> span153 = range153.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num184, span153, 0);
+		}
+		if (instance.vendingMachineStats != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range154 = stream.GetRange(3);
+			int position154 = stream.Position;
+			VendingMachineStats.SerializeDelta(stream, instance.vendingMachineStats, previous.vendingMachineStats);
+			int num185 = stream.Position - position154;
+			if (num185 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field vendingMachineStats (ProtoBuf.VendingMachineStats)");
+			}
+			Span<byte> span154 = range154.GetSpan();
+			int num186 = ProtocolParser.WriteUInt32((uint)num185, span154, 0);
+			if (num186 < 3)
+			{
+				span154[num186 - 1] |= 128;
+				while (num186 < 2)
+				{
+					span154[num186++] = 128;
+				}
+				span154[2] = 0;
+			}
+		}
+		if (instance.catapult != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range155 = stream.GetRange(1);
+			int position155 = stream.Position;
+			Catapult.SerializeDelta(stream, instance.catapult, previous.catapult);
+			int num187 = stream.Position - position155;
+			if (num187 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field catapult (ProtoBuf.Catapult)");
+			}
+			Span<byte> span155 = range155.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num187, span155, 0);
+		}
+		if (instance.siegeTower != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range156 = stream.GetRange(1);
+			int position156 = stream.Position;
+			SiegeTower.SerializeDelta(stream, instance.siegeTower, previous.siegeTower);
+			int num188 = stream.Position - position156;
+			if (num188 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field siegeTower (ProtoBuf.SiegeTower)");
+			}
+			Span<byte> span156 = range156.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num188, span156, 0);
+		}
+		if (instance.ballista != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range157 = stream.GetRange(1);
+			int position157 = stream.Position;
+			Ballista.SerializeDelta(stream, instance.ballista, previous.ballista);
+			int num189 = stream.Position - position157;
+			if (num189 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field ballista (ProtoBuf.Ballista)");
+			}
+			Span<byte> span157 = range157.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num189, span157, 0);
+		}
+		if (instance.ballistaGun != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range158 = stream.GetRange(1);
+			int position158 = stream.Position;
+			BallistaGun.SerializeDelta(stream, instance.ballistaGun, previous.ballistaGun);
+			int num190 = stream.Position - position158;
+			if (num190 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field ballistaGun (ProtoBuf.BallistaGun)");
+			}
+			Span<byte> span158 = range158.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num190, span158, 0);
+		}
+		if (instance.batteringRam != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range159 = stream.GetRange(1);
+			int position159 = stream.Position;
+			BatteringRam.SerializeDelta(stream, instance.batteringRam, previous.batteringRam);
+			int num191 = stream.Position - position159;
+			if (num191 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field batteringRam (ProtoBuf.BatteringRam)");
+			}
+			Span<byte> span159 = range159.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num191, span159, 0);
+		}
+		if (instance.temporaryRagdoll != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range160 = stream.GetRange(1);
+			int position160 = stream.Position;
+			TemporaryRagdoll.SerializeDelta(stream, instance.temporaryRagdoll, previous.temporaryRagdoll);
+			int num192 = stream.Position - position160;
+			if (num192 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field temporaryRagdoll (ProtoBuf.TemporaryRagdoll)");
+			}
+			Span<byte> span160 = range160.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num192, span160, 0);
+		}
+		if (instance.constructableEntity != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range161 = stream.GetRange(3);
+			int position161 = stream.Position;
+			ConstructableEntity.SerializeDelta(stream, instance.constructableEntity, previous.constructableEntity);
+			int num193 = stream.Position - position161;
+			if (num193 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field constructableEntity (ProtoBuf.ConstructableEntity)");
+			}
+			Span<byte> span161 = range161.GetSpan();
+			int num194 = ProtocolParser.WriteUInt32((uint)num193, span161, 0);
+			if (num194 < 3)
+			{
+				span161[num194 - 1] |= 128;
+				while (num194 < 2)
+				{
+					span161[num194++] = 128;
+				}
+				span161[2] = 0;
+			}
+		}
+		if (instance.chickenCoop != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range162 = stream.GetRange(3);
+			int position162 = stream.Position;
+			ChickenCoop.SerializeDelta(stream, instance.chickenCoop, previous.chickenCoop);
+			int num195 = stream.Position - position162;
+			if (num195 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field chickenCoop (ProtoBuf.ChickenCoop)");
+			}
+			Span<byte> span162 = range162.GetSpan();
+			int num196 = ProtocolParser.WriteUInt32((uint)num195, span162, 0);
+			if (num196 < 3)
+			{
+				span162[num196 - 1] |= 128;
+				while (num196 < 2)
+				{
+					span162[num196++] = 128;
+				}
+				span162[2] = 0;
+			}
+		}
+		if (instance.farmableAnimal != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range163 = stream.GetRange(5);
+			int position163 = stream.Position;
+			FarmableAnimal.SerializeDelta(stream, instance.farmableAnimal, previous.farmableAnimal);
+			int val38 = stream.Position - position163;
+			Span<byte> span163 = range163.GetSpan();
+			int num197 = ProtocolParser.WriteUInt32((uint)val38, span163, 0);
+			if (num197 < 5)
+			{
+				span163[num197 - 1] |= 128;
+				while (num197 < 4)
+				{
+					span163[num197++] = 128;
+				}
+				span163[4] = 0;
+			}
+		}
+		if (instance.ownership != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range164 = stream.GetRange(5);
+			int position164 = stream.Position;
+			ItemOwnershipAmount.SerializeDelta(stream, instance.ownership, previous.ownership);
+			int val39 = stream.Position - position164;
+			Span<byte> span164 = range164.GetSpan();
+			int num198 = ProtocolParser.WriteUInt32((uint)val39, span164, 0);
+			if (num198 < 5)
+			{
+				span164[num198 - 1] |= 128;
+				while (num198 < 4)
+				{
+					span164[num198++] = 128;
+				}
+				span164[4] = 0;
+			}
+		}
+		if (instance.beehive != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range165 = stream.GetRange(1);
+			int position165 = stream.Position;
+			Beehive.SerializeDelta(stream, instance.beehive, previous.beehive);
+			int num199 = stream.Position - position165;
+			if (num199 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field beehive (ProtoBuf.Beehive)");
+			}
+			Span<byte> span165 = range165.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num199, span165, 0);
+		}
+		if (instance.beeMasterSwarm != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range166 = stream.GetRange(1);
+			int position166 = stream.Position;
+			BeeMasterSwarm.SerializeDelta(stream, instance.beeMasterSwarm, previous.beeMasterSwarm);
+			int num200 = stream.Position - position166;
+			if (num200 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field beeMasterSwarm (ProtoBuf.BeeMasterSwarm)");
+			}
+			Span<byte> span166 = range166.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num200, span166, 0);
+		}
+		if (instance.containerCorpse != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range167 = stream.GetRange(5);
+			int position167 = stream.Position;
+			ContainerCorpseData.SerializeDelta(stream, instance.containerCorpse, previous.containerCorpse);
+			int val40 = stream.Position - position167;
+			Span<byte> span167 = range167.GetSpan();
+			int num201 = ProtocolParser.WriteUInt32((uint)val40, span167, 0);
+			if (num201 < 5)
+			{
+				span167[num201 - 1] |= 128;
+				while (num201 < 4)
+				{
+					span167[num201++] = 128;
+				}
+				span167[4] = 0;
+			}
+		}
+		if (instance.npcTargetState != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range168 = stream.GetRange(1);
+			int position168 = stream.Position;
+			NPCTargetState.SerializeDelta(stream, instance.npcTargetState, previous.npcTargetState);
+			int num202 = stream.Position - position168;
+			if (num202 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field npcTargetState (ProtoBuf.NPCTargetState)");
+			}
+			Span<byte> span168 = range168.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num202, span168, 0);
+		}
+		if (instance.vineMountable != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range169 = stream.GetRange(3);
+			int position169 = stream.Position;
+			VineMountable.SerializeDelta(stream, instance.vineMountable, previous.vineMountable);
+			int num203 = stream.Position - position169;
+			if (num203 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field vineMountable (ProtoBuf.VineMountable)");
+			}
+			Span<byte> span169 = range169.GetSpan();
+			int num204 = ProtocolParser.WriteUInt32((uint)num203, span169, 0);
+			if (num204 < 3)
+			{
+				span169[num204 - 1] |= 128;
+				while (num204 < 2)
+				{
+					span169[num204++] = 128;
+				}
+				span169[2] = 0;
+			}
+		}
+		if (instance.vineTree != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range170 = stream.GetRange(3);
+			int position170 = stream.Position;
+			VineTree.SerializeDelta(stream, instance.vineTree, previous.vineTree);
+			int num205 = stream.Position - position170;
+			if (num205 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field vineTree (ProtoBuf.VineTree)");
+			}
+			Span<byte> span170 = range170.GetSpan();
+			int num206 = ProtocolParser.WriteUInt32((uint)num205, span170, 0);
+			if (num206 < 3)
+			{
+				span170[num206 - 1] |= 128;
+				while (num206 < 2)
+				{
+					span170[num206++] = 128;
+				}
+				span170[2] = 0;
+			}
+		}
+		if (instance.treeRespawn != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range171 = stream.GetRange(1);
+			int position171 = stream.Position;
+			TreeRespawn.SerializeDelta(stream, instance.treeRespawn, previous.treeRespawn);
+			int num207 = stream.Position - position171;
+			if (num207 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field treeRespawn (ProtoBuf.TreeRespawn)");
+			}
+			Span<byte> span171 = range171.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num207, span171, 0);
+		}
+		if (instance.wallpaperTool != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range172 = stream.GetRange(1);
+			int position172 = stream.Position;
+			WallpaperTool.SerializeDelta(stream, instance.wallpaperTool, previous.wallpaperTool);
+			int num208 = stream.Position - position172;
+			if (num208 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field wallpaperTool (ProtoBuf.WallpaperTool)");
+			}
+			Span<byte> span172 = range172.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num208, span172, 0);
+		}
+		if (instance.commandBlock != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range173 = stream.GetRange(5);
+			int position173 = stream.Position;
+			CommandBlock.SerializeDelta(stream, instance.commandBlock, previous.commandBlock);
+			int val41 = stream.Position - position173;
+			Span<byte> span173 = range173.GetSpan();
+			int num209 = ProtocolParser.WriteUInt32((uint)val41, span173, 0);
+			if (num209 < 5)
+			{
+				span173[num209 - 1] |= 128;
+				while (num209 < 4)
+				{
+					span173[num209++] = 128;
+				}
+				span173[4] = 0;
+			}
+		}
+		if (instance.staticRespawn != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range174 = stream.GetRange(3);
+			int position174 = stream.Position;
+			StaticRespawnAreaData.SerializeDelta(stream, instance.staticRespawn, previous.staticRespawn);
+			int num210 = stream.Position - position174;
+			if (num210 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field staticRespawn (ProtoBuf.StaticRespawnAreaData)");
+			}
+			Span<byte> span174 = range174.GetSpan();
+			int num211 = ProtocolParser.WriteUInt32((uint)num210, span174, 0);
+			if (num211 < 3)
+			{
+				span174[num211 - 1] |= 128;
+				while (num211 < 2)
+				{
+					span174[num211++] = 128;
+				}
+				span174[2] = 0;
+			}
+		}
+		if (instance.buriedItemStorage != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range175 = stream.GetRange(5);
+			int position175 = stream.Position;
+			BuriedItems.SerializeDelta(stream, instance.buriedItemStorage, previous.buriedItemStorage);
+			int val42 = stream.Position - position175;
+			Span<byte> span175 = range175.GetSpan();
+			int num212 = ProtocolParser.WriteUInt32((uint)val42, span175, 0);
+			if (num212 < 5)
+			{
+				span175[num212 - 1] |= 128;
+				while (num212 < 4)
+				{
+					span175[num212++] = 128;
+				}
+				span175[4] = 0;
+			}
+		}
+		if (instance.mannequin != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range176 = stream.GetRange(3);
+			int position176 = stream.Position;
+			Mannequin.SerializeDelta(stream, instance.mannequin, previous.mannequin);
+			int num213 = stream.Position - position176;
+			if (num213 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field mannequin (ProtoBuf.Mannequin)");
+			}
+			Span<byte> span176 = range176.GetSpan();
+			int num214 = ProtocolParser.WriteUInt32((uint)num213, span176, 0);
+			if (num214 < 3)
+			{
+				span176[num214 - 1] |= 128;
+				while (num214 < 2)
+				{
+					span176[num214++] = 128;
+				}
+				span176[2] = 0;
+			}
+		}
+		if (instance.baseMelee != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range177 = stream.GetRange(1);
+			int position177 = stream.Position;
+			BaseMelee.SerializeDelta(stream, instance.baseMelee, previous.baseMelee);
+			int num215 = stream.Position - position177;
+			if (num215 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseMelee (ProtoBuf.BaseMelee)");
+			}
+			Span<byte> span177 = range177.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num215, span177, 0);
+		}
+		if (instance.door != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range178 = stream.GetRange(1);
+			int position178 = stream.Position;
+			Door.SerializeDelta(stream, instance.door, previous.door);
+			int num216 = stream.Position - position178;
+			if (num216 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field door (ProtoBuf.Door)");
+			}
+			Span<byte> span178 = range178.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num216, span178, 0);
+		}
+		if (instance.deepSeaPortal != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range179 = stream.GetRange(1);
+			int position179 = stream.Position;
+			DeepSeaPortal.SerializeDelta(stream, instance.deepSeaPortal, previous.deepSeaPortal);
+			int num217 = stream.Position - position179;
+			if (num217 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field deepSeaPortal (ProtoBuf.DeepSeaPortal)");
+			}
+			Span<byte> span179 = range179.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num217, span179, 0);
+		}
+		if (instance.baseMountable != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range180 = stream.GetRange(1);
+			int position180 = stream.Position;
+			BaseMountable.SerializeDelta(stream, instance.baseMountable, previous.baseMountable);
+			int num218 = stream.Position - position180;
+			if (num218 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseMountable (ProtoBuf.BaseMountable)");
+			}
+			Span<byte> span180 = range180.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num218, span180, 0);
+		}
+		if (instance.smallEngine != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range181 = stream.GetRange(1);
+			int position181 = stream.Position;
+			SmallEngine.SerializeDelta(stream, instance.smallEngine, previous.smallEngine);
+			int num219 = stream.Position - position181;
+			if (num219 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field smallEngine (ProtoBuf.SmallEngine)");
+			}
+			Span<byte> span181 = range181.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num219, span181, 0);
+		}
+		if (instance.playerBoat != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range182 = stream.GetRange(5);
+			int position182 = stream.Position;
+			PlayerBoat.SerializeDelta(stream, instance.playerBoat, previous.playerBoat);
+			int val43 = stream.Position - position182;
+			Span<byte> span182 = range182.GetSpan();
+			int num220 = ProtocolParser.WriteUInt32((uint)val43, span182, 0);
+			if (num220 < 5)
+			{
+				span182[num220 - 1] |= 128;
+				while (num220 < 4)
+				{
+					span182[num220++] = 128;
+				}
+				span182[4] = 0;
+			}
+		}
+		if (instance.steeringWheel != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range183 = stream.GetRange(5);
+			int position183 = stream.Position;
+			SteeringWheel.SerializeDelta(stream, instance.steeringWheel, previous.steeringWheel);
+			int val44 = stream.Position - position183;
+			Span<byte> span183 = range183.GetSpan();
+			int num221 = ProtocolParser.WriteUInt32((uint)val44, span183, 0);
+			if (num221 < 5)
+			{
+				span183[num221 - 1] |= 128;
+				while (num221 < 4)
+				{
+					span183[num221++] = 128;
+				}
+				span183[4] = 0;
+			}
+		}
+		if (instance.deepSeaManager != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range184 = stream.GetRange(3);
+			int position184 = stream.Position;
+			DeepSeaManager.SerializeDelta(stream, instance.deepSeaManager, previous.deepSeaManager);
+			int num222 = stream.Position - position184;
+			if (num222 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field deepSeaManager (ProtoBuf.DeepSeaManager)");
+			}
+			Span<byte> span184 = range184.GetSpan();
+			int num223 = ProtocolParser.WriteUInt32((uint)num222, span184, 0);
+			if (num223 < 3)
+			{
+				span184[num223 - 1] |= 128;
+				while (num223 < 2)
+				{
+					span184[num223++] = 128;
+				}
+				span184[2] = 0;
+			}
+		}
+		if (instance.scientistBoatOilrigManager != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range185 = stream.GetRange(3);
+			int position185 = stream.Position;
+			ScientistBoatOilrigManager.SerializeDelta(stream, instance.scientistBoatOilrigManager, previous.scientistBoatOilrigManager);
+			int num224 = stream.Position - position185;
+			if (num224 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field scientistBoatOilrigManager (ProtoBuf.ScientistBoatOilrigManager)");
+			}
+			Span<byte> span185 = range185.GetSpan();
+			int num225 = ProtocolParser.WriteUInt32((uint)num224, span185, 0);
+			if (num225 < 3)
+			{
+				span185[num225 - 1] |= 128;
+				while (num225 < 2)
+				{
+					span185[num225++] = 128;
+				}
+				span185[2] = 0;
+			}
+		}
+		if (instance.storageAdaptor != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range186 = stream.GetRange(5);
+			int position186 = stream.Position;
+			StorageAdaptor.SerializeDelta(stream, instance.storageAdaptor, previous.storageAdaptor);
+			int val45 = stream.Position - position186;
+			Span<byte> span186 = range186.GetSpan();
+			int num226 = ProtocolParser.WriteUInt32((uint)val45, span186, 0);
+			if (num226 < 5)
+			{
+				span186[num226 - 1] |= 128;
+				while (num226 < 4)
+				{
+					span186[num226++] = 128;
+				}
+				span186[4] = 0;
+			}
+		}
+		if (instance.helicopterFlares != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range187 = stream.GetRange(1);
+			int position187 = stream.Position;
+			HelicopterFlares.SerializeDelta(stream, instance.helicopterFlares, previous.helicopterFlares);
+			int num227 = stream.Position - position187;
+			if (num227 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field helicopterFlares (ProtoBuf.HelicopterFlares)");
+			}
+			Span<byte> span187 = range187.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num227, span187, 0);
+		}
+		if (instance.wipeLaptop != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range188 = stream.GetRange(1);
+			int position188 = stream.Position;
+			WipeLaptop.SerializeDelta(stream, instance.wipeLaptop, previous.wipeLaptop);
+			int num228 = stream.Position - position188;
+			if (num228 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field wipeLaptop (ProtoBuf.WipeLaptop)");
+			}
+			Span<byte> span188 = range188.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num228, span188, 0);
+		}
+		if (instance.mountedWeapon != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range189 = stream.GetRange(1);
+			int position189 = stream.Position;
+			MountedWeapon.SerializeDelta(stream, instance.mountedWeapon, previous.mountedWeapon);
+			int num229 = stream.Position - position189;
+			if (num229 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field mountedWeapon (ProtoBuf.MountedWeapon)");
+			}
+			Span<byte> span189 = range189.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num229, span189, 0);
+		}
+		if (instance.boatBuildingBlock != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range190 = stream.GetRange(1);
+			int position190 = stream.Position;
+			BoatBuildingBlock.SerializeDelta(stream, instance.boatBuildingBlock, previous.boatBuildingBlock);
+			int num230 = stream.Position - position190;
+			if (num230 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field boatBuildingBlock (ProtoBuf.BoatBuildingBlock)");
+			}
+			Span<byte> span190 = range190.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num230, span190, 0);
+		}
+		if (instance.boatBuildingStation != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range191 = stream.GetRange(1);
+			int position191 = stream.Position;
+			BoatBuildingStation.SerializeDelta(stream, instance.boatBuildingStation, previous.boatBuildingStation);
+			int num231 = stream.Position - position191;
+			if (num231 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field boatBuildingStation (ProtoBuf.BoatBuildingStation)");
+			}
+			Span<byte> span191 = range191.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num231, span191, 0);
+		}
+		if (instance.displayingBoxStorage != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range192 = stream.GetRange(3);
+			int position192 = stream.Position;
+			DisplayingBoxStorage.SerializeDelta(stream, instance.displayingBoxStorage, previous.displayingBoxStorage);
+			int num232 = stream.Position - position192;
+			if (num232 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field displayingBoxStorage (ProtoBuf.DisplayingBoxStorage)");
+			}
+			Span<byte> span192 = range192.GetSpan();
+			int num233 = ProtocolParser.WriteUInt32((uint)num232, span192, 0);
+			if (num233 < 3)
+			{
+				span192[num233 - 1] |= 128;
+				while (num233 < 2)
+				{
+					span192[num233++] = 128;
+				}
+				span192[2] = 0;
+			}
+		}
+		if (instance.workbench != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range193 = stream.GetRange(3);
+			int position193 = stream.Position;
+			Workbench.SerializeDelta(stream, instance.workbench, previous.workbench);
+			int num234 = stream.Position - position193;
+			if (num234 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field workbench (ProtoBuf.Workbench)");
+			}
+			Span<byte> span193 = range193.GetSpan();
+			int num235 = ProtocolParser.WriteUInt32((uint)num234, span193, 0);
+			if (num235 < 3)
+			{
+				span193[num235 - 1] |= 128;
+				while (num235 < 2)
+				{
+					span193[num235++] = 128;
+				}
+				span193[2] = 0;
+			}
+		}
+		if (instance.apartmentLock != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range194 = stream.GetRange(1);
+			int position194 = stream.Position;
+			ApartmentLock.SerializeDelta(stream, instance.apartmentLock, previous.apartmentLock);
+			int num236 = stream.Position - position194;
+			if (num236 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field apartmentLock (ProtoBuf.ApartmentLock)");
+			}
+			Span<byte> span194 = range194.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num236, span194, 0);
+		}
+		if (instance.rentableShop != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range195 = stream.GetRange(5);
+			int position195 = stream.Position;
+			RentableShop.SerializeDelta(stream, instance.rentableShop, previous.rentableShop);
+			int val46 = stream.Position - position195;
+			Span<byte> span195 = range195.GetSpan();
+			int num237 = ProtocolParser.WriteUInt32((uint)val46, span195, 0);
+			if (num237 < 5)
+			{
+				span195[num237 - 1] |= 128;
+				while (num237 < 4)
+				{
+					span195[num237++] = 128;
+				}
+				span195[4] = 0;
+			}
+		}
+		if (instance.apartmentRoom != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range196 = stream.GetRange(5);
+			int position196 = stream.Position;
+			ApartmentRoom.SerializeDelta(stream, instance.apartmentRoom, previous.apartmentRoom);
+			int val47 = stream.Position - position196;
+			Span<byte> span196 = range196.GetSpan();
+			int num238 = ProtocolParser.WriteUInt32((uint)val47, span196, 0);
+			if (num238 < 5)
+			{
+				span196[num238 - 1] |= 128;
+				while (num238 < 4)
+				{
+					span196[num238++] = 128;
+				}
+				span196[4] = 0;
+			}
+		}
+		if (instance.apartmentBuilding != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range197 = stream.GetRange(5);
+			int position197 = stream.Position;
+			ApartmentBuilding.SerializeDelta(stream, instance.apartmentBuilding, previous.apartmentBuilding);
+			int val48 = stream.Position - position197;
+			Span<byte> span197 = range197.GetSpan();
+			int num239 = ProtocolParser.WriteUInt32((uint)val48, span197, 0);
+			if (num239 < 5)
+			{
+				span197[num239 - 1] |= 128;
+				while (num239 < 4)
+				{
+					span197[num239++] = 128;
+				}
+				span197[4] = 0;
+			}
+		}
+		if (instance.apartmentUpkeep != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range198 = stream.GetRange(1);
+			int position198 = stream.Position;
+			ApartmentUpkeepTerminal.SerializeDelta(stream, instance.apartmentUpkeep, previous.apartmentUpkeep);
+			int num240 = stream.Position - position198;
+			if (num240 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field apartmentUpkeep (ProtoBuf.ApartmentUpkeepTerminal)");
+			}
+			Span<byte> span198 = range198.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num240, span198, 0);
+		}
+		if (instance.mortar != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range199 = stream.GetRange(1);
+			int position199 = stream.Position;
+			MortarData.SerializeDelta(stream, instance.mortar, previous.mortar);
+			int num241 = stream.Position - position199;
+			if (num241 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field mortar (ProtoBuf.MortarData)");
+			}
+			Span<byte> span199 = range199.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num241, span199, 0);
+		}
+		if (instance.apartmentDoor != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range200 = stream.GetRange(5);
+			int position200 = stream.Position;
+			ApartmentDoor.SerializeDelta(stream, instance.apartmentDoor, previous.apartmentDoor);
+			int val49 = stream.Position - position200;
+			Span<byte> span200 = range200.GetSpan();
+			int num242 = ProtocolParser.WriteUInt32((uint)val49, span200, 0);
+			if (num242 < 5)
+			{
+				span200[num242 - 1] |= 128;
+				while (num242 < 4)
+				{
+					span200[num242++] = 128;
+				}
+				span200[4] = 0;
+			}
+		}
+		if (instance.apartmentMailbox != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range201 = stream.GetRange(5);
+			int position201 = stream.Position;
+			ApartmentMailbox.SerializeDelta(stream, instance.apartmentMailbox, previous.apartmentMailbox);
+			int val50 = stream.Position - position201;
+			Span<byte> span201 = range201.GetSpan();
+			int num243 = ProtocolParser.WriteUInt32((uint)val50, span201, 0);
+			if (num243 < 5)
+			{
+				span201[num243 - 1] |= 128;
+				while (num243 < 4)
+				{
+					span201[num243++] = 128;
+				}
+				span201[4] = 0;
+			}
+		}
+		if (instance.Pooltable != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range202 = stream.GetRange(3);
+			int position202 = stream.Position;
+			Pooltable.SerializeDelta(stream, instance.Pooltable, previous.Pooltable);
+			int num244 = stream.Position - position202;
+			if (num244 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field Pooltable (ProtoBuf.Pooltable)");
+			}
+			Span<byte> span202 = range202.GetSpan();
+			int num245 = ProtocolParser.WriteUInt32((uint)num244, span202, 0);
+			if (num245 < 3)
+			{
+				span202[num245 - 1] |= 128;
+				while (num245 < 2)
+				{
+					span202[num245++] = 128;
+				}
+				span202[2] = 0;
+			}
+		}
+		if (instance.dartsGame != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range203 = stream.GetRange(5);
+			int position203 = stream.Position;
+			DartsGame.SerializeDelta(stream, instance.dartsGame, previous.dartsGame);
+			int num246 = stream.Position - position203;
+			if (num246 > 34359738367L)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field dartsGame (ProtoBuf.DartsGame)");
+			}
+			Span<byte> span203 = range203.GetSpan();
+			int num247 = ProtocolParser.WriteUInt32((uint)num246, span203, 0);
+			if (num247 < 5)
+			{
+				span203[num247 - 1] |= 128;
+				while (num247 < 4)
+				{
+					span203[num247++] = 128;
+				}
+				span203[4] = 0;
+			}
+		}
+		if (instance.dartsGameLeaderboard != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range204 = stream.GetRange(5);
+			int position204 = stream.Position;
+			DartsGameLeaderboard.SerializeDelta(stream, instance.dartsGameLeaderboard, previous.dartsGameLeaderboard);
+			int val51 = stream.Position - position204;
+			Span<byte> span204 = range204.GetSpan();
+			int num248 = ProtocolParser.WriteUInt32((uint)val51, span204, 0);
+			if (num248 < 5)
+			{
+				span204[num248 - 1] |= 128;
+				while (num248 < 4)
+				{
+					span204[num248++] = 128;
+				}
+				span204[4] = 0;
+			}
+		}
+		if (instance.satelliteControlComputer != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range205 = stream.GetRange(3);
+			int position205 = stream.Position;
+			SatelliteControlComputer.SerializeDelta(stream, instance.satelliteControlComputer, previous.satelliteControlComputer);
+			int num249 = stream.Position - position205;
+			if (num249 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field satelliteControlComputer (ProtoBuf.SatelliteControlComputer)");
+			}
+			Span<byte> span205 = range205.GetSpan();
+			int num250 = ProtocolParser.WriteUInt32((uint)num249, span205, 0);
+			if (num250 < 3)
+			{
+				span205[num250 - 1] |= 128;
+				while (num250 < 2)
+				{
+					span205[num250++] = 128;
+				}
+				span205[2] = 0;
+			}
+		}
+		if (instance.satelliteCrash != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range206 = stream.GetRange(1);
+			int position206 = stream.Position;
+			SatelliteCrash.SerializeDelta(stream, instance.satelliteCrash, previous.satelliteCrash);
+			int num251 = stream.Position - position206;
+			if (num251 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field satelliteCrash (ProtoBuf.SatelliteCrash)");
+			}
+			Span<byte> span206 = range206.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num251, span206, 0);
+		}
+		if (instance.satelliteCrashRemains != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(15);
+			BufferStream.RangeHandle range207 = stream.GetRange(1);
+			int position207 = stream.Position;
+			SatelliteCrashRemains.SerializeDelta(stream, instance.satelliteCrashRemains, previous.satelliteCrashRemains);
+			int num252 = stream.Position - position207;
+			if (num252 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field satelliteCrashRemains (ProtoBuf.SatelliteCrashRemains)");
+			}
+			Span<byte> span207 = range207.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num252, span207, 0);
+		}
+		if (instance.electricGenerator != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(15);
+			BufferStream.RangeHandle range208 = stream.GetRange(1);
+			int position208 = stream.Position;
+			ElectricGenerator.SerializeDelta(stream, instance.electricGenerator, previous.electricGenerator);
+			int num253 = stream.Position - position208;
+			if (num253 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field electricGenerator (ProtoBuf.ElectricGenerator)");
+			}
+			Span<byte> span208 = range208.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num253, span208, 0);
+		}
+		if (instance.powergridManager != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(15);
+			BufferStream.RangeHandle range209 = stream.GetRange(3);
+			int position209 = stream.Position;
+			PowergridManager.SerializeDelta(stream, instance.powergridManager, previous.powergridManager);
+			int num254 = stream.Position - position209;
+			if (num254 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field powergridManager (ProtoBuf.PowergridManager)");
+			}
+			Span<byte> span209 = range209.GetSpan();
+			int num255 = ProtocolParser.WriteUInt32((uint)num254, span209, 0);
+			if (num255 < 3)
+			{
+				span209[num255 - 1] |= 128;
+				while (num255 < 2)
+				{
+					span209[num255++] = 128;
+				}
+				span209[2] = 0;
+			}
+		}
+		if (instance.oilswitchBroadcast != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(15);
+			BufferStream.RangeHandle range210 = stream.GetRange(1);
+			int position210 = stream.Position;
+			OilSwitchBroadcast.SerializeDelta(stream, instance.oilswitchBroadcast, previous.oilswitchBroadcast);
+			int num256 = stream.Position - position210;
+			if (num256 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field oilswitchBroadcast (ProtoBuf.OilSwitchBroadcast)");
+			}
+			Span<byte> span210 = range210.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num256, span210, 0);
+		}
+		if (instance.sprinkler != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(15);
+			BufferStream.RangeHandle range211 = stream.GetRange(1);
+			int position211 = stream.Position;
+			Sprinkler.SerializeDelta(stream, instance.sprinkler, previous.sprinkler);
+			int num257 = stream.Position - position211;
+			if (num257 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field sprinkler (ProtoBuf.Sprinkler)");
+			}
+			Span<byte> span211 = range211.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num257, span211, 0);
+		}
+		if (instance.hackableLockedCrate != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(15);
+			BufferStream.RangeHandle range212 = stream.GetRange(1);
+			int position212 = stream.Position;
+			HackableLockedCrate.SerializeDelta(stream, instance.hackableLockedCrate, previous.hackableLockedCrate);
+			int num258 = stream.Position - position212;
+			if (num258 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field hackableLockedCrate (ProtoBuf.HackableLockedCrate)");
+			}
+			Span<byte> span212 = range212.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num258, span212, 0);
+		}
+		if (instance.lockedByEntCrate != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(15);
+			BufferStream.RangeHandle range213 = stream.GetRange(1);
+			int position213 = stream.Position;
+			LockedByEntCrate.SerializeDelta(stream, instance.lockedByEntCrate, previous.lockedByEntCrate);
+			int num259 = stream.Position - position213;
+			if (num259 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field lockedByEntCrate (ProtoBuf.LockedByEntCrate)");
+			}
+			Span<byte> span213 = range213.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num259, span213, 0);
+		}
+		if (instance.territoryZones != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(15);
+			BufferStream.RangeHandle range214 = stream.GetRange(5);
+			int position214 = stream.Position;
+			TerritoryZones.SerializeDelta(stream, instance.territoryZones, previous.territoryZones);
+			int val52 = stream.Position - position214;
+			Span<byte> span214 = range214.GetSpan();
+			int num260 = ProtocolParser.WriteUInt32((uint)val52, span214, 0);
+			if (num260 < 5)
+			{
+				span214[num260 - 1] |= 128;
+				while (num260 < 4)
+				{
+					span214[num260++] = 128;
+				}
+				span214[4] = 0;
+			}
+		}
+		if (instance.monumentBlocker != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(15);
+			BufferStream.RangeHandle range215 = stream.GetRange(1);
+			int position215 = stream.Position;
+			MonumentBlocker.SerializeDelta(stream, instance.monumentBlocker, previous.monumentBlocker);
+			int num261 = stream.Position - position215;
+			if (num261 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field monumentBlocker (ProtoBuf.MonumentBlocker)");
+			}
+			Span<byte> span215 = range215.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num261, span215, 0);
+		}
+	}
+
+	public static void Serialize(BufferStream stream, Entity instance)
+	{
+		if (instance.baseNetworkable != null)
+		{
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range = stream.GetRange(1);
+			int position = stream.Position;
+			BaseNetworkable.Serialize(stream, instance.baseNetworkable);
+			int num = stream.Position - position;
+			if (num > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseNetworkable (ProtoBuf.BaseNetworkable)");
+			}
+			Span<byte> span = range.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num, span, 0);
+		}
+		if (instance.baseEntity != null)
+		{
+			stream.WriteByte(18);
+			BufferStream.RangeHandle range2 = stream.GetRange(5);
+			int position2 = stream.Position;
+			BaseEntity.Serialize(stream, instance.baseEntity);
+			int val = stream.Position - position2;
+			Span<byte> span2 = range2.GetSpan();
+			int num2 = ProtocolParser.WriteUInt32((uint)val, span2, 0);
+			if (num2 < 5)
+			{
+				span2[num2 - 1] |= 128;
+				while (num2 < 4)
+				{
+					span2[num2++] = 128;
+				}
+				span2[4] = 0;
+			}
+		}
+		if (instance.basePlayer != null)
+		{
+			stream.WriteByte(26);
+			BufferStream.RangeHandle range3 = stream.GetRange(5);
+			int position3 = stream.Position;
+			BasePlayer.Serialize(stream, instance.basePlayer);
+			int val2 = stream.Position - position3;
+			Span<byte> span3 = range3.GetSpan();
+			int num3 = ProtocolParser.WriteUInt32((uint)val2, span3, 0);
+			if (num3 < 5)
+			{
+				span3[num3 - 1] |= 128;
+				while (num3 < 4)
+				{
+					span3[num3++] = 128;
+				}
+				span3[4] = 0;
+			}
+		}
+		if (instance.worldItem != null)
+		{
+			stream.WriteByte(34);
+			BufferStream.RangeHandle range4 = stream.GetRange(5);
+			int position4 = stream.Position;
+			WorldItem.Serialize(stream, instance.worldItem);
+			int val3 = stream.Position - position4;
+			Span<byte> span4 = range4.GetSpan();
+			int num4 = ProtocolParser.WriteUInt32((uint)val3, span4, 0);
+			if (num4 < 5)
+			{
+				span4[num4 - 1] |= 128;
+				while (num4 < 4)
+				{
+					span4[num4++] = 128;
+				}
+				span4[4] = 0;
+			}
+		}
+		if (instance.resource != null)
+		{
+			stream.WriteByte(42);
+			BufferStream.RangeHandle range5 = stream.GetRange(1);
+			int position5 = stream.Position;
+			BaseResource.Serialize(stream, instance.resource);
+			int num5 = stream.Position - position5;
+			if (num5 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field resource (ProtoBuf.BaseResource)");
+			}
+			Span<byte> span5 = range5.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num5, span5, 0);
+		}
+		if (instance.buildingBlock != null)
+		{
+			stream.WriteByte(50);
+			BufferStream.RangeHandle range6 = stream.GetRange(1);
+			int position6 = stream.Position;
+			BuildingBlock.Serialize(stream, instance.buildingBlock);
+			int num6 = stream.Position - position6;
+			if (num6 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field buildingBlock (ProtoBuf.BuildingBlock)");
+			}
+			Span<byte> span6 = range6.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num6, span6, 0);
+		}
+		if (instance.environment != null)
+		{
+			stream.WriteByte(58);
+			BufferStream.RangeHandle range7 = stream.GetRange(1);
+			int position7 = stream.Position;
+			Environment.Serialize(stream, instance.environment);
+			int num7 = stream.Position - position7;
+			if (num7 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field environment (ProtoBuf.Environment)");
+			}
+			Span<byte> span7 = range7.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num7, span7, 0);
+		}
+		if (instance.corpse != null)
+		{
+			stream.WriteByte(66);
+			BufferStream.RangeHandle range8 = stream.GetRange(1);
+			int position8 = stream.Position;
+			Corpse.Serialize(stream, instance.corpse);
+			int num8 = stream.Position - position8;
+			if (num8 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field corpse (ProtoBuf.Corpse)");
+			}
+			Span<byte> span8 = range8.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num8, span8, 0);
+		}
+		if (instance.parent != null)
+		{
+			stream.WriteByte(82);
+			BufferStream.RangeHandle range9 = stream.GetRange(1);
+			int position9 = stream.Position;
+			ParentInfo.Serialize(stream, instance.parent);
+			int num9 = stream.Position - position9;
+			if (num9 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field parent (ProtoBuf.ParentInfo)");
+			}
+			Span<byte> span9 = range9.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num9, span9, 0);
+		}
+		if (instance.keyLock != null)
+		{
+			stream.WriteByte(90);
+			BufferStream.RangeHandle range10 = stream.GetRange(1);
+			int position10 = stream.Position;
+			KeyLock.Serialize(stream, instance.keyLock);
+			int num10 = stream.Position - position10;
+			if (num10 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field keyLock (ProtoBuf.KeyLock)");
+			}
+			Span<byte> span10 = range10.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num10, span10, 0);
+		}
+		if (instance.codeLock != null)
+		{
+			stream.WriteByte(98);
+			BufferStream.RangeHandle range11 = stream.GetRange(5);
+			int position11 = stream.Position;
+			CodeLock.Serialize(stream, instance.codeLock);
+			int val4 = stream.Position - position11;
+			Span<byte> span11 = range11.GetSpan();
+			int num11 = ProtocolParser.WriteUInt32((uint)val4, span11, 0);
+			if (num11 < 5)
+			{
+				span11[num11 - 1] |= 128;
+				while (num11 < 4)
+				{
+					span11[num11++] = 128;
+				}
+				span11[4] = 0;
+			}
+		}
+		if (instance.entitySlots != null)
+		{
+			stream.WriteByte(106);
+			BufferStream.RangeHandle range12 = stream.GetRange(1);
+			int position12 = stream.Position;
+			EntitySlots.Serialize(stream, instance.entitySlots);
+			int num12 = stream.Position - position12;
+			if (num12 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field entitySlots (ProtoBuf.EntitySlots)");
+			}
+			Span<byte> span12 = range12.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num12, span12, 0);
+		}
+		if (instance.buildingPrivilege != null)
+		{
+			stream.WriteByte(114);
+			BufferStream.RangeHandle range13 = stream.GetRange(5);
+			int position13 = stream.Position;
+			BuildingPrivilege.Serialize(stream, instance.buildingPrivilege);
+			int val5 = stream.Position - position13;
+			Span<byte> span13 = range13.GetSpan();
+			int num13 = ProtocolParser.WriteUInt32((uint)val5, span13, 0);
+			if (num13 < 5)
+			{
+				span13[num13 - 1] |= 128;
+				while (num13 < 4)
+				{
+					span13[num13++] = 128;
+				}
+				span13[4] = 0;
+			}
+		}
+		if (instance.storageBox != null)
+		{
+			stream.WriteByte(122);
+			BufferStream.RangeHandle range14 = stream.GetRange(5);
+			int position14 = stream.Position;
+			StorageBox.Serialize(stream, instance.storageBox);
+			int val6 = stream.Position - position14;
+			Span<byte> span14 = range14.GetSpan();
+			int num14 = ProtocolParser.WriteUInt32((uint)val6, span14, 0);
+			if (num14 < 5)
+			{
+				span14[num14 - 1] |= 128;
+				while (num14 < 4)
+				{
+					span14[num14++] = 128;
+				}
+				span14[4] = 0;
+			}
+		}
+		if (instance.heldEntity != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range15 = stream.GetRange(1);
+			int position15 = stream.Position;
+			HeldEntity.Serialize(stream, instance.heldEntity);
+			int num15 = stream.Position - position15;
+			if (num15 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field heldEntity (ProtoBuf.HeldEntity)");
+			}
+			Span<byte> span15 = range15.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num15, span15, 0);
+		}
+		if (instance.baseProjectile != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range16 = stream.GetRange(1);
+			int position16 = stream.Position;
+			BaseProjectile.Serialize(stream, instance.baseProjectile);
+			int num16 = stream.Position - position16;
+			if (num16 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseProjectile (ProtoBuf.BaseProjectile)");
+			}
+			Span<byte> span16 = range16.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num16, span16, 0);
+		}
+		if (instance.baseNPC != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range17 = stream.GetRange(1);
+			int position17 = stream.Position;
+			BaseNPC.Serialize(stream, instance.baseNPC);
+			int num17 = stream.Position - position17;
+			if (num17 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseNPC (ProtoBuf.BaseNPC)");
+			}
+			Span<byte> span17 = range17.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num17, span17, 0);
+		}
+		if (instance.lootContainer != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range18 = stream.GetRange(1);
+			int position18 = stream.Position;
+			LootContainer.Serialize(stream, instance.lootContainer);
+			int num18 = stream.Position - position18;
+			if (num18 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field lootContainer (ProtoBuf.LootContainer)");
+			}
+			Span<byte> span18 = range18.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num18, span18, 0);
+		}
+		if (instance.genericSpawner != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range19 = stream.GetRange(3);
+			int position19 = stream.Position;
+			GenericSpawner.Serialize(stream, instance.genericSpawner);
+			int num19 = stream.Position - position19;
+			if (num19 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field genericSpawner (ProtoBuf.GenericSpawner)");
+			}
+			Span<byte> span19 = range19.GetSpan();
+			int num20 = ProtocolParser.WriteUInt32((uint)num19, span19, 0);
+			if (num20 < 3)
+			{
+				span19[num20 - 1] |= 128;
+				while (num20 < 2)
+				{
+					span19[num20++] = 128;
+				}
+				span19[2] = 0;
+			}
+		}
+		if (instance.sleepingBag != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range20 = stream.GetRange(5);
+			int position20 = stream.Position;
+			SleepingBag.Serialize(stream, instance.sleepingBag);
+			int val7 = stream.Position - position20;
+			Span<byte> span20 = range20.GetSpan();
+			int num21 = ProtocolParser.WriteUInt32((uint)val7, span20, 0);
+			if (num21 < 5)
+			{
+				span20[num21 - 1] |= 128;
+				while (num21 < 4)
+				{
+					span20[num21++] = 128;
+				}
+				span20[4] = 0;
+			}
+		}
+		if (instance.lootableCorpse != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range21 = stream.GetRange(5);
+			int position21 = stream.Position;
+			LootableCorpse.Serialize(stream, instance.lootableCorpse);
+			int val8 = stream.Position - position21;
+			Span<byte> span21 = range21.GetSpan();
+			int num22 = ProtocolParser.WriteUInt32((uint)val8, span21, 0);
+			if (num22 < 5)
+			{
+				span21[num22 - 1] |= 128;
+				while (num22 < 4)
+				{
+					span21[num22++] = 128;
+				}
+				span21[4] = 0;
+			}
+		}
+		if (instance.sign != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range22 = stream.GetRange(3);
+			int position22 = stream.Position;
+			Sign.Serialize(stream, instance.sign);
+			int num23 = stream.Position - position22;
+			if (num23 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field sign (ProtoBuf.Sign)");
+			}
+			Span<byte> span22 = range22.GetSpan();
+			int num24 = ProtocolParser.WriteUInt32((uint)num23, span22, 0);
+			if (num24 < 3)
+			{
+				span22[num24 - 1] |= 128;
+				while (num24 < 2)
+				{
+					span22[num24++] = 128;
+				}
+				span22[2] = 0;
+			}
+		}
+		if (instance.baseCombat != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range23 = stream.GetRange(1);
+			int position23 = stream.Position;
+			BaseCombat.Serialize(stream, instance.baseCombat);
+			int num25 = stream.Position - position23;
+			if (num25 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseCombat (ProtoBuf.BaseCombat)");
+			}
+			Span<byte> span23 = range23.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num25, span23, 0);
+		}
+		if (instance.mapEntity != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range24 = stream.GetRange(3);
+			int position24 = stream.Position;
+			MapEntity.Serialize(stream, instance.mapEntity);
+			int num26 = stream.Position - position24;
+			if (num26 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field mapEntity (ProtoBuf.MapEntity)");
+			}
+			Span<byte> span24 = range24.GetSpan();
+			int num27 = ProtocolParser.WriteUInt32((uint)num26, span24, 0);
+			if (num27 < 3)
+			{
+				span24[num27 - 1] |= 128;
+				while (num27 < 2)
+				{
+					span24[num27++] = 128;
+				}
+				span24[2] = 0;
+			}
+		}
+		if (instance.researchTable != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range25 = stream.GetRange(1);
+			int position25 = stream.Position;
+			ResearchTable.Serialize(stream, instance.researchTable);
+			int num28 = stream.Position - position25;
+			if (num28 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field researchTable (ProtoBuf.ResearchTable)");
+			}
+			Span<byte> span25 = range25.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num28, span25, 0);
+		}
+		if (instance.dudExplosive != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range26 = stream.GetRange(1);
+			int position26 = stream.Position;
+			DudExplosive.Serialize(stream, instance.dudExplosive);
+			int num29 = stream.Position - position26;
+			if (num29 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field dudExplosive (ProtoBuf.DudExplosive)");
+			}
+			Span<byte> span26 = range26.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num29, span26, 0);
+		}
+		if (instance.miningQuarry != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range27 = stream.GetRange(5);
+			int position27 = stream.Position;
+			MiningQuarry.Serialize(stream, instance.miningQuarry);
+			int val9 = stream.Position - position27;
+			Span<byte> span27 = range27.GetSpan();
+			int num30 = ProtocolParser.WriteUInt32((uint)val9, span27, 0);
+			if (num30 < 5)
+			{
+				span27[num30 - 1] |= 128;
+				while (num30 < 4)
+				{
+					span27[num30++] = 128;
+				}
+				span27[4] = 0;
+			}
+		}
+		if (instance.baseVehicle != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range28 = stream.GetRange(3);
+			int position28 = stream.Position;
+			BaseVehicle.Serialize(stream, instance.baseVehicle);
+			int num31 = stream.Position - position28;
+			if (num31 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseVehicle (ProtoBuf.BaseVehicle)");
+			}
+			Span<byte> span28 = range28.GetSpan();
+			int num32 = ProtocolParser.WriteUInt32((uint)num31, span28, 0);
+			if (num32 < 3)
+			{
+				span28[num32 - 1] |= 128;
+				while (num32 < 2)
+				{
+					span28[num32++] = 128;
+				}
+				span28[2] = 0;
+			}
+		}
+		if (instance.helicopter != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range29 = stream.GetRange(3);
+			int position29 = stream.Position;
+			Helicopter.Serialize(stream, instance.helicopter);
+			int num33 = stream.Position - position29;
+			if (num33 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field helicopter (ProtoBuf.Helicopter)");
+			}
+			Span<byte> span29 = range29.GetSpan();
+			int num34 = ProtocolParser.WriteUInt32((uint)num33, span29, 0);
+			if (num34 < 3)
+			{
+				span29[num34 - 1] |= 128;
+				while (num34 < 2)
+				{
+					span29[num34++] = 128;
+				}
+				span29[2] = 0;
+			}
+		}
+		if (instance.landmine != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(1);
+			BufferStream.RangeHandle range30 = stream.GetRange(1);
+			int position30 = stream.Position;
+			Landmine.Serialize(stream, instance.landmine);
+			int num35 = stream.Position - position30;
+			if (num35 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field landmine (ProtoBuf.Landmine)");
+			}
+			Span<byte> span30 = range30.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num35, span30, 0);
+		}
+		if (instance.autoturret != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range31 = stream.GetRange(5);
+			int position31 = stream.Position;
+			AutoTurret.Serialize(stream, instance.autoturret);
+			int val10 = stream.Position - position31;
+			Span<byte> span31 = range31.GetSpan();
+			int num36 = ProtocolParser.WriteUInt32((uint)val10, span31, 0);
+			if (num36 < 5)
+			{
+				span31[num36 - 1] |= 128;
+				while (num36 < 4)
+				{
+					span31[num36++] = 128;
+				}
+				span31[4] = 0;
+			}
+		}
+		if (instance.sphereEntity != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range32 = stream.GetRange(1);
+			int position32 = stream.Position;
+			SphereEntity.Serialize(stream, instance.sphereEntity);
+			int num37 = stream.Position - position32;
+			if (num37 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field sphereEntity (ProtoBuf.SphereEntity)");
+			}
+			Span<byte> span32 = range32.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num37, span32, 0);
+		}
+		if (instance.stabilityEntity != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range33 = stream.GetRange(1);
+			int position33 = stream.Position;
+			StabilityEntity.Serialize(stream, instance.stabilityEntity);
+			int num38 = stream.Position - position33;
+			if (num38 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field stabilityEntity (ProtoBuf.StabilityEntity)");
+			}
+			Span<byte> span33 = range33.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num38, span33, 0);
+		}
+		if (instance.ownerInfo != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range34 = stream.GetRange(1);
+			int position34 = stream.Position;
+			OwnerInfo.Serialize(stream, instance.ownerInfo);
+			int num39 = stream.Position - position34;
+			if (num39 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field ownerInfo (ProtoBuf.OwnerInfo)");
+			}
+			Span<byte> span34 = range34.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num39, span34, 0);
+		}
+		if (instance.decayEntity != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range35 = stream.GetRange(1);
+			int position35 = stream.Position;
+			DecayEntity.Serialize(stream, instance.decayEntity);
+			int num40 = stream.Position - position35;
+			if (num40 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field decayEntity (ProtoBuf.DecayEntity)");
+			}
+			Span<byte> span35 = range35.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num40, span35, 0);
+		}
+		if (instance.spawnable != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range36 = stream.GetRange(1);
+			int position36 = stream.Position;
+			Spawnable.Serialize(stream, instance.spawnable);
+			int num41 = stream.Position - position36;
+			if (num41 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field spawnable (ProtoBuf.Spawnable)");
+			}
+			Span<byte> span36 = range36.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num41, span36, 0);
+		}
+		if (instance.servergib != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range37 = stream.GetRange(5);
+			int position37 = stream.Position;
+			ServerGib.Serialize(stream, instance.servergib);
+			int val11 = stream.Position - position37;
+			Span<byte> span37 = range37.GetSpan();
+			int num42 = ProtocolParser.WriteUInt32((uint)val11, span37, 0);
+			if (num42 < 5)
+			{
+				span37[num42 - 1] |= 128;
+				while (num42 < 4)
+				{
+					span37[num42++] = 128;
+				}
+				span37[4] = 0;
+			}
+		}
+		if (instance.vendingMachine != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range38 = stream.GetRange(5);
+			int position38 = stream.Position;
+			VendingMachine.Serialize(stream, instance.vendingMachine);
+			int val12 = stream.Position - position38;
+			Span<byte> span38 = range38.GetSpan();
+			int num43 = ProtocolParser.WriteUInt32((uint)val12, span38, 0);
+			if (num43 < 5)
+			{
+				span38[num43 - 1] |= 128;
+				while (num43 < 4)
+				{
+					span38[num43++] = 128;
+				}
+				span38[4] = 0;
+			}
+		}
+		if (instance.spinnerWheel != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range39 = stream.GetRange(1);
+			int position39 = stream.Position;
+			SpinnerWheel.Serialize(stream, instance.spinnerWheel);
+			int num44 = stream.Position - position39;
+			if (num44 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field spinnerWheel (ProtoBuf.SpinnerWheel)");
+			}
+			Span<byte> span39 = range39.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num44, span39, 0);
+		}
+		if (instance.lift != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range40 = stream.GetRange(1);
+			int position40 = stream.Position;
+			Lift.Serialize(stream, instance.lift);
+			int num45 = stream.Position - position40;
+			if (num45 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field lift (ProtoBuf.Lift)");
+			}
+			Span<byte> span40 = range40.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num45, span40, 0);
+		}
+		if (instance.bradley != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range41 = stream.GetRange(2);
+			int position41 = stream.Position;
+			BradleyAPC.Serialize(stream, instance.bradley);
+			int num46 = stream.Position - position41;
+			if (num46 > 16383)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field bradley (ProtoBuf.BradleyAPC)");
+			}
+			Span<byte> span41 = range41.GetSpan();
+			if (ProtocolParser.WriteUInt32((uint)num46, span41, 0) < 2)
+			{
+				span41[0] |= 128;
+				span41[1] = 0;
+			}
+		}
+		if (instance.waterwell != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range42 = stream.GetRange(1);
+			int position42 = stream.Position;
+			WaterWell.Serialize(stream, instance.waterwell);
+			int num47 = stream.Position - position42;
+			if (num47 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field waterwell (ProtoBuf.WaterWell)");
+			}
+			Span<byte> span42 = range42.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num47, span42, 0);
+		}
+		if (instance.motorBoat != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range43 = stream.GetRange(1);
+			int position43 = stream.Position;
+			Motorboat.Serialize(stream, instance.motorBoat);
+			int num48 = stream.Position - position43;
+			if (num48 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field motorBoat (ProtoBuf.Motorboat)");
+			}
+			Span<byte> span43 = range43.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num48, span43, 0);
+		}
+		if (instance.ioEntity != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range44 = stream.GetRange(5);
+			int position44 = stream.Position;
+			IOEntity.Serialize(stream, instance.ioEntity);
+			int val13 = stream.Position - position44;
+			Span<byte> span44 = range44.GetSpan();
+			int num49 = ProtocolParser.WriteUInt32((uint)val13, span44, 0);
+			if (num49 < 5)
+			{
+				span44[num49 - 1] |= 128;
+				while (num49 < 4)
+				{
+					span44[num49++] = 128;
+				}
+				span44[4] = 0;
+			}
+		}
+		if (instance.puzzleReset != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range45 = stream.GetRange(5);
+			int position45 = stream.Position;
+			PuzzleReset.Serialize(stream, instance.puzzleReset);
+			int val14 = stream.Position - position45;
+			Span<byte> span45 = range45.GetSpan();
+			int num50 = ProtocolParser.WriteUInt32((uint)val14, span45, 0);
+			if (num50 < 5)
+			{
+				span45[num50 - 1] |= 128;
+				while (num50 < 4)
+				{
+					span45[num50++] = 128;
+				}
+				span45[4] = 0;
+			}
+		}
+		if (instance.relationshipManager != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(2);
+			BufferStream.RangeHandle range46 = stream.GetRange(5);
+			int position46 = stream.Position;
+			RelationshipManager.Serialize(stream, instance.relationshipManager);
+			int val15 = stream.Position - position46;
+			Span<byte> span46 = range46.GetSpan();
+			int num51 = ProtocolParser.WriteUInt32((uint)val15, span46, 0);
+			if (num51 < 5)
+			{
+				span46[num51 - 1] |= 128;
+				while (num51 < 4)
+				{
+					span46[num51++] = 128;
+				}
+				span46[4] = 0;
+			}
+		}
+		if (instance.hotAirBalloon != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range47 = stream.GetRange(1);
+			int position47 = stream.Position;
+			HotAirBalloon.Serialize(stream, instance.hotAirBalloon);
+			int num52 = stream.Position - position47;
+			if (num52 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field hotAirBalloon (ProtoBuf.HotAirBalloon)");
+			}
+			Span<byte> span47 = range47.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num52, span47, 0);
+		}
+		if (instance.samSite != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range48 = stream.GetRange(1);
+			int position48 = stream.Position;
+			SAMSite.Serialize(stream, instance.samSite);
+			int num53 = stream.Position - position48;
+			if (num53 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field samSite (ProtoBuf.SAMSite)");
+			}
+			Span<byte> span48 = range48.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num53, span48, 0);
+		}
+		if (instance.eggHunt != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range49 = stream.GetRange(5);
+			int position49 = stream.Position;
+			EggHunt.Serialize(stream, instance.eggHunt);
+			int val16 = stream.Position - position49;
+			Span<byte> span49 = range49.GetSpan();
+			int num54 = ProtocolParser.WriteUInt32((uint)val16, span49, 0);
+			if (num54 < 5)
+			{
+				span49[num54 - 1] |= 128;
+				while (num54 < 4)
+				{
+					span49[num54++] = 128;
+				}
+				span49[4] = 0;
+			}
+		}
+		if (instance.arcadeMachine != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range50 = stream.GetRange(5);
+			int position50 = stream.Position;
+			ArcadeMachine.Serialize(stream, instance.arcadeMachine);
+			int val17 = stream.Position - position50;
+			Span<byte> span50 = range50.GetSpan();
+			int num55 = ProtocolParser.WriteUInt32((uint)val17, span50, 0);
+			if (num55 < 5)
+			{
+				span50[num55 - 1] |= 128;
+				while (num55 < 4)
+				{
+					span50[num55++] = 128;
+				}
+				span50[4] = 0;
+			}
+		}
+		if (instance.miniCopter != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range51 = stream.GetRange(1);
+			int position51 = stream.Position;
+			Minicopter.Serialize(stream, instance.miniCopter);
+			int num56 = stream.Position - position51;
+			if (num56 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field miniCopter (ProtoBuf.Minicopter)");
+			}
+			Span<byte> span51 = range51.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num56, span51, 0);
+		}
+		if (instance.horse != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range52 = stream.GetRange(5);
+			int position52 = stream.Position;
+			Horse.Serialize(stream, instance.horse);
+			int val18 = stream.Position - position52;
+			Span<byte> span52 = range52.GetSpan();
+			int num57 = ProtocolParser.WriteUInt32((uint)val18, span52, 0);
+			if (num57 < 5)
+			{
+				span52[num57 - 1] |= 128;
+				while (num57 < 4)
+				{
+					span52[num57++] = 128;
+				}
+				span52[4] = 0;
+			}
+		}
+		if (instance.smartAlarm != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range53 = stream.GetRange(5);
+			int position53 = stream.Position;
+			SmartAlarm.Serialize(stream, instance.smartAlarm);
+			int val19 = stream.Position - position53;
+			Span<byte> span53 = range53.GetSpan();
+			int num58 = ProtocolParser.WriteUInt32((uint)val19, span53, 0);
+			if (num58 < 5)
+			{
+				span53[num58 - 1] |= 128;
+				while (num58 < 4)
+				{
+					span53[num58++] = 128;
+				}
+				span53[4] = 0;
+			}
+		}
+		if (instance.lightString != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range54 = stream.GetRange(3);
+			int position54 = stream.Position;
+			LightString.Serialize(stream, instance.lightString);
+			int num59 = stream.Position - position54;
+			if (num59 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field lightString (ProtoBuf.LightString)");
+			}
+			Span<byte> span54 = range54.GetSpan();
+			int num60 = ProtocolParser.WriteUInt32((uint)num59, span54, 0);
+			if (num60 < 3)
+			{
+				span54[num60 - 1] |= 128;
+				while (num60 < 2)
+				{
+					span54[num60++] = 128;
+				}
+				span54[2] = 0;
+			}
+		}
+		if (instance.lightDeployer != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range55 = stream.GetRange(1);
+			int position55 = stream.Position;
+			LightDeployer.Serialize(stream, instance.lightDeployer);
+			int num61 = stream.Position - position55;
+			if (num61 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field lightDeployer (ProtoBuf.LightDeployer)");
+			}
+			Span<byte> span55 = range55.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num61, span55, 0);
+		}
+		if (instance.rcEntity != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range56 = stream.GetRange(5);
+			int position56 = stream.Position;
+			RCEntity.Serialize(stream, instance.rcEntity);
+			int val20 = stream.Position - position56;
+			Span<byte> span56 = range56.GetSpan();
+			int num62 = ProtocolParser.WriteUInt32((uint)val20, span56, 0);
+			if (num62 < 5)
+			{
+				span56[num62 - 1] |= 128;
+				while (num62 < 4)
+				{
+					span56[num62++] = 128;
+				}
+				span56[4] = 0;
+			}
+		}
+		if (instance.computerStation != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range57 = stream.GetRange(5);
+			int position57 = stream.Position;
+			ComputerStation.Serialize(stream, instance.computerStation);
+			int val21 = stream.Position - position57;
+			Span<byte> span57 = range57.GetSpan();
+			int num63 = ProtocolParser.WriteUInt32((uint)val21, span57, 0);
+			if (num63 < 5)
+			{
+				span57[num63 - 1] |= 128;
+				while (num63 < 4)
+				{
+					span57[num63++] = 128;
+				}
+				span57[4] = 0;
+			}
+		}
+		if (instance.growableEntity != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range58 = stream.GetRange(1);
+			int position58 = stream.Position;
+			GrowableEntity.Serialize(stream, instance.growableEntity);
+			int num64 = stream.Position - position58;
+			if (num64 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field growableEntity (ProtoBuf.GrowableEntity)");
+			}
+			Span<byte> span58 = range58.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num64, span58, 0);
+		}
+		if (instance.composter != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range59 = stream.GetRange(1);
+			int position59 = stream.Position;
+			Composter.Serialize(stream, instance.composter);
+			int num65 = stream.Position - position59;
+			if (num65 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field composter (ProtoBuf.Composter)");
+			}
+			Span<byte> span59 = range59.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num65, span59, 0);
+		}
+		if (instance.modularVehicle != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range60 = stream.GetRange(1);
+			int position60 = stream.Position;
+			ModularVehicle.Serialize(stream, instance.modularVehicle);
+			int num66 = stream.Position - position60;
+			if (num66 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field modularVehicle (ProtoBuf.ModularVehicle)");
+			}
+			Span<byte> span60 = range60.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num66, span60, 0);
+		}
+		if (instance.modularCar != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range61 = stream.GetRange(5);
+			int position61 = stream.Position;
+			ModularCar.Serialize(stream, instance.modularCar);
+			int val22 = stream.Position - position61;
+			Span<byte> span61 = range61.GetSpan();
+			int num67 = ProtocolParser.WriteUInt32((uint)val22, span61, 0);
+			if (num67 < 5)
+			{
+				span61[num67 - 1] |= 128;
+				while (num67 < 4)
+				{
+					span61[num67++] = 128;
+				}
+				span61[4] = 0;
+			}
+		}
+		if (instance.simpleUID != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(3);
+			BufferStream.RangeHandle range62 = stream.GetRange(1);
+			int position62 = stream.Position;
+			SimpleUID.Serialize(stream, instance.simpleUID);
+			int num68 = stream.Position - position62;
+			if (num68 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field simpleUID (ProtoBuf.SimpleUID)");
+			}
+			Span<byte> span62 = range62.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num68, span62, 0);
+		}
+		if (instance.vehicleLift != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range63 = stream.GetRange(1);
+			int position63 = stream.Position;
+			VehicleLift.Serialize(stream, instance.vehicleLift);
+			int num69 = stream.Position - position63;
+			if (num69 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field vehicleLift (ProtoBuf.VehicleLift)");
+			}
+			Span<byte> span63 = range63.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num69, span63, 0);
+		}
+		if (instance.engineStorage != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range64 = stream.GetRange(1);
+			int position64 = stream.Position;
+			EngineStorage.Serialize(stream, instance.engineStorage);
+			int num70 = stream.Position - position64;
+			if (num70 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field engineStorage (ProtoBuf.EngineStorage)");
+			}
+			Span<byte> span64 = range64.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num70, span64, 0);
+		}
+		if (instance.vehicleVendor != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range65 = stream.GetRange(5);
+			int position65 = stream.Position;
+			VehicleVendor.Serialize(stream, instance.vehicleVendor);
+			int val23 = stream.Position - position65;
+			Span<byte> span65 = range65.GetSpan();
+			int num71 = ProtocolParser.WriteUInt32((uint)val23, span65, 0);
+			if (num71 < 5)
+			{
+				span65[num71 - 1] |= 128;
+				while (num71 < 4)
+				{
+					span65[num71++] = 128;
+				}
+				span65[4] = 0;
+			}
+		}
+		if (instance.WaterPool != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range66 = stream.GetRange(1);
+			int position66 = stream.Position;
+			WaterPool.Serialize(stream, instance.WaterPool);
+			int num72 = stream.Position - position66;
+			if (num72 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field WaterPool (ProtoBuf.WaterPool)");
+			}
+			Span<byte> span66 = range66.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num72, span66, 0);
+		}
+		if (instance.photo != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range67 = stream.GetRange(1);
+			int position67 = stream.Position;
+			Photo.Serialize(stream, instance.photo);
+			int num73 = stream.Position - position67;
+			if (num73 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field photo (ProtoBuf.Photo)");
+			}
+			Span<byte> span67 = range67.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num73, span67, 0);
+		}
+		if (instance.photoFrame != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range68 = stream.GetRange(3);
+			int position68 = stream.Position;
+			PhotoFrame.Serialize(stream, instance.photoFrame);
+			int num74 = stream.Position - position68;
+			if (num74 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field photoFrame (ProtoBuf.PhotoFrame)");
+			}
+			Span<byte> span68 = range68.GetSpan();
+			int num75 = ProtocolParser.WriteUInt32((uint)num74, span68, 0);
+			if (num75 < 3)
+			{
+				span68[num75 - 1] |= 128;
+				while (num75 < 2)
+				{
+					span68[num75++] = 128;
+				}
+				span68[2] = 0;
+			}
+		}
+		if (instance.vehicleModule != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range69 = stream.GetRange(1);
+			int position69 = stream.Position;
+			VehicleModule.Serialize(stream, instance.vehicleModule);
+			int num76 = stream.Position - position69;
+			if (num76 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field vehicleModule (ProtoBuf.VehicleModule)");
+			}
+			Span<byte> span69 = range69.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num76, span69, 0);
+		}
+		if (instance.mixingTable != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range70 = stream.GetRange(1);
+			int position70 = stream.Position;
+			MixingTable.Serialize(stream, instance.mixingTable);
+			int num77 = stream.Position - position70;
+			if (num77 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field mixingTable (ProtoBuf.MixingTable)");
+			}
+			Span<byte> span70 = range70.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num77, span70, 0);
+		}
+		if (instance.shopKeeper != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range71 = stream.GetRange(1);
+			int position71 = stream.Position;
+			ShopKeeper.Serialize(stream, instance.shopKeeper);
+			int num78 = stream.Position - position71;
+			if (num78 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field shopKeeper (ProtoBuf.ShopKeeper)");
+			}
+			Span<byte> span71 = range71.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num78, span71, 0);
+		}
+		if (instance.elevator != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range72 = stream.GetRange(3);
+			int position72 = stream.Position;
+			Elevator.Serialize(stream, instance.elevator);
+			int num79 = stream.Position - position72;
+			if (num79 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field elevator (ProtoBuf.Elevator)");
+			}
+			Span<byte> span72 = range72.GetSpan();
+			int num80 = ProtocolParser.WriteUInt32((uint)num79, span72, 0);
+			if (num80 < 3)
+			{
+				span72[num80 - 1] |= 128;
+				while (num80 < 2)
+				{
+					span72[num80++] = 128;
+				}
+				span72[2] = 0;
+			}
+		}
+		if (instance.skullTrophy != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range73 = stream.GetRange(5);
+			int position73 = stream.Position;
+			SkullTrophy.Serialize(stream, instance.skullTrophy);
+			int val24 = stream.Position - position73;
+			Span<byte> span73 = range73.GetSpan();
+			int num81 = ProtocolParser.WriteUInt32((uint)val24, span73, 0);
+			if (num81 < 5)
+			{
+				span73[num81 - 1] |= 128;
+				while (num81 < 4)
+				{
+					span73[num81++] = 128;
+				}
+				span73[4] = 0;
+			}
+		}
+		if (instance.cassette != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range74 = stream.GetRange(1);
+			int position74 = stream.Position;
+			Cassette.Serialize(stream, instance.cassette);
+			int num82 = stream.Position - position74;
+			if (num82 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field cassette (ProtoBuf.Cassette)");
+			}
+			Span<byte> span74 = range74.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num82, span74, 0);
+		}
+		if (instance.telephone != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range75 = stream.GetRange(5);
+			int position75 = stream.Position;
+			Telephone.Serialize(stream, instance.telephone);
+			int val25 = stream.Position - position75;
+			Span<byte> span75 = range75.GetSpan();
+			int num83 = ProtocolParser.WriteUInt32((uint)val25, span75, 0);
+			if (num83 < 5)
+			{
+				span75[num83 - 1] |= 128;
+				while (num83 < 4)
+				{
+					span75[num83++] = 128;
+				}
+				span75[4] = 0;
+			}
+		}
+		if (instance.boomBox != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range76 = stream.GetRange(5);
+			int position76 = stream.Position;
+			BoomBox.Serialize(stream, instance.boomBox);
+			int val26 = stream.Position - position76;
+			Span<byte> span76 = range76.GetSpan();
+			int num84 = ProtocolParser.WriteUInt32((uint)val26, span76, 0);
+			if (num84 < 5)
+			{
+				span76[num84 - 1] |= 128;
+				while (num84 < 4)
+				{
+					span76[num84++] = 128;
+				}
+				span76[4] = 0;
+			}
+		}
+		if (instance.neonSign != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range77 = stream.GetRange(3);
+			int position77 = stream.Position;
+			NeonSign.Serialize(stream, instance.neonSign);
+			int num85 = stream.Position - position77;
+			if (num85 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field neonSign (ProtoBuf.NeonSign)");
+			}
+			Span<byte> span77 = range77.GetSpan();
+			int num86 = ProtocolParser.WriteUInt32((uint)num85, span77, 0);
+			if (num86 < 3)
+			{
+				span77[num86 - 1] |= 128;
+				while (num86 < 2)
+				{
+					span77[num86++] = 128;
+				}
+				span77[2] = 0;
+			}
+		}
+		if (instance.subEntityList != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(4);
+			BufferStream.RangeHandle range78 = stream.GetRange(3);
+			int position78 = stream.Position;
+			SubEntityList.Serialize(stream, instance.subEntityList);
+			int num87 = stream.Position - position78;
+			if (num87 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field subEntityList (ProtoBuf.SubEntityList)");
+			}
+			Span<byte> span78 = range78.GetSpan();
+			int num88 = ProtocolParser.WriteUInt32((uint)num87, span78, 0);
+			if (num88 < 3)
+			{
+				span78[num88 - 1] |= 128;
+				while (num88 < 2)
+				{
+					span78[num88++] = 128;
+				}
+				span78[2] = 0;
+			}
+		}
+		if (instance.marketTerminal != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range79 = stream.GetRange(5);
+			int position79 = stream.Position;
+			MarketTerminal.Serialize(stream, instance.marketTerminal);
+			int val27 = stream.Position - position79;
+			Span<byte> span79 = range79.GetSpan();
+			int num89 = ProtocolParser.WriteUInt32((uint)val27, span79, 0);
+			if (num89 < 5)
+			{
+				span79[num89 - 1] |= 128;
+				while (num89 < 4)
+				{
+					span79[num89++] = 128;
+				}
+				span79[4] = 0;
+			}
+		}
+		if (instance.deliveryDrone != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range80 = stream.GetRange(1);
+			int position80 = stream.Position;
+			DeliveryDrone.Serialize(stream, instance.deliveryDrone);
+			int num90 = stream.Position - position80;
+			if (num90 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field deliveryDrone (ProtoBuf.DeliveryDrone)");
+			}
+			Span<byte> span80 = range80.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num90, span80, 0);
+		}
+		if (instance.reclaimTerminal != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range81 = stream.GetRange(1);
+			int position81 = stream.Position;
+			ReclaimTerminal.Serialize(stream, instance.reclaimTerminal);
+			int num91 = stream.Position - position81;
+			if (num91 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field reclaimTerminal (ProtoBuf.ReclaimTerminal)");
+			}
+			Span<byte> span81 = range81.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num91, span81, 0);
+		}
+		if (instance.slotMachine != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range82 = stream.GetRange(1);
+			int position82 = stream.Position;
+			SlotMachine.Serialize(stream, instance.slotMachine);
+			int num92 = stream.Position - position82;
+			if (num92 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field slotMachine (ProtoBuf.SlotMachine)");
+			}
+			Span<byte> span82 = range82.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num92, span82, 0);
+		}
+		if (instance.trainEngine != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range83 = stream.GetRange(1);
+			int position83 = stream.Position;
+			TrainEngine.Serialize(stream, instance.trainEngine);
+			int num93 = stream.Position - position83;
+			if (num93 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field trainEngine (ProtoBuf.TrainEngine)");
+			}
+			Span<byte> span83 = range83.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num93, span83, 0);
+		}
+		if (instance.cardGame != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range84 = stream.GetRange(5);
+			int position84 = stream.Position;
+			CardGame.Serialize(stream, instance.cardGame);
+			int num94 = stream.Position - position84;
+			if (num94 > 34359738367L)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field cardGame (ProtoBuf.CardGame)");
+			}
+			Span<byte> span84 = range84.GetSpan();
+			int num95 = ProtocolParser.WriteUInt32((uint)num94, span84, 0);
+			if (num95 < 5)
+			{
+				span84[num95 - 1] |= 128;
+				while (num95 < 4)
+				{
+					span84[num95++] = 128;
+				}
+				span84[4] = 0;
+			}
+		}
+		if (instance.crane != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range85 = stream.GetRange(1);
+			int position85 = stream.Position;
+			Crane.Serialize(stream, instance.crane);
+			int num96 = stream.Position - position85;
+			if (num96 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field crane (ProtoBuf.Crane)");
+			}
+			Span<byte> span85 = range85.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num96, span85, 0);
+		}
+		if (instance.connectedSpeaker != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range86 = stream.GetRange(1);
+			int position86 = stream.Position;
+			ConnectedSpeaker.Serialize(stream, instance.connectedSpeaker);
+			int num97 = stream.Position - position86;
+			if (num97 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field connectedSpeaker (ProtoBuf.ConnectedSpeaker)");
+			}
+			Span<byte> span86 = range86.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num97, span86, 0);
+		}
+		if (instance.audioEntity != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range87 = stream.GetRange(1);
+			int position87 = stream.Position;
+			AudioEntity.Serialize(stream, instance.audioEntity);
+			int num98 = stream.Position - position87;
+			if (num98 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field audioEntity (ProtoBuf.AudioEntity)");
+			}
+			Span<byte> span87 = range87.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num98, span87, 0);
+		}
+		if (instance.microphoneStand != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range88 = stream.GetRange(1);
+			int position88 = stream.Position;
+			MicrophoneStand.Serialize(stream, instance.microphoneStand);
+			int num99 = stream.Position - position88;
+			if (num99 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field microphoneStand (ProtoBuf.MicrophoneStand)");
+			}
+			Span<byte> span88 = range88.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num99, span88, 0);
+		}
+		if (instance.submarine != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range89 = stream.GetRange(1);
+			int position89 = stream.Position;
+			Submarine.Serialize(stream, instance.submarine);
+			int num100 = stream.Position - position89;
+			if (num100 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field submarine (ProtoBuf.Submarine)");
+			}
+			Span<byte> span89 = range89.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num100, span89, 0);
+		}
+		if (instance.sleepingBagCamper != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range90 = stream.GetRange(1);
+			int position90 = stream.Position;
+			SleepingBagCamper.Serialize(stream, instance.sleepingBagCamper);
+			int num101 = stream.Position - position90;
+			if (num101 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field sleepingBagCamper (ProtoBuf.SleepingBagCamper)");
+			}
+			Span<byte> span90 = range90.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num101, span90, 0);
+		}
+		if (instance.camperModule != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range91 = stream.GetRange(1);
+			int position91 = stream.Position;
+			CamperModule.Serialize(stream, instance.camperModule);
+			int num102 = stream.Position - position91;
+			if (num102 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field camperModule (ProtoBuf.CamperModule)");
+			}
+			Span<byte> span91 = range91.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num102, span91, 0);
+		}
+		if (instance.paintableSign != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range92 = stream.GetRange(3);
+			int position92 = stream.Position;
+			PaintableSign.Serialize(stream, instance.paintableSign);
+			int num103 = stream.Position - position92;
+			if (num103 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field paintableSign (ProtoBuf.PaintableSign)");
+			}
+			Span<byte> span92 = range92.GetSpan();
+			int num104 = ProtocolParser.WriteUInt32((uint)num103, span92, 0);
+			if (num104 < 3)
+			{
+				span92[num104 - 1] |= 128;
+				while (num104 < 2)
+				{
+					span92[num104++] = 128;
+				}
+				span92[2] = 0;
+			}
+		}
+		if (instance.whitelist != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range93 = stream.GetRange(3);
+			int position93 = stream.Position;
+			Whitelist.Serialize(stream, instance.whitelist);
+			int num105 = stream.Position - position93;
+			if (num105 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field whitelist (ProtoBuf.Whitelist)");
+			}
+			Span<byte> span93 = range93.GetSpan();
+			int num106 = ProtocolParser.WriteUInt32((uint)num105, span93, 0);
+			if (num106 < 3)
+			{
+				span93[num106 - 1] |= 128;
+				while (num106 < 2)
+				{
+					span93[num106++] = 128;
+				}
+				span93[2] = 0;
+			}
+		}
+		if (instance.FrankensteinTable != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(5);
+			BufferStream.RangeHandle range94 = stream.GetRange(3);
+			int position94 = stream.Position;
+			FrankensteinTable.Serialize(stream, instance.FrankensteinTable);
+			int num107 = stream.Position - position94;
+			if (num107 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field FrankensteinTable (ProtoBuf.FrankensteinTable)");
+			}
+			Span<byte> span94 = range94.GetSpan();
+			int num108 = ProtocolParser.WriteUInt32((uint)num107, span94, 0);
+			if (num108 < 3)
+			{
+				span94[num108 - 1] |= 128;
+				while (num108 < 2)
+				{
+					span94[num108++] = 128;
+				}
+				span94[2] = 0;
+			}
+		}
+		if (instance.mlrs != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range95 = stream.GetRange(1);
+			int position95 = stream.Position;
+			MLRS.Serialize(stream, instance.mlrs);
+			int num109 = stream.Position - position95;
+			if (num109 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field mlrs (ProtoBuf.MLRS)");
+			}
+			Span<byte> span95 = range95.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num109, span95, 0);
+		}
+		if (instance.reclaimManager != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range96 = stream.GetRange(5);
+			int position96 = stream.Position;
+			ReclaimManager.Serialize(stream, instance.reclaimManager);
+			int val28 = stream.Position - position96;
+			Span<byte> span96 = range96.GetSpan();
+			int num110 = ProtocolParser.WriteUInt32((uint)val28, span96, 0);
+			if (num110 < 5)
+			{
+				span96[num110 - 1] |= 128;
+				while (num110 < 4)
+				{
+					span96[num110++] = 128;
+				}
+				span96[4] = 0;
+			}
+		}
+		if (instance.gameMode != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range97 = stream.GetRange(5);
+			int position97 = stream.Position;
+			GameMode.Serialize(stream, instance.gameMode);
+			int val29 = stream.Position - position97;
+			Span<byte> span97 = range97.GetSpan();
+			int num111 = ProtocolParser.WriteUInt32((uint)val29, span97, 0);
+			if (num111 < 5)
+			{
+				span97[num111 - 1] |= 128;
+				while (num111 < 4)
+				{
+					span97[num111++] = 128;
+				}
+				span97[4] = 0;
+			}
+		}
+		if (instance.snowmobile != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range98 = stream.GetRange(1);
+			int position98 = stream.Position;
+			Snowmobile.Serialize(stream, instance.snowmobile);
+			int num112 = stream.Position - position98;
+			if (num112 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field snowmobile (ProtoBuf.Snowmobile)");
+			}
+			Span<byte> span98 = range98.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num112, span98, 0);
+		}
+		if (instance.createdThisFrame)
+		{
+			stream.WriteByte(160);
+			stream.WriteByte(6);
+			ProtocolParser.WriteBool(stream, instance.createdThisFrame);
+		}
+		if (instance.patternFirework != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range99 = stream.GetRange(3);
+			int position99 = stream.Position;
+			PatternFirework.Serialize(stream, instance.patternFirework);
+			int num113 = stream.Position - position99;
+			if (num113 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field patternFirework (ProtoBuf.PatternFirework)");
+			}
+			Span<byte> span99 = range99.GetSpan();
+			int num114 = ProtocolParser.WriteUInt32((uint)num113, span99, 0);
+			if (num114 < 3)
+			{
+				span99[num114 - 1] |= 128;
+				while (num114 < 2)
+				{
+					span99[num114++] = 128;
+				}
+				span99[2] = 0;
+			}
+		}
+		if (instance.cargoPlane != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range100 = stream.GetRange(1);
+			int position100 = stream.Position;
+			CargoPlane.Serialize(stream, instance.cargoPlane);
+			int num115 = stream.Position - position100;
+			if (num115 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field cargoPlane (ProtoBuf.CargoPlane)");
+			}
+			Span<byte> span100 = range100.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num115, span100, 0);
+		}
+		if (instance.paintedItem != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range101 = stream.GetRange(1);
+			int position101 = stream.Position;
+			PaintedItem.Serialize(stream, instance.paintedItem);
+			int num116 = stream.Position - position101;
+			if (num116 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field paintedItem (ProtoBuf.PaintedItem)");
+			}
+			Span<byte> span101 = range101.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num116, span101, 0);
+		}
+		if (instance.clanManager != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range102 = stream.GetRange(5);
+			int position102 = stream.Position;
+			ClanManager.Serialize(stream, instance.clanManager);
+			int val30 = stream.Position - position102;
+			Span<byte> span102 = range102.GetSpan();
+			int num117 = ProtocolParser.WriteUInt32((uint)val30, span102, 0);
+			if (num117 < 5)
+			{
+				span102[num117 - 1] |= 128;
+				while (num117 < 4)
+				{
+					span102[num117++] = 128;
+				}
+				span102[4] = 0;
+			}
+		}
+		if (instance.spray != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range103 = stream.GetRange(1);
+			int position103 = stream.Position;
+			Spray.Serialize(stream, instance.spray);
+			int num118 = stream.Position - position103;
+			if (num118 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field spray (ProtoBuf.Spray)");
+			}
+			Span<byte> span103 = range103.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num118, span103, 0);
+		}
+		if (instance.baseTrain != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range104 = stream.GetRange(1);
+			int position104 = stream.Position;
+			BaseTrain.Serialize(stream, instance.baseTrain);
+			int num119 = stream.Position - position104;
+			if (num119 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseTrain (ProtoBuf.BaseTrain)");
+			}
+			Span<byte> span104 = range104.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num119, span104, 0);
+		}
+		if (instance.zipline != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range105 = stream.GetRange(3);
+			int position105 = stream.Position;
+			Zipline.Serialize(stream, instance.zipline);
+			int num120 = stream.Position - position105;
+			if (num120 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field zipline (ProtoBuf.Zipline)");
+			}
+			Span<byte> span105 = range105.GetSpan();
+			int num121 = ProtocolParser.WriteUInt32((uint)num120, span105, 0);
+			if (num121 < 3)
+			{
+				span105[num121 - 1] |= 128;
+				while (num121 < 2)
+				{
+					span105[num121++] = 128;
+				}
+				span105[2] = 0;
+			}
+		}
+		if (instance.ziplineMountable != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range106 = stream.GetRange(3);
+			int position106 = stream.Position;
+			ZiplineMountable.Serialize(stream, instance.ziplineMountable);
+			int num122 = stream.Position - position106;
+			if (num122 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field ziplineMountable (ProtoBuf.ZiplineMountable)");
+			}
+			Span<byte> span106 = range106.GetSpan();
+			int num123 = ProtocolParser.WriteUInt32((uint)num122, span106, 0);
+			if (num123 < 3)
+			{
+				span106[num123 - 1] |= 128;
+				while (num123 < 2)
+				{
+					span106[num123++] = 128;
+				}
+				span106[2] = 0;
+			}
+		}
+		if (instance.ZiplineArrival != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range107 = stream.GetRange(3);
+			int position107 = stream.Position;
+			ZiplineArrivalPoint.Serialize(stream, instance.ZiplineArrival);
+			int num124 = stream.Position - position107;
+			if (num124 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field ZiplineArrival (ProtoBuf.ZiplineArrivalPoint)");
+			}
+			Span<byte> span107 = range107.GetSpan();
+			int num125 = ProtocolParser.WriteUInt32((uint)num124, span107, 0);
+			if (num125 < 3)
+			{
+				span107[num125 - 1] |= 128;
+				while (num125 < 2)
+				{
+					span107[num125++] = 128;
+				}
+				span107[2] = 0;
+			}
+		}
+		if (instance.sprayLine != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range108 = stream.GetRange(3);
+			int position108 = stream.Position;
+			SprayLine.Serialize(stream, instance.sprayLine);
+			int num126 = stream.Position - position108;
+			if (num126 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field sprayLine (ProtoBuf.SprayLine)");
+			}
+			Span<byte> span108 = range108.GetSpan();
+			int num127 = ProtocolParser.WriteUInt32((uint)num126, span108, 0);
+			if (num127 < 3)
+			{
+				span108[num127 - 1] |= 128;
+				while (num127 < 2)
+				{
+					span108[num127++] = 128;
+				}
+				span108[2] = 0;
+			}
+		}
+		if (instance.coalingTower != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(6);
+			BufferStream.RangeHandle range109 = stream.GetRange(1);
+			int position109 = stream.Position;
+			CoalingTower.Serialize(stream, instance.coalingTower);
+			int num128 = stream.Position - position109;
+			if (num128 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field coalingTower (ProtoBuf.CoalingTower)");
+			}
+			Span<byte> span109 = range109.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num128, span109, 0);
+		}
+		if (instance.simpleInt != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range110 = stream.GetRange(1);
+			int position110 = stream.Position;
+			SimpleInt.Serialize(stream, instance.simpleInt);
+			int num129 = stream.Position - position110;
+			if (num129 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field simpleInt (ProtoBuf.SimpleInt)");
+			}
+			Span<byte> span110 = range110.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num129, span110, 0);
+		}
+		if (instance.baseOven != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range111 = stream.GetRange(3);
+			int position111 = stream.Position;
+			BaseOven.Serialize(stream, instance.baseOven);
+			int num130 = stream.Position - position111;
+			if (num130 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseOven (ProtoBuf.BaseOven)");
+			}
+			Span<byte> span111 = range111.GetSpan();
+			int num131 = ProtocolParser.WriteUInt32((uint)num130, span111, 0);
+			if (num131 < 3)
+			{
+				span111[num131 - 1] |= 128;
+				while (num131 < 2)
+				{
+					span111[num131++] = 128;
+				}
+				span111[2] = 0;
+			}
+		}
+		if (instance.brainComponent != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range112 = stream.GetRange(1);
+			int position112 = stream.Position;
+			BrainComponent.Serialize(stream, instance.brainComponent);
+			int num132 = stream.Position - position112;
+			if (num132 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field brainComponent (ProtoBuf.BrainComponent)");
+			}
+			Span<byte> span112 = range112.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num132, span112, 0);
+		}
+		if (instance.proceduralDungeon != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range113 = stream.GetRange(1);
+			int position113 = stream.Position;
+			ProceduralDungeon.Serialize(stream, instance.proceduralDungeon);
+			int num133 = stream.Position - position113;
+			if (num133 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field proceduralDungeon (ProtoBuf.ProceduralDungeon)");
+			}
+			Span<byte> span113 = range113.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num133, span113, 0);
+		}
+		if (instance.industrialConveyor != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range114 = stream.GetRange(3);
+			int position114 = stream.Position;
+			IndustrialConveyor.Serialize(stream, instance.industrialConveyor);
+			int num134 = stream.Position - position114;
+			if (num134 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field industrialConveyor (ProtoBuf.IndustrialConveyor)");
+			}
+			Span<byte> span114 = range114.GetSpan();
+			int num135 = ProtocolParser.WriteUInt32((uint)num134, span114, 0);
+			if (num135 < 3)
+			{
+				span114[num135 - 1] |= 128;
+				while (num135 < 2)
+				{
+					span114[num135++] = 128;
+				}
+				span114[2] = 0;
+			}
+		}
+		if (instance.industrialCrafter != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range115 = stream.GetRange(1);
+			int position115 = stream.Position;
+			IndustrialCrafter.Serialize(stream, instance.industrialCrafter);
+			int num136 = stream.Position - position115;
+			if (num136 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field industrialCrafter (ProtoBuf.IndustrialCrafter)");
+			}
+			Span<byte> span115 = range115.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num136, span115, 0);
+		}
+		if (instance.drone != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range116 = stream.GetRange(1);
+			int position116 = stream.Position;
+			Drone.Serialize(stream, instance.drone);
+			int num137 = stream.Position - position116;
+			if (num137 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field drone (ProtoBuf.Drone)");
+			}
+			Span<byte> span116 = range116.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num137, span116, 0);
+		}
+		if (instance.explosive != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range117 = stream.GetRange(1);
+			int position117 = stream.Position;
+			TimedExplosive.Serialize(stream, instance.explosive);
+			int num138 = stream.Position - position117;
+			if (num138 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field explosive (ProtoBuf.TimedExplosive)");
+			}
+			Span<byte> span117 = range117.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num138, span117, 0);
+		}
+		if (instance.simpleUint != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range118 = stream.GetRange(1);
+			int position118 = stream.Position;
+			SimpleUInt.Serialize(stream, instance.simpleUint);
+			int num139 = stream.Position - position118;
+			if (num139 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field simpleUint (ProtoBuf.SimpleUInt)");
+			}
+			Span<byte> span118 = range118.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num139, span118, 0);
+		}
+		if (instance.weaponRack != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range119 = stream.GetRange(3);
+			int position119 = stream.Position;
+			WeaponRack.Serialize(stream, instance.weaponRack);
+			int num140 = stream.Position - position119;
+			if (num140 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field weaponRack (ProtoBuf.WeaponRack)");
+			}
+			Span<byte> span119 = range119.GetSpan();
+			int num141 = ProtocolParser.WriteUInt32((uint)num140, span119, 0);
+			if (num141 < 3)
+			{
+				span119[num141 - 1] |= 128;
+				while (num141 < 2)
+				{
+					span119[num141++] = 128;
+				}
+				span119[2] = 0;
+			}
+		}
+		if (instance.attackHeli != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range120 = stream.GetRange(1);
+			int position120 = stream.Position;
+			AttackHeli.Serialize(stream, instance.attackHeli);
+			int num142 = stream.Position - position120;
+			if (num142 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field attackHeli (ProtoBuf.AttackHeli)");
+			}
+			Span<byte> span120 = range120.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num142, span120, 0);
+		}
+		if (instance.attackHeliTurret != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range121 = stream.GetRange(1);
+			int position121 = stream.Position;
+			AttackHeliTurret.Serialize(stream, instance.attackHeliTurret);
+			int num143 = stream.Position - position121;
+			if (num143 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field attackHeliTurret (ProtoBuf.AttackHeliTurret)");
+			}
+			Span<byte> span121 = range121.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num143, span121, 0);
+		}
+		if (instance.attackHeliRockets != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range122 = stream.GetRange(1);
+			int position122 = stream.Position;
+			AttackHeliRockets.Serialize(stream, instance.attackHeliRockets);
+			int num144 = stream.Position - position122;
+			if (num144 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field attackHeliRockets (ProtoBuf.AttackHeliRockets)");
+			}
+			Span<byte> span122 = range122.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num144, span122, 0);
+		}
+		if (instance.baseBoat != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range123 = stream.GetRange(1);
+			int position123 = stream.Position;
+			BaseBoat.Serialize(stream, instance.baseBoat);
+			int num145 = stream.Position - position123;
+			if (num145 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseBoat (ProtoBuf.BaseBoat)");
+			}
+			Span<byte> span123 = range123.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num145, span123, 0);
+		}
+		if (instance.ragdoll != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range124 = stream.GetRange(3);
+			int position124 = stream.Position;
+			Ragdoll.Serialize(stream, instance.ragdoll);
+			int num146 = stream.Position - position124;
+			if (num146 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field ragdoll (ProtoBuf.Ragdoll)");
+			}
+			Span<byte> span124 = range124.GetSpan();
+			int num147 = ProtocolParser.WriteUInt32((uint)num146, span124, 0);
+			if (num147 < 3)
+			{
+				span124[num147 - 1] |= 128;
+				while (num147 < 2)
+				{
+					span124[num147++] = 128;
+				}
+				span124[2] = 0;
+			}
+		}
+		if (instance.dieselEngine != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(7);
+			BufferStream.RangeHandle range125 = stream.GetRange(1);
+			int position125 = stream.Position;
+			DieselEngine.Serialize(stream, instance.dieselEngine);
+			int num148 = stream.Position - position125;
+			if (num148 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field dieselEngine (ProtoBuf.DieselEngine)");
+			}
+			Span<byte> span125 = range125.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num148, span125, 0);
+		}
+		if (instance.associatedFiles != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(9);
+			BufferStream.RangeHandle range126 = stream.GetRange(5);
+			int position126 = stream.Position;
+			AssociatedFiles.Serialize(stream, instance.associatedFiles);
+			int val31 = stream.Position - position126;
+			Span<byte> span126 = range126.GetSpan();
+			int num149 = ProtocolParser.WriteUInt32((uint)val31, span126, 0);
+			if (num149 < 5)
+			{
+				span126[num149 - 1] |= 128;
+				while (num149 < 4)
+				{
+					span126[num149++] = 128;
+				}
+				span126[4] = 0;
+			}
+		}
+		if (instance.nexusFerry != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(9);
+			BufferStream.RangeHandle range127 = stream.GetRange(5);
+			int position127 = stream.Position;
+			NexusFerry.Serialize(stream, instance.nexusFerry);
+			int val32 = stream.Position - position127;
+			Span<byte> span127 = range127.GetSpan();
+			int num150 = ProtocolParser.WriteUInt32((uint)val32, span127, 0);
+			if (num150 < 5)
+			{
+				span127[num150 - 1] |= 128;
+				while (num150 < 4)
+				{
+					span127[num150++] = 128;
+				}
+				span127[4] = 0;
+			}
+		}
+		if (instance.nexusIsland != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(9);
+			BufferStream.RangeHandle range128 = stream.GetRange(5);
+			int position128 = stream.Position;
+			NexusIsland.Serialize(stream, instance.nexusIsland);
+			int val33 = stream.Position - position128;
+			Span<byte> span128 = range128.GetSpan();
+			int num151 = ProtocolParser.WriteUInt32((uint)val33, span128, 0);
+			if (num151 < 5)
+			{
+				span128[num151 - 1] |= 128;
+				while (num151 < 4)
+				{
+					span128[num151++] = 128;
+				}
+				span128[4] = 0;
+			}
+		}
+		if (instance.nexusDockTerminal != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(9);
+			BufferStream.RangeHandle range129 = stream.GetRange(3);
+			int position129 = stream.Position;
+			NexusDockTerminal.Serialize(stream, instance.nexusDockTerminal);
+			int num152 = stream.Position - position129;
+			if (num152 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field nexusDockTerminal (ProtoBuf.NexusDockTerminal)");
+			}
+			Span<byte> span129 = range129.GetSpan();
+			int num153 = ProtocolParser.WriteUInt32((uint)num152, span129, 0);
+			if (num153 < 3)
+			{
+				span129[num153 - 1] |= 128;
+				while (num153 < 2)
+				{
+					span129[num153++] = 128;
+				}
+				span129[2] = 0;
+			}
+		}
+		if (instance.rockingChair != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(9);
+			BufferStream.RangeHandle range130 = stream.GetRange(1);
+			int position130 = stream.Position;
+			RockingChair.Serialize(stream, instance.rockingChair);
+			int num154 = stream.Position - position130;
+			if (num154 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field rockingChair (ProtoBuf.RockingChair)");
+			}
+			Span<byte> span130 = range130.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num154, span130, 0);
+		}
+		if (instance.headData != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(9);
+			BufferStream.RangeHandle range131 = stream.GetRange(5);
+			int position131 = stream.Position;
+			HeadData.Serialize(stream, instance.headData);
+			int val34 = stream.Position - position131;
+			Span<byte> span131 = range131.GetSpan();
+			int num155 = ProtocolParser.WriteUInt32((uint)val34, span131, 0);
+			if (num155 < 5)
+			{
+				span131[num155 - 1] |= 128;
+				while (num155 < 4)
+				{
+					span131[num155++] = 128;
+				}
+				span131[4] = 0;
+			}
+		}
+		if (instance.wantedPoster != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(9);
+			BufferStream.RangeHandle range132 = stream.GetRange(5);
+			int position132 = stream.Position;
+			WantedPoster.Serialize(stream, instance.wantedPoster);
+			int val35 = stream.Position - position132;
+			Span<byte> span132 = range132.GetSpan();
+			int num156 = ProtocolParser.WriteUInt32((uint)val35, span132, 0);
+			if (num156 < 5)
+			{
+				span132[num156 - 1] |= 128;
+				while (num156 < 4)
+				{
+					span132[num156++] = 128;
+				}
+				span132[4] = 0;
+			}
+		}
+		if (instance.waypointRace != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(9);
+			BufferStream.RangeHandle range133 = stream.GetRange(3);
+			int position133 = stream.Position;
+			WaypointRace.Serialize(stream, instance.waypointRace);
+			int num157 = stream.Position - position133;
+			if (num157 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field waypointRace (ProtoBuf.WaypointRace)");
+			}
+			Span<byte> span133 = range133.GetSpan();
+			int num158 = ProtocolParser.WriteUInt32((uint)num157, span133, 0);
+			if (num158 < 3)
+			{
+				span133[num158 - 1] |= 128;
+				while (num158 < 2)
+				{
+					span133[num158++] = 128;
+				}
+				span133[2] = 0;
+			}
+		}
+		if (instance.legacyShelter != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(9);
+			BufferStream.RangeHandle range134 = stream.GetRange(1);
+			int position134 = stream.Position;
+			LegacyShelter.Serialize(stream, instance.legacyShelter);
+			int num159 = stream.Position - position134;
+			if (num159 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field legacyShelter (ProtoBuf.LegacyShelter)");
+			}
+			Span<byte> span134 = range134.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num159, span134, 0);
+		}
+		if (instance.metalDetectorSource != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range135 = stream.GetRange(3);
+			int position135 = stream.Position;
+			MetalDetectorSource.Serialize(stream, instance.metalDetectorSource);
+			int num160 = stream.Position - position135;
+			if (num160 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field metalDetectorSource (ProtoBuf.MetalDetectorSource)");
+			}
+			Span<byte> span135 = range135.GetSpan();
+			int num161 = ProtocolParser.WriteUInt32((uint)num160, span135, 0);
+			if (num161 < 3)
+			{
+				span135[num161 - 1] |= 128;
+				while (num161 < 2)
+				{
+					span135[num161++] = 128;
+				}
+				span135[2] = 0;
+			}
+		}
+		if (instance.tutorialIsland != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range136 = stream.GetRange(1);
+			int position136 = stream.Position;
+			TutorialIsland.Serialize(stream, instance.tutorialIsland);
+			int num162 = stream.Position - position136;
+			if (num162 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field tutorialIsland (ProtoBuf.TutorialIsland)");
+			}
+			Span<byte> span136 = range136.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num162, span136, 0);
+		}
+		if (instance.cinematicEntity != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range137 = stream.GetRange(1);
+			int position137 = stream.Position;
+			CinematicEntity.Serialize(stream, instance.cinematicEntity);
+			int num163 = stream.Position - position137;
+			if (num163 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field cinematicEntity (ProtoBuf.CinematicEntity)");
+			}
+			Span<byte> span137 = range137.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num163, span137, 0);
+		}
+		if (instance.buildingPrivilegeRetro != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range138 = stream.GetRange(3);
+			int position138 = stream.Position;
+			BuildingPrivilegeRetro.Serialize(stream, instance.buildingPrivilegeRetro);
+			int num164 = stream.Position - position138;
+			if (num164 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field buildingPrivilegeRetro (ProtoBuf.BuildingPrivilegeRetro)");
+			}
+			Span<byte> span138 = range138.GetSpan();
+			int num165 = ProtocolParser.WriteUInt32((uint)num164, span138, 0);
+			if (num165 < 3)
+			{
+				span138[num165 - 1] |= 128;
+				while (num165 < 2)
+				{
+					span138[num165++] = 128;
+				}
+				span138[2] = 0;
+			}
+		}
+		if (instance.harborCrane != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range139 = stream.GetRange(3);
+			int position139 = stream.Position;
+			HarborCrane.Serialize(stream, instance.harborCrane);
+			int num166 = stream.Position - position139;
+			if (num166 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field harborCrane (ProtoBuf.HarborCrane)");
+			}
+			Span<byte> span139 = range139.GetSpan();
+			int num167 = ProtocolParser.WriteUInt32((uint)num166, span139, 0);
+			if (num167 < 3)
+			{
+				span139[num167 - 1] |= 128;
+				while (num167 < 2)
+				{
+					span139[num167++] = 128;
+				}
+				span139[2] = 0;
+			}
+		}
+		if (instance.cargoShip != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range140 = stream.GetRange(3);
+			int position140 = stream.Position;
+			CargoShip.Serialize(stream, instance.cargoShip);
+			int num168 = stream.Position - position140;
+			if (num168 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field cargoShip (ProtoBuf.CargoShip)");
+			}
+			Span<byte> span140 = range140.GetSpan();
+			int num169 = ProtocolParser.WriteUInt32((uint)num168, span140, 0);
+			if (num169 < 3)
+			{
+				span140[num169 - 1] |= 128;
+				while (num169 < 2)
+				{
+					span140[num169++] = 128;
+				}
+				span140[2] = 0;
+			}
+		}
+		if (instance.cargoShipContainer != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range141 = stream.GetRange(1);
+			int position141 = stream.Position;
+			CargoShipContainer.Serialize(stream, instance.cargoShipContainer);
+			int num170 = stream.Position - position141;
+			if (num170 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field cargoShipContainer (ProtoBuf.CargoShipContainer)");
+			}
+			Span<byte> span141 = range141.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num170, span141, 0);
+		}
+		if (instance.missionMapMarker != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range142 = stream.GetRange(5);
+			int position142 = stream.Position;
+			MissionMapMarker.Serialize(stream, instance.missionMapMarker);
+			int val36 = stream.Position - position142;
+			Span<byte> span142 = range142.GetSpan();
+			int num171 = ProtocolParser.WriteUInt32((uint)val36, span142, 0);
+			if (num171 < 5)
+			{
+				span142[num171 - 1] |= 128;
+				while (num171 < 4)
+				{
+					span142[num171++] = 128;
+				}
+				span142[4] = 0;
+			}
+		}
+		if (instance.bike != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range143 = stream.GetRange(1);
+			int position143 = stream.Position;
+			Bike.Serialize(stream, instance.bike);
+			int num172 = stream.Position - position143;
+			if (num172 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field bike (ProtoBuf.Bike)");
+			}
+			Span<byte> span143 = range143.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num172, span143, 0);
+		}
+		if (instance.diverPropulsionVehicle != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range144 = stream.GetRange(1);
+			int position144 = stream.Position;
+			DiverPropulsionVehicle.Serialize(stream, instance.diverPropulsionVehicle);
+			int num173 = stream.Position - position144;
+			if (num173 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field diverPropulsionVehicle (ProtoBuf.DiverPropulsionVehicle)");
+			}
+			Span<byte> span144 = range144.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num173, span144, 0);
+		}
+		if (instance.travellingVendor != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range145 = stream.GetRange(1);
+			int position145 = stream.Position;
+			TravellingVendor.Serialize(stream, instance.travellingVendor);
+			int num174 = stream.Position - position145;
+			if (num174 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field travellingVendor (ProtoBuf.TravellingVendor)");
+			}
+			Span<byte> span145 = range145.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num174, span145, 0);
+		}
+		if (instance.vendingDynamicPricing != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(10);
+			BufferStream.RangeHandle range146 = stream.GetRange(3);
+			int position146 = stream.Position;
+			VendingDynamicPricing.Serialize(stream, instance.vendingDynamicPricing);
+			int num175 = stream.Position - position146;
+			if (num175 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field vendingDynamicPricing (ProtoBuf.VendingDynamicPricing)");
+			}
+			Span<byte> span146 = range146.GetSpan();
+			int num176 = ProtocolParser.WriteUInt32((uint)num175, span146, 0);
+			if (num176 < 3)
+			{
+				span146[num176 - 1] |= 128;
+				while (num176 < 2)
+				{
+					span146[num176++] = 128;
+				}
+				span146[2] = 0;
+			}
+		}
+		if (instance.tinCanAlarm != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range147 = stream.GetRange(1);
+			int position147 = stream.Position;
+			TinCanAlarm.Serialize(stream, instance.tinCanAlarm);
+			int num177 = stream.Position - position147;
+			if (num177 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field tinCanAlarm (ProtoBuf.TinCanAlarm)");
+			}
+			Span<byte> span147 = range147.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num177, span147, 0);
+		}
+		if (instance.digitalClock != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range148 = stream.GetRange(3);
+			int position148 = stream.Position;
+			DigitalClock.Serialize(stream, instance.digitalClock);
+			int num178 = stream.Position - position148;
+			if (num178 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field digitalClock (ProtoBuf.DigitalClock)");
+			}
+			Span<byte> span148 = range148.GetSpan();
+			int num179 = ProtocolParser.WriteUInt32((uint)num178, span148, 0);
+			if (num179 < 3)
+			{
+				span148[num179 - 1] |= 128;
+				while (num179 < 2)
+				{
+					span148[num179++] = 128;
+				}
+				span148[2] = 0;
+			}
+		}
+		if (instance.elevatorLift != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range149 = stream.GetRange(1);
+			int position149 = stream.Position;
+			ElevatorLift.Serialize(stream, instance.elevatorLift);
+			int num180 = stream.Position - position149;
+			if (num180 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field elevatorLift (ProtoBuf.ElevatorLift)");
+			}
+			Span<byte> span149 = range149.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num180, span149, 0);
+		}
+		if (instance.npcVendingMachine != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range150 = stream.GetRange(1);
+			int position150 = stream.Position;
+			NPCVendingMachine.Serialize(stream, instance.npcVendingMachine);
+			int num181 = stream.Position - position150;
+			if (num181 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field npcVendingMachine (ProtoBuf.NPCVendingMachine)");
+			}
+			Span<byte> span150 = range150.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num181, span150, 0);
+		}
+		if (instance.mailbox != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range151 = stream.GetRange(5);
+			int position151 = stream.Position;
+			Mailbox.Serialize(stream, instance.mailbox);
+			int val37 = stream.Position - position151;
+			Span<byte> span151 = range151.GetSpan();
+			int num182 = ProtocolParser.WriteUInt32((uint)val37, span151, 0);
+			if (num182 < 5)
+			{
+				span151[num182 - 1] |= 128;
+				while (num182 < 4)
+				{
+					span151[num182++] = 128;
+				}
+				span151[4] = 0;
+			}
+		}
+		if (instance.projectileWeaponMod != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range152 = stream.GetRange(1);
+			int position152 = stream.Position;
+			GunWeaponMod.Serialize(stream, instance.projectileWeaponMod);
+			int num183 = stream.Position - position152;
+			if (num183 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field projectileWeaponMod (ProtoBuf.GunWeaponMod)");
+			}
+			Span<byte> span152 = range152.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num183, span152, 0);
+		}
+		if (instance.baseSculpture != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range153 = stream.GetRange(1);
+			int position153 = stream.Position;
+			BaseSculpture.Serialize(stream, instance.baseSculpture);
+			int num184 = stream.Position - position153;
+			if (num184 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseSculpture (ProtoBuf.BaseSculpture)");
+			}
+			Span<byte> span153 = range153.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num184, span153, 0);
+		}
+		if (instance.vendingMachineStats != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range154 = stream.GetRange(3);
+			int position154 = stream.Position;
+			VendingMachineStats.Serialize(stream, instance.vendingMachineStats);
+			int num185 = stream.Position - position154;
+			if (num185 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field vendingMachineStats (ProtoBuf.VendingMachineStats)");
+			}
+			Span<byte> span154 = range154.GetSpan();
+			int num186 = ProtocolParser.WriteUInt32((uint)num185, span154, 0);
+			if (num186 < 3)
+			{
+				span154[num186 - 1] |= 128;
+				while (num186 < 2)
+				{
+					span154[num186++] = 128;
+				}
+				span154[2] = 0;
+			}
+		}
+		if (instance.catapult != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range155 = stream.GetRange(1);
+			int position155 = stream.Position;
+			Catapult.Serialize(stream, instance.catapult);
+			int num187 = stream.Position - position155;
+			if (num187 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field catapult (ProtoBuf.Catapult)");
+			}
+			Span<byte> span155 = range155.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num187, span155, 0);
+		}
+		if (instance.siegeTower != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range156 = stream.GetRange(1);
+			int position156 = stream.Position;
+			SiegeTower.Serialize(stream, instance.siegeTower);
+			int num188 = stream.Position - position156;
+			if (num188 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field siegeTower (ProtoBuf.SiegeTower)");
+			}
+			Span<byte> span156 = range156.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num188, span156, 0);
+		}
+		if (instance.ballista != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range157 = stream.GetRange(1);
+			int position157 = stream.Position;
+			Ballista.Serialize(stream, instance.ballista);
+			int num189 = stream.Position - position157;
+			if (num189 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field ballista (ProtoBuf.Ballista)");
+			}
+			Span<byte> span157 = range157.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num189, span157, 0);
+		}
+		if (instance.ballistaGun != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range158 = stream.GetRange(1);
+			int position158 = stream.Position;
+			BallistaGun.Serialize(stream, instance.ballistaGun);
+			int num190 = stream.Position - position158;
+			if (num190 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field ballistaGun (ProtoBuf.BallistaGun)");
+			}
+			Span<byte> span158 = range158.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num190, span158, 0);
+		}
+		if (instance.batteringRam != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range159 = stream.GetRange(1);
+			int position159 = stream.Position;
+			BatteringRam.Serialize(stream, instance.batteringRam);
+			int num191 = stream.Position - position159;
+			if (num191 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field batteringRam (ProtoBuf.BatteringRam)");
+			}
+			Span<byte> span159 = range159.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num191, span159, 0);
+		}
+		if (instance.temporaryRagdoll != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range160 = stream.GetRange(1);
+			int position160 = stream.Position;
+			TemporaryRagdoll.Serialize(stream, instance.temporaryRagdoll);
+			int num192 = stream.Position - position160;
+			if (num192 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field temporaryRagdoll (ProtoBuf.TemporaryRagdoll)");
+			}
+			Span<byte> span160 = range160.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num192, span160, 0);
+		}
+		if (instance.constructableEntity != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(11);
+			BufferStream.RangeHandle range161 = stream.GetRange(3);
+			int position161 = stream.Position;
+			ConstructableEntity.Serialize(stream, instance.constructableEntity);
+			int num193 = stream.Position - position161;
+			if (num193 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field constructableEntity (ProtoBuf.ConstructableEntity)");
+			}
+			Span<byte> span161 = range161.GetSpan();
+			int num194 = ProtocolParser.WriteUInt32((uint)num193, span161, 0);
+			if (num194 < 3)
+			{
+				span161[num194 - 1] |= 128;
+				while (num194 < 2)
+				{
+					span161[num194++] = 128;
+				}
+				span161[2] = 0;
+			}
+		}
+		if (instance.chickenCoop != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range162 = stream.GetRange(3);
+			int position162 = stream.Position;
+			ChickenCoop.Serialize(stream, instance.chickenCoop);
+			int num195 = stream.Position - position162;
+			if (num195 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field chickenCoop (ProtoBuf.ChickenCoop)");
+			}
+			Span<byte> span162 = range162.GetSpan();
+			int num196 = ProtocolParser.WriteUInt32((uint)num195, span162, 0);
+			if (num196 < 3)
+			{
+				span162[num196 - 1] |= 128;
+				while (num196 < 2)
+				{
+					span162[num196++] = 128;
+				}
+				span162[2] = 0;
+			}
+		}
+		if (instance.farmableAnimal != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range163 = stream.GetRange(5);
+			int position163 = stream.Position;
+			FarmableAnimal.Serialize(stream, instance.farmableAnimal);
+			int val38 = stream.Position - position163;
+			Span<byte> span163 = range163.GetSpan();
+			int num197 = ProtocolParser.WriteUInt32((uint)val38, span163, 0);
+			if (num197 < 5)
+			{
+				span163[num197 - 1] |= 128;
+				while (num197 < 4)
+				{
+					span163[num197++] = 128;
+				}
+				span163[4] = 0;
+			}
+		}
+		if (instance.ownership != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range164 = stream.GetRange(5);
+			int position164 = stream.Position;
+			ItemOwnershipAmount.Serialize(stream, instance.ownership);
+			int val39 = stream.Position - position164;
+			Span<byte> span164 = range164.GetSpan();
+			int num198 = ProtocolParser.WriteUInt32((uint)val39, span164, 0);
+			if (num198 < 5)
+			{
+				span164[num198 - 1] |= 128;
+				while (num198 < 4)
+				{
+					span164[num198++] = 128;
+				}
+				span164[4] = 0;
+			}
+		}
+		if (instance.beehive != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range165 = stream.GetRange(1);
+			int position165 = stream.Position;
+			Beehive.Serialize(stream, instance.beehive);
+			int num199 = stream.Position - position165;
+			if (num199 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field beehive (ProtoBuf.Beehive)");
+			}
+			Span<byte> span165 = range165.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num199, span165, 0);
+		}
+		if (instance.beeMasterSwarm != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range166 = stream.GetRange(1);
+			int position166 = stream.Position;
+			BeeMasterSwarm.Serialize(stream, instance.beeMasterSwarm);
+			int num200 = stream.Position - position166;
+			if (num200 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field beeMasterSwarm (ProtoBuf.BeeMasterSwarm)");
+			}
+			Span<byte> span166 = range166.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num200, span166, 0);
+		}
+		if (instance.containerCorpse != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range167 = stream.GetRange(5);
+			int position167 = stream.Position;
+			ContainerCorpseData.Serialize(stream, instance.containerCorpse);
+			int val40 = stream.Position - position167;
+			Span<byte> span167 = range167.GetSpan();
+			int num201 = ProtocolParser.WriteUInt32((uint)val40, span167, 0);
+			if (num201 < 5)
+			{
+				span167[num201 - 1] |= 128;
+				while (num201 < 4)
+				{
+					span167[num201++] = 128;
+				}
+				span167[4] = 0;
+			}
+		}
+		if (instance.npcTargetState != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range168 = stream.GetRange(1);
+			int position168 = stream.Position;
+			NPCTargetState.Serialize(stream, instance.npcTargetState);
+			int num202 = stream.Position - position168;
+			if (num202 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field npcTargetState (ProtoBuf.NPCTargetState)");
+			}
+			Span<byte> span168 = range168.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num202, span168, 0);
+		}
+		if (instance.vineMountable != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range169 = stream.GetRange(3);
+			int position169 = stream.Position;
+			VineMountable.Serialize(stream, instance.vineMountable);
+			int num203 = stream.Position - position169;
+			if (num203 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field vineMountable (ProtoBuf.VineMountable)");
+			}
+			Span<byte> span169 = range169.GetSpan();
+			int num204 = ProtocolParser.WriteUInt32((uint)num203, span169, 0);
+			if (num204 < 3)
+			{
+				span169[num204 - 1] |= 128;
+				while (num204 < 2)
+				{
+					span169[num204++] = 128;
+				}
+				span169[2] = 0;
+			}
+		}
+		if (instance.vineTree != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range170 = stream.GetRange(3);
+			int position170 = stream.Position;
+			VineTree.Serialize(stream, instance.vineTree);
+			int num205 = stream.Position - position170;
+			if (num205 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field vineTree (ProtoBuf.VineTree)");
+			}
+			Span<byte> span170 = range170.GetSpan();
+			int num206 = ProtocolParser.WriteUInt32((uint)num205, span170, 0);
+			if (num206 < 3)
+			{
+				span170[num206 - 1] |= 128;
+				while (num206 < 2)
+				{
+					span170[num206++] = 128;
+				}
+				span170[2] = 0;
+			}
+		}
+		if (instance.treeRespawn != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range171 = stream.GetRange(1);
+			int position171 = stream.Position;
+			TreeRespawn.Serialize(stream, instance.treeRespawn);
+			int num207 = stream.Position - position171;
+			if (num207 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field treeRespawn (ProtoBuf.TreeRespawn)");
+			}
+			Span<byte> span171 = range171.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num207, span171, 0);
+		}
+		if (instance.wallpaperTool != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range172 = stream.GetRange(1);
+			int position172 = stream.Position;
+			WallpaperTool.Serialize(stream, instance.wallpaperTool);
+			int num208 = stream.Position - position172;
+			if (num208 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field wallpaperTool (ProtoBuf.WallpaperTool)");
+			}
+			Span<byte> span172 = range172.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num208, span172, 0);
+		}
+		if (instance.commandBlock != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range173 = stream.GetRange(5);
+			int position173 = stream.Position;
+			CommandBlock.Serialize(stream, instance.commandBlock);
+			int val41 = stream.Position - position173;
+			Span<byte> span173 = range173.GetSpan();
+			int num209 = ProtocolParser.WriteUInt32((uint)val41, span173, 0);
+			if (num209 < 5)
+			{
+				span173[num209 - 1] |= 128;
+				while (num209 < 4)
+				{
+					span173[num209++] = 128;
+				}
+				span173[4] = 0;
+			}
+		}
+		if (instance.staticRespawn != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range174 = stream.GetRange(3);
+			int position174 = stream.Position;
+			StaticRespawnAreaData.Serialize(stream, instance.staticRespawn);
+			int num210 = stream.Position - position174;
+			if (num210 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field staticRespawn (ProtoBuf.StaticRespawnAreaData)");
+			}
+			Span<byte> span174 = range174.GetSpan();
+			int num211 = ProtocolParser.WriteUInt32((uint)num210, span174, 0);
+			if (num211 < 3)
+			{
+				span174[num211 - 1] |= 128;
+				while (num211 < 2)
+				{
+					span174[num211++] = 128;
+				}
+				span174[2] = 0;
+			}
+		}
+		if (instance.buriedItemStorage != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range175 = stream.GetRange(5);
+			int position175 = stream.Position;
+			BuriedItems.Serialize(stream, instance.buriedItemStorage);
+			int val42 = stream.Position - position175;
+			Span<byte> span175 = range175.GetSpan();
+			int num212 = ProtocolParser.WriteUInt32((uint)val42, span175, 0);
+			if (num212 < 5)
+			{
+				span175[num212 - 1] |= 128;
+				while (num212 < 4)
+				{
+					span175[num212++] = 128;
+				}
+				span175[4] = 0;
+			}
+		}
+		if (instance.mannequin != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range176 = stream.GetRange(3);
+			int position176 = stream.Position;
+			Mannequin.Serialize(stream, instance.mannequin);
+			int num213 = stream.Position - position176;
+			if (num213 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field mannequin (ProtoBuf.Mannequin)");
+			}
+			Span<byte> span176 = range176.GetSpan();
+			int num214 = ProtocolParser.WriteUInt32((uint)num213, span176, 0);
+			if (num214 < 3)
+			{
+				span176[num214 - 1] |= 128;
+				while (num214 < 2)
+				{
+					span176[num214++] = 128;
+				}
+				span176[2] = 0;
+			}
+		}
+		if (instance.baseMelee != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(12);
+			BufferStream.RangeHandle range177 = stream.GetRange(1);
+			int position177 = stream.Position;
+			BaseMelee.Serialize(stream, instance.baseMelee);
+			int num215 = stream.Position - position177;
+			if (num215 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseMelee (ProtoBuf.BaseMelee)");
+			}
+			Span<byte> span177 = range177.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num215, span177, 0);
+		}
+		if (instance.door != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range178 = stream.GetRange(1);
+			int position178 = stream.Position;
+			Door.Serialize(stream, instance.door);
+			int num216 = stream.Position - position178;
+			if (num216 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field door (ProtoBuf.Door)");
+			}
+			Span<byte> span178 = range178.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num216, span178, 0);
+		}
+		if (instance.deepSeaPortal != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range179 = stream.GetRange(1);
+			int position179 = stream.Position;
+			DeepSeaPortal.Serialize(stream, instance.deepSeaPortal);
+			int num217 = stream.Position - position179;
+			if (num217 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field deepSeaPortal (ProtoBuf.DeepSeaPortal)");
+			}
+			Span<byte> span179 = range179.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num217, span179, 0);
+		}
+		if (instance.baseMountable != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range180 = stream.GetRange(1);
+			int position180 = stream.Position;
+			BaseMountable.Serialize(stream, instance.baseMountable);
+			int num218 = stream.Position - position180;
+			if (num218 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field baseMountable (ProtoBuf.BaseMountable)");
+			}
+			Span<byte> span180 = range180.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num218, span180, 0);
+		}
+		if (instance.smallEngine != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range181 = stream.GetRange(1);
+			int position181 = stream.Position;
+			SmallEngine.Serialize(stream, instance.smallEngine);
+			int num219 = stream.Position - position181;
+			if (num219 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field smallEngine (ProtoBuf.SmallEngine)");
+			}
+			Span<byte> span181 = range181.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num219, span181, 0);
+		}
+		if (instance.playerBoat != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range182 = stream.GetRange(5);
+			int position182 = stream.Position;
+			PlayerBoat.Serialize(stream, instance.playerBoat);
+			int val43 = stream.Position - position182;
+			Span<byte> span182 = range182.GetSpan();
+			int num220 = ProtocolParser.WriteUInt32((uint)val43, span182, 0);
+			if (num220 < 5)
+			{
+				span182[num220 - 1] |= 128;
+				while (num220 < 4)
+				{
+					span182[num220++] = 128;
+				}
+				span182[4] = 0;
+			}
+		}
+		if (instance.steeringWheel != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range183 = stream.GetRange(5);
+			int position183 = stream.Position;
+			SteeringWheel.Serialize(stream, instance.steeringWheel);
+			int val44 = stream.Position - position183;
+			Span<byte> span183 = range183.GetSpan();
+			int num221 = ProtocolParser.WriteUInt32((uint)val44, span183, 0);
+			if (num221 < 5)
+			{
+				span183[num221 - 1] |= 128;
+				while (num221 < 4)
+				{
+					span183[num221++] = 128;
+				}
+				span183[4] = 0;
+			}
+		}
+		if (instance.deepSeaManager != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range184 = stream.GetRange(3);
+			int position184 = stream.Position;
+			DeepSeaManager.Serialize(stream, instance.deepSeaManager);
+			int num222 = stream.Position - position184;
+			if (num222 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field deepSeaManager (ProtoBuf.DeepSeaManager)");
+			}
+			Span<byte> span184 = range184.GetSpan();
+			int num223 = ProtocolParser.WriteUInt32((uint)num222, span184, 0);
+			if (num223 < 3)
+			{
+				span184[num223 - 1] |= 128;
+				while (num223 < 2)
+				{
+					span184[num223++] = 128;
+				}
+				span184[2] = 0;
+			}
+		}
+		if (instance.scientistBoatOilrigManager != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range185 = stream.GetRange(3);
+			int position185 = stream.Position;
+			ScientistBoatOilrigManager.Serialize(stream, instance.scientistBoatOilrigManager);
+			int num224 = stream.Position - position185;
+			if (num224 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field scientistBoatOilrigManager (ProtoBuf.ScientistBoatOilrigManager)");
+			}
+			Span<byte> span185 = range185.GetSpan();
+			int num225 = ProtocolParser.WriteUInt32((uint)num224, span185, 0);
+			if (num225 < 3)
+			{
+				span185[num225 - 1] |= 128;
+				while (num225 < 2)
+				{
+					span185[num225++] = 128;
+				}
+				span185[2] = 0;
+			}
+		}
+		if (instance.storageAdaptor != null)
+		{
+			stream.WriteByte(202);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range186 = stream.GetRange(5);
+			int position186 = stream.Position;
+			StorageAdaptor.Serialize(stream, instance.storageAdaptor);
+			int val45 = stream.Position - position186;
+			Span<byte> span186 = range186.GetSpan();
+			int num226 = ProtocolParser.WriteUInt32((uint)val45, span186, 0);
+			if (num226 < 5)
+			{
+				span186[num226 - 1] |= 128;
+				while (num226 < 4)
+				{
+					span186[num226++] = 128;
+				}
+				span186[4] = 0;
+			}
+		}
+		if (instance.helicopterFlares != null)
+		{
+			stream.WriteByte(210);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range187 = stream.GetRange(1);
+			int position187 = stream.Position;
+			HelicopterFlares.Serialize(stream, instance.helicopterFlares);
+			int num227 = stream.Position - position187;
+			if (num227 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field helicopterFlares (ProtoBuf.HelicopterFlares)");
+			}
+			Span<byte> span187 = range187.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num227, span187, 0);
+		}
+		if (instance.wipeLaptop != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range188 = stream.GetRange(1);
+			int position188 = stream.Position;
+			WipeLaptop.Serialize(stream, instance.wipeLaptop);
+			int num228 = stream.Position - position188;
+			if (num228 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field wipeLaptop (ProtoBuf.WipeLaptop)");
+			}
+			Span<byte> span188 = range188.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num228, span188, 0);
+		}
+		if (instance.mountedWeapon != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range189 = stream.GetRange(1);
+			int position189 = stream.Position;
+			MountedWeapon.Serialize(stream, instance.mountedWeapon);
+			int num229 = stream.Position - position189;
+			if (num229 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field mountedWeapon (ProtoBuf.MountedWeapon)");
+			}
+			Span<byte> span189 = range189.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num229, span189, 0);
+		}
+		if (instance.boatBuildingBlock != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range190 = stream.GetRange(1);
+			int position190 = stream.Position;
+			BoatBuildingBlock.Serialize(stream, instance.boatBuildingBlock);
+			int num230 = stream.Position - position190;
+			if (num230 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field boatBuildingBlock (ProtoBuf.BoatBuildingBlock)");
+			}
+			Span<byte> span190 = range190.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num230, span190, 0);
+		}
+		if (instance.boatBuildingStation != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range191 = stream.GetRange(1);
+			int position191 = stream.Position;
+			BoatBuildingStation.Serialize(stream, instance.boatBuildingStation);
+			int num231 = stream.Position - position191;
+			if (num231 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field boatBuildingStation (ProtoBuf.BoatBuildingStation)");
+			}
+			Span<byte> span191 = range191.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num231, span191, 0);
+		}
+		if (instance.displayingBoxStorage != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(13);
+			BufferStream.RangeHandle range192 = stream.GetRange(3);
+			int position192 = stream.Position;
+			DisplayingBoxStorage.Serialize(stream, instance.displayingBoxStorage);
+			int num232 = stream.Position - position192;
+			if (num232 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field displayingBoxStorage (ProtoBuf.DisplayingBoxStorage)");
+			}
+			Span<byte> span192 = range192.GetSpan();
+			int num233 = ProtocolParser.WriteUInt32((uint)num232, span192, 0);
+			if (num233 < 3)
+			{
+				span192[num233 - 1] |= 128;
+				while (num233 < 2)
+				{
+					span192[num233++] = 128;
+				}
+				span192[2] = 0;
+			}
+		}
+		if (instance.workbench != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range193 = stream.GetRange(3);
+			int position193 = stream.Position;
+			Workbench.Serialize(stream, instance.workbench);
+			int num234 = stream.Position - position193;
+			if (num234 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field workbench (ProtoBuf.Workbench)");
+			}
+			Span<byte> span193 = range193.GetSpan();
+			int num235 = ProtocolParser.WriteUInt32((uint)num234, span193, 0);
+			if (num235 < 3)
+			{
+				span193[num235 - 1] |= 128;
+				while (num235 < 2)
+				{
+					span193[num235++] = 128;
+				}
+				span193[2] = 0;
+			}
+		}
+		if (instance.apartmentLock != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range194 = stream.GetRange(1);
+			int position194 = stream.Position;
+			ApartmentLock.Serialize(stream, instance.apartmentLock);
+			int num236 = stream.Position - position194;
+			if (num236 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field apartmentLock (ProtoBuf.ApartmentLock)");
+			}
+			Span<byte> span194 = range194.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num236, span194, 0);
+		}
+		if (instance.rentableShop != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range195 = stream.GetRange(5);
+			int position195 = stream.Position;
+			RentableShop.Serialize(stream, instance.rentableShop);
+			int val46 = stream.Position - position195;
+			Span<byte> span195 = range195.GetSpan();
+			int num237 = ProtocolParser.WriteUInt32((uint)val46, span195, 0);
+			if (num237 < 5)
+			{
+				span195[num237 - 1] |= 128;
+				while (num237 < 4)
+				{
+					span195[num237++] = 128;
+				}
+				span195[4] = 0;
+			}
+		}
+		if (instance.apartmentRoom != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range196 = stream.GetRange(5);
+			int position196 = stream.Position;
+			ApartmentRoom.Serialize(stream, instance.apartmentRoom);
+			int val47 = stream.Position - position196;
+			Span<byte> span196 = range196.GetSpan();
+			int num238 = ProtocolParser.WriteUInt32((uint)val47, span196, 0);
+			if (num238 < 5)
+			{
+				span196[num238 - 1] |= 128;
+				while (num238 < 4)
+				{
+					span196[num238++] = 128;
+				}
+				span196[4] = 0;
+			}
+		}
+		if (instance.apartmentBuilding != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range197 = stream.GetRange(5);
+			int position197 = stream.Position;
+			ApartmentBuilding.Serialize(stream, instance.apartmentBuilding);
+			int val48 = stream.Position - position197;
+			Span<byte> span197 = range197.GetSpan();
+			int num239 = ProtocolParser.WriteUInt32((uint)val48, span197, 0);
+			if (num239 < 5)
+			{
+				span197[num239 - 1] |= 128;
+				while (num239 < 4)
+				{
+					span197[num239++] = 128;
+				}
+				span197[4] = 0;
+			}
+		}
+		if (instance.apartmentUpkeep != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range198 = stream.GetRange(1);
+			int position198 = stream.Position;
+			ApartmentUpkeepTerminal.Serialize(stream, instance.apartmentUpkeep);
+			int num240 = stream.Position - position198;
+			if (num240 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field apartmentUpkeep (ProtoBuf.ApartmentUpkeepTerminal)");
+			}
+			Span<byte> span198 = range198.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num240, span198, 0);
+		}
+		if (instance.mortar != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range199 = stream.GetRange(1);
+			int position199 = stream.Position;
+			MortarData.Serialize(stream, instance.mortar);
+			int num241 = stream.Position - position199;
+			if (num241 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field mortar (ProtoBuf.MortarData)");
+			}
+			Span<byte> span199 = range199.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num241, span199, 0);
+		}
+		if (instance.apartmentDoor != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range200 = stream.GetRange(5);
+			int position200 = stream.Position;
+			ApartmentDoor.Serialize(stream, instance.apartmentDoor);
+			int val49 = stream.Position - position200;
+			Span<byte> span200 = range200.GetSpan();
+			int num242 = ProtocolParser.WriteUInt32((uint)val49, span200, 0);
+			if (num242 < 5)
+			{
+				span200[num242 - 1] |= 128;
+				while (num242 < 4)
+				{
+					span200[num242++] = 128;
+				}
+				span200[4] = 0;
+			}
+		}
+		if (instance.apartmentMailbox != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range201 = stream.GetRange(5);
+			int position201 = stream.Position;
+			ApartmentMailbox.Serialize(stream, instance.apartmentMailbox);
+			int val50 = stream.Position - position201;
+			Span<byte> span201 = range201.GetSpan();
+			int num243 = ProtocolParser.WriteUInt32((uint)val50, span201, 0);
+			if (num243 < 5)
+			{
+				span201[num243 - 1] |= 128;
+				while (num243 < 4)
+				{
+					span201[num243++] = 128;
+				}
+				span201[4] = 0;
+			}
+		}
+		if (instance.Pooltable != null)
+		{
+			stream.WriteByte(218);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range202 = stream.GetRange(3);
+			int position202 = stream.Position;
+			Pooltable.Serialize(stream, instance.Pooltable);
+			int num244 = stream.Position - position202;
+			if (num244 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field Pooltable (ProtoBuf.Pooltable)");
+			}
+			Span<byte> span202 = range202.GetSpan();
+			int num245 = ProtocolParser.WriteUInt32((uint)num244, span202, 0);
+			if (num245 < 3)
+			{
+				span202[num245 - 1] |= 128;
+				while (num245 < 2)
+				{
+					span202[num245++] = 128;
+				}
+				span202[2] = 0;
+			}
+		}
+		if (instance.dartsGame != null)
+		{
+			stream.WriteByte(226);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range203 = stream.GetRange(5);
+			int position203 = stream.Position;
+			DartsGame.Serialize(stream, instance.dartsGame);
+			int num246 = stream.Position - position203;
+			if (num246 > 34359738367L)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field dartsGame (ProtoBuf.DartsGame)");
+			}
+			Span<byte> span203 = range203.GetSpan();
+			int num247 = ProtocolParser.WriteUInt32((uint)num246, span203, 0);
+			if (num247 < 5)
+			{
+				span203[num247 - 1] |= 128;
+				while (num247 < 4)
+				{
+					span203[num247++] = 128;
+				}
+				span203[4] = 0;
+			}
+		}
+		if (instance.dartsGameLeaderboard != null)
+		{
+			stream.WriteByte(234);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range204 = stream.GetRange(5);
+			int position204 = stream.Position;
+			DartsGameLeaderboard.Serialize(stream, instance.dartsGameLeaderboard);
+			int val51 = stream.Position - position204;
+			Span<byte> span204 = range204.GetSpan();
+			int num248 = ProtocolParser.WriteUInt32((uint)val51, span204, 0);
+			if (num248 < 5)
+			{
+				span204[num248 - 1] |= 128;
+				while (num248 < 4)
+				{
+					span204[num248++] = 128;
+				}
+				span204[4] = 0;
+			}
+		}
+		if (instance.satelliteControlComputer != null)
+		{
+			stream.WriteByte(242);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range205 = stream.GetRange(3);
+			int position205 = stream.Position;
+			SatelliteControlComputer.Serialize(stream, instance.satelliteControlComputer);
+			int num249 = stream.Position - position205;
+			if (num249 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field satelliteControlComputer (ProtoBuf.SatelliteControlComputer)");
+			}
+			Span<byte> span205 = range205.GetSpan();
+			int num250 = ProtocolParser.WriteUInt32((uint)num249, span205, 0);
+			if (num250 < 3)
+			{
+				span205[num250 - 1] |= 128;
+				while (num250 < 2)
+				{
+					span205[num250++] = 128;
+				}
+				span205[2] = 0;
+			}
+		}
+		if (instance.satelliteCrash != null)
+		{
+			stream.WriteByte(250);
+			stream.WriteByte(14);
+			BufferStream.RangeHandle range206 = stream.GetRange(1);
+			int position206 = stream.Position;
+			SatelliteCrash.Serialize(stream, instance.satelliteCrash);
+			int num251 = stream.Position - position206;
+			if (num251 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field satelliteCrash (ProtoBuf.SatelliteCrash)");
+			}
+			Span<byte> span206 = range206.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num251, span206, 0);
+		}
+		if (instance.satelliteCrashRemains != null)
+		{
+			stream.WriteByte(130);
+			stream.WriteByte(15);
+			BufferStream.RangeHandle range207 = stream.GetRange(1);
+			int position207 = stream.Position;
+			SatelliteCrashRemains.Serialize(stream, instance.satelliteCrashRemains);
+			int num252 = stream.Position - position207;
+			if (num252 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field satelliteCrashRemains (ProtoBuf.SatelliteCrashRemains)");
+			}
+			Span<byte> span207 = range207.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num252, span207, 0);
+		}
+		if (instance.electricGenerator != null)
+		{
+			stream.WriteByte(138);
+			stream.WriteByte(15);
+			BufferStream.RangeHandle range208 = stream.GetRange(1);
+			int position208 = stream.Position;
+			ElectricGenerator.Serialize(stream, instance.electricGenerator);
+			int num253 = stream.Position - position208;
+			if (num253 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field electricGenerator (ProtoBuf.ElectricGenerator)");
+			}
+			Span<byte> span208 = range208.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num253, span208, 0);
+		}
+		if (instance.powergridManager != null)
+		{
+			stream.WriteByte(146);
+			stream.WriteByte(15);
+			BufferStream.RangeHandle range209 = stream.GetRange(3);
+			int position209 = stream.Position;
+			PowergridManager.Serialize(stream, instance.powergridManager);
+			int num254 = stream.Position - position209;
+			if (num254 > 2097151)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field powergridManager (ProtoBuf.PowergridManager)");
+			}
+			Span<byte> span209 = range209.GetSpan();
+			int num255 = ProtocolParser.WriteUInt32((uint)num254, span209, 0);
+			if (num255 < 3)
+			{
+				span209[num255 - 1] |= 128;
+				while (num255 < 2)
+				{
+					span209[num255++] = 128;
+				}
+				span209[2] = 0;
+			}
+		}
+		if (instance.oilswitchBroadcast != null)
+		{
+			stream.WriteByte(154);
+			stream.WriteByte(15);
+			BufferStream.RangeHandle range210 = stream.GetRange(1);
+			int position210 = stream.Position;
+			OilSwitchBroadcast.Serialize(stream, instance.oilswitchBroadcast);
+			int num256 = stream.Position - position210;
+			if (num256 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field oilswitchBroadcast (ProtoBuf.OilSwitchBroadcast)");
+			}
+			Span<byte> span210 = range210.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num256, span210, 0);
+		}
+		if (instance.sprinkler != null)
+		{
+			stream.WriteByte(162);
+			stream.WriteByte(15);
+			BufferStream.RangeHandle range211 = stream.GetRange(1);
+			int position211 = stream.Position;
+			Sprinkler.Serialize(stream, instance.sprinkler);
+			int num257 = stream.Position - position211;
+			if (num257 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field sprinkler (ProtoBuf.Sprinkler)");
+			}
+			Span<byte> span211 = range211.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num257, span211, 0);
+		}
+		if (instance.hackableLockedCrate != null)
+		{
+			stream.WriteByte(170);
+			stream.WriteByte(15);
+			BufferStream.RangeHandle range212 = stream.GetRange(1);
+			int position212 = stream.Position;
+			HackableLockedCrate.Serialize(stream, instance.hackableLockedCrate);
+			int num258 = stream.Position - position212;
+			if (num258 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field hackableLockedCrate (ProtoBuf.HackableLockedCrate)");
+			}
+			Span<byte> span212 = range212.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num258, span212, 0);
+		}
+		if (instance.lockedByEntCrate != null)
+		{
+			stream.WriteByte(178);
+			stream.WriteByte(15);
+			BufferStream.RangeHandle range213 = stream.GetRange(1);
+			int position213 = stream.Position;
+			LockedByEntCrate.Serialize(stream, instance.lockedByEntCrate);
+			int num259 = stream.Position - position213;
+			if (num259 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field lockedByEntCrate (ProtoBuf.LockedByEntCrate)");
+			}
+			Span<byte> span213 = range213.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num259, span213, 0);
+		}
+		if (instance.territoryZones != null)
+		{
+			stream.WriteByte(186);
+			stream.WriteByte(15);
+			BufferStream.RangeHandle range214 = stream.GetRange(5);
+			int position214 = stream.Position;
+			TerritoryZones.Serialize(stream, instance.territoryZones);
+			int val52 = stream.Position - position214;
+			Span<byte> span214 = range214.GetSpan();
+			int num260 = ProtocolParser.WriteUInt32((uint)val52, span214, 0);
+			if (num260 < 5)
+			{
+				span214[num260 - 1] |= 128;
+				while (num260 < 4)
+				{
+					span214[num260++] = 128;
+				}
+				span214[4] = 0;
+			}
+		}
+		if (instance.monumentBlocker != null)
+		{
+			stream.WriteByte(194);
+			stream.WriteByte(15);
+			BufferStream.RangeHandle range215 = stream.GetRange(1);
+			int position215 = stream.Position;
+			MonumentBlocker.Serialize(stream, instance.monumentBlocker);
+			int num261 = stream.Position - position215;
+			if (num261 > 127)
+			{
+				throw new InvalidOperationException("Not enough space was reserved for the length prefix of field monumentBlocker (ProtoBuf.MonumentBlocker)");
+			}
+			Span<byte> span215 = range215.GetSpan();
+			ProtocolParser.WriteUInt32((uint)num261, span215, 0);
+		}
+	}
+
+	public void ToProto(BufferStream stream)
+	{
+		Serialize(stream, this);
+	}
+
+	public void InspectUids(UidInspector<ulong> action)
+	{
+		baseNetworkable?.InspectUids(action);
+		baseEntity?.InspectUids(action);
+		basePlayer?.InspectUids(action);
+		worldItem?.InspectUids(action);
+		resource?.InspectUids(action);
+		buildingBlock?.InspectUids(action);
+		environment?.InspectUids(action);
+		corpse?.InspectUids(action);
+		parent?.InspectUids(action);
+		keyLock?.InspectUids(action);
+		codeLock?.InspectUids(action);
+		entitySlots?.InspectUids(action);
+		buildingPrivilege?.InspectUids(action);
+		storageBox?.InspectUids(action);
+		heldEntity?.InspectUids(action);
+		baseProjectile?.InspectUids(action);
+		baseNPC?.InspectUids(action);
+		lootContainer?.InspectUids(action);
+		genericSpawner?.InspectUids(action);
+		sleepingBag?.InspectUids(action);
+		lootableCorpse?.InspectUids(action);
+		sign?.InspectUids(action);
+		baseCombat?.InspectUids(action);
+		mapEntity?.InspectUids(action);
+		researchTable?.InspectUids(action);
+		dudExplosive?.InspectUids(action);
+		miningQuarry?.InspectUids(action);
+		baseVehicle?.InspectUids(action);
+		helicopter?.InspectUids(action);
+		landmine?.InspectUids(action);
+		autoturret?.InspectUids(action);
+		sphereEntity?.InspectUids(action);
+		stabilityEntity?.InspectUids(action);
+		ownerInfo?.InspectUids(action);
+		decayEntity?.InspectUids(action);
+		spawnable?.InspectUids(action);
+		servergib?.InspectUids(action);
+		vendingMachine?.InspectUids(action);
+		spinnerWheel?.InspectUids(action);
+		lift?.InspectUids(action);
+		bradley?.InspectUids(action);
+		waterwell?.InspectUids(action);
+		motorBoat?.InspectUids(action);
+		ioEntity?.InspectUids(action);
+		puzzleReset?.InspectUids(action);
+		relationshipManager?.InspectUids(action);
+		hotAirBalloon?.InspectUids(action);
+		samSite?.InspectUids(action);
+		eggHunt?.InspectUids(action);
+		arcadeMachine?.InspectUids(action);
+		miniCopter?.InspectUids(action);
+		horse?.InspectUids(action);
+		smartAlarm?.InspectUids(action);
+		lightString?.InspectUids(action);
+		lightDeployer?.InspectUids(action);
+		rcEntity?.InspectUids(action);
+		computerStation?.InspectUids(action);
+		growableEntity?.InspectUids(action);
+		composter?.InspectUids(action);
+		modularVehicle?.InspectUids(action);
+		modularCar?.InspectUids(action);
+		simpleUID?.InspectUids(action);
+		vehicleLift?.InspectUids(action);
+		engineStorage?.InspectUids(action);
+		vehicleVendor?.InspectUids(action);
+		WaterPool?.InspectUids(action);
+		photo?.InspectUids(action);
+		photoFrame?.InspectUids(action);
+		vehicleModule?.InspectUids(action);
+		mixingTable?.InspectUids(action);
+		shopKeeper?.InspectUids(action);
+		elevator?.InspectUids(action);
+		skullTrophy?.InspectUids(action);
+		cassette?.InspectUids(action);
+		telephone?.InspectUids(action);
+		boomBox?.InspectUids(action);
+		neonSign?.InspectUids(action);
+		subEntityList?.InspectUids(action);
+		marketTerminal?.InspectUids(action);
+		deliveryDrone?.InspectUids(action);
+		reclaimTerminal?.InspectUids(action);
+		slotMachine?.InspectUids(action);
+		trainEngine?.InspectUids(action);
+		cardGame?.InspectUids(action);
+		crane?.InspectUids(action);
+		connectedSpeaker?.InspectUids(action);
+		audioEntity?.InspectUids(action);
+		microphoneStand?.InspectUids(action);
+		submarine?.InspectUids(action);
+		sleepingBagCamper?.InspectUids(action);
+		camperModule?.InspectUids(action);
+		paintableSign?.InspectUids(action);
+		whitelist?.InspectUids(action);
+		FrankensteinTable?.InspectUids(action);
+		mlrs?.InspectUids(action);
+		reclaimManager?.InspectUids(action);
+		gameMode?.InspectUids(action);
+		snowmobile?.InspectUids(action);
+		patternFirework?.InspectUids(action);
+		cargoPlane?.InspectUids(action);
+		paintedItem?.InspectUids(action);
+		clanManager?.InspectUids(action);
+		spray?.InspectUids(action);
+		baseTrain?.InspectUids(action);
+		zipline?.InspectUids(action);
+		ziplineMountable?.InspectUids(action);
+		ZiplineArrival?.InspectUids(action);
+		sprayLine?.InspectUids(action);
+		coalingTower?.InspectUids(action);
+		simpleInt?.InspectUids(action);
+		baseOven?.InspectUids(action);
+		brainComponent?.InspectUids(action);
+		proceduralDungeon?.InspectUids(action);
+		industrialConveyor?.InspectUids(action);
+		industrialCrafter?.InspectUids(action);
+		drone?.InspectUids(action);
+		explosive?.InspectUids(action);
+		simpleUint?.InspectUids(action);
+		weaponRack?.InspectUids(action);
+		attackHeli?.InspectUids(action);
+		attackHeliTurret?.InspectUids(action);
+		attackHeliRockets?.InspectUids(action);
+		baseBoat?.InspectUids(action);
+		ragdoll?.InspectUids(action);
+		dieselEngine?.InspectUids(action);
+		associatedFiles?.InspectUids(action);
+		nexusFerry?.InspectUids(action);
+		nexusIsland?.InspectUids(action);
+		nexusDockTerminal?.InspectUids(action);
+		rockingChair?.InspectUids(action);
+		headData?.InspectUids(action);
+		wantedPoster?.InspectUids(action);
+		waypointRace?.InspectUids(action);
+		legacyShelter?.InspectUids(action);
+		metalDetectorSource?.InspectUids(action);
+		tutorialIsland?.InspectUids(action);
+		cinematicEntity?.InspectUids(action);
+		buildingPrivilegeRetro?.InspectUids(action);
+		harborCrane?.InspectUids(action);
+		cargoShip?.InspectUids(action);
+		cargoShipContainer?.InspectUids(action);
+		missionMapMarker?.InspectUids(action);
+		bike?.InspectUids(action);
+		diverPropulsionVehicle?.InspectUids(action);
+		travellingVendor?.InspectUids(action);
+		vendingDynamicPricing?.InspectUids(action);
+		tinCanAlarm?.InspectUids(action);
+		digitalClock?.InspectUids(action);
+		elevatorLift?.InspectUids(action);
+		npcVendingMachine?.InspectUids(action);
+		mailbox?.InspectUids(action);
+		projectileWeaponMod?.InspectUids(action);
+		baseSculpture?.InspectUids(action);
+		vendingMachineStats?.InspectUids(action);
+		catapult?.InspectUids(action);
+		siegeTower?.InspectUids(action);
+		ballista?.InspectUids(action);
+		ballistaGun?.InspectUids(action);
+		batteringRam?.InspectUids(action);
+		temporaryRagdoll?.InspectUids(action);
+		constructableEntity?.InspectUids(action);
+		chickenCoop?.InspectUids(action);
+		farmableAnimal?.InspectUids(action);
+		ownership?.InspectUids(action);
+		beehive?.InspectUids(action);
+		beeMasterSwarm?.InspectUids(action);
+		containerCorpse?.InspectUids(action);
+		npcTargetState?.InspectUids(action);
+		vineMountable?.InspectUids(action);
+		vineTree?.InspectUids(action);
+		treeRespawn?.InspectUids(action);
+		wallpaperTool?.InspectUids(action);
+		commandBlock?.InspectUids(action);
+		staticRespawn?.InspectUids(action);
+		buriedItemStorage?.InspectUids(action);
+		mannequin?.InspectUids(action);
+		baseMelee?.InspectUids(action);
+		door?.InspectUids(action);
+		deepSeaPortal?.InspectUids(action);
+		baseMountable?.InspectUids(action);
+		smallEngine?.InspectUids(action);
+		playerBoat?.InspectUids(action);
+		steeringWheel?.InspectUids(action);
+		deepSeaManager?.InspectUids(action);
+		scientistBoatOilrigManager?.InspectUids(action);
+		storageAdaptor?.InspectUids(action);
+		helicopterFlares?.InspectUids(action);
+		wipeLaptop?.InspectUids(action);
+		mountedWeapon?.InspectUids(action);
+		boatBuildingBlock?.InspectUids(action);
+		boatBuildingStation?.InspectUids(action);
+		displayingBoxStorage?.InspectUids(action);
+		workbench?.InspectUids(action);
+		apartmentLock?.InspectUids(action);
+		rentableShop?.InspectUids(action);
+		apartmentRoom?.InspectUids(action);
+		apartmentBuilding?.InspectUids(action);
+		apartmentUpkeep?.InspectUids(action);
+		mortar?.InspectUids(action);
+		apartmentDoor?.InspectUids(action);
+		apartmentMailbox?.InspectUids(action);
+		Pooltable?.InspectUids(action);
+		dartsGame?.InspectUids(action);
+		dartsGameLeaderboard?.InspectUids(action);
+		satelliteControlComputer?.InspectUids(action);
+		satelliteCrash?.InspectUids(action);
+		satelliteCrashRemains?.InspectUids(action);
+		electricGenerator?.InspectUids(action);
+		powergridManager?.InspectUids(action);
+		oilswitchBroadcast?.InspectUids(action);
+		sprinkler?.InspectUids(action);
+		hackableLockedCrate?.InspectUids(action);
+		lockedByEntCrate?.InspectUids(action);
+		territoryZones?.InspectUids(action);
+		monumentBlocker?.InspectUids(action);
+	}
+}

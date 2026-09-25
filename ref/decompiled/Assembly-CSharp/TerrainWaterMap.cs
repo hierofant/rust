@@ -1,0 +1,391 @@
+using System.Threading.Tasks;
+using TerrainWaterMapJobs;
+using Unity.Collections;
+using Unity.Jobs;
+using UnityEngine;
+
+public class TerrainWaterMap : TerrainMap<short>
+{
+	public struct WaterMapQueryStructure
+	{
+		public NativeArray<short>.ReadOnly src;
+
+		public int res;
+
+		public Vector2 Position;
+
+		public Vector2 Size;
+
+		public float GetHeightFast(Vector2 uv, bool isDeepSea)
+		{
+			if (isDeepSea)
+			{
+				return -50f;
+			}
+			int num = res - 1;
+			float num2 = uv.x * (float)num;
+			float num3 = uv.y * (float)num;
+			int num4 = (int)num2;
+			int num5 = (int)num3;
+			float num6 = num2 - (float)num4;
+			float num7 = num3 - (float)num5;
+			num4 = ((num4 >= 0) ? num4 : 0);
+			num5 = ((num5 >= 0) ? num5 : 0);
+			num4 = ((num4 <= num) ? num4 : num);
+			num5 = ((num5 <= num) ? num5 : num);
+			int num8 = ((num2 < (float)num) ? 1 : 0);
+			int num9 = ((num3 < (float)num) ? res : 0);
+			int num10 = num5 * res + num4;
+			int index = num10 + num8;
+			int num11 = num10 + num9;
+			int index2 = num11 + num8;
+			float num12 = (float)src[num10] * 3.051944E-05f;
+			float num13 = (float)src[index] * 3.051944E-05f;
+			float num14 = (float)src[num11] * 3.051944E-05f;
+			float num15 = (float)src[index2] * 3.051944E-05f;
+			float num16 = (num13 - num12) * num6 + num12;
+			float num17 = ((num15 - num14) * num6 + num14 - num16) * num7 + num16;
+			return Position.y + num17 * Size.y;
+		}
+	}
+
+	public Texture2D WaterTexture;
+
+	private bool _generatedWaterTexture;
+
+	private float normY;
+
+	public override void Setup()
+	{
+		res = terrainData.heightmapResolution;
+		InitArrays(res * res);
+		normY = TerrainMeta.Size.x / TerrainMeta.Size.y / (float)res;
+		if (!(WaterTexture != null))
+		{
+			return;
+		}
+		if (WaterTexture.width == WaterTexture.height && WaterTexture.width == res)
+		{
+			Color32[] pixels = WaterTexture.GetPixels32();
+			int i = 0;
+			int num = 0;
+			for (; i < res; i++)
+			{
+				int num2 = 0;
+				while (num2 < res)
+				{
+					Color32 c = pixels[num];
+					dst[i * res + num2] = BitUtility.DecodeShort(c);
+					num2++;
+					num++;
+				}
+			}
+		}
+		else
+		{
+			Debug.LogError("Invalid water texture: " + WaterTexture.name);
+		}
+	}
+
+	public override void Dispose()
+	{
+		base.Dispose();
+		if (_generatedWaterTexture && WaterTexture != null)
+		{
+			Object.Destroy(WaterTexture);
+			WaterTexture = null;
+		}
+	}
+
+	public void GenerateTextures()
+	{
+		WaterTexture = new Texture2D(res, res, TextureFormat.RGBA32, mipChain: true, linear: true);
+		WaterTexture.name = "WaterTexture";
+		WaterTexture.wrapMode = TextureWrapMode.Clamp;
+		NativeArray<Color32> heights = WaterTexture.GetPixelData<Color32>(0);
+		Parallel.For(0, res, delegate(int z)
+		{
+			for (int i = 0; i < res; i++)
+			{
+				heights[z * res + i] = BitUtility.EncodeShort(src[z * res + i]);
+			}
+		});
+		_generatedWaterTexture = Application.isPlaying;
+	}
+
+	public void ApplyTextures()
+	{
+		WaterTexture.Apply(updateMipmaps: true, makeNoLongerReadable: true);
+	}
+
+	public float DeepSeaDepth()
+	{
+		return DeepSeaManager.SeaFloorDepth;
+	}
+
+	public float GetHeight(Vector3 worldPos)
+	{
+		if (DeepSeaManager.IsInsideDeepSea(worldPos))
+		{
+			return DeepSeaDepth();
+		}
+		return TerrainMeta.Position.y + GetHeight01(worldPos) * TerrainMeta.Size.y;
+	}
+
+	public float GetHeight(float normX, float normZ)
+	{
+		return TerrainMeta.Position.y + GetHeight01(normX, normZ) * TerrainMeta.Size.y;
+	}
+
+	public float GetHeightFast(Vector2 uv, bool isDeepSea)
+	{
+		if (isDeepSea)
+		{
+			return DeepSeaDepth();
+		}
+		int num = res - 1;
+		float num2 = uv.x * (float)num;
+		float num3 = uv.y * (float)num;
+		int num4 = (int)num2;
+		int num5 = (int)num3;
+		float num6 = num2 - (float)num4;
+		float num7 = num3 - (float)num5;
+		num4 = ((num4 >= 0) ? num4 : 0);
+		num5 = ((num5 >= 0) ? num5 : 0);
+		num4 = ((num4 <= num) ? num4 : num);
+		num5 = ((num5 <= num) ? num5 : num);
+		int num8 = ((num2 < (float)num) ? 1 : 0);
+		int num9 = ((num3 < (float)num) ? res : 0);
+		int num10 = num5 * res + num4;
+		int index = num10 + num8;
+		int num11 = num10 + num9;
+		int index2 = num11 + num8;
+		float num12 = (float)src[num10] * 3.051944E-05f;
+		float num13 = (float)src[index] * 3.051944E-05f;
+		float num14 = (float)src[num11] * 3.051944E-05f;
+		float num15 = (float)src[index2] * 3.051944E-05f;
+		float num16 = (num13 - num12) * num6 + num12;
+		float num17 = ((num15 - num14) * num6 + num14 - num16) * num7 + num16;
+		return TerrainMeta.Position.y + num17 * TerrainMeta.Size.y;
+	}
+
+	public float GetHeight(int x, int z)
+	{
+		return TerrainMeta.Position.y + GetHeight01(x, z) * TerrainMeta.Size.y;
+	}
+
+	public void GetHeights(NativeArray<Vector3> worldPos, NativeArray<float> results)
+	{
+		GetHeightByPosJob getHeightByPosJob = default(GetHeightByPosJob);
+		getHeightByPosJob.Heights = results;
+		getHeightByPosJob.Pos = worldPos;
+		getHeightByPosJob.Data = src;
+		getHeightByPosJob.Res = res;
+		getHeightByPosJob.Offset = TerrainMeta.Position.y;
+		getHeightByPosJob.Scale = TerrainMeta.Size.y;
+		getHeightByPosJob.DataOrigin = new Vector2(TerrainMeta.Position.x, TerrainMeta.Position.z);
+		getHeightByPosJob.DataScale = new Vector2(TerrainMeta.OneOverSize.x, TerrainMeta.OneOverSize.z);
+		GetHeightByPosJob jobData = getHeightByPosJob;
+		IJobExtensions.RunByRef(ref jobData);
+	}
+
+	public WaterMapQueryStructure GetQueryStructure()
+	{
+		WaterMapQueryStructure result = default(WaterMapQueryStructure);
+		result.res = res;
+		result.Position = TerrainMeta.Position;
+		result.Size = TerrainMeta.Size;
+		result.src = src.AsReadOnly();
+		return result;
+	}
+
+	public GetHeightByUVJob FetchUVsHeightsJob(NativeArray<Vector2> uvs, NativeArray<float> results)
+	{
+		GetHeightByUVJob result = default(GetHeightByUVJob);
+		result.Heights = results;
+		result.UV = uvs;
+		result.Data = src;
+		result.Res = res;
+		result.Offset = TerrainMeta.Position.y;
+		result.Scale = TerrainMeta.Size.y;
+		return result;
+	}
+
+	public void GetHeights(NativeArray<Vector2> uvs, NativeArray<float> results)
+	{
+		GetHeightByUVJob getHeightByUVJob = default(GetHeightByUVJob);
+		getHeightByUVJob.Heights = results;
+		getHeightByUVJob.UV = uvs;
+		getHeightByUVJob.Data = src;
+		getHeightByUVJob.Res = res;
+		getHeightByUVJob.Offset = TerrainMeta.Position.y;
+		getHeightByUVJob.Scale = TerrainMeta.Size.y;
+		GetHeightByUVJob jobData = getHeightByUVJob;
+		IJobExtensions.RunByRef(ref jobData);
+	}
+
+	public void GetHeightsIndirect(NativeArray<Vector2>.ReadOnly uvs, NativeArray<int>.ReadOnly indices, NativeArray<float> results)
+	{
+		GetHeightByUVJobIndirect getHeightByUVJobIndirect = default(GetHeightByUVJobIndirect);
+		getHeightByUVJobIndirect.Heights = results;
+		getHeightByUVJobIndirect.UV = uvs;
+		getHeightByUVJobIndirect.Indices = indices;
+		getHeightByUVJobIndirect.Data = src.AsReadOnly();
+		getHeightByUVJobIndirect.Res = res;
+		getHeightByUVJobIndirect.Offset = TerrainMeta.Position.y;
+		getHeightByUVJobIndirect.Scale = TerrainMeta.Size.y;
+		GetHeightByUVJobIndirect jobData = getHeightByUVJobIndirect;
+		IJobExtensions.RunByRef(ref jobData);
+	}
+
+	public void GetHeights(NativeArray<Vector2i> indices, NativeArray<float> results)
+	{
+		GetHeightByIndexJob getHeightByIndexJob = default(GetHeightByIndexJob);
+		getHeightByIndexJob.Heights = results;
+		getHeightByIndexJob.Indices = indices;
+		getHeightByIndexJob.Data = src;
+		getHeightByIndexJob.Res = res;
+		getHeightByIndexJob.Offset = TerrainMeta.Position.y;
+		getHeightByIndexJob.Scale = TerrainMeta.Size.y;
+		GetHeightByIndexJob jobData = getHeightByIndexJob;
+		IJobExtensions.RunByRef(ref jobData);
+	}
+
+	public float GetHeight01(Vector3 worldPos)
+	{
+		float normX = TerrainMeta.NormalizeX(worldPos.x);
+		float normZ = TerrainMeta.NormalizeZ(worldPos.z);
+		return GetHeight01(normX, normZ);
+	}
+
+	public float GetHeight01(float normX, float normZ)
+	{
+		int num = res - 1;
+		float num2 = normX * (float)num;
+		float num3 = normZ * (float)num;
+		int num4 = Mathf.Clamp((int)num2, 0, num);
+		int num5 = Mathf.Clamp((int)num3, 0, num);
+		int x = Mathf.Min(num4 + 1, num);
+		int z = Mathf.Min(num5 + 1, num);
+		float a = Mathf.Lerp(GetHeight01(num4, num5), GetHeight01(x, num5), num2 - (float)num4);
+		float b = Mathf.Lerp(GetHeight01(num4, z), GetHeight01(x, z), num2 - (float)num4);
+		return Mathf.Lerp(a, b, num3 - (float)num5);
+	}
+
+	public float GetHeight01(int x, int z)
+	{
+		return BitUtility.Short2Float(src[z * res + x]);
+	}
+
+	public Vector3 GetNormal(Vector3 worldPos)
+	{
+		float normX = TerrainMeta.NormalizeX(worldPos.x);
+		float normZ = TerrainMeta.NormalizeZ(worldPos.z);
+		return GetNormal(normX, normZ);
+	}
+
+	public Vector3 GetNormal(float normX, float normZ)
+	{
+		int num = res - 1;
+		float num2 = normX * (float)num;
+		float num3 = normZ * (float)num;
+		int num4 = Mathf.Clamp((int)num2, 0, num);
+		int num5 = Mathf.Clamp((int)num3, 0, num);
+		int x = Mathf.Min(num4 + 1, num);
+		int z = Mathf.Min(num5 + 1, num);
+		float num6 = GetHeight01(x, num5) - GetHeight01(num4, num5);
+		return new Vector3(z: 0f - (GetHeight01(num4, z) - GetHeight01(num4, num5)), x: 0f - num6, y: normY).normalized;
+	}
+
+	public Vector3 GetNormalFast(Vector2 uv)
+	{
+		int num = res - 1;
+		int num2 = (int)(uv.x * (float)num);
+		int num3 = (int)(uv.y * (float)num);
+		num2 = ((num2 >= 0) ? num2 : 0);
+		num3 = ((num3 >= 0) ? num3 : 0);
+		num2 = ((num2 <= num) ? num2 : num);
+		num3 = ((num3 <= num) ? num3 : num);
+		int num4 = ((num2 < num) ? 1 : 0);
+		int num5 = ((num3 < num) ? res : 0);
+		int num6 = num3 * res + num2;
+		int index = num6 + num4;
+		int index2 = num6 + num5;
+		short num7 = src[num6];
+		short num8 = src[index];
+		short num9 = src[index2];
+		float num10 = (float)(num8 - num7) * 3.051944E-05f;
+		float num11 = (float)(num9 - num7) * 3.051944E-05f;
+		return new Vector3(0f - num10, normY, 0f - num11);
+	}
+
+	public Vector3 GetNormal(int x, int z)
+	{
+		int max = res - 1;
+		int x2 = Mathf.Clamp(x - 1, 0, max);
+		int z2 = Mathf.Clamp(z - 1, 0, max);
+		int x3 = Mathf.Clamp(x + 1, 0, max);
+		int z3 = Mathf.Clamp(z + 1, 0, max);
+		float num = (GetHeight01(x3, z2) - GetHeight01(x2, z2)) * 0.5f;
+		return new Vector3(z: 0f - (GetHeight01(x2, z3) - GetHeight01(x2, z2)) * 0.5f, x: 0f - num, y: normY).normalized;
+	}
+
+	public float GetSlope(Vector3 worldPos)
+	{
+		return Vector3.Angle(Vector3.up, GetNormal(worldPos));
+	}
+
+	public float GetSlope(float normX, float normZ)
+	{
+		return Vector3.Angle(Vector3.up, GetNormal(normX, normZ));
+	}
+
+	public float GetSlope(int x, int z)
+	{
+		return Vector3.Angle(Vector3.up, GetNormal(x, z));
+	}
+
+	public float GetSlope01(Vector3 worldPos)
+	{
+		return GetSlope(worldPos) * (1f / 90f);
+	}
+
+	public float GetSlope01(float normX, float normZ)
+	{
+		return GetSlope(normX, normZ) * (1f / 90f);
+	}
+
+	public float GetSlope01(int x, int z)
+	{
+		return GetSlope(x, z) * (1f / 90f);
+	}
+
+	public float GetDepth(Vector3 worldPos)
+	{
+		return GetHeight(worldPos) - TerrainMeta.HeightMap.GetHeight(worldPos);
+	}
+
+	public float GetDepth(float normX, float normZ)
+	{
+		return GetHeight(normX, normZ) - TerrainMeta.HeightMap.GetHeight(normX, normZ);
+	}
+
+	public void SetHeight(Vector3 worldPos, float height)
+	{
+		float normX = TerrainMeta.NormalizeX(worldPos.x);
+		float normZ = TerrainMeta.NormalizeZ(worldPos.z);
+		SetHeight(normX, normZ, height);
+	}
+
+	public void SetHeight(float normX, float normZ, float height)
+	{
+		int x = Index(normX);
+		int z = Index(normZ);
+		SetHeight(x, z, height);
+	}
+
+	public void SetHeight(int x, int z, float height)
+	{
+		dst[z * res + x] = BitUtility.Float2Short(height);
+	}
+}

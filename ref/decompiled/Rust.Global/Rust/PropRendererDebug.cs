@@ -1,0 +1,16 @@
+using UnityEngine;
+
+namespace Rust;
+
+[ExecuteInEditMode]
+public class PropRendererDebug : MonoBehaviour
+{
+	public void Update()
+	{
+		PropRenderer[] array = Object.FindObjectsOfType<PropRenderer>();
+		for (int i = 0; i < array.Length; i++)
+		{
+			array[i].DebugAlign();
+		}
+	}
+}

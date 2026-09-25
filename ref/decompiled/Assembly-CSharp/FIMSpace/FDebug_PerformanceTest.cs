@@ -1,0 +1,26 @@
+using UnityEngine;
+
+namespace FIMSpace;
+
+public class FDebug_PerformanceTest
+{
+	public void ResetMinMax()
+	{
+	}
+
+	public void Start(GameObject owner, bool onlyIfSelected = true)
+	{
+	}
+
+	public void Pause()
+	{
+	}
+
+	public void Continue()
+	{
+	}
+
+	public void Finish(bool onlyIfSelected = true)
+	{
+	}
+}

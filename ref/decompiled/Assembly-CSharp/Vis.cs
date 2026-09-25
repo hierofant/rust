@@ -1,0 +1,307 @@
+using System.Collections.Generic;
+using Development.Attributes;
+using UnityEngine;
+
+public static class Vis
+{
+	private static int colCount = 0;
+
+	public static Collider[] colBuffer = new Collider[32768];
+
+	private static HashSet<object> hashSet = new HashSet<object>();
+
+	private static void Buffer(Vector3 position, float radius, int layerMask = -1, QueryTriggerInteraction triggerInteraction = QueryTriggerInteraction.Collide)
+	{
+		layerMask = GamePhysics.HandleIgnoreCollision(position, layerMask);
+		int num = colCount;
+		colCount = Physics.OverlapSphereNonAlloc(position, radius, colBuffer, layerMask, triggerInteraction);
+		for (int i = colCount; i < num; i++)
+		{
+			colBuffer[i] = null;
+		}
+		if (colCount >= colBuffer.Length)
+		{
+			Debug.LogWarning("Vis query is exceeding collider buffer length.");
+			colCount = colBuffer.Length;
+		}
+	}
+
+	public static bool AnyColliders(Vector3 position, float radius, int layerMask = -1, QueryTriggerInteraction triggerInteraction = QueryTriggerInteraction.Ignore)
+	{
+		Buffer(position, radius, layerMask, triggerInteraction);
+		return colCount > 0;
+	}
+
+	[PoolAnalyzerNonCaching]
+	public static void Colliders<T>(Vector3 position, float radius, List<T> list, int layerMask = -1, QueryTriggerInteraction triggerInteraction = QueryTriggerInteraction.Collide) where T : Collider
+	{
+		Buffer(position, radius, layerMask, triggerInteraction);
+		for (int i = 0; i < colCount; i++)
+		{
+			T val = colBuffer[i] as T;
+			if (!(val == null) && val.enabled)
+			{
+				list.Add(val);
+			}
+		}
+	}
+
+	[PoolAnalyzerNonCaching]
+	public static void Components<T>(Vector3 position, float radius, List<T> list, int layerMask = -1, QueryTriggerInteraction triggerInteraction = QueryTriggerInteraction.Collide) where T : Component
+	{
+		Buffer(position, radius, layerMask, triggerInteraction);
+		for (int i = 0; i < colCount; i++)
+		{
+			Collider collider = colBuffer[i];
+			if (!(collider == null) && collider.enabled && collider.TryGetComponent<T>(out var component))
+			{
+				list.Add(component);
+			}
+		}
+	}
+
+	[PoolAnalyzerNonCaching]
+	public static void Entities<T>(Vector3 position, float radius, List<T> list, int layerMask = -1, QueryTriggerInteraction triggerInteraction = QueryTriggerInteraction.Collide) where T : class
+	{
+		Buffer(position, radius, layerMask, triggerInteraction);
+		hashSet.Clear();
+		for (int i = 0; i < colCount; i++)
+		{
+			Collider collider = colBuffer[i];
+			if (collider == null || !collider.enabled)
+			{
+				continue;
+			}
+			BaseEntity baseEntity = GameObjectEx.ToBaseEntity(collider);
+			if (!(baseEntity == null))
+			{
+				T val = baseEntity as T;
+				if (val == null && baseEntity.AlsoVisCheckParent)
+				{
+					val = baseEntity.GetParentEntity() as T;
+				}
+				if (val != null && !hashSet.Contains(val))
+				{
+					hashSet.Add(val);
+					list.Add(val);
+				}
+			}
+		}
+	}
+
+	[PoolAnalyzerNonCaching]
+	public static void EntityComponents<T>(Vector3 position, float radius, List<T> list, int layerMask = -1, QueryTriggerInteraction triggerInteraction = QueryTriggerInteraction.Collide) where T : EntityComponentBase
+	{
+		Buffer(position, radius, layerMask, triggerInteraction);
+		hashSet.Clear();
+		for (int i = 0; i < colCount; i++)
+		{
+			Collider collider = colBuffer[i];
+			if (collider == null || !collider.enabled)
+			{
+				continue;
+			}
+			BaseEntity baseEntity = GameObjectEx.ToBaseEntity(collider);
+			if (!(baseEntity == null) && !hashSet.Contains(baseEntity))
+			{
+				hashSet.Add(baseEntity);
+				T component = baseEntity.GetComponent<T>();
+				if (!(component == null))
+				{
+					list.Add(component);
+				}
+			}
+		}
+	}
+
+	private static void Buffer(OBB bounds, int layerMask = -1, QueryTriggerInteraction triggerInteraction = QueryTriggerInteraction.Collide)
+	{
+		layerMask = GamePhysics.HandleIgnoreCollision(bounds.position, layerMask);
+		int num = colCount;
+		colCount = Physics.OverlapBoxNonAlloc(bounds.position, bounds.extents, colBuffer, bounds.rotation, layerMask, triggerInteraction);
+		for (int i = colCount; i < num; i++)
+		{
+			colBuffer[i] = null;
+		}
+		if (colCount >= colBuffer.Length)
+		{
+			Debug.LogWarning("Vis query is exceeding collider buffer length.");
+			colCount = colBuffer.Length;
+		}
+	}
+
+	[PoolAnalyzerNonCaching]
+	public static void Colliders<T>(OBB bounds, List<T> list, int layerMask = -1, QueryTriggerInteraction triggerInteraction = QueryTriggerInteraction.Collide) where T : Collider
+	{
+		Buffer(bounds, layerMask, triggerInteraction);
+		for (int i = 0; i < colCount; i++)
+		{
+			T val = colBuffer[i] as T;
+			if (!(val == null) && val.enabled)
+			{
+				list.Add(val);
+			}
+		}
+	}
+
+	[PoolAnalyzerNonCaching]
+	public static void Components<T>(OBB bounds, List<T> list, int layerMask = -1, QueryTriggerInteraction triggerInteraction = QueryTriggerInteraction.Collide) where T : Component
+	{
+		Buffer(bounds, layerMask, triggerInteraction);
+		for (int i = 0; i < colCount; i++)
+		{
+			Collider collider = colBuffer[i];
+			if (!(collider == null) && collider.enabled)
+			{
+				T component = collider.GetComponent<T>();
+				if (!(component == null))
+				{
+					list.Add(component);
+				}
+			}
+		}
+	}
+
+	[PoolAnalyzerNonCaching]
+	public static void Entities<T>(OBB bounds, List<T> list, int layerMask = -1, QueryTriggerInteraction triggerInteraction = QueryTriggerInteraction.Collide) where T : class
+	{
+		Buffer(bounds, layerMask, triggerInteraction);
+		hashSet.Clear();
+		for (int i = 0; i < colCount; i++)
+		{
+			Collider collider = colBuffer[i];
+			if (collider == null || !collider.enabled)
+			{
+				continue;
+			}
+			BaseEntity baseEntity = GameObjectEx.ToBaseEntity(collider);
+			if (!(baseEntity == null))
+			{
+				T val = baseEntity as T;
+				if (val == null && baseEntity.AlsoVisCheckParent)
+				{
+					val = baseEntity.GetParentEntity() as T;
+				}
+				if (val != null && !hashSet.Contains(val))
+				{
+					hashSet.Add(val);
+					list.Add(val);
+				}
+			}
+		}
+	}
+
+	[PoolAnalyzerNonCaching]
+	public static void EntityComponents<T>(OBB bounds, List<T> list, int layerMask = -1, QueryTriggerInteraction triggerInteraction = QueryTriggerInteraction.Collide) where T : EntityComponentBase
+	{
+		Buffer(bounds, layerMask, triggerInteraction);
+		hashSet.Clear();
+		for (int i = 0; i < colCount; i++)
+		{
+			Collider collider = colBuffer[i];
+			if (collider == null || !collider.enabled)
+			{
+				continue;
+			}
+			BaseEntity baseEntity = GameObjectEx.ToBaseEntity(collider);
+			if (!(baseEntity == null) && !hashSet.Contains(baseEntity))
+			{
+				hashSet.Add(baseEntity);
+				T component = baseEntity.GetComponent<T>();
+				if (!(component == null))
+				{
+					list.Add(component);
+				}
+			}
+		}
+	}
+
+	private static void Buffer(Vector3 startPosition, Vector3 endPosition, float radius, int layerMask = -1, QueryTriggerInteraction triggerInteraction = QueryTriggerInteraction.Collide)
+	{
+		layerMask = GamePhysics.HandleIgnoreCollision(startPosition, layerMask);
+		int num = colCount;
+		colCount = Physics.OverlapCapsuleNonAlloc(startPosition, endPosition, radius, colBuffer, layerMask, triggerInteraction);
+		for (int i = colCount; i < num; i++)
+		{
+			colBuffer[i] = null;
+		}
+		if (colCount >= colBuffer.Length)
+		{
+			Debug.LogWarning("Vis query is exceeding collider buffer length.");
+			colCount = colBuffer.Length;
+		}
+	}
+
+	[PoolAnalyzerNonCaching]
+	public static void Colliders<T>(Vector3 startPosition, Vector3 endPosition, float radius, List<T> list, int layerMask = -1, QueryTriggerInteraction triggerInteraction = QueryTriggerInteraction.Collide) where T : Collider
+	{
+		Buffer(startPosition, endPosition, radius, layerMask, triggerInteraction);
+		for (int i = 0; i < colCount; i++)
+		{
+			T val = colBuffer[i] as T;
+			if (!(val == null) && val.enabled)
+			{
+				list.Add(val);
+			}
+		}
+	}
+
+	[PoolAnalyzerNonCaching]
+	public static void Components<T>(Vector3 startPosition, Vector3 endPosition, float radius, List<T> list, int layerMask = -1, QueryTriggerInteraction triggerInteraction = QueryTriggerInteraction.Collide) where T : Component
+	{
+		Buffer(startPosition, endPosition, radius, layerMask, triggerInteraction);
+		for (int i = 0; i < colCount; i++)
+		{
+			Collider collider = colBuffer[i];
+			if (!(collider == null) && collider.enabled)
+			{
+				T component = collider.GetComponent<T>();
+				if (!(component == null))
+				{
+					list.Add(component);
+				}
+			}
+		}
+	}
+
+	[PoolAnalyzerNonCaching]
+	public static void Entities<T>(Vector3 startPosition, Vector3 endPosition, float radius, List<T> list, int layerMask = -1, QueryTriggerInteraction triggerInteraction = QueryTriggerInteraction.Collide) where T : class
+	{
+		Buffer(startPosition, endPosition, radius, layerMask, triggerInteraction);
+		hashSet.Clear();
+		for (int i = 0; i < colCount; i++)
+		{
+			Collider collider = colBuffer[i];
+			if (!(collider == null) && collider.enabled && GameObjectEx.ToBaseEntity(collider) is T item && !hashSet.Contains(item))
+			{
+				hashSet.Add(item);
+				list.Add(item);
+			}
+		}
+	}
+
+	[PoolAnalyzerNonCaching]
+	public static void EntityComponents<T>(Vector3 startPosition, Vector3 endPosition, float radius, List<T> list, int layerMask = -1, QueryTriggerInteraction triggerInteraction = QueryTriggerInteraction.Collide) where T : EntityComponentBase
+	{
+		Buffer(startPosition, endPosition, radius, layerMask, triggerInteraction);
+		hashSet.Clear();
+		for (int i = 0; i < colCount; i++)
+		{
+			Collider collider = colBuffer[i];
+			if (collider == null || !collider.enabled)
+			{
+				continue;
+			}
+			BaseEntity baseEntity = GameObjectEx.ToBaseEntity(collider);
+			if (!(baseEntity == null) && !hashSet.Contains(baseEntity))
+			{
+				hashSet.Add(baseEntity);
+				T component = baseEntity.GetComponent<T>();
+				if (!(component == null))
+				{
+					list.Add(component);
+				}
+			}
+		}
+	}
+}

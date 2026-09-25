@@ -1,0 +1,35 @@
+using Rust.UI;
+using UnityEngine;
+
+public class UIHUD : SingletonComponent<UIHUD>, IUIScreen
+{
+	public UIChat chatPanel;
+
+	public HudElement Hunger;
+
+	public HudElement Thirst;
+
+	public HudElement Health;
+
+	public HudElement PendingHealth;
+
+	public HudElement VehicleHealth;
+
+	public HudElement AnimalStamina;
+
+	public HudElement AnimalStaminaMax;
+
+	public HudElement ShieldHealth;
+
+	public RectTransform vitalsRect;
+
+	public RectTransform noticesRect;
+
+	public CanvasGroup healthCanvasGroup;
+
+	public UICompass CompassWidget;
+
+	public GameObject KeyboardCaptureMode;
+
+	public RustIcon VehicleHealthIcon;
+}

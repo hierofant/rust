@@ -1,0 +1,252 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Facepunch;
+using Rust;
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "NewTechTree", menuName = "Rust/Tech Tree", order = 2)]
+public class TechTreeData : ScriptableObject
+{
+	[Serializable]
+	public class NodeInstance
+	{
+		public int id;
+
+		public ItemDefinition itemDef;
+
+		public Vector2 graphPosition;
+
+		public List<int> outputs = new List<int>();
+
+		public List<int> inputs = new List<int>();
+
+		public string groupName;
+
+		public int costOverride = -1;
+
+		public bool IsGroup()
+		{
+			if (itemDef == null && groupName != "Entry")
+			{
+				return !string.IsNullOrEmpty(groupName);
+			}
+			return false;
+		}
+	}
+
+	public string shortname;
+
+	public int nextID;
+
+	public int techTreeLevel;
+
+	public SoundDefinition openSound;
+
+	public SoundDefinition closeSound;
+
+	public List<Era> AllowedEras;
+
+	[Tooltip("If true, this tech tree will only appear in a gamemode if it is assigned as allowed on the gamemode asset.")]
+	public bool RequireGameMode;
+
+	private Dictionary<int, NodeInstance> _idToNode;
+
+	private NodeInstance _entryNode;
+
+	public List<NodeInstance> nodes = new List<NodeInstance>();
+
+	public NodeInstance GetByID(int id)
+	{
+		if (UnityEngine.Application.isPlaying)
+		{
+			if (_idToNode == null)
+			{
+				_idToNode = nodes.ToDictionary((NodeInstance n) => n.id, (NodeInstance n) => n);
+			}
+			_idToNode.TryGetValue(id, out var value);
+			return value;
+		}
+		_idToNode = null;
+		foreach (NodeInstance node in nodes)
+		{
+			if (node.id == id)
+			{
+				return node;
+			}
+		}
+		return null;
+	}
+
+	public NodeInstance GetEntryNode()
+	{
+		if (UnityEngine.Application.isPlaying && _entryNode != null && _entryNode.groupName == "Entry")
+		{
+			return _entryNode;
+		}
+		_entryNode = null;
+		foreach (NodeInstance node in nodes)
+		{
+			if (node.groupName == "Entry")
+			{
+				_entryNode = node;
+				return node;
+			}
+		}
+		Debug.LogError("NO ENTRY NODE FOR TECH TREE, This will Fail hard");
+		return null;
+	}
+
+	public void ClearInputs(NodeInstance node)
+	{
+		foreach (int output in node.outputs)
+		{
+			NodeInstance byID = GetByID(output);
+			byID.inputs.Clear();
+			ClearInputs(byID);
+		}
+	}
+
+	public void SetupInputs(NodeInstance node)
+	{
+		foreach (int output in node.outputs)
+		{
+			NodeInstance byID = GetByID(output);
+			if (!byID.inputs.Contains(node.id))
+			{
+				byID.inputs.Add(node.id);
+			}
+			SetupInputs(byID);
+		}
+	}
+
+	public bool PlayerHasPathForUnlock(BasePlayer player, NodeInstance node)
+	{
+		NodeInstance entryNode = GetEntryNode();
+		if (entryNode == null)
+		{
+			return false;
+		}
+		return CheckChainRecursive(player, entryNode, node);
+	}
+
+	public bool CheckChainRecursive(BasePlayer player, NodeInstance start, NodeInstance target)
+	{
+		if (start.groupName != "Entry")
+		{
+			if (start.IsGroup())
+			{
+				foreach (int input in start.inputs)
+				{
+					if (!PlayerHasPathForUnlock(player, GetByID(input)))
+					{
+						return false;
+					}
+				}
+			}
+			else if (start.itemDef.IsAllowed(EraRestriction.Craft) && !HasPlayerUnlocked(player, start))
+			{
+				return false;
+			}
+		}
+		bool result = false;
+		foreach (int output in start.outputs)
+		{
+			if (output == target.id)
+			{
+				return true;
+			}
+			if (CheckChainRecursive(player, GetByID(output), target))
+			{
+				result = true;
+			}
+		}
+		return result;
+	}
+
+	public bool PlayerCanUnlock(BasePlayer player, NodeInstance node)
+	{
+		return !HasPlayerUnlocked(player, node);
+	}
+
+	public bool HasPlayerUnlocked(BasePlayer player, NodeInstance node)
+	{
+		if (node.IsGroup())
+		{
+			bool result = true;
+			{
+				foreach (int output in node.outputs)
+				{
+					NodeInstance byID = GetByID(output);
+					if (!HasPlayerUnlocked(player, byID))
+					{
+						result = false;
+					}
+				}
+				return result;
+			}
+		}
+		return player.blueprints.HasUnlocked(node.itemDef);
+	}
+
+	public void GetNodesRequiredToUnlock(BasePlayer player, NodeInstance node, List<NodeInstance> foundNodes)
+	{
+		if (node.itemDef != null && node.itemDef.IsAllowed(EraRestriction.Craft))
+		{
+			foundNodes.Add(node);
+		}
+		if (node == GetEntryNode())
+		{
+			foundNodes.Add(node);
+			return;
+		}
+		if (node.inputs.Count == 1)
+		{
+			GetNodesRequiredToUnlock(player, GetByID(node.inputs[0]), foundNodes);
+			return;
+		}
+		List<NodeInstance> obj = Pool.Get<List<NodeInstance>>();
+		int num = int.MaxValue;
+		foreach (int input in node.inputs)
+		{
+			List<NodeInstance> obj2 = Pool.Get<List<NodeInstance>>();
+			GetNodesRequiredToUnlock(player, GetByID(input), obj2);
+			int num2 = 0;
+			foreach (NodeInstance item in obj2)
+			{
+				if (!(item.itemDef == null) && !HasPlayerUnlocked(player, item) && item.itemDef.IsAllowed(EraRestriction.Craft))
+				{
+					num2 += Workbench.ScrapForResearch(item.itemDef, 0, out var _);
+				}
+			}
+			if (num2 < num)
+			{
+				obj.Clear();
+				obj.AddRange(obj2);
+				num = num2;
+			}
+			Pool.FreeUnmanaged(ref obj2);
+		}
+		foundNodes.AddRange(obj);
+		Pool.FreeUnmanaged(ref obj);
+	}
+
+	public bool IsAllowedInEra(Era era)
+	{
+		if (AllowedEras == null || AllowedEras.Count == 0)
+		{
+			return true;
+		}
+		return AllowedEras.Contains(era);
+	}
+
+	public bool IsAllowedInGameMode(bool isServer)
+	{
+		BaseGameMode activeGameMode = BaseGameMode.GetActiveGameMode(isServer);
+		if (activeGameMode == null)
+		{
+			return !RequireGameMode;
+		}
+		return activeGameMode.IsAllowed(this);
+	}
+}

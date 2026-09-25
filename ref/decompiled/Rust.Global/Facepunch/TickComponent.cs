@@ -1,0 +1,32 @@
+using UnityEngine;
+
+namespace Facepunch;
+
+public class TickComponent : MonoBehaviour
+{
+	public static TickComponent Instance;
+
+	public static void Init()
+	{
+		if (!(Instance != null))
+		{
+			new GameObject("Tick Manager").AddComponent<TickComponent>();
+		}
+	}
+
+	private void OnEnable()
+	{
+		Object.DontDestroyOnLoad(base.gameObject);
+		Instance = this;
+	}
+
+	private void Update()
+	{
+		Tick.OnFrame();
+	}
+
+	private void LateUpdate()
+	{
+		Tick.OnFrameLate();
+	}
+}

@@ -1,0 +1,15 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+public class LootPanelChickenCoop : LootPanel
+{
+	public ChickenCoopStatusWidget[] StatusWidgets;
+
+	public CanvasGroup ControlsGroup;
+
+	public Button fromButton;
+
+	public Button toButton;
+
+	public Tooltip FoodTooltip;
+}
